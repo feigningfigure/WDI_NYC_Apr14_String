@@ -7,3 +7,5 @@ john.find("peanut butter")
 
 puts "John's bag appears below:"
 puts john.bag
+
+# added comment
