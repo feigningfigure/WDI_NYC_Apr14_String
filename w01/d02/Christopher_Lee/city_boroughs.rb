@@ -1,6 +1,7 @@
 def city_boroughs
   # get user input
   puts "What borough do you live in?"
+  # use .downcase so that all input is uniform and can be evaluated by the case statement
 borough = gets.chomp.to_s.downcase
 # run a case statement with contingencies for all possible answers
 case borough
