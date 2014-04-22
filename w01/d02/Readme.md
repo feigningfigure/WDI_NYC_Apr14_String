@@ -41,9 +41,9 @@ Your clothes include:
 
 ###Air Conditioning
 - Define a function that takes, as arguments, the current temperature, whether or not the A/C is functional, and a desired temperature.
-    -If the air conditioner is functional and the current temperature is above the the desired temperature... display "Turn on the A/C Please"
-    -If the air conditioner is non-functional and the current temperature is above the the desired temperature... display "Fix the A/C now!  It's hot!"
-    -If the air conditioner is non-functional and the current temperature is below the the desired temperature... display "Fix the A/C whenever you have the chance...  It's cool...Brrrrrrr."
+- If the air conditioner is functional and the current temperature is above the the desired temperature... display "Turn on the A/C Please"
+- If the air conditioner is non-functional and the current temperature is above the the desired temperature... display "Fix the A/C now!  It's hot!"
+- If the air conditioner is non-functional and the current temperature is below the the desired temperature... display "Fix the A/C whenever you have the chance...  It's cool...Brrrrrrr."
 
 
 ###City Boroughs
