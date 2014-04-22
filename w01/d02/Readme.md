@@ -93,28 +93,5 @@ Your clothes include:
 ######Back-end
 - Make it such that you can perform continuous operations (i.e. 4 X 10 / 2 + 6 - 1)
 
-##Starter Code:
 
-```
-def get_user_choice
-
-end
-
-def add(num1,num2)
-
-end
-
-def subtract(num1,num2)
-
-end
-
-def divide(num1,num2)
-
-end
-
-def multiply(num1,num2)
-
-end
-```
-___
 ##WORK IN YOUR OWN FOLDER ONLY!
