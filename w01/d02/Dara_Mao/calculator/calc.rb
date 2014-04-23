@@ -1,6 +1,6 @@
 def get_user_choice()
 
-puts "What operation would you like to perform: (a)dd, (s)ubtract, (m)ultiply, (d)ivide, (e)xponent, sq(r)t? "
+print "What operation would you like to perform: (a)dd, (s)ubtract, (m)ultiply, (d)ivide, (e)xponent, sq(r)t? "
 puts "You can type (q)uit to exit."
 user_input = gets.chomp
 
