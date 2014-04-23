@@ -16,7 +16,7 @@ end
 
 describe "#subtract" do
   it "should subtract the first number from the second" do
-    add(5,5).should eq(10)
+    subtract(10,5).should eq(5)
   end
 end
 
