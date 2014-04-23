@@ -38,8 +38,10 @@ def get_user_choice
 
     elsif userRequest == "divide"
     def divide(num1, num2)
-        return num1 / num2
+        return infinity if num2 == 0
+         num1 / num2
     end
+
 else userRequest == "Q"
     def quit()
      puts "Goodbye!"
@@ -49,5 +51,12 @@ end
 
     get_user_choice
 
+
+def process_input
+choice = get_user_choice
+puts "you chose: #{choice}"
+case choice
+    when "a"
+end
 
 
