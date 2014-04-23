@@ -76,10 +76,10 @@ if user_input != "q"
     puts "Please enter a valid choice from the list."
   end
 
-    return get_user_choice()
+  return get_user_choice()
 
-else
-end
+else #quit option (if else)
+end #quit option end
 
 end
 
