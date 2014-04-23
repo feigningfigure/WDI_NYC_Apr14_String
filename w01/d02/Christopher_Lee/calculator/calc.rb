@@ -7,40 +7,23 @@ def get_user_choice
   case choice
     when "a","add"
       two_numbers = get_input("+")
-      # puts "Enter your first number: "
-      # num1 = gets.chomp.to_i
-      # puts "+"
-      # num2 = gets.chomp.to_i
-      # puts "#{num1} + #{num2} = #{add(num1,num2)}"
-      puts "#{two_numbers[0]} + #{two_numbers[1]} = #{add()}"
+      puts "#{two_numbers[0]} + #{two_numbers[1]} = #{add(two_numbers[0],two_numbers[1])}"
       get_user_choice
     when "s","subtract"
-      puts "Enter your first number: "
-      num1 = gets.chomp.to_i
-      puts "-"
-      num2 = gets.chomp.to_i
-      puts "#{num1} - #{num2} = #{subtract(num1,num2)}"
+      two_numbers = get_input("-")
+       puts "#{two_numbers[0]} - #{two_numbers[1]} = #{subtract(two_numbers[0],two_numbers[1])}"
       get_user_choice
     when "m", "multiply"
-      puts "Enter your first number: "
-      num1 = gets.chomp.to_i
-      puts "*"
-      num2 = gets.chomp.to_i
-      puts "#{num1} * #{num2} = #{multiply(num1,num2)}"
+      two_numbers = get_input("*")
+      puts "#{two_numbers[0]} * #{two_numbers[1]} = #{multiply(two_numbers[0],two_numbers[1])}"
       get_user_choice
     when "d", "divide"
-      puts "Enter the numerator: "
-      num1 = gets.chomp.to_i
-      puts "/"
-      num2 = gets.chomp.to_i
-      puts "#{num1} / #{num2} = #{divide(num1,num2)}"
+      two_numbers = get_input("/")
+      puts "#{two_numbers[0]} / #{two_numbers[1]} = #{divide(two_numbers[0],two_numbers[1])}"
       get_user_choice
     when "e", "exponents"
-      puts "Enter the first number: "
-      num1 = gets.chomp.to_i
-      puts "to the"
-      num2 = gets.chomp.to_i
-      puts "#{num1} to the #{num2} = #{exponent(num1,num2)}"
+      two_numbers = get_input("to the")
+      puts "#{two_numbers[0]} to the #{two_numbers[1]} = #{exponent(two_numbers[0],two_numbers[1])}"
       get_user_choice
     when "sq", "square root"
       puts "What number would you like to square root?: "
@@ -60,7 +43,7 @@ def get_input(math_sign)
   input << num1 = gets.chomp.to_i
   puts "#{math_sign}"
   input << num2 = gets.chomp.to_i
-  puts "#{input[0]} #{math_sign} #{input[1]} = #{}"
+  return input
 end
 
 def add(num1,num2)
