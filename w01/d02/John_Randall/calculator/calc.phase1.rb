@@ -28,21 +28,14 @@
 
 
 
-def go
-	quit_choice = false
-	unless quit_choice == true					# - This process should continue until the user selects a quit option from the menu
-												# THIS IS BROKEN
-		quit_choice = get_user_choice()
-	end
-end
+
+# choice = String.new()
+# num1 = Int.new()
+# num2 = Int.new()
 
 
-# - A user should be given a menu of operations
-# - A user should be able to choose from the menu
-# - A user should be able to enter two numbers on which to perform the operations
-# - A user should be shown the result
 def get_user_choice
-	puts "enter your choice: (a)dd, (s)ubtract, (m)ultiply, (d)ivide, or just (q)uit."
+	puts "enter your choice: (a)dd, (s)ubtract, (m)ultiply, (d)ivide"
 	choice = gets.chomp.to_s
 	puts "enter your first number"
 	num1 = gets.chomp.to_i
@@ -57,15 +50,13 @@ def get_user_choice
 		puts "Answer is #{multiply(num1,num2)}"
 	when "d"
 		puts "Answer is #{divide(num1,num2)}"
-	when "q"
-		return true
 	end
 	puts ""
 	puts ""
+	get_user_choice()
 end
 
 
-# 	- Calculator should be able to do basic arithmetic (+,-, *, /)
 
 def add(num1,num2)
 	return num1+num2
@@ -94,15 +85,5 @@ def multiply(num1,num2)
 end
 
 
-# #####Phase 2
-# - Advanced Calculator functionality
-# 	- Calculator should be able to do basic arithmetic (exponents, square roots)
-
-
-# #####Bonus
-# ######Back-end
-# - Make it such that you can perform continuous operations (i.e. 4 X 10 / 2 + 6 - 1)
-
-
-go()
+get_user_choice()
 
