@@ -1,5 +1,6 @@
+require 'rspec'
 require_relative '../calc.rb'
-require_relative 'spec_helper'
+require_relative 'spec_helper.rb'
 
 describe '#get_user_choice' do
   it "shows user a list of operations: 'enter your choice: (a)dd, (s)ubtract, (m)ultiply, (d)ivide'" do
