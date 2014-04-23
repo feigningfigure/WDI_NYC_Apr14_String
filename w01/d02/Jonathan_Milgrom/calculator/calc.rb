@@ -4,7 +4,7 @@
 
 
 
-puts "This is a calculator.  You will be able to do basic arithmetic on two numbers. /n To quit this program please press 'Q' at anytime"
+puts "This is a calculator.  You will be able to do basic arithmetic on two numbers."
 puts "Please enter your first number: "
 num1 = gets.chomp.to_i
 puts "Please enter your second number: "
@@ -17,7 +17,7 @@ def calculator(num1, num2, oper)
 
 
 	def get_user_choice(num1, num2, oper)
-		puts "This is a calculator.  You will be able to do basic arithmetic on two numbers. /n To quit this program please press 'Q' at anytime"
+		puts "This is a calculator.  You will be able to do basic arithmetic on two numbers."
 		puts "Please enter your first number: "
 		num1 = gets.chomp.to_i
 		puts "Please enter your second number: "
