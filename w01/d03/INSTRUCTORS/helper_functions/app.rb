@@ -26,15 +26,41 @@ def print_matrix
   end
 end
 
+# arbitrarily organized hash
+# find
 $bedroom = {
   :dresser => [
-    "sock",
+    "socks",
     "shirt",
     "batman costume"
-  ]
+  ],
+  :bed => {
+    :top_of => [
+        "sheets",
+        "socks"
+      ],
+    :underneath => [
+      "monster",
+      "socks",
+      "plastic bins"
+    ],
+    :drawer => [
+      "shoes",
+      "sheets"
+    ]
+  }
 }
 
+def find_socks
+  # finds total number of socks
+  $bedroom.each do |key, value|
+    inspect_thing_in_bedroom(value)
+  end
+end
+# find_socks
 
+janes_favorite_colors = ["green", "mauve", "red"]
+omars_favorite_colors = ["green", "ruby red", "periwinkle"]
 
 
 
