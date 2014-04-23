@@ -7,6 +7,7 @@ def get_user_choice
   case choice
     when "a","add"
       get_input("+")
+      continue_on
       get_user_choice
     when "s","subtract"
       get_input("-")
@@ -33,12 +34,12 @@ def get_user_choice
   end
 end
 
-
-# puts "Peform more operations on this number (Y/N)?"
-# continue = gets.chomp.to_s
-# if continue == "N"
-#   next
-# end
+def continue_on
+puts "Perform more operations on this number (Y/N)?"
+continue = gets.chomp.to_s
+  if continue == "N"
+  end
+end
 
 # def get_input(math_sign)
 #   input = []
