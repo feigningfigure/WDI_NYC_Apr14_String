@@ -1,7 +1,3 @@
-def main_loop
-
-end
-
 def ask
   choice = get_user_choice
   puts "You chose: #{choice}"
@@ -67,4 +63,3 @@ def multiply(num1,num2)
 end
 
 ask
-# get_nums
