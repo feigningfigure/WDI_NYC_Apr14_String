@@ -1,20 +1,28 @@
 def get_user_choice
+	answer = nil unless answer != nil
 	# puts "What operation would you like to perform?"
-	print "Enter choice: (a)dd, (s)ubtract, (m)ultiply, (d)ivide, (e)xponent, square (r)oot, (q)uit: \n"
+	print 'Enter your choice: (a)dd, (s)ubtract, (m)ultiply, (d)ivide, (e)xponent, square (r)oot, (q)uit: \n'
 	op = gets #get operation from user
 	op = op.chomp.downcase unless op == nil
 	if op == "q"
-		return
-	else
-	puts "What is the first number you wish to use in the operator?"
-	num1 = gets #get first number from user
-	num1 = num1.chomp.to_i unless num1 == nil
+		puts "Your answer is #{answer}" #print answer for user
+		puts #spaces make the code more visually pleasing
+	elsif op == "r" && answer != nil
+		answer == square_root(answer)
+	elsif answer != nil
+		puts "What is number you wish to use in the operator?"
+		num1 = gets #get first number from user
+		num1 = num1.chomp.to_i unless num1 == nil
+	end
+
+	if answer == nil
+		answer = num1
 	end
 
 	if op == "r"
-		answer = square_root(num1)
+		answer = square_root(answer)
 	else
-	puts "What is the second number?"
+	puts "What is the next number?"
 	num2 = gets #get second number from user
 	num2 = num2.chomp.to_i unless num2 == nil
 	end
@@ -26,9 +34,8 @@ def get_user_choice
 	when op == "m" then answer = multiply(num1,num2)
 	when op == "e" then answer = exponent(num1,num2)
 	end
-	puts "Your answer is #{answer}" #print answer for user
-	puts #spaces make the code more visually pleasing
 	
+	return answer
 	get_user_choice
 end
 
