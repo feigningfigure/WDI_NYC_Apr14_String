@@ -11,7 +11,6 @@ def find_socks_in_array(array)
 end
 
 def inspect_thing_in_bedroom(thing)
-  new_thing = 0
   if thing.class == Array
     find_socks_in_array(thing)
   elsif thing.class == Hash

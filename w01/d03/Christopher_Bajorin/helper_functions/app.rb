@@ -56,7 +56,7 @@ $bedroom = {
 def find_socks
   # Finds total number of socks
   $bedroom.each do |key, value|
-    inspect_thing_in_bedroom(thing)
+    inspect_thing_in_bedroom(new_thing)
     end
 end
 find_socks
