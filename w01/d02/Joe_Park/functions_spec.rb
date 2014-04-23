@@ -1,7 +1,7 @@
 require_relative 'functions.rb'
 
 describe "the 'sqrt' method" do
-	"should return 'false' for negative numbers" do
+	it "should return 'false' for negative numbers" do
 		#the code you wish would work
 		sqrt(-100).should eq(false)
 	end
