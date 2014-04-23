@@ -4,10 +4,10 @@ def get_user_choice
   print "enter your choice: (a)dd, (s)ubtract, (m)ultiply, (d)ivide, (e)xponents, (sq)uare root, (q)uit"
   puts "\n"
   choice = gets.chomp.to_s
+  current_value ||= 0
   case choice
     when "a","add"
       get_input("+")
-      continue_on
       get_user_choice
     when "s","subtract"
       get_input("-")
@@ -34,20 +34,13 @@ def get_user_choice
   end
 end
 
-def continue_on
-puts "Perform more operations on this number (Y/N)?"
-continue = gets.chomp.to_s
-  if continue == "N"
-  end
-end
-
-# def get_input(math_sign)
-#   input = []
-#   puts "Enter the first number: "
-#   input << num1 = gets.chomp.to_i
-#   puts "#{math_sign}"
-#   input << num2 = gets.chomp.to_i
-#   return input
+# def continue_on
+# puts "Perform more operations on this number (Y/N)?"
+# continue = gets.chomp.to_s
+#   if continue == "Y"
+#     current_value =
+#   if continue == "N"
+#   end
 # end
 
 # this method makes get_user_choice much DRY-er by eliminating repetition for the case statement
