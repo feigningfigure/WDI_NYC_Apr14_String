@@ -1,5 +1,7 @@
 def get_user_choice
-
+  print "enter yer choice: (a)dd, (s)ubt, (m)ultiply, (d)ivide"
+  input = gets.chomp
+  return input
 end
 
 def add(num1,num2)
@@ -8,7 +10,6 @@ end
 
 def subtract(num1,num2)
   num1-num2
-  print "whateverman"
 end
 
 def divide(num1,num2)
