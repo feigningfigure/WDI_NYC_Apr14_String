@@ -6,29 +6,25 @@ def get_user_choice
   choice = gets.chomp.to_s
   case choice
     when "a","add"
-      two_numbers = get_input("+")
-      puts "#{two_numbers[0]} + #{two_numbers[1]} = #{add(two_numbers[0],two_numbers[1])}"
+      get_input("+")
       get_user_choice
     when "s","subtract"
-      two_numbers = get_input("-")
-       puts "#{two_numbers[0]} - #{two_numbers[1]} = #{subtract(two_numbers[0],two_numbers[1])}"
+      get_input("-")
       get_user_choice
     when "m", "multiply"
-      two_numbers = get_input("*")
-      puts "#{two_numbers[0]} * #{two_numbers[1]} = #{multiply(two_numbers[0],two_numbers[1])}"
+      get_input("*")
       get_user_choice
     when "d", "divide"
-      two_numbers = get_input("/")
-      puts "#{two_numbers[0]} / #{two_numbers[1]} = #{divide(two_numbers[0],two_numbers[1])}"
+      get_input("/")
       get_user_choice
     when "e", "exponents"
-      two_numbers = get_input("to the")
-      puts "#{two_numbers[0]} to the #{two_numbers[1]} = #{exponent(two_numbers[0],two_numbers[1])}"
+      get_input("to the")
       get_user_choice
     when "sq", "square root"
       puts "What number would you like to square root?: "
       num1 = gets.chomp.to_i
       puts "The square root of #{num1} is #{square_root(num1)}"
+      get_user_choice
     when "q", "quit"
       return
     else
@@ -37,13 +33,42 @@ def get_user_choice
   end
 end
 
+
+# puts "Peform more operations on this number (Y/N)?"
+# continue = gets.chomp.to_s
+# if continue == "N"
+#   next
+# end
+
+# def get_input(math_sign)
+#   input = []
+#   puts "Enter the first number: "
+#   input << num1 = gets.chomp.to_i
+#   puts "#{math_sign}"
+#   input << num2 = gets.chomp.to_i
+#   return input
+# end
+
+# this method makes get_user_choice much DRY-er by eliminating repetition for the case statement
 def get_input(math_sign)
   input = []
   puts "Enter the first number: "
   input << num1 = gets.chomp.to_i
   puts "#{math_sign}"
   input << num2 = gets.chomp.to_i
-  return input
+  case math_sign
+  when "+"
+    result = add(input[0],input[1])
+  when "-"
+    result = subtract(input[0],input[1])
+  when "*"
+    result = multiply(input[0],input[1])
+  when "/"
+    result = divide(input[0],input[1])
+  when "to the"
+    result = exponent(input[0],input[1])
+  end
+    puts "#{input[0]} #{math_sign} #{input[1]} = #{result}"
 end
 
 def add(num1,num2)
