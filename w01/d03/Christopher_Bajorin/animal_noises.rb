@@ -1,6 +1,8 @@
 # gets user input and responds with the sound in a string
 
-def animals(input)
+def animals
+  input = "stuff"
+  while ""
     case input
       when "cat"
           puts "Meow!"
@@ -17,6 +19,7 @@ def menu
   while (user_input != "Q")
     animals(user_input)
   end
+
 end
 
 menu
