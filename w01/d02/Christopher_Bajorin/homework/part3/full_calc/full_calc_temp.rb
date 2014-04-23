@@ -1,7 +1,9 @@
 #just push each entry into a single array, skip the numbers
 
 def intro
-  puts "hi, enter inputs"
+  puts "Here is a list of operations: \n Addition(+) \n Subtraction(-) \n Multiplication(*) \n Division(%) \n Exponent(^) \n Square root(sqrt) \n
+  If you would like to exit, type 'quit'"
+  if
   calc_inputs("empty")
 end
 
@@ -25,7 +27,6 @@ def check_for_more_inputs(prior_input)
 end
 
 def formula_calculations(formula_array)
-  for each { |chr|   }
   # print formula_array
 end
 
