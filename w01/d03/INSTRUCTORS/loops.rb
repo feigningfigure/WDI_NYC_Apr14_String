@@ -21,3 +21,35 @@ end
 for item in array
 	puts item
 end
+
+# Using .each with an array
+
+array = ["wednesday", "macbook", "coffee", "lunch", "apple core"]
+
+array.each do |item|
+	puts "Right now I am thinking of #{item}"
+end
+
+array.each_with_index do |item, index|
+	puts "#{item} is at position #{index} in this array"
+end
+
+hash = {monday: "52 degrees", tuesday: "60 degrees", wednesday: "56 degrees", thursday: "66 degrees"}
+
+hash.each do |k, v|
+	puts "On #{k.capitalize} it was #{v} outside"
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
