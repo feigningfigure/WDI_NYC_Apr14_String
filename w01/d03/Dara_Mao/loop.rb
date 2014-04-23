@@ -26,7 +26,7 @@ for item in array
   puts item
 end
 
-# The scoping of ".each" is different from "for loop" as it runs throuh an array
+# The scoping of ".each" is different from "for loop" as it runs through an array
 
 #.each
 
