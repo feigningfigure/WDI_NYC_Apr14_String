@@ -44,10 +44,10 @@ def blend(smoothie_ingredients)
     |ingredient, measurement|
     giant_string << ingredient
     }
-  return giant_string.gsub(" ","").split(//).shuffle
+  return giant_string.gsub(" ","").split(//).shuffle.join
 end
 
-puts blend(smoothie_ingredients)
+p blend(smoothie_ingredients)
 
 # create a class called Blender
 # It should have a method that takes an array of ingredients and returns a mixed string of characters.
