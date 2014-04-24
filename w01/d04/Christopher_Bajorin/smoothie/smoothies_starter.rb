@@ -37,8 +37,25 @@ smoothie_ingredients = {
 # and output a mixed string of characters
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
-def blend(smoothie_ingredients)
-end
+# def blend(smoothie_ingredients)
+
+#   stripped_array = []
+
+#   smoothie_ingredients.each do |ingredient, value|
+#     stripped_array << ingredient.delete(' ')
+#     end
+
+#     ingredients_as_string = stripped_array * ""
+
+#     shuffled = ingredients_as_string.split("").shuffle.join
+
+#     puts shuffled
+
+# end
+
+# blend(smoothie_ingredients)
+
+
 
 
 # create a class called Blender
@@ -48,6 +65,47 @@ end
 # Blend the the smoothie array
 
 class Blender
+
+  attr_accessor :power, :choice_array
+
+  def initialize(blender_power=nil,new_array=[])
+    @power = blender_power
+    @choice_array = new_array
+  end
+
+  def get_ingredients # user input takes list separated by ", " and makes array
+    puts "What ingredients would you like to blend?
+    e.g. carrot, orange, cauliflower"
+    ingredients_choice = gets.chomp.downcase
+    @choice_array = ingredients_choice.split(", ")
+    turn_on
+  end
+
+  def blend(ingredient_array)
+    puts "Here is your smoothie!"
+    ingredient_string = ingredient_array * ""
+    puts ingredient_string.split("").shuffle.join
+  end
+
+  def turn_on
+    puts "would you like to turn the blender on?"
+    @power = gets.chomp.downcase
+    if @power == "on"
+      blend(@choice_array)
+    else
+      puts "you can't blend if you don't turn it on!"
+      turn_on
+    end
+  end
+
+
 end
+
+test = Blender.new
+test.get_ingredients
+
+# It should have a method that takes an array of ingredients and returns a mixed string of characters.
+# Give the blender an on and off switch and only allow the blender to function when it's on.
+
 
 # Move on to gluten_free.rb
