@@ -12,3 +12,4 @@ def double_of_string(word)
   return word+word if word.class == String
   "Not a string!"
 end
+
