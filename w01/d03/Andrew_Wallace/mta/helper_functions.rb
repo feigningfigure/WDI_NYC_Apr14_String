@@ -17,6 +17,9 @@ def need_to_transfer(start_station, end_station, start_line, end_line)
   total_distance = how_many_stops(start_station, "Union Square", start_line) + how_many_stops("Union Square", end_station, end_line)
 end
 
+# def count_intersections(start_line, end_line)
+#   shared_intersections = $trains[line].index(start_line) & $trains[line].index(end_line)
+# end
 
 # def find_stop_number(array,value)
 #   array.index(value) + 1
