@@ -1,0 +1,13 @@
+load './scanner.rb'
+load './mover.rb'
+
+organizer = scanner.new
+
+organizer.scan_and_analize('clothes')
+
+organizer.scan
+
+
+
+puts "Your clothes are organized!"
+

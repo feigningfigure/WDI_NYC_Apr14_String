@@ -1,5 +1,13 @@
-def count_stops(start_name, ending_name)
-  # counts the stop between two on the same line
+def how_many_stops(start_name, ending_name)
+  if $trains[:n_line].include?(start_name) && $trains[:n_line].include?(ending_name)#the two lines are the same
+    num_of_stops = $trains[:n_line].index(ending_name) - $trains[:n_line].index(start_name)
+    p num_of_stops.abs
+  else
+    return nil
+  end
+  #num_of_stops.abs
+  #retu num_of_stops.abs
+    # counts the stop between two on the same line
   #
   # takes two params:
   # 1. a starting station name
@@ -10,7 +18,7 @@ def count_stops(start_name, ending_name)
 end
 
 def need_to_transfer?(start_name, ending_name)
-  # deteremines if a transfer is needed
+  # determines if a transfer is needed
   #
   # takes two params:
   # 1. a station name
@@ -20,3 +28,4 @@ def need_to_transfer?(start_name, ending_name)
 
 
 end
+
