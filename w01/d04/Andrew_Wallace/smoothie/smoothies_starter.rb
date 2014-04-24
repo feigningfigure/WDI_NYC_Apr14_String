@@ -37,9 +37,13 @@ smoothie_ingredients = {
 # and output a mixed string of characters
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
+
 def blend(smoothie_ingredients)
+  smoothie_ingredients.each { |ingredient, measurement| puts ingredient.gsub(" ","") }
+
 end
 
+blend(smoothie_ingredients)
 
 # create a class called Blender
 # It should have a method that takes an array of ingredients and returns a mixed string of characters.
