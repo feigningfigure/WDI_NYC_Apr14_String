@@ -69,7 +69,7 @@ def blend(smoothie_ingredients)
 end
 
 # blend(smoothie_ingredients)
-blend(test_hash)
+# blend(test_hash)
 
 # this works
 
@@ -92,13 +92,69 @@ blend(test_hash)
 
 
 # create a class called Blender
-# It should have a method that takes an -- array of ingredients -- and returns -- a mixed string of characters --.
+# It should have a method that takes an
+# -- array of ingredients --
+# and returns
+# -- a mixed string of characters --.
 # Give the blender an on and off switch and only allow the blender to function when it's on.
 # FOR SAFETY'S SAKE When you create a new blender by default it should be off.
 # Blend the the smoothie array
 
 class Blender
+
+  def initialize(initial_power="off")
+    @power = initial_power
+  end
+
+  def create_load_of_ingredients(ingredients_hash)
+    load_of_ingredients = []
+    ingredients_hash.each do |k,v|
+      load_of_ingredients << k
+    end
+    return load_of_ingredients
+  end
+
+  def quick_shuffle(string)
+    string.split("").shuffle.join
+  end
+
+  def on
+    @power = "on"
+    puts "blender on"
+  end
+
+   def off
+    @power = "off"
+    puts "blender off"
+  end
+
+
+  def blend(smoothie_ingredients)
+  unless @power == "on"
+    puts "Please turn on the blender!"
+    return nil
+  end
+  puts "Blending"
+  items_to_blend = create_load_of_ingredients(smoothie_ingredients)
+  blended_items = []
+  items_to_blend.each do |item|
+    current_color = quick_shuffle('B0171F')
+    item .split(//).each do |letter|
+      blended_items<< letter.color(current_color)
+    end
+  end
+  puts blended_items.shuffle.join.gsub(/\s+/, "")
+  puts "Yum"
+  end
+
 end
+
+George = Blender.new
+George.blend(smoothie_ingredients)
+George.on
+George.blend(smoothie_ingredients)
+George.off
+
 
 # Move on to gluten_free.rb
 
