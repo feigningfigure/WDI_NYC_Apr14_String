@@ -41,4 +41,5 @@ def find_stop
   puts "\n You have #{tot_dist} stops until #{dest_stop}"
 end
 
+
 find_stop
