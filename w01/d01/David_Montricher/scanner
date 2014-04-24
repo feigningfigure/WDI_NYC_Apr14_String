@@ -1,0 +1,24 @@
+class scanner
+
+  #start
+  def initialize
+    @bed = ["clothes_on_bed"]
+  end
+
+  #method
+  def scan(clothes)
+    puts "Scan clothes"
+    clothes_on_bed(piece)
+    return "#{piece} scanned!"
+  end
+
+  #method
+  def clothes_on_bed
+    @bed
+  end
+
+  def scan
+
+  end
+
+end
