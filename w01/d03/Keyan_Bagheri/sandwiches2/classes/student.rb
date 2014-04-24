@@ -6,8 +6,12 @@ class Student
 	# ITS CODE THAT WRITES OTHER CODE FOR YOU!
 
 	def initialize(initial_name=nil) # means '.new'
+		# REMEMBER TO THINK OF what is important to your object upon creation?
+		# if it is not IMPORTANT, do not add it
 		puts "I was created!"
 		@name = initial_name
+		new_notebook = Notebook.new
+		@bag = [new_notebook]
 	end
 
 	#getter method
