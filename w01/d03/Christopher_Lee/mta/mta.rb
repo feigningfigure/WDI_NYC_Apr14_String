@@ -4,51 +4,51 @@ require_relative 'helper_functions'
 $trains = {
   :n_line => ["Times Square", "34th", "28th", "23rd", "Union Square", "8th Street"],
   :l_line => ["8th Ave","6th Ave","Union Square","3rd Ave", "1st Ave"],
-  :six_line => ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
+  :six_line => ["Grand Central", "33rd", "28th street", "23rd street", "Union Square", "Astor Place"]
 }
 
-test_n_line = ["Times Square", "34th", "28th", "23rd", "Union Square", "8th Street"]
 
-test_six_line = ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
+def count_my_train_stops(start_line, start_stop, end_line, end_stop)
+  beginning_line = line_picker(start_line)
+  ending_line = line_picker(end_line)
+  if need_to_transfer?(beginning_line, ending_line)
+    leg_1 = how_many_stops(start_stop,"Union Square", beginning_line)
+    leg_2 = how_many_stops("Union Square",end_stop, ending_line)
+    return leg_1 + leg_2
+  else
+    how_many_stops(start_stop,end_stop,ending_line)
+  end
 
-# def total_stops(entrance_line, entrance_stop, exit_line, exit_stop)
-
-# end
-
-# # counting distance between areas of an arrays
-# # e.g. array.length
-# #
-
-
-# test_array = ["8th Ave","6th Ave","Union Square","3rd Ave", "1st Ave"]
-
-# test_array.each_with_index do |item, index|
-#   puts item
-#   puts index
-# end
-
-# puts test_array.index("8th Ave")
-
-# hots = test_array.index("8th Ave")
-
-
-# test_array.index("8th Ave") # 0
-# test_array.index("Union Square") # 2
-
-
-# test_array.index("Union Square") - test_array.index("8th Ave") #works
-
-# # you reverse it: format is final stop - beginning stop
-# test_array.index("1st Ave")-test_array.index("6th Ave") #works
-
-# # works: this is how you want to do it
-# (test_array.index("8th Ave")-test_array.index("3rd Ave")).abs
-
-
-def count_stops(start_name, ending_name)
-  start_name = start_name.to_s
-  ending_name = ending_name.to_s
-  l_line = ["8th Ave","6th Ave","Union Square","3rd Ave", "1st Ave"]
-  trip_length = (l_line.index(start_name)-l_line.index(ending_name)).abs
-  puts trip_length
 end
+
+def line_picker(line)
+  line = line.to_s.downcase
+  case line
+  when "l"
+    return :l_line
+  when "n"
+    return :n_line
+  when "6", "six", "six line"
+    return :six_line
+  end
+end
+
+
+
+# test_n_line = ["Times Square", "34th", "28th", "23rd", "Union Square", "8th Street"]
+
+# # test_six_line = ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
+
+#  ["Times Square", "34th", "28th", "23rd", "Union Square", "8th Street"].each_with_index do |v,i|
+#   if v == "Union Square"
+#     puts i
+#   end
+# end
+
+
+#  if need_to_transfer?(start_name, ending_name)
+#   # 1st line stops till Union Square
+#   # 2nd line stops till Union Square
+#   # trip length = 1st + 2nd
+#     how_many_stops("Union Square", ending_name, train_line)
+
