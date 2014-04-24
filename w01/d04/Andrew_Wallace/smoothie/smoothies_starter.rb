@@ -39,11 +39,15 @@ smoothie_ingredients = {
 
 
 def blend(smoothie_ingredients)
-  smoothie_ingredients.each { |ingredient, measurement| puts ingredient.gsub(" ","") }
-
+  giant_string = ""
+  smoothie_ingredients.each {
+    |ingredient, measurement|
+    giant_string << ingredient
+    }
+  return giant_string.gsub(" ","").split(//).shuffle
 end
 
-blend(smoothie_ingredients)
+puts blend(smoothie_ingredients)
 
 # create a class called Blender
 # It should have a method that takes an array of ingredients and returns a mixed string of characters.
