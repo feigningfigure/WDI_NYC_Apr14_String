@@ -28,16 +28,30 @@ $smoothie_ingredients_array = $smoothie_ingredients.to_a
 #prints each ingredient in the array
 
 #Make an array with the ingredients only
-ingredient_array=[]
+$ingredient_array=[]
 $smoothie_ingredients_array.each do|ingredient, measure|
- ingredient_array << ingredient
+ $ingredient_array << ingredient
   end
 
-# puts ingredient_array
+# puts $ingredient_array
 
-ingredient_array.each do |index, value|
-  puts value
+def each_ingredient
+$ingredient_array.each do |k,v|
+  return k
 end
+ return
+end
+
+# puts each_ingredient
+
+word = each_ingredient
+#convert letters in array of characters
+letter_array= word.chars.to_a
+puts letter_array
+
+# ingredient_array.each do |index, value|
+#   puts value
+# end
 
 #returns the ingredients from the array
 
