@@ -38,16 +38,9 @@ smoothie_ingredients = {
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
 
-def blend(smoothie_ingredients)
-  giant_string = ""
-  smoothie_ingredients.each {
-    |ingredient, measurement|
-    giant_string << ingredient
-    }
-  return giant_string.gsub(" ","").split(//).shuffle.join
-end
 
-p blend(smoothie_ingredients)
+
+
 
 # create a class called Blender
 # It should have a method that takes an array of ingredients and returns a mixed string of characters.
@@ -55,7 +48,43 @@ p blend(smoothie_ingredients)
 # FOR SAFETY'S SAKE When you create a new blender by default it should be off.
 # Blend the the smoothie array
 
+user_ingredients = ["carrot", "potato", "kale", "hot pocket"]
+
+# def user_ingredients(ingredients)
+#   puts "What would you like to blend?"
+#   puts "Hit Return after entering each ingredient"
+#   puts "Then enter 'Blend' to make your drink!"
+#   case
+#   when
+# end
+
+
 class Blender
+
+  def blendHash(smoothie_ingredients)
+    giant_string = ""
+    smoothie_ingredients.each {
+      |ingredient, measurement|
+      giant_string << ingredient
+    }
+    giant_string.gsub(" ","").split(//).shuffle.join
+  end
+
+  def blendArray(user_ingredients)
+    giant_string = ""
+    user_ingredients.each {
+      |ingredients|
+      giant_string << ingredients
+    }
+    giant_string.gsub(" ","").split(//).shuffle.join
+  end
 end
 
+
+vitamix = Blender.new()
+#This one tests the hash!
+p vitamix.blendHash(smoothie_ingredients)
+puts ""
+#This one tests the array!
+p vitamix.blendArray(user_ingredients)
 # Move on to gluten_free.rb
