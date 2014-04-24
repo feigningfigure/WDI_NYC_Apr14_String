@@ -1,5 +1,11 @@
 def count_stops(start_name, ending_name)
   # counts the stop between two on the same line
+  unless $trains [:n_line].include? start_name || ending_name == false then
+  stops = $trains [:n_line].index(ending_name) - $trains [:n_line].index(start_name)
+  puts "#{stops.abs} stop/s until destination"
+else
+  return nil
+end
   #
   # takes two params:
   # 1. a starting station name
