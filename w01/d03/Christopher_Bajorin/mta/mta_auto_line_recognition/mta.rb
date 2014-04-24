@@ -1,4 +1,4 @@
-# require_relative 'helper_functions'
+require_relative 'helper_functions'
 
 # global hash of arrays of strings of station names
 
@@ -11,27 +11,28 @@ $trains = {
 def get_inputs
   puts "what stop are you on?"
   current_stop = gets.chomp
-
-  $trains.each do |key, value|
-    inspect_stops_array(key, current_stop)
+  start_array = []
+  start_array = $trains.each do |key, value|
+    create_start_array(key, current_stop)
   end
+  puts "line #{start_array[0]} and stop #{start_array[1]}"
+
+  puts "what stop are you going to?"
+  target_stop = gets.chomp
+  target_array = []
+  target_array = $trains.each do |key, value|
+    create_target_array(key, current_stop)
+  end
+  puts "line #{target_array[0]} and stop #{target_array[1]}"
+
+
+  # puts "Which stop are you going to?"
+  # target_stop = gets.chomp
+  # target_array
+
+
 end
 
-def inspect_stops_array(line, current_stop)
-  $trains[line].each do |stop|
-    if stop == current_stop
-      #puts $trains[line].index(stop)
-      stop_index = $trains[line].index(stop)
-      line_index = line
-      # create_start_array(line_index, stop_index)
-    else
-      waste = "stop"
-    end
-  end
-end
 
-# def creat_start_array(start_line_index, stop_line_index)
-#   start_array = [start_line_index, stop_line_index]
-#   puts start_array
-# end
+
 get_inputs

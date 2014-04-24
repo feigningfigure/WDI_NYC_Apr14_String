@@ -1,3 +1,32 @@
+
+def create_start_array(line, current_stop)
+  start = []
+  $trains[line].each do |stop|
+    if stop == current_stop                                    #this works
+      stop_index = $trains[line].index(stop)
+      line_index = line.to_sym
+      start.push(line_index)
+      start.push(stop_index)
+    end
+  end
+  # puts start_array
+  return start
+end
+
+def create_target_array(line, current_stop)
+  target_array = []
+  $trains[line].each do |stop|
+    if stop == current_stop                                    #this works
+      stop_index = $trains[line].index(stop)
+      line_index = line.to_sym
+      target_array.push(line_index)
+      target_array.push(stop_index)
+    end
+  end
+  # puts start_array
+  return target_array
+end
+
 # def count_stops(start_name, ending_name)
 
 
@@ -15,11 +44,11 @@
 
 
 
-def need_to_transfer?(start_line, ending_line)
+# def need_to_transfer?(start_line, ending_line)
 
-  if start_line != ending_line
-    transfer = true
-  else
-    transfer = false
-  end
-end
+#   if start_line != ending_line
+#     transfer = true
+#   else
+#     transfer = false
+#   end
+# end
