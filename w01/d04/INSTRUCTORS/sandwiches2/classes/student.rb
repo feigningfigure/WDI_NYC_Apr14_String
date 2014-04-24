@@ -1,7 +1,7 @@
 class Student
 
   # this is a 'macro' that creates getter/setter methods
-  attr_accessor :name
+  attr_accessor :name, :bag
 
   # 'initialize' method determines
   # the code that will run when .new
@@ -11,6 +11,7 @@ class Student
     # upon its creation?
     puts "I was created!"
     @name = initial_name
+    @bag = Array.new
   end
 
   # 'getter' method
@@ -26,6 +27,8 @@ class Student
   end
 
   # WHY DOES THIS WORK!?!?!
+  # this is one of the two methods
+  # that attr_accessor creates
   # def name=(new_name)
   #   @name = new_name
   # end
