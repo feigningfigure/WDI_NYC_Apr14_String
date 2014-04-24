@@ -1,48 +1,32 @@
- def count_stops(dep_station, arv_station)
-#   # counts the stop between two on the same line
-#   #
-#   # takes two params:
-#   # 1. a starting station name
-#   # 2. an ending station name
-#   #
-#   # returns an integer equal to how many stops between two stops on the same line
-#   # if two stops are not on the same line, return nil
-  def return_index (x, y)
-      x.each do |key, value|
-        value.each do |array_value|
-          if array_value == y
-              return value.index(array_value)
-          end
-        end
-      end
-  end
-  count = return_index($trains, dep_station) - return_index($trains, arv_station)
-  return count.abs
+# puts "Enter line of first stop (n_line, l_line, six_line, q_line)"
+# first_line = gets.chomp.to_sym
+# puts "Enter first station"
+# first_station = gets.chomp
 
-end
-
-# def need_to_transfer?(start_name, ending_name)
-#   # deteremines if a transfer is needed
-#   #
-#   # takes two params:
-#   # 1. a station name
-#   # 2. another station name
-#   #
-#   # returns true if transfer is need, or false for all other cases
+# puts "Enter line of last stop (n_line, l_line, six_line, q_line)"
+# last_line = gets.chomp.to_sym
+# puts "Enter last station"
+# last_station = gets.chomp
 
 
+# $trains = {
+#   :n_line => ["Time Square", "34th ", "28th", "23rd", "Union Square", "8th"],
+#   :l_line => ["8th", "6th", "Union Square", "3rd", "1st"],
+#   :six_line => ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"],
+#   :q_line => ["Time Square", "Herald Square", "Union Square", "Canal St"]
+# }
+
+# US = "Union Square"
+
+# def count_stops (x, first, last)
+
+#   count = $trains[x].index(first) - $trains[x].index(last)
+#   return count.abs
 # end
 
-# def find_stops(dep_station, arv_station)
-#    $trains.index[:n_line] do |item, index|
-#     puts "#{index}"
-#   end
+# if first_line == last_line
+#   puts count_stops(first_line, first_stop, last_stop)
+# else
+# puts "You will arrive in #{count_stops(first_line, first_station, US) + count_stops(last_line, US, last_station)} stops."
+
 # end
-
-
-# def inspect_stops(stop)
-#   if stop.class == Array
-#     amount_stops(stop)
-#   end
-# end
-
