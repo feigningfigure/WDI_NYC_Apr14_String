@@ -1,22 +1,37 @@
-def count_stops(start_name, ending_name)
-  # counts the stop between two on the same line
-  #
-  # takes two params:
-  # 1. a starting station name
-  # 2. an ending station name
-  #
-  # returns an integer equal to how many stops between two stops on the same line
-  # if two stops are not on the same line, return nil
+puts "starting stop"
+  puts "Enter train line of stop"
+  s_key_value = gets.chomp.to_sym
+  puts "enter stop"
+  user_start_name = gets.chomp
+puts "ending stop"
+  puts "Enter train line of stop"
+  e_key_value = gets.chomp.to_sym
+  puts "enter stop"
+  user_ending_name = gets.chomp  
+
+$trains = {
+  :n_line => ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
+  :l_line => ["8th", "6th", "Union Square", "3rd", "1st"],
+  :six_line => ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
+}
+
+
+
+US = "Union Square"
+
+def how_many_stops(k, start_name, ending_name)
+  
+  count = $trains[k].index(start_name) - $trains[k].index(ending_name)
+  return count.abs
+
 end
 
-def need_to_transfer?(start_name, ending_name)
-  # deteremines if a transfer is needed
-  #
-  # takes two params:
-  # 1. a station name
-  # 2. another station name
-  #
-  # returns true if transfer is need, or false for all other cases
-
-
+if s_key_value == e_key_value
+  puts how_many_stops(s_key_value, user_start_name, user_ending_name)
+else
+  puts how_many_stops(s_key_value, user_start_name, US) + how_many_stops(e_key_value, US, user_ending_name)
 end
+
+
+
+
