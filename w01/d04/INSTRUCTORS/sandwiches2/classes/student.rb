@@ -22,11 +22,18 @@ class Student
     @dollars = []
   end
 
-  def get_dollars(number_of_desired_dollars)
+  def add_dollars(number_of_desired_dollars)
     number_of_desired_dollars.times do
       @dollars << Dollar.new
     end
     puts "You have #{@dollars.length} dollars!"
+    # should return something!!!
+  end
+
+  def find_ingredients_for_sandwich
+    @bag << Bread.new
+    @bag << Jelly.new
+    @bag << PeanutButter.new
   end
 
   # 'getter' method
