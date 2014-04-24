@@ -1,6 +1,6 @@
 require_relative '../helper_functions'
 
-describe "the 'count_stops' function" do
+describe "the 'how_many_stops' function" do
 
   it "should return 2 for 'Times Square' and '28th' for N Line" do
     how_many_stops("Times Square", "28th").should eq(2)
