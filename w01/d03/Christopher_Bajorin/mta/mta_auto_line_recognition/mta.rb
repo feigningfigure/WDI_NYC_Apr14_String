@@ -11,19 +11,22 @@ $trains = {
 def get_inputs
   puts "what stop are you on?"
   current_stop = gets.chomp
-  start_array = []
-  start_array = $trains.each do |key, value|
-    create_start_array(key, current_stop)
-  end
-  puts "line #{start_array[0]} and stop #{start_array[1]}"
 
-  puts "what stop are you going to?"
-  target_stop = gets.chomp
-  target_array = []
-  target_array = $trains.each do |key, value|
-    create_target_array(key, current_stop)
+  start_array = []
+  $trains.each do |key, value|
+    start_array = create_start_array(key, current_stop)
   end
-  puts "line #{target_array[0]} and stop #{target_array[1]}"
+  print start_array
+
+
+
+  # puts "what stop are you going to?"
+  # target_stop = gets.chomp
+  # target_array = []
+  # target_array = $trains.each do |key, value|
+  #   create_target_array(key, current_stop)
+  # end
+  # puts start_array
 
 
   # puts "Which stop are you going to?"

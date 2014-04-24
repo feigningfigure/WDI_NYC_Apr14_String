@@ -2,25 +2,23 @@
 def create_start_array(line, current_stop)
   start = []
   $trains[line].each do |stop|
-    if stop == current_stop                                    #this works
-      stop_index = $trains[line].index(stop)
-      line_index = line.to_sym
-      start.push(line_index)
-      start.push(stop_index)
+    if stop == current_stop
+      current_line = line                                    #this works
+      # start.push(line.to_s)
+      # start.push($trains[line].index(stop.to_s))
+      start[0] = current_line
+      start[1] = $trains[line].index(stop)
     end
   end
-  # puts start_array
-  return start
+  start
 end
 
 def create_target_array(line, current_stop)
-  target_array = []
+  target = []
   $trains[line].each do |stop|
-    if stop == current_stop                                    #this works
-      stop_index = $trains[line].index(stop)
-      line_index = line.to_sym
-      target_array.push(line_index)
-      target_array.push(stop_index)
+    if stop == current_stop
+      target.push(line_index)
+      target.push(stop_index)
     end
   end
   # puts start_array

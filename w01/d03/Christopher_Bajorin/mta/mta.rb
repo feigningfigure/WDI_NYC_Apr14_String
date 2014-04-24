@@ -15,13 +15,13 @@ def find_stop
     puts key
   end
 
-  puts "\nWhat line are you on?"
+  puts "\nWhich line are you on?"
   cur_lin = gets.chomp.to_sym
 
   puts "\nHere are the stops on the #{cur_lin}"
   puts $trains[cur_lin]
 
-  puts "\nWhat stop are you on?"
+  puts "\nWhich stop are you on?"
   cur_stop = gets.chomp
 
   puts "\nWhich line are you going to?"
@@ -30,15 +30,19 @@ def find_stop
   puts "\nHere are the stops on the #{dest_lin}"
   puts $trains[dest_lin]
 
-  puts "\nwhich stop?"
+  puts "\nWhich stop?"
   dest_stop = gets.chomp
 
-  cur_lin_dist = $trains[cur_lin].index(cur_stop) - $trains[cur_lin].index("Union Square")
-  dest_lin_dist = $trains[dest_lin].index(dest_stop) - $trains[dest_lin].index("Union Square")
-
+  if cur_lin != dest_lin
+    cur_lin_dist = $trains[cur_lin].index(cur_stop) - $trains[cur_lin].index("Union Square")
+    dest_lin_dist = $trains[dest_lin].index(dest_stop) - $trains[dest_lin].index("Union Square")
+  else
+    cur_lin_dist = $trains[cur_lin].index(cur_stop) - $trains[cur_lin].index(dest_stop)
+    dest_lin_dist = 0
+  end
   tot_dist = cur_lin_dist.abs + dest_lin_dist.abs
 
-  puts "\n You have #{tot_dist} stops until #{dest_stop}"
+  puts "\nYou have #{tot_dist} stops until the #{dest_stop} stop"
 end
 
 find_stop
