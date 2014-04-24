@@ -1,6 +1,10 @@
 def how_many_stops(start_name, ending_name)
-  num_of_stops = $trains[:n_line].index(ending_name) - $trains[:n_line].index(start_name)
-  p num_of_stops.abs
+  if $trains[:n_line].include?(start_name) && $trains[:n_line].include?(ending_name)#the two lines are the same
+    num_of_stops = $trains[:n_line].index(ending_name) - $trains[:n_line].index(start_name)
+    p num_of_stops.abs
+  else
+    return nil
+  end
   #num_of_stops.abs
   #retu num_of_stops.abs
     # counts the stop between two on the same line
