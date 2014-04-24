@@ -2,7 +2,7 @@ require_relative '../calc.rb'
 require_relative 'spec_helper'
 
 describe '#get_user_choice' do
-  it "shows user a list of operations: 'enter your choice: (a)dd, (s)ubtract, (m)ultiply, (d)ivide'" do
+  it "shows user a list of operations: 'enter your choice: (a)dd, (s)ubtract, (m)ultiply, (d)ivide, (quit)'" do
     output = capture_stdout { get_user_choice }
     output.should eq("enter your choice: (a)dd, (s)ubtract, (m)ultiply, (d)ivide")
   end
