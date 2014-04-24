@@ -78,7 +78,7 @@ end
 
 def exponent(num1,num2)
 	return num1 ** num2
-end
+end 
 
 def sqroot(num1,num2)
 	return Math.sqrt(num1+num2).to_i
