@@ -1,0 +1,16 @@
+details_req_relative to './mover.rb'
+describe "mover" do
+
+  if "clothes = "green shirt" do
+    clothes.shirt.green?.should be true
+  end
+
+  if "clothes = blue shirt" do
+    clothes.shirt.blue?.should be true
+  end
+
+  if "clothes = pants" do
+    clothes.pants?.should be true
+  end
+
+end
