@@ -1,7 +1,7 @@
 class Student
 
   # this is a 'macro' that creates getter/setter methods
-  attr_accessor :name, :bag, :dollars
+  attr_accessor :name, :bag, :dollars, :table
 
   # I can see what's in the bag
   # but not change it.
@@ -34,6 +34,41 @@ class Student
     @bag << Bread.new
     @bag << Jelly.new
     @bag << PeanutButter.new
+  end
+
+  def slice_bread
+    @table.surface[0].sliced = true
+  end
+
+  def assemble_table
+    @table = Table.new
+  end
+
+  def move_bag_contents_to_table
+    # this will prevent the edge-case of a student
+    # without  table and bag from calling this
+    # return nil unless @table && @bag
+    @table.surface = @bag.select do |item|
+      item.class != Notebook
+    end
+    @bag = @bag - @table.surface
+  end
+
+  def make_sandwich
+    jelly = nil
+    pb = nil
+    bread = nil
+    @table.surface.each do |item|
+      case item.class
+      when Bread
+          bread = item
+      when Jelly
+          jelly = item
+      when PeanutButter
+          pb = item
+      end
+    end
+    Sandwich.new(bread, jelly, pb)
   end
 
   # 'getter' method
