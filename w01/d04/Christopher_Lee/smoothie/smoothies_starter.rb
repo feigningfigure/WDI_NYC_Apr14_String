@@ -34,12 +34,21 @@ smoothie_ingredients = {
 }
 
 
+test_hash = {
+  'ooooo' => '1/2 cup',
+  'bbbbb' => '1 cup'
+}
+
 def create_load_of_ingredients(ingredients_hash)
 load_of_ingredients = []
   ingredients_hash.each do |k,v|
     load_of_ingredients << k
   end
   return load_of_ingredients
+end
+
+def quick_shuffle(string)
+  string.split("").shuffle.join
 end
 
 # Write a function called blend.
@@ -51,31 +60,35 @@ def blend(smoothie_ingredients)
   items_to_blend = create_load_of_ingredients(smoothie_ingredients)
   blended_items = []
   items_to_blend.each do |item|
+    current_color = quick_shuffle('B0171F')
     item .split(//).each do |letter|
-      blended_items<< letter
+      blended_items<< letter.color(current_color)
     end
   end
   puts blended_items.shuffle.join.gsub(/\s+/, "")
 end
 
-blend(smoothie_ingredients)
+# blend(smoothie_ingredients)
+blend(test_hash)
 
 # this works
 
 # colorized = []
 
-# def quick_shuffle(string)
-#   string.split("").shuffle.join
-# end
+
+
+# new_color = quick_shuffle('B0171F')
+# "bbb".split(//).each do |letter| colorized << letter.color(new_color) end
 
 # new_color =quick_shuffle('B0171F')
 # "bbb".split(//).each do |letter| colorized << letter.color(new_color) end
 
-# new_color =quick_shuffle('B0171F')
-# "ccc".split(//).each do |letter| colorized << letter.color(new_color) end
+# # new_color =quick_shuffle('B0171F')
+# # "ccc".split(//).each do |letter| colorized << letter.color(new_color) end
 
-# puts colorized.shuffle.join.gsub(/\s+/, "")
+# # puts colorized.shuffle.join.gsub(/\s+/, "")
 
+# "bbb".split(//).each do |letter| colorized << letter.color('B0171F') end
 
 
 # create a class called Blender
