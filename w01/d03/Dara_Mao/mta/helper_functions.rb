@@ -2,12 +2,12 @@ def how_many_stops(start_name, ending_name, line)
 #If two stations are from the same line, then return nil, else count how many stops.
   this_line = nil
 
-  $trains.each do |lines,stations|
-   puts lines
+  $trains.each do |line,stations|
+   puts line
  end
 
-  if  $trains[lines].include? (start_name) && $trains[lines].include? (ending_name)
-      this_line = lines
+  if  $trains[line].include? (start_name) && $trains[line].include? (ending_name)
+      this_line = line
   end
   return this_line
 end
