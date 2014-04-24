@@ -1,4 +1,5 @@
 require_relative '../helper_functions'
+require_relative '../mta.rb'
 
 describe "the 'count_stops' function" do
 
