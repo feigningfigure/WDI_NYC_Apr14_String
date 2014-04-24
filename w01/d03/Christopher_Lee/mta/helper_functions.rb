@@ -18,13 +18,13 @@ end
 
 def count_my_train_stops
   puts "What line would you like to start at?"
-  start_line = gets.chomp.to_s
+  start_line = gets.chomp
   puts "What stop would you start at?"
-  start_stop = gets.chomp.to_s
+  start_stop = gets.chomp.to_s.split.map(&:capitalize).join(' ')
   puts "What line would you like to end on?"
   end_line = gets.chomp.to_s
   puts "What stop would you like to get off on?"
-  end_stop = gets.chomp.to_s
+  end_stop = gets.split.map(&:capitalize).join(' ')
   beginning_line = line_picker(start_line)
   ending_line = line_picker(end_line)
   if need_to_transfer?(beginning_line, ending_line)
@@ -44,6 +44,8 @@ def line_picker(line)
     return :l_line
   when "n"
     return :n_line
+  when "q"
+    return :q_line
   when "6", "six", "six line"
     return :six_line
   end
