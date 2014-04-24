@@ -1,8 +1,14 @@
 class Student
 
   # this is a 'macro' that creates getter/setter methods
-  attr_accessor :name
+  attr_accessor :name, :bag, :dollars
 
+  # I can see what's in the bag
+  # but not change it.
+  attr_reader :balance
+
+  # you can change the bag, but not see what's in it
+  # attr_writer :bag
   # 'initialize' method determines
   # the code that will run when .new
   # is called
@@ -11,6 +17,16 @@ class Student
     # upon its creation?
     puts "I was created!"
     @name = initial_name
+    @bag = Array.new
+    @balance = 100
+    @dollars = []
+  end
+
+  def get_dollars(number_of_desired_dollars)
+    number_of_desired_dollars.times do
+      @dollars << Dollar.new
+    end
+    puts "You have #{@dollars.length} dollars!"
   end
 
   # 'getter' method
@@ -26,6 +42,8 @@ class Student
   end
 
   # WHY DOES THIS WORK!?!?!
+  # this is one of the two methods
+  # that attr_accessor creates
   # def name=(new_name)
   #   @name = new_name
   # end
@@ -37,6 +55,8 @@ class Student
   def shout(word)
     puts word.upcase
   end
+
+
 
 
 end
