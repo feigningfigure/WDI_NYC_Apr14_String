@@ -39,57 +39,6 @@ test_hash = {
   'bbbbb' => '1 cup'
 }
 
-def create_load_of_ingredients(ingredients_hash)
-load_of_ingredients = []
-  ingredients_hash.each do |k,v|
-    load_of_ingredients << k
-  end
-  return load_of_ingredients
-end
-
-def quick_shuffle(string)
-  string.split("").shuffle.join
-end
-
-# Write a function called blend.
-# It should take all the smoothie ingredients (not the measurements) and chop up and mix all the characters
-# and output a mixed string of characters
-# Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
-
-def blend(smoothie_ingredients)
-  items_to_blend = create_load_of_ingredients(smoothie_ingredients)
-  blended_items = []
-  items_to_blend.each do |item|
-    current_color = quick_shuffle('B0171F')
-    item .split(//).each do |letter|
-      blended_items<< letter.color(current_color)
-    end
-  end
-  puts blended_items.shuffle.join.gsub(/\s+/, "")
-end
-
-# blend(smoothie_ingredients)
-# blend(test_hash)
-
-# this works
-
-# colorized = []
-
-
-
-# new_color = quick_shuffle('B0171F')
-# "bbb".split(//).each do |letter| colorized << letter.color(new_color) end
-
-# new_color =quick_shuffle('B0171F')
-# "bbb".split(//).each do |letter| colorized << letter.color(new_color) end
-
-# # new_color =quick_shuffle('B0171F')
-# # "ccc".split(//).each do |letter| colorized << letter.color(new_color) end
-
-# # puts colorized.shuffle.join.gsub(/\s+/, "")
-
-# "bbb".split(//).each do |letter| colorized << letter.color('B0171F') end
-
 
 # create a class called Blender
 # It should have a method that takes an
@@ -128,7 +77,6 @@ class Blender
     puts "blender off"
   end
 
-
   def blend(smoothie_ingredients)
   unless @power == "on"
     puts "Please turn on the blender!"
@@ -144,28 +92,30 @@ class Blender
     end
   end
   puts blended_items.shuffle.join.gsub(/\s+/, "")
-  puts "Yum"
+  puts "Here is your concoction. Yum!"
+  end
+
+  def guide
+    ingredient_choices = Hash.new { |hash, key| hash[key] = "1/2 cup" }
+    puts "What would you like to blend (comma separated por favor)?"
+    user_picks = gets.chomp.gsub(/\s+/, "").split(",")
+      user_picks.each do |item|
+        ingredient_choices[item]
+      end
+    if @power == "off"
+      puts "The blender is off. Would you like to turn it on (off OR on)?"
+      want_to_use = gets.chomp
+      if want_to_use == "off"
+        puts "Come back when you're ready to use the blender!"
+        return nil
+      else want_to_use == "on"
+        @power = "on"
+      end
+    end
+    blend(ingredient_choices)
   end
 
 end
 
 George = Blender.new
-George.blend(smoothie_ingredients)
-George.on
-George.blend(smoothie_ingredients)
-George.off
-
-
-# Move on to gluten_free.rb
-
-
-
-# puts hawt.join.color('43CD80')
-
-# def create_load_of_ingredients(ingredients_hash)
-# load_of_ingredients = []
-#   ingredients_hash.each do |k,v|
-#     load_of_ingredients << k
-#   end
-#   return load_of_ingredients
-# end
+George.guide
