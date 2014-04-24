@@ -15,11 +15,11 @@ end
 describe "the 'need_to_transfer?' function" do
 
   it "should return false for stops on the same line 'Times Square' and '28th'" do
-    how_many_stops("Times Square", "28th").should eq(false)
+    need_to_transfer?("Times Square", "28th").should eq(false)
   end
 
   it "should return true if stops are not on the same line" do
-    how_many_stops("Times Square", "3rd").should eq(true)
+    need_to_transfer?("Times Square", "3rd").should eq(true)
   end
 
 end
