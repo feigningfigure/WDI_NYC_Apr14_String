@@ -7,6 +7,7 @@ class Scrumr
   def initialize
     # connecting instance variable to our global database
     @students = $students.shuffle
+    @group_size = 0
   end
 
   def build_groups
