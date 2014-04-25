@@ -32,22 +32,66 @@ smoothie_ingredients = {
   'hemp milk' => '1 cup'
 }
 
-# Write a function called blend.
-# It should take all the smoothie ingredients (not the measurements) and chop up and mix all the characters
-# and output a mixed string of characters
-# Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
-def blend(smoothie_ingredients)
-end
-
-
-# create a class called Blender
-# It should have a method that takes an array of ingredients and returns a mixed string of characters.
-# Give the blender an on and off switch and only allow the blender to function when it's on.
-# FOR SAFETY'S SAKE When you create a new blender by default it should be off.
-# Blend the the smoothie array
+user_ingredients = ["carrot", "potato", "kale", "hot pocket"]
 
 class Blender
+
+  def initialize()
+    @powered = false
+  end
+
+  def power_on()
+    @powered = true
+  end
+
+  def power_off()
+    @powered = false
+  end
+
+  def power_switch
+    case @powered
+    when true
+      powered = false
+    when false
+      powered = true
+    end
+  end
+
+  def blendHash(smoothie_ingredients)
+    #check for power
+    if @powered == false
+      return
+    else
+
+    giant_string = ""
+    smoothie_ingredients.each {
+      |ingredient, measurement|
+      giant_string << ingredient
+    }
+    giant_string.gsub(" ","").split(//).shuffle.join
+    end
+  end
+
+  def blendArray(user_ingredients)
+     #check for power
+     if @powered == false
+      return
+      else
+
+    giant_string = ""
+    user_ingredients.each {
+      |ingredients|
+      giant_string << ingredients
+    }
+    giant_string.gsub(" ","").split(//).shuffle.join
+     end
+  end
+
 end
 
-# Move on to gluten_free.rb
+vitamix = Blender.new()
+
+vitamix.power_off
+p vitamix.blendArray(user_ingredients)
+

@@ -19,7 +19,8 @@ def start_stop_prompt
 end
 
 
-def count_stops(start_name, ending_name)
+def count_stops(start_line, end_line)
+
 
 end
 
