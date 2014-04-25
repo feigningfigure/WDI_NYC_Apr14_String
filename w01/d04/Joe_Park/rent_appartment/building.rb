@@ -5,8 +5,8 @@ class Building
 	def initialize (address, style, has_doorman, is_walkup, num_floors)
 		@address = address
 		@style = style
-		@has_doorman = has_doorman
-		@is_walkup = is_walkup
+		@has_doorman = false
+		@is_walkup = false
 		@num_floors = num_floors
 		@apartments = []
 	end
@@ -17,16 +17,15 @@ class Building
 		"Does the building have a doorman? #{@has_doorman}.\n"
 		"Is the building a walkup? #{@is_walkup}.\n"
 		"There are #{@num_floors}.\n"
-		"The apartment has #{@apartments.length}."
+		"The building has #{@apartments.length}."
 
-		# if has_doorman == true
-		# 	"has a doorman"
-		# else
-		# 	"has no doorman"
-		# end
-
-	end		
+	# def doorman_indicator	
+	# 	if @has_doorman == true
+	# 		"has a doorman"
+	# 	else
+	# 		"has no doorman"
+	# 	end
+	# end		
 
 end
 
-building911 = Building.new("915st Union St.", "Colonial", true, false, 11).to_s
