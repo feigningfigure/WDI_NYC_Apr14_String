@@ -5,6 +5,19 @@
 # Make sure the stops that are the same for different lines have different names (i.e. 23rd on the N and on the 6 need to be differentiated)
 # Do not begin with implementing a user interface. Begin with implementing the logic that calculates the distance between two stops in the subway system.
 
+puts "What line are you on? 'N', 'L', or 'Six'?" # or 'Q'?"
+start_line = gets.chomp.downcase.to_sym
+puts "Which stop: #{$trains[start_line].join(', ')}? "
+start_station = gets.chomp
+puts "What line do you want to end on? 'N', 'L', or 'Six'?"
+end_line = gets.chomp.downcase.to_sym
+puts "Which stop: #{$trains[start_line].join(', ')}? "
+end_station = gets.chomp
+
+start_location = [start_line, start_station]
+end_location = [end_line, end_station]
+journey = [start_location, end_location]
+
 
 def how_many_stops(start_station, end_station, line)
    distance = ($trains[line].index(start_station) - $trains[line].index(end_station)).abs
