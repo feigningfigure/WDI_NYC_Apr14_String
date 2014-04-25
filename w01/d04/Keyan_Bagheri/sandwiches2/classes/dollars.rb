@@ -1,0 +1,3 @@
+class Dollars
+	
+end

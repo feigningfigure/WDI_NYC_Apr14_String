@@ -7,4 +7,5 @@ $trains = {
   :six => ["6 Line: Grand Central", "6 Line: 33rd Street", "6 Line: 28th Street", "6 Line: 23rd Street", "6 Line: Union Square", "6 Line: Astor Place"]
 }
 
-start_stop_prompt
+journey_start_stop=[]
+journey_start_stop=start_stop_prompt
