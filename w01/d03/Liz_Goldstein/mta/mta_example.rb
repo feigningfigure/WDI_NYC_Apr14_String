@@ -6,5 +6,7 @@ $trains = {
   :six => ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
 }
 
-journey_start_stop = []
-journey_start_stop = start_stop_prompt
+journey_start_stop = []                   # defining a new array
+journey_start_stop = start_stop_prompt    # calling helper function and bundling prompt responses
+
+
