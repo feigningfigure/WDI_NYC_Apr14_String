@@ -12,6 +12,10 @@ class Student
   end
   #initalize calls first (.new) is a pre-existed method that is called everytime with .new
 
+  def name_getter
+
+  end
+
   def shout(word)
     puts word.upcase
   end
