@@ -38,8 +38,15 @@ smoothie_ingredients = {
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
 def blend(smoothie_ingredients)
+  bowl = []
+  smoothie_ingredients.each do |i, m|
+   bowl << i.gsub(' ', '').split(//)
+  end
+  return bowl.flatten.shuffle.join('')
+  
 end
 
+# puts blend(smoothie_ingredients)
 
 # create a class called Blender
 # It should have a method that takes an array of ingredients and returns a mixed string of characters.
@@ -48,6 +55,39 @@ end
 # Blend the the smoothie array
 
 class Blender
+
+  attr_accessor :drink, :power
+
+  def initialize(smoothie_ingredients)
+    @smoothie_ingredients = smoothie_ingredients
+    @drink = smoothie
+    @power = false
+  end
+
+  def blend(smoothie_ingredients)
+    bowl = []
+    smoothie_ingredients.each do |i, m|
+      bowl << i.gsub(' ', '').split(//)
+    end
+    bowl.flatten.shuffle.join('')
+  end
+
+  def smoothie
+    @drink = blend(@smoothie_ingredients)
+  end
+
+  def power_state
+    if @power == false
+      @power = true
+    else
+      smoothie
+    end
+  end
+
 end
+
+berry = Blender.new(smoothie_ingredients)
+puts berry.blend(smoothie_ingredients)
+
 
 # Move on to gluten_free.rb
