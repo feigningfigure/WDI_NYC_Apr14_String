@@ -3,19 +3,15 @@ class Person
 	attr_accessor :name, :age, :gender, :apartment,
 
 
-
-
-
-
-
-	def initialize
+	def initialize(name, age, gender, apartment)
 		@name = name
-		@age = 23
-		@gender = male 
-		@apartment =  []
+		@age = age
+		@gender = gender 
 	end
 
-
+	def to_s
+    	return "The apartment is occupied by #{@name}, a #{@age} year old #{@gender}"
+  	end
 
 
 end
