@@ -1,13 +1,7 @@
-require_relative '../classes/student'
-require_relative '../db/students'
+require_relative 'spec_helper'
 
 # class name
 describe "Student" do
-  # run this before all the tests
-  before :all do
-    $joe_hash = $students[0]
-    $joe = Student.new($joe_hash)
-  end
 
   # expected behavior
   it "should have a name" do
@@ -25,3 +19,7 @@ describe "Student" do
   end
 
 end
+
+# class
+
+
