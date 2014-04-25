@@ -1,3 +1,5 @@
+require 'rainbow'
+
 class Person
 
 	attr_accessor :name, :age, :gender, :apartment
@@ -17,6 +19,14 @@ class Person
 
 	end
 
+	def show_person
+		puts " 00000 ".color('ff0000')
+		puts "OOOOOOO".color('ff0000')
+		puts "(='.'=)".color('f2d4c2')
+		puts "( {|} )".color('b266b2')
+		puts "|||||||".color('31748f')
+	end
+
 end
 
-josephin = apartment.new("Josephin", 18, female, 11).to_s
+josephin = Person.new("Josephin", 18, "female", 11).to_s
