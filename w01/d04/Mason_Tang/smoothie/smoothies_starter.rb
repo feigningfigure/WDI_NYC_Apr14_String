@@ -37,8 +37,43 @@ smoothie_ingredients = {
 # and output a mixed string of characters
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
-def blend(smoothie_ingredients)
+# puts "enter your ingredients"
+# ingredients = gets.chomp.to_s
+
+# def blend(ingredients)
+#   bowl = []
+#   ingredients.each {|item, meas| bowl << item}
+#     return bowl
+# end
+
+# puts blend(bowl)
+
+
+# puts "enter your ingredients"
+# bowl = gets.chomp.to_s
+
+# def blend(bowl)
+#   bowl = []
+
+#     return bowl
+# end
+
+# puts blend()
+# puts "ingredients"
+# ingredients = gets.chomp
+
+
+puts "Enter smoothie ingredients:"
+ingredients = gets.chomp.gsub(' ', '').gsub(",","")
+
+
+
+def blend(ingredients)
+  ingredients.split("").shuffle.join
 end
+
+puts blend(ingredients)
+
 
 
 # create a class called Blender
@@ -47,7 +82,25 @@ end
 # FOR SAFETY'S SAKE When you create a new blender by default it should be off.
 # Blend the the smoothie array
 
-class Blender
-end
 
-# Move on to gluten_free.rb
+# $person.turnon
+# $person.switch
+
+
+# puts "Turn on Blender?"
+
+
+
+
+
+# def blend(ingredients)
+#   ingredients.split("").shuffle.join
+# end
+
+# puts blend(ingredients)
+
+
+
+# end
+
+# # Move on to gluten_free.rb
