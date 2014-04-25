@@ -5,7 +5,10 @@ class Scrumr
   def initialize
     # connecting instance variable to our global database
     @students = $students
-    @groups = [Group.new]
+  end
+
+  def build_groups
+    @groups = []
   end
 
   def start

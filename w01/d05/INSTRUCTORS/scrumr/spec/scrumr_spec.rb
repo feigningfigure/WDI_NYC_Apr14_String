@@ -3,16 +3,25 @@ require_relative 'spec_helper'
 describe "Scrumr" do
 
   before :all do
-    seed_num = rand(1..20)
-    puts "Random number #{seed_num}"
-    $app.number_of_groups = seed_num
+    $number_of_groups = rand(1..20)
+    puts "Random number #{$number_of_groups}"
+    $app.number_of_groups = $number_of_groups
     # we know this is 6
-    $correct_group_size = $students.length/seed_num
+    $correct_group_size = $students.length/$number_of_groups
   end
 
   describe "#build_groups" do
+
+    before :all do
+      $app.build_groups
+    end
+
     it "should create an array of Group objects" do
       $app.groups.first.class.should be(Group)
+    end
+
+    it "should create the right number of groups" do
+      $app.groups.length.should eq($number_of_groups)
     end
   end
 
