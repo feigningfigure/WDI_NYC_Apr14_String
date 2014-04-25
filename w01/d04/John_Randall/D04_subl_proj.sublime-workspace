@@ -1,0 +1,836 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"thing",
+				"thing_to_search_in"
+			],
+			[
+				"item_",
+				"item_counter"
+			],
+			[
+				"item",
+				"item_counter"
+			],
+			[
+				"item_to",
+				"item_to_search_for"
+			],
+			[
+				"sock",
+				"sock_number"
+			],
+			[
+				"x",
+				"xpa	xpath(..) { .. }"
+			],
+			[
+				"get",
+				"get_user_numbers"
+			],
+			[
+				"proc",
+				"process_user_choice"
+			],
+			[
+				"quit",
+				"quit_choice"
+			],
+			[
+				"qui",
+				"quit_choice"
+			],
+			[
+				"num",
+				"num1"
+			],
+			[
+				"test",
+				"test_target"
+			],
+			[
+				"number",
+				"number"
+			],
+			[
+				"input",
+				"input_borough"
+			],
+			[
+				"des",
+				"desired_temperature"
+			],
+			[
+				"cu",
+				"current_temperature"
+			],
+			[
+				"ac",
+				"AC_functional_boolean"
+			],
+			[
+				"if",
+				"if	if … end"
+			],
+			[
+				"factor",
+				"factor_to_test"
+			],
+			[
+				"fac",
+				"factor_to_test"
+			],
+			[
+				"in",
+				"input_number"
+			],
+			[
+				"te",
+				"testing_divisor"
+			],
+			[
+				"testing",
+				"testing_divisor"
+			],
+			[
+				"lar",
+				"largest_prime"
+			],
+			[
+				"fin",
+				"fibonacci_numbers"
+			],
+			[
+				"Fibonacci",
+				"fibonacci_numbers"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"eac",
+				"eac-	each_cons(..) { |group| .. }"
+			],
+			[
+				"fi",
+				"fibonacci_numbers"
+			],
+			[
+				"clo",
+				"clothing_directory_hash"
+			],
+			[
+				"current",
+				"current_item"
+			],
+			[
+				"cl",
+				"clothing_directory_hash"
+			],
+			[
+				"clothing",
+				"clothing_directory_hash"
+			],
+			[
+				"cloth",
+				"clothes_hash"
+			],
+			[
+				"top",
+				"top_shelf"
+			],
+			[
+				"destination",
+				"destination_location"
+			],
+			[
+				"destin",
+				"destination_sub_location"
+			],
+			[
+				"Top",
+				"top_shelf"
+			],
+			[
+				"scan",
+				"scanner1"
+			],
+			[
+				"sca",
+				"scanner1"
+			],
+			[
+				"destination_",
+				"destination_sub-location"
+			],
+			[
+				"blue",
+				"blueShirt"
+			],
+			[
+				"green",
+				"greenShirt"
+			],
+			[
+				"it",
+				"item_input"
+			],
+			[
+				"color",
+				"color"
+			],
+			[
+				"curren",
+				"current_item"
+			],
+			[
+				"print",
+				"print"
+			],
+			[
+				"nu",
+				"number_array"
+			],
+			[
+				"al",
+				"alphas"
+			],
+			[
+				"re",
+				"replacementIndex"
+			],
+			[
+				"replace",
+				"replacementChar"
+			],
+			[
+				"row",
+				"row_length"
+			],
+			[
+				"cho",
+				"chosenDestinationStack"
+			],
+			[
+				"stack",
+				"stackA"
+			],
+			[
+				"disc",
+				"discInHand"
+			],
+			[
+				"ch",
+				"chosenDestinationStack"
+			],
+			[
+				"C",
+				"C"
+			],
+			[
+				"B",
+				"B"
+			],
+			[
+				"uni",
+				"my_uniq"
+			],
+			[
+				"divi",
+				"divisor_array"
+			],
+			[
+				"sum",
+				"sum"
+			],
+			[
+				"xAr",
+				"xArray"
+			],
+			[
+				"xa",
+				"xArrayItem"
+			],
+			[
+				"range",
+				"rangeOverlapArray"
+			],
+			[
+				"y",
+				"yArrayItem"
+			],
+			[
+				"make",
+				"make_array_from_input_range"
+			],
+			[
+				"hand",
+				"handAngle"
+			],
+			[
+				"min",
+				"minAbsAngle"
+			],
+			[
+				"start",
+				"start_num"
+			],
+			[
+				"prime",
+				"primes_less_than_max"
+			],
+			[
+				"prim",
+				"primes"
+			],
+			[
+				"max",
+				"max	max { |a, b| .. }"
+			],
+			[
+				"pr",
+				"primes_less_than_max"
+			],
+			[
+				"back",
+				"background-repeat"
+			],
+			[
+				"backgroun",
+				"background-repeat"
+			],
+			[
+				"la",
+				"last_name"
+			],
+			[
+				"twit",
+				"twitter_handle"
+			],
+			[
+				"l",
+				"last_name"
+			],
+			[
+				"story",
+				"story_category"
+			],
+			[
+				"rese",
+				"response_parsed"
+			],
+			[
+				"up",
+				"upvotes"
+			],
+			[
+				"st",
+				"stories"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"end",
+				"end_year"
+			],
+			[
+				"sec",
+				"seconds_in_hour"
+			],
+			[
+				"ag",
+				"age_in_seconds"
+			],
+			[
+				"ye",
+				"years_in_decade"
+			],
+			[
+				"hou",
+				"hours_in_day"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Ruby/Ruby.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"git:commit",
+				"Git: Commit"
+			],
+			[
+				"git: comm",
+				"Git: Commit"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git:com",
+				"Git: Commit"
+			],
+			[
+				"git:add",
+				"Git: Quick Add"
+			],
+			[
+				"git:st",
+				"Git: Status"
+			],
+			[
+				"git ini",
+				"Git: Init"
+			],
+			[
+				"git:l",
+				"Git: Log"
+			],
+			[
+				"git:stat",
+				"Git: Status"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"package control:",
+				"Package Control: List Packages"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"packa:in",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"syn:ru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"mark",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"snip:if el	",
+				"Snippet: if … else … end"
+			],
+			[
+				"snipp",
+				"Snippet: if … end"
+			],
+			[
+				"syntax: ru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"sidebar",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"ab",
+				"About"
+			],
+			[
+				"syn:	ruby",
+				"Set Syntax: Ruby"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 515.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), 'wb' ).write( urllib2.urlopen( 'http://sublime.wbond.net/' +pf.replace( ' ','%20' )).read()); print( 'Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d04/John_Randall/D04_subl_proj",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d03/John_Randall/animal_noises.rb",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/.git/MERGE_MSG",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d03/John_Randall/helper_functions/spec/helper_functions_spec.rb",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d03/John_Randall/helper_functions/helper_functions.rb",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d03/John_Randall/ProjectEuller003  LargestPrimeFactor.rb",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d03/John_Randall/helper_functions/app.rb",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d03/John_Randall/Unpacking.rb",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d03/John_Randall/helper_functions/helper_functions_spec.rb",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d03/John_Randall/check_every_number.rb",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d02/John_Randall/calculator/spec/spec_helper.rb",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d02/John_Randall/calculator/calc.rb",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d02/John_Randall/calculator/spec/calc_spec.rb",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d02/John_Randall/test.rb",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d02/John_Randall/part2.rb",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w01/d02/John_Randall/drinkingAge.rb",
+		"/Users/johnrandall/code/wdi/ProjectEuller/pe003 LargestPrimeFactor.rb",
+		"/Users/johnrandall/code/wdi/personal/14-04-22/functions.rb",
+		"/Users/johnrandall/code/wdi/personal/14-04-22/functions_spec.rb",
+		"/Users/johnrandall/DocProjects/ProjectEuller/03 LargestPrimeFactor.rb",
+		"/Users/johnrandall/DocProjects/WDI/14-04-22/risk_gitTest/risk.rb",
+		"/Users/johnrandall/DocProjects/WDI/14-04-22/git_test/new_game.rb",
+		"/Users/johnrandall/DocProjects/ProjectEuller/002 EvenFibinaciNumbers.rb",
+		"/Users/johnrandall/DocProjects/WDI/14-04-22/lecture/bedroom.rb",
+		"/Users/johnrandall/DocProjects/WDI/14-04-22/yearAge.rb",
+		"/Users/johnrandall/DocProjects/ProjectEuller/001.rb",
+		"/Users/johnrandall/DocProjects/WDI/14-04-22/lecture/The Ruby Challenge.rb",
+		"/Users/johnrandall/DocProjects/WDI/14-04-22 Lecture",
+		"/Users/johnrandall/code/wdi/personal/D01homework/closet_organizer.rb",
+		"/Users/johnrandall/code/wdi/personal/d01/closet_organization_spec.rb",
+		"/Users/johnrandall/DocProjects/WDI/00Prework/LearnToProgram.rb",
+		"/Users/johnrandall/DocProjects/WDI/00Prework/WDI_Prework-Part3_Ruby.rb",
+		"/Users/johnrandall/DocProjects/WDI/homework/untitled",
+		"/Users/johnrandall/DocProjects/WDI/00Prework/WDI_Prework Part3Ruby.rb",
+		"/Users/johnrandall/DocProjects/GA_WDI/00Prework/WDI Prework Part3Ruby.rb",
+		"/Users/johnrandall/DocProjects/GA_WDI/00Prework/[shell_cmd",
+		"/Users/johnrandall/Library/Application Support/Sublime Text 3/Packages/DashDoc/Default (OSX).sublime-keymap",
+		"/Users/johnrandall/DocProjects/GA_WDI/00Prework/Rails is not currently installed on this system. To get the latest version, simply type",
+		"/Library/Frameworks/help",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Stage2/Exercises/num_to_s.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Stage2/Exercises/ceasar_cipher.rb",
+		"/Users/johnrandall/.bash_profile",
+		"/Users/johnrandall/.bash_rc",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Stage2/Exercises/my_to_s.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Stage2/Exercises/my_transpose.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Stage2/Exercises/TowersOfHanoi.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Stage2/Exercises/Stage 2.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Example Problems/Q1.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Example Problems/Q2.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Example Problems/Q3.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Example Problems/Q4.rb",
+		"/Users/johnrandall/DocProjects/FullStackApplication/Q1.rb",
+		"/Users/johnrandall/DocProjects/FullStackApplication/Q2.rb",
+		"/Users/johnrandall/DocProjects/FullStackApplication/Q3.rb",
+		"/Users/johnrandall/DocProjects/FullStackApplication/Q4.rb",
+		"/Users/johnrandall/DocProjects/FullStackApplication/FullStack Q1.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Learn To Program Exercises/Chap4.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Learn To Program Exercises/Chap5.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Learn To Program Exercises/Chap6.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Learn To Program Exercises/Chap7.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Learn To Program Exercises/Chap8.rb",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Learn To Program Exercises/Chapter 4",
+		"/Users/johnrandall/DocProjects/AppAcademyApplication/Learn To Program Exercises/calc.rb",
+		"/Users/johnrandall/Dropbox/JStuff/GA2014/Application/2014_03-GA_WDI_Application/style.css",
+		"/Users/johnrandall/Dropbox/JStuff/GA2014/Application/2014_03-GA_WDI_Application/index.html",
+		"/Users/johnrandall/Dropbox/JStuff/GA2014/Application/2014_03-GA_WDI_Application/sftp-config.json",
+		"/Users/johnrandall/Dropbox/JStuff/GA2014/Application/AboutJohnRandall/assets/JohnRandall-RI-headshot.JPG",
+		"/Users/johnrandall/Desktop/rootfinder.sh",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/Ruby_Midterm/rail_data/shapes.txt",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/Ruby_Midterm/rail_data/agency.txt",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/Ruby_Midterm/lookuper.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/Ruby_Midterm/rail_data/stops.txt",
+		"/Users/johnrandall/DocProjects/GA/user_app/db/schema.rb",
+		"/Users/johnrandall/DocProjects/GA/user_app/test/controllers/users_controller_test.rb",
+		"/Users/johnrandall/DocProjects/GA/user_app/app/controllers/users_controller.rb",
+		"/Users/johnrandall/DocProjects/GA/user_app/config/routes.rb",
+		"/Users/johnrandall/DocProjects/GA/RailsSandBox/public/404.html",
+		"/Users/johnrandall/DocProjects/GA/RailsSandBox/app/assets/javascripts/application.js",
+		"/Users/johnrandall/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/Ruby_Midterm/	from /Users/johnrandall/.rvm/gems/ruby-2.0.0-p247/gems/gtfs-0.2.1/lib/gtfs/source.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/Ruby_Midterm/rail_data.zip",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/06_Sharing_Behavior/exercises/sharing_behavior.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/06_Sharing_Behavior/exercises/sharing_behavior_spec.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/06_Sharing_Behavior/Class World.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/.git/COMMIT_EDITMSG",
+		"/Users/johnrandall/Desktop/custom_chrome.sh",
+		"/Users/johnrandall/Desktop/list of mondays.html",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-12-03_teddit/story.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-12-03_teddit/teddit.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-12-03_teddit/story_spec.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-12-03_teddit/teddit_spec.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-12-03_teddit/play.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-12-03 teddit/story_spec.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-12-03 teddit/teddit_spec.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-12-03 teddit/story.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-12-03 teddit/teddit.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-12-03 teddit/play.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/05_Collections_APIs/exercises/teddit/teddit_spec.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/05_Collections_APIs/exercises/teddit/story_spec.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/05_Collections_APIs/exercises/teddit/play.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/05_Collections_APIs/exercises/teddit/story.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/05_Collections_APIs/exercises/teddit/teddit.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/05_Collections_APIs/exercises/teddit/test_0001_returns a hash of all attributes(Story",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/05_Collections_APIs/exercises/teddit/+{",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-11-26_teddit/story_spec.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-11-26_teddit/story.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-11-26_teddit/teddit_spec.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-11-26_teddit/teddit.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-11-26_teddit/play.rb",
+		"/Users/johnrandall/Dropbox/108-JKND Share/#Meter and Alarm readings.md",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-11-26 teddit/teddit.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-11-26 teddit/teddit_spec.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-11-26 teddit/story_spec.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-11-26 teddit/story.rb",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/Homework/__john_randall/2013-11-26 teddit/play.rb",
+		"/Users/johnrandall/.profile",
+		"/Users/johnrandall/.gitconfig",
+		"/Users/johnrandall/DocProjects/GA/GitImmersion/git_tutorial/work/hello/.git/MERGE_MSG",
+		"/Users/johnrandall/DocProjects/GA/GitImmersion/git_tutorial/work/hello/readme",
+		"/Users/johnrandall/DocProjects/GA/GitImmersion/git_tutorial/work/hello/lib/hello.rb",
+		"/Users/johnrandall/DocProjects/GA/GitImmersion/git_tutorial/work/hello/Rakefile",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/04_Collections_Loops/exercises/beer_song.rb",
+		"/Users/johnrandall/DocProjects/GA/octopress/source/_posts/2013-11-24-still-trying-to-get-my-head-around-git-concepts.markdown",
+		"/Users/johnrandall/DocProjects/GA/GitImmersion/git_tutorial/work/hello/.git/COMMIT_EDITMSG",
+		"/Users/johnrandall/DocProjects/GA/GitImmersion/git_tutorial/work/hello/hello.rb",
+		"/Users/johnrandall/DocProjects/GA/octopress/.git/COMMIT_EDITMSG",
+		"/Users/johnrandall/DocProjects/GA/BEWD_NYC_6/03_Variables_Conditionals/slides/code/	from /Users/johnrandall/DocProjects/GA/BEWD_NYC_6/03_Variables_Conditionals/slides/code/calculator_spec.rb",
+		"/Users/johnrandall/.floorc"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"find_and_count_stuff",
+			"room_to_search_in",
+			"thing",
+			"item",
+			"choice",
+			"display",
+			"part 1",
+			"scanner1",
+			"mover1",
+			"discInHand",
+			"parent.",
+			"main",
+			"chosenStack",
+			"stones",
+			"organe",
+			"onMouseOut=\"document.MyImage.src='image1.gif';\"",
+			"edit",
+			"mirror",
+			"gtf",
+			"email",
+			"response_parsed",
+			"rss",
+			"key",
+			"#",
+			"first",
+			"slim",
+			"my",
+			"puts",
+			"		",
+			"puts",
+			"double",
+			"shit"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"thing_to_search_in",
+			"scanner",
+			"mover",
+			"$discInHand",
+			"$",
+			"parent",
+			"chosenSourceStack",
+			"stack"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 27.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-commit":
+	{
+		"height": 112.0
+	},
+	"output.git-init":
+	{
+		"height": 112.0
+	},
+	"output.markdown":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 200.0
+	},
+	"project": "D04_subl_proj.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"contr",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"obj",
+				"homework/object_homework_2013-11-21.rb"
+			],
+			[
+				"chea",
+				"BEWD_NYC_6/CheatSheet.md"
+			],
+			[
+				"cha",
+				"~/DocProjects/GA/BEWD_NYC_6/CheatSheet.md"
+			],
+			[
+				"fizz",
+				"~/DocProjects/GA/BEWD_NYC_6/02_Variables_Conditionals/fixbuzz.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 387.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 285.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
