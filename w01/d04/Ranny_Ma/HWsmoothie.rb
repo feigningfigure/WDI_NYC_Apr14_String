@@ -38,16 +38,24 @@ smoothie_ingredients = {
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
 def blend(smoothie_ingredients)
-  bowl = []
-  smoothie_ingredients.each do |i, m|
-   bowl << i.gsub(' ', '').split(//)
-  end
-  return bowl.flatten.shuffle.join('')
-  
+  array = []
+  array = smoothie_ingredients.keys
+  string = array.join.delete(" ")
+  string = string.split("").shuffle
+  string = string.join.delete(" ")
+  string.to_s
+  p string
+  # p string.length
+
+  # p string
+  # p array2
+  # array2.to_s
+  # array2.shuffle
+  #array.each {|x| x.gsub /\s+/, ''}
+  #combine the strings
+  #mix the strings together
 end
-
-# puts blend(smoothie_ingredients)
-
+#blend(smoothie_ingredients)
 # create a class called Blender
 # It should have a method that takes an array of ingredients and returns a mixed string of characters.
 # Give the blender an on and off switch and only allow the blender to function when it's on.
@@ -55,39 +63,48 @@ end
 # Blend the the smoothie array
 
 class Blender
-
-  attr_accessor :drink, :power
-
+#allows you to alter the state of the blender
+attr_accessor :power
+#the blender needs a way to recognize ingredients
   def initialize(smoothie_ingredients)
     @smoothie_ingredients = smoothie_ingredients
-    @drink = smoothie
+    # initial state of blender is off becasue of false
     @power = false
   end
-
-  def blend(smoothie_ingredients)
-    bowl = []
-    smoothie_ingredients.each do |i, m|
-      bowl << i.gsub(' ', '').split(//)
-    end
-    bowl.flatten.shuffle.join('')
-  end
-
-  def smoothie
-    @drink = blend(@smoothie_ingredients)
-  end
-
-  def power_state
-    if @power == false
-      @power = true
+#only problem is that the blender will always evaluate to ON because of the else statement
+  def blender_power
+    if @power == true
+      @power = false
+      puts "The blender is now off"
     else
-      smoothie
+      @power = true
+      blend
+      exec('say The Power Is ON. now blending')
     end
   end
 
+  def blend
+      array = []
+      array = @smoothie_ingredients.keys
+      string = array.join.delete(" ")
+      string = string.split("").shuffle
+      string = string.join.delete(" ")
+      string.to_s
+      p string
+  #   else
+  #     blender_power(power)
+  # end
 end
+end
+#creating a new instance of the blender class, along with the ingredients
+newblender = Blender.new(smoothie_ingredients)
+#calling blender power
+newblender.blender_power
 
-berry = Blender.new(smoothie_ingredients)
-puts berry.blend(smoothie_ingredients)
 
+
+#newblender.power = false
+#newblender.blender_power(power)
+#newblender.blend(smoothie_ingredients)
 
 # Move on to gluten_free.rb

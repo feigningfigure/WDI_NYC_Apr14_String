@@ -1,5 +1,6 @@
 # Instructors for the quiz are written inline.
 require 'pry'
+require 'rainbow'
 
 # docs you may enjoy
 # http://www.ruby-doc.org/core-2.0/Hash.html
@@ -7,7 +8,7 @@ require 'pry'
 # http://ruby-doc.org/core-2.0/Array.html
 
 # Every Morning I make a smoothie with the follow ingredients:
-smoothie_ingredients = {
+$smoothie_ingredients = {
   'flax seeds' => '1 tbsp',
   'chia seeds' => '1 tbsp',
   'coconut flakes' => '1 tbsp',
@@ -32,22 +33,30 @@ smoothie_ingredients = {
   'hemp milk' => '1 cup'
 }
 
-# Write a function called blend.
-# It should take all the smoothie ingredients (not the measurements) and chop up and mix all the characters
-# and output a mixed string of characters
-# Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
+$smoothie_ingredients_array = $smoothie_ingredients.to_a
 
-def blend(smoothie_ingredients)
+#prints each ingredient in the array
+
+#Make an array with the ingredients only
+ingredient_array=[]
+$smoothie_ingredients_array.each do|ingredient, measure|
+ ingredient_array << ingredient
+  end
+
+# puts ingredient_array
+
+ingredient_array.each do |index, value|
+  puts value
 end
 
+#returns the ingredients from the array
 
-# create a class called Blender
-# It should have a method that takes an array of ingredients and returns a mixed string of characters.
-# Give the blender an on and off switch and only allow the blender to function when it's on.
-# FOR SAFETY'S SAKE When you create a new blender by default it should be off.
-# Blend the the smoothie array
+# def blend()
 
-class Blender
-end
+# end
 
-# Move on to gluten_free.rb
+
+# word = "flax seeds"
+# #convert letters in array of characters
+# # letter_array= word.chars.to_a
+# puts letter_array.each_with_object
