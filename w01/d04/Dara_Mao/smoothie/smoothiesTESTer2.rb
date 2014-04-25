@@ -1,3 +1,5 @@
+require 'rainbow/ext/string'
+
 $smoothie_ingredients = {
   'flax seeds' => '1 tbsp',
   'chia seeds' => '1 tbsp',
@@ -35,19 +37,22 @@ $smoothie_ingredients_array.each do|ingredient, measure|
 
 # puts $ingredient_array
 
-def each_ingredient
+$each_ingredient=[]
 $ingredient_array.each do |k,v|
-  return k
-end
- return
+  $each_ingredient << k
 end
 
-# puts each_ingredient
+puts $each_ingredient
 
-word = each_ingredient
-#convert letters in array of characters
-letter_array= word.chars.to_a
-puts letter_array
+puts "this is red".color(:red) + " and " + "this on yellow bg".background(:yellow) + " and " + "even bright underlined!".underline.bright
+
+# word = each_ingredient
+# #convert letters in array of characters
+# letter_array= word.chars.to_a
+
+everything= $each_ingredient.join.delete(" ").split("").shuffle.join.to_s
+
+p everything
 
 # ingredient_array.each do |index, value|
 #   puts value
