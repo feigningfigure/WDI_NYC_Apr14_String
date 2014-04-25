@@ -1,6 +1,6 @@
 # Instructors for the quiz are written inline.
 require 'pry'
-
+require 'rainbow/ext/string'
 # docs you may enjoy
 # http://www.ruby-doc.org/core-2.0/Hash.html
 # http://ruby-doc.org/core-2.0/String.html
@@ -37,21 +37,21 @@ smoothie_ingredients = {
 # and output a mixed string of characters
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
-# def blend(smoothie_ingredients)
+def blend(smoothie_ingredients)
 
-#   stripped_array = []
+  stripped_array = []
 
-#   smoothie_ingredients.each do |ingredient, value|
-#     stripped_array << ingredient.delete(' ')
-#     end
+  smoothie_ingredients.each do |ingredient, value|
+    stripped_array << ingredient.delete(' ')
+    end
 
-#     ingredients_as_string = stripped_array * ""
+    ingredients_as_string = stripped_array * ""
 
-#     shuffled = ingredients_as_string.split("").shuffle.join
+    shuffled = ingredients_as_string.split("").shuffle.join
 
-#     puts shuffled
+    puts shuffled
 
-# end
+end
 
 # blend(smoothie_ingredients)
 

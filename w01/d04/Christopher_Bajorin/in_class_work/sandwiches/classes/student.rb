@@ -16,12 +16,12 @@ class Student
     @dollars = []
   end
 
-  def add_dollars(number_of_desired_dollars)
-    number_of_desired_dollars.times do
-      @dollars << Dollar.new
-    end
-    puts "You have #{@dollars.length} dollars!"
-  end
+  # def add_dollars(number_of_desired_dollars)
+  #   number_of_desired_dollars.times do
+  #     @dollars << Dollar.new
+  #   end
+  #   puts "You have #{@dollars.length} dollars!"
+  # end
 
   def find_ingredients_for_sandwich
     @bag << Bread.new
