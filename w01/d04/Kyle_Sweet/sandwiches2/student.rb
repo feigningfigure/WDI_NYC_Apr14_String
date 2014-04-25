@@ -1,13 +1,18 @@
 class Student
 
+  #this is a 'macro' that creates getter/setter
+  attr_accessor :name
+
+
   #'initialize' method determimines the code that will run when .new is called
-  def initialize(name)
+  def initialize(initial_name)
+    #what's important to your object upon its creation?
     puts "I was created!"
     @name=name
   end
 
 #'getter' method
-def name
+def name_getter
   #an 'instance' variable must include @
   @name
 end
