@@ -1,11 +1,4 @@
-
-##Part 1
-- Build the ***Scrumr*** application
-	- It should randomly assign each student to an instructor for each week's daily stand up meeting.  
- 
---
-#Part 2
-##HappiTails
+#HappiTails
 - You are the manager at HappiTails animal shelter.
 - You need to manage your shelter by storing and manipulating information about clients and animals.
 
@@ -21,48 +14,81 @@
   - A client should have a name.
   - A client should have an age.
   - A client can have multiple pets (animals), but it doesn't start with any.
+    - Pet names MUST be unique (What implications does this have for our choice of data structure?)
+  - A client should be able to accept a pet
+  - A client shoule be able to give away a pet
+
 
 - Shelter:
   - A shelter should have a name
   - A shelter can have multiple animals, but it doesn't start with any.
+    - Animal names MUST be unique
   - A shelter can have multiple clients, but it doesn't start with any.
+    - Client names MUST be unique
   - A shelter should be able to display all of its clients.
   - A shelter should be able to display all of its animals.
-  - A shelter should be able to facilitate an adoption (one of its clients adopting one of the animals from shelter)
-  - A shelter should be able to facilitate a return (one of its clients returning his/her pet to the shelter)
+  - A shelter should be able to give away an animal.
+  - A shelter should be able to accept an animal
+  - A shelter should be able to accept a client
 
 ---
 
-#####Commit 1
-- Define the animal, client and shelter classes according to the specs. Each class should have the appropriate attributes and initialize method.
-- Test these out with pry to make sure you can create the objects and that they do what you think the should do. Check the methods that you wrote too!
+##Part 1
+- Make the tests pass
 
-#####Commit 2
-- Create a main.rb
-- It should create a new shelter for you
-- It should display a menu of options for the user to choose from:
-  - Create an animal
-  - Create a client
-  - Create a shelter
-  - Quit
-- When creating an animal or client, the user is prompted for information like names, age etc. Newly created animals and clients should be added to the shelter.
+---
 
-#####Commit 3
-- Add options to the menu so that a user can:
-  - Display all animals
-  - Display all clients
+##Part 2
+- In an `app.rb` file, create user prompts to facilitate
+  - ...client adopting an animal. This means the client now has the animal and they should no longer be a part of the shelter.
+  - ...client puts an animal up for adoption. This means the client no longer has the animal and it should be added to the shelter.
 
-#####Commit 4
-- Add options to the menu so that a user can:
-  - Facilitate client adopts an animal. This means the client now has the animal and they should no longer be a part of the shelter.
-  - Facilitate client puts an animal up for adoption. This means the client no longer has the animal and it should be added to the shelter.
+###Here is some starter:
 
-#####Commit 5
-- Create a seeds.rb file that initializes a shelter as well as a few animals and clients so you have some data to start with when you run your program.
+```ruby
 
-#####Commit 6 (Bonus)
-- Limit the number of animals a client can adopt to 2 per client. If they try to adopt more than that, yell at them.
-- Refactor your code to make sure it is DRY (Don't Repeat Yourself) and all your methods are in the appropriate classes.
+def menu
+  puts ""
+  puts "Welcome to HappiTails Animal Shelter!"
+  puts "Please choose from the menu below: "
+  puts ""
+  puts "A: Display Animals"
+  puts "B: Display Clients"
+  puts "C: Create Animal"
+  puts "D: Create Client"
+  puts "E: Adopt Animal"
+  puts "F: Put Animal Up For Adoption"
+  puts "Q: Quit"
+  puts ""
+  command = gets.chomp.upcase
 
-#####Commit 7 (Bonus)
-- Add a new class that inherits from your client class called CatLady. A cat lady only takes cats, and takes as many cats as there is space in a computer's memory.
+
+  case command
+  when "A"
+    # Display Animals
+  when "B"
+    # Display Clients
+  when "C"
+    # Create Animal
+  when "D"
+    # Create Client
+  when "E"
+    # Adopt Animal
+  when "F"
+    # Put Animal Up For Adoption
+  when "Q"
+    Kernel.exit
+  end
+end
+
+response = menu
+while response != "Q"
+  response = menu
+end
+
+```
+---
+
+##Bonus
+- Create a seed.rb file that initializes a shelter as well as a few animals and clients so you have some data to start with when you run your program.
+
