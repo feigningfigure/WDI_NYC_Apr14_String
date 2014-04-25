@@ -1,4 +1,4 @@
-require_relative 'helper_functions'
+# require_relative 'helper_functions'
 
 # global hash of arrays of strings of station names
 $trains = {
@@ -15,9 +15,9 @@ user_train=gets.chomp
 if user_train == "N"
 puts "Here are a list of stops on the N_line: #{$trains[:n_line]}:
 Please tell me an origin point from the menu above"
-stop1=gets.chomp
+stop1=gets.chomp.downcase
   puts "Please tell me your destination from the same menu"
-stop2=gets.chomp
+stop2=gets.chomp.downcase
 puts "You are riding #{stop1} to #{stop2}"
 
 

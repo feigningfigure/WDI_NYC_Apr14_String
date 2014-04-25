@@ -2,19 +2,18 @@ require_relative 'spec_helper'
 
 describe "Group" do
 
-  it "should contain a list of student names" do
-
+  it "should contain a list of Student objects" do
     $group1.students[0].class.should be(Student)
   end
 
   describe ".add_students" do
 
-    it "should respond to .add_students" do
-      ($group1.respond_to? :add_students).should be(true)
-    end
+    # it "should respond to .add_students" do
+    #   ($group1.respond_to? :add_students).should be(true)
+    # end
 
-    it "should add students to the .students array" do
-      pending
+    it "should add students to the @students array" do
+      $group1.students.length.should_not be(0)
     end
   end
 
