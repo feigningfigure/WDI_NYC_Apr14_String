@@ -35,6 +35,10 @@ class Student
     @dollars = []
   end
 
+  def to_s
+    puts "Hello! My name is #{@name}.  I really like sandwiches."
+  end
+
   def add_dollars(number_of_desired_dollars)
     number_of_desired_dollars.times do
       @dollars << Dollar.new
@@ -72,7 +76,7 @@ class Student
     pb = nil
     bread = nil
     @table.surface.each do |item|
-      case item.class
+       case item.class
       when Bread
           bread = item
       when Jelly
