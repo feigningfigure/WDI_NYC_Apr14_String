@@ -1,9 +1,11 @@
 class Blender
-	attr_accessor :power
+	attr_accessor :power :switch
 
-	def initialize(power=false)
-
-
+	def initialize(power, switch)
+		@power = power
+		@switch = switch
 	end
 
 end
+
+Blender.new("off", "off")

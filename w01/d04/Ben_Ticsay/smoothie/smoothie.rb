@@ -12,8 +12,14 @@ puts blend(smoothie_ingredients)
 
 
 
-class Blender
-	def blender_on(ingredient_array)
 
-	end
-end
+blender = Blender.new("off", "off")
+puts blender
+
+
+
+
+
+	# def blender_on(ingredient_array)
+	# 	attr_accessor :power
+	# end

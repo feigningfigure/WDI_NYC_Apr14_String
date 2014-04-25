@@ -4,6 +4,25 @@ require_relative "person"
 
 
 
+ben_lofts = Building.new("11 Ben St", "loft", true, false, 10)
+
+ben_lofts <<
+
+ben_lofts << 
+
+ben_lofts.apartments[:unit_a] = Apartment.new("", 3000, true, 5000, 2, 2)
+
+ben_lofts.apartments[:unit_b] = Apartment.new("B", 5000, false, 10000, 0, 1, )
+
+ben_lofts.apartments[:unit_a].renters << Person.new("Batman", 30, "male")
+
+ben_lofts.apartments[:unit_a].renters << Person.new("Robin", 20, "female")
+
+puts ben_lofts
+puts ben_lofts.apartments[:unit_a]
+mckibben_lofts.apartments[:unit_a].renters.each {|renter| puts renter}
+puts ben_lofts.apartments[:unit_b]
+ben_lofts.apartments[:unit_b].renters.each {|renter| puts renter}
 
 
 

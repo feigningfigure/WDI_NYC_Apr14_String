@@ -4,6 +4,9 @@ class Person
 
 
 	def initialize(name, age, gender, apartment)
+
+		puts "Renter data gathered"
+
 		@name = name
 		@age = age
 		@gender = gender 

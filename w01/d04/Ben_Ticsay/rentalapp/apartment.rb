@@ -8,17 +8,19 @@ class Apartment
 
 	def initialize(price, is_occupied, sqft, num_beds, num_baths, renters)
 
+		puts "Apartment data gathered!"
 
 	apartment1
+		@apt_num = apt_num
 		@price = price
 		@is_occupied = is_occupied
 		@sqft = sqft
 		@num_beds = num_beds
 		@num_baths = num_baths
-		@renters = [Person.new]
+		@renters = renters#[Person.new]
 
 	def to_s
-    	"#{@name} has #{@sqft} sqft and #{@renters.count} renters at #{@rent}/month."
+    	"#{@apt_num} has #{@sqft.to_s} sqft, has #{@num_beds.to_s} and #{num_baths.to_s} and #{is_occupied} by #{@renters.count} renters at #{@price}/month."
   	end
 
 
