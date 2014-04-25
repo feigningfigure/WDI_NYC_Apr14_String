@@ -33,6 +33,7 @@
 
 ---
 
+
 #####Commit 1
 - Define the animal, client and shelter classes according to the specs. Each class should have the appropriate attributes and initialize method.
 - Test these out with pry to make sure you can create the objects and that they do what you think the should do. Check the methods that you wrote too!
