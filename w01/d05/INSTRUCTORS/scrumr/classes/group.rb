@@ -6,7 +6,6 @@ class Group
   end
 
   def add_students
-    binding.pry
     $students.each do |student_hash|
       @students << Student.new(student_hash)
     end
