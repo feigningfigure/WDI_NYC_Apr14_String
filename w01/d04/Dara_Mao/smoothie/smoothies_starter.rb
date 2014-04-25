@@ -38,6 +38,8 @@ smoothie_ingredients = {
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
 def blend(smoothie_ingredients)
+#Take the ingredients name (ie.hash name) and then mixed the string of characters. (no space between characters)
+#Output the mixed characters.
 end
 
 

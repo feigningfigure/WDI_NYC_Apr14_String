@@ -1,5 +1,6 @@
 # Instructors for the quiz are written inline.
 require 'pry'
+require_relative 'blender'
 
 # docs you may enjoy
 # http://www.ruby-doc.org/core-2.0/Hash.html
@@ -32,13 +33,21 @@ smoothie_ingredients = {
   'hemp milk' => '1 cup'
 }
 
+
+kcup = Blender.new("kcup")
+kcup.blend(smoothie_ingredients)
+kcup.power_switch
+kcup.blend(smoothie_ingredients)
+
+
+
 # Write a function called blend.
 # It should take all the smoothie ingredients (not the measurements) and chop up and mix all the characters
 # and output a mixed string of characters
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
-def blend(smoothie_ingredients)
-end
+# def blend(smoothie_ingredients)
+# end
 
 
 # create a class called Blender
@@ -47,7 +56,7 @@ end
 # FOR SAFETY'S SAKE When you create a new blender by default it should be off.
 # Blend the the smoothie array
 
-class Blender
-end
+# class Blender
+# end
 
 # Move on to gluten_free.rb
