@@ -9,10 +9,14 @@ class Scrumr
 
   def build_groups
     @groups = []
-
+    binding.pry
+    original_group_size = get_group_size
     # while my DB of students still has stuff in it
-    while @students.length >= get_group_size
-      @groups << Group.new.add_students(@students.pop(get_group_size))
+    until @students.length < original_group_size
+      subset_of_students_array = @students.pop(get_group_size)
+      new_group = Group.new
+      new_group.add_students(subset_of_students_array)
+      @groups << new_group
     end
 
     # get_group_size.times do |n|
