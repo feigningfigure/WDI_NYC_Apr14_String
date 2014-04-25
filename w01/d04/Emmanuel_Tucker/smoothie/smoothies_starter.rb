@@ -1,5 +1,5 @@
 # Instructors for the quiz are written inline.
-require 'pry'
+# require 'pry'
 
 # docs you may enjoy
 # http://www.ruby-doc.org/core-2.0/Hash.html
@@ -7,6 +7,8 @@ require 'pry'
 # http://ruby-doc.org/core-2.0/Array.html
 
 # Every Morning I make a smoothie with the follow ingredients:
+
+# keys & Values
 smoothie_ingredients = {
   'flax seeds' => '1 tbsp',
   'chia seeds' => '1 tbsp',
@@ -38,7 +40,14 @@ smoothie_ingredients = {
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
 def blend(smoothie_ingredients)
+
+  p smoothie_ingredients.keys.join.gsub(/\s+/,"")
+
+
+
+
 end
+blend(smoothie_ingredients)
 
 
 # create a class called Blender
