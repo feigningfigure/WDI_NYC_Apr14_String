@@ -14,7 +14,7 @@
 - Bonus: Make your displayed output colored!
 - Double-Bonus: Each letter stays its original color after blended.  (i.e. if 'carrots' is colored red, and 'spinach' is colored blue, the resulting output should look like this:
 
- ![smoothie color](./ASSIGNMENT_FILES/smoothie_color.png)
+ ![smoothie color](./ASSIGNMENT_FILES/smoothie/smoothie_color.png)
 
 ---
 
