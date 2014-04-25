@@ -16,24 +16,19 @@ require_relative 'helper_functions'
 $trains = {
   :n => ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
   :l => ["8th", "6th", "Union Square", "3rd", "1st"],
-  :s => ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"],
+  :six => ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"],
   # :q => ["Times Square", "Herald Square", "Union Square", "Canal St."]
 }
 
-puts "What line are you on? 'N', 'L', or 'S'?" # or 'Q'?"
-start_line = gets.chomp.downcase.to_sym
-puts "Where are you starting from?"
-start_station = gets.chomp
-puts "What line do you want to end on?"
-end_line = gets.chomp.downcase.to_sym
-puts "Where do you want to go?"
-end_station = gets.chomp
+journey_start_stop = []
+journey_start_stop = start_stop_prompt
 
-if start_line == end_line
-  puts how_many_stops(start_station, end_station, start_line)
-else
-  puts need_to_transfer(start_station, end_station, start_line, end_line)
-  # puts count_intersections(start_line, end_line)
-end
+
+  if start_line == end_line
+    puts how_many_stops(start_station, end_station, start_line)
+  else
+    puts need_to_transfer(start_station, end_station, start_line, end_line)
+    # puts count_intersections(start_line, end_line)
+  end
 
 

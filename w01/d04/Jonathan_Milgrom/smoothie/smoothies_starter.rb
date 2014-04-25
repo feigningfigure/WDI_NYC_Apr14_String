@@ -37,9 +37,33 @@ smoothie_ingredients = {
 # and output a mixed string of characters
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
-def blend(smoothie_ingredients)
-end
+    
+    def blend_primer(ingredients)
+      x = []
+      ingredients.each do |k, v|
+         x << k 
+      end
+      return x
+    end
 
+    mash_up_string = blend_primer(smoothie_ingredients).join('')
+
+    mash_up_array = mash_up_string.split('')
+
+    shuffle_result_array = mash_up_array.shuffle
+
+    def remove_white_space(x)
+      no_blanks = []
+      x.each do |value|
+        unless value == " " 
+          no_blanks << value
+        end
+      end
+      return no_blanks  
+    end
+
+
+    puts shuffle_result_string = remove_white_space(shuffle_result_array).join('')
 
 # create a class called Blender
 # It should have a method that takes an array of ingredients and returns a mixed string of characters.
@@ -48,6 +72,13 @@ end
 # Blend the the smoothie array
 
 class Blender
+  def initialize (smoothie_ingredients)
+  end
+
+  def on_switch
+    true
+  end
+
 end
 
 # Move on to gluten_free.rb
