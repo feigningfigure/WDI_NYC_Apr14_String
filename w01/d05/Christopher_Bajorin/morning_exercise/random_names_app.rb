@@ -12,5 +12,4 @@ array = []
 # end
 
 puts array
-puts "today I killed #{array[99]}"
 
