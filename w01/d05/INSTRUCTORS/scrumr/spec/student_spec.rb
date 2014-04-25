@@ -1,5 +1,5 @@
 require_relative '../classes/student'
-require_relative '../db/students.rb'
+require_relative '../db/students'
 
 # class name
 describe "Student" do
