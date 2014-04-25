@@ -27,11 +27,11 @@ smoothie_ingredients = {
 def blend(smoothie_ingredients)
 	blender_cup = []
 	smoothie_ingredients.each do |ingredients, measure| 
-		blender_cup << ingredients.gsub(' ', '').split(//)
+		blender_cup << ingredients.gsub(' ', '').split('')
 	end
 
-	p blender_cup.flatten.shuffle
-
+	smoothie = blender_cup.flatten.shuffle.join('')
+	return smoothie
 	# blender_cup = smoothie_ingredients.keys
 	# blender_cup.each do |ingredient|
 	# 	blender_cup << ingredient.gsub(' ', '').split(//)
@@ -39,9 +39,6 @@ def blend(smoothie_ingredients)
 
 end
 
-
-# array = smoothie.keys
-#.join.delete(" ")
-
+p blend(smoothie_ingredients)
 
 blend(smoothie_ingredients)
