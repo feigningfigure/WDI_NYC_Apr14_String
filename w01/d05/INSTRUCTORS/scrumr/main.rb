@@ -1,10 +1,14 @@
 require_relative 'classes/student'
+require_relative 'classes/group'
+require_relative 'classes/scrumr'
 require_relative 'db/students'
 
-array_of_student_objects = []
+# the job of this file is to run my working app when I want to use the app
 
-$students.each do |student_hash|
-  array_of_student_objects << Student.new(student_hash)
-end
+puts "Starting App..."
+app = Scrumr.new
+app.start
+puts "Completed the starting process"
+print "The Number of groups is: "
+puts app.number_of_groups
 
-p array_of_student_objects

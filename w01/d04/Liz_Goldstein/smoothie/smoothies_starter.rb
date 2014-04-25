@@ -38,6 +38,12 @@ smoothie_ingredients = {
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
 def blend(smoothie_ingredients)
+  everything = []
+  x.each do |item, measure|
+    everything << item
+      end
+ everything= everything.join.delete(" ").split("").shuffle.join.to_s
+ # everything.is_a? String
 end
 
 
@@ -48,6 +54,11 @@ end
 # Blend the the smoothie array
 
 class Blender
+
+  def initialize(active)
+    @active = false
+  end
+
 end
 
 # Move on to gluten_free.rb

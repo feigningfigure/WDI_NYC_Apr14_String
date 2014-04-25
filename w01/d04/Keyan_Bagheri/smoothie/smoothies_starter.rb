@@ -1,5 +1,6 @@
-# Instructors for the quiz are written inline.
-require 'pry'
+require_relative 'blender'
+require_relative 'shuffle'
+require 'rainbow'
 
 # docs you may enjoy
 # http://www.ruby-doc.org/core-2.0/Hash.html
@@ -31,23 +32,49 @@ smoothie_ingredients = {
   'mango' => '1/4 cup',
   'hemp milk' => '1 cup'
 }
+betsy = Blender.new
+
+betsy.fill_blender_with(smoothie_ingredients)
+ingredients = split_ingredients_in(betsy.ingredients)
+
+in_blender = []
+
+in_blender << color_the_ingredient_white(ingredients[0])
+in_blender << color_the_ingredient_cyan(ingredients[1])
+in_blender << color_the_ingredient_white(ingredients[2])
+in_blender << color_the_ingredient_blue(ingredients[3])
+in_blender << color_the_ingredient_yellow(ingredients[4])
+in_blender << color_the_ingredient_yellow(ingredients[5])
+in_blender << color_the_ingredient_green(ingredients[6])
+in_blender << color_the_ingredient_yellow(ingredients[7])
+in_blender << color_the_ingredient_white(ingredients[8])
+in_blender << color_the_ingredient_white(ingredients[9])
+in_blender << color_the_ingredient_green(ingredients[10])
+in_blender << color_the_ingredient_white(ingredients[11])
+in_blender << color_the_ingredient_yellow(ingredients[12])
+in_blender << color_the_ingredient_green(ingredients[13])
+in_blender << color_the_ingredient_green(ingredients[14])
+in_blender << color_the_ingredient_magenta(ingredients[15])
+in_blender << color_the_ingredient_green(ingredients[16])
+in_blender << color_the_ingredient_magenta(ingredients[17])
+in_blender << color_the_ingredient_yellow(ingredients[18])
+in_blender << color_the_ingredient_red(ingredients[19])
+in_blender << color_the_ingredient_yellow(ingredients[20])
+in_blender << color_the_ingredient_white(ingredients[21])
+
+
+
+betsy.blend(in_blender)
+puts "..."
+betsy.turn_on_blender
+
+betsy.blend(in_blender)
+puts
+
+betsy.turn_off_blender
 
 # Write a function called blend.
 # It should take all the smoothie ingredients (not the measurements) and chop up and mix all the characters
 # and output a mixed string of characters
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
-def blend(smoothie_ingredients)
-end
-
-
-# create a class called Blender
-# It should have a method that takes an array of ingredients and returns a mixed string of characters.
-# Give the blender an on and off switch and only allow the blender to function when it's on.
-# FOR SAFETY'S SAKE When you create a new blender by default it should be off.
-# Blend the the smoothie array
-
-class Blender
-end
-
-# Move on to gluten_free.rb
