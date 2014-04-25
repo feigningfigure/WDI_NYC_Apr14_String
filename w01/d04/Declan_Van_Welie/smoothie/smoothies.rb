@@ -1,4 +1,5 @@
 # require pry
+require 'rainbow/ext/string'
 # class
   smoothie_ingredients = {
   'flax seeds' => '1 tbsp',

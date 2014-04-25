@@ -22,4 +22,4 @@ class Blender
    end
 
   end
-
+mix_char()
