@@ -18,7 +18,7 @@ class Building
 	end
 
 	def to_s 
-		puts "This buiilding is located at #{@address}, is {#{@style}, has #{@has_doorman}, and #{@num_floors}"
+		puts "This building is located at #{@address}, is {#{@style}, has #{@has_doorman}, and #{@num_floors}"
 	end
 	# def building.apartment_method
  #        puts 
