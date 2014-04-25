@@ -9,7 +9,7 @@ class Building
      @apartments = []
 
      def to_s
-          puts "The building is located at #{address} and is a #{style} style building.  It has #{num_floors} floors, does #{has_doorman} doorman, is #{is_walkup} walkup and has #{apartments}.length apartments."
+          return "The building is located at #{address} and is a #{style} style building.  It has #{num_floors} floors, does #{has_doorman} doorman, is #{is_walkup} walkup and has #{apartments}.length apartments."
      end
  end
 end
@@ -25,7 +25,7 @@ class Apartment
           @renters = []
 
      def to_s
-          puts "The apartment costs #{price} dollars per month, and measures #{sqft} square feet with #{num_beds} beds and #{num_baths} bath and is #{is_occupied} occupied."
+          return "The apartment costs #{price} dollars per month, and measures #{sqft} square feet with #{num_beds} beds and #{num_baths} bath and is #{is_occupied} occupied."
      end
      end
 end
@@ -38,9 +38,9 @@ class Person
      @gender = gender.to_s
      @apartment = nil
 
-     def to_s
-          puts "This person's name is #{name} and is #{age} years old. He is a #{gender}."
-     end
+          def to_s
+               return "This person's name is #{name} and is #{age} years old. He is a #{gender}."
+          end
      end
 end
 
