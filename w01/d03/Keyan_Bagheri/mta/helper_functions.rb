@@ -1,8 +1,9 @@
 def interact_with_mta_kiosk
+
   puts "Departure station?"
-  depart = gets.chomp
+  depart = valid_input?
   puts "Arrival station?"
-  arrive = gets.chomp
+  arrive = valid_input?
   
   count_stops(depart, arrive)
 end
@@ -66,7 +67,16 @@ def need_to_transfer?(line1, line2)
   end
 end
 
+def valid_input?
+  stop_name = gets.chomp
 
+  if find_line(stop_name) == false
+    puts "Stop '#{stop_name}' not found. Please enter valid station."
+    valid_input?
+  else
+    stop_name
+  end
+end
 
 def find_line(stop_name)
 if stop_name != "Union Square"
@@ -79,8 +89,7 @@ if stop_name != "Union Square"
   elsif $trains[:q_line].include? stop_name
     $trains[:q_line]
   else
-    puts "Stop #{stop_name} not found. Please try again"
-    interact_with_mta_kiosk
+    false
   end
 else
   1 #random variable = any line works for this stop (Union Square)
