@@ -37,8 +37,37 @@ smoothie_ingredients = {
 # and output a mixed string of characters
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
-def blend(smoothie_ingredients)
+
+def blend(hash_of_ingredients)
+    giant_string = hash_keys_into_string(hash_of_ingredients)
+    return shuffle_string(giant_string)
+end 
+
+
+
+def blend_without_color(hash_of_ingredients)
+    giant_string = hash_keys_into_string(hash_of_ingredients)
+    return shuffle_string(giant_string)
+end 
+
+def hash_keys_into_string(hash_of_ingredients)
+  #recieves hash, returns string of characters
+    giant_string = ""
+    hash_of_ingredients.each {
+      |ingredient, measurement|
+      giant_string << ingredient
+    }
+    giant_string.delete!(" ")
+    return giant_string
 end
+
+def shuffle_string(string)
+  return string.split(//).shuffle.join
+end
+
+
+
+puts blend(smoothie_ingredients)
 
 
 # create a class called Blender
@@ -48,6 +77,9 @@ end
 # Blend the the smoothie array
 
 class Blender
+
+      
+
 end
 
 # Move on to gluten_free.rb
