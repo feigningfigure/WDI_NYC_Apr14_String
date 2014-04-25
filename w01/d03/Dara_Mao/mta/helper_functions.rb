@@ -1,22 +1,23 @@
-def count_stops(start_name, ending_name)
-  # counts the stop between two on the same line
-  #
-  # takes two params:
-  # 1. a starting station name
-  # 2. an ending station name
-  #
-  # returns an integer equal to how many stops between two stops on the same line
-  # if two stops are not on the same line, return nil
+def how_many_stops(start_name, ending_name, line)
+#If two stations are from the same line, then return nil, else count how many stops.
+  this_line = nil
+
+  $trains.each do |line,stations|
+   puts line
+ end
+
+  if  $trains[line].include? (start_name) && $trains[line].include? (ending_name)
+      this_line = line
+  end
+  return this_line
 end
 
-def need_to_transfer?(start_name, ending_name)
-  # deteremines if a transfer is needed
-  #
-  # takes two params:
-  # 1. a station name
-  # 2. another station name
-  #
-  # returns true if transfer is need, or false for all other cases
+#How many stops between 2 stations.
+    diff_btw = $trains[line].index(start_name) - $trains[line].index(ending_name)
+    puts "#{diff_btw.abs} stops"
+end
 
 
+def need_to_transfer(start_name, ending_name, line_on, line_off)
+  total_stops = how_many_stops(start_name, "Union Square", line_on) + how_many_stops("Union Square", ending_name, line_off)
 end
