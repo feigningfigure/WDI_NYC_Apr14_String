@@ -1,29 +1,22 @@
 class Building
 
-  attr_accessor :build, :address, :style, :has_doorman, :is_walkup, :num_floors, :apartments
+  attr_accessor :address, :style, :has_doorman, :is_walkup, :num_floors, :apartments
 
-  def initialize(build, address, style, has_doorman, is_walkup, num_floors, apartments)
+  def initialize(address, style, has_doorman, is_walkup, num_floors)
 
-    @build = []
+
     @address = address
-    @style = old
+    @style = style
     @has_doorman = has_doorman
     @is_walkup = is_walkup
     @num_floors = num_floors
-    @apartments = apartments.new
+    @apartments = {}
 
   end
 
-
-
-  d
-
-
-
-
-
-
-
-
+  def to_s
+    return "This building has #{@apartments.count} apartments"
+  end
 
 end
+

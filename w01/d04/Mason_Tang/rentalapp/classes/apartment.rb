@@ -1,14 +1,22 @@
 class Apartment
 
-    attr_accessor :apt, :price, :is_occupied, :sqft, :num_beds, :num_baths, :renters
+    attr_accessor :name, :price, :sqft, :num_beds, :num_baths, :tenant
 
-    def initialize (apt, price, is_occupied, sqft, num_beds, num_baths, renters)
-      @apt = []
+    def initialize (name, price, sqft, num_beds, num_baths)
+      @name = name
       @price = price
-      @is_occupied = is_occupied
       @sqft = sqft
       @num_beds = num_beds
       @num_baths = num_baths
-      @renters = persons.new
+      @tenant = []
+    end
+
+    def is_occupied?
+      @tenant.any?
+    end
+
+    def to_s
+      return "Apt #{@name} is #{@sqft}sqft with #{@tenant.count} tenants. The rent is #{@price} per month"
     end
 end
+
