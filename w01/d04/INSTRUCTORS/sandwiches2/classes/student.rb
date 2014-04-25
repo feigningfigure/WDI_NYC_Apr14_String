@@ -2,11 +2,21 @@ class Student
 
   # this is a 'macro' that creates getter/setter methods
 <<<<<<< HEAD
+<<<<<<< HEAD
   attr_accessor :name
 =======
   attr_accessor :name, :bag
 >>>>>>> 8561ece8ceab601c7c633d3e43085577e896e844
+=======
+  attr_accessor :name, :bag, :dollars, :table
+>>>>>>> a2de7a6945f8a4d530d2d7cbac2e18c4efab7e6e
 
+  # I can see what's in the bag
+  # but not change it.
+  attr_reader :balance
+
+  # you can change the bag, but not see what's in it
+  # attr_writer :bag
   # 'initialize' method determines
   # the code that will run when .new
   # is called
@@ -18,7 +28,61 @@ class Student
 <<<<<<< HEAD
 =======
     @bag = Array.new
+<<<<<<< HEAD
 >>>>>>> 8561ece8ceab601c7c633d3e43085577e896e844
+=======
+    @balance = 100
+    @dollars = []
+  end
+
+  def add_dollars(number_of_desired_dollars)
+    number_of_desired_dollars.times do
+      @dollars << Dollar.new
+    end
+    puts "You have #{@dollars.length} dollars!"
+    # should return something!!!
+  end
+
+  def find_ingredients_for_sandwich
+    @bag << Bread.new
+    @bag << Jelly.new
+    @bag << PeanutButter.new
+  end
+
+  def slice_bread
+    @table.surface[0].sliced = true
+  end
+
+  def assemble_table
+    @table = Table.new
+  end
+
+  def move_bag_contents_to_table
+    # this will prevent the edge-case of a student
+    # without  table and bag from calling this
+    # return nil unless @table && @bag
+    @table.surface = @bag.select do |item|
+      item.class != Notebook
+    end
+    @bag = @bag - @table.surface
+  end
+
+  def make_sandwich
+    jelly = nil
+    pb = nil
+    bread = nil
+    @table.surface.each do |item|
+      case item.class
+      when Bread
+          bread = item
+      when Jelly
+          jelly = item
+      when PeanutButter
+          pb = item
+      end
+    end
+    Sandwich.new(bread, jelly, pb)
+>>>>>>> a2de7a6945f8a4d530d2d7cbac2e18c4efab7e6e
   end
 
   # 'getter' method
@@ -50,6 +114,8 @@ class Student
   def shout(word)
     puts word.upcase
   end
+
+
 
 
 end
