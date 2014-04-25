@@ -1,6 +1,6 @@
 class Student
 
-	#is a macro tjat creates getter/setter
+	#is a macro that creates getter/setter
 	#code that write other code
 	#coding convention attr_accessor is placed first
 	attr_accessor :name, :bag, :dollar
@@ -80,5 +80,8 @@ class Student
 		@bag = @bag - @table.surface
 	end
 	
-end
+	def make_sandwich
+		
+	end
+
 end
