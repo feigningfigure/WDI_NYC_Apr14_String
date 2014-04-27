@@ -2,33 +2,32 @@ class Client
 
   # Set up accessors and mutators for the attributes of an Animal
   # attr_accessor sets up both for you
-  attr_accessor :name, :age, :pets, :gender, :toys
+  attr_accessor :name, :age, :pets
 
   # Used when creating a new animal.
   #   Example:
   #       Animal.new('Timmy', 4, 'male', 'toad')
-  def initialize(name, age, pets, gender, toys)
+  def initialize(name, age, pets)
       @name = name
       @age = age
-      @pets = pets_hash[]
-      @gender = gender
-      @toys = toys
+      @pets = pets
 
   end
 
+   # An attempt to add new pets from the Animal class to the Client class' pets hash.
     def add_pets(pets_array)
     pets_array.each do |pets_hash|
       @pets << Animal.new(pets_hash)
     end
   end
 
-    def count_pets
+    #An attempt to count the pets added to the @pets hash.
+    def pet_count
     # if there's no group_size set already
     @pets_hash = @pets.length
   end
 
-
-
+  #An attempt to pop Animals from the @pet hash.
   def give_pet_away
    while !@pets.empty?
       donated_pet = Client.new(@pets.pop)

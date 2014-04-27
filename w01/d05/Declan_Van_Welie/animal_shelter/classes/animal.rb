@@ -3,24 +3,30 @@ class Animal
 
   # Set up accessors and mutators for the attributes of an Animal
   # attr_accessor sets up both for you
-  attr_accessor :name, :age, :gender, :species, :toys
+  attr_accessor :name, :age, :species, :gender, :toys
 
   # Used when creating a new animal.
   #   Example:
   #       Animal.new('Timmy', 4, 'male', 'toad')
-  def initialize(name, age, gender, species, toys)
+  def initialize(name, age, species, gender, toys)
       @name = name
       @age = age
-      @gender = gender
       @species = species
-      @toys = toys
+      @gender = gender
+      @toys = []
 
   end
 
+  # # Attempt to convert toy array values to string to concatenate in below for spec.
+  # def array_value_to_s
+  #   for toys.each do
+  #     toys[].to_s
+
+  #   end
   # When we display the animal using puts or print, the
   #   to_s method is called to pretty print an Animal
 def to_s
-  "My #{name} is a #{age} year old #{species} who loves #{toys}."
+  "#{name} is a #{age} year old #{gender} #{species} that loves #{toys}."
 
   end
 end

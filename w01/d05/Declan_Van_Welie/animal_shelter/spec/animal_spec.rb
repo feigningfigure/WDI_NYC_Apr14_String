@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe Animal do
   before :each do
-    @animal = Animal.new("Tiny", 3, "cat")
+    @animal = Animal.new("Tiny", 3, "cat", "female", [])
   end
 
   describe "#new" do
-    it "takes three parameters and returns an Animal object" do
+    it "takes five parameters and returns an Animal object" do
       expect(@animal).to be_an_instance_of(Animal)
     end
   end
@@ -25,7 +25,7 @@ describe Animal do
   it 'can describe itself' do
     @animal.toys << "mice"
     @animal.toys << "yarn"
-    expect(@animal.to_s).to eq "Tiny is a 3 year old cat that loves mice, yarn"
+    expect(@animal.to_s).to eq "Tiny is a 3 year old female cat that loves mice, yarn"
   end
 
 end
