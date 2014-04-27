@@ -13,24 +13,26 @@ class Client
 	end
 
 	def to_s
-		"#{@name} is a #{@age} year old with #{@pets} pets"
+		"#{@name} is a #{@age} year old with #{@pets.size} pets"
+	end
+
+	def display_pets
+		 @pets.each do |k, v|
+		 	puts k		 	
+		 end
 	end
 
 	def pet_count
 		@pets.size
 	end
 
-	def give_away_pet #(@pets[name])
+	def give_away_pet(name) #(@pets[name])
 		@pets.delete(name)
 	end
 
-	def accept_pet #(name)
-		@client
-
+	def accept_pet (name, value)
+		@pets[name] = value 
 	end
-
-	
-
 
 end
 
