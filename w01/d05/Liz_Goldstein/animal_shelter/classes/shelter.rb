@@ -14,7 +14,7 @@ attr_accessor :name, :animals, :clients
   end
 
   def display_animals   # add zero case
-    p "Check out my #{@animals.length} pets for adoption: #{@animals}."
+    p "We currently have #{@animals.length} pets for adoption: #{@animals}."
   end
 
   def count_animals

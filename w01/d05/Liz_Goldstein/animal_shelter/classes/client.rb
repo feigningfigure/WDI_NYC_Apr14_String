@@ -23,6 +23,7 @@ attr_accessor :name, :age, :pets
   def display_pets
     p "Check out my #{@pets.length} pets: #{@pets.to_s}"
     #want this to print pretty too
+    # also would be great to display species with name when called in app menu!
   end
 
 #how to match within an array and pop it? SHOULD it automatically go to the shelter?

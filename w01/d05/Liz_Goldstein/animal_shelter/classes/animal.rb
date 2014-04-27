@@ -12,22 +12,21 @@ attr_accessor :name, :species, :toys
     @species = gets.chomp
     puts "A #{@species} named #{@name}, so cute!"
     $happitails.animals << @name
-    # puts "Does #{@name} have any toys?"
-    # puts "If yes, what are they?"
-    # response = gets.chomp.downcase
-    # if response == "no"
-    #   puts "OK, we're done!"
-    # else
-    #   toy = gets.chomp
-    #   self.toys << toy
-    #   puts "OK, #{@name}'s #{@toys} will be safe with us."
-    # end
+    puts "Does #{@name} have any toys?"   # this can be better, take multiple toys
+    puts "If yes, what are they?"
+    toy = gets.chomp.downcase
+    if toy == "no"
+      puts "OK, we're done!"
+    else
+      self.toys << toy
+      puts "OK, #{@name}'s #{@toys} will be safe with us."
+    end
   end
 
   def to_s
-    # if @toys.empty? == false;
-    #   p "Hi my name is #{@name}, I'm a #{@species} and I love #{@toys}."
-    #   else
+    if @toys.empty? == false;
+      p "Hi my name is #{@name}, I'm a #{@species} and I love #{@toys}."
+      else
       p "Hi my name is #{@name} and I'm a #{@species}."
     # end
   end
@@ -36,7 +35,7 @@ attr_accessor :name, :species, :toys
   def check_toys
     puts "I have #{toys}"
   end
-
+end
 end
 
 # puts "Create an animal"
