@@ -7,8 +7,8 @@ class Client
   # Used when creating a new animal.
   #   Example:
   #       Animal.new('Timmy', 4, 'male', 'toad')
-  def initialize(name_hash, age, pets)
-      @name = name_hash["name"]
+  def initialize(name, age, pets)
+      @name = name
       @age = age
       @pets = Hash.new
 
