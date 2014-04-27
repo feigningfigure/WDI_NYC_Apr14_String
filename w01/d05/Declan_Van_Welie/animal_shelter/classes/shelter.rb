@@ -1,12 +1,12 @@
 class Shelter
 
-attr_accessor :shelter_name, :shelter_address, :animals, :clients
+attr_accessor :shelter_name, :shelter_address#, :animals, :clients
 
 def initialize(shelter_name, shelter_address, animals, clients)
 @shelter_name = shelter_name
 @shelter_address = shelter_address
-@animals = []
-@clients = []
+# @animals = []
+# @clients = []
 end
 #Below is an attempt to add client to the shelter class, by popping them
 #from the client class.
