@@ -2,7 +2,7 @@ require_relative 'classes/animal'
 require_relative 'classes/shelter'
 require_relative 'classes/client'
 
-happitails = Shelter.new("HappiTails")
+$happitails = Shelter.new("HappiTails")
 
 def menu
   puts ""
@@ -22,18 +22,19 @@ def menu
 
   case command
   when "A"
-    happitails.display_animals
+    $happitails.display_animals
+    menu
     # Display Animals
   when "B"
-    happitails.display_clients
+    $happitails.display_clients
+    menu
     # Display Clients
   when "C"
-    puts "What's the animals name?"
-    name = gets.chomp
-    animal = Animals.new(name)
-    puts "And what kind of animals is #{animal.name}?"
-    name= gets.chomp
-    # Create Animal
+    puts "Name the animal"
+    name=gets.chomp
+    name=Animal.new(name)
+    name.create
+    menu
   when "D"
     # Create Client
   when "E"
@@ -44,3 +45,5 @@ def menu
     Kernel.exit
   end
 end
+
+menu
