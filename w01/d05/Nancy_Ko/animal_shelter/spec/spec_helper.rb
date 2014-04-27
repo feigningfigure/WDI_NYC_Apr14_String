@@ -1,7 +1,7 @@
 # For our specs to run, we need to require the Ruby classes we’re testing
 require_relative '../classes/animal'
 require_relative '../classes/shelter'
-require_relative '../classes/person'
+require_relative '../classes/client'
 
 # Configure RSpec
 RSpec.configure do |config|
