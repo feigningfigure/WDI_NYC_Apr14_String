@@ -9,7 +9,6 @@ class Animal
 		@toys = toys
 	end
 
-
 	def to_s
 
 		if toys.length > 0 
@@ -17,7 +16,10 @@ class Animal
 		else
 			return "#{@name} is a #{@age} year old #{@species}."
 		end
-
 	end
 
+	 # Pet names MUST be unique (What implications does this have for our choice of data structure?)
+	#A client should be able to accept a pet
+ 	# A client shoule be able to give away a pet
+ 	
 end

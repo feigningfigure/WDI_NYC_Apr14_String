@@ -11,4 +11,15 @@ class Person
 		@pets = pets
 	end
 
+ # 'getter' method
+  def name_getter
+    # an 'instance' variable.
+    # they must begin with @
+    @name
+  end
+
+  # 'setter' method re-writes an instance variable
+  def name_setter(new_name)
+    @name = new_name
+  end
 end
