@@ -10,11 +10,11 @@ def initialize(shelter_name, shelter_address, animals, clients)
 end
 #Below is an attempt to add client to the shelter class, by popping them
 #from the client class.
-def add_clients
-      @clients = []
-      new_client = Client.new
-      @clients << new_client
+def add_clients(clients_array)
+      clients_array.each do |name_hash|
+      @clients << Client.new(name_hash)
     end
+  end
 
 def add_animals
       @animals = []
