@@ -3,6 +3,15 @@ require_relative 'classes/shelter'
 require_relative 'classes/client'
 
 $happitails = Shelter.new("HappiTails")
+lizzy = Client.new("lizzy", 33)
+frisky = Animal.new("Frisky", "cat")
+lizzy.pets << frisky
+jj = Animal.new("JJ", "pitbull")
+jj.to_s
+$happitails.animals << jj
+$happitails.clients << lizzy
+$happitails.to_s
+
 
 def menu
   puts ""
@@ -43,6 +52,7 @@ def menu
     menu
     # Create Client
   when "E"
+
     # Adopt Animal
   when "F"
     # Put Animal Up For Adoption

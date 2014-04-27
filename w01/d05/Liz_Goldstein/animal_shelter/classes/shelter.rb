@@ -10,7 +10,7 @@ attr_accessor :name, :animals, :clients
   end
 
   def to_s
-    p "#{@name} currently has #{@animals.length} and #{@clients}."
+    p "#{@name} currently has #{@animals.length} pet and #{@clients}."
   end
 
   def display_animals   # add zero case

@@ -2,7 +2,7 @@ class Client
 
 attr_accessor :name, :age, :pets
 
-  def initialize(name)
+  def initialize(name, age=nil)
     @name = name
     @age = age
     @pets = []
@@ -44,7 +44,8 @@ attr_accessor :name, :age, :pets
     end
   end
 
-  def accept_pet
+  def accept_pet(pet)
+
     # search the index of pets in the shelter array and push it into client array
   end
 

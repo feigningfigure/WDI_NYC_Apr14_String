@@ -24,7 +24,7 @@ attr_accessor :name, :species, :toys
       toy = gets.chomp
       self.toys << toy
       puts "OK, #{@name}'s #{@toys} will be safe with us."
-      print self.toys
+
     end
   end
 
