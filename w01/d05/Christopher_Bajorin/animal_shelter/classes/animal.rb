@@ -4,15 +4,15 @@ class Animal
 
   attr_accessor :name, :toys, :type, :age
 
-    def initialize(name=nil, age = 0, toys=nil, type=nil)
+    def initialize(name, age, toys, type)
       @name = name
       @age = age
-      @toys = []
+      @toys = toys
       @type = type
     end
 
     def to_s
-      "#{@name} is a #{age} year old #{type} that loves #{@toys.join(", ")}"
+      "#{@name} is a #{@age} year old #{@type} that loves #{@toys.join(", ")}"
     end
 
 

@@ -36,12 +36,12 @@ class Shelter
     @animals.delete(name)
   end
 
-  def accept_animal(name, pet_object)
-    @animals[name] = pet_object
+  def accept_animal(name, pet_hash)
+    @animals[name] = pet_hash
   end
 
-  def accept_client(name, client_object)
-    @clients[name] = client_object
+  def accept_client(name, client_hash)
+    @clients[name] = client_hash
   end
 
 

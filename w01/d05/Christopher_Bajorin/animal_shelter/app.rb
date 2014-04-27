@@ -21,18 +21,29 @@ def menu
   case command
   when "A"
     # Display Animals
+    puts "Here are the animals:\n".color(:green)
     @happitails.display_animals
     puts "\nWhich animal would you like to see?\n".color(:green)
     specific_animal = gets.chomp
     if @happitails.animals.include?(specific_animal) == true
-      puts @happitails.animals[specific_animal]
+      puts ""
+      puts @happitails.animals[specific_animal]["string output"]
     else
-      puts "That is not a valid selection".color(:red)
-      command = "A"
+      puts "Invalid selection".color(:red)
     end
   when "B"
     # Display Clients
+    puts "Here are the clients:\n".color(:green)
     @happitails.display_clients
+    puts "\nWhich client would you like to see?".color(:green)
+    specific_client = gets.chomp
+    if@happitails.clients.include?(specific_client) == true
+      puts ""
+      puts @happitails.clients[specific_client]["string output"]
+    else
+      puts "Invalid selection".color(:red)
+    end
+
   when "C"
     # Create Animal
 
@@ -50,31 +61,46 @@ def menu
       age = gets.chomp
       puts "Do you have any toys? (y/n)\n".color(:green)
       any_toys = gets.chomp
-      if any_toys == "y"
+      if any_toys == "n"
+        toys = []
+      elsif any_toys =="y"
         puts "What toys? (e.g. ball, string)\n".color(:green)
         toys = gets.chomp.split(", ")
-      elsif any_toys =="n"
-        toys = []
       end
     end
-
 
     pet_hash["Name"] = name
     pet_hash["Age"] = age
     pet_hash["Toys"] = toys
     pet_hash["Type"] = type
     temp_animal = Animal.new(name,age,toys,type)
-    pet_hash["string output"] = temp_animal.to_s
-    @happitails.animals[name] = pet_hash
+    pet_hash["string output"] = temp_animal.to_s.color(:cyan)
+    @happitails.accept_animal(name, pet_hash)
 
   when "D"
     # Create Client
     client_hash = Hash.new
 
+    puts "What is the clients name?\n".color(:green)
+    name = gets.chomp
+    if @happitails.clients.include?(name) == true
+      puts "Pick another name please.\n".color(:green)
+      command = "D"
+    else
+      puts "How old is the client?\n"
+      age = gets.chomp
+    end
 
+    client_hash["Name"] = name
+    client_hash["Age"] = age
+    temp_client = Client.new(name, age)
+    client_hash["string output"] = temp_client.to_s.color(:cyan)
+    client_hash["Pets"] = Hash.new
+    @happitails.accept_client(name, client_hash)
 
   when "E"
     # Adopt Animal
+
   when "F"
     # Put Animal Up For Adoption
   when "Q"

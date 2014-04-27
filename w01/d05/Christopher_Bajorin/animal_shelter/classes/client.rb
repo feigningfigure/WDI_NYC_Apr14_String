@@ -10,10 +10,6 @@ class Client
     @pets = Hash.new
   end
 
-  def pet_count
-    @pets.length
-  end
-
   def display_pets
     @pets.each do |k, v|
       puts k
@@ -21,11 +17,12 @@ class Client
   end
 
   def give_away_pet(name)
+
     @pets.delete(name)
   end
 
-  def accept_pet(name, pet_object)
-    @pets[name] = pet_object
+  def accept_pet(name, pet_hash)
+    @pets[name] = pet_hash
   end
 
   def to_s
