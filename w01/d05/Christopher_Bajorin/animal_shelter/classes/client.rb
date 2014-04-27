@@ -1,3 +1,5 @@
+require 'rainbow/ext/string'
+
 class Client
 
   attr_accessor :name, :age, :pets
@@ -19,7 +21,7 @@ class Client
   end
 
   def give_away_pet(name)
-    @pets[name].pop
+    @pets.delete(name)
   end
 
   def accept_pet(name, pet_object)

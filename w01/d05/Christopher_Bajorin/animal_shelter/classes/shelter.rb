@@ -1,8 +1,10 @@
+require 'rainbow/ext/string'
+
 class Shelter
 
   attr_accessor :name, :address, :clients, :animals
 
-  def initialize(name, address)
+  def initialize(name="HappiTails", address=nil)
     @name = name
     @address = address
     @clients = Hash.new
@@ -31,7 +33,7 @@ class Shelter
   end
 
   def give_away_animal(name)
-
+    @animals.delete(name)
   end
 
   def accept_animal(name, pet_object)
