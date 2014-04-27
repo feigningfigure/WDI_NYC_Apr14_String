@@ -3,11 +3,11 @@ require 'spec_helper'
 describe Client do
 
   before :each do
-    @client = Client.new('Beth', 30)
+    @client = Client.new('Beth', 30, "Tiny")
   end
 
   describe "#new" do
-    it "takes two parameters and returns a client object" do
+    it "takes three parameters and returns a client object" do
       expect(@client).to be_an_instance_of(Client)
     end
   end
@@ -40,6 +40,7 @@ describe Client do
 
   it 'displays all pets' do
     @client.pets["bert"] = Object.new
+    #.pets refers to an instance variable which is a method."solly" is the key of a hash.Object.new is an empty value.
     @client.pets["solly"] = Object.new
     STDOUT.should_receive(:puts).with("bert")
     STDOUT.should_receive(:puts).with("solly")

@@ -2,17 +2,29 @@ class Client
 
   # Set up accessors and mutators for the attributes of an Animal
   # attr_accessor sets up both for you
-  attr_accessor :name, :age#, :pets
+  attr_accessor :name, :age, :pets
 
   # Used when creating a new animal.
   #   Example:
   #       Animal.new('Timmy', 4, 'male', 'toad')
-  def initialize(name_hash, age)
+  def initialize(name_hash, age, pets)
       @name = name_hash["name"]
       @age = age
-      #@pets = pets
+      @pets = Hash.new
 
   end
+
+
+  def pets_hash(k, v)
+      @pets[k] = v
+  end
+end
+  # #Trying to count the key of a hash.
+  # def pet_count
+  #   @pets_hash(k, v)
+  #   k.length
+  # end
+
 
   #copy/pasting from scrumr in order to better understand adding clients to shelter class
   # def to_s
@@ -45,7 +57,6 @@ class Client
   #   end
   # end
 
-end
 
 
 
