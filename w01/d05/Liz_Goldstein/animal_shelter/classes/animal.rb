@@ -1,7 +1,8 @@
 class Animal
 attr_accessor :name, :species, :toys
 
-  def initialize(name)
+  def initialize(name, species=nil, toys=nil)
+    # questionable nils
     @name = name
     @species = species
     @toys = []
@@ -12,14 +13,18 @@ attr_accessor :name, :species, :toys
     @species = gets.chomp
     puts "A #{@species} named #{@name}, so cute!"
     $happitails.animals << @name
-    puts "Does #{@name} have any toys?"   # this can be better, take multiple toys
-    puts "If yes, what are they?"
+    puts "Does #{@name} have any toys?"
+    puts "Yes or no?"
+       # this can be better, take multiple toys
     toy = gets.chomp.downcase
     if toy == "no"
       puts "OK, we're done!"
-    else
+    elsif toy == "yes"
+      puts "What kind of toy?"
+      toy = gets.chomp
       self.toys << toy
       puts "OK, #{@name}'s #{@toys} will be safe with us."
+      print self.toys
     end
   end
 

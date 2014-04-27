@@ -2,10 +2,17 @@ class Client
 
 attr_accessor :name, :age, :pets
 
-  def initialize(name, age)
+  def initialize(name)
     @name = name
     @age = age
     @pets = []
+  end
+
+  def create
+    puts "I know it's personal but how old are you, #{name}? I'm not hitting on you."
+    @age = gets.chomp
+    $happitails.clients << @name
+    puts "Glad to have you as a client, #{name}!"
   end
 
   def to_s

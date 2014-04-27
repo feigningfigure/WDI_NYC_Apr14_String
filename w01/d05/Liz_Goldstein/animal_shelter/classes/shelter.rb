@@ -2,7 +2,7 @@ class Shelter
 
 attr_accessor :name, :animals, :clients
 
-  def initialize(name)
+  def initialize(name, animals=nil, clients=nil)
     @name = name
     @animals = []   # make it a hash so animals names??
     @clients = []

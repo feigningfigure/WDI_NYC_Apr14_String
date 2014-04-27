@@ -19,12 +19,11 @@ def menu
   puts ""
   command = gets.chomp.upcase
 
-
   case command
   when "A"
     $happitails.display_animals
     menu
-    # Display Animals
+    # Display Animals # puts "#{@}"
   when "B"
     $happitails.display_clients
     menu
@@ -36,6 +35,12 @@ def menu
     name.create
     menu
   when "D"
+    puts "What's your name?"
+    name=gets.chomp
+    name=Client.new(name)
+    # client_name.to_s
+    name.create
+    menu
     # Create Client
   when "E"
     # Adopt Animal
