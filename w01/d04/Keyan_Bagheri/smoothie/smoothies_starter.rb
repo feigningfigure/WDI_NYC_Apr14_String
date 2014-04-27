@@ -34,43 +34,27 @@ smoothie_ingredients = {
 }
 betsy = Blender.new
 
-betsy.fill_blender_with(smoothie_ingredients)
-ingredients = split_ingredients_in(betsy.ingredients)
+smoothie_ingredients.each { |ingredient, amount| betsy.add(ingredient) }
+betsy.ingredients1 = betsy.ingredients
 
-in_blender = []
+def color_ingredients(ingredients)
+collection = []
+collection << color_the_ingredient("red",ingredients[19])
+collection << color_the_ingredient("blue",ingredients[3])
+collection << color_the_ingredient("cyan",ingredients[1])
+collection << color_the_ingredient("white",ingredients[0],ingredients[21],ingredients[2],ingredients[8],ingredients[9],ingredients[11])
+collection << color_the_ingredient("yellow",ingredients[20],ingredients[5],ingredients[7],ingredients[12],ingredients[4],ingredients[18])
+collection << color_the_ingredient("green",ingredients[16],ingredients[13],ingredients[14],ingredients[6],ingredients[10])
+collection << color_the_ingredient("magenta",ingredients[15],ingredients[17])
+collection.flatten
+end
 
-in_blender << color_the_ingredient_white(ingredients[0])
-in_blender << color_the_ingredient_cyan(ingredients[1])
-in_blender << color_the_ingredient_white(ingredients[2])
-in_blender << color_the_ingredient_blue(ingredients[3])
-in_blender << color_the_ingredient_yellow(ingredients[4])
-in_blender << color_the_ingredient_yellow(ingredients[5])
-in_blender << color_the_ingredient_green(ingredients[6])
-in_blender << color_the_ingredient_yellow(ingredients[7])
-in_blender << color_the_ingredient_white(ingredients[8])
-in_blender << color_the_ingredient_white(ingredients[9])
-in_blender << color_the_ingredient_green(ingredients[10])
-in_blender << color_the_ingredient_white(ingredients[11])
-in_blender << color_the_ingredient_yellow(ingredients[12])
-in_blender << color_the_ingredient_green(ingredients[13])
-in_blender << color_the_ingredient_green(ingredients[14])
-in_blender << color_the_ingredient_magenta(ingredients[15])
-in_blender << color_the_ingredient_green(ingredients[16])
-in_blender << color_the_ingredient_magenta(ingredients[17])
-in_blender << color_the_ingredient_yellow(ingredients[18])
-in_blender << color_the_ingredient_red(ingredients[19])
-in_blender << color_the_ingredient_yellow(ingredients[20])
-in_blender << color_the_ingredient_white(ingredients[21])
+betsy.ingredients = color_ingredients(betsy.ingredients)
+betsy.chopped_ingredients = color_ingredients(betsy.chopped_ingredients)
 
-
-
-betsy.blend(in_blender)
-puts "..."
+betsy.blend
 betsy.turn_on_blender
-
-betsy.blend(in_blender)
-puts
-
+betsy.blend
 betsy.turn_off_blender
 
 # Write a function called blend.
