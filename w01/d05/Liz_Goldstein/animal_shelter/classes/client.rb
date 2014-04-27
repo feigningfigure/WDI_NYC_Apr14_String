@@ -42,12 +42,12 @@ attr_accessor :name, :age, :pets
 
 end
 
-test = Client.new("Lizzy", 33)
-test.to_s
-test.pets << "Fluffy"
-test.pets << "Fluffy2"
-test.to_s
-# test.client_pet_count
-# test.display_pets
-# test.give_away_pet
-test.give_away_pet("Fluffy")
+# test = Client.new("Lizzy", 33)
+# test.to_s
+# test.pets << "Fluffy"
+# test.pets << "Fluffy2"
+# test.to_s
+# # test.client_pet_count
+# # test.display_pets
+# # test.give_away_pet
+# test.give_away_pet("Fluffy")
