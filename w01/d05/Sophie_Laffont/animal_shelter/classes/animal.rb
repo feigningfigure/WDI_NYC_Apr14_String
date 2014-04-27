@@ -13,6 +13,8 @@ class Animal
 		@toys = toys
 	end
 
+	
+
 	def to_s
 
 		if toys.length > 0 
