@@ -1,5 +1,9 @@
 class Animal
 
+ # - An animal should have a name.
+ #  - An animal should have a species.
+ #  - An animal can have multiple toys, but doesn't start with any.
+
 	attr_accessor :name, :species, :age, :toys
 
 	def initialize( name, species,  age = nil, toys = [])
@@ -18,8 +22,5 @@ class Animal
 		end
 	end
 
-	 # Pet names MUST be unique (What implications does this have for our choice of data structure?)
-	#A client should be able to accept a pet
- 	# A client shoule be able to give away a pet
- 	
+ 
 end

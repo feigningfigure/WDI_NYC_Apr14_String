@@ -5,10 +5,13 @@ require_relative 'classes/client'
 require_relative 'classes/person'
 require_relative 'classes/shelter'
 
+$@Shelter =Shelter.new
+$@Animal =Animal.new
+$@Client =Client.new
+$@Person=Person.new
 
 test_animal =  @animal = Animal.new("Tiny", "cat", "male", 3)
  @animal.toys << "mice" << "string"
-
 
 def menu
   puts ""
@@ -50,12 +53,7 @@ while response != "Q"
 end
 
 
-$myShelter =Shelter.new
-$myAnimal =Animal.new
-$myClient =Client.new
-$myPerson=Person.new
 
-myShelter << Animal.new
 
 # # Define Animal as a class
 # class Animal
