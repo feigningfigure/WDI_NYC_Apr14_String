@@ -1,6 +1,6 @@
 class Shelter
 	
-	attr_reader :name, :animals, :clients, 
+	attr_reader :name, :animals, :clients 
 
 	def initialize (name)
 		@name = name
