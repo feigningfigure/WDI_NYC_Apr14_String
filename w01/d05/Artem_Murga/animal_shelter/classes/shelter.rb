@@ -1,18 +1,26 @@
 class Shelter
 	
-	attr_reader: animals
+	attr_reader :name, :animals, :clients, 
 
 	def initialize (name)
 		@name = name
 		@animals = []
 		@clients = []
 	end	
-
-	def adopt 
-		 #A shelter should be able to facilitate an adoption (one of its clients adopting one of the animals from shelter)
-	end		
-		#A shelter should be able to facilitate a return (one of its clients returning his/her pet to the shelter)
+	
 	def clients
 
 	end		
+
+	def animals
+
+	end
+
+	def give_away_animal
+
+	end
+
+	def accept_client
+
+	end
 end

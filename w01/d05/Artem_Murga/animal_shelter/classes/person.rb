@@ -8,4 +8,14 @@ class Person
 		@gender = nil
 		@pets = []
 	end
+
+	def accept_pet
+
+	end
+
+	def give_away_pet
+
+	end
+
+	
 end
