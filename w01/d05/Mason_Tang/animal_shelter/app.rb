@@ -100,8 +100,7 @@ def menu
     if @happitails.clients.include?(current_owner)
       puts "Enter animal name"
       animal_name1 = gets.chomp
-
-      @happitails.accept_animal(animal_name1, animal_info)
+      @happitails.accept_animal(animal_name1, animal1)
       @happitails.clients[current_owner].give_away_pet(animal_name1)
 
 
