@@ -12,7 +12,11 @@ describe "Group" do
 
     end
 
+
+
     describe ".add_students" do
+
+      before :each do this
       it "should respond to .add_students" do
         ($group1.respond_to?)
 

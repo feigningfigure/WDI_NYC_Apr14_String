@@ -9,4 +9,16 @@ class Apartment
 		@num_baths = 0
 		@renters = []
 	end
+
+	def renters
+		
+
+	def to_s
+		puts "the apartments costs $#{@price}/month, is #{@sqft} sq ft, has #{@num_beds} beds, #{@num_baths} and #{@renters}"
+		if @is_occupied
+			puts the "apartment is occupied"
+		else
+			puts the "aparment is available"
+		end
+	end
 end
