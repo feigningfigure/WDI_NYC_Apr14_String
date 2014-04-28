@@ -1,5 +1,5 @@
 # Instructors for the quiz are written inline.
-require 'pry'
+# require 'pry'
 
 # docs you may enjoy
 # http://www.ruby-doc.org/core-2.0/Hash.html
@@ -38,15 +38,15 @@ smoothie_ingredients = {
 # Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
 
     
-    def blend_primer(ingredients)
+    def convert_hash_keys_to_array(hash)
       x = []
-      ingredients.each do |k, v|
+      hash.each do |k, v|
          x << k 
       end
       return x
     end
 
-    mash_up_string = blend_primer(smoothie_ingredients).join('')
+    mash_up_string = convert_hash_keys_to_array(smoothie_ingredients).join('')
 
     mash_up_array = mash_up_string.split('')
 
@@ -63,7 +63,7 @@ smoothie_ingredients = {
     end
 
 
-    puts shuffle_result_string = remove_white_space(shuffle_result_array).join('')
+    # puts shuffle_result_string = remove_white_space(shuffle_result_array).join('')
 
 # create a class called Blender
 # It should have a method that takes an array of ingredients and returns a mixed string of characters.
@@ -72,13 +72,53 @@ smoothie_ingredients = {
 # Blend the the smoothie array
 
 class Blender
-  def initialize (smoothie_ingredients)
+
+  attr_reader :smoothie_ingredients 
+  attr_accessor :switch
+
+  def initialize 
+    @smoothie_ingredients = []
+    @switch = false
   end
 
-  def on_switch
-    true
+  def convert_hash_keys_to_array(hash)
+    x = []
+    hash.each do |k, v|
+       x << k 
+    end
+    return x
   end
+
+  def blend(ingredients_array)
+
+    @smoothie_ingredients = ingredients_array
+
+    shuffled_array = @smoothie_ingredients.join('').split('').shuffle
+
+    def remove_white_space(x)
+      no_blanks = []
+      x.each do |value|
+        unless value == " " 
+          no_blanks << value
+        end
+      end
+      return no_blanks  
+    end
+
+    if switch
+    return remove_white_space(shuffled_array).join('')
+    else
+    return "The blender is off. Please turn blender on before blending."
+    end
+
+  end
+
 
 end
+
+blend_1 = Blender.new
+blend_1.switch = true
+puts blend_1.blend(["peanut butter", "sugar", "apples"])
+
 
 # Move on to gluten_free.rb
