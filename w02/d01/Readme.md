@@ -14,7 +14,8 @@
 - Displaced Response: Hello Neel!
 - Request: '/name/omar'
 - Displaced Response: Hello Omar!
-
+- Request: '/name/keri'
+- Displaced Response: Hello Keri!
 
 
 ###It takes two to Sinatra
