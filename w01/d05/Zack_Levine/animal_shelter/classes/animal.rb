@@ -1,10 +1,11 @@
 class Animal #start the class
-  attr_accessor :animal_name, :animal_species #setter/getter :animal_name is the symobl
+  attr_accessor :animal_name
+  attr_accessor :animal_species #setter/getter :animal_name is the symobl
 
   def initialize() #initialize things
-    @animal_name = animal_name_string #@animal_name instance variable 
-    @animal_species = animal_species_string
-    @animal_toys = [] #this is an empty array because it is able to getting multi. things
+    @Animal.animal_name = animal_name_string #@animal_name instance variable 
+    @Animal.animal_species = animal_species_string
+    @Animal.animal_toys = [] #this is an empty array because it is able to getting multi. things
   end
 
   def
