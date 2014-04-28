@@ -13,6 +13,13 @@ def client_hash(k, v)
       @clients[k] = "a client"
   end
 
+  def client_count
+     @clients.length
+  end
+
+  def animal_count
+     @animals.length
+  end
 
 #Below is an attempt to add client to the shelter class, by popping them
 #from the client class.
@@ -29,7 +36,7 @@ def client_hash(k, v)
 #     end
 
 def to_s
-  "My #{name} is a #{age} year old #{species} who loves #{toys}."
+  "#{name} shelter at #{shelter_address} has #{animal_count} animals and #{client_count} people"
 
   end
 
