@@ -37,8 +37,8 @@ def display_clients
     end
   end
 
-  def give_away_animal(k, v)
-    @animals.delete[k] = v
+  def give_away_animal(name)
+    @animals.delete(name)
   end
 
 #Below is an attempt to add client to the shelter class, by popping them

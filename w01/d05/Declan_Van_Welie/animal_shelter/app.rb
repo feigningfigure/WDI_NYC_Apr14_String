@@ -50,9 +50,9 @@ def menu
     @age = gets.chomp.to_s
     puts "What pets does the client have?"
     input = gets.chomp
-    while input != "" do
-    (pets, age) = input.split(",")
-    age = age.to_i
+    # while input != "" do
+    # (pets, age) = input.split(",")
+    # age = age.to_i
 
   when "E"
     # Adopt Animal
