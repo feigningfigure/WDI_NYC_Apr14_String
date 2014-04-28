@@ -52,17 +52,28 @@ def menu
     @happitails.accept_animal(name, new_animal)
     puts "Added your pet"
     puts "A #{animal_species} named #{name}, cute!"
-    puts "Does #{name} have any toys?"
-    puts "Yes or no?"
+    puts "Does #{name} have any toys? (Y/N)"
        # this can be better, take multiple toys
     toy = gets.chomp.downcase
-    if toy == "no"
+    if toy == "n"
       puts "OK, we're done!"
-    elsif toy == "yes"
+    elsif toy == "y"
       puts "What kind of toy?"
       toy = gets.chomp
       new_animal.toys << toy
       puts "OK, #{name}'s #{toy} will be safe with us."
+      puts "Any more toys? (Y/ N)"
+      response = gets.chomp.downcase
+      if response == "y"
+        puts "What kind of toy?"
+        toy = gets.chomp
+        new_animal.toys << toy
+        puts "OK, #{name}'s #{toy} will be safe with us."
+        puts "Any more toys? (Y/ N)"
+        response = gets.chomp.downcase
+      else
+        "Gotcha!"
+      end
     end
     menu
 
@@ -104,7 +115,7 @@ def menu
     owner = gets.chomp
     if @happitails.clients.include?(owner)==true
       puts "So who are you giving up?"
-      #commented out code here is attempt input control
+      #commented out code here is attempt input control but I'm getting lost on scope
       @happitails.clients[owner].display_pets
       goner = gets.chomp
       # if @happitails.clients[owner[pets]].include?(goner)
