@@ -22,6 +22,7 @@ describe Person do
     it "prints names of the Person object's pets" do
       tiny = Animal.new("Tiny", 3, "male", "cat")
       franz = Animal.new("Franz", 5, "male", "cat")
+      # :tiny = tiny = Animal.new("Tiny", 3, "male", "cat")
       @person.pets[tiny.name.to_sym] = tiny
       @person.pets[franz.name.to_sym] = franz
       expect(@person.display_pets).to match("Tiny is a 3 year old male cat that loves \nFranz is a 5 year old male cat that loves")
