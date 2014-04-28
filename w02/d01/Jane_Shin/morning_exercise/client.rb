@@ -5,7 +5,7 @@ class Client
 
 	def initialize #(name, balance)if we were adding new accounts we would need these parameters
 		@name = client_name
-		@balance = balance.float
+		@balance = balance.to_f#to float
 	end
 
 	def to_s
