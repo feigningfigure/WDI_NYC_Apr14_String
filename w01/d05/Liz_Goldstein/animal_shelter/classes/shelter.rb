@@ -1,36 +1,75 @@
 class Shelter
 
-attr_accessor :name, :animals, :clients
+  attr_accessor :name, :address, :animals, :clients
 
-  def initialize(name, animals=nil, clients=nil)
+  def initialize(name, address)
     @name = name
-    @animals = []   # make it a hash so animals names??
-    @clients = []
-    # @address = address ... just if there's extra time.
+    @address = address
+    @animals = {}
+    @clients = {}
   end
 
-  def to_s
-    p "#{@name} currently has #{@animals.length} pet and #{@clients}."
-  end
-
-  def display_animals   # add zero case
-    p "We currently have #{@animals.length} pets for adoption: #{@animals}."
-  end
-
-  def count_animals
-    p "There are #{@animals.length} animals in the #{@name} shelter now."
+  def display_animals
+    @animals.each {|key, value| puts key}
   end
 
   def display_clients
-    p "Here is our client list: #{@clients}"
+    @clients.each {|key, value| puts key}
+  end
+
+  def give_away_animal(name)
+    if @animals.include?(name)==true
+      @animals.delete(name)
+    end
+  end
+
+  def accept_animal(name, value)
+    @animals[name] = value
+  end
+
+  def accept_client(name, value)
+    @clients[name] = value
+  end
+
+  def client_count
+    @clients.length
+  end
+
+  def animal_count
+    @animals.length
+  end
+
+  def to_s
+    p "#{@name} shelter at #{@address} has #{@animals.length} animals and #{@clients.length} people"
   end
 
 end
 
-# happitails = Shelter.new("HappiTailes")
-# happitails.animals << "Fluffy"
-# happitails.display_animals
-# happitails.count_animals
-# happitails.clients << "Lizzy"
-# happitails.clients << "Sara"
-# happitails.display_clients
+
+
+
+
+#   attr_accessor :name :address
+
+#   def initialize(name, adress)
+#     @name = name
+
+
+#   def to_s
+#    	puts "#{@name} located at #{@address}"
+#   end
+
+#   def display_animals
+#   	puts "#{@animal}"
+#   end
+
+#   def display_clients
+# 	puts ("#{person.name} is a #{person.age} year old #{person.gender} with #{person.pets} pets")
+#     end
+#   end
+
+#   def adopt
+#   	#COME BACK TO THIS
+#   end
+
+# end

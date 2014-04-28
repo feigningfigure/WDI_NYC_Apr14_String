@@ -1,62 +1,34 @@
 class Client
 
-attr_accessor :name, :age, :pets
+	attr_accessor :name, :age, :pets
 
-  def initialize(name, age=nil)
-    @name = name
-    @age = age
-    @pets = []
-  end
+	def initialize(name, age)
+		@name = name
+		@age = age
+		@pets = {}
+	end
 
-  def create
-    puts "I know it's personal but how old are you, #{name}? I'm not hitting on you."
-    @age = gets.chomp
-    $happitails.clients << @name
-    puts "Glad to have you as a client, #{name}!"
-  end
+	def to_s
+		p "#{@name} is a #{@age} year old with #{@pets.length} pets"
+	end
 
-  def to_s
-    if @pets.empty? == false;
-      p "Hi my name is #{@name}, I'm #{age} old and I have #{@pets.length} pets!"
-      else
-      p "Hi my name is #{@name} and I'm #{@age} years old."
-    end
-  end
+	def pet_count
+		@pets.length
+	end
 
-  def client_pet_count
-    p "I've got #{@pets.length} pets!"
-  end
+	def display_pets
+		@pets.each {|key, value| puts key}
+	end
 
-  def display_pets
-    p "Check out my #{@pets.length} pets: #{@pets.to_s}"
-    #want this to print pretty too
-    # also would be great to display species with name when called in app menu!
-  end
+	def give_away_pet(name)
+		if @pets.include?(name)==true
+		@pets.delete(name)
+		end
+	end
 
-#how to match within an array and pop it? SHOULD it automatically go to the shelter?
-  def give_away_pet(goner)
-    # puts "Which one needs to go?"   An alternate way to get input
-    # to_adopt = gets.chomp
-    if @pets.include?(goner)
-      puts "Found it!"
-    else
-      puts "nope"
-    end
-  end
-
-  def accept_pet(pet)
-
-    # search the index of pets in the shelter array and push it into client array
-  end
+	def accept_pet(name, pet_attr)
+		# @client.accept_pet('name', pet_attr)
+		@pets[name] = pet_attr
+	end
 
 end
-
-# test = Client.new("Lizzy", 33)
-# test.to_s
-# test.pets << "Fluffy"
-# test.pets << "Fluffy2"
-# test.to_s
-# # test.client_pet_count
-# # test.display_pets
-# # test.give_away_pet
-# test.give_away_pet("Fluffy")
