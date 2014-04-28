@@ -1,55 +1,40 @@
-
- # Define Animal as a class
 class Animal
-  # Set up accessors and mutators for the attributes of an Animal
-  # attr_accessor sets up both for you
-  attr_accessor :name, :toys
+  attr_accessor :name, :species, :toys
 
-  def initialize (name, toys)
-    # @client = []
+  def initialize(name, species, toys)
     @name = name
-    @toys = toys
+    @species = species
+    @toys = []
   end
 
 end
-  # Used when creating a new animal.
-  #   Example:
-  #       Animal.new('Timmy', 4, 'male', 'toad')
-  # def initialize(name, age, gender, species, toys)
-  #   @name = name
-  #   @age = age
-  #   @gender = gender
-  #   @species = species
-  #   @toys = toys
+
+
+
+
+  #def set_shelter(shelter)
+  # @shelter = shelter
+  #end
+
+  # def get_toys
+  #   if @toys.count == 0
+  #     puts "Sorry, no toys"
+  #   else
+  #     puts "Here are the list of toys for pet #{@name}"
+  #     @toys.each do |x|
+  #       puts x
+  #     end
+  #   end
   # end
 
-  # def animal
-  #   name = "Spot"
-  #   gender = "male"
-  #   age = 40
-  #   return animal
+  # def add_toy(toys=[])
+  #   if toys.any?
+  #     toys.each do |x|
+  #       @toys << x
+  #     end
+  #   else
+  #     puts "what toy to add?"
+  #     toy = gets.chomp
+  #     @toys << toy
+  #   end
   # end
-
-
-
-  # def
-  # end
-
-
-
- # Animal.new("Spot", 2, "male", "dog")
- # animal2 => Animal.new("Fluffy", 3, "female", "cat")
-  # animal3 = Animal.new("Tweety", 1, "female", "bird")
-  # animal4 = Animal.new("Lenny", 4, "male", "lamb")
-
-
-
-
-
-  # When we display the animal using puts or print, the
-  #   to_s method is called to pretty print an Animal
-  # def to_s
-  #   puts "Hi, we have #{name} a #{age}
-  #   #{gender} #{species}."
-  # end
-# end

@@ -1,6 +1,6 @@
 class Shelter
 
-attr_accessor :new_client, :adoptable_animal, :clients, :species, :toys
+attr_accessor :name, :adoptable_animals
 
 	def intialize(client="HappiTails", address=nil)
 		@name = name
@@ -15,13 +15,13 @@ attr_accessor :new_client, :adoptable_animal, :clients, :species, :toys
 		# @initial_animals = initial_animals
 	end
 
-	def shelter()
-		shelter_name = "HappiTails"
-		shelter_address = "10 East 21st Street"
-		shelter_telephone = "212-555-5555"
-		initial_animals = 0
-		return shelter
-	end
+	# def shelter()
+	# 	shelter_name = "HappiTails"
+	# 	shelter_address = "10 East 21st Street"
+	# 	shelter_telephone = "212-555-5555"
+	# 	initial_animals = 0
+	# 	return shelter
+	# end
 
 end
 
