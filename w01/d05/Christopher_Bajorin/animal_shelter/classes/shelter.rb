@@ -32,6 +32,12 @@ class Shelter
     end
   end
 
+  def display_pets(name)
+    clients[name]["Pets"].each do |k,v|
+      puts k
+    end
+  end
+
   def give_away_animal(name)
     @animals.delete(name)
   end

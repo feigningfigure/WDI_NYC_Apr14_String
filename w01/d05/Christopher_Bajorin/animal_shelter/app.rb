@@ -87,7 +87,7 @@ def menu
       puts "Pick another name please.\n".color(:green)
       command = "D"
     else
-      puts "How old is the client?\n"
+      puts "How old is the client?\n".color(:green)
       age = gets.chomp
     end
 
@@ -100,9 +100,38 @@ def menu
 
   when "E"
     # Adopt Animal
+    @happitails.display_clients
+    puts "\nWhich client?\n".color(:green)
+    client_adopter = gets.chomp
+    @happitails.display_animals
+    puts "\nWhich animal?\n".color(:green)
+    animal_adoptee = gets.chomp
+
+    if @happitails.clients.include?(client_adopter) == true && @happitails.animals.include?(animal_adoptee) == true
+      @happitails.clients[client_adopter]["Pets"][animal_adoptee] = @happitails.animals.delete(animal_adoptee)
+    else
+      puts "Invalid choices\n".color(:green)
+    end
+    binding.pry
+
 
   when "F"
     # Put Animal Up For Adoption
+
+    @happitails.display_clients
+    puts "\nWhich client?\n".color(:green)
+    client_choice = gets.chomp
+    if @happitails.clients.include?(client_choice) == true
+      @happitails.display_pets(client_choice)
+      puts "which animal?\n".color(:green)
+      animal_choice = gets.chomp
+      @happitails.animals[animal_choice] = @happitails.clients[client_choice]["Pets"].delete(animal_choice)
+    else
+      puts "Invalid Selection.\n".color(:red)
+    end
+
+
+
   when "Q"
     Kernel.exit
   end
