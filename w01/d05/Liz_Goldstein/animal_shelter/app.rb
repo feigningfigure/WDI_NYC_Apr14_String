@@ -9,10 +9,10 @@ sara = Client.new("Sara", 26)
 frisky = Animal.new("Frisky", 4, "cat")
 fluffy = Animal.new("Fluffy", 20, "turtle")
 lizzy.accept_pet(frisky, frisky)
-lizzy.to_s
-@happitails.accept_animal(fluffy, "Fluffy")
-@happitails.accept_client(sara, "Sara")
-@happitails.accept_client(lizzy, "lizzy")
+@happitails.accept_animal("Fluffy", fluffy)
+@happitails.accept_client("Sara", sara)
+@happitails.accept_client("lizzy", lizzy)
+@happitails.to_s
 
 def menu
   puts ""
@@ -104,10 +104,18 @@ def menu
     owner = gets.chomp
     if @happitails.clients.include?(owner)==true
       puts "So who are you giving up?"
-      owner.display_pets
-    else
-      puts "Please register."
-    end
+      #commented out code here is attempt input control
+      @happitails.clients[owner].display_pets
+      goner = gets.chomp
+      # if @happitails.clients[owner[pets]].include?(goner)
+       @happitails.clients[owner].give_away_pet(goner)
+       @happitails.accept_animal(goner, goner)
+        puts "We've got your pet #{goner}!"
+        # @happitails.clients[owner]
+      else
+        puts "Please register"
+      end
+
     # Put Animal Up For Adoption
   when "Q"
     Kernel.exit
