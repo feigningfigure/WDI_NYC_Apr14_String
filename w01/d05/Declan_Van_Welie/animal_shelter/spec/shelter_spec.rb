@@ -3,11 +3,11 @@ require 'spec_helper'
 describe Shelter do
 
   before :each do
-    @shelter = Shelter.new('HappiTails', '10 East 21st Street')
+    @shelter = Shelter.new('HappiTails', '10 East 21st Street', 'Tiny', 'Beth')
   end
 
   describe "#new" do
-    it "takes two parameters and returns a Shelter object" do
+    it "takes four parameters and returns a Shelter object" do
       expect(@shelter).to be_an_instance_of(Shelter)
     end
   end

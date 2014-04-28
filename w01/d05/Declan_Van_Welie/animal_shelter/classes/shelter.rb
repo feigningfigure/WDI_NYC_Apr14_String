@@ -1,13 +1,19 @@
 class Shelter
 
-attr_accessor :shelter, :shelter_address#, :animals, :clients
+attr_accessor :name, :shelter_address, :animals, :clients
 
-def initialize(shelter, shelter_address, animals, clients)
-@shelter = shelter
+def initialize(name, shelter_address, animals, clients)
+@name = name
 @shelter_address = shelter_address
 @animals = Hash.new
 @clients = Hash.new
 end
+
+def client_hash(k, v)
+      @clients[k] = "a client"
+  end
+
+
 #Below is an attempt to add client to the shelter class, by popping them
 #from the client class.
 # def add_clients(clients_array)

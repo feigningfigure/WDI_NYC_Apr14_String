@@ -18,6 +18,29 @@ class Client
   def pets_hash(k, v)
       @pets[k] = v
   end
+
+  def pet_count
+     @pets.length
+  end
+
+  def to_s
+   "#{name} is a #{age} year old with #{pet_count} pets"
+  end
+  #An attempt to delete the key/value pair from the pets hash.
+  def give_away_pet(k, v)
+    pets[k] = v
+    pets.delete(k)
+  end
+  # An attempt to pass the rspec requirement to display pets. Trying to dynamically display the incoming keys.
+  def display_pets
+    @pets.each do |k,v|
+      puts "#{k}: #{v}"
+    end
+  end
+# An attempt to pass the rspec requirement to accept pets. Trying to add a new, incoming key to the @pets hash.
+  def accept_pet
+    @pets[] = pet.new
+  end
 end
   # #Trying to count the key of a hash.
   # def pet_count
@@ -52,10 +75,6 @@ end
 
   # # When we display the animal using puts or print, the
   # #   to_s method is called to pretty print an Animal
-
-  # puts "#{name} is a #{age} year old #{pets} who loves #{toys}."
-  #   end
-  # end
 
 
 
