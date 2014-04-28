@@ -7,5 +7,5 @@ require 'httparty'
 
 # HTTP VERB + URI Pattern + Block of Code
 get "/" do
-  "Hello World!"
+  "<h1>Hello World!</h1><p>This should be smaller</p>"
 end
