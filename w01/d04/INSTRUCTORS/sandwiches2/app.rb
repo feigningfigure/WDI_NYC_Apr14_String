@@ -1,3 +1,6 @@
+require 'pry'
+require 'rainbow/ext/string'
+
 require_relative 'classes/notebook'
 require_relative 'classes/student'
 require_relative 'classes/dollar'
