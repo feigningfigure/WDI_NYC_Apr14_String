@@ -28,7 +28,7 @@ get "/:operator/:number/:number2" do
     when "divide"
       "The answer is #{number1 / number2}"
     else
-      "ERROR: Stop trying to do fancy stuff!"
+      "ERROR: Stop trying to do fancy"
   end
 
 end
