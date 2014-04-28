@@ -15,7 +15,7 @@ class Person
 	def display_pets
 		pet_string = []
 		@pets.each do |k, v|
-		 	pet_string << v.to_s 
+		 	pet_string << v.to_s
 		end
 		"#{pet_string.join(" \n")}"
 	end

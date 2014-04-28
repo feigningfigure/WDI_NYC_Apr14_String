@@ -90,9 +90,9 @@ def menu
     # @shelter.clients[adopter.to_sym].pets[adopted_pet.name.to_sym] = adopted_pet
     # [franz.name.to_sym] = franz
     #hash two is adopter, hash one is shelter
-    @shelter.clients.hash_two[animal_name.to_sym] = @shelter.animals.delete(animal_name.to_sym)
-    @shelter.release_animal(adopted_pet) # works
-
+    @shelter.clients[adopter.to_sym].pets[animal_name.to_sym] = @shelter.animals[animal_name.to_sym]
+    # @shelter.clients.hash_two[animal_name.to_sym] = @shelter.animals.delete(animal_name.to_sym)
+    @shelter.release_animal(animal_name)
   when "F"
     # Put Animal Up For Adoption
   when "Q"
