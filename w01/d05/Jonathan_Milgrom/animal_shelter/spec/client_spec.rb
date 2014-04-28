@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Person do
+describe Client do
 
   before :each do
-    @person = Person.new('Beth', 30)
+    @client = Client.new('Beth', 30)
   end
 
   describe "#new" do
