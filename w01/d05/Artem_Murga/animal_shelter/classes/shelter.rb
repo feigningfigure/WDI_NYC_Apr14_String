@@ -7,11 +7,7 @@ class Shelter
 		@address = address
 		@animals = {}
 		@clients = {}
-	end	
-	
-	# def clients(k, v)
-	# 	@clients[k] = v
-	# end		
+	end		
 
 	def client_count
 		@clients.size
@@ -48,4 +44,5 @@ class Shelter
 	def to_s
 		"#{name} shelter at #{address} has #{animal_count} animals and #{client_count} people"
 	end
+
 end
