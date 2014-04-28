@@ -1,11 +1,11 @@
-class Shelter
+# class Shelter
 
-attr_accessor #:animals 
- # :shelter_name, :shelter_address, :shelter_telephone
-# :new_client, :adoptable_animal, :clients, :species, :toys
+# attr_accessor #:animals 
+#  # :shelter_name, :shelter_address, :shelter_telephone
+# # :new_client, :adoptable_animal, :clients, :species, :toys
 
-	def intialize
-		# (animals,
+# 	def intialize
+# 		# (animals,
 	 # clients,
 	# shelter_name, shelter_address, shelter_telephone) 
 	# # initial_animals)
@@ -18,10 +18,10 @@ attr_accessor #:animals
 	# 	@shelter_telephone = shelter_telephone
 	# 	# @shelter_telephone = shelter_telephone
 	# 	# @initial_animals = initial_animals
-	end
+	# end
 
 
-	def shelter
+	# def shelter
 		# animals = {""}
 	# (shelter_name, shelter_address, shelter_telephone, initial animals)
 
@@ -30,7 +30,7 @@ attr_accessor #:animals
 	# 	shelter_telephone = 2125555555
 	# # 	# initial_animals = 0
 	# 	return shelter 
-	end
+	# end
 
   # animal1 = Animal.new("Spot", 2, "male", "dog")
   # animal2 = Animal.new("Fluffy", 3, "female", "cat")
@@ -41,7 +41,7 @@ attr_accessor #:animals
  #  num_of_pets = num_of_pets.new(name, age, gender, species, toys)
  #  end
 
-end
+# end
 
 # happiTails = Shelter.new
 # happitails.adoptable_animal[:a1] = Animal.new("Spot", 2, "male", "dog")
@@ -52,3 +52,17 @@ end
 
 
 
+class Shelter
+
+  attr_accessor :name, :animals
+  def initialize(name, animals)
+    @name = name
+    @animals = {}
+
+  end
+
+  def to_s
+    "#{name} shelter at 10 East 21st Street has 0 animals and 0 people"
+  end
+
+end

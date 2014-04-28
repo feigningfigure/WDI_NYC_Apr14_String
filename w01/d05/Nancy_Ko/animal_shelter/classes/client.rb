@@ -47,14 +47,28 @@
 #   # end
 # end
 class Client
-attr_accessor :name, :age, :pets
+attr_accessor :name, :age, :pets, :gender, :kids, :number_of_pets, :species
 
   def initialize (name, age)
     @name = name
     @age = age
     @pets = Hash.new
+    @number_of_pets = number_of_pets
+    @gender = gender 
+    
+  end
+
+  def to_s
+    "#{name} is a 30 year old with 0 pets"
+  end
+
+    def give_up(name, species, age, gender, toys)
+    number_of_pets -= 1
+    puts "#{name} was given up for adoption!"
+    return Animal.new(name, species, age, gender, toys)
   end
 
 
-
 end
+
+
