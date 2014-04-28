@@ -1,39 +1,31 @@
 require 'spec_helper'
 
-describe Shelter do
-
+describe Animal do
   before :each do
-    @shelter = Shelter.new('HappiTails', '10 East 21st Street')
+    @animal = Animal.new("Tiny", 3, "cat")
   end
 
   describe "#new" do
-    it "takes two parameters and returns a Shelter object" do
-      expect(@shelter).to be_an_instance_of(Shelter)
+    it "takes three parameters and returns an Animal object" do
+      expect(@animal).to be_an_instance_of(Animal)
     end
   end
 
-  describe ".to_s" do
-    it "prints the Shelter object's attributes in a sentence" do
-      expect(@shelter.to_s).to match("HappiTails shelter at 10 East 21st Street has 0 animals and 0 people")
-    end
+  it 'has a changeable name' do
+    expect(@animal.name).to eq 'Tiny'
+    @animal.name = 'Tether'
+    expect(@animal.name).to eq 'Tether'
   end
 
-  describe ".display_animals" do
-    it "prints the Shelter's Animals" do
-    end
+  it 'has toys' do
+    @animal.toys << "Larry the cow"
+    expect(@animal.toys.count).to eq 1
   end
 
-  describe ".display_clients" do
-    it "prints the Shelter object's Clients" do
-      client = Person.new("Beth", 30, "female", 3)
-      @shelter.clients[client.name.to_sym] = client
-      expect(@shelter.display_clients).to match("Beth is a 30 year old female with 3 kids and 0 pets")
-    end
-  end
-
-  describe ".adopt" do
-    it "takes an Animal object from a Client and adds it to the shelter" do
-    end
+  it 'can describe itself' do
+    @animal.toys << "mice"
+    @animal.toys << "yarn"
+    expect(@animal.to_s).to eq "Tiny is a 3 year old cat that loves mice, yarn"
   end
 
 end
