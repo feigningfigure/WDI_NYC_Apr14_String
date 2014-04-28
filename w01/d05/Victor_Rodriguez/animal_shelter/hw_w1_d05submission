@@ -1,0 +1,27 @@
+def menu (A, B, C, D, E, F, Q)
+  if B == E then 
+    puts "Adopt an Animal"
+  elsif B == F then
+    puts "Put an Animal up for Adoption"
+  end
+end
+
+  puts ""
+  puts "Welcome to HappiTails Animal Shelter!"
+  puts "Please choose from the menu below: "
+  puts ""
+  puts "A: Display Animals"
+  animal = gets.chomp.upcase
+  puts "B: Display Clients"
+  clients = gets.chomp.upcase
+  puts "C: Create Animal"
+  canimal = gets.chomp.upcase
+  puts "D: Create Client"
+  cclient = gets.chomp.upcase
+  puts "E: Adopt Animal"
+  aanimal = gets.chomp.upcase
+  puts "F: Put Animal Up For Adoption"
+  panimal = gets.chomp.upcase
+  puts "Q: Quit"
+    
+  menu(A, B, C, D, E, F, Q)
