@@ -1,6 +1,6 @@
 require 'sinatra'
 # optional
-require 'sinatra/reloader'
+# require 'sinatra/reloader'
 
 # this loads a global variable called $students which is an array of hashes
 require_relative "db/students"
@@ -44,4 +44,30 @@ get "/students/by_name/:name" do
   else
     return results
   end
+end
+
+# pretend HTTP delete
+get "/students/:id/delete" do
+  # this method deletes a student hash for student with id :id
+  id = params[:id].to_i
+  if id > $students.length
+    "No student with that ID!"
+  else
+    student_name = $students[id]["Name"]
+    $students[id] = nil
+  end
+  "Deleted #{student_name}"
+end
+
+# real DELETE method
+delete "/students/:id" do
+  # this method deletes a student hash for student with id :id
+  id = params[:id].to_i
+  if id > $students.length
+    "No student with that ID!"
+  else
+    student_name = $students[id]["Name"]
+    $students[id] = nil
+  end
+  "Deleted #{student_name}"
 end
