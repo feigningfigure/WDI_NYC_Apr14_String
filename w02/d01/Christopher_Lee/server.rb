@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/reloader'
 
 # HTTP VERB + URI Pattern + Block of Code
 get "/" do
@@ -6,5 +7,5 @@ get "/" do
 end
 
 get "/:name" do
-
+  params[:name]
 end
