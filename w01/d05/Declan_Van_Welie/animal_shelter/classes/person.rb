@@ -34,12 +34,12 @@ class Client
   # An attempt to pass the rspec requirement to display pets. Trying to dynamically display the incoming keys.
   def display_pets
     @pets.each do |k,v|
-      puts "#{k}: #{v}"
+      puts k
     end
   end
 # An attempt to pass the rspec requirement to accept pets. Trying to add a new, incoming key to the @pets hash.
-  def accept_pet
-    @pets[] = pet.new
+  def accept_pet(k, v)
+    @pets[k] = v
   end
 end
   # #Trying to count the key of a hash.

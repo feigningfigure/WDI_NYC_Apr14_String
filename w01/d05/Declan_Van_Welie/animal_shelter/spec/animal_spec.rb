@@ -23,9 +23,9 @@ describe Animal do
   end
 
   it 'can describe itself' do
-    @animal.toys << "mice"
-    @animal.toys << "yarn"
-    expect(@animal.to_s).to eq "Tiny is a 3 year old female cat that loves mice, yarn"
+    @animal.toys << mice
+    @animal.toys << yarn
+    expect(@animal.to_s).to eq "Tiny is a 3 year old female cat that loves mice yarn"
   end
 
 end

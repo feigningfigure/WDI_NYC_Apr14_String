@@ -13,12 +13,32 @@ def client_hash(k, v)
       @clients[k] = "a client"
   end
 
+  def accept_client(k, v)
+      @clients[k] = v
+  end
+
   def client_count
      @clients.length
   end
 
   def animal_count
      @animals.length
+  end
+
+  def display_animals
+    @animals.each do |k,v|
+      puts k
+    end
+  end
+
+def display_clients
+    @clients.each do |k,v|
+      puts k
+    end
+  end
+
+  def give_away_animal
+
   end
 
 #Below is an attempt to add client to the shelter class, by popping them
@@ -29,11 +49,9 @@ def client_hash(k, v)
 #     end
 #   end
 
-# def add_animals
-#       @animals = []
-#       new_animal = Animal.new
-#       @animals << new_animal
-#     end
+def accept_animal(k, v)
+      @animals[k] = v
+    end
 
 def to_s
   "#{name} shelter at #{shelter_address} has #{animal_count} animals and #{client_count} people"
