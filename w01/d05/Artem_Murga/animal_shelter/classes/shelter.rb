@@ -19,7 +19,7 @@ class Shelter
 
 	def display_animals 
 		@animals.each do |k, v|
-		 	puts k		 	
+		 	p k		 	
 		 end
 	end
 

@@ -12,6 +12,10 @@ class Client
 		@pets = {}
 	end
 
+	def pets
+		@pets
+	end
+
 	def to_s
 		"#{@name} is a #{@age} year old with #{@pets.size} pets"
 	end

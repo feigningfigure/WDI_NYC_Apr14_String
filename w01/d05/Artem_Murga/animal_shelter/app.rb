@@ -10,11 +10,14 @@ require_relative 'classes/shelter'
 
 @jane_stuart = Client.new("Jane Stuart", 28, "female")
 @john_smith = Client.new("John Smith", 25, "male")
+@john_smith.pets["Bark"] = @bark
+
 
 @shelter = Shelter.new("HappyTails", "Union Square")
 
-@shelter.accept_animal(@kitty, "Kitty")
-@shelter.accept_client(@jane_stuart, "Jane Stuart")
+@shelter.accept_animal("Kitty", @kitty)
+@shelter.accept_client("Jane Stuart", @jane_stuart)
+@shelter.accept_client("John Smith", @john_smith)
 
 #bob = Client.new("Bob", 28, "male")
 #shelter.accept_client(bob, "Bobby")
@@ -59,13 +62,24 @@ def menu
      @shelter.accept_client(client_name, new_client)
   when "E"
     puts "Please, type a name of a pet"
-    @name = gets.chomp
-    @shelter.accept_animal(@name)
+    adopt_name = gets.chomp
+      if @john_smith.pets.include?(adopt_name)
+        puts "Yes, there is a pet available for adoption from other people"
+        @shelter.accept_animal(@adopt_name, @adopt_name)
+        @john_smith.give_away_pet(adopt_name)
+      else
+        puts "There is no such pets available to adopt from other people"
+      end
   when "F"
-    #TODO: create+add
-    shelter.give_away_animal(name)
     puts "Please, type a name of a pet"
-    accepted_name = gets.chomp
+    drive_out_name = gets.chomp
+    if @shelter.animals.include?(drive_out_name)
+      puts "Thank you. The pet is on the way to it's new owner."
+      @shelter.give_away_animal(drive_out_name)
+      @accept_pet(drive_out_name, drive_out_name)
+    else
+      p "There is no such animal. May be you want to create one?"
+    end
   when "G" 
     p Animal.animals_log
   when "Q"
