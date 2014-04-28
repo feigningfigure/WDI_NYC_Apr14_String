@@ -25,7 +25,7 @@ require_relative 'classes/shelter'
 def menu
 
   puts 
-  puts "Welcome to HappiTails Animalshelter!"
+  puts "Welcome to HappyTails Animalshelter!"
   puts "Please choose from the menu below: "
   puts 
   puts "A: Display Animals"
@@ -34,7 +34,7 @@ def menu
   puts "D: Create Client"
   puts "E: Adopt Animal"
   puts "F: Put Animal Up For Adoption"
-  puts "G: See all the creatures were created through our shelter"
+  puts "G: See all the creatures that were created"
   puts "Q: Quit"
   puts 
   response = gets.chomp.upcase
@@ -76,7 +76,7 @@ def menu
     if @shelter.animals.include?(drive_out_name)
       puts "Thank you. The pet is on the way to it's new owner."
       @shelter.give_away_animal(drive_out_name)
-      @accept_pet(drive_out_name, drive_out_name)
+      @shelter.accept_pet(drive_out_name, drive_out_name)
     else
       p "There is no such animal. May be you want to create one?"
     end
