@@ -28,7 +28,7 @@ class Client
   end
   #An attempt to delete the key/value pair from the pets hash.
   def give_away_pet(k, v)
-    pets[k] = v
+    #pets[k] = v
     pets.delete(k)
   end
   # An attempt to pass the rspec requirement to display pets. Trying to dynamically display the incoming keys.
