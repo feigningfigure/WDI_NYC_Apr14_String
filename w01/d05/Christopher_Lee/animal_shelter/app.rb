@@ -93,6 +93,8 @@ def menu
     @shelter.clients[adopter.to_sym].pets[animal_name.to_sym] = @shelter.animals[animal_name.to_sym]
     # @shelter.clients.hash_two[animal_name.to_sym] = @shelter.animals.delete(animal_name.to_sym)
     @shelter.release_animal(animal_name)
+    puts "#{adopter} is now the proud owner of #{animal_name}"
+    puts @shelter.clients[adopter.to_sym].display_pets
   when "F"
     # Put Animal Up For Adoption
   when "Q"
