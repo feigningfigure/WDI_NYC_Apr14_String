@@ -23,11 +23,13 @@ def menu
   case command
   when "A"
     # Display Animals
-    puts "Meet Our Animals:\n\n"
+    puts "Meet Our Animals:"
+    puts ""
      puts @shelter.display_animals
   when "B"
     # Display Clients
-    puts "Meet Our Clients:\n\n"
+    puts "Meet Our Clients:"
+    puts ""
     puts @shelter.display_clients
   when "C"
     # Create Animal
@@ -41,12 +43,12 @@ def menu
     animal_type = gets.chomp
     puts "Any toys? (Y/N)?"
     animal_toys = gets.chomp.upcase
-    case animal_toys
-      when "Y"
-        animal_toys = gets.chomp.split(",")
-      when "N"
-        animal_toys = []
-    end
+      case animal_toys
+        when "Y"
+          animal_toys = gets.chomp.split(",")
+        when "N"
+          animal_toys = []
+      end
 
   when "D"
     # Create Client
@@ -57,9 +59,9 @@ def menu
   when "Q"
     Kernel.exit
   end
-end
 
-response = menu
-while response != "Q"
-  response = menu
-end
+
+# response = menu
+# while response != "Q"
+#   response = menu
+# end

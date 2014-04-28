@@ -15,7 +15,7 @@ class Shelter
 	def display_clients
 		client_string = []
 		@clients.each do |k, v|
-		 	client_string << v.to_s 
+		 	client_string << v.to_s
 		end
 		"#{client_string.join(" \n")}"
 	end
@@ -23,7 +23,7 @@ class Shelter
 	def display_animals
 		animal_string = []
 		@animals.each do |k, v|
-		 	animal_string << v.to_s 
+		 	animal_string << v.to_s
 		end
 		"#{animal_string.join(" \n")}"
 	end
