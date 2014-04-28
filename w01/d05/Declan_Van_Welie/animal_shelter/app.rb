@@ -58,12 +58,13 @@ def menu
     # Adopt Animal
     puts "Which animal would you like to adopt?"
     adopted_animal = gets.chomp
-    Shelter.animals.pop(adopted_animal)
+    Shelter.animals.delete(adopted_animal)
 
   when "F"
     # Put Animal Up For Adoption
     puts "What is the name of the animal you would you like to put up for adoption?"
-    Shelter.animals.pop = gets.chomp
+    name = gets.chomp
+    Shelter.animals.add(name)
 
   when "Q"
     Kernel.exit
