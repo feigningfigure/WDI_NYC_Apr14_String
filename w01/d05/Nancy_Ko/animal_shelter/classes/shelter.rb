@@ -1,26 +1,35 @@
 class Shelter
 
-attr_accessor :new_client, :adoptable_animal, :clients, :species, :toys
+attr_accessor #:animals 
+ # :shelter_name, :shelter_address, :shelter_telephone
+# :new_client, :adoptable_animal, :clients, :species, :toys
 
-	def intialize(#animals, clients,
-	 shelter_name, shelter_address, shelter_telephone, initial_animals)
-		# @animals = []
-		# @clients = []
-		@shelter = []
-		@shelter_name = shelter_name
-		@shelter_address = shelter_address
-		# @shelter_telephone = shelter_telephone
-		# @initial_animals = initial_animals
+	def intialize
+		# (animals,
+	 # clients,
+	# shelter_name, shelter_address, shelter_telephone) 
+	# # initial_animals)
+		# @animals = animals
+		# @pets = pets 
+	# 	@shelter_name = shelter_name
+	# # 	# @clients = []
+	# # 	@shelter_name = shelter_name
+	# 	@shelter_address = shelter_address
+	# 	@shelter_telephone = shelter_telephone
+	# 	# @shelter_telephone = shelter_telephone
+	# 	# @initial_animals = initial_animals
 	end
 
 
 	def shelter
+		# animals = {""}
 	# (shelter_name, shelter_address, shelter_telephone, initial animals)
-		shelter_name = "HappiTails"
-		shelter_address = "10 East 21st Street"
-		# shelter_telephone = 212-555-5555
-		# initial_animals = 0
-		return shelter 
+
+	# 	shelter_name = "HappiTails"
+	# 	shelter_address = "10 East 21st Street"
+	# 	shelter_telephone = 2125555555
+	# # 	# initial_animals = 0
+	# 	return shelter 
 	end
 
   # animal1 = Animal.new("Spot", 2, "male", "dog")
