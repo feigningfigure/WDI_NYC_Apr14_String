@@ -15,14 +15,14 @@ class Client
 		@pets.each {|pet, pet_attr| puts pet}
 	end
 
-	def give_away_pet(name)
-		if @pets.include?(name)
-			@pets.delete(name)
+	def give_away_pet(pet_name)
+		if @pets.include?(pet_name)
+			@pets.delete(pet_name)
 		end
 	end	
 
-	def accept_pet(name, pet_attr)
-		@pets[name] = pet_attr
+	def accept_pet(name, owner)
+		@pets[name] = owner
 	end
 	
 	def to_s

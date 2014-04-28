@@ -1,7 +1,7 @@
 class Shelter
 	attr_accessor :name, :address, :clients, :animals
 
-	def initialize(shelter_name, shelter_address)
+	def initialize(shelter_name, shelter_address=nil)
 		@name = shelter_name
 		@address = shelter_address
 		@clients = Hash.new
@@ -30,8 +30,8 @@ class Shelter
 		end
 	end
 
-	def accept_animal(name, animal_attr)
-		@animals[name] = animal_attr
+	def accept_animal(name, owner_name)
+		@animals[name] = owner_name
 	end
 
 	def accept_client(name, client_attr)
