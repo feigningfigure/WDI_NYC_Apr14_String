@@ -1,0 +1,7 @@
+require 'rainbow/ext/string'
+
+str ="Hello World!"
+
+puts str.color('FF0080')
+
+puts str.color(:cyan)
