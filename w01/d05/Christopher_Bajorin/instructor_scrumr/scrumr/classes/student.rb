@@ -8,5 +8,4 @@ class Student
   def to_s
     "My name is #{@name}"
   end
-
 end
