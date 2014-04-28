@@ -16,20 +16,3 @@ get '/:name/:meal' do
 	"I'm #{params[:name]} and I love #{params[:meal]}"
 end
 
-# get '/add/:number1/:number2' do
-# 	"#{params[:number1] + params[:number2] }"
-
-
-# end
-
-# get '/:subtract/:number1/:number2' do
-
-# end
-
-# get '/:multiply/:number1/:number2' do
-
-# end
-
-# get '/:divide/:number1/:number2' do
-
-# end
