@@ -25,7 +25,6 @@ get '/' do
 end
 
 rand_ind = rand(0,1)
-
 if arr[0] == arr[rand_ind]
   get '/yuri_gagarin' do
     "Correct. Who was the first man on the moon?"
