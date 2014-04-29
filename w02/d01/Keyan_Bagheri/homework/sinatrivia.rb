@@ -14,6 +14,10 @@ get '/' do
 	"<h1>Sinatrivia!</h1><h2>Let's begin!</h2><a href=http://localhost:4567/#{answer_array[num_array[0]]}>Is Ruby fun? (Click here if yes is your answer)</a>"
 end
 
+#in order to continue the program
+#the answer params build on the previous page
+#insert http address like this "localhost:4567/answer1/answer2/answer3" and so on...
+
 get "/#{answer_array[num_array[0]]}/#{answer_array[num_array[1]]}/#{answer_array[num_array[2]]}/#{answer_array[num_array[3]]}/#{answer_array[num_array[4]]}/#{answer_array[num_array[5]]}" do
 	"<h2>Congratulations.</h2><p>You win! That was easy.<p>"
 end
