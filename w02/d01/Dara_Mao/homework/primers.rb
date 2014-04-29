@@ -24,12 +24,17 @@ get '/' do
   "Who was the first man in space?"
 end
 
-get '/yuri_gagarin' do
-  "Correct. Who was the first man on the moon?"
-end
+rand_ind = rand(0,1)
 
-get '/neil_armstrong' do
-  "Correct. etc."
+if arr[0] == arr[rand_ind]
+  get '/yuri_gagarin' do
+    "Correct. Who was the first man on the moon?"
+  end
+
+else
+  get '/neil_armstrong' do
+    "Correct. etc."
+  end
 end
 
 #Primer 4: Sinatra + HTML
