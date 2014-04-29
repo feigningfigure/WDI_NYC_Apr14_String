@@ -1,0 +1,116 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/*p {
+  font-size: 12px;
+}*/
+
+/*-----------------------------------------------------------------------------
+=01 NAV
+-----------------------------------------------------------------------------*/
+
+nav.clear {
+  background-color: #ffc0cb;
+  height: 100px;
+}
+
+ul.right {
+  float: right;
+  margin: 20px 15px 10px 0;
+
+}
+
+li {
+  display: inline;
+  background-color: #3333FF;
+  padding: 5px 5px 5px 5px;
+}
+
+/*li last_of_type {
+  margin-left: 50px;
+}*/
+
+.container {
+  margin: 10px 10px 10px 10px;
+  background-color: #cccccc;
+  width: 1400px;
+  padding-bottom: 10px;
+}
+
+.box {
+  padding: 20px;
+  margin: 10px;
+  background-color: #00FFFF;
+  width: 100px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.left {
+  float: left;
+  padding: 30px;
+/*  margin: 20px;*/
+  background-color: #66FF66;
+}
+
+.right {
+  float: right;
+/*  margin: 20px;*/
+  padding: 20px;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+/*.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+/** html .clearfix { height: 1%; }
+.clearfix { display: block; }*/
+/* close commented backslash hack */*/
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------
+=02 BODY
+-----------------------------------------------------------------------------*/
+
+
+
+
+
+.clear {
+  both
+}
