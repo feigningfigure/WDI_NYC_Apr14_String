@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+}
+
+nav{
+  background-color: #FFC0CB;
+  margin: 0 0;
+  /*width: 100%;*/
+  width: 1100px;
+  height: 40px;
+  display: block;
+}
+
+nav ul{
+  margin: 5px 0px 0px 0px;
+  padding: 0 0 20px 0;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  padding: 5px;
+  background-color: blue;
+  margin:0 10px 0 0;
+  color: white;
+}
+
+nav ul :last-child{
+  margin-right: 5px;
+}
+
+
+.right{
+  float: right;
+}
+
+.clear{
+  clear: both;
+}
+
+.container{
+  background: #BDBDBD;
+  padding: 5px;
+  width: 990px;
+  height: 280px;
+  margin: 10px;
+}
