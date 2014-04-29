@@ -22,13 +22,15 @@ nav ul li{
   padding: 5px;
   background-color: blue;
   margin:0 10px 0 0;
-  color: white;
 }
 
 nav ul :last-child{
   margin-right: 5px;
 }
 
+.left{
+  float: left;
+}
 
 .right{
   float: right;
@@ -44,4 +46,60 @@ nav ul :last-child{
   width: 990px;
   height: 280px;
   margin: 10px;
+  position:relative;
+}
+
+.box{
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  background: #2EFEF7;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.box.left,
+.box.right{
+  display: inline-block;
+  /*margin: 10px;*/
+}
+
+.box.left{
+  background-color: #58FA58;
+}
+
+.box.right{
+  background-color: #FFC0CB;
+}
+
+.center{
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 5px;
+  margin: auto;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.with_children{
+  height: 100%;
+}
+
+#comment{
+  display: inline-block;
+  width: 270px;
 }

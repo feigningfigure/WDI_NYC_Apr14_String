@@ -35,9 +35,7 @@
 
 	<!-- float positioning -->
 
-	<div class="container">
-
-		 I'm a static parent.
+	<div class="container clearfix with_children">
 
 		<div class="box left">
 			I'm box 1 floating left.
@@ -50,6 +48,9 @@
 		<div class="box left">
 			I'm box 3 floating left.
 		</div>
+			<div id="comment">
+		 I'm a static parent. I need a clear fix class if you do not want me to collapse
+		 when I have floating children inside of me!</div>
 
 		<div class="box right">
 			I'm box 1 floating right.
