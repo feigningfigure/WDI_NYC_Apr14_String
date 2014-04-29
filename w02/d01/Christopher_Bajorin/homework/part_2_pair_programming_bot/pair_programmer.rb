@@ -2,13 +2,15 @@ require 'sinatra'
 require 'sinatra/reloader'
 require_relative 'styles'
 
+# buttons aren't working.
+
 get '/' do
   <<-HTML
   <link rel="stylesheet" type="text/css" href="/styles.css">
-
   <h1>Does The Test Pass?</h1>
   <input type="submit" value=" YES " href="http://localhost:4567/yespass"><br>
   <input type="submit" value=" NO " href="http://localhost:4567/nopass">
+
 
   HTML
 end
