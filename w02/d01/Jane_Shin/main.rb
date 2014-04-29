@@ -42,6 +42,15 @@ require 'sinatra/reloader'
 # 	end
 # end
 
+#below code is a way to type a multiline string
+get '/' do
+	<<-WHATEVER YOU WANT IN CAPS
+	"string"
+	WHATEVER YOU WANT IN CAPS	
+end
+
+
+
 #calculator file - class review version
 get '/:operation/:num1/:num2' do
 	case params[:operation]
