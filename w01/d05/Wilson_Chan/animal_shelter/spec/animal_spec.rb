@@ -1,22 +1,31 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe Animal do
-
   before :each do
-    @animal = Animal.new("Tiny", 3, "male", "cat")
-    @animal.toys << "mice" << "string"
+    @animal = Animal.new("Tiny", 3, "cat")
   end
 
   describe "#new" do
-    it "takes four parameters and returns an Animal object" do
+    it "takes three parameters and returns an Animal object" do
       expect(@animal).to be_an_instance_of(Animal)
     end
   end
 
-  describe ".to_s" do
-    it "prints the Animal object's attributes in a sentence" do
-      expect(@animal.to_s).to match("Tiny is a 3 year old male cat that loves mice, string")
-    end
+  it 'has a changeable name' do
+    expect(@animal.name).to eq 'Tiny'
+    @animal.name = 'Tether'
+    expect(@animal.name).to eq 'Tether'
+  end
+
+  it 'has toys' do
+    @animal.toys << "Larry the cow"
+    expect(@animal.toys.count).to eq 1
+  end
+
+  it 'can describe itself' do
+    @animal.toys << "mice"
+    @animal.toys << "yarn"
+    expect(@animal.to_s).to eq "Tiny is a 3 year old cat that loves mice, yarn"
   end
 
 end
