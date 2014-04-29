@@ -18,6 +18,8 @@ end
 #the answer params build on the previous page
 #insert http address like this "localhost:4567/answer1/answer2/answer3" and so on...
 
+#there is one error that occurs when blank page shows up... try reloading the program
+
 get "/#{answer_array[num_array[0]]}/#{answer_array[num_array[1]]}/#{answer_array[num_array[2]]}/#{answer_array[num_array[3]]}/#{answer_array[num_array[4]]}/#{answer_array[num_array[5]]}" do
 	"<h2>Congratulations.</h2><p>You win! That was easy.<p>"
 end
