@@ -62,7 +62,6 @@ class Mailbox
 
 	def accept_postcard(postcard)
 		@postcards << postcard
-
 	end
 
 	def to_s
