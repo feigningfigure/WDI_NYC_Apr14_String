@@ -15,3 +15,17 @@ get '/:guess' do
 	end
 end
 
+#BONUS randomizing questions
+#make arrays in arrays, call them by array[][]
+# questions = [
+# 	{"Who discovered North America?", "A"},
+# 	{"Who was one of the the first men on the moon?", "yuri_gagarin"},
+# 	{"Who was one of the the first men on the moon?", "neil_armstrong"},
+# ]
+
+# get '/' do
+# 	question = rand(0..2)
+# 	Case ask_question
+# 	when
+
+# end
