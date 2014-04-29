@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #Readme.md
 =======
 ###Week01-Day5
@@ -17,6 +18,9 @@
 =======
 #HappiTails
 >>>>>>> 1393b9ab451d7b63ccfe0da1a6498fb52636a27a
+=======
+ #HappiTails
+>>>>>>> aeb04588352169e4550167808ee1a9ce6994156e
 - You are the manager at HappiTails animal shelter.
 - You need to manage your shelter by storing and manipulating information about clients and animals.
 
