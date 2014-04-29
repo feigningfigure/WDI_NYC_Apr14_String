@@ -10,11 +10,12 @@ end
 
 get '/students' do
 	print "THIS IS YOUR SERVER LOG \n #{$students.to_s}"
+	$students.to_s
 end
 
 get '/students/:id' do
 	id = params[:id].to_i
-	if id >= $students.length
+	if id >= $students.length || id == nil
 		"No student with that ID!"
 	else
 		$students[id].to_s
@@ -41,3 +42,19 @@ get '/students/by_name/:name' do
 	return results
 end
 end
+
+#pretend http delete
+get '/students/:id/delete' do
+	#this method deletes a student hash for student with id :id
+	id = params[:id].to_i
+	if id >= $students.length
+		"No student with that ID!"
+	else
+		student_name = $students[id].to_s
+		$students[id] = nil
+	end
+	"Deleted #{student_name}"
+end
+
+
+
