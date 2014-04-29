@@ -18,9 +18,26 @@ get "/" do
   "<h1>Welcome to Students App</h1>"
 end
 
+# get "/students" do
+#   # my code goes here
+# end
+
+# get "/students" do
+#   # Chris Lee
+#   $students.each do |single_student|
+#     puts pretty_student_printer(single_student)
+#   end
+# end
+
 get "/students" do
-  puts "THIS IS YOUR SERVER LOG!\n#{$students}"
-  $students.to_s
+  # Keyan
+  array = []
+  $students.each do |student_hash|
+    array << pretty_student_printer(student_hash)
+  end
+  p array
+  array.join("<hr>")
+  # array.to_s
 end
 
 get "/students/:id" do
