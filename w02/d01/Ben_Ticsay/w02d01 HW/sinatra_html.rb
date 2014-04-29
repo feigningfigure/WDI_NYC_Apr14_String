@@ -20,9 +20,10 @@ end
 
 get'/albums' do 
 	<<-HTML
-	<img src="http://cdn.rtny.uproxx.com/wp-content/uploads/2014/02/ill.jpeg" alt="Illmatic"></br>
-	<img src="http://cdn.rtny.uproxx.com/wp-content/uploads/2014/02/ill.jpeg" alt="Illmatic"></br>
-	<img src="http://cdn.rtny.uproxx.com/wp-content/uploads/2014/02/ill.jpeg" alt="Illmatic"></br>
+	<img src="http://latimesblogs.latimes.com/.a/6a00d8341c630a53ef01538ec2d542970b-pi" alt="Space is Only Noise" height="640" width="640"></br>
+	<img src="http://cdn.rtny.uproxx.com/wp-content/uploads/2014/02/ill.jpeg" alt="Illmatic" height="640" width="640"></br>
+	<img src="http://25.media.tumblr.com/93a1834ea5420c1daa0a3d2cc3d3a567/tumblr_mq76opc0691rjplc4o6_1280.jpg" alt="Thriller" height="640" width="640"></br>
+	<p>AND MANY MANY MANY MORE</p>
 	HTML
 end
 
