@@ -10,6 +10,6 @@ end
 
 get "/lunch" do
 
-  food_suggestion = rand(1..10)
+  food_suggestion = rand(0...10)
   "You should totally chow down on #{$foods[food_suggestion]}"
   end
