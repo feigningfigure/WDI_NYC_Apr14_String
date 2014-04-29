@@ -68,5 +68,7 @@ nav {
 }
 
 .text {
-	display: inline;
+	display: inline-block;
+	width: 250px;
+	margin: 80px
 }
