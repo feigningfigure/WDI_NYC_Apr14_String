@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>CSS Positioning</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
 </head>
 <body>
 	<nav class="clear">
@@ -21,11 +22,11 @@
 	
 		I'm a static parent.
 	
-		<div class="box">
+		<div class="blue box">
 			I'm a box positioned static. This is the default.
 		</div>
 		
-		<div class="box center">
+		<div class="blue box center">
 			I'm a centered box.
 		</div>
 	
@@ -35,8 +36,8 @@
 	
 	<div class="container">
 	
-		 I'm a static parent.
-	
+		 
+	<div class="clearfix">
 		<div class="box left">
 			I'm box 1 floating left.
 		</div>
@@ -49,6 +50,11 @@
 			I'm box 3 floating left.
 		</div>
 		
+		<div class="textfix">
+		I'm a static parent.
+		I need a clear fix class if you do not want me to collapse when I have floating children inside me!
+		</div>
+
 		<div class="box right">
 			I'm box 1 floating right.
 		</div>
@@ -56,10 +62,10 @@
 		<div class="box right">
 			I'm box 2 floating right.
 		</div>
-		
+	</div>
 		<!-- content placed here from the clear class -->
 		
-		<!-- I need a clear fix class if you do not want me to collapse when I have floating children inside me! -->
+
 		
 	</div><!-- container -->
 	
