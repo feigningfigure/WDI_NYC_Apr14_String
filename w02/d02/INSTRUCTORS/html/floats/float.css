@@ -1,0 +1,93 @@
+/* WDI String */
+
+/* Floats practice */
+
+body {
+  padding: 0px 20px 20px 20px;
+  background: #F5F5F5;
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size:38px;
+  color: #cc0000;
+  text-transform: lowercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+  font-size:30px;
+/*  color: #000; */
+  text-transform: lowercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FLOAT PRACTICE */
+
+/* one, plain float */
+.floatright {
+  float: right;
+  padding: 0 0 10px 10px;
+  margin: 0 0 10px 10px;
+/*  border: 1px solid #666; */
+}
+
+/* vertical stack */
+.floatright-stacking {
+  float: right;
+  margin: 0 0 10px 10px;
+  clear: right;
+}
+
+/* horizontal stack with break */
+div.thumbnail {
+  float: left;
+  width: 160px;
+  padding: 5px;
+  margin: 0 15px 15px 0;
+  border: 1px solid #999;
+}
+.clearboth {
+  clear: both;
+}
+
+/*  TWO COLUMN LIQUID  */
+
+#wrapper {
+  /* fills viewport */
+  width: 100%;
+  /* auto left and right to center */
+  margin: 10px auto;
+  background-color: #fff;
+  border: 1px solid #999;
+}
+#banner {
+  width: 97%;
+  height: 60px;
+  height: 20%;
+  padding: .9em;
+  background-color: #ddd;
+  border-bottom: 1px solid #999;
+}
+#rightcol {
+  float: right;
+  width: 200px;
+  padding: 1em;
+  margin: 0;
+  border: 1px solid #999;
+}
+#content {
+  padding: 10px 10px;
+  margin-right: 225px;
+  border: 1px solid #999;
+}
+#footer {
+  clear: both;
+  width: 97%;
+  height: 60px;
+  height: 20%;
+  padding: .9em;
+  background-color: #ddd;
+  border-bottom: 1px solid #999;
+}
+
