@@ -1,0 +1,45 @@
+
+.logo img {
+  height: 18%;
+  width: 18%;
+  margin: 20px 20px 10px 50px;
+}
+
+.large img {
+  position: relative;
+
+  margin: 0px 50px 5px 50px;
+  max-width: 80%;
+  height: auto;
+
+}
+
+.wording {
+  margin: 0px 150px 10px 50px;
+
+  width: auto;
+  display: block;
+}
+
+h1 {
+  font-style: bold;
+  font-family:
+}
+
+h2 {
+  color: skyblue;
+}
+p {
+
+}
+
+.advert img {
+  display: inline-block;
+
+  max-width: 20%;
+
+}
+
+.advert {
+  margin-left: 50px;
+}

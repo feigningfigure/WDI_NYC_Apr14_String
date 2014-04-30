@@ -5,7 +5,7 @@
 -----------------------------------------------------------------------------*/
 
 body {
-	margin: 0px;
+	margin: 10px 60px 10px 60px;
 	padding: 0px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: #7f7d78;
@@ -14,6 +14,9 @@ body {
 	background: #FFF;
 }
 
+#content {
+	margin-top: 0px;
+}
 
 #container {
 	background: url(../images/background_light.jpg) no-repeat;	
@@ -60,7 +63,11 @@ a {
 	text-decoration:none;
 }
 
-p { margin: 0px 0px 15px 0px; } /* there's no explicit rule, but putting about 15px margin only to the bottom of your p is generally a good rule of thumb */
+p { margin: 0px 0px 15px 0px; 
+	line-height: 20px;
+
+
+	} /* there's no explicit rule, but putting about 15px margin only to the bottom of your p is generally a good rule of thumb */
 
 
 /*----------------------------------------------------------------------------- 
@@ -72,6 +79,7 @@ nav {
 	border-top: dashed #999 1px;
 	border-bottom: dashed #999 1px;
 	display: block;
+	height: 35px;
 }
 
 
