@@ -3,11 +3,8 @@
 }
 
 html {
-  background: url(../images/background.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url(../images/background.jpg) repeat-x;
+  background-color: #D6D6D6;
 }
 
 div{
@@ -24,6 +21,25 @@ p{
   width: 950px;
   height: 100%;
   overflow: hidden;
+}
+
+#main_logo{
+  /*margin: 0 auto;
+  background:*/
+  background: url(../images/logo.png) no-repeat center;
+  height: 216px;
+  margin: 20px 0 40px;
+}
+
+footer {
+  clear: both;
+  height: 150px;
+}
+
+.social_footer{
+  line-height: 170px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #content,
