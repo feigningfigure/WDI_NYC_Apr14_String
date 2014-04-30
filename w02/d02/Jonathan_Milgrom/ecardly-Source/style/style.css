@@ -1,0 +1,50 @@
+body {
+	background-color: lightgray;
+}
+.left {
+	background-color: white;
+	float: left;
+	width: 67%;
+}
+
+.right {
+	background-color: white;
+	float: right;
+	width: 25%;
+}
+div {
+	margin: 5px;
+	padding: 10px;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+
+.leftpics {
+	width: 98%;
+	margin: 0 auto;
+}
+
+li {
+	list-style: none;
+}
+ul {
+	margin-left: -20px;
+}
+
+.rightpics {
+	margin-left: 20px;
+}
+
+h3
+{
+	padding-top: 10px;
+	border-top: 1px solid gray;
+	/*border-bottom: 1px solid black;*/
+}

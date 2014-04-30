@@ -1,0 +1,33 @@
+body{
+font-color:#000000;
+}
+
+nav{
+	float: left;
+	padding: 0;
+	margin: top 0;
+	background-color: pink;
+}
+
+ul {
+	 float: right;
+	 padding:0;
+	 margin: 0;
+	 background:blue;	
+}
+
+li {
+	float: left;
+	padding:0;
+	margin: 0;
+}
+
+div { 
+	clear: both;
+	padding:20px 20px 20px;
+	margin: 200px 50px 200px;
+	background:grey;
+}
+
+}
+
