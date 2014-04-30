@@ -9,7 +9,7 @@
 	<nav class="clear">
 		I'm a nav bar
 	 	<ul class="right">
-	 		I'm a ul.  I need to be floated right.
+	 		I'm a ul.  I need to be floated right.  
 	 		I have 3 lis.
 	 		<li>facebook</li>
 	 		<li>instagram</li>
@@ -33,7 +33,7 @@
 
 	<!-- float positioning -->
 
-	<div class="container clearfix">
+	<div class="container">
 
 		 I'm a static parent.
 
