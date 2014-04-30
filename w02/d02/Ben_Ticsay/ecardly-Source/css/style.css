@@ -1,12 +1,69 @@
 body {
 	background-color: lightgrey;
+	width: 100%;
 }
 
-.container {
-	margin: 10px 5px 10px 5px;
+	h1 {font-size:100%}
+	h3 {font-size:80%}
+	p {font-size:80%}
+	li {
+		font-size:80%;
+	}
+	ul {
+		list-style: none;
+		text-align: left;
+		padding-left: 0px;
+	}
+
+html {
+	width: 100%;
+}
+
+.nav {
+	float: top;
+	background-image: url("../images/background.jpg");
+	background-repeat:repeat-x;
+}
+
+.logo {
+	text-align: center;
+}
+
+/*.container {
+	margin: 10px 5px 10px 20px;
+	background-color: white;
+	padding: 10px;
+}*/
+
+/*wrap blog and sidebar and give left margin a percentage*/
+/*list style none for ul*/
+
+.blog {
+	max-width: 650px;
+	background-color: white;
+	margin: 10px 5px 10px 20px;
+	padding: 10px;
 }
 
 .sidebar {
 	float: right;
 	max-width: 300px;
+	margin-left: 5px;
+	margin-right: 10%;
+	background-color: white; 
+	padding: 10px;
+}
+
+/* NOT WORKING RIGHT
+.blogandside {
+	margin-left: 50%;
+	margin-right: 50%;
+} */
+
+.sidepics {
+	text-align: center;
+}
+
+.social {
+	text-align: center;
 }
