@@ -1,0 +1,23 @@
+body {
+	margin: 40px 40px 20px 60px;
+}
+
+
+h1 {
+	font-size: 85%
+}
+
+p{
+	color: lightgrey;
+	font-size: 70%
+}
+
+
+
+/*.press {
+	border: 1;
+	border-color: darkgrey;
+	border-style: solid;
+	style="border:1;border-color:darkgrey;border-style:solid;"
+}*/
+
