@@ -17,4 +17,7 @@ p{
 /*.press {
 	border: 1;
 	border-color: darkgrey;
+	border-style: solid;
+	style="border:1;border-color:darkgrey;border-style:solid;"
 }*/
+
