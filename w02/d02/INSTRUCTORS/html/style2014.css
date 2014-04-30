@@ -15,9 +15,22 @@ h1 {
   color: #000;
   text-transform: lowercase;
   font-family: Arial, Helvetica, sans-serif;
+  color: #cc0000;
 }
 
+h2 {
+  font-size: 30px;
+  color: #656565;
+  text-transform: lowercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+h3 {
+  font-size: 22px;
+  color: #36648B;
+  text-transform: lowercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 p  {
   margin: 0 0 20px 0px;
@@ -32,4 +45,20 @@ a:hover {
     color:#20222a;
 }
 
+/* Element styles */
+#intro {
+  font-size:18px;
+}
 
+
+img.right {
+  float: right;
+  padding: 0px 0px 15px 15px;
+}
+
+ul.spacey {
+  margin-bottom: -20px;
+}
+ul.spacey li {
+  padding-bottom: 30px;
+}
