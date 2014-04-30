@@ -16,16 +16,8 @@ body {
 	margin: 20px auto 20px;
 }
 .inner_container{
-	width:908px;
-	margin: 0 auto;
-}
-
-.center_ad{
-	text-align: center;
-}
-
-.text_content{
-	width: 908px;
+	text-align: justify;
+	display: inline-block;
 }
 
 .text_content h2{
@@ -39,4 +31,17 @@ body {
 	margin-bottom: 20px;
 }
 
+.box_left{
+	display: inline-block;
+	margin-right: 5px;
+}
 
+.box_mid{
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.box_right{
+	display: inline-block;
+	margin-left: 5px;
+}
