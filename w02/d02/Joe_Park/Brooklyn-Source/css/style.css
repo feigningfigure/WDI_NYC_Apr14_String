@@ -1,0 +1,42 @@
+/*UTIL*/
+.clear {
+	clear: both;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	background-color: white;
+	width: 100%;
+}
+
+
+.pg_container{
+	width: 960px;
+	margin: 20px auto 20px;
+}
+.inner_container{
+	width:908px;
+	margin: 0 auto;
+}
+
+.center_ad{
+	text-align: center;
+}
+
+.text_content{
+	width: 908px;
+}
+
+.text_content h2{
+	font-weight: bold;
+	font-size: 24px;
+	margin: 10px 0;
+}
+
+.text_content p{
+	line-height: 1.3em;
+	margin-bottom: 20px;
+}
+
+
