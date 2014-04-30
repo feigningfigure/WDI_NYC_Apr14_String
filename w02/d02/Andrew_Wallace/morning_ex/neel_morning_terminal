@@ -1,0 +1,79 @@
+Last login: Tue Apr 29 08:34:13 on ttys001
+DarthNeel ~
+$ ls
+Desktop/   Downloads/ Movies/    Pictures/  code/      risk/
+Documents/ Library/   Music/     Public/    gimme.sh*
+DarthNeel ~
+$ string
+DarthNeel ~/code/wdi/WDI_NYC_Apr14_String on master
+$ cd w02/d02/INSTRUCTORS/
+DarthNeel ~/code/wdi/WDI_NYC_Apr14_String/w02/d02/INSTRUCTORS on master
+$ ls
+DarthNeel ~/code/wdi/WDI_NYC_Apr14_String/w02/d02/INSTRUCTORS on master
+$ mkdir morning_ex
+DarthNeel ~/code/wdi/WDI_NYC_Apr14_String/w02/d02/INSTRUCTORS on master
+$ cd morning_ex/
+DarthNeel ~/code/wdi/WDI_NYC_Apr14_String/w02/d02/INSTRUCTORS/morning_ex on master
+$ touch solution.rb
+DarthNeel ~/code/wdi/WDI_NYC_Apr14_String/w02/d02/INSTRUCTORS/morning_ex on master[?]
+$ subl solution.rb 
+DarthNeel ~/code/wdi/WDI_NYC_Apr14_String/w02/d02/INSTRUCTORS/morning_ex on master[?]
+$ clear
+
+DarthNeel ~/code/wdi/WDI_NYC_Apr14_String/w02/d02/INSTRUCTORS/morning_ex on master[?]
+$ ls
+solution.rb
+DarthNeel ~/code/wdi/WDI_NYC_Apr14_String/w02/d02/INSTRUCTORS/morning_ex on master[?]
+$ pry
+[1] pry(main)> load './solution.rb'
+true
+[2] pry(main)> Postcard
+Postcard < Object
+[3] pry(main)> postcard = Postcard.ne
+NoMethodError: undefined method `ne' for Postcard:Class
+from (pry):3:in `__pry__'
+[4] pry(main)> postcard = Postcard.new
+ArgumentError: wrong number of arguments (0 for 2)
+from /Users/DarthNeel/code/wdi/WDI_NYC_Apr14_String/w02/d02/INSTRUCTORS/morning_ex/solution.rb:4:in `initialize'
+[5] pry(main)> postcard = Postcard.new("41 Union Square West", "Good morning!"")
+[5] pry(main)* postcard
+[5] pry(main)* 
+[6] pry(main)> postcard = Postcard.new("41 Union Square West", "Good morning!")
+#<Postcard:0x007f9d42b668e0 @ship_to_address="41 Union Square West", @message="Good morning!">
+[7] pry(main)> postcard.message
+"Good morning!"
+[8] pry(main)> postcard.shi
+postcard.ship_to_address   postcard.ship_to_address=
+[8] pry(main)> postcard.ship_to_address
+"41 Union Square West"
+[9] pry(main)> postcard.to_s
+The message Good morning! is being send to 41 Union Square West
+nil
+[10] pry(main)> exit
+DarthNeel ~/code/wdi/WDI_NYC_Apr14_String/w02/d02/INSTRUCTORS/morning_ex on master[?]
+$ pry
+[1] pry(main)> load './solution.rb'
+true
+[2] pry(main)> postcard = Postcard.new("41 Union Square West", "Hello world!")
+#<Postcard:0x007fdc9bbc3d68 @ship_to_address="41 Union Square West", @message="Hello world!">
+[3] pry(main)> mailbox = Mailbox.new
+#<Mailbox:0x007fdc9bba3158 @postcards=[]>
+[4] pry(main)> mailbox.to_s
+There are 0 postcards in this mailbox
+nil
+[5] pry(main)> mailbox.accept_postcard(postcard)
+[
+    [0] #<Postcard:0x007fdc9bbc3d68 @ship_to_address="41 Union Square West", @message="Hello world!">
+]
+[6] pry(main)> mailbox.to_s
+There are 1 postcards in this mailbox
+nil
+[7] pry(main)> mailbox.accept_postcard("Am i actually a postcard?")
+[
+    [0] #<Postcard:0x007fdc9bbc3d68 @ship_to_address="41 Union Square West", @message="Hello world!">,
+    [1] "Am i actually a postcard?"
+]
+[8] pry(main)> mailbox.to_s
+There are 2 postcards in this mailbox
+nil
+[9] pry(main)> 
