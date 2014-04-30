@@ -1,0 +1,77 @@
+
+.bgtop img {
+  max-width: 24.6%;
+  display: inline-block;
+
+}
+
+
+.banner img {
+  height: 15%;
+  width: 15%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -78px;
+  position: relative;
+}
+
+body {
+  background-color: lightgray;
+}
+
+
+
+.blog {
+background-color: white;
+max-width: 56%;
+margin: 20px 100px 20px 100px;
+position: relative;
+}
+
+.sidebar {
+  background-color: white;
+  float: right;
+  max-width: 20%;
+  line-height: 1.25em;
+
+  padding: 20px;
+  margin: 20px 20px 0px 0px;
+  z-index: 3;
+  position: relative;
+  color: black;
+  font-family: 'Cutive Mono', serif;
+  overflow: hidden;
+}
+
+.sidebar img {
+  max-width: 95%;
+}
+
+.post1 img{
+  margin-top: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+.post2 img{
+  margin-top: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+.post1{
+  margin: 20px;
+
+}
+
+.post2{
+  margin: 20px;
+}
+
+.social img {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+
+}
