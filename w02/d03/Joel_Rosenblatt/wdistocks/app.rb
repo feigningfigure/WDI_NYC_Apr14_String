@@ -20,7 +20,7 @@ get '/request' do
   @change_point = @quote[@symbol].changePoints
   @change_percent = @quote[@symbol].changePercent
 
-  if  @change_point.to_i < 0
+  if  @change_point < 0
     @gain_loss = "loss"
   else
     @gain_loss = "gain"
