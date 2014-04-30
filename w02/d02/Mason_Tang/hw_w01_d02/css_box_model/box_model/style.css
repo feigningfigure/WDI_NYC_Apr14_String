@@ -1,0 +1,74 @@
+.clear {
+float: top;
+background-color: pink;
+height: 40px;
+margin: 0px;
+}
+
+.right {
+float: right;
+padding: 0px 0 0 0;
+}
+
+.right li {
+display: inline;
+background-color: blue;
+padding: 2px 2px 2px 2px;
+margin: 5px;
+}
+
+.container {
+
+  background-color: lightgrey;
+  margin: 10px;
+  width: 960px;
+
+}
+
+.container .box {
+  position: static;
+  background-color: skyblue;
+  margin: 20px;
+  padding: 10px;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+}
+
+.container .center {
+
+  margin: 0 auto;
+
+  background-color: skyblue;
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  border: 1px solid black;;
+
+}
+
+.container .text {
+  margin: 0px 0px 0px 490px;
+}
+
+.container .left {
+ /* position: left;
+  float: left;*/
+  display: inline-block;
+  margin: 10px 8px 10px 8px;
+  height: 100px;
+  width: 100px;
+  background-color: lightgreen;
+  border: 1px solid black;
+
+}
+
+.container .right {
+/*  position: right;
+  float: right;*/
+  display: inline-block;
+  margin: 10px 8px 10px 8px;
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+}
