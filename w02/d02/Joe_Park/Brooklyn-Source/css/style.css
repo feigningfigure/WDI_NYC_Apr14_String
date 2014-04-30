@@ -31,17 +31,11 @@ body {
 	margin-bottom: 20px;
 }
 
-.box_left{
+.box{
 	display: inline-block;
-	margin-right: 5px;
-}
-
-.box_mid{
-	display: inline-block;
-	margin: 0 10px;
+	padding-right: 17px;
 }
 
 .box_right{
 	display: inline-block;
-	margin-left: 5px;
 }
