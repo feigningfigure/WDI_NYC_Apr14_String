@@ -1,0 +1,109 @@
+.clear {
+	float: top;
+	background-color: pink;
+	height: 40px;
+	margin: 0px;
+}
+
+.right {
+	float: right;
+	padding: 10px 0 0 0;
+}
+
+.right li {
+	display: inline;
+	background-color: blue;
+	padding: 5px 5px 5px 5px;
+	margin: 5px;
+}
+
+.container {
+	background-color: lightgrey;
+	margin: 5px;
+	width: 960px;
+
+	display: block;
+}
+
+.box {
+	background-color: #00EE00;
+	width: 100px;
+	height: 100px;
+	border: solid 1px;
+	margin: 5px;
+}
+
+.center {
+	margin: 0 auto;
+	clear: both;
+}
+
+.blue {
+	background-color: aqua;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+	background-color: pink;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.textfix {
+	display: inline-block;
+	width: 375px;
+	padding: 10px;
+}
+
+/*.container .boxcenter {
+	background-color: skyblue;
+}*/ 
+
+/*----------------------------------------------------------------------------- 
+=01 BODY 
+-----------------------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------------------------------- 
+=02 HEADERS
+-----------------------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------------------------------- 
+=03 GLOBAL STYLES 
+-----------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------------- 
+=04 NAV 
+-----------------------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------------------------------- 
+=05 SOCIAL MEDIA  
+-----------------------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------------------------------- 
+=06 MISC 
+-----------------------------------------------------------------------------*/
+
