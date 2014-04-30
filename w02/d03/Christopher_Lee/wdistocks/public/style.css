@@ -3,6 +3,10 @@ body {
   text-align: center;
 }
 
+a{
+  text-decoration: none;
+}
+
 .gain {
   background-color: #71C671;
 }
@@ -17,4 +21,8 @@ body {
   line-height: 50px;
   text-align: center;
   color: white;
+}
+
+.search_again{
+  margin-top: 60px;
 }
