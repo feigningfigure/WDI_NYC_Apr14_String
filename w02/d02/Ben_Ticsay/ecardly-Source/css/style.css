@@ -1,0 +1,12 @@
+body {
+	background-color: lightgrey;
+}
+
+.container {
+	margin: 10px 5px 10px 5px;
+}
+
+.sidebar {
+	float: right;
+	max-width: 300px;
+}
