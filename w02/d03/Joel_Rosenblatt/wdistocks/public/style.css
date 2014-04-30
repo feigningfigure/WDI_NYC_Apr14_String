@@ -1,0 +1,19 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.gain {
+  background-color: green;
+}
+
+.loss {
+  background-color: red;
+}
+
+#boxes {
+  height: 50px;
+  width: 70px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+}
