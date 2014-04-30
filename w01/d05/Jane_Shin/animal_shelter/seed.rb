@@ -7,7 +7,7 @@ happitails = Shelter.new(happitails)
 # @happitails.animals = {["ruby", "jane"]}
 ruby = Animal.new("ruby", 8, "dog")
 jane = Client.new("jane", 7)
-@happitails.accept_client("jane", "jane")
+@happitails.accept_client("jane",)
 @happitails.accept_animal("ruby", "jane")
 
 puts "What is your full name?"
