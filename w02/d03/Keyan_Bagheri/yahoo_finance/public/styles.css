@@ -1,0 +1,23 @@
+body {
+	background: #888;
+	text-align: center;
+}
+
+h3 {
+	color: #145503;
+}
+
+.timer {
+	color: #298089;
+}
+
+.dollar {
+	font-size: 100px;
+	color: green;
+}
+
+h2 {
+	color: #86cf28;
+	font-size: 20;
+	font-family: Helvetica;
+}
