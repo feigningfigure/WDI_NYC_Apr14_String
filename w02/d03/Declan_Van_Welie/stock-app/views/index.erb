@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Font+Name">
+<link rel="stylesheet" href="css/style.erb">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<meta charset="UTF-8">
+</head>
+
+<!-- <div class = "interface"> -->
+  <div style="margin-left:auto;
+margin-right:auto;
+width:70%;
+font-family: 'Raleway', sans-serif;">
+<h1>Welcome to WDI Stocks</h1>
+
+<h3>PLEASE INPUT A TICKER</h3>
+    <p>Type in the ticker you'd like information on...<br></br>
+    and then the specific information you'd like.
+  </p>
+<!-- </div> -->
+
+<form action="/stock">
+  <input type ="text" name="stock_name" placeholder="Type your stock">
+  <select name="stock_info">
+  <option value="/dayHigh">dayHigh</option>
+  <option value="dayLow">dayLow</option>
+  <option value="lastTrade">lastTrade</option>
+  <option value="dayRange">dayRange</option>
+</select>
+  <input type= "submit" value="SUBMIT">
+</form>
+</div>
