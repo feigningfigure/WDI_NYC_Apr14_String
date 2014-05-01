@@ -20,6 +20,7 @@ end
 
 #rake command -T in terminal lists the descriptions in the rake file
 
+#incomplete desc below
 desc "Gets me movie data"
 task :get_movie_data do
 	puts HTTParty.get
