@@ -28,7 +28,7 @@ post '/students' do
     #push on the new student
   students_array << student_name
     #array to string
-  students_string = students_array.join
+  students_string = students_array.join("\n")
     # re-open file in "w" mode
   students_file = File.open("./db/students.txt", "w")
     #puts the string back to the original file
@@ -36,5 +36,27 @@ post '/students' do
     #close the file
   students_file.close
 
+  redirect "/students"
 
+end
+
+post '/students' do
+  students_file = File.open("./db/students.txt")
+  students_string = students_file.read
+  students_array = students_string.split('\n')
+  student_name = params[:student_name]
+
+    #delete student
+
+  students_array.each do |student|
+    if student = student_name
+
+      #stuff
+
+
+
+  students_string = students_array.join("\n")
+  students_file.puts(students_string)
+  students_file.close
+  redirect "/students"
 end
