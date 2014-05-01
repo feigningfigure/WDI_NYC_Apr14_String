@@ -1,0 +1,117 @@
+body {
+  font-color: #000000;
+  background: url("images/background.jpg") #d6d6d6;
+  background-repeat: repeat-x;
+  padding-top: 10px;
+  font-family: arial;
+}
+
+#banner {
+  text-align: center;
+}
+
+.logo {
+  margin: auto;
+  display: block;
+}
+
+#container {
+  width: 940px;
+  margin: auto;
+}
+
+.page {
+  background: #FFFFFF;
+  width: 600px;
+  float: left;
+  padding: 20px;
+}
+
+.entry {
+  padding-bottom: 40px;
+}
+
+.author {
+  border-top: 1px dotted black;
+  border-bottom: 1px solid black;
+  padding: 10px 0 10px 0;
+}
+
+h1 {
+  margin-left: -999999px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 12px;
+  line-height: 150%;
+}
+
+.page a {
+  color: #cc6633;
+  font-weight:  bold;
+  text-decoration: none;
+}
+
+.sidebar {
+  background: #FFFFFF;
+  width: 220px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  float: right;
+  text-align: center;
+}
+
+.sidebar ul {
+  padding-left: 0;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: left;
+  font-weight: bold;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.sidebar img {
+  margin-bottom: 20px;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.sidebar li a: hover,
+.sidebar li a: focus {
+  color: #999;
+  outline: none;
+}
+
+.social {
+  text-align: center;
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.social img {
+  display: inline-block;
+  margin: 0 5px 0 5px;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}

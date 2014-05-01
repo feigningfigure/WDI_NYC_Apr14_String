@@ -1,6 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+require_relative 'classes/student'
+
+
+=======
+=======
 require 'pry'
 require 'rainbow/ext/string'
 
+>>>>>>> 1393b9ab451d7b63ccfe0da1a6498fb52636a27a
 require_relative 'classes/notebook'
 require_relative 'classes/student'
 require_relative 'classes/dollar'
@@ -29,3 +37,4 @@ $declan.move_bag_contents_to_table
 puts $declan.make_sandwich
 
 # I should see one notebook
+>>>>>>> 8561ece8ceab601c7c633d3e43085577e896e844
