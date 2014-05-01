@@ -1,0 +1,97 @@
+body {
+  margin: 10px;
+  padding: 10px 10px 10px 10px
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 18px;
+  line-height: 1;
+  background: white;
+}
+
+#container {
+  background: url() no-repeat;
+  width: 950px;
+  margin: 0 auto; /*centers our container on the page */
+}
+
+
+.box {
+  border: 1px solid black ;
+  float: right;
+
+}
+
+.box {
+  border: 1px solid black ;
+  float: right;
+
+}
+
+.box {
+  border: 1px solid black ;
+  float: left;
+
+}
+
+.box {
+  border: 1px solid black ;
+  float: left;
+
+}
+
+.box {
+  border: 1px solid black ;
+  float: left;
+
+}.box {
+  border: 1px solid black ;
+  float: center;
+
+}
+
+.box {
+  border: 1px solid black ;
+  float: right;
+
+}
+
+.box {
+  border: 1px solid black ;
+  float: right;
+
+}
+
+#socialMedia {
+  float: right;
+}
+
+#socialMedia ul li {
+   display:inline-block;
+   width:60px;
+   height:60px;
+   background:blue;
+   text-indent: right;
+}
+
+#socialMedia ul li.twitter {
+  background:url(../) 0px 40px;
+}
+#socialMedia ul li.instagram {
+  background:url(../) -40px 40px;
+}
+
+#socialMedia ul li.facebook {
+  background:url(../) -80px 40px;
+}
+
+#socialMedia ul li.twitter:hover {
+  background:url(../) 0px 40px;
+}
+
+#socialMedia ul li.instagram:hover {
+  background:url(../) -40px 0px;
+}
+
+#socialMedia ul li.facebook:hover {
+  background:url(../) -80px 0px;
+}
