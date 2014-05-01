@@ -1,0 +1,78 @@
+style.css
+
+body {
+	font-size: 12px;
+}
+
+nav {
+	background: pink;
+	margin: -8px 0px 0px -8px;
+	padding-bottom: 8px;
+}
+
+nav ul {
+	float: right;
+}
+
+nav ul li {
+	background-color: blue;
+	list-style-type: none;
+	height: 20px;
+	width: 50px;
+	display: inline;
+	margin: 0px 5px;
+}
+
+.container {
+	background: #e7e7e7;
+	margin: 8px 0px;
+	padding-bottom: 8px;
+}
+
+.clear {
+	clear: both;
+}
+
+.box {
+	background: cyan;
+	border: solid 1px;
+	width: 120px;
+	height: 120px;
+	margin: 10px 10px;
+	padding: 10px 10px;
+}
+
+.box_center {
+	margin-left: auto;
+	margin-right: auto;
+	background: cyan;
+	border: solid 1px;
+	width: 120px;
+	height: 120px;
+	padding: 10px 10px;
+}
+
+.box_left {
+	margin: 8px;
+	background: #3E8A27;
+	border: solid 1px;
+	width: 120px;
+	height: 120px;
+	padding: 10px 10px;
+	float: left;
+}
+
+.box_right {
+	margin: 8px;
+	background: pink;
+	border: solid 1px;
+	width: 120px;
+	height: 120px;
+	padding: 10px 10px;
+	float: right;
+}
+
+ul.right {
+	margin: -20px 0px;
+	float: right;
+}

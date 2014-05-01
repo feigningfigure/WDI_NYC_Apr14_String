@@ -21,4 +21,4 @@ end
 
 nemesis.each do |person|
   puts person.to_s
-end
+  end

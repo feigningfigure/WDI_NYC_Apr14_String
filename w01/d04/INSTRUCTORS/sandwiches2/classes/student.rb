@@ -1,7 +1,15 @@
 class Student
 
   # this is a 'macro' that creates getter/setter methods
+<<<<<<< HEAD
+<<<<<<< HEAD
+  attr_accessor :name
+=======
+  attr_accessor :name, :bag
+>>>>>>> 8561ece8ceab601c7c633d3e43085577e896e844
+=======
   attr_accessor :name, :bag, :dollars, :table
+>>>>>>> a2de7a6945f8a4d530d2d7cbac2e18c4efab7e6e
 
   # I can see what's in the bag
   # but not change it.
@@ -17,7 +25,12 @@ class Student
     # upon its creation?
     puts "I was created!"
     @name = initial_name
+<<<<<<< HEAD
+=======
     @bag = Array.new
+<<<<<<< HEAD
+>>>>>>> 8561ece8ceab601c7c633d3e43085577e896e844
+=======
     @balance = 100
     @dollars = []
   end
@@ -73,6 +86,7 @@ class Student
       end
     end
     Sandwich.new(bread, jelly, pb)
+>>>>>>> a2de7a6945f8a4d530d2d7cbac2e18c4efab7e6e
   end
 
   # 'getter' method
@@ -88,8 +102,11 @@ class Student
   end
 
   # WHY DOES THIS WORK!?!?!
+<<<<<<< HEAD
+=======
   # this is one of the two methods
   # that attr_accessor creates
+>>>>>>> 8561ece8ceab601c7c633d3e43085577e896e844
   # def name=(new_name)
   #   @name = new_name
   # end
