@@ -5,19 +5,24 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-
-	<div class="banner">
-
-	</div>
-
 	<div class="pg_container">
-		<%= yield %>
-	<br class="clear" />
+
+		<div class="banner">
+
+		</div>
+
+		<div class="content">
+		
+			<%= yield %>
+		<br class="clear" />
+
+		</div>
+		
+
+		<div class="footer">
+			WDI STOCKS &copy 2014
+		</div>	
+
 	</div>
-
-	<div class="footer">
-		WDI STOCKS &copy 2014
-	</div>	
-
 	</body>
 </html>

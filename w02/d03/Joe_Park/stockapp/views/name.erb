@@ -29,8 +29,9 @@
 		<h2><%= @time %></h2>
 		
 
-	
-			<% if @options ==  "dayHigh" %>
+			<% if @options == "all" %>
+				<%= @all %>
+			<% elsif @options ==  "dayHigh" %>
 				<%= @high %>
 			<% elsif @options == "dayLow" %>
 				<%= @low %>

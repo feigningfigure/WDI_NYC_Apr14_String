@@ -23,17 +23,20 @@ get '/name' do
   # else 
   # 	@result = @quote.options
   # end
+    @high = @quote.dayHigh
+    @low = @quote.dayLow
+    @company_name = @quote.name
+    @volume = @quote.volume
+   	@time = @quote.time
+   	@date = @quote.date
+   	@previous = @quote.previousClose
+    @all = "High = #{@high}\n Low = #{@low}\n Volume #{@volume}\n Previous Close = #{@previous}"
 
-  @high = @quote.dayHigh
-  @low = @quote.dayLow
-  @company_name = @quote.name
-  @volume = @quote.volume
- 	@time = @quote.time
- 	@date = @quote.date
- 	@previous = @quote.previousClose
-
-  erb :name
-
+  if @high.to_i <= 0
+    erb :error
+  else
+    erb :name
+  end
 end
 
 #case when for methods?
