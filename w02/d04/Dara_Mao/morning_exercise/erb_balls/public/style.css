@@ -1,0 +1,44 @@
+/*container{
+
+
+}*/
+body{
+  background-color: #95a5a6;
+}
+
+
+h1{
+  text-align: left;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  font-family: Yanone Kaffeesatz;
+}
+
+h2{
+  text-align: left;
+  font-size: 60px;
+  text-align: center;
+  text-decoration:line-through;
+  line-height: 125%;
+  color: white;
+  font-family: Yanone Kaffeesatz;
+  letter-spacing:1px;
+  padding-bottom: 10px;
+  /*Typography: kerning*/
+}
+
+h3{
+  text-align: left;
+  font-size:50px;
+  text-align: center;
+/*  line-height: 1.5;*/
+  color: white;
+  font-family: Yanone Kaffeesatz;
+  font-style:italic;
+
+}
+
+form{
+  text-align: center;
+}

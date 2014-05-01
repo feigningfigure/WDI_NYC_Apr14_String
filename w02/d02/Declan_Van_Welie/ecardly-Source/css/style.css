@@ -1,0 +1,57 @@
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+
+body{
+  background: url("../images/background.jpg") repeat-x #d6d6d6;
+  width: auto;
+  height: auto;
+  background-color: #d6d6d6;
+
+}
+
+.header{
+  background-repeat: repeat-x;
+  background-image: url("images/background.jpg");
+
+
+}
+
+.logo{
+  /*height: 50%;*/
+  margin: 20px 300px 30px 300px;
+  padding: 0px 0px 0px 300px;
+}
+
+h2 {
+  font-family: Verdana, Geneva, Arial, sans-serif;
+}
+
+.post_column{
+background-color: white;
+width: 600px;
+margin: 0px 5px 0px 250px;
+float: left;
+
+}
+
+.sidebar{
+background-color: white;
+width: 400px;
+float: right;
+margin: 0px 20px 0px 5px;
+padding: 20px;
+}
+
+.orange{
+color: orange;
+}
+
+.footer{
+clear: both;
+}

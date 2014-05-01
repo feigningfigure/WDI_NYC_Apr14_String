@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta charset="utf-8">
+  <meta name="description" content="Practicing HTML and CSS">
+  <meta name="keywords" content="General Assembly, HTML, CSS">
+  <!-- optional -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="style2014.css">
+
+  <title></title>
+<h1>What Is the Cascade in CSS?</h1>
+  <head></head>
+<body>
+  <img class="right" src="images/cascade-falls.jpg" width="300">
+<h2> style sheets </h2>
+<p>If you set your browser font to Verdana, the browser (Chrome, IE, Firefox, Safari, etc.) default will be overridden with that choice. (A fun way to have many choices is <a href= "https://www.google.com/fonts">Google fonts</a>
+
+If you, as a web developer, define a style sheet to use, then the  browser will use both its own style sheet and your style sheet.  Your style sheet takes precedence.
+
+<strong>Then the cascade kicks in...</strong>
+
+The cascade follows several rules:
+
+<ul>
+<li>The declarations are sorted by weight and origin.</li>
+<li>The declarations are sorted by specificity of selector.</li>
+<li>The declarations are sorted by order specified.</li>
+</ul>
+
+
+For normal declarations, author style sheets override user style sheets which override the default style sheet. For “!important” declarations, user style sheets override author style sheets which override the default style sheet. More specific selectors will override more general ones. And if two rules have the same weight, the latter specified wins.
+</p>
+
+<h3>specificity calculations</h3>
+
+<p>Imagine your html contains a paragraph with a class of “bio” applied to it. You also have the following two css rules:
+
+<ol>
+<li>p {font-size: 12px}</li>
+<li>p.bio {font-size: 14px}</li>
+</ol>
+
+Would you expect the text in your paragraph to be 12px or 14px? You can probably guess in this case it will be 14px. The second line of css (p.bio) is more specific than the first when it comes to your class=”bio” paragraph. However, sometimes the specificity isn’t so easy to see.
+</p>
+
+<h3> The Cascade </h3>
+
+<p>At the highest level the cascade is what controls all css precedence and works as follows.
+
+<ul class="spacey">
+<li>Find all css declarations that apply to the element and property in question.</li>
+
+<li>Sort by origin and weight. Origin refers to the source of the declaration (author styles, user styles, browser defaults) and weight refers to the importance of the declaration. (author has more weight than user which has more weight than default. !importance has more weight than normal declarations)</li>
+
+<li>Calculate specificity. If two rules are equal in all of the above, the one declared last wins. CSS embedded in the html always come after external stylesheets regardless of the order in the html</li>
+</ul>
+
+</p>
+  <!-- external CSS link -->
+<h3>Inheritance</h3>
+
+<p>The idea behind inheritance is relatively easy to understand. Elements inherit styles from their parent container. If you set the body tag to use color: red then the text for all elements inside the body will also be red unless otherwise specified.
+
+Not all css properties are inherited, though. For example margins and paddings are non-inherited properties.
+</p>
+
+</body>
+</html>
