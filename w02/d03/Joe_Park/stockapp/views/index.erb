@@ -1,0 +1,24 @@
+<div class="notice">
+
+	<h1>Welcome to WDI Stocks</h1>
+
+</div>
+
+
+<div class="ticker_entry">
+	<label>Enter Company: </label>
+	<form action="/name" id="ticker_form">
+	  <input type ="text" name="ticker" placeholder="Type the symbol">
+		<input type="submit" value="GO">
+	</form>
+
+	<select name="options" form="ticker_form">
+		<option value="all">All</option>
+		<option value="dayHigh">Day High</option>
+		<option value="dayLow">Day Low</option>
+		<option value="volume">Volume</option>
+		<option value="previous">Previous</option>
+	</select>
+
+</div>
+
