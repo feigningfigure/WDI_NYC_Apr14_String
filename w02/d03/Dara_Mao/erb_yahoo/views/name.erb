@@ -1,0 +1,9 @@
+<h1>For stock symbol <%= @full_list.symbol%>(<%= @full_list.name%>)</h1>
+<h1>On <%=@full_list.date%>, the last trading price was <%=@full_list.lastTrade%> at <%=@full_list.time%>.
+<ul>
+  <p>The day change is <%=@full_list.change%></p>
+  <p>with a bid is <%=@full_list.bid%>/<%=@full_list.ask%></p>
+  <p>The volume of <%=@full_list.volume%></p>
+  <p>The previous close was at <%=@full_list.previousClose%> with a day high of <%=@full_list.dayHigh%> and low of <%=@full_list.dayLow%></p>
+
+</h1>
