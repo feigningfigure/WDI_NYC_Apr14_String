@@ -1,0 +1,32 @@
+.banner{
+  background-color: pink;
+  font-size: 30px;
+  font-color: white;
+  text-align: center
+
+}
+
+body{
+  background-color: #3498db;
+}
+
+h1{
+  text-align: left;
+  font-size: 30px;
+  text-align: center;
+}
+
+li{
+  text-align: center
+
+}
+
+/*.container {
+  background: #CDC9C9;
+  width: 100%;
+  margin: 10px auto;
+  padding:10px;
+  float: auto;
+  clear:both;
+}
+*/
