@@ -1,11 +1,11 @@
 class Person
 	attr_accessor :name, :age, :kids, :pets
-	def initialize(name, age, gender, kids)
-		@name = name
-		@age = age
-		@gender = gender
-		@kids = kids.to_i
-		@pets = {}
+	def initialize(person_hash)
+		@name = person_hash["Name"]
+		@age = person_hash["Age"]
+		@gender = person_hash["Gender"]
+		@kids = person_hash["Kids"].to_i
+		@pets = []
 	end
 
 	def to_s
@@ -19,4 +19,12 @@ class Person
 		end
 		"#{pet_string.join(" \n")}"
 	end
+
+	def accept_pet(animal)
+		puts "what is the new name for this animal?"
+		new_name = gets.chomp
+		@pets[new_name] = animal
+
+	end
+
 end

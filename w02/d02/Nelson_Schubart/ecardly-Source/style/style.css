@@ -1,0 +1,28 @@
+    header {
+      background-color: gray;
+    }
+
+    body {
+      background-color: gray;
+    }
+
+    div {
+      margin: 5px;
+      padding: 10px;
+    }
+
+  .left {
+    background-color: white;
+    float: left;
+    width: 57%;
+  }
+  .right {
+    background-color: white;
+    float: right;
+    width: 40%;
+  }
+
+
+
+
+
