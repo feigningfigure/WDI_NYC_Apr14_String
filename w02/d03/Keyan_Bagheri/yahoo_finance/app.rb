@@ -1,19 +1,39 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'yahoofinance'
+# require 'pry'
 
 
 get '/' do
 	erb :index	
 end
 
-get '/name' do
-	binding.pry
-	@name = params[:user_name]
+get '/stock' do
+	stock = params[:stock_name].upcase
+	info = YahooFinance::get_standard_quotes(stock)
+	@symbol = info[stock].symbol
+	@change = info[stock].change
+	@dayhigh = info[stock].dayHigh
+	@daylow = info[stock].dayLow
+	@time = info[stock].time
 
-	erb :name
+	actual_change = @change.split(" ")[0].to_f
+	
+	@happy_or_sad =
+	if actual_change < 0
+		"SORRY FOR YOUR LOSS"
+	elsif actual_change > 0
+		"CONGRATULATIONS ON YOUR GAIN$"
+	else
+		"No gains or losses today"
+	end
+
+
+if info[stock].dayHigh == 0
+    erb :error
+else
+    erb :stock
 end
 
-post '/photos' do
-	params.to_s
 end
+
