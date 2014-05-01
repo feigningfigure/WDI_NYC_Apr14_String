@@ -46,30 +46,3 @@ class Shelter
 end
 
 
-
-
-
-#   attr_accessor :name :address
-
-#   def initialize(name, adress)
-#     @name = name
-
-
-#   def to_s
-#    	puts "#{@name} located at #{@address}"
-#   end
-
-#   def display_animals
-#   	puts "#{@animal}"
-#   end
-
-#   def display_clients
-# 	puts ("#{person.name} is a #{person.age} year old #{person.gender} with #{person.pets} pets")
-#     end
-#   end
-
-#   def adopt
-#   	#COME BACK TO THIS
-#   end
-
-# end
