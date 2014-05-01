@@ -4,7 +4,7 @@ public_dir = Dir.mkdir("./my_sinatra_project/public")
 
 # CSS
 
-style_css = File.open("./my_sinatra_project/public/styles.css")
+style_css = File.open("./my_sinatra_project/public/styles.css", "w")
 
 # ERB
 layout_erb = File.open("./my_sinatra_project/views/layout.erb", "w")
