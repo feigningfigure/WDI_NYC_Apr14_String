@@ -1,7 +1,6 @@
 Joel
 Mason
 Nelson
-Jane
 Andrew
 Declan
 BEN
@@ -9,5 +8,3 @@ Victor
 Zack
 Sophie
 Jane
-DaraZackHHHAndrew (Evil Twin)
-Victor (Evil Twin)
