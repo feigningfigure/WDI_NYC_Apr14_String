@@ -29,7 +29,7 @@ class Client
 		@pets.each do |k, v|
 			x << k
 		end
-		return x
+		puts x
 	end
 
 end
