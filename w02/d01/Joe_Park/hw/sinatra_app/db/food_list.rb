@@ -1,0 +1,1 @@
+$food_list = ["mcdonald", "whitecastle", "chipotle", "subways", "tony", "wendy", "kfc", "pizzahut", "uno", "domino"]
