@@ -31,4 +31,6 @@ end
 #http://localhost:4567/dara
 #localhost = 127.0.0.1
 
+#CMD + Option + i to toggle "View/Developer Tool" in Chrome
+
 
