@@ -3,9 +3,9 @@ class Shelter
 
 	attr_accessor :name, :address, :clients, :animals
 
-	def initialize( name, address = nil, clients = [], animals = [])
-		@name = name 
-		@address = address	
+	def initialize( name, address = nil, clients = {}, animals = [])
+		@name = name
+		@address = address
 		@clients = clients
 		@animals = animals
 	end

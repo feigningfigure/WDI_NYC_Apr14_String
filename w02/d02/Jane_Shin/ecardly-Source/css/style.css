@@ -1,0 +1,96 @@
+/* UTILITY */
+.clear {
+	clear: both;	
+}
+
+/*HEADER*/
+
+.header {
+	background-image:url('../images/background.jpg');
+	background-repeat: repeat-x;
+	text-align: center;
+}
+
+/* NAV BAR */
+nav {
+	float: left;
+	width: 250px;
+	background: white;
+	border: solid #999 1px;
+}
+
+/*MAIN*/
+.main {
+	float: left;
+	margin: 0 auto;
+	width: 700px;
+	border: solid #999 1px;
+}
+
+.footer {
+	margin: 0 auto;
+	border: solid #999 1px;
+}
+
+
+/*.right {
+	float: right;
+	list-style: none;
+	margin: 5px 5px;
+}*/
+
+/*.right li {
+	display: inline;
+	background: #3399FF;
+	padding: 0 5px;
+}*/
+
+/*STATIC PARENT*/
+/*.container {
+	width: 960px;
+	background: LightGrey;
+	margin: 10px;
+}*/
+
+/*BOX*/
+/*.box {
+	position: static;
+	width: 100px;
+	height: 100px;
+	border: solid #999 1px;
+	background: #00FFFF;
+	margin: 10px;
+}*/
+
+/*.box_center {
+	width: 100px;
+	height: 100px;
+	border: solid #999 1px;
+	background: #00FFFF;
+	margin: 0 auto;
+
+}
+
+.box_left {
+	float: left;
+	width: 100px;
+	height: 100px;
+	border: solid #999 1px;
+	background: #00FFFF;
+	margin: 5px;
+}
+
+.box_right {
+	float: right;
+	width: 100px;
+	height: 100px;
+	border: solid #999 1px;
+	background: #00FFFF;
+	margin: 5px;
+}
+
+.text {
+	display: inline-block;
+	width: 250px;
+	margin: 80px
+}*/

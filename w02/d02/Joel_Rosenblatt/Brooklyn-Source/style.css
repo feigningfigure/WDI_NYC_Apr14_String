@@ -1,0 +1,42 @@
+body {
+  font-family: "Times New Roman", serif;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #787878 ;
+  background: white;
+}
+
+h2 {
+  padding: 8px 0 8px 0;
+  font-weight: 400
+  font-size: 28px;
+}
+
+p {
+  margin: 0 0 15px 0;
+}
+
+a {
+  color: #1783bb;
+  text-decoration: none;
+}
+
+#container  {
+  margin: auto;
+  width: 1000px;
+}
+
+img   {
+  border: none;
+}
+
+#press {
+    border: 5px solid #B8B8B8 ;
+    float: left;
+    margin: 2px;
+}
+
+.clear {
+  clear: both;
+}
