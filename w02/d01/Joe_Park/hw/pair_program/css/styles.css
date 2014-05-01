@@ -1,0 +1,32 @@
+body{
+	background-color: black;
+}
+
+h1{
+	border: 2px solid blue;
+	background-color: yellow;
+	border-radius: 10px;
+}
+
+.yay{
+	font-weight: bold;
+	text-decoration: none;
+	border: 2px solid blue;
+	background-color: green;
+}
+
+.boo{
+	font-weight: bold;
+	text-decoration: none;
+	border: 2px solid white;
+	background-color: red;
+
+}
+
+.back{
+	font-weight: bold;
+	text-decoration: none;
+	border: 2px solid green;
+	background-color: yellow;
+
+}

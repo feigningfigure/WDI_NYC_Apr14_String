@@ -1,0 +1,40 @@
+.nav {
+  height: 30px;
+  width: 100%;
+  border-top: #999 0px;
+  border-bottom:  #999 0px;
+  display: block;
+  background: pink;
+  padding: 10px;
+  clear: both;
+}
+
+.imgcenter{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgright{
+  width: 100px;
+  height: 100px;
+  float:right;
+  margin: 5px;
+  padding: 10px;
+}
+
+.imgleft{
+  width: 100px;
+  height: 100px;
+  float:left;
+  margin: 5px;
+  padding: 10px;
+}
+
+.container {
+  background: #FFF;
+  width: 100%;
+  margin: 10px auto; /*centers our container on the page */
+  padding:10px;
+  float: auto;
+  clear:both;
+}

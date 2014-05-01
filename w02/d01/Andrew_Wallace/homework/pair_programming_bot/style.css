@@ -1,0 +1,18 @@
+    body {
+      text-align: center;
+      background: url("http://www.neyralaw.com/wp-content/uploads/2012/07/tokyo-blue-background-4547.jpg");
+      background-size: cover;
+      background-position: center;
+      color: black;
+      font-family: helvetica;
+    }
+
+    .yes[type="submit"] {
+      background: green;
+      color: white;
+    }
+
+    .no[type="submit"] {
+      background: red;
+      color: white;
+    }

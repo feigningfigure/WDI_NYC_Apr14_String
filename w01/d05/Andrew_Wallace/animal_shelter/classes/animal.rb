@@ -1,10 +1,10 @@
 class Animal
 	attr_accessor :name, :age, :gender, :toys
-	def initialize(name, age, gender, species)
-		@name = name
-		@age = age
-		@gender = gender
-		@species = species
+	def initialize(animal_hash)
+		@name = animal_hash["Name"]
+		@age = animal_hash["Age"]
+		@gender = animal_hash["Gender"]
+		@species = animal_hash["Species"]
 		@toys = []
 	end
 

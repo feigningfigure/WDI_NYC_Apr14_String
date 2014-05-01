@@ -1,0 +1,47 @@
+# a machine to sort clothes in a rather OCD manner
+# why does someone this OCD have a pile of clothes on the bed anyway?
+
+# we need to scan the clothes on the bed
+# we need to set up boolean values to sort items found to the shelves
+# we need to move the items appropriately
+
+# values for shelves are: 
+# 1. Item color (blue, green)
+# 2. Item type (shirts, pants)
+
+# using "mover" instead of "push" to add items to empty arrays??
+
+load './bed' #a hash of keys and values (clothing_item: type, color)
+
+class Item
+	def initialize(color, type)
+		@color = color
+		@type = type
+	end
+end
+
+def scanner()
+	@color = item.color?
+	@type = item.type?
+end
+
+def closet.scanner(x)  					# can the hash file be the passed argument? this way we can sort clothes in other places too!
+closet = [[shelf_top], [shelf_middle], [shelf_bottom]] # defining the closet as part of the method
+shelf_top = []
+shelf_middle = []
+shelf_bottom = []
+x.Open									# need to open the bed file?
+x.each if @color: green == true && @type: shirt == true
+	mover.shelf_top						# puts moves items to appropriate array/ shelf?
+elsif @color: blue == true && @type: shirt == true
+	mover.shelf_middle
+elsif @type: pants == true
+	mover.shelf_bottom
+else
+	mover.floor
+end
+closet = closet.each do {|i| puts i}	# trying to print itemized closet, i know it's trickier to print a multidimensional arrays than this tho
+puts "Here's your #{closet}"
+end
+
+closet.scanner(bed)
