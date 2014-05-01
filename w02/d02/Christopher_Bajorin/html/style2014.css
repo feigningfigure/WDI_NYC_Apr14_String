@@ -1,0 +1,47 @@
+/* WDI String */
+
+/* Global Styles */
+
+body {
+  padding: 0px 20px 20px 20px;
+  background: #F5F5F5;
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: verdana;
+}
+
+h1 {
+  font-size:38px;
+  color: #000;
+  text-transform: lowercase;
+}
+h3 {
+  color: rgb(0,0,150);
+}
+
+ol.nums {
+  margin-left: 15px;
+}
+ul.spacer {
+  margin-bottom: -20px;
+}
+ul.spacer li {
+  padding-bottom: 30px;
+}
+p  {
+  margin: 0 0 20px 0px;
+}
+
+a {
+  color:#999;
+  text-decoration:none;
+}
+
+a:hover {
+    color:#20222a;
+}
+
+img.right {
+  float: right;
+  padding: 0 0 10px 10px;
+}
