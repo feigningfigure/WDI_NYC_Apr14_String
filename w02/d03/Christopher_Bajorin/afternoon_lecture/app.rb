@@ -9,7 +9,6 @@ end
 
 get '/quote' do
   quote = params[:quote_request].upcase
-  binding.pry
 
   @quote = YahooFinance::get_standard_quotes(quote)[quote].symbol
 
