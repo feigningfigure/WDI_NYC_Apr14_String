@@ -1,11 +1,11 @@
 class Shelter
 	attr_accessor :name, :address, :animals, :clients
 
-	def initialize(name, address)
-		@name = name
-		@address = address
-		@animals = {}
-		@clients = {}
+	def initialize(shelter_hash)
+		@name = shelter_hash["Name"]
+		@address = shelter_hash["Address"]
+		@animals = []
+		@clients = []
 	end
 
 	def to_s
@@ -14,8 +14,8 @@ class Shelter
 
 	def display_clients
 		client_string = []
-		@clients.each do |k, v|
-		 	client_string << v.to_s
+		@clients.each do |client|
+		 	client_string << client_hash.to_s
 		end
 		"#{client_string.join(" \n")}"
 	end
@@ -28,14 +28,25 @@ class Shelter
 		"#{animal_string.join(" \n")}"
 	end
 
-	def create_animal(name, age, gender, species, toys)
-		name = Animal.new(name, age, gender, species)
-		# unless toys.empty?
-		# 	toys.each do |toy|
-		# 		<< toy
-
-		@animals[@animal_name.name.to_sym] = @animal_name
-
+	def adopt(animal_hash)
+		animals_hash.each do (animal_hash)
+			@animals << Animal.new(animal_hash)
+		end
 	end
+
+    def release_animal(animal_requested)
+	    #find the animal in my animal array
+	    @animals.each  { |animal_in_array|
+	        if animal_requested == animal_in_array.name
+	            return animal_in_array.delete(animal_requested)
+	        end
+	    }
+	    puts "ERROR: Can't find your animal in the shelter" #FIX THIS
+	end
+
+
+
+
 end
+
 

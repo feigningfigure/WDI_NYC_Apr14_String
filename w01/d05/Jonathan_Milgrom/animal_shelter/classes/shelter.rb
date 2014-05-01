@@ -36,7 +36,7 @@ class Shelter
 		@clients.each do |k, v|
 			x << k
 		end
-		return x
+		puts x
 	end
 
 
@@ -45,7 +45,7 @@ class Shelter
 		@animals.each do |k, v|
 			x << k
 		end
-		return x
+		puts x
 	end
 
 	def to_s
