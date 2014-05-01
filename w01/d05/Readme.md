@@ -1,4 +1,26 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+#Readme.md
+=======
+###Week01-Day5
+=======
+>>>>>>> 5ac0e8961e9215466ecc2b15b06854a86c8274f6
+
+##Part 1
+- Build the ***Scrumr*** application
+	- It should randomly assign each student to an instructor for each week's daily stand up meeting.  
+ 
+--
+#Part 2
+##HappiTails
+=======
+#HappiTails
+>>>>>>> 1393b9ab451d7b63ccfe0da1a6498fb52636a27a
+=======
  #HappiTails
+>>>>>>> aeb04588352169e4550167808ee1a9ce6994156e
 - You are the manager at HappiTails animal shelter.
 - You need to manage your shelter by storing and manipulating information about clients and animals.
 
@@ -33,6 +55,46 @@
 
 ---
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+#WORK IN YOUR OWN FOLDER ONLY!
+>>>>>>> cb57b3ac796a3ecff7a864a9637154dc56251cea
+=======
+#####Commit 1
+- Define the animal, client and shelter classes according to the specs. Each class should have the appropriate attributes and initialize method.
+- Test these out with pry to make sure you can create the objects and that they do what you think the should do. Check the methods that you wrote too!
+
+#####Commit 2
+- Create a main.rb
+- It should create a new shelter for you
+- It should display a menu of options for the user to choose from:
+  - Create an animal
+  - Create a client
+  - Create a shelter
+  - Quit
+- When creating an animal or client, the user is prompted for information like names, age etc. Newly created animals and clients should be added to the shelter.
+
+#####Commit 3
+- Add options to the menu so that a user can:
+  - Display all animals
+  - Display all clients
+
+#####Commit 4
+- Add options to the menu so that a user can:
+  - Facilitate client adopts an animal. This means the client now has the animal and they should no longer be a part of the shelter.
+  - Facilitate client puts an animal up for adoption. This means the client no longer has the animal and it should be added to the shelter.
+
+#####Commit 5
+- Create a seeds.rb file that initializes a shelter as well as a few animals and clients so you have some data to start with when you run your program.
+
+#####Commit 6 (Bonus)
+- Limit the number of animals a client can adopt to 2 per client. If they try to adopt more than that, yell at them.
+- Refactor your code to make sure it is DRY (Don't Repeat Yourself) and all your methods are in the appropriate classes.
+
+#####Commit 7 (Bonus)
+- Add a new class that inherits from your client class called CatLady. A cat lady only takes cats, and takes as many cats as there is space in a computer's memory.
+>>>>>>> 5ac0e8961e9215466ecc2b15b06854a86c8274f6
+=======
 ##Part 1
 - Make the tests pass
 
@@ -92,3 +154,4 @@ end
 ##Bonus
 - Create a seed.rb file that initializes a shelter as well as a few animals and clients so you have some data to start with when you run your program.
 
+>>>>>>> 1393b9ab451d7b63ccfe0da1a6498fb52636a27a
