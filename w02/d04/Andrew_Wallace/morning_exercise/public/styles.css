@@ -1,0 +1,28 @@
+/* Magic Eight Ball Exercise */
+
+body {
+  padding: 0px 20px 50px 20px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size:38px;
+  color: #000;
+}
+h2 {
+  font-size: 30px;
+  color: #656565  ;
+}
+h3 {
+  font-size: 22px;
+  color: #009966  ;
+}
+p {margin: 0 0 20px 0px;}
+a {
+  color: #999;
+  text-decoration: none;
+}
+a:hover {color: #36648B  ;}
+
+.inputbox {width: 200px;}
