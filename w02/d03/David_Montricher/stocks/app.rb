@@ -12,7 +12,7 @@ get '/stock_data' do
   if YahooFinance::get_standard_quotes(params[:stock_symbol].to_s)[params[:stock_symbol].to_s].class == YahooFinance::StandardQuote && YahooFinance::get_standard_quotes(params[:stock_symbol].to_s)[params[:stock_symbol].to_s].dayRange != "N/A - N/A"
       @stock_data = YahooFinance::get_standard_quotes(params[:stock_symbol].to_s)
   else
-      @stock_data = "THAT IS NOT a STOCK TICKER"
+      @stock_data = "THAT IS NOT A STOCK TICKER"
       erb :error
   end
    # @stock_data = YahooFinance::get_standard_quotes("GOOG")["GOOG"].class
