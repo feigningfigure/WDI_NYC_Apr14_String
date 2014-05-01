@@ -1,5 +1,6 @@
 
 
+
 /*----------------------------------------------------------------------------- 
 =01 BODY 
 -----------------------------------------------------------------------------*/
@@ -28,7 +29,7 @@ body {
 
 
 #header {
-	padding: 20px 0px;
+	padding: 20px 0px 0px 20px;
 }
 
 	
@@ -60,7 +61,13 @@ a {
 	text-decoration:none;
 }
 
-p { margin: 0px 0px 15px 0px; } /* there's no explicit rule, but putting about 15px margin only to the bottom of your p is generally a good rule of thumb */
+p { 
+	margin: 30px 0px 15px 0px; 
+	text-indent: 0px;
+	text-align: left;
+	border-top: 1px dashed black;
+
+	} /* there's no explicit rule, but putting about 15px margin only to the bottom of your p is generally a good rule of thumb */
 
 
 /*----------------------------------------------------------------------------- 
@@ -69,11 +76,12 @@ p { margin: 0px 0px 15px 0px; } /* there's no explicit rule, but putting about 1
 
 nav {
 	width: 100%;
-	border-top: dashed #999 1px;
-	border-bottom: dashed #999 1px;
 	display: block;
 }
-
+	nav ul {
+		padding: 0px 10px 0px 10px;	
+		border: 1px 0px 1px 0px dashed black;
+	}
 
 	nav ul li {
 		float: left;
@@ -103,10 +111,12 @@ nav {
 
 #socialMedia ul li {
 	 display:inline-block;
-	 width:60px;
-	 height:60px;
+	 width: 50px;
+	 height: 50px;
 	 background:blue;	
 	 text-indent:-9999em;
+	 border: 0;
+	 padding: 0px 10px 10px 0px;
 }
 
 #socialMedia ul li.linkedIn {
@@ -155,13 +165,13 @@ nav {
 }
 
 .imgright {
-	float: right;
-	margin: 0 0 10px 10px;
+	float: left;
+	margin: 40px 40px 40px 40px;
 }
 
 .imgleft {
-	float: left; 
-	margin: 0 10px 10px 0;
+	float: right; 
+	margin: 40px 40px 40px 40px;
 }
 
 .imgborder {

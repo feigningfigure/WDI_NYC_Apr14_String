@@ -1,0 +1,52 @@
+body{
+	background-color: white;
+	color: #878787;
+	font-size: 14px;
+}
+
+#wrapper {
+	width: 100%;
+}
+
+#container {
+	margin: 40px auto;
+	width: 960px;
+}
+
+#top_box {
+	text-align: left;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+a {
+	color: #4997da;
+	text-decoration: none;
+}
+
+.date {
+	color: #4997da;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	line-height: 0;
+}
+
+article {
+	margin-top: 0;
+	padding-top: 0;
+	line-height: 1.5em;
+	padding-bottom: 20px;
+}
+
+footer img {
+	border: solid 4px;
+	margin: auto;
+}
+
+aside {
+
+}
+
+

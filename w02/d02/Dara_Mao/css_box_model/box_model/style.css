@@ -1,0 +1,84 @@
+nav {
+  height: 30px;
+  width: 100%;
+  border-top: #999 0px;
+  border-bottom:  #999 0px;
+  display: block;
+  background: pink;
+  padding: 10px;
+  clear: both;
+}
+
+
+.container {
+  background: #CDC9C9;
+  width: 100%;
+  margin: 10px auto; /*centers our container on the page */
+  padding:10px;
+  float: auto;
+  clear:both;
+}
+
+.container2 {
+  background: #CDC9C9;
+  height: 135px;
+  width: 100%;
+  margin: 0 auto; /*centers our container on the page */
+  padding:10px;
+  float: auto;
+  margin-top: 10px;
+ /* clear:both;*/
+
+}
+
+.stat_box{
+ border: 1px solid black ;
+ width: 100px;
+  height: 100px;
+  background: #00F5FF;
+  padding: 10px;
+
+}
+ul{
+float:right;
+}
+
+li{
+  display: inline;
+padding: 10px 5px 10px 5px;
+background-color:blue;
+}
+
+.boxcenter{
+ border: 1px solid black ;
+ width: 100px;
+  height: 100px;
+  background: #00F5FF;
+  /*position: absolute;  could be absolute */
+  top: 0; left: 0; bottom: 0; right: 0;
+  /*margin: 10px 50px 10px 500px;*/
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.box123{
+   border: 1px solid black ;
+ width: 100px;
+  height: 100px;
+  background: #00EE00;
+  float:left;
+  margin: 5px;
+  padding: 10px;
+}
+
+.boxright{
+  border: 1px solid black ;
+ width: 100px;
+  height: 100px;
+  background: pink;
+  float:right;
+  margin: 5px;
+  padding: 10px;
+
+}
