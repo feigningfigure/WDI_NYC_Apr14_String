@@ -1,23 +1,24 @@
-<h1>Stock Data for <%= @quote.symbol %>, <%= @quote.name %></h1>
+<div class="box">
+	<h1 class="header"><%= @quote.symbol %></h1>
+	<h2 class="subheader">Stock Data for <%= @quote.name %> <font color="black"><%= @quote.date %>, <%= @quote.time %></font></h2>
+	<br>
+	<div class="summary">
+	<p id="lasttrade"><%= @quote.lastTrade %></p>
+	<p id="change"><%= @quote.change %> (<%= @quote.changePercent %>)</p>
+	</div>
+		<ul id="subsummary">
+			<li>Previous Close <%= @quote.previousClose %></li>
+			<li>Open <%= @quote.open %></li>
+			<li>Day High <%= @quote.dayHigh %></li>
+			<li>Day Low <%= @quote.dayLow %></li>
+			<li>Volume <%= @quote.volume %></li>
+			<li>Day Range <%= @quote.dayRange %></li>
+			<li>Average Daily Volume <%= @quote.averageDailyVolume %></li>
+			<li>Bid <%= @quote.bid %></li>
+			<li>Ask <%= @quote.ask %></li>
+		</ul>
 
-
-<p><%= @quote.date %>, <%= @quote.time %></p>
-<ul>
-	<li>Last Trade with Time <%= @quote.lastTradeWithTime %></li>
-	<li>Change <%= @quote.change %></li>
-	<li>Change Points <%= @quote.changePoints %></li>
-	<li>Change Points <%= @quote.changePercent %></li>
-	<li>Previous Close <%= @quote.previousClose %></li>
-	<li>Open <%= @quote.open %></li>
-	<li>Day High <%= @quote.dayHigh %></li>
-	<li>Day Low <%= @quote.dayLow %></li>
-	<li>Volume <%= @quote.volume %></li>
-	<li>Day Range <%= @quote.dayRange %></li>
-	<li>Average Daily Volume <%= @quote.averageDailyVolume %></li>
-	<li>Bid <%= @quote.bid %></li>
-	<li>Ask <%= @quote.ask %></li>
-
-</ul>
+</div>
 
 
 
