@@ -1,0 +1,45 @@
+<div class="notice">
+
+	<h1>WDI Stocks, Making Your Life Easier</h1>
+
+</div>
+
+<div class="ticker_entry">
+
+	<form action="/name">
+		<input type ="text" name="ticker" placeholder="Type the symbol">
+
+		<select name="options" form="ticker_form">
+			<option value="all">All</option>
+			<option value="dayHigh">Day High</option>
+			<option value="dayLow">Day Low</option>
+			<option value="name">Day High</option>
+		</select>
+	</form>
+
+
+	<div class="info">
+		<h1><%= @name %></h1>
+		<h2><%= @company_name %><h2>
+		<h2><%= @date %></h2>
+		<h2><%= @time %></h2>
+		
+		<ul>
+			<li><%= @high %></li>
+			<li><%= @low %></li>
+			<li><%= @volume %></li>
+			<li><%= @previous %></li>
+		</ul>
+	</div>
+
+</div>
+
+
+<div class="col_right">
+	<%= @quote %>
+</div>
+
+
+
+
+<!-- @quote[@name].dayHigh -->
