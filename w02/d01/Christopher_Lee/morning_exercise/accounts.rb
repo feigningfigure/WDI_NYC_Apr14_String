@@ -13,4 +13,5 @@ $client["James"] = Client.new("James Ralph", "20.00")
 
 $atm = Atm.new(250)
 
-$atm.withdrawal(Helena, 3)
+$atm.withdrawal("Helena", 3)
+$atm.deposit("Helena", 26)
