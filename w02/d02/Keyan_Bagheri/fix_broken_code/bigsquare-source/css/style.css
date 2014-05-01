@@ -1,3 +1,4 @@
+adsfasdfasdf
 
 
 /*----------------------------------------------------------------------------- 
@@ -6,7 +7,7 @@
 
 body {
 	margin: 0px;
-	padding: 0px;
+	padding: 0px 40px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: #7f7d78;
 	font-size: 13px;
@@ -60,7 +61,10 @@ a {
 	text-decoration:none;
 }
 
-p { margin: 0px 0px 15px 0px; } /* there's no explicit rule, but putting about 15px margin only to the bottom of your p is generally a good rule of thumb */
+p { text-align: left;
+	margin: 0px 0px 15px 0px; 
+	line-height: 20px;
+	} /* there's no explicit rule, but putting about 15px margin only to the bottom of your p is generally a good rule of thumb */
 
 
 /*----------------------------------------------------------------------------- 
@@ -72,6 +76,7 @@ nav {
 	border-top: dashed #999 1px;
 	border-bottom: dashed #999 1px;
 	display: block;
+	padding:0px 0px 30px 0px;
 }
 
 
