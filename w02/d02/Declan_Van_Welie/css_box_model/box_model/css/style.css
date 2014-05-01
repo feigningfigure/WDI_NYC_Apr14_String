@@ -1,0 +1,72 @@
+.clear {
+  float: top;
+  background-color: pink;
+  height: 30px;
+}
+
+.right
+ {
+  float: right;
+  margin: 5px;
+}
+
+.right li {
+background-color: blue;
+margin: 10px, 5px, 0px, 5px;
+display: inline;
+padding: 10px, 0px, 0px, 0px;
+}
+
+.container {
+  background-color: LightGrey;
+  display: block;
+  width: 960px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.box {
+height: 100px;
+width: 100px;
+border: 1px solid black;
+margin-top: 5px;
+background-color: #0ff;
+text-align: center;
+}
+
+.box_center {
+height: 100px;
+width: 100px;
+margin: 0 auto;
+background-color: #0ff;
+border: 1px solid black;
+}
+
+.box_left {
+background-color: #00EE00;
+float: left;
+height: 100px;
+width: 100px;
+display: inline-block;
+border: 1px solid black;
+margin: 10px;
+}
+
+.box_right {
+background-color: pink;
+border: 5px black;
+float: right;
+height: 100px;
+width: 100px;
+border: 1px solid black;
+margin: 10px;
+vertical-align: middle;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
