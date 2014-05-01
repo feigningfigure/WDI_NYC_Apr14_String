@@ -1,0 +1,126 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+h1{
+font-family: helvetica;
+font-style: bold;
+font-size: 30px;
+font-color: black;
+margin: 0px 0px 0px 10px;
+padding: 50px 0px 0px 10px;
+}
+
+body{
+background-image:url("/Users/kylesweet/code/wdi/WDI_NYC_Apr14_String/w02/d02/Kyle_Sweet/ecardly-Source/images/background.jpg");
+background-repeat:repeat-x;
+background-color:#d6d6d6;
+margin: 300px 0px 120px 0px;
+}
+
+#container{
+background-color:#fff;
+width:650px;
+height:1242px;
+margin: 0 auto;
+}
+
+#container2{
+background-color:#fff;
+width:275px;
+height:800px;
+margin: -1242px 0px 0px 1310px;
+}
+
+.logo{
+margin: 0 auto;
+}
+
+.centerimg{
+margin: -250px 125px 100px 850px;
+
+}
+
+.imageone{
+margin: 10px 25px 20px 23px;
+}
+
+
+
+.social{
+ margin: 500px 0px 0px 875px;
+}
+
+
+li{
+display:inline-block;
+}
+
+
+.backimage{
+vertical-align:text-top;
+background-repeat: repeat-x
+}
+
+p{
+font-family: helvetica;
+font-size: 14px;
+line-height: 20px;
+margin:10px 20px 10px 27px;
+width:600px;
+}
+
+span{
+font-family: helvetica;
+font-size:12px;
+font-weight:bolder;
+color: #c40020;
+}

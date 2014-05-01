@@ -122,7 +122,7 @@ def menu
     puts "\nWhich client?\n".color(:green)
     client_choice = gets.chomp
     if @happitails.clients.include?(client_choice) == true
-      @happitails.display_pets(client_choice)
+      @happitails.display_clients_pets(client_choice)
       puts "which animal?\n".color(:green)
       animal_choice = gets.chomp
       @happitails.animals[animal_choice] = @happitails.clients[client_choice]["Pets"].delete(animal_choice)
