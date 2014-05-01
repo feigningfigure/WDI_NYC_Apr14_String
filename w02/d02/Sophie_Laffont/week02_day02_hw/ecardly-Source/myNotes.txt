@@ -1,0 +1,76 @@
+ad-cut-and-paste.gif
+ad-postcard-tee.png
+ad-submit-your-own.png
+ecard-courage.jpg
+ecard-nycstartups.jpg
+logo.png
+social-icon-facebook.png
+social-icon-pinterest.png
+social-icon-twitter.png
+
+
+
+<!-- 
+	<!-- static positioning -->
+	<div class="container1">
+	
+		I'm a static parent.
+	
+		<div class="boxStatic">
+			I'm a box positioned static. This is the default.
+		</div>
+		
+		<div class="boxCenter">
+			I'm a centered box.
+
+		</div>
+
+	
+	 	<ul class="right">
+	 		I'm a ul.  I need to be floated right.  
+	 		I have 3 list items.
+	 		<li>facebook</li>
+	 		<li>instagram</li>
+	 		<li>twitter</li>
+	 	</ul>
+
+	 	<div class="clear"> </div>
+
+	</div><!-- container -->
+	
+	<!-- float positioning -->
+	
+	<div class="container2">
+	
+		 I'm a static parent.
+	
+	
+		<div class="boxLeft">
+			I'm box 1 floating left.<br>
+		</div>
+		
+		<div class="boxLeft">
+			I'm box 2 floating left.<br>
+		</div>
+		
+		<div class="boxLeft">
+			I'm box 3 floating left.<br>
+		</div>
+		
+		
+		<div class="boxRight">
+			I'm box 1 floating right.<br>
+		</div>
+
+		<div class="boxRight">
+			I'm box 2 floating right.<br>
+		</div>
+		
+		<!-- content placed here from the clear class -->
+			 <div class="clear"> </div>
+		<!-- I need a clear fix class if you do not want me to collapse when I have floating children inside me! -->
+			 
+	</div><!-- container -->
+		 	
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+nav{
+  background-color: pink;
+  height: 40px;
+  margin: -8px -7px 0px -7px;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+
+li{
+  text-align: center;
+  list-style-type: none;
+  height: 25px;
+  background-color: blue;
+  margin: 10px;
+  padding: 2px;
+  display: inline;
+}
+
+.container{
+  background: lightgray;
+  width: 95%px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+
+.box{
+  background: skyblue;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border: 10px;
+  border-color: black;
+}
+
+.center {
+  margin: 50px 50px;
+}
+
