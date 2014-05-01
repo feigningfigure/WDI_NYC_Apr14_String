@@ -2,6 +2,11 @@ body {
   font-family:"Reader Bold", Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size-adjust:0.53; font-weight:bold; font-style:normal;
 }
 
+.secondary{
+  font-family: 'Droid Sans Mono', 'sans serif';
+  margin: 0;
+}
+
 a{
   text-decoration: none;
 }
@@ -126,3 +131,9 @@ input{
 }
 
 .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+.small_row{
+  margin-top: 0;
+  margin-bottom: 0;
+}

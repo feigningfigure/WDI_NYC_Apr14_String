@@ -5,7 +5,6 @@ require 'pry'
 
 get '/' do
   erb :index
-
 end
 
 get '/request' do

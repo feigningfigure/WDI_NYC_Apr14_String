@@ -42,10 +42,18 @@
 
 <div class="section group">
    <div class="col span_3_of_12">
+    </div>
+     <div class="col span_3_of_12 ">
+    <p class="secondary"><%= @date %></p>
+    </div>
+</div>
+
+<div class="section group">
+   <div class="col span_3_of_12">
 
     </div>
-     <div class="col span_3_of_12">
-    <h3><%= @name %> <%= @date %></h3>
+     <div class="col span_3_of_12 stock_info">
+      <h1><%= @name %></h1>
     </div>
     <div class="col span_1_of_12">
     <div class=<%= @gain_loss %> id="boxes"><h4><%= @change_percent %>% </h4></div>
