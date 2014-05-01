@@ -1,0 +1,42 @@
+html {
+font-family: Helvetica;
+}
+
+.box {
+border: 2px solid black;
+width: 400px;
+margin: 0 auto;
+padding: 5px;
+}
+
+.header {
+color: Grey;
+font-size: 25px;
+}
+
+.subheader {
+color: Grey;
+font-size: 15px;
+}
+
+.summary {
+float: left;
+/*border: 2px solid black;*/
+padding: 5px;
+height: 150px;
+margin: 10px;
+}
+
+#subsummary {
+color: Grey;
+font-size: 10px;
+}
+
+#lasttrade {
+font-size: 40px;
+}
+
+#change {
+font-size: 20px;
+color: red;
+}
