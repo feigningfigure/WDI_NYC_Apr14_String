@@ -27,6 +27,7 @@ get '/:operation/:num1/:num2' do
 				when "divide"
 					@num1 / @num2
 				else
+					"Error!"
 					# erb :error
 				end
 
