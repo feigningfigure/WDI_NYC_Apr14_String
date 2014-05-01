@@ -1,0 +1,61 @@
+  header {
+      text-align: center;
+      background-image:url("assets/cabbage.png");
+      background-size: cover;
+      color: rgba(194,168,55,100);
+      padding: none;
+      background-position: center center
+      }
+  img {
+      border: 7px rgba(194,168,55,100);
+      border-radius: 20px;
+      padding:0px;
+      margin: 50px 0px 500px 15px;
+      }
+    a:link { color: rgba(194,168,55,100);
+            text-decoration: none;
+      }
+    a:visited { color: rgba(194,168,55,100);
+            text-decoration: none;
+      }
+    a:hover { color: rgba(98,0,27,100);
+            text-decoration: none;
+      }
+    a:active { color: rgba(98,0,27,100);
+            text-decoration: none;
+      }
+  h1 {
+        font-size: 60px;
+        padding: 0px;
+        margin: 0px 0px 0px 15px;
+        }
+  p {
+    font-size: 18px;
+    padding: 0px;
+    margin: 10px 0px 0px 15px;
+    }
+  body {
+      text-align: center;
+      background: black;
+      color: rgba(194,168,55,100);
+      font-family: futura;
+      margin: 0px;
+      padding: 0px;
+    }
+  ul {
+      margin: 0px;
+      padding: 0px;
+    }
+  li {
+      display: inline;
+      padding: 0px 0px 0px 10px;
+      margin: 0;
+    }
+  @media (max-width: 640px) {
+    h1 {
+        font-size: 36px;
+        }
+    li {
+          display: block;
+          padding: 5px;
+          }

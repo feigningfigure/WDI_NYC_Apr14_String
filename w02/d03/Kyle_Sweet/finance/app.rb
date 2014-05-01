@@ -6,35 +6,7 @@ get '/' do
   erb :index
 end
 
-get '/request' do
-  @call = params[:YahooFinance::get_standard_quotes(call)]
-
+get '/ticker' do
+  @ticker = YahooFinance::get_standard_quotes(params[:ticker])
+  erb :request
 end
-
-  # [:stock] = YahooFinance::get_standard_quotes(stock)
-
-
-  # def request(input)
-  # YahooFinance::get_standard_quotes(input)
-  # end
-
-
-#   @call = params[request(call)]
-
-#   erb:request
-
-# end
-  # YahooFinance::get_standard_quotes()
-
-
-
-
-  # @call = request(ticker)
-
-# end
-
-# def request(ticker)
-#   puts YahooFinance::get_standard_quotes(ticker)
-# end
-
-
