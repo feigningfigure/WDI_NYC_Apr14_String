@@ -10,6 +10,10 @@ class Animal
 
 	#.rstring strips trailing whitespace off of the right side of a string
 	def to_s
+		if @toys.empty? == false
 		"#{@name} is a #{@age} year old #{@gender} #{@species} that loves #{@toys.join(", ")}".rstrip
+		else
+		"#{@name} is a #{@age} year old #{@gender} #{@species}"
+		end
 	end
 end
