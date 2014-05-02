@@ -114,3 +114,18 @@
     Good/Service Provided: Funk
     Cost: $$400
     Thank you for your patronage
+    Consolidated Industries
+    Thank you for visiting us, Speedy gonzalez
+    Good/Service Provided: Queso
+    Cost: $5
+    Thank you for your patronage
+    Consolidated Industries
+    Thank you for visiting us, Snoop dogg
+    Good/Service Provided: Chronic
+    Cost: $200
+    Thank you for your patronage
+    Consolidated Industries
+    Thank you for visiting us, Frankie knuckles
+    Good/Service Provided: Baseball Bat
+    Cost: $20
+    Thank you for your patronage
