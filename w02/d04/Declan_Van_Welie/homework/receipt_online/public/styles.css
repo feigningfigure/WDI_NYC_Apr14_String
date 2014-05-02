@@ -1,0 +1,78 @@
+body{
+background-image:url("https://dl.dropboxusercontent.com/u/15166676/dollas-4.png")
+}
+
+.image{
+position:fixed;
+bottom:0px;
+left:150px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.interface{
+float: top;
+max-width:200px;
+margin-left:auto;
+margin-right:auto;
+width:70%;
+bottom:0px;
+}
+
+
+.title{
+text-align: center;
+color: #513f13;
+font-family: 'Playfair Display SC', serif;
+letter-spacing: 2px;
+}
+
+.details{
+margin: 0px;
+text-align: center;
+font-family: 'Lato', sans-serif;
+letter-spacing: 2px;
+}
+
+.forms{
+text-align: center;
+font-family: 'Lato', sans-serif;
+color: #bba97d;
+letter-spacing: 2px;
+position:absolute;
+margin-left:auto;
+margin-right:auto;
+margin-top: 0px;
+margin-bottom: 0px;
+padding:0px 15px 0px 25px;
+line-height: 5px;
+max-width:300px;
+}
+
+
+.receipt{
+font-family: 'Lato', sans-serif;
+text-align: center;
+font-size: 14px;
+list-style-type: none;
+background-size: 200px 200px;
+position:absolute;
+right:0;
+left:0;
+background-color:#fff;
+max-width:200px;
+height: 1000px;
+margin-left:auto;
+margin-right:auto;
+margin-top: 10px;
+width:70%;
+
+}
+
+.receipt li{
+  list-style-type: none;
+  text-align: left;
+font-size: 14px;
+padding-right: 30px;
+
+}

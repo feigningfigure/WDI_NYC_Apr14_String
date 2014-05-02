@@ -1,0 +1,9 @@
+
+
+<ul>
+  <!-- no = means run the code only -->
+  <% @receipts_array.each_with_index do |receipt, index| %>
+    <!-- = means print the returned ruby value into the HTML -->
+    <li><a href="/receipts/<%= index %>"><%= receipt %></a></li>
+  <% end %>
+</ul>
