@@ -1,6 +1,15 @@
-<h1><% @final_receipt.each do |line| %></h1>
-      <p><%= line %></p>
-     <% end %>
 
 <a href="/last_receipt">Print Last Receipt</a>
 <a href="/">Home</a>
+
+<div class="section group">
+  <div class="col span_4_of_12">
+  </div>
+  <div class="col span_4_of_12 main">
+    <div class="container2 zigzag">
+      <% @final_receipt.each do |line| %>
+      <p class="printout"><%= line %></p>
+     <% end %>
+    </div>
+  </div>
+</div>

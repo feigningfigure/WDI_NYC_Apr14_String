@@ -28,12 +28,13 @@ end
 post '/print_receipt' do
   cost_of_goods = params[:cost_of_goods]
   customer_name = params[:customer_name]
+  product = params[:product]
   receipt_file = File.open("./db/receipt_db.txt", "a")
   receipt_file.write"
-    Thank you #{customer_name}
+    Thank you #{customer_name.capitalize}
     Company Name: Consolidated Industries
-    Good/Service Provided: Cheetos
-    Cost: #{cost_of_goods}
+    Good/Service Provided: #{product}
+    Cost: $#{cost_of_goods}
     Thank you for your patronage"
   receipt_file.close
   redirect "/print_receipt"
