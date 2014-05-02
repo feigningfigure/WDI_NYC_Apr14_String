@@ -21,9 +21,7 @@ end
 # person_hash = {}
 
 # for x in (0..50)
-
 # 	person_hash[x] = Person.new
-
 # end
 
 # person_hash.each do |key, value| 
