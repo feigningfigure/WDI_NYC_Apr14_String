@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <title>Online Receipt Generator</title>
+</head>
+
+
+<body>
+
+
+<h1>Online Receipt Generator</h1>
+
+
+<nav>
+	<ul>
+		<li><a href="/">input</a></li>
+		<li><a href="/previous_transaction">previous transaction</a></li>
+		<li><a href="/transaction_log">transaction log</a></li>
+	</ul>
+</nav>
+
+
+
+<div id="box">
+  <%= yield %>
+</div>
+
+
+<footer>
+	<p><%= @company_name %> says:<br>
+	<%= @thank_you_msg %></p>
+	<p class"time">Current time is <%= Time.now.localtime.httpdate() %></p>
+</footer>
+
+</div>
+
+</body>
+
+</html>

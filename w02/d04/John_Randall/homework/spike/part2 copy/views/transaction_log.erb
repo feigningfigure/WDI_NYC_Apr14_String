@@ -1,0 +1,10 @@
+<h2>Your transactions:</h2>
+
+<% @transactions_array.each do |transaction_obj| %>
+<ul>
+	<li class="top_list_item">Transaction #: <%= transaction_obj.transaction_serial %></li>
+	<li>Item Name: <%= transaction_obj.item_name %></li>
+	<li>Item Cost: $<%= transaction_obj.item_cost %></li>
+	<li>Transaction Time: <%= transaction_obj.transaction_time %></li>
+</ul>
+	<% end %>
