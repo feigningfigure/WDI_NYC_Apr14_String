@@ -1,0 +1,3 @@
+08/02/14, 4:00pm, mason, , 
+08/02/14, 4:00pm, mason, coffee, 5
+05/01/14, 7:02pm, receipt_name:mason, phone, 6

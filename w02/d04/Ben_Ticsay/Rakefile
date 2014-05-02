@@ -1,0 +1,24 @@
+#description of the task
+desc "Say Hello"
+
+#this is the name (as :symbol) and the code block of the task
+task :hello do 
+	#this is the code that runs in the block
+	puts "hello" 
+end
+
+desc "Makes an Index HTML File"
+task :make_index_file do 
+	index_file = File.open("index.html", "w")
+	index_file.puts <<- HTML
+<!DOCTYPE html)>
+<html>
+
+
+
+</html>
+	HTML
+
+	# rake make_index_file
+	#rake -T shows list of raked codes
+

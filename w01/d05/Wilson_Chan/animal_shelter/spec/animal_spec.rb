@@ -2,11 +2,11 @@ require_relative 'spec_helper'
 
 describe Animal do
   before :each do
-    @animal = Animal.new("Tiny", 3, "cat")
+    @animal = Animal.new("Tiny", 3, "male", "cat")
   end
 
   describe "#new" do
-    it "takes three parameters and returns an Animal object" do
+    it "takes five parameters and returns an Animal object" do
       expect(@animal).to be_an_instance_of(Animal)
     end
   end

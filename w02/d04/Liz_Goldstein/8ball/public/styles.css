@@ -1,0 +1,20 @@
+body {
+  background: purple;
+  text-align: center;
+}
+
+h3 {
+  color: #145503;
+}
+
+h2 {
+  color: #86cf28;
+  font-size: 20;
+  font-family: Helvetica;
+}
+
+a{
+  color: orange;
+}
+
+
