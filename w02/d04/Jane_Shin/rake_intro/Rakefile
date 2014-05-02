@@ -1,0 +1,27 @@
+require 'HTTParty'
+
+#description of the task
+desc "Say Hello"
+#this is the name (as :symbol) and the coe block of the top
+task :hello do
+	#this is the code that runs in the block
+	puts "Hello"
+end
+
+desc "Makes and index HTML file"
+task :make_index_file do
+	index_file = File.open("index.html", "w")
+	index_file.puts  <<-HTML
+	<!DOCTYPE html>
+		<html>
+		</html>
+	HTML
+end
+
+#rake command -T in terminal lists the descriptions in the rake file
+
+#incomplete desc below
+desc "Gets me movie data"
+task :get_movie_data do
+	puts HTTParty.get
+end

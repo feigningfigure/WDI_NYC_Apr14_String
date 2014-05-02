@@ -1,0 +1,85 @@
+<!-- <h1><%= @name %> stock traded on <%= @date %></h1> -->
+
+<!-- <h3>Opened at: <%= @open %>.</h3> -->
+
+<!-- <h3>Closed at: <%= @closed %>.</h3> -->
+
+<!-- <div class=<%= @gain_loss %> id="boxes"><h4><%= @change_percent %>% </h4></div> -->
+
+<!-- <div class=<%= @gain_loss %> id="boxes"><h4><%= @change_point %> </h4></div>
+ -->
+
+<div class="section group">
+    <div class="col span_1_of_12">
+    </div>
+    <div class="col span_1_of_12">
+    </div>
+    <div class="col span_1_of_12">
+    </div>
+    <div class="col span_6_of_12 headline">
+    <h1>WDI STOCKS</h1>
+    </div>
+
+</div>
+
+<div class="section group">
+    <div class="col span_3_of_12">
+    </div>
+    <div class="col span_3_of_12 subheader">
+    <p>Please enter the stock ticker symbol for the company you would like information about</p>
+    </div>
+    <div class="col span_3_of_12">
+    <center>
+      <form action="/request">
+        <input type ="text" name="ticker_symbol" placeholder="Stock Ticker Symbol" style="padding: 10px;">
+      </form></center>
+
+    </div>
+    <div class="col span_3_of_12">
+
+    </div>
+</div>
+
+<div class="section group">
+   <div class="col span_3_of_12">
+    </div>
+     <div class="col span_3_of_12 ">
+    <p class="secondary"><%= @date %></p>
+    </div>
+</div>
+
+<div class="section group">
+   <div class="col span_3_of_12">
+
+    </div>
+     <div class="col span_3_of_12 stock_info">
+      <h1><%= @name %></h1>
+    </div>
+    <div class="col span_1_of_12">
+    <div class=<%= @gain_loss %> id="boxes"><h4><%= @change_percent %>% </h4></div>
+    </div>
+    <div class="col span_1_of_12">
+
+    </div>
+    <div class="col span_1_of_12">
+    <div class=<%= @gain_loss %> id="boxes"><h4><%= @change_point %> </h4></div>
+    </div>
+    <div class="col span_5_of_12">
+    </div>
+</div>
+
+<div class="section group">
+   <div class="col span_3_of_12">
+    </div>
+    <div class="col span_3_of_12">
+    <h3>Opened at: <%= @open %>.</h3>
+    </div>
+</div>
+
+<div class="section group">
+   <div class="col span_3_of_12">
+    </div>
+    <div class="col span_3_of_12">
+    <h3>Closed at: <%= @closed %>.</h3>
+    </div>
+</div>
