@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Practicing HTML and CSS">
+  <meta name="keywords" content="General Assembly, HTML, CSS">
+  <!-- optional -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <title>What Is the Cascade in CSS?</title>
+
+  <!-- external CSS link -->
+  <link rel="stylesheet" href="style2014.css">
+
+</head>
+
+<body>
+<h1>What is the cascade in css?</h1>
+     <H2>style sheets </h2>
+          <p>If you set your browser font to Verdana, the browser (Chrome, IE, Firefox, Safari, etc.) default will be overridden with that choice. (A fun way to have many choices is <a href="https://www.google.com/fonts"> Google fonts.)</a></P>
+
+<p>if you, as a web developer, define a style sheet to use, then the  browser will use both its own style sheet and your style sheet.  Your style sheet takes precedence</p>
+
+ <p>Then the cascade kicks in...</p>
+
+ <p>The cascade follows several rules:</p>
+ <ul>
+     <li> The declarations are sorted by weight and origin.</li>
+     <li>The declarations are sorted by specificity of selector.</li>
+     <li>The declarations are sorted by order specified.</li>
+     <br>
+      <br>
+
+
+<p>For normal declarations, author style sheets override user style sheets which override the default style sheet. For “!important” declarations, user style sheets override author style sheets which override the default style sheet. More specific selectors will override more general ones. And if two rules have the same weight, the latter specified wins.</p>
+
+<h3>Specificity Calculations</h3>
+
+<p>Imagine your html contains a paragraph with a class of “bio” applied to it. You also have the following two css rules:</p>
+<ol>
+    <li> p {font-size: 12px}</li>
+     <li>p.bio {font-size: 14px} </li>
+
+
+</ol>
+
+
+
+
+
+
+
+
+</body>
+</html>
