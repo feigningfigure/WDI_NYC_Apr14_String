@@ -1,0 +1,8 @@
+<ul class="students">
+<!-- The following will run a loop and add students to the list. The reason there's no equals sign in the each loop is because you'd like to only print the returned values of the each loop, but not the functionality-->
+  <% @students_array.each do |student| %>
+<!-- Whatever is put in-between here will get run through the array. This is also known as view iteration-->
+  <li><%= student %></li>
+  <% end %>
+
+</ul>
