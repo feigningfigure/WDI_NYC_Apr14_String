@@ -31,8 +31,8 @@ post '/print_receipt' do
   product = params[:product]
   receipt_file = File.open("./db/receipt_db.txt", "a")
   receipt_file.write"
-    Thank you #{customer_name.capitalize}
-    Company Name: Consolidated Industries
+    Consolidated Industries
+    Thank you for visiting us, #{customer_name.capitalize}
     Good/Service Provided: #{product}
     Cost: $#{cost_of_goods}
     Thank you for your patronage"
