@@ -11,13 +11,6 @@ attr_accessor :name, :age, :pets
     "#{name} is a 30 year old with 0 pets"
   end
 
-  # def client
-  #     client = Client.new
-  # end
-
-
-
-
 
 end
 

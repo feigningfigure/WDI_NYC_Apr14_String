@@ -1,0 +1,55 @@
+nav {
+	 
+	background-color: pink;
+	height: 50px;
+}
+
+nav ul {
+	text-align: right;
+
+}
+
+nav li {
+	color: red;
+	list-style: none;
+	display: inline;
+	background-color: blue;
+	color: #000;
+
+}
+ 
+.clear {
+	clear: both;
+}
+
+.container {
+	background-color: grey;
+}
+
+.box {
+	border: 1px solid black;
+	width: 150px;
+	height: 150px;
+	background-color: #00FFFF;
+
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.left {
+	background-color: #00FF00;
+	float: left;
+
+}
+
+.right {
+	background-color: pink;
+	float: right;
+
+}
+
+
+
+

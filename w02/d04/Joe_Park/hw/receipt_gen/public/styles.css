@@ -1,0 +1,24 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.pg_container{
+	width: 100%;
+}
+
+.display{
+	height: 250px;
+	width:	550px;
+	margin: 0 auto;
+	text-align: center;
+	background: black;
+	color: #999;
+	padding: 40px;
+	border-radius: 100%;
+}
+
+
+.display ul{
+	line-height: 2em;
+	list-style: none;
+}

@@ -22,4 +22,7 @@ require_relative "./helper_functions"
 @shelter.animals[@freddie.name.to_sym] = @freddie
 @shelter.animals[@slimer.name.to_sym] = @slimer
 
+@franz = Animal.new("Franz", 5, "male", "cat")
+@beth.pets[@franz.name.to_sym] = @franz
+
 
