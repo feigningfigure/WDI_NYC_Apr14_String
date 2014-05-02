@@ -14,8 +14,16 @@ get '/friend' do
 
 	url = "http://graph.facebook.com/#{username}"
 	friend_json = HTTParty.get(url) 
-	friend = JSON(friend_json) 
+	@friend = JSON(friend_json) 
 
-	erb :friend 
+	profile_picture = HTTParty.get("http://graph.facebook.com/#{username}?fields=picture")
+  @profile_picture_hash = JSON(profile_picture)
+
+	if @friend["error"]
+		@message = @friend["error"]["message"]
+		erb :index
+	else
+		erb :friend 
+	end
 
 end
