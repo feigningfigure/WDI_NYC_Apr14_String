@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ###Week02-Day04
+=======
+###Week02-Day4
+
+>>>>>>> 7543bc6a78131d77d3e4d66b452414e3a40f1105
 
 #WORK IN YOUR OWN FOLDER ONLY!
 #Your pull-request title must start with `hw_w02_submission`
@@ -9,7 +14,11 @@
 ## Morning Exercise
 
 ### Magic 8 Ball
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 7543bc6a78131d77d3e4d66b452414e3a40f1105
 
 Make a Magic 8 Ball using Sinatra!
 
@@ -28,6 +37,7 @@ Your game will:
 
 - include a "Submit" button
 - make your pages well styled; include an image
+<<<<<<< HEAD
 
 
 ---
@@ -41,3 +51,44 @@ Your game will:
 
 
 #WORK IN YOUR OWN FOLDER ONLY!
+=======
+---
+
+##Part 1
+- Command line Receipt Generator
+	- Ask for the name of the good/service provided
+	- Ask for the cost of the good/service provided
+	- Print a receipt
+		- Here is an example of what the receipt file might look like:
+
+```
+- Company Name: Particular Assembly Inc.
+- Good/Service Provided: Web-Development Refactoring
+- Cost: $1,329.99
+- Thank you for your patronage
+```
+
+---
+
+##Part 2
+- Receipt Generator Online
+- Lets make a Sinatra version of the receipt generator 
+	- The root should show a form with fields:
+		- Name
+		- Cost of good/services
+	- Upon pressing submit, the receipt file should be created and a confirmation message (i.e. "Your receipt has been printed!") should be shown to the user.
+- Generate all of your views using ERB.
+- Be sure to include a `layout.erb`
+- Include a stylesheet and be sure to style your views
+
+***Bonus:***
+
+- Include a [Google Font](https://www.google.com/fonts) in your stylesheet 
+
+
+***Harder Bonus:***
+
+- Include a view to show the user the name and cost of goods/services from the last receipt that was created.
+
+---
+>>>>>>> 7543bc6a78131d77d3e4d66b452414e3a40f1105
