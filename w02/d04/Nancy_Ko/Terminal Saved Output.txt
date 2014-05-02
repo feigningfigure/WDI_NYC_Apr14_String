@@ -1,0 +1,55 @@
+[1] pry(main)*   class Receipt   
+[1] pry(main)*     def initialize(service, cost, receipt)    
+[1] pry(main)*       @cost = cost         
+[1] pry(main)*       @receipt = receipt         
+[1] pry(main)*       @service = service         
+[1] pry(main)*     end      
+[1] pry(main)*     def service_getter(service)  
+[1] pry(main)*       puts "What is the name of the good or service provided?"        
+[1] pry(main)*       good_service_input = gets.chomp        
+[1] pry(main)*       service = good_service_input.downcase        
+[1] pry(main)*              
+[1] pry(main)*     end      
+[1] pry(main)*     def cost_getter(cost)    
+[1] pry(main)*       puts "What is the cost of the service?"        
+[1] pry(main)*       cost_input = gets.chomp        
+[1] pry(main)*       cost = cost_input.to_f        
+[1] pry(main)*     end      
+[1] pry(main)*         
+[1] pry(main)*     def print_receipt(receipt)    
+[1] pry(main)*       company = "Particular Assembly, Inc."         
+[1] pry(main)*       receipt = "Company Name: #{company}", "Good/Service Provided: #{service}", "Cost: #{cost}"         
+[1] pry(main)*       puts "Thank you for your patronage!"        
+[1] pry(main)*       print receipt        
+[1] pry(main)*     end      
+[1] pry(main)*   end  
+[1] pry(main)*   exit
+lunsee ~
+$ irb
+irb(main):001:0> class Receipt 
+irb(main):002:1>     def initialize(service, cost, receipt)
+irb(main):003:2>         @cost = cost 
+irb(main):004:2>         @receipt = receipt 
+irb(main):005:2>          @service = service
+irb(main):006:2>     end
+irb(main):007:1>   def service_getter(service)
+irb(main):008:2>         puts "What is the name of the good or service provided?"
+irb(main):009:2>         good_service_input = gets.chomp
+irb(main):010:2>         service = good_service_input.downcase
+irb(main):011:2>        
+irb(main):012:2*     end
+irb(main):013:1>     def cost_getter(cost)
+irb(main):014:2>         puts "What is the cost of the service?"
+irb(main):015:2>         cost_input = gets.chomp
+irb(main):016:2>         cost = cost_input.to_f
+irb(main):017:2>     end
+irb(main):018:1>     
+irb(main):019:1*     def print_receipt(receipt)
+irb(main):020:2>         company = "Particular Assembly, Inc." 
+irb(main):021:2>         receipt = "Company Name: #{company}", "Good/Service Provided: #{service}", "Cost: #{cost}" 
+irb(main):022:2>         puts "Thank you for your patronage!"
+irb(main):023:2>         print receipt
+irb(main):024:2>     end
+irb(main):025:1> end
+=> nil
+irb(main):026:0> 
