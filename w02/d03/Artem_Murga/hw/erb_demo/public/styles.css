@@ -1,0 +1,17 @@
+
+
+h1 {
+	text-align: center;
+	
+}
+
+body {
+	background-color: white;
+}
+.greeting {
+	font-family: Arial;
+	color: grey;
+}
+.form {
+	text-align: center;
+}
