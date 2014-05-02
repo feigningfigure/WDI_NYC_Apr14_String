@@ -1,0 +1,20 @@
+Company Name: Consolidated Industries
+Good/Service Provided: Juice
+Cost: 10$
+Thank you for your patronage
+Company Name: Consolidated Industries
+Good/Service Provided: Bread
+Cost: $13
+Thank you for your patronage
+Company Name: Consolidated Industries
+Good/Service Provided: toast
+Cost: $1
+Thank you for your patronage
+Company Name: Consolidated Industries
+Good/Service Provided: Sugar
+Cost: $10
+Thank you for your patronage
+Company Name: Consolidated Industries
+Good/Service Provided: car repair
+Cost: $500
+Thank you for your patronage

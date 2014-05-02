@@ -1,0 +1,7 @@
+receipt = {
+  "Haircut" => $60,
+  "Smoothie" => $5,
+  "Cleaning Service" => $80,
+  "Fresh Direct" => $157,
+  "Manicure" => $25
+}
