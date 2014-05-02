@@ -1,3 +1,6 @@
+require 'pry'
+
+
 class Register
 
 	attr_accessor :company
@@ -9,12 +12,15 @@ class Register
 	end
 
 	def to_s
-		# puts "Company Name: Particular Assembly Inc.\nGood/Services Provided: #{@name}\nCost: $#{price}\nThank you for your patronage"
+		"		Company Name: #{@company}
+		Good/Services Provided: #{@item}
+		Cost: $#{@price}
+		Thank you for your patronage"
 
-		puts "Company Name: #{@company}"
-		puts "Good/Services Provided: #{@item}"
-		puts "Cost: $#{@price} Thank you for your patronage"
-		puts "Thank you for your patronage!"
+		# "Company Name: #{@company}"
+		# "Good/Services Provided: #{@item}"
+		# "Cost: $#{@price}"
+		# "Thank you for your patronage!"
 
 	end
 
@@ -27,14 +33,18 @@ class Register
 		@price = gets.chomp.to_i
 
 		@receipt[@item] = @price
+	end
 
+	def print_receipt
+
+		add_to_receipt
 		puts "Did you purchase anything else? (y)es or (n)o"
 		@answer = gets.chomp.downcase
 
 		if @answer == "y" 
-			add_to_receipt
+			print_receipt
 		elsif @answer == "n"
-			@receipt.to_s
+			puts self.to_s
 		else
 			puts "Error!"
 		end
@@ -44,7 +54,7 @@ class Register
 end
 
 Geico = Register.new("Geico")
-Geico.add_to_receipt
+Geico.print_receipt
 
 
 # puts "Enter Commodity: "
