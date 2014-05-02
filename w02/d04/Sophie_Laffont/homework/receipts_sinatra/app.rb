@@ -12,7 +12,7 @@ post '/save_receipt' do
 	company = params[:company]
 	service = params[:service]
 	cost = params[:cost] 
-	receipt_file.write "Company: #{company}\n Service: #{service}\n Cost: #{cost}\nThank you for your patronage and please pay on time!" 
+	receipt_file.write "#{company}\n#{service}\n #{cost}\n" 
 
 	receipt_file.close
 	redirect '/show_receipt' # '/'  this indicates a route
@@ -20,13 +20,14 @@ end
 
 get '/show_receipt' do
 
-receipt_file = File.open("./wallet/receipt.txt", "r" )
-receipt_file.read "Company: #{company}\n Service: #{service}\n Cost: #{cost}\nThank you for your patronage and please pay on time!" 
+	receipt_file = File.open("./wallet/receipt.txt", "r" )
+	
+	@show_receipt = receipt_file.read.split("\n") 
 	receipt_file.close
 	erb :show
 
 end
 
-
+# "Company: #{company}\n Service: #{service}\n Cost: #{cost}\nThank you for your patronage and please pay on time!" 
 
 
