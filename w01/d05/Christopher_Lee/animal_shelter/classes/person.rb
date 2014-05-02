@@ -24,4 +24,8 @@ class Person
 		animal_name = Animal.new(animal_name, animal_age, animal_gender,  animal_type, animal_toys)
 		@pets[animal_name.name.to_sym] = animal_name
 	end
+
+	def donate_pet(animal_name)
+		@pets.delete(animal_name.to_sym)
+	end
 end
