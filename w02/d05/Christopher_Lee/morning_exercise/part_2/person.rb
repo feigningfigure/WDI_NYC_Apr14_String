@@ -17,6 +17,7 @@ class Person
   end
 
   def self.fill_people_array
+    $people_array.clear
     50.times do
       $people_array << Person.new
     end

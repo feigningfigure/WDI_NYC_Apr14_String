@@ -10,3 +10,4 @@ puts new_person_array.each { |person| person.to_s}
 #NEEL Solution
 
 #if i don't care what name, company, email, are, do you need to pass them into your class
+
