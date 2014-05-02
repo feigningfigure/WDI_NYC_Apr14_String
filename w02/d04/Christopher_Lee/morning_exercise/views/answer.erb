@@ -1,0 +1,10 @@
+<h1>Q: <%= @question  %></h1>
+<h1>A: <%=@fortune %></h1>
+
+<h1>Ask Again</h1>
+<form action="/request">
+  <input type ="text" name="user_question" placeholder="Your Question" style="padding: 10px;">
+  <input type ="submit" value="Ask" class="button">
+</form>
+
+<h4><a href="/">back to home</a></h4>
