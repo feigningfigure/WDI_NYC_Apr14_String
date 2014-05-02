@@ -1,0 +1,22 @@
+ul {
+
+	list-style: none;
+}
+
+h1 {
+	color: blue;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+	margin-left: 70px;
+}
+
+#right {
+	float: right;
+}
+
+#left {
+	float: left;
+	width: 40%;
+}
