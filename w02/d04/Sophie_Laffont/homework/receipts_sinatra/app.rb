@@ -28,6 +28,4 @@ get '/show_receipt' do
 
 end
 
-# "Company: #{company}\n Service: #{service}\n Cost: #{cost}\nThank you for your patronage and please pay on time!" 
-
 
