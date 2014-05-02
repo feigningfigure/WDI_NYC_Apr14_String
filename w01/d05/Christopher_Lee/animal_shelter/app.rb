@@ -97,6 +97,17 @@ def menu
     puts @shelter.clients[adopter.to_sym].display_pets
   when "F"
     # Put Animal Up For Adoption
+    # You need to a) select the client b) go into the client's pet hash and move the animal into
+    # the shelter
+    puts "Which client will be putting their animal up for adoption?"
+    donater = gets.chomp.capitalize
+    puts "Which animal will they be giving up for adoption?"
+    animal_name = gets.chomp.capitalize
+    @shelter.animals[animal_name.to_sym] = @shelter.clients[donater.to_sym].pets[animal_name.to_sym]
+    @shelter.clients[donater.to_sym].donate_pet(animal_name)
+    puts "#{@shelter.name} is now the happy home of #{animal_name}"
+    puts @shelter.animals[animal_name.to_sym].to_s
+
   when "Q"
     Kernel.exit
   end

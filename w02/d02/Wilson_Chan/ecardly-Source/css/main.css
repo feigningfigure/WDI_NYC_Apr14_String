@@ -1,0 +1,86 @@
+/* ECardly Project */
+h1, h2, h3, p{
+  font-family: arial, helvetica, sans_serif;
+}
+
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+
+header {
+    background-image: url(../images/background.jpg);
+    background-repeat: repeat-x;
+    background-color: #cccccc;
+}
+
+.logo {
+    z-index: 100;
+    width: 216px;
+    height: 213px;
+    margin: 0 auto;
+    background: url(../images/logo.png) no-repeat top left;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+body{
+     background-color: #fff
+     color: #000;
+
+
+}
+
+#main{
+     width: 620px;
+     background-color: #000;
+     padding: 10px;
+     float: left;
+}
+
+h2{
+     font-size: 20px;
+}
+
+
+#main p{
+     font-size: 12px;
+     margin-left: 20px;
+}
+
+
+.ecard{
+     margin-right: 10px;
+}
+
+#sidebar{
+
+}
+
+img{
+     margin: 5px;
+}
+
+#icons{
+     text-align: center;
+}
+
+footer{
+     clear:both;
+}
+
+
