@@ -8,3 +8,14 @@ get '/' do
 
 	erb :index
 end
+
+get '/friend' do
+	username = params[:username]
+
+	url = "http://graph.facebook.com/#{username}"
+	friend_json = HTTParty.get(url) 
+	friend = JSON(friend_json) 
+
+	erb :friend 
+
+end
