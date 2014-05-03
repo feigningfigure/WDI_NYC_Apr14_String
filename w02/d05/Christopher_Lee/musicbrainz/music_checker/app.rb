@@ -30,17 +30,19 @@ end
 def last_fm_image_return(album_name)
     search = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=album.search&album=#{album_name}&api_key=4feb802c67b65c876f49cfae2463ca30&format=json")
 
-    album_results = search["results"]["albummatches"]["album"]
+    album_results = search["results"]["albummatches"]#["album"]
     album_image = []
-
-    album_results.each do |result|
-      if result["name"].downcase == album_name.split("+").join(" ").downcase
-      album_image << result
+    album_results.each do |key, value|
+      binding.pry
+     if value["name"].downcase == album_name.split("+").join(" ").downcase
+      album_image << value
       # puts result
       end
     end
     album_image
 end
+
+# search = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=album.search&album=peter+green's+fleetwood+mac&api_key=4feb802c67b65c876f49cfae2463ca30&format=json")
 
 get '/search' do
   artist_name = params[:artist_name]
@@ -68,8 +70,13 @@ get '/search' do
 
   @album_art_array = []
   album_title_array.each do |album_title|
-      @album_art_array << itunes_api_return(album_title, artist_name)
+    @album_art_array << last_fm_image_return(album_title)
   end
+
+  # @album_art_array = []
+  # album_title_array.each do |album_title|
+  #     @album_art_array << itunes_api_return(album_title, artist_name)
+  # end
 
   @image = last_api_return(artist_name)
   erb :search
