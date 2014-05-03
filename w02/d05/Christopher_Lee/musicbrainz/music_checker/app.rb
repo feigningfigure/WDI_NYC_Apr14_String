@@ -20,6 +20,11 @@ def last_api_return(artist_name)
   return json_from_last["artist"]["image"][3]["#text"]
 end
 
+def itunes_api_return
+
+
+end
+
 get '/search' do
   artist_name = params[:artist_name]
     if artist_name.split.length > 1
@@ -34,16 +39,24 @@ get '/search' do
       @artist_hash = artist_hash
     end
   end
-  @image = last_api_return(artist_name)
-  # last_api_return = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=#{artist_name}&api_key=4feb802c67b65c876f49cfae2463ca30&format=json")
-  # @image = last_api_return["artist"]["image"][3]["#text"]
+  artist_id = @artist_hash["id"]
+  #### look up albums
+  release_list = HTTParty.get("http://musicbrainz.org/ws/2/release/?query=arid:#{artist_id}")["metadata"]["release_list"]["release"]
+  # album_title_temp = release_list[0]["title"].split.join("+")
+  ######
+  album_title_array = []
+  release_list.each do |release|
+    album_title_array << release["title"].split.join("+")
+  end
 
-  # image = Echowrap.artist_images(:name => params[:artist_name],:results => 1 )
-  # @image = image[0].url
+  # look up album in itunes
+  album_look_up = HTTParty.get("https://itunes.apple.com/search?term=#{album_title_temp}&media=music&music=album&musicArtist=#{artist_name}")
+  # @album_art = JSON(album_look_up)["results"][0]["artworkUrl100"]
+  # will just be a hash containing the results
+  # we will cycle through and look up the ["artworkUrl100"] url which will then be an image
+  @album_art = JSON(album_look_up)["results"]
+
+  ########
+  @image = last_api_return(artist_name)
   erb :search
 end
-
-
-test = HTTParty.get("https://itunes.apple.com/search?term=Fleetwood%20Mac%20in%20Chicago&media=music&music=album&musicArtist=fleetwood%20mac")
-
-JSON(test)["results"][0]["artworkUrl100"]

@@ -2,4 +2,10 @@
 
 <h1><%= @artist_hash["name"] %> is a <%= @artist_hash["gender"] %></h1>
 
-<img src=<%= @image %>
+<img src= <%= @image %>>
+
+<% @album_art.each do |album| %>
+  <img src= <%= album["artworkUrl100"] %>>
+<% end %>
+
+
