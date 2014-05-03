@@ -4,8 +4,4 @@
 
 <img src= <%= @image %>>
 
-<% @album_art.each do |album| %>
-  <img src= <%= album["artworkUrl100"] %>>
-<% end %>
-
-
+<%=  @album_art_array  %>

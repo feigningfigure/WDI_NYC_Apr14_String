@@ -20,9 +20,26 @@ def last_api_return(artist_name)
   return json_from_last["artist"]["image"][3]["#text"]
 end
 
-def itunes_api_return
+def itunes_api_return(album_title, artist_name)
+    album_look_up = HTTParty.get("https://itunes.apple.com/search?term=#{album_title}&media=music&music=album&musicArtist=#{artist_name}")
+    # unless JSON(album_look_up)["resultCount"] == 0
+    #   album_art = JSON(album_look_up)["results"][0]["artworkUrl100"]
+    # end
+end
 
+def last_fm_image_return(album_name)
+    search = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=album.search&album=#{album_name}&api_key=4feb802c67b65c876f49cfae2463ca30&format=json")
 
+    album_results = search["results"]["albummatches"]["album"]
+    album_image = []
+
+    album_results.each do |result|
+      if result["name"].downcase == album_name.split("+").join(" ").downcase
+      album_image << result
+      # puts result
+      end
+    end
+    album_image
 end
 
 get '/search' do
@@ -49,14 +66,26 @@ get '/search' do
     album_title_array << release["title"].split.join("+")
   end
 
-  # look up album in itunes
-  album_look_up = HTTParty.get("https://itunes.apple.com/search?term=#{album_title_temp}&media=music&music=album&musicArtist=#{artist_name}")
-  # @album_art = JSON(album_look_up)["results"][0]["artworkUrl100"]
-  # will just be a hash containing the results
-  # we will cycle through and look up the ["artworkUrl100"] url which will then be an image
-  @album_art = JSON(album_look_up)["results"]
+  @album_art_array = []
+  album_title_array.each do |album_title|
+      @album_art_array << itunes_api_return(album_title, artist_name)
+  end
 
-  ########
   @image = last_api_return(artist_name)
   erb :search
 end
+
+
+
+
+  # look up album in itunes
+  # album_look_up = HTTParty.get("https://itunes.apple.com/search?term=#{album_title_temp}&media=music&music=album&musicArtist=#{artist_name}")
+  # @album_art = JSON(album_look_up)["results"][0]["artworkUrl100"]
+  # will just be a hash containing the results
+  # we will cycle through and look up the ["artworkUrl100"] url which will then be an image
+  # @album_art = JSON(album_look_up)["results"]
+
+  # Zero is OK
+  # JSON(album_look_up)["results"][0]["artworkUrl100"]
+
+  ## THIS IS GOOD KEEEEEEP
