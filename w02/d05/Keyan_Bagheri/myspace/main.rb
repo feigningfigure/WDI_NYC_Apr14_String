@@ -14,8 +14,14 @@ get '/friend' do
 
 	url = "http://graph.facebook.com/#{username}"
 	friend_json = HTTParty.get(url)
-	friend = JSON(friend_json)
+	@friend = JSON(friend_json)
 
-	binding.pry
+	if @friend["error"] #error is specific to facebook parameters
+		@message ="Error: Friend not found."
+		erb :index
+	else
+		erb :friend
+	end
+
 end
 
