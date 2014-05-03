@@ -144,3 +144,8 @@
     Good/Service Provided: Chronic
     Cost: $50
     Thank you for your patronage
+    Consolidated Industries
+    Thank you for visiting us, Dara
+    Good/Service Provided: Apple
+    Cost: $5
+    Thank you for your patronage
