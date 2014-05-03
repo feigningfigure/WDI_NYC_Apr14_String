@@ -20,6 +20,14 @@ def last_api_return(artist_name)
   return json_from_last["artist"]["image"][3]["#text"]
 end
 
+#look up
+
+#sting interpolate this
+# http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=4feb802c67b65c876f49cfae2463ca30&mbid=b3b4bdef-871d-32fa-baef-9e88f3b8d84a&format=json
+#spit out mbid instead of album names
+
+
+
 def itunes_api_return(album_title, artist_name)
     album_look_up = HTTParty.get("https://itunes.apple.com/search?term=#{album_title}&media=music&music=album&musicArtist=#{artist_name}")
     # unless JSON(album_look_up)["resultCount"] == 0
@@ -29,17 +37,15 @@ end
 
 def last_fm_image_return(album_name)
     search = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=album.search&album=#{album_name}&api_key=4feb802c67b65c876f49cfae2463ca30&format=json")
-
-    album_results = search["results"]["albummatches"]#["album"]
-    album_image = []
-    album_results.each do |key, value|
-      binding.pry
-     if value["name"].downcase == album_name.split("+").join(" ").downcase
-      album_image << value
+    album_results = search["results"]["albummatches"]["album"]
+    @album_image = []
+    album_results.each do |item|
+     if item["name"].downcase == album_name.split("+").join(" ").downcase
+      @album_image << item
       # puts result
       end
     end
-    album_image
+    @album_image
 end
 
 # search = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=album.search&album=peter+green's+fleetwood+mac&api_key=4feb802c67b65c876f49cfae2463ca30&format=json")
