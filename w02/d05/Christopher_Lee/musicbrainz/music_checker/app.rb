@@ -1,7 +1,14 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty'
+require 'echowrap'
+require 'pry'
 
+Echowrap.configure do |config|
+  config.api_key =      'EYWYMJLC2MMGVFF1C '
+  config.consumer_key =  'e6d40262e3b1824bbcc164a93a46742f '
+  config.shared_secret = 'GdgdbUa2SNWQ7taOh+scuQ'
+end
 
 get '/' do
   "Hello World!"
@@ -22,5 +29,7 @@ get '/search' do
       @artist_hash = artist_hash
     end
   end
+  image = Echowrap.artist_images(:name => params[:artist_name],:results => 1 )
+  @image = image[0].url
   erb :search
 end
