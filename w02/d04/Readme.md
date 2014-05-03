@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+###Week02-Day04
+=======
 ###Week02-Day4
 
+>>>>>>> 7543bc6a78131d77d3e4d66b452414e3a40f1105
 
 #WORK IN YOUR OWN FOLDER ONLY!
 #Your pull-request title must start with `hw_w02_submission`
@@ -10,7 +14,11 @@
 ## Morning Exercise
 
 ### Magic 8 Ball
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> 7543bc6a78131d77d3e4d66b452414e3a40f1105
 
 Make a Magic 8 Ball using Sinatra!
 
@@ -29,6 +37,21 @@ Your game will:
 
 - include a "Submit" button
 - make your pages well styled; include an image
+<<<<<<< HEAD
+
+
+---
+
+##Part 1
+
+### File I/O
+
+
+----
+
+
+#WORK IN YOUR OWN FOLDER ONLY!
+=======
 ---
 
 ##Part 1
@@ -68,3 +91,4 @@ Your game will:
 - Include a view to show the user the name and cost of goods/services from the last receipt that was created.
 
 ---
+>>>>>>> 7543bc6a78131d77d3e4d66b452414e3a40f1105
