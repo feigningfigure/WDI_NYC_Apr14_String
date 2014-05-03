@@ -46,7 +46,13 @@ urls_hash = MusicBrainz::Artist.find_by_name(params[:artist_name]).urls
 
 @urls = urls_hash[:wikipedia]
 
-@id = MusicBrainz::Artist.find_by_name(params[:album_name]).id
+@album_title = MusicBrainz::ReleaseGroup.search(params[:artist_name], params[:album_name])[0][:title]
+
+@album_info = MusicBrainz::ReleaseGroup.search(params[:artist_name], params[:album_name])[0][:type]
+
+# @album_id = album_hash.title
+
+# @id = MusicBrainz::Artist.find_by_name(params[:album_name])[:id]
 
 # release_id = MusicBrainz::Release.find(id).id
 
