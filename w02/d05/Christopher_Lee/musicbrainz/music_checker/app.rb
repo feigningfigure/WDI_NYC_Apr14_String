@@ -67,6 +67,7 @@ get '/search' do
 
   artist_list = api_search["metadata"]["artist_list"]["artist"]
 
+  # add an if else to get the approximation. maybe use gem here?
   artist_list.each do |artist_hash|
     if artist_hash["score"] == "100"
       @artist_hash = artist_hash
