@@ -71,7 +71,9 @@ get '/search' do
   #introduce error checking here
   artist_key = search["results"][0]["key"]
 
-  @sorted_albums = client.getAlbumsForArtist(:artist =>"#{artist_key}",:sort => "releaseDate").uniq{|h| h["name"]}
+  sorted_albums = client.getAlbumsForArtist(:artist =>"#{artist_key}",:sort => "releaseDate")
+  @sorted_albums = sorted_albums.uniq{|h| h["releaseDate"]}.uniq{|h| h["name"]}
+  # @sorted_albums = client.getAlbumsForArtist(:artist =>"#{artist_key}").uniq{|h| h["name"]}
   @result = @sorted_albums[0]["name"]
   @image = last_api_return(artist_name)
   erb :search
