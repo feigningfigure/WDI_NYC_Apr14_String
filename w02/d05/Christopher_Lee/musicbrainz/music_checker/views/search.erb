@@ -4,4 +4,6 @@
 
 <img src= <%= @image %>>
 
-<%=  @album_art_array  %>
+<%  @album_art_array.each do |album| %>
+  <img src= "<%= album %>">
+<% end %>
