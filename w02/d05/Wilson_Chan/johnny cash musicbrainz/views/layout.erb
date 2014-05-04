@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="johnny cash, artist relationships">
+    <meta name="keywords" content="music, classic country">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Signika:600' rel='stylesheet' type='text/css'>
+    <title><%= @title || "Six Degrees of Johnny Cash" %></title>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+            <header>
+              <%= erb :nav %>
+            </header>
+
+            <section>
+              <%= yield %>
+            </section>
+
+    </div>
+
+  </body>
+
+</html>
