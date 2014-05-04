@@ -3,26 +3,23 @@ require 'sinatra/reloader'
 require 'httparty'
 require 'pry'
 require 'json'
+require_relative 'SANDBOX'
 
 get "/" do
   erb :index
 end
 
 get '/artist/' do
-  # Get query entry from user form from index and make it websafe.
   query = params[:query].gsub(" ", "%20")
-  # Set query URL
   url = "http://musicbrainz.org/ws/2/artist/?query=#{query}"
-  # Grab the data from the internet
-  artist_json = HTTParty.get(url)
-
-  # Converts to hash with '=>' and sets it to an instance variable.
-  artist_hash = artist_json.parsed_response
-
- # Goes through the parsed data to locate the first "name" instance which is the fourth hash in.
-  @artist = artist_hash["metadata"]["artist_list"]["artist"][0]["name"]
-
+  # Get the XML Data
+  artist_xml = HTTParty.get(url)
+  # Parse XML to JSON
+  artist_json = artist_xml.parsed_response
+  # Create HASH data on artist from JSON
+  @artist_hash = artist_json["metadata"]["artist_list"]["artist"][0]
+  @id = @artist_hash["id"]
+  @name = @artist_hash["name"]
+  @country = @artist_hash["area"]["name"]
   erb :artist
-
-
 end
