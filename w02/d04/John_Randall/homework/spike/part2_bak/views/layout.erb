@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <title>Online Receipt Generator</title>
+</head>
+
+
+<body>
+  <h1>Online Receipt Generator</h1>
+
+<nav>
+<ul>
+<li><a href="/">input</a></li>
+<li><a href="/receipt">receipt</a></li>
+<li><a href="/previous_transaction_receipt">previous receipt</a></li>
+</ul>
+</nav>
+
+<div id="receipt_box">
+
+
+  <%= yield %>
+</div>
+</body>
+
+</html>
