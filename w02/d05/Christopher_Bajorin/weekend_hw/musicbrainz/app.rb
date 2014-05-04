@@ -2,7 +2,6 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'JSON'
 require 'HTTParty'
-require 'prettyprint'
 require 'pry'
 require 'musicbrainz'
 
@@ -37,6 +36,8 @@ get '/artist/:id' do
   @comps = []
   if albums["count"].to_i == 1
       @single_album = albums["release_group"]
+  elsif albums["count"].to_i == 0
+    @no_data = "No data available"
   elsif albums["count"].to_i > 1
     albums["release_group"].each do |index|
       # binding.pry
@@ -46,11 +47,37 @@ get '/artist/:id' do
         @comps << index
       end
     end
-  else
-    @no_data = "No Data Available"
+
   end
 
 
   erb :artist
 end
 
+
+get '/:name/albums/:album_id' do
+  album_id = params[:album_id]
+  url = "http://www.musicbrainz.org/ws/2/release-group/#{album_id}?inc=releases"
+  release_list = HTTParty.get(url)
+
+  top_release = release_list["metadata"]["release_group"]["release_list"]
+
+  if top_release["count"].to_i == 0
+  erb :shits_broken_yo
+  elsif top_release["count"].to_i == 1
+    temp_id = top_release["release"]["id"]
+    url = "http://www.musicbrainz.org/ws/2/release/#{temp_id}?inc=recordings"
+    release_hash = HTTParty.get(url)
+  else
+    temp_id = top_release["release"][0]["id"]
+    url = "http://www.musicbrainz.org/ws/2/release/#{temp_id}?inc=recordings"
+    release_hash = HTTParty.get(url)
+  end
+  @title = release_hash["metadata"]["release"]["title"]
+
+  @disc = release_hash["metadata"]["release"]["medium_list"]
+
+  erb :album
+
+
+end
