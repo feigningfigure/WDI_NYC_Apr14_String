@@ -1,0 +1,14 @@
+<h2> <%= @artist["name"] %> </h2>
+
+<h3><%= @artist["disambiguation"]%></h3>
+
+<div class="box">
+	<h4>Country: <%= @artist["country"]%></h4>
+	<% if @artist.has_key?("gender")%>
+	<h4>Gender: <%= @artist["gender"]%></h4>
+	<%end%>
+	<h4>Born/Began: <%= @artist["life_span"]["begin"]%></h4>
+	<% if @artist['life_span'].has_key?("end")%>
+	<h4>Died: <%= @artist["life_span"]["end"]%></h4>
+	<%end%>
+</div>
