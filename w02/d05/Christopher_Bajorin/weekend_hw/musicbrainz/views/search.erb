@@ -2,8 +2,8 @@
 
 
 <ul>
-  <% @suggestion_array.each do |index| %>
-  <li><a href="/artist/<%= index[:mbid] %>"><%= index[:name] %></a></li>
+  <% @suggestion_array.each do |artist| %>
+  <li><a href="/artist/<%= artist[:mbid] %>"><%= artist[:name] %></a></li>
     <% end %>
 </ul>
 

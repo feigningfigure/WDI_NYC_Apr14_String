@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'JSON'
 require 'HTTParty'
+require 'prettyprint'
 require 'pry'
 require 'musicbrainz'
 
@@ -10,13 +12,6 @@ MusicBrainz.configure do |c|
   c.app_version = "1.0"
   c.contact = "support@mymusicapp.com"
 
-  # Cache config (optional)
-  c.cache_path = "/tmp/musicbrainz-cache"
-  c.perform_caching = true
-
-  # Querying config (optional)
-  c.query_interval = 1.2 # seconds
-  c.tries_limit = 2
 end
 
 
@@ -27,31 +22,35 @@ end
 get '/search' do
   @search = params[:search]
   @suggestion_array = MusicBrainz::Artist.search(@search.to_s)
-  # @suggestion_names = []
 
-  # @suggestion_array.each do |index|
-  #   name = index[:name]
-  #   @suggestion_names << name
-  #   id = index[:mbid]
-  #   @suggestion_id  << id
-  # end
-
-  # puts @suggestion_names
   erb :search
 end
 
 get '/artist/:id' do
-  puts "hello #{params[:id]}"
+  artist_id = params[:id]
+  url = "http://www.musicbrainz.org/ws/2/artist/#{artist_id}?inc=release-groups"
+  artist_hash = HTTParty.get(url)
+  @artist_hash = artist_hash["metadata"]["artist"]
+  albums = @artist_hash["release_group_list"]
+
+  @non_comps = []
+  @comps = []
+  if albums["count"].to_i == 1
+      @single_album = albums["release_group"]
+  elsif albums["count"].to_i > 1
+    albums["release_group"].each do |index|
+      # binding.pry
+      if index.has_key?("secondary_type_list") == false
+        @non_comps << index
+      else
+        @comps << index
+      end
+    end
+  else
+    @no_data = "No Data Available"
+  end
 
 
+  erb :artist
 end
 
-=begin
-
-  artist = {
-    name: @name
-
-  }
-
-
-=end

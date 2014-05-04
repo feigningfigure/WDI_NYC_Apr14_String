@@ -1,0 +1,32 @@
+<h1> <%= @artist_hash["name"] %> </h1>
+<h3> Discography </h3>
+
+  <% if defined?(@single_album) %>
+  <h5>Album</h5>
+  <ul>
+    <li><a href=""><%= @single_album["title"]%></a></li>
+  </ul>
+  <%end%>
+
+  <% if @non_comps.length > 0 %>
+    <h5> Albums </h5>
+    <ul>
+      <% @non_comps.each do |index| %>
+      <li><a href=""><%=index["title"]%></a></li>
+      <%end%>
+    </ul>
+  <%end%>
+
+  <% if @comps.length > 0 %>
+  <h5> Compilations </h5>
+  <ul>
+    <% @comps.each do |index| %>
+    <li><a href=""><%=index["title"]%></a></li>
+    <%end%>
+  </ul>
+  <%end%>
+
+
+<form action='/' method="GET">
+  <input type='submit' value="HOME">
+</form>
