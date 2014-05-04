@@ -4,9 +4,13 @@
 
 <h1>Active:<%= @artist_hash["life_span"]["begin"] %> - <%= @artist_hash["life_span"]["ended"] %></h1>
 
+<%= @artist_info %>
 
-<img src= <%= @image %>>
+<img class="main_image" src= <%= @image %>>
 
   <% @sorted_albums.each do |album| %>
      <img src= "<%= album["icon"] %>" title= "<%= album["releaseDate"] %>">
   <% end %>
+
+
+<% :track %>

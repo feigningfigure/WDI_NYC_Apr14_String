@@ -19,7 +19,7 @@ end
 
 def last_api_return(artist_name)
   json_from_last = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=#{artist_name}&api_key=4feb802c67b65c876f49cfae2463ca30&format=json")
-  return json_from_last["artist"]["image"][3]["#text"]
+  return json_from_last["artist"]["image"][4]["#text"]
 end
 
 def itunes_api_return(album_name, artist_name)
@@ -49,8 +49,26 @@ def last_fm_image_return(artist_name,album_name)
   @album_image[0]
 end
 
+def wiki_search(artist_name)
+  wiki_search = HTTParty.get("https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exchars=1000&titles=#{artist_name}&format=json")
+  extract = wiki_search["query"]["pages"]
+  extract = wiki_search["query"]["pages"]["#{extract.keys[0]}"]
+  extract = extract["extract"]
+end
+
+
+
+# extract = wiki_search["query"]["pages"]
+# extract = wiki_search["query"]["pages"]["#{extract.keys[0]}"]
+# extract = extract["extract"]
+
+# ["#{extract.keys[0]}"]
+
+
+
+
 get '/search' do
-  artist_name = params[:artist_name]
+  artist_name = params[:artist_name].capitalize
   if artist_name.split.length > 1
       artist_name = artist_name.split.join("+")
   end
@@ -58,16 +76,23 @@ get '/search' do
   api_search = HTTParty.get("http://musicbrainz.org/ws/2/artist/?query=artist:#{artist_name}")
   artist_list = api_search["metadata"]["artist_list"]["artist"]
 
+  #multiple results
+   # artist_list.is_a? Hash false
+   # artist_list.is_a? Array true
+
   # still need to make error page
-  artist_list.each do |artist_hash|
-    if artist_hash["score"] == "100"
-      @artist_hash = artist_hash
-    # elsif artist_hash["score"].to_i > 90
-    #   @artist_hash = artist_hash
-    # else
-    #   erb :error
-    end
+  if artist_list.is_a? Hash
+    @artist_hash = artist_list
+  # elsif
+  else
+      artist_list.each do |artist_hash|
+        if artist_hash["score"] == "100"
+          @artist_hash = artist_hash
+        end
+      end
+  # else
   end
+
 
   client = RdioApi.new(:consumer_key => "ww2aaagaw3jcj632gm53hy5m", :consumer_secret => "MsWVVNUrZj")
   #Find Key
@@ -79,6 +104,10 @@ get '/search' do
   sorted_albums = client.getAlbumsForArtist(:artist =>"#{artist_key}",:sort => "releaseDate")
   @sorted_albums = sorted_albums.uniq{|h| h["releaseDate"]}.uniq{|h| h["name"]}
   # @sorted_albums = client.getAlbumsForArtist(:artist =>"#{artist_key}").uniq{|h| h["name"]}
+
+
+  @artist_info = wiki_search(artist_name)
+
   @result = @sorted_albums[0]["name"]
   @image = last_api_return(artist_name)
   erb :search
