@@ -124,3 +124,92 @@ puts @album_art_array
 
 # album_results.is_a? Hash
 # # false
+
+
+album_look_up = HTTParty.get("https://itunes.apple.com/search?term=Fleetwood+Mac+in+Chicago&media=music&music=album&musicArtist=fleetwood+mac")
+
+
+client = RdioApi.new(:consumer_key => CONSUMER_KEY, :consumer_secret => CONSUMER_SECRET)
+
+ww2aaagaw3jcj632gm53hy5m
+Shared Secret:
+MsWVVNUrZj
+
+
+client = RdioApi.new(:consumer_key => "ww2aaagaw3jcj632gm53hy5m", :consumer_secret => "MsWVVNUrZj")
+
+
+Wu tang - find artist
+client.search(:query=>"Wu Tang","types"=>"Artist")
+
+Wu Tang Albums - sorted by date
+client.getAlbumsForArtist(:artist =>"r17570",:sort => "releaseDate")
+
+ client = RdioApi.new(:consumer_key => "ww2aaagaw3jcj632gm53hy5m", :consumer_secret => "MsWVVNUrZj")
+
+
+sorted = client.getAlbumsForArtist(:artist =>"r17570",:sort => "releaseDate").uniq{|h| h["name"]}
+
+def hash_in_array_has_value?(arr, value)
+  arr.each do |item|
+    return true if item.has_value? "#{value}"
+  end
+end
+
+holder = []
+sorted.each do |item|
+  unless hash_in_array_has_value?(sorted, item["name"])
+    holder << item
+  end
+end
+
+
+######################
+
+test2.each do |item|
+if item.has_value? "Enter The Wu-Tang"
+ p "it does"
+ end
+end
+
+two_hashes =[{:name => "Freddie_Jones", :job => "veterinarian"},{:name => "Freddie_Jones", :job => "firefighter"}]
+
+sorted.each do |item|
+   p item["name"]
+ end
+
+
+test2 = [{
+           "baseIcon" => "album/2/a/4/000000000003c4a2/square-200.jpg",
+        "releaseDate" => "1993-11-09",
+        "displayDate" => "Nov  9, 1993",
+           "duration" => 2169,
+            "isClean" => false,
+           "shortUrl" => "http://rd.io/x/Qj5Bm-E/",
+          "canStream" => true,
+           "embedUrl" => "https://rd.io/e/Qj5Bm-E/",
+               "type" => "a",
+              "price" => "8.99",
+                "key" => "a246946",
+               "icon" => "http://img00.cdn2-rdio.com/album/2/a/4/000000000003c4a2/square-200.jpg",
+          "canSample" => true,
+               "name" => "Enter The Wu-Tang",
+         "isExplicit" => true,
+             "artist" => "Wu-Tang Clan",
+                "url" => "/artist/Wu-Tang_Clan/album/Enter_The_Wu-Tang_1/",
+          "artistKey" => "r17570",
+             "length" => 9,
+          "trackKeys" => [
+             "t3012863",
+             "t3012924",
+             "t3012984",
+             "t3013068",
+             "t3013148",
+             "t3013251",
+             "t3013324",
+             "t3013407",
+             "t3013503"
+        ],
+          "canTether" => true,
+          "artistUrl" => "/artist/Wu-Tang_Clan/"
+    }]
