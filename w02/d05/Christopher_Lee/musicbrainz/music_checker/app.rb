@@ -38,22 +38,42 @@ end
 
 # https://itunes.apple.com/search?term=peter+greens+fleetwood+mac&media=music&music=album&musicArtist=fleetwood+mac
 
+# def last_fm_image_return(artist_name,album_name)
+#     search = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=album.search&artist=#{artist_name}&album=#{album_name}&api_key=4feb802c67b65c876f49cfae2463ca30&format=json")
+#     album_results = search["results"]["albummatches"]["album"]
+#     @album_image = []
+#     album_results.each do |item|
+#      #if item["name"].to_s == album_name.split("+").join(" ").downcase
+#       @album_image << item
+#       # puts result
+#     end
+#     @album_image.each do |item|
+#       if (item["name"].downcase) == (album_name.split("+").join(" ").downcase) && item["artist"].downcase == (artist_name.split("+").join(" ").downcase)
+#         @album_image.clear
+#         @album_image << item
+#       end
+#     end
+#     @album_image
+# end
+
 def last_fm_image_return(artist_name,album_name)
-    search = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=album.search&artist=#{artist_name}&album=#{album_name}&api_key=4feb802c67b65c876f49cfae2463ca30&format=json")
-    album_results = search["results"]["albummatches"]["album"]
-    @album_image = []
-    album_results.each do |item|
-     #if item["name"].to_s == album_name.split("+").join(" ").downcase
-      @album_image << item
-      # puts result
-    end
-    @album_image.each do |item|
-      if (item["name"].downcase) == (album_name.split("+").join(" ").downcase) && item["artist"].downcase == (artist_name.split("+").join(" ").downcase)
-        @album_image.clear
-        @album_image << item
+  search_friendly_album_name = album_name.encode(Encoding.find('ASCII'),:undef=>:replace,:replace => "%27")
+  search = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=album.search&artist=#{artist_name}&album=#{search_friendly_album_name}&api_key=4feb802c67b65c876f49cfae2463ca30&format=json")
+  album_results = search["results"]["albummatches"]["album"]
+   @album_image = []
+  if album_results.is_a? Hash
+    @album_image << album_results
+    # @album_image
+  else
+    album_results.each_with_index do |album, index|
+      if album_results[index]["artist"].downcase == (artist_name.split("+").join(" ").downcase) && (album_results[index]["name"].downcase) == (album_name.split("+").join(" ").downcase)
+        @album_image << album_results[index]
       end
     end
-    @album_image
+    # @album_image[0]
+  end
+  puts "#{album_name} worked"
+  @album_image[0]
 end
 
 # search = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=album.search&album=peter+green's+fleetwood+mac&api_key=4feb802c67b65c876f49cfae2463ca30&format=json")
@@ -101,23 +121,5 @@ end
 #   <img src= "<%= album %>">
 # <% end %>
 
-
-
-
-def last_fm_image_return(artist_name,album_name)
-    search = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=album.search&artist=#{artist_name}&album=#{album_name}&api_key=4feb802c67b65c876f49cfae2463ca30&format=json")
-    album_results = search["results"]["albummatches"]["album"]
-    @album_image = []
-    album_results.each_with_index do |album, index|
-      # p album_results[index]["name"].downcase
-      if album_results[index]["artist"].downcase == (artist_name.split("+").join(" ").downcase) && (album_results[index]["name"].downcase) == (album_name.split("+").join(" ").downcase)
-        # p "you win at #{index}"
-        @album_image << album_results[index]
-      end
-    end
-    @album_image
-end
-
 # use gem instead of complicated api call for discography
 
-search = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=album.search&artist=fleetwood+mac&album=seven+wonders&api_key=4feb802c67b65c876f49cfae2463ca30&format=json")
