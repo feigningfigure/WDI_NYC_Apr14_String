@@ -1,12 +1,53 @@
 <div class="notice">
 
-  <h1>MusicBrainz</h1>
+  <h1>jammr</h1>
+
+</div>
+
+<div class= artisthead>
+<h2>Artist name: <span class="artist_name"> <%= @artist_1["artist"]["name"] %></span></h2>
+
+<img src="<%= @artist_1["artist"]["image"].last["#text"] %>" />
+</div>
+<br>
+
+<h3> Top 5 Albums </h3>
+
+<div class = albums>
+
+<h4>Album: <%= @artist_1_albums["topalbums"]["album"][0]["name"] %></h4>
+<img src="<%= @artist_1_albums["topalbums"]["album"][0]["image"].last["#text"] %>" />
+
+
+<h4>Album: <%= @artist_1_albums["topalbums"]["album"][1]["name"] %></h4>
+<img src="<%= @artist_1_albums["topalbums"]["album"][1]["image"].last["#text"] %>" />
+
+
+<h4>Album: <%= @artist_1_albums["topalbums"]["album"][2]["name"] %></h4>
+<img src="<%= @artist_1_albums["topalbums"]["album"][2]["image"].last["#text"] %>" />
+
+
+<h4>Album: <%= @artist_1_albums["topalbums"]["album"][3]["name"] %></h4>
+<img src="<%= @artist_1_albums["topalbums"]["album"][3]["image"].last["#text"] %>" />
+
+
+<h4>Album: <%= @artist_1_albums["topalbums"]["album"][4]["name"] %></h4>
+<img src="<%= @artist_1_albums["topalbums"]["album"][4]["image"].last["#text"] %>" />
 
 </div>
 
 
 <h2>Artist name: <span class="artist_name"> <%= @result.name %></span></h2>
 
-<%= @embed_player_html %>
+<h2>Artist Country: <span class="artist_name"> <%= @result.country %></span></h2>
+
+<h2>Date Begin: <span class="artist_name"> <%= @result.date_begin %></span></h2>
+
+<h2>Date End: <span class="artist_name"> <%= @result.date_end %></span></h2>
+
+
+
+
+<div class="soundcloud"><%= @embed_player_html %></div>
 
 
