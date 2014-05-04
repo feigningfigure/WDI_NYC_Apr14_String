@@ -1,6 +1,9 @@
 <h1>Search Results</h1>
 
-<h1><%= @artist_hash["name"] %> is a <%= @artist_hash["gender"] %></h1>
+<h1><%= @artist_hash["name"] %> is a <%= @artist_hash["type"] %></h1>
+
+<h1>Active:<%= @artist_hash["life_span"]["begin"] %> - <%= @artist_hash["life_span"]["ended"] %></h1>
+
 
 <img src= <%= @image %>>
 

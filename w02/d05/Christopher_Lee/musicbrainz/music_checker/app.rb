@@ -58,9 +58,14 @@ get '/search' do
   api_search = HTTParty.get("http://musicbrainz.org/ws/2/artist/?query=artist:#{artist_name}")
   artist_list = api_search["metadata"]["artist_list"]["artist"]
 
+  # still need to make error page
   artist_list.each do |artist_hash|
     if artist_hash["score"] == "100"
       @artist_hash = artist_hash
+    # elsif artist_hash["score"].to_i > 90
+    #   @artist_hash = artist_hash
+    # else
+    #   erb :error
     end
   end
 
