@@ -1,17 +1,30 @@
 <div class="interface">
+<div class="artist_info">
 <div class= "title">
 <h1>Artist Info</h1>
 </div>
-<div class="info">
+
 <p>Artist info:</p>
 <ul>
 <li>Artist name: <%= @name %></li>
 <li>Country of origin: <%= @country %></li>
 <li>Date the band formed: <%= @date_begin %></li>
 <li>More info: <a href="<%= @urls %>">Wikipedia</a></li>
+<li>URL Hash: <a href="<%= @all_urls %>">Wikipedia</a></li>
+</div>
+
+<div class="album_info">
 
 <li>Album info: <%= @album_title %></li><li>Album description: <%= @album_info %></li>
+<!-- <li>Album Cover: <%= @cover_hash %></li>
+ --><li>Album ID: <%= @album_id %></li>
+ <li>Release Hash: <%= @release_hash %></li>
+ <li>Cover Art Hash: <img src= <%= @cover_art_hash %> /></img></li>
+
 </ul>
+
+<!-- <img href="<%= @cover_art %>" /> -->
+</div>
 <div class="details">
 <a href="/">Look up another artist</a>
 </div>

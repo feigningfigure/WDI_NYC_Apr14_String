@@ -1,0 +1,70 @@
+.interface{
+  color: #fff;
+background-color:#015a7a;
+text-align: center;
+float: top;
+max-width:300px;
+margin-left:auto;
+margin-right:auto;
+margin-bottom: 20px;
+border-radius: 10px;
+}
+
+.title{
+font-family: 'Dosis', sans-serif;
+font-weight: 200;
+}
+
+.details{
+font-family: 'Dosis', sans-serif;
+padding:15px 10px 0px 15px;
+line-height: 5px;
+}
+
+body{
+
+background-color: #02122e;
+background-image:url("https://dl.dropboxusercontent.com/u/15166676/headphones-2-edit.jpg");
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-position:center top;
+
+}
+
+.form{
+padding:0px 10px 20px 15px;
+margin-bottom: 20px;
+line-height: 5px;
+}
+
+.artist_image{
+position:fixed;
+top:0px;
+left:150px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.album_info{
+color: #fff;
+background-color:#015a7a;
+text-align: center;
+float: right;
+max-width:300px;
+margin-left:auto;
+margin-right:auto;
+margin-bottom: 20px;
+border-radius: 10px;
+}
+
+.artist_info{
+color: #fff;
+background-color:#015a7a;
+text-align: center;
+float: left;
+max-width:300px;
+margin-left:auto;
+margin-right:auto;
+margin-bottom: 20px;
+border-radius: 10px;
+}

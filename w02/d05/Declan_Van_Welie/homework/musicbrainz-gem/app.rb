@@ -46,9 +46,34 @@ urls_hash = MusicBrainz::Artist.find_by_name(params[:artist_name]).urls
 
 @urls = urls_hash[:wikipedia]
 
+@all_urls = urls_hash
+
 @album_title = MusicBrainz::ReleaseGroup.search(params[:artist_name], params[:album_name])[0][:title]
 
 @album_info = MusicBrainz::ReleaseGroup.search(params[:artist_name], params[:album_name])[0][:type]
+
+@album_id = MusicBrainz::ReleaseGroup.search(params[:artist_name], params[:album_name])[0][:id]
+#An attempt to call release instead of releases
+@release_hash = MusicBrainz::Release.find("#{@album_id}")
+
+#This removes the spaces in an album containing two words
+art_query = params[:album_name].gsub(" ","%20")
+
+album_get = HTTParty.get("http://musicbrainz.org/ws/2/release?query=#{art_query}")
+
+album_id = album_get["metadata"]["release_list"]["release"][0]["id"]
+
+cover_get = HTTParty.get("http://coverartarchive.org/release/#{album_id}")
+
+# Setup an if/then statement to return an error message if the cover art isn't found...
+# if cover_get != "nil" do
+
+@cover_art_hash = cover_get["images"][0]["image"]
+
+# art_get = HTTParty.get("http://coverartarchive.org/release/#{album_id}")
+
+
+
 
 # @album_id = album_hash.title
 
@@ -56,9 +81,11 @@ urls_hash = MusicBrainz::Artist.find_by_name(params[:artist_name]).urls
 
 # release_id = MusicBrainz::Release.find(id).id
 
-# @cover_art = "http://coverartarchive.org/release/#{release_id}/front"
+# @cover_hash = HTTParty.get("http://musicbrainz.org/release/#{album_id}")
 
+# @cover_art = cover_hash#["images"][image]
 # @urls = MusicBrainz::Artist.find_by_name(params[:artist_name]).urls
+
 
 erb :artist_info
 
