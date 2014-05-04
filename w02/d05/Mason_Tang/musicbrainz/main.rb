@@ -51,15 +51,8 @@ artist_1_albums_url  = "http://ws.audioscrobbler.com/2.0/?method=artist.gettopal
 
 
   erb :artist
-  # profile_picture = HTTParty.get("http://graph.facebook.com/#{username}?fields=picture")
-  # @profile_picture_hash = JSON(profile_picture)
 
-  # if @friend["error"]
-  #   @message = @friend["error"]["message"]
-  #   erb :index
-  # else
-  #   erb :friend
-  # end
+
 end
 
 api_key = "da7c3b0db0f9cd1e70863ff976434ed5"
