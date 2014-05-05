@@ -7,7 +7,12 @@
           <div class="results">
           <ul>
             <% item["track_list"]["track"].each do |item| %>
-            <li><%= item["recording"]["title"] %></li>
+            <% t = item["recording"]["length"].to_i
+            ss, ms = t.divmod(1000)
+            mm, ss = ss.divmod(60)
+            time = "%dm %ds" % [mm, ss] %>
+
+            <li><%=time %> - <%= item["recording"]["title"] %></li>
             <%end%>
           </ul>
         </div>
