@@ -49,6 +49,14 @@ get '/artist/' do
     erb :artist
 end
 
+
+api_key = "0f24ee5b7c24a21c0e32d8599ba0596a"
+api_secret = "728d4e70e151f94923e7a7cdf3f2f04a"
+
+
+
+
+
 get '/recording/' do
   query = params[:query].gsub(" ", "%20")
   song = params[:song].gsub(" ", "%20").join
@@ -66,7 +74,5 @@ get '/recording/' do
     erb :artist
 end
 
-api_key = "0f24ee5b7c24a21c0e32d8599ba0596a"
-api_secret = "728d4e70e151f94923e7a7cdf3f2f04a"
 
 

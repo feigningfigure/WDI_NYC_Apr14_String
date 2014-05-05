@@ -5,7 +5,7 @@ body {
   background-size: 100%;
   color: white;
 }
-/* 
+ 
 input {
   padding: 10px;
 }
@@ -19,9 +19,7 @@ ul {
   list-style: none;
 }
 
-.wrap {
-  background-image: url("http://24.media.tumblr.com/tumblr_m8vaeeLfg81rvv3v3o1_500.jpg");
-}*/
+
  
 #col1 {
   text-align: center;
@@ -35,10 +33,4 @@ ul {
 }
 
 
-/*.body {
-  padding: 30px;
-  background-image: url("http://24.media.tumblr.com/tumblr_m8vaeeLfg81rvv3v3o1_500.jpg");
-  background-size: 100%;
-  color: white;
-}
- */
+ 
