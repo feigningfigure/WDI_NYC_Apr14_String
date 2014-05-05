@@ -1,0 +1,19 @@
+
+	<div id="col1">
+		<h2>Artist Info</h2>
+		<p><%= @id %></p>
+		<p><%= @name %></p>
+		<p><%= @country %></p>
+		<img src="<%= @artist_1["artist"]["image"][3]["#text"]%>" />
+	</div>
+	<div id="col2">
+		<h2>Top 5 Albums</h2>
+		<img src="<%= @artist_albums["topalbums"]["album"][0]["image"].last["#text"] %>" />
+		<img src="<%= @artist_albums["topalbums"]["album"][1]["image"].last["#text"] %>" />
+		<img src="<%= @artist_albums["topalbums"]["album"][2]["image"].last["#text"] %>" />
+		<img src="<%= @artist_albums["topalbums"]["album"][3]["image"].last["#text"] %>" />
+		<img src="<%= @artist_albums["topalbums"]["album"][4]["image"].last["#text"] %>" />
+	</div>
+
+
+<%= @embed_player_html %>
