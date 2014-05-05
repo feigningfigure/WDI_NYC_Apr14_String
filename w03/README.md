@@ -14,6 +14,7 @@
 
 ###Supplemental Reading
 * [Sinatra Documentation](http://www.sinatrarb.com/documentation.html).
+* [PostgresSQL Documentation](http://www.postgressql.org/docs)
 
 
 ###What are we doing next week?
