@@ -1,34 +1,32 @@
-<h1> <%= @artist_hash["name"] %> </h1>
+<div class="from_right">
+  <h1> <%= @artist_hash["name"] %> </h1>
 <h3> Discography </h3>
 
   <% if defined?(@no_data) %>
   <h5><%= @no_data %></h5>
   <%end%>
+</div>
 
   <% if defined?(@single_album) %>
-  <h5>Album</h5>
-  <ul>
-    <li><a href="/<%=@artist_hash["name"]%>/albums/<%=@single_album["id"]%>"><%= @single_album["title"]%></a></li>
-  </ul>
-  <%end%>
+  <div class="from_right"><h5>Album</h5></div>
+  <div class="results">
+    <ul>
+      <li><a href="/<%=@artist_hash["name"]%>/albums/<%=@single_album["id"]%>"><%= @single_album["title"]%></a></li>
+    </ul>
+    <%end%>
+  </div>
 
   <% if @non_comps.length > 0 %>
-    <h5> Albums </h5>
-    <ul>
-      <% @non_comps.each do |index| %>
-      <li><a href="/<%=@artist_hash["name"]%>/albums/<%=index["id"] %>"><%=index["title"]%></a></li>
-      <%end%>
-    </ul>
+    <div class="from_right"><h5> Albums </h5></div>
+    <div class="results">
+      <ul>
+        <% @non_comps.each do |index| %>
+        <li><a href="/<%=@artist_hash["name"]%>/albums/<%=index["id"] %>"><%=index["title"]%></a></li>
+        <%end%>
+      </ul>
+    </div>
   <%end%>
 
-  <% if @comps.length > 0 %>
-  <h5> Compilations </h5>
-  <ul>
-    <% @comps.each do |index| %>
-    <li><a href="/<%=@artist_hash["name"]%>/albums/<%=index["id"] %>"><%=index["title"]%></a></li>
-    <%end%>
-  </ul>
-  <%end%>
 
 
 <form action='/' method="GET">

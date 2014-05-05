@@ -81,3 +81,12 @@ get '/:name/albums/:album_id' do
 
 
 end
+
+get '/load' do
+
+  erb :load
+
+  sleep 3
+
+  redirect '/'
+end

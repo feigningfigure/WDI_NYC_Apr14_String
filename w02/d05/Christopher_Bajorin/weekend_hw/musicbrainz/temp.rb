@@ -24,13 +24,12 @@ url = "http://www.musicbrainz.org/ws/2/artist/ee231388-c32f-4848-9c19-5730a7f049
   url = "http://www.musicbrainz.org/ws/2/release/04bc55af-516a-35cd-9c69-eab8f151873e?inc=recordings"
 
 
-    <% if @disc["count"].to_i > 1 %>
-      <% @disc["medium"].each_with_index do |item, index| %>
-        <h3>Disc <%= index %></h3>
-          <ul>
-            <% item["track_list"]["track"].each do |item| %>
-            <li><%= item["title"] %></li>
-            <%end%>
-          </ul>
-      <%end%>
-          <%else%>
+
+  <% if @comps.length > 0 %>
+  <h5> Compilations </h5>
+  <ul>
+    <% @comps.each do |index| %>
+    <li><a href="/<%=@artist_hash["name"]%>/albums/<%=index["id"] %>"><%=index["title"]%></a></li>
+    <%end%>
+  </ul>
+  <%end%>
