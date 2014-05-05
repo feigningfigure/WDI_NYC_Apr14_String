@@ -1,0 +1,72 @@
+body {
+	background-image: url('http://tunebiz.files.wordpress.com/2012/06/live-concert.jpg');
+	background-position: left;
+	background-size: 280%;
+	background-repeat: none;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	}
+
+h1 {
+	font-size: 175px;
+	font-family: 'Shadows Into Light', cursive;
+	background: rgba(75,50,150,.5);
+	border-radius: 95%;
+	width: 500px;
+	margin: auto;
+}
+
+h2 {
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 40px;
+	margin: auto;
+}
+
+h3 {
+	background: rgba(75,50,150,.5);
+	font-size: 20px;
+	color: #6DDFFC;
+}
+
+.box {
+	background: rgba(75,50,150,.5);
+	margin: 10px 100px;
+	padding: 10px 20px;
+	line-height: 10px;
+}
+
+.box1 {
+	background: rgba(75,50,150,.5);
+	margin: 10px 250px;
+	padding: 10px 20px;
+	line-height: 25px;
+}
+
+h4 {
+	color: #9ADFE8;
+	font-size: 28px;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+.center{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a {
+	font-family: 'Oswald', sans-serif;
+	color: #6DDFFC;
+}
+a:visited {
+	font-family: 'Oswald', sans-serif;
+	color: #6DDFFC;
+}

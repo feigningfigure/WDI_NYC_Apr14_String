@@ -1,0 +1,16 @@
+<h3>Get all the info about your favorite artists</h3>
+<!-- standard form to enter data for API -->
+<!-- <div class="album"> -->
+<h3>Albums by your input: <span><%= @artist_name %></span>: </h3>
+<ul>
+<% @albums_array.each do |i| %>
+<li><%=  i %></li>
+<% end %>
+</ul>
+<!-- </div> -->
+
+<!-- <form action="/artist">
+  <input type="type" name="artist_name" placeholder="Search for an artist">
+  <button type="submit">Search!</button>
+</form>
+-->
