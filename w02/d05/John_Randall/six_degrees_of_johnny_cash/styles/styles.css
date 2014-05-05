@@ -1,0 +1,182 @@
+/*GLOBAL STYLES*/
+
+body {
+    background-color: black;
+}
+
+.container {
+      width: 960px;
+      margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, nav, p {
+     color: white;
+     font-family: 'Alfa Slab One', Times, sans-serif;
+     text-align: center;
+}
+
+h1 {
+     font-size: 110px;
+}
+
+h2 {
+     font-size: 60px;
+     padding-bottom: 8px;
+}
+
+h3 {
+      font-size: 30px;
+      margin-bottom: 10px;
+}
+
+h4 {
+      font-size: 20px;
+      padding: 10px;
+      letter-spacing: 5px;
+}
+
+p {
+      font-size: 18px;
+      padding: 5px;
+      font-family: 'Signika', Helvetica, sans-serif;
+      letter-spacing: 2px;
+}
+
+/*NAVIGATION STYLES*/
+
+nav {
+      margin: 20px 0 10px 0;
+      letter-spacing: 3px;
+}
+
+ul li {
+      display: inline-block;
+      padding: 0px 30px 20px 30px;
+}
+
+a:link {
+      color: white;
+      font-size: 17px;
+      text-decoration: none;
+      cursor: pointer;
+}
+
+a:visited {color: white;}
+a:hover {color: red;}
+a:active {color: #474747;}
+
+/* HOME PAGE STYLES */
+
+.home_wrapper {
+      background: transparent url(/images/johnny_portrait.jpg) 0 0 no-repeat;
+      height: 1000px;
+}
+
+.home_paragraph_margin {
+      margin-top: 460px;
+}
+
+.home_wrapper h4 {
+      color: red;
+}
+
+/*DEGREES RESULTS PAGE STYLES*/
+
+.top_section {
+      background: transparent url(/images/johnny_portrait_smaller.jpg) 0 0 no-repeat;
+      width: 960px;
+      height: 400px;
+}
+
+
+.results {
+      float: left;
+      width: 160px;
+      background-color: red;
+}
+
+/*ABOUT PAGE STYLES*/
+
+.about_wrapper {
+      background: transparent url(/images/johnny_about.jpg) bottom left no-repeat;
+      height: 800px;
+      position: relative;
+}
+
+.about_johnny_paragraph {
+      width: 400px;
+      margin-top: 20px;
+      line-height: 1.6em;
+      letter-spacing: 2px;
+      position: absolute;
+      top: 100px;
+      left: 500px;
+}
+
+/*CONTACT STYLES*/
+
+.contact_wrapper {
+      background: transparent url(/images/johnny_contact.jpg) bottom left no-repeat;
+      height: 700px;
+}
+
+.contact_wrapper .contact_form {
+      margin-top: 10px;
+      font-family: 'Signika', Helvetica, sans-serif;
+      font-style: normal;
+      letter-spacing: 3px;
+}
+
+.contact_wrapper .contact_form .input_width{
+      width: 160px;
+      margin-bottom: 10px;
+}
+
+/*ERROR PAGE STYLES*/
+
+.error_wrapper {
+      background: transparent url(/images/johnny_error_image.jpg) no-repeat center;
+      height: 800px;
+}
+
+.error_wrapper a {
+      color: #909090;
+}
+
+.error_wrapper a:hover {
+      color: red;
+}
+
+/*MISC FORM STYLES*/
+
+form {
+      font-size: 14px;
+      font-style: italic;
+      line-height: 24px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+}
+
+input {
+      width: 200px;
+      height: 25px;
+      font-size: 14px;
+      padding-right: 5px;
+      margin-right: 10px;
+}
+
+.button_style {
+      width:100px;
+      background: #323232;
+      color:#fff;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 15px;
+      border: 1px solid black;
+}
+
+.button_style:hover {
+      background: #150000;
+      color:red;
+}
