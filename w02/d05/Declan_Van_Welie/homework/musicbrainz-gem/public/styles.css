@@ -7,6 +7,9 @@ body{
 
 .interface{
   color: #fff;
+  border-style:solid;
+  border-width:5px;
+  border-color: #fff;;
   background-color:#015a7a;
   text-align: center;
   float: top;
@@ -19,12 +22,12 @@ body{
 }
 
 .title{
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 200;
 }
 
 .details{
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #fff;
   padding:15px 10px 0px 15px;
   line-height: 5px;
@@ -49,7 +52,7 @@ body{
 }
 
 .artist_image{
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 200;
   position:fixed;
   top:0px;
@@ -61,13 +64,16 @@ body{
 .album_info{
   color: #fff;
   background-color:#015a7a;
-  font-family: 'Dosis', sans-serif;
+  border-style:solid;
+  border-width:5px;
+  border-color: #fff;;
+  font-family: 'Lato', sans-serif;
   font-weight: 200;
   text-align: center;
-  float: right;
+  float: left;
   max-width:300px;
   margin-left:10px;
-  margin-right:350px;
+  margin-right:10px;
   margin-bottom: 20px;
   border-radius: 10px;
   padding: 50px;
@@ -77,13 +83,35 @@ body{
 .artist_info{
   color: #fff;
   background-color:#015a7a;
-  font-family: 'Dosis', sans-serif;
+  border-style:solid;
+  border-width:5px;
+  border-color: #fff;;
+  font-family: 'Lato', sans-serif;
   font-weight: 200;
   text-align: left;
   float: left;
   max-width:300px;
-  margin-left:350px;
+  margin-left:20px;
   margin-right:10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 50px;
+  min-width: 300px;
+}
+
+.artist_news{
+  color: #fff;
+  background-color:#015a7a;
+  border-style:solid;
+  border-width:5px;
+  border-color: #fff;;
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  text-align: left;
+  float: left;
+  max-width:300px;
+  margin-left:10px;
+  margin-right:20px;
   margin-bottom: 20px;
   border-radius: 10px;
   padding: 50px;
@@ -105,7 +133,7 @@ width: 200px;
 /* basic #header */
 .header {
   background-color:#015a7a;
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #fff;
   color: #fff;
   position: absolute;
   padding: top:5;left:0;right:0;
@@ -134,27 +162,14 @@ width: 200px;
 .header .navh {
   width: 480px;
   float: left;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #fff;
   margin-top:15px;
   padding: 0px;
 }
 .header .navh a{
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #fff;
-}
-  width: 480px;
-  float: left;
-  font-family: 'Dosis', sans-serif;
-  color: #fff;
-  margin-top:15px;
-  padding: 0px;
-}
-.header .form .searchform {
-  float:left;
-  padding:0px;
-  margin:0px
-  width:203px;
 }
 
 .info_interface{
@@ -162,8 +177,8 @@ width: 200px;
   background-color:#015a7a;
   text-align: center;
   float: top;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left:50px;
+  margin-right:50px;
   margin-bottom: 20px;
   border-radius: 10px;
   padding: 10px 0px 20px 0px;

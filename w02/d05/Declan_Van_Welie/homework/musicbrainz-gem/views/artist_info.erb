@@ -12,7 +12,7 @@
 <li>Country of origin: <%= @country %></li>
 <li>Date the band formed: <%= @date_begin %></li>
 <li>More info: <a href="<%= @urls %>">Wikipedia</a></li>
-<li><a href="<%= @artist_itunes %>">Shop on iTunes</a></li>
+<!-- <li><a href="<%= @artist_itunes %>">Shop on iTunes</a></li> -->
 </ul>
 
 <!-- <embed
@@ -20,19 +20,12 @@ width="420" height="345"
 src="<%= @artist_video %>"
 type="application/x-shockwave-flash">
 </embed> -->
-<iframe width="420" height="345"
-src="<%= @artist_video %>">
-</iframe>
-<%= @artist_video %>
 
-<h3>Artist News:</h3>
 
-<!-- <li> https://upload.wikimedia.org/wikipedia/commons/c/cd/<%= @artist_image %> </li> -->
-<p><%= @artist_news %><br></br>
-<%= @artist_news_summary %>...
-</p>
 <!-- <li>URL Hash: <a href="<%= @all_urls %>">Wikipedia</a></li> -->
 </div>
+
+
 
 <div class="album_info">
    <img src= <%= @cover_art_hash %> /></img>
@@ -47,6 +40,20 @@ src="<%= @artist_video %>">
 
 <!-- <img href="<%= @cover_art %>" /> -->
 </div>
+
+<div class= "artist_news">
+<h3>Artist News:</h3>
+
+<!-- <li> https://upload.wikimedia.org/wikipedia/commons/c/cd/<%= @artist_image %> </li> -->
+<p><%= @artist_news %><br></br>
+<%= @artist_news_summary %>...
+</p>
+<iframe width="300" height="246"
+src="<%= @youtube2 %>">
+</iframe>
+
+  </div>
+
 </div>
 
 

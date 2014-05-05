@@ -94,8 +94,14 @@ image = HTTParty.get("http://developer.echonest.com/api/v4/artist/images?api_key
 #An attempt to call a video:
 
 video = HTTParty.get("http://developer.echonest.com/api/v4/artist/video?api_key=EBLX2UUAZCVMFN3IC&id=musicbrainz:artist:#{artist_id}&format=json&results=1&start=0")
-@artist_video = video["response"]["video"][0]["url"]
+artist_video = video["response"]["video"][0]["url"]
 
+youtube1 = artist_video.gsub("&feature=youtube_gdata_player", "")
+@youtube2 = youtube1.gsub("watch?v=", "embed/")
+
+# artist_video = video["response"]["video"][0]["url"]
+# youtube1 = artist_video.gsub("&feature=youtube_gdata_player", "")
+# @youtube2 = youtube1.gsub("watch?v=", "embed/")
 
 # @album_id = album_hash.title
 
