@@ -8,7 +8,7 @@
 <div class="section group">
   <div class="col span_6_of_12 artist_info">
       <h1 class="title"><%= @artist_hash["name"] %> </h1>
-      <h4 class="subhead"><%= titleize(@artist_hash["tag_list"]["tag"][0]["name"])%> (<%= @artist_hash["life_span"]["begin"] %> - <%= @artist_hash["life_span"]["ended"].gsub("false","Present")%>) </h4>
+      <h4 class="subhead"><%= @tag %> (<%= @artist_hash["life_span"]["begin"] %> - <%= @end_date %>)</h4>
       <p><%= @artist_info.chomp("...").chomp("<p></p>")%><!-- <a href="#">Read More</a> --></p>
   </div>
   <div class="col span_6_of_12 album_section">

@@ -13,7 +13,8 @@ require 'rdio_api'
 # end
 
 get '/' do
-  "Hello World!"
+  @last_search = get_search_history(1)
+  @second_to_last = get_search_history(2)
   erb :index
 end
 
@@ -58,6 +59,7 @@ end
 
 get '/tracks/:album_key' do
   params[:album_key]
+
   redirect erb :search
 end
 
@@ -69,14 +71,29 @@ def titleize(str)
   str.split(" ").map(&:capitalize).join(" ")
 end
 
+def get_search_history(search_index)
+  search_history = File.open("./db/search_history.txt", "r")
+  search_array = search_history.readlines
+  actual_index = (search_array.length)-search_index
+  found_search = search_array[actual_index]
+  search_history.close
+  found_search
+end
+
+
 get '/search' do
   artist_name = titleize(params[:artist_name])
   if artist_name.split.length > 1
       artist_name = artist_name.split.join("+")
   end
 
+  search_history = File.open("./db/search_history.txt", "a")
+  search_history.write"#{artist_name}\n"
+  search_history.close
+
   api_search = HTTParty.get("http://musicbrainz.org/ws/2/artist/?query=artist:#{artist_name}")
   artist_list = api_search["metadata"]["artist_list"]["artist"]
+
 
   #multiple results
    # artist_list.is_a? Hash false
@@ -87,19 +104,23 @@ get '/search' do
     @artist_hash = artist_list
   # elsif
   else
-      artist_list.each do |artist_hash|
-        if artist_hash["score"] == "100"
-          @artist_hash = artist_hash
-        end
-      end
-  # else
+     @artist_hash = artist_list[0]
+      # artist_list.each do |artist_hash|
+      #   if artist_hash["score"] == "100"
+      #     @artist_hash = artist_hash
+      #   end
+      # end
   end
 
+  if @artist_hash["life_span"]["ended"] == "false"
+    @end_date = @artist_hash["life_span"]["ended"].gsub("false","Present")
+  else
+    @end_date = @artist_hash["life_span"]["end"]
+  end
 
   client = RdioApi.new(:consumer_key => "ww2aaagaw3jcj632gm53hy5m", :consumer_secret => "MsWVVNUrZj")
   #Find Key
   search = client.search(:query=>"#{params[:artist_name]}", :types =>"Artist")
-  # @search = client.search(:query=>"snoop dogg", :types=>"Artist")
   #introduce error checking here
   artist_key = search["results"][0]["key"]
 
@@ -115,10 +136,21 @@ get '/search' do
     @artist_info = wiki_search(artist_name)
   end
 
+  unless @artist_hash["tag_list"].nil?
+    @tag = titleize(@artist_hash["tag_list"]["tag"][0]["name"])
+  end
+
+  search_history = File.open("./db/search_history.txt", "a")
+  search_history.write"#{artist_name}\n"
+  search_history.close
+
   @result = @sorted_albums[0]["name"]
   @image = last_api_return(artist_name)
   erb :search
 end
+
+
+
 
 
 # _(musician)
