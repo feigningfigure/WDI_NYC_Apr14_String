@@ -1,0 +1,30 @@
+
+#description of the task
+desc "Say Hello"
+# this is the name (as :symbol) and the code block of the task
+task :hello do
+  puts "Hello"
+end
+
+desc "Makes an Index HTML file"
+task :make_index_file do
+  index_file = File.open("index.html", "w")
+  index_file.puts <<-HTML
+
+  <!DOCTYPE HTML>
+  <html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  </html>
+  HTML
+
+end
+
+desc "Gets me movie data"
+task :get_movie_data do
+  puts HTTParty.get()
+end
