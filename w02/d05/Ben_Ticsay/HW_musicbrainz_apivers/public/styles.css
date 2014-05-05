@@ -1,0 +1,36 @@
+ 
+body {
+  padding: 30px;
+  background-image: url("http://24.media.tumblr.com/tumblr_m8vaeeLfg81rvv3v3o1_500.jpg");
+  background-size: 100%;
+  color: white;
+}
+ 
+input {
+  padding: 10px;
+}
+ 
+input[type="submit"] {
+  background-color: #1C5A3F;
+  color: white;
+}
+ 
+ul {
+  list-style: none;
+}
+
+
+ 
+#col1 {
+  text-align: center;
+  float: left;
+
+}
+
+#col2 {
+  text-align: center;
+  float: right;
+}
+
+
+ 

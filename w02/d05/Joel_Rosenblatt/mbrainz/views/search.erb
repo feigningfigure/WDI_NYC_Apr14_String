@@ -1,0 +1,23 @@
+<center>
+  <div class="back">
+    <a href="/" class="logo">MUSIC</a>
+      <form action="/search">
+        <input type="text" name="artist_search" placeholder="Artist Name">
+        <button type="submit" >Search</button>
+      </form>
+<h1><%= @name %></h1>
+<div class="hidden">
+<div class="container about">
+  <center><h1>ABOUT</h1>
+  <a href=<%= @wiki %> class="wiki">WIKIPEDIA</a></center>
+</div>
+
+<div class="container">
+<center><h1>ALBUMS</h1></center>
+<% @artist_info.release_groups.each do |r| %>
+<li><%= r.title %></li>
+<% end %>
+</div>
+</div>
+</div>
+</center>

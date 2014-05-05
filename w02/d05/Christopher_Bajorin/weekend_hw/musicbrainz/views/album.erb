@@ -1,0 +1,42 @@
+<div id="title"><%= @title %></div>
+
+    <% if @disc["count"].to_i > 1 %>
+      <% @disc["medium"].each_with_index do |item, index| %>
+        <div class="from_right">
+        <h3>Disc <%= index.to_i+1 %></h3></div>
+          <div class="results">
+          <ul>
+            <% item["track_list"]["track"].each do |item| %>
+            <% t = item["recording"]["length"].to_i
+            ss, ms = t.divmod(1000)
+            mm, ss = ss.divmod(60)
+            time = "%dm %ds" % [mm, ss] %>
+
+            <li><%=time %> - <%= item["recording"]["title"] %></li>
+            <%end%>
+          </ul>
+        </div>
+      <%end%>
+    <%else%>
+
+      <div class="from_right"><h3> Tracks </h3></div>
+      <% @disc["medium"]["track_list"]["track"].each do |item| %>
+      <% t = item["recording"]["length"].to_i
+        ss, ms = t.divmod(1000)
+        mm, ss = ss.divmod(60)
+        time = "%dm %ds" % [mm, ss] %>
+        <div class="results">
+          <ul>
+            <li><%=time%> - <%= item["recording"]["title"] %></li>
+          </ul>
+        </div>
+      <%end%>
+    <%end%>
+  </div>
+<form action='/' method="GET">
+  <input type='submit' value="HOME">
+</form>
+
+
+
+

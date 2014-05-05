@@ -1,0 +1,20 @@
+<h4> Info about <%= @friend["name"] %> </h4>
+
+<% if @message %>
+	<h5><%= @message %></h5>
+<% else %>
+	<h5> Search for a friend below </h5>
+<% end %>
+
+<ul>
+	<li>ID: <%= @friend["id"] %></li>
+	<li>Gender: <%= @friend["gender"] %></li>
+	<li>Username <%= @friend["username"] %></li>
+</ul>
+
+
+
+<form action="/friend">
+	<input type="text" name="username" placeholder="search" />
+	<button type="submit">Search!</button>
+</form>
