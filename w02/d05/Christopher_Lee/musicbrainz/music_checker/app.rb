@@ -56,11 +56,14 @@ def wiki_search(artist_name)
   extract = extract["extract"]
 end
 
-# extract = wiki_search["query"]["pages"]
-# extract = wiki_search["query"]["pages"]["#{extract.keys[0]}"]
-# extract = extract["extract"]
+get '/tracks/:album_key' do
+  params[:album_key]
+  redirect erb :search
+end
 
-# ["#{extract.keys[0]}"]
+# client.search(:query=>"a65683", :types =>"Album")
+
+
 
 def titleize(str)
   str.split(" ").map(&:capitalize).join(" ")
@@ -118,7 +121,7 @@ get '/search' do
 end
 
 
-
+# _(musician)
 
 
 # get '/search' do

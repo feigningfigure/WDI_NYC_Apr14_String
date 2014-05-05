@@ -1,4 +1,4 @@
-<div class="section group">
+<div class="section group first_section">
   <div class="col span_6_of_12 main_image">
     <img src= <%= @image %>>
   </div>
@@ -15,7 +15,7 @@
     <div class="section group album_group">
   <% @sorted_albums.each do |album| %>
       <div class="col span_3_of_12">
-        <img src= "<%= album["icon"] %>" title= "<%= album["releaseDate"] %>">
+        <a href="/track/#{album["key"]}"><img src= "<%= album["icon"] %>" title= "<%= album["key"] %>"></a>
       </div>
   <% end %>
     </div>
