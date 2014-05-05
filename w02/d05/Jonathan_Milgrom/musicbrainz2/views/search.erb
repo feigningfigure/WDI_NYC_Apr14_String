@@ -1,0 +1,11 @@
+<h3> Here are the results of your search </h3>
+
+<h4> Search Results </h4>
+<ul> <% @suggestions_array.each do |result_hash| %>
+	<li><a href="/<%= result_hash[:name] %>/<%= result_hash[:id] %>"><%= result_hash[:name] %></a></li> 
+	<% end %>
+</ul>
+
+<form action='/' method="GET">
+  <input type="submit" value="Home">
+</form>
