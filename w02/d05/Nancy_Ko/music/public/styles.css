@@ -1,0 +1,146 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body{
+background-color:#3a3a3a;
+
+}
+
+h1 {
+font-size: 75px;
+letter-spacing: 10px;
+margin: -220px 0px 0px 0px;
+text-align:center;
+color: #e0e0e0;
+font-family: 'PT Sans Narrow', sans-serif;
+text-transform:uppercase;
+}
+
+h1.title {
+font-size: 75px;
+letter-spacing: 10px;
+margin: -185px 0px 0px 0px;
+text-align:center;
+color: #e0e0e0;
+font-family: 'PT Sans Narrow', sans-serif;
+text-transform:uppercase;
+}
+
+h2 {
+font-size: 23px;
+margin: 20px 0px 0px 0px;
+font-family: 'PT Sans Narrow', sans-serif;
+text-align:center;
+color: #969696;
+
+}
+
+h3 {
+font-size: 18px;
+margin: 5px 0px 0px 0px;
+text-align:center;
+font-family:'PT Sans Narrow', sans-serif;
+color: #969696;
+}
+
+p{
+  width: 1000px;
+  height: 200px;
+  color: #969696;
+  font-size:14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  margin: 200px 20px 0px 250px;
+  font-family: 'Josefin Slab', serif;
+}
+
+.left{
+  float:left;
+  margin: 30px 0px 0px 500px;
+
+}
+
+
+.right{
+  float:right;
+  margin: 30px 500px 0px 0px;
+
+}
+
+.top{
+  background-color:#292929;
+  width: 1700px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+
+.image{
+  width: 200px;
+  height: 140px;
+  }
+
+.artist_search{
+  background-color:#292929;
+  width: 250px;
+  height: 79px;
+  border: none;
+  text-align: center;
+  margin: 400px -20px 0px -40px;
+
+
+}
+
+input{
+  font-size: 14px;
+  color: #efefef;
+  font-family: 'Josefin Slab', serif;
+ }
+
+.button{
+width:90px;
+height:79px;
+border:none;
+background-color:#5d5d5d;
+}
