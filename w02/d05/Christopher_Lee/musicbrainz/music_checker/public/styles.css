@@ -2,3 +2,137 @@
   height: 200px;
 }
 */
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
+
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  GRID OF TWELVE   ============================================================================= */
+
+.span_12_of_12 {
+  width: 100%;
+}
+
+.span_11_of_12 {
+  width: 91.53%;
+}
+
+.span_10_of_12 {
+  width: 83.06%;
+}
+
+.span_9_of_12 {
+  width: 74.6%;
+}
+
+.span_8_of_12 {
+  width: 66.13%;
+}
+
+.span_7_of_12 {
+  width: 57.66%;
+}
+
+.span_6_of_12 {
+  width: 49.2%;
+}
+
+.span_5_of_12 {
+  width: 40.73%;
+}
+
+.span_4_of_12 {
+  width: 32.26%;
+}
+
+.span_3_of_12 {
+  width: 23.8%;
+}
+
+.span_2_of_12 {
+  width: 15.33%;
+}
+
+.span_1_of_12 {
+  width: 6.86%;
+}
+
+
+html{
+  background-color: #E9E9E9;
+}
+
+body{
+  font-family: "Times New Roman","Times", serif;
+  line-height: 1.5em;
+}
+
+.container{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.title{
+  font-size: 40px;
+  /*font-family:"Apercu Medium", Calibri, sans-serif; font-size-adjust:0.508; font-weight:600; font-style:normal;*/
+}
+
+.title,
+.subhead{
+  font-family:"Apercu Pro Bold", 'Trebuchet MS', Arial, sans-serif; font-weight:bold; font-style:normal;
+}
+
+.artist_info{
+  margin-top: 0;
+  background-color: #FFF;
+}
+
+.main_image{
+  margin-bottom: 0;
+  height:100%;
+}
+
+.artist_info p,
+.artist_info h1,
+.artist_info h3,
+.artist_info h4{
+  margin: 18px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block; /*inline block would be fine too*/
+  float: left;
+}
+
