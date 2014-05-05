@@ -213,3 +213,11 @@ test2 = [{
           "canTether" => true,
           "artistUrl" => "/artist/Wu-Tang_Clan/"
     }]
+
+
+["tag_list"]["tag"][0]
+
+
+  <% @sorted_albums.each do |album| %>
+     <img src= "<%= album["icon"] %>" title= "<%= album["releaseDate"] %>">
+  <% end %>
