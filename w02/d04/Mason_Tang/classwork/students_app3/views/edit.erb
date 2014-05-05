@@ -1,0 +1,6 @@
+<h1><%= @student_name %></h1>
+<form action="/students/<%= @student_id %>/update" method="POST">
+  <input type="text" placeholder="student_name" name="student_name" value="<%= @student_name %>"/>
+
+  <input type="submit" value="Edit" />
+</form>
