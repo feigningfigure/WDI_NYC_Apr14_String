@@ -1,6 +1,35 @@
-<h3> What artist would you like to find more information about? </h3>
+<div id="container">
+  <div id="forms"
+  <form action="/results/" method="POST">
+    <input type="text" name="artist" placeholder="Artist"/><br><br>
+    <!-- <input type="text" name="song" placeholder="Song Title"/> -->
 
-<form action="/artist/">
-  <input type="text" name="query" placeholder="Artist Name">
-  <button type="submit">Search!</button>
+
+  <form action="/results/" method="POST">
+    <input type="text" name="song" placeholder="Song Title"/><br><br>
+    <!-- <input type="text" name="song" placeholder="Song Title"/> -->
+    <input type="submit" placeholder="Search!"></button>
+    </form>
+
+  </div>
+</div>
+
+
+<!-- <div class="details">
+  <h3><em>Artist Name</em></h3>
+<div class= "forms">
+<form action="/artist_info" method="POST">
+  <input type="text" placeholder="Artist Name" name="artist_name"/><br></br>
+  <h3><em>Album Name</em></h3>
+</div>
+<div class= "forms">
+<form action="/artist_info" method="POST">
+  <input type="text" placeholder="Album Name" name="album_name"/><br></br>
+  <input type="submit" value="Search" />
+  </div>
 </form>
+
+</div> -->
+
+
+
