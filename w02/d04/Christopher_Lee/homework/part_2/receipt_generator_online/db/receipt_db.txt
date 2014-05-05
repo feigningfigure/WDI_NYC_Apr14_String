@@ -129,3 +129,23 @@
     Good/Service Provided: Baseball Bat
     Cost: $20
     Thank you for your patronage
+    Consolidated Industries
+    Thank you for visiting us, Chris lee
+    Good/Service Provided: 50 Macbook Pros
+    Cost: $10
+    Thank you for your patronage
+    Consolidated Industries
+    Thank you for visiting us, J milgrom
+    Good/Service Provided: Ferrari
+    Cost: $2
+    Thank you for your patronage
+    Consolidated Industries
+    Thank you for visiting us, Snoop dogg
+    Good/Service Provided: Chronic
+    Cost: $50
+    Thank you for your patronage
+    Consolidated Industries
+    Thank you for visiting us, Dara
+    Good/Service Provided: Apple
+    Cost: $5
+    Thank you for your patronage
