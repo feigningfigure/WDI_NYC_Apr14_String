@@ -21,9 +21,7 @@ end
 # person_hash = {}
 
 # for x in (0..50)
-
 # 	person_hash[x] = Person.new
-
 # end
 
 # person_hash.each do |key, value| 
@@ -42,5 +40,6 @@ end
 people_array.each do |person|
 	puts person.to_s
 end
+
 #print random one from array
-people_array.sample.to_s
+# people_array.sample.to_s
