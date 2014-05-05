@@ -11,3 +11,10 @@
 	<li>Gender: <%= @friend["gender"] %></li>
 	<li>Username <%= @friend["username"] %></li>
 </ul>
+
+
+
+<form action="/friend">
+	<input type="text" name="username" placeholder="search" />
+	<button type="submit">Search!</button>
+</form>
