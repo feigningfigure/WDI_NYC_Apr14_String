@@ -56,19 +56,18 @@ def wiki_search(artist_name)
   extract = extract["extract"]
 end
 
-
-
 # extract = wiki_search["query"]["pages"]
 # extract = wiki_search["query"]["pages"]["#{extract.keys[0]}"]
 # extract = extract["extract"]
 
 # ["#{extract.keys[0]}"]
 
-
-
+def titleize(str)
+  str.split(" ").map(&:capitalize).join(" ")
+end
 
 get '/search' do
-  artist_name = params[:artist_name].capitalize
+  artist_name = titleize(params[:artist_name])
   if artist_name.split.length > 1
       artist_name = artist_name.split.join("+")
   end
@@ -104,9 +103,14 @@ get '/search' do
   sorted_albums = client.getAlbumsForArtist(:artist =>"#{artist_key}",:sort => "releaseDate")
   @sorted_albums = sorted_albums.uniq{|h| h["releaseDate"]}.uniq{|h| h["name"]}
   # @sorted_albums = client.getAlbumsForArtist(:artist =>"#{artist_key}").uniq{|h| h["name"]}
+   #band check
 
-
-  @artist_info = wiki_search(artist_name)
+  if @artist_hash["type"] == "Group" && artist_name.split("+").length == 1
+    band_name = artist_name + "_(band)"
+    @artist_info = wiki_search(band_name)
+  else
+    @artist_info = wiki_search(artist_name)
+  end
 
   @result = @sorted_albums[0]["name"]
   @image = last_api_return(artist_name)
