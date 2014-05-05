@@ -1,0 +1,15 @@
+<h3> MusicBrainz</h3>
+
+<% if @message %>
+	<h5> <%= @message %> </h5>
+<% else %>
+	<h5> Search music xbelow </h5>
+<% end %>
+
+
+<h3> What artist would you like to find more information about? </h3>
+
+<form action="/artist/">
+  <input type="text" name="artist_name" placeholder="Artist Name">
+  <button type="submit">Search!</button>
+</form>
