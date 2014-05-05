@@ -1,4 +1,4 @@
-## PSQL USEFUL COMMANDS & SYNTAX
+## PSQL USEFUL COMMANDS
 
 
 \l				List all databases
@@ -18,6 +18,8 @@
 
 
 ——————————————-
+
+## SQL SYNTAX
 
 
 CREATE DATABASE db_name;
