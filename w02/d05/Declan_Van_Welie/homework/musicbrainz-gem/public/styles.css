@@ -1,70 +1,170 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  /* background-color: #02122e;*/
+     background-color:#015a7a;
+}
+
 .interface{
   color: #fff;
-background-color:#015a7a;
-text-align: center;
-float: top;
-max-width:300px;
-margin-left:auto;
-margin-right:auto;
-margin-bottom: 20px;
-border-radius: 10px;
+  background-color:#015a7a;
+  text-align: center;
+  float: top;
+  max-width:400px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 50px;
 }
 
 .title{
-font-family: 'Dosis', sans-serif;
-font-weight: 200;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 200;
 }
 
 .details{
-font-family: 'Dosis', sans-serif;
-padding:15px 10px 0px 15px;
-line-height: 5px;
+  font-family: 'Dosis', sans-serif;
+  color: #fff;
+  padding:15px 10px 0px 15px;
+  line-height: 5px;
 }
 
-body{
+.body_div{
 
-background-color: #02122e;
-background-image:url("https://dl.dropboxusercontent.com/u/15166676/headphones-2-edit.jpg");
-background-repeat:no-repeat;
-background-attachment:fixed;
-background-position:center top;
-
+  background-color: #02122e;
+  background-image:url("https://dl.dropboxusercontent.com/u/15166676/headphones-2-edit.jpg");*/
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center top;
+  padding: 0px;
+  margin: 0px;
+  height:1200px;
 }
 
 .form{
-padding:0px 10px 20px 15px;
-margin-bottom: 20px;
-line-height: 5px;
+  padding:0px 10px 20px 15px;
+  margin-bottom: 20px;
+  line-height: 5px;
 }
 
 .artist_image{
-position:fixed;
-top:0px;
-left:150px;
-margin-left:auto;
-margin-right:auto;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 200;
+  position:fixed;
+  top:0px;
+  left:150px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .album_info{
-color: #fff;
-background-color:#015a7a;
-text-align: center;
-float: right;
-max-width:300px;
-margin-left:auto;
-margin-right:auto;
-margin-bottom: 20px;
-border-radius: 10px;
+  color: #fff;
+  background-color:#015a7a;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 200;
+  text-align: center;
+  float: right;
+  max-width:300px;
+  margin-left:10px;
+  margin-right:350px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 50px;
+  min-width: 300px;
 }
 
 .artist_info{
-color: #fff;
-background-color:#015a7a;
-text-align: center;
-float: left;
-max-width:300px;
-margin-left:auto;
-margin-right:auto;
-margin-bottom: 20px;
-border-radius: 10px;
+  color: #fff;
+  background-color:#015a7a;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 200;
+  text-align: left;
+  float: left;
+  max-width:300px;
+  margin-left:350px;
+  margin-right:10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 50px;
+  min-width: 300px;
+}
+
+.artist_info ul{
+  text-align: left;
+}
+
+.album_art{
+width: 200px;
+}
+
+img{
+width: 200px;
+}
+
+/* basic #header */
+.header {
+  background-color:#015a7a;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  position: absolute;
+  padding: top:5;left:0;right:0;
+}
+.header div {
+
+  margin:0 auto;
+  width: 960px;
+  padding:  0px; /* control the hight of the header */
+  overflow: hidden;
+}
+.header .logo {
+  color: #fff;
+  font-family: 'Lobster Two', cursive;
+  letter-spacing: 1px;
+  display: inline;
+  float: left;
+  font-size: 32px;
+  margin-left: 100px;
+  padding: 2px;
+  width: 200px; /* 230px */
+}
+.header .logo :visited {
+  text-decoration: none;
+}
+.header .navh {
+  width: 480px;
+  float: left;
+  font-family: 'Dosis', sans-serif;
+  color: #fff;
+  margin-top:15px;
+  padding: 0px;
+}
+.header .navh a{
+  font-family: 'Dosis', sans-serif;
+  color: #fff;
+}
+  width: 480px;
+  float: left;
+  font-family: 'Dosis', sans-serif;
+  color: #fff;
+  margin-top:15px;
+  padding: 0px;
+}
+.header .form .searchform {
+  float:left;
+  padding:0px;
+  margin:0px
+  width:203px;
+}
+
+.info_interface{
+  color: #fff;
+  background-color:#015a7a;
+  text-align: center;
+  float: top;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px 0px 20px 0px;
 }

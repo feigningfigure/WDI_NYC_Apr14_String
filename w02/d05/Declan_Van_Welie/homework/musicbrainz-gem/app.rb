@@ -44,13 +44,15 @@ end
 
 urls_hash = MusicBrainz::Artist.find_by_name(params[:artist_name]).urls
 
+@artist_itunes = urls_hash[:purchase_for_download]#.gsub("https://commons.wikimedia.org/wiki/File:","")
+
 @urls = urls_hash[:wikipedia]
 
 @all_urls = urls_hash
 
 @album_title = MusicBrainz::ReleaseGroup.search(params[:artist_name], params[:album_name])[0][:title]
 
-@album_info = MusicBrainz::ReleaseGroup.search(params[:artist_name], params[:album_name])[0][:type]
+@album_info = MusicBrainz::ReleaseGroup.search(params[:artist_name], params[:album_name])[0][:first_release_date]
 
 @album_id = MusicBrainz::ReleaseGroup.search(params[:artist_name], params[:album_name])[0][:id]
 #An attempt to call release instead of releases
@@ -70,9 +72,29 @@ cover_get = HTTParty.get("http://coverartarchive.org/release/#{album_id}")
 
 @cover_art_hash = cover_get["images"][0]["image"]
 
+album_track_id = MusicBrainz::Release.find(album_id)
+
+@track_listing = album_track_id.tracks
+
 # art_get = HTTParty.get("http://coverartarchive.org/release/#{album_id}")
 
+#News info for artist:
+artist_id = MusicBrainz::Artist.find_by_name(params[:artist_name]).id
 
+news = HTTParty.get("http://developer.echonest.com/api/v4/artist/news?api_key=EBLX2UUAZCVMFN3IC&id=musicbrainz:artist:#{artist_id}&format=json")
+@artist_news = news["response"]["news"][0]["name"]
+# @news["response"]["news"][0]["date_found"]
+@artist_news_summary = news["response"]["news"][0]["summary"]
+
+#artist image attempt:
+
+image = HTTParty.get("http://developer.echonest.com/api/v4/artist/images?api_key=EBLX2UUAZCVMFN3IC&id=musicbrainz:artist:#{artist_id}&format=json&results=1&start=0&license=unknown")
+@artist_image = image["response"]["images"][0]["url"]
+
+#An attempt to call a video:
+
+video = HTTParty.get("http://developer.echonest.com/api/v4/artist/video?api_key=EBLX2UUAZCVMFN3IC&id=musicbrainz:artist:#{artist_id}&format=json&results=1&start=0")
+@artist_video = video["response"]["video"][0]["url"]
 
 
 # @album_id = album_hash.title

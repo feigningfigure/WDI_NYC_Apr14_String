@@ -1,32 +1,52 @@
-<div class="interface">
+
+
+<div class= "info_interface">
 <div class="artist_info">
 <div class= "title">
-<h1>Artist Info</h1>
+<h1><%= @name %></h1>
 </div>
 
-<p>Artist info:</p>
+<img src= <%= @artist_image %> /></img>
+<!-- <p>Artist info:</p> -->
 <ul>
-<li>Artist name: <%= @name %></li>
 <li>Country of origin: <%= @country %></li>
 <li>Date the band formed: <%= @date_begin %></li>
 <li>More info: <a href="<%= @urls %>">Wikipedia</a></li>
-<li>URL Hash: <a href="<%= @all_urls %>">Wikipedia</a></li>
+<li><a href="<%= @artist_itunes %>">Shop on iTunes</a></li>
+</ul>
+
+<!-- <embed
+width="420" height="345"
+src="<%= @artist_video %>"
+type="application/x-shockwave-flash">
+</embed> -->
+<iframe width="420" height="345"
+src="<%= @artist_video %>">
+</iframe>
+<%= @artist_video %>
+
+<h3>Artist News:</h3>
+
+<!-- <li> https://upload.wikimedia.org/wikipedia/commons/c/cd/<%= @artist_image %> </li> -->
+<p><%= @artist_news %><br></br>
+<%= @artist_news_summary %>...
+</p>
+<!-- <li>URL Hash: <a href="<%= @all_urls %>">Wikipedia</a></li> -->
 </div>
 
 <div class="album_info">
-
-<li>Album info: <%= @album_title %></li><li>Album description: <%= @album_info %></li>
+   <img src= <%= @cover_art_hash %> /></img>
+<h1><%= @album_title %></h1>
+<% @track_listing.each do |x| %>
+ <li><%=x.title %>
+<% end %>
+<!-- <li>First Released: <%= @album_info %></li> -->
 <!-- <li>Album Cover: <%= @cover_hash %></li>
- --><li>Album ID: <%= @album_id %></li>
- <li>Release Hash: <%= @release_hash %></li>
- <li>Cover Art Hash: <img src= <%= @cover_art_hash %> /></img></li>
-
-</ul>
+ --><!-- <li>Album ID: <%= @album_id %></li> -->
+<!--  <li>Release Hash: <%= @release_hash %></li> -->
 
 <!-- <img href="<%= @cover_art %>" /> -->
 </div>
-<div class="details">
-<a href="/">Look up another artist</a>
 </div>
-</div>
-</div>
+
+
