@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'musicbrainz'
+require 'httparty'
+require 'json'
 require 'pry'
 
 MusicBrainz.configure do |c|
@@ -17,18 +19,19 @@ end
 
 get '/results' do
 	artist = params[:artist].to_s
+	@options = params[:options]
 	@artist_info = MusicBrainz::Artist.find_by_name(artist)
 
 	limit = @artist_info.release_groups.length
 	@album = []
 	@compilation = []
-	@ep=[]
+	@ep = []
 	@live = []
 	@single = []
 	@misc = []
 	for counter in 0..limit-1
-		info = @artist_info.release_groups[counter].id
-		artist = MusicBrainz::ReleaseGroup.find(info)
+		@info = @artist_info.release_groups[counter].id
+		artist = MusicBrainz::ReleaseGroup.find(@info)
 		if artist.type == "Album"
 			@album << artist.title
 		elsif artist.type == "Compilation"
@@ -42,7 +45,13 @@ get '/results' do
 		else 
 			@misc << artist.title
 		end
+
+		@all = @album+@compilation+@ep+@live+@single+@misc
+		# @pic = HTTParty.get("http://coverartarchive.org/releases/76df3287-#{@info}/front")
+
 	end
+
+
 
 	erb :results
 end

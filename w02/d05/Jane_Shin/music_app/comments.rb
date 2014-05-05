@@ -41,3 +41,22 @@
 	# 	@single << type
 	# 	end
 	# end
+
+
+
+			<% if @options == "all" %>
+			<%= @all %>
+		<% elsif @options ==  "album" %>
+			<%= @album %>
+		<% elsif @options == "compilation" %>
+			<%= @compilation %>
+		<% elsif @options == "ep" %>
+			<%= @ep %>
+		<% elsif @options == "live" %>
+			<%= @live %>
+		<% elsif @options == "single" %>
+			<%= @single %>
+		<% else @options == "misc" %>
+			<%= @misc %>
+		
+		<% end %>
