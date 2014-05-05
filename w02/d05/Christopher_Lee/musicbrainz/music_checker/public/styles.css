@@ -1,0 +1,224 @@
+/*.main_image{
+  height: 200px;
+}
+*/
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
+
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  GRID OF TWELVE   ============================================================================= */
+
+.span_12_of_12 {
+  width: 100%;
+}
+
+.span_11_of_12 {
+  width: 91.53%;
+}
+
+.span_10_of_12 {
+  width: 83.06%;
+}
+
+.span_9_of_12 {
+  width: 74.6%;
+}
+
+.span_8_of_12 {
+  width: 66.13%;
+}
+
+.span_7_of_12 {
+  width: 57.66%;
+}
+
+.span_6_of_12 {
+  width: 49.2%;
+}
+
+.span_5_of_12 {
+  width: 40.73%;
+}
+
+.span_4_of_12 {
+  width: 32.26%;
+}
+
+.span_3_of_12 {
+  width: 23.8%;
+}
+
+.span_2_of_12 {
+  width: 15.33%;
+}
+
+.span_1_of_12 {
+  width: 6.86%;
+}
+
+
+html{
+  background-color: #F5F5F5;
+}
+
+body{
+  font-family: "Georgia","Times", serif;
+  line-height: 1.5em;
+}
+
+.container{
+  margin-top: 60px;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.first_section{
+  margin-top: 80px;
+}
+
+.title{
+  font-size: 25px;
+  line-height: 1.3em;
+  /*font-family:"Apercu Medium", Calibri, sans-serif; font-size-adjust:0.508; font-weight:600; font-style:normal;*/
+}
+
+.title,
+.subhead,
+.nav-brand,
+h1,
+h2,
+h3,
+h4{
+  font-family:"Apercu Pro Bold", 'Trebuchet MS', Arial, sans-serif; font-weight:bold; font-style:normal;
+}
+
+.artist_info,
+.album_section{
+  margin-top: 0;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+}
+
+nav{
+  width: 100%;
+  background-color: #222;
+  border-bottom: 1px solid #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  text-align: center;
+  padding: 0px 100px;
+  color: #333;
+}
+
+nav h4{
+  margin: 15px;
+}
+
+.nav-brand {
+position: relative;
+float: left;
+color: white;
+}
+
+.nav-brand a{
+  text-decoration: none;
+}
+
+.nav-brand a:visited {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.album_group{
+  margin: 20px;
+}
+
+.intro{
+  line-height: 1.5em;
+  text-align: center;
+  font-family:"Apercu Pro Bold", 'Trebuchet MS', Arial, sans-serif; font-weight:bold; font-style:normal;
+}
+
+.intro p{
+  font-size: 3em;
+  text-align: center;
+  font-family:"Apercu Pro Bold", 'Trebuchet MS', Arial, sans-serif; font-weight:bold; font-style:normal;
+}
+
+.main_image{
+  margin-bottom: 0;
+  height:100%;
+}
+
+.artist_info p,
+.artist_info h1,
+.artist_info h3{
+  margin: 20px;
+}
+
+.artist_info h4{
+  margin: 0 20px 20px;
+}
+
+
+.artist_info h1{
+  margin-top: 35px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: inline-block; /*inline block would be fine too*/
+  float: left;
+}
+
+.album_group div:nth-child(4n+1){
+  margin-left: 0;
+  background-color: blue;
+}
+
+input[type="text"]{
+  width: 100%;
+  background-color: #FFF;
+  font-size: 20px;
+  color: #979B9B;
+  text-align: center;
+  padding: 40px 0 !important;
+  border: 0px none;
+  margin: 10px 0;
+}
