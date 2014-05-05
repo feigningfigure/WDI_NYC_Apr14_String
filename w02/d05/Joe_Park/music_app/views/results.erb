@@ -1,0 +1,49 @@
+<div class="search">
+<h1>PICK YOUR ARTIST</h1>
+<h3>Search</h3>
+
+<form action="/results" id="please_form">
+	<input type="text" name="artist" placeholder="artist name here" />
+	<button type="submit">Search</button>
+</form>
+
+<select name="options" form="please_form">
+	<option value="all">All</option>
+	<option value="album">Album</option>
+	<option value="compilation">Compilation</option>
+	<option value="ep">EP</option>
+	<option value="live">Live</option>
+	<option value="single">Single</option>
+	<option value="misc">MISC</option>
+</select>
+</div>
+
+<div class="result">
+<h3>Info about <%= @artist_info.name %></h3>
+
+<ul>
+	<li>name: <%= @artist_info.name %></li>
+	<li>type: <%= @artist_info.type %></li>
+	<li>start date: <%= @artist_info.date_begin %></li>
+
+</ul>
+	<!-- <%= @pic %> -->
+	<ul>
+		<% if @options == "all" %>
+			<li><%= @all %></li>
+		<% elsif @options == "album" %>
+			<li>@album %></li>
+		<% elsif @options == "compilation" %>
+			<li><%= @compilation %></li>
+		<% elsif @options == "ep" %>
+			<li><%= @epprint_array %></li>
+		<% elsif @options == "live" %>
+			<li><%= @live %></li>
+		<% elsif @options == "single" %>
+			<li><%= @single %></li>
+		<% elsif @options == "misc" %>
+			<li><%= @misc %></li>
+		<% else %>
+		<% end %>
+	</ul>
+</div>
