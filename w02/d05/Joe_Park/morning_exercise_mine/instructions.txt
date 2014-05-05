@@ -1,0 +1,15 @@
+Make a hash of names
+The key should be their initials as a symbol
+:np for Neel Patel
+The value should be an array for [first_name, last_name]
+['Neel', 'Patel'] ALL of these names should be in your hash
+
+
+
+Part 2
+
+Create a Person class with the attributes name, age, company, and email
+Use the Faker gem generate values for these attributes
+Give the class a to_s method
+Create 50 instances of the Person class and add them to an array
+Call the to_s method on all 50 instances of the Person class

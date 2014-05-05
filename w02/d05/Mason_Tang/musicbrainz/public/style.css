@@ -1,0 +1,80 @@
+
+.banner img{
+  max-height: 25%;
+  max-width: 25%;
+  margin: -15px 0px 0px 500px;
+}
+
+.form {
+margin-top: 100px;
+margin-left: 400px;
+}
+
+
+.form input{
+  font-family: 'Exo', sans-serif;
+  background-color: black;
+  color: rgb(0,255,255);
+}
+
+.form2 {
+margin-left: 975px;
+
+}
+
+
+.form2 input{
+  font-family: 'Exo', sans-serif;
+  background-color: black;
+  color: rgb(0,255,255);
+}
+
+.introtext {
+  font-family: 'Exo', sans-serif;
+}
+
+body {
+  padding: 30px;
+  background-image: url(../images/redak.jpg);
+  background-size: 100%;
+  color: white;
+}
+
+.artisthead h2 {
+  color: rgb(0,255,255);
+}
+
+.artisthead img{
+  max-height: 325px;
+  max-width: 325px;
+  float: left;
+  margin-right: 30px;
+}
+
+
+.albumshead h3 {
+  margin-top: 300px;
+  color: rgb(0,255,255);
+}
+
+.albums {
+display: inline-block;
+font-family: 'Exo', sans-serif;
+margin-top:
+
+}
+
+.albums img {
+  display: inline-block;
+  position: relative;
+  float: left;
+  max-height: 50%;
+  max-width: 50%;
+  margin: 0px 0px 0px 0px;
+  width: 100;
+}
+
+.soundcloud {
+  margin-top: 30px;
+  color: rgb(0,255,255);
+}

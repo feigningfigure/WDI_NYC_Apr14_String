@@ -1,0 +1,99 @@
+body {
+  font-family: 'Quicksand';
+  background-color: #FFF7E5;
+  background: url("/assets/background.jpg");
+}
+
+.logoh {
+  font-family: 'Quicksand';
+  font-weight: 9000;
+  letter-spacing: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  text-shadow: 2px 2px black;
+  padding-top: 30px
+}
+
+.logo {
+  font-family: 'Quicksand';
+  font-weight: 9000;
+  letter-spacing: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  margin: 8em 0;
+  text-shadow: 2px 2px black;
+}
+
+.logo:hover {
+  color: #968468;
+}
+
+input {
+  border: solid black 1px;
+      padding: 5px;
+      font-size: 18px;
+      margin-top: .67em;
+}
+
+button[type=submit] {
+  background: #AE9878;
+      color: white;
+      border: solid black 1px;
+      padding: 5px;
+      font-size: 18px;
+}
+
+button[type=submit]:hover {
+  background: #968468;
+}
+
+.name {
+font-weight: 9000;
+}
+
+.main {
+  background: rgba(255, 255, 255, .5);
+  height: 205px;
+  width: 350px;
+  border-radius: 10px;
+  margin-top: 20%;
+}
+
+.back {
+  background: rgba(255, 255, 255, .5);
+  height: 665px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.container {
+  background-color: white;
+  height: 200px;
+  width: 270px;
+  overflow: scroll;
+  border: solid black 2px;
+  margin-top: 30px;
+  border-radius: 10px;
+  text-align: left;
+  padding: 10px;
+  font-size: 13px;
+  font-family: 'Comfortaa', cursive;
+}
+.hidden {
+  overflow: scroll;
+  height: 450px;
+}
+
+.wiki {
+  text-decoration: none;
+  color: black;
+}
+.wiki:hover {
+zoom: 120%;
+}
+
+.about {
+  height: 100px;
+}
