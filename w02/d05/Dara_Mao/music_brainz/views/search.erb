@@ -1,9 +1,23 @@
-<h1>Search Results</h1>
-
-<h1><%= @artist_hash["name"] %> is a <%= @artist_hash["gender"] %></h1>
-
-<img src= <%= @image %>>
-
-<%  @album_art_array.each do |album| %>
-  <img src= "<%= album %>">
-<% end %>
+<div class="section group first_section">
+  <div class="col span_6_of_12 main_image">
+    <img src= <%= @image %>>
+  </div>
+  <div class="col span_6_of_12 album_stack">
+  </div>
+</div>
+<div class="section group">
+  <div class="col span_6_of_12 artist_info">
+      <h1 class="title"><%= @artist_hash["name"] %> </h1>
+      <h4 class="subhead"><%= @tag %> (<%= @artist_hash["life_span"]["begin"] %> - <%= @end_date %>)</h4>
+      <p><%= @artist_info.chomp("...").chomp("<p></p>")%><!-- <a href="#">Read More</a> --></p>
+  </div>
+  <div class="col span_6_of_12 album_section">
+    <div class="section group album_group">
+  <% @sorted_albums.each do |album| %>
+      <div class="col span_3_of_12">
+        <a href="/track/#{album["key"]}"><img src= "<%= album["icon"] %>" title= "<%= album["key"] %>"></a>
+      </div>
+  <% end %>
+    </div>
+  </div>
+</div>

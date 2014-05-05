@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content=" ">
-  <meta name="keywords" content=" ">
-  <link rel="stylesheet" href="styles.css">
-  <title>Music Checker</title>
-</head>
-<body>
-  <%= yield %>
-</body>
-</html>
+<div class="section group first_section">
+  <div class="col span_2_of_12">
+  </div>
+  <div class="col span_8_of_12 intro">
+    <h1>Music Checker: Check for Music</h1>
+  </div>
+</div>
+  <div class="col span_2_of_12">
+  </div>
+  <div class="col span_8_of_12">
+    <form action="/search">
+        <input type ="text" name="artist_name" autocomplete="off" placeholder="Type Artist Name Here" style="padding: 10px;">
+      <!--   <input type="submit" value="Search"/> -->
+    </form>
+  </div>
+</div>
+
+<h1>last seach was <%= @last_search %></h1>
