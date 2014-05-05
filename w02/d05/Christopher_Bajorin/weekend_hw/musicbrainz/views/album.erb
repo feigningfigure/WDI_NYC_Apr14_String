@@ -19,7 +19,7 @@
       <% t = item["recording"]["length"].to_i
         ss, ms = t.divmod(1000)
         mm, ss = ss.divmod(60)
-        time = "%dm, %ds" % [mm, ss] %>
+        time = "%dm %ds" % [mm, ss] %>
         <div class="results">
           <ul>
             <li><%=time%> - <%= item["recording"]["title"] %></li>
