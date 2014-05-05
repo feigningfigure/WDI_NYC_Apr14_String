@@ -3,7 +3,7 @@ require 'pry'
 
 class Register
 
-	attr_accessor :company
+	attr_accessor :company, :receipt
 
 
 	def initialize(company)
@@ -12,6 +12,11 @@ class Register
 	end
 
 	def to_s
+		@receipt.each do |item, price|
+			
+
+		end
+
 		"		Company Name: #{@company}
 		Good/Services Provided: #{@item}
 		Cost: $#{@price}
