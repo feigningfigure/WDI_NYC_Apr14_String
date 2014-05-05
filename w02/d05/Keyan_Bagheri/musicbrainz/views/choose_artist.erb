@@ -1,5 +1,7 @@
+<div class="box1">
 <ul>
   <% @artist.each do |artist| %>
   <li><a href="/artist/<%=@artist.index(artist)%>"><%=@artist[@artist.index(artist)]["name"]%></a></li>
     <% end %>
 </ul>
+</div>

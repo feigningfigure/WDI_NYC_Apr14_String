@@ -8,6 +8,7 @@ get '/' do
 	erb :index
 end
 
+
 get '/choose_artist' do
 	composer = @params[:artist_name].to_s.downcase
 	@@composer = composer.gsub(" ","_")
@@ -20,16 +21,10 @@ get '/choose_artist' do
 end
 
 get '/artist/:artist_number' do
-	@art_number = @params[:artist_number].to_i
-
+	art_number = @params[:artist_number].to_i
 	url = "http://musicbrainz.org/ws/2/artist/?query=artist:#{@@composer}"
 	artist_hash = HTTParty.get(url)
-	@artist = artist_hash['metadata']['artist_list']['artist'][@art_number]
-
-	erb :artist
-end
+	@artist = artist_hash['metadata']['artist_list']['artist'][art_number]
 	
-get '/artist' do
-
 	erb :artist
 end
