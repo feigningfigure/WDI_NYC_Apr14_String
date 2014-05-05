@@ -1,2 +1,11 @@
-<h1>Search Results: <%= @artist %></h1>
+<h1><%=@artist.name%></h1>
+<div class= "left"><h2>DATES ACTIVE</h2> <h3><%=@artist.date_begin%> - <%=@artist.date_end%></h3></div>
+<div class = "right"><h2>COUNTRY</h2> <h3><%=@artist.country%></h3></div>
+<p><%=@wiki_page.content%></p>
+
+ <img src= <%="#{@image}"%> </img>
+
+<a href> <%="#{@bio}"%></a>
+
+
 
