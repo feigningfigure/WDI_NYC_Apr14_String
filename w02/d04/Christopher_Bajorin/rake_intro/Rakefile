@@ -1,0 +1,32 @@
+require 'httparty'
+
+# description of the task
+desc "Say Hello"
+# this is the name (as :symbol) and the code block of the task
+task :hello do
+  # this is the code that runs in the block
+  puts "Hello"
+end
+
+desc "Makes an Index HTML file"
+task :make_index_file do
+  index_file = File.open("index.html", "w")
+  index_file.puts <<-HTML
+<!DOCTYPE html>
+<html>
+
+</html>
+  HTML
+
+end
+
+
+desc "Gets me movie data"
+task :get_movie_data do |movie_title|
+  puts movie_title
+  puts HTTParty.get("http://www.omdbapi.com/?s=#{movie_title}")
+end
+
+# require 'json'
+
+hash = JSON.parse(movie_title)

@@ -1,0 +1,46 @@
+body {
+	/*background-image:url('http://imgs.tuts.dragoart.com/how-to-draw-dee-dee_1_000000004130_5.jpg');*/
+	font-family: 'Roboto Condensed', sans-serif;
+	/*background-color: pink;*/
+}
+
+/*h1 {
+	color: white;
+	font-size: 50px;
+	text-align: center;
+}
+
+h2 {
+	color: white;
+	font-size: 40px;
+	text-align: center;
+}
+
+h3 {
+	color: white;
+	font-size: 50px;
+	text-align: center;
+}*/
+.pg_container{
+	width: 100%;
+	background-color: white;
+	margin-top: 0px;
+
+}
+
+
+.content {
+	width: 550px;
+	height: 250px;
+	margin: 0 auto;
+	color: black;
+	background-color: #999;
+	text-align: center;
+	padding-top: 20px;
+	/*background: url;*/
+	background-repeat: none;
+}
+
+.content h1 h2 h3 {
+	color: #FF0000;
+}
