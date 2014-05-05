@@ -4,5 +4,5 @@ CREATE TABLE products
   prod_name varchar(255),
   price double precision,
   description text,
-  quantity integer
+  quantity = 1
 );
