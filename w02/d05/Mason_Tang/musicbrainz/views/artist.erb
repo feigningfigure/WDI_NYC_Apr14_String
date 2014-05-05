@@ -1,0 +1,58 @@
+<div class = form2>
+<form action="/">
+  <input type="submit" value="Search Again">
+</form>
+</div>
+
+<div class= artisthead>
+<h2><%= @artist_1["artist"]["name"] %></span></h2>
+
+<img src="<%= @artist_1["artist"]["image"].last["#text"] %>" />
+</div>
+
+<div class ="introtext">
+<h4>Artist name: <span class="artist_name"> <%= @result.name %></span></h4>
+
+<h4>Artist Country: <span class="artist_name"> <%= @result.country %></span></h4>
+
+<h4>Date Begin: <span class="artist_name"> <%= @result.date_begin %></span></h4>
+
+<h4>Date End: <span class="artist_name"> <%= @result.date_end %></span></h4>
+</div>
+
+<div class = albumshead>
+<h3> Top 5 Albums </h3>
+</div>
+
+<div class= albums>
+<h5><%= @artist_1_albums["topalbums"]["album"][0]["name"] %></h5>
+<img src="<%= @artist_1_albums["topalbums"]["album"][0]["image"].last["#text"] %>" />
+</div>
+
+<div class = albums>
+<h5><%= @artist_1_albums["topalbums"]["album"][1]["name"] %></h5>
+<img src="<%= @artist_1_albums["topalbums"]["album"][1]["image"].last["#text"] %>" />
+</div>
+
+<div class = albums>
+<h5><%= @artist_1_albums["topalbums"]["album"][2]["name"] %></h5>
+<img src="<%= @artist_1_albums["topalbums"]["album"][2]["image"].last["#text"] %>" />
+</div>
+
+<div class = albums>
+<h5><%= @artist_1_albums["topalbums"]["album"][3]["name"] %></h5>
+<img src="<%= @artist_1_albums["topalbums"]["album"][3]["image"].last["#text"] %>" />
+</div>
+
+<div class = albums>
+<h5><%= @artist_1_albums["topalbums"]["album"][4]["name"] %></h5>
+<img src="<%= @artist_1_albums["topalbums"]["album"][4]["image"].last["#text"] %>" />
+
+</div>
+
+
+<div class="soundcloud">
+<h3>Listen</h3>
+  <%= @embed_player_html %></div>
+
+
