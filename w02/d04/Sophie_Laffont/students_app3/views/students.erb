@@ -1,0 +1,7 @@
+<ul class="students">
+  <!-- no = means run the code only -->
+  <% @students_array.each_with_index do |student, index| %>
+    <!-- = means print the returned ruby value into the HTML -->
+    <li><a href="/students/<%= index %>"><%= student %></a></li>
+  <% end %>
+</ul>
