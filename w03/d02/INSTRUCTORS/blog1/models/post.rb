@@ -20,7 +20,7 @@ class Post
   def destroy
     # destroys an instance of Post
     post_id = self.id
-    self.connect_to_db.exec("DELETE FROM posts WHERE id=#{post_id}")
+    Post.connect_to_db.exec("DELETE FROM posts WHERE id=#{post_id}")
   end
 
   def self.find(id)
