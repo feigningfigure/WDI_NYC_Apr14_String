@@ -18,8 +18,10 @@ def create
 	quantity = 0
 
 	@conn.exec("INSERT INTO products (name, price, description, quantity) VALUES('#{name}', '#{price}', '#{description}', '#{quantity}');")
+	result = @conn.exec("SELECT * FROM products WHERE name = '#{name}';")[0]
+	id = result["id"]
 
-	puts "You created #{name} , #{description}, that costs $#{price}"
+	puts "You created #{name}, (#{id}) #{description}, that costs $#{price}"
 
 	program_start
 
