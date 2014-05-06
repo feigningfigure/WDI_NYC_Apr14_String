@@ -71,16 +71,27 @@ def search_by_id(id)
   end
 end
 
-# def search_by_id(id)
-#   result = @conn.exec("SELECT * FROM products WHERE #{category} = '#{query_term}';")
-#   result.each do |product|
-#     product.each do |k, v|
-#       puts "#{k}: #{v}"
-#     end
-#     puts "\n"
-#   end
-# end
+def select_by_id(id)
+  single_product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';")
+end
 
+def name_by_id(single_product)
+  single_product.each do |product|
+     product.each do |k, v|
+       if k == "name"
+         return v
+       end
+     end
+  end
+end
+
+
+
+
+def update(category, query_term, id)
+  @conn.exec("UPDATE products SET #{category} = '#{query_term}' WHERE id = '#{id}';")
+  puts "Your record has been updated"
+end
 
 def display_products
   all_products = @conn.exec("SELECT * FROM products;")
@@ -106,11 +117,11 @@ def menu
   puts ""
   puts "A: Create a new product"
   puts "B: Search"
-  puts "C: "
+  puts "C: Update product"
   puts "D: "
   puts "E: "
   puts "F: "
-  puts "G: "
+  puts "G: Display products"
   puts "Q: "
   puts ""
   command = gets.chomp.upcase
@@ -145,7 +156,24 @@ def menu
     "#{search(category, name)}"
     end
   when "C"
-    # Update
+    puts "What is the id of the product do you wish to edit?"
+      id = gets.chomp.to_i
+      product = select_by_id(id)
+      current_name = name_by_id(product)
+    puts "What is '#{current_name}'s' new name?"
+      new_name = gets.chomp
+     update("name", new_name, id) unless new_name.length == 0
+    # puts "What is 'KitKat Bar''s new description?"
+
+    # puts "What is 'KitKat Bar''s new price?"
+
+    # puts "You updated KitKat Super Bar (#1), A delicious candy bar, that costs $2.50"
+
+    # def update(category, query_term, id)
+    #   @conn.exec("UPDATE products SET #{category} = '#{query_term}' WHERE id = '#{id}';")
+    #   puts "Your record has been updated"
+    # end
+
   when "D"
     # Order
   when "E"
