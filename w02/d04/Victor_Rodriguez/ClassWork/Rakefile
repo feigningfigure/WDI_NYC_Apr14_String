@@ -1,0 +1,24 @@
+require HTTParty
+
+#description of the task
+desc "Say Hello"
+
+#this is the name (as :symbol) and the code block of the task
+task :hello do 
+#this is the code that runs the block
+	puts "Hello
+	
+end
+
+desc "Makes as Index HTML File"
+task :make_index_file do
+index_file = File.open('index.html', "w")
+index_file.puts <<-Html
+
+<!DOCTYPE html>
+
+</html>
+
+desc "Gets Me Ruby Data"
+task :get_movie_data do
+	puts HTTParty.get("")
