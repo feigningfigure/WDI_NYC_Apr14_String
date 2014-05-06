@@ -28,22 +28,24 @@
 
 </ul>
 	<!-- <%= @pic %> -->
-	<ul>
-		<% if @options == "all" %>
-			<li><%= @all %></li>
-		<% elsif @options == "album" %>
-			<li>@album %></li>
-		<% elsif @options == "compilation" %>
-			<li><%= @compilation %></li>
-		<% elsif @options == "ep" %>
-			<li><%= @epprint_array %></li>
-		<% elsif @options == "live" %>
-			<li><%= @live %></li>
-		<% elsif @options == "single" %>
-			<li><%= @single %></li>
-		<% elsif @options == "misc" %>
-			<li><%= @misc %></li>
-		<% else %>
-		<% end %>
-	</ul>
+<ul>	
+	<li>
+	<% if @options == "all" %>
+		<%=  @all.join ("</li><li>")  %>
+	<% elsif @options == "album" %>
+		<%= @album.join ("</li><li>")  %>
+	<% elsif @options == "compilation" %>
+		<%= @compilation.join ("</li><li>") %>
+	<% elsif @options == "ep" %>
+		<%= @ep.join ("</li><li>") %>
+	<% elsif @options == "live" %>
+		<%= @live.join ("</li><li>") %>
+	<% elsif @options == "single" %>
+		<%= @single.join ("</li><li>") %>
+	<% elsif @options == "misc" %>
+		<%= @misc.join ("</li><li>") %>
+	<% else %>
+	<% end %>
+	</li>
+</ul>
 </div>
