@@ -42,53 +42,53 @@ Bundler.require
 #MODELS
 require_relative 'models/item'
 
-###### CONTROLLER
-gets '/' do 
-  #list all
-  @items = Item.all
-  erb :items_index
-end
+# ###### CONTROLLER
+# gets '/' do 
+#   #list all
+#   @items = Item.all
+#   erb :items_index
+# end
 
-gets 'items/new' do 
-  # shows a form to input new item
-  erb :items_new
-end
+# gets 'items/new' do 
+#   # shows a form to input new item
+#   erb :items_new
+# end
 
-gets '/items/:id/view' do 
-   # show me a single item with given id
-  @item_id = params[:id]
-  @item = Item.find(@item_id)
-  erb :items_single
+# gets '/items/:id/view' do 
+#    # show me a single item with given id
+#   @item_id = params[:id]
+#   @item = Item.find(@item_id)
+#   erb :items_single
   
-end
+# end
 
-gets '/items/:id/edit' do 
+# gets '/items/:id/edit' do 
   
-end
+# end
 
-gets '/items/:id/delete' do 
-  # deletes a single item with given id
-  item_id = params[:id]
-  item = item.find(item_id)
-  item.destroy
-  redirect "/"
-  # "You have deleted #{item_id.to_s}"
-end
-
-
-
-
-####?????
-
-# post '/posts' do
-#   # processes new post data
-#   title = params[:title]
-#   body = params[:body]
-#   author = params[:author]
-
-#   Post.create(
-#     title: title,
-#     body: body,
-#     author: author
-#   )
+# gets '/items/:id/delete' do 
+#   # deletes a single item with given id
+#   item_id = params[:id]
+#   item = item.find(item_id)
+#   item.destroy
 #   redirect "/"
+#   # "You have deleted #{item_id.to_s}"
+# end
+
+
+
+
+# ####?????
+
+# # post '/posts' do
+# #   # processes new post data
+# #   title = params[:title]
+# #   body = params[:body]
+# #   author = params[:author]
+
+# #   Post.create(
+# #     title: title,
+# #     body: body,
+# #     author: author
+# #   )
+# #   redirect "/"

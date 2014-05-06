@@ -1,0 +1,13 @@
+<form action="FIX" method="POST">
+  
+  <ul>
+    <li>item name: <input type="text" name="name" placeholder="item" /></li>
+    <li>item price: $<input type="text" name="price" placeholder="0.00" /></li>
+    <li>item description: <textarea name="description" placeholder="item description here"></textarea></li>
+    <li>quantity in stock:<input type="text" name="quantity_in_stock" placeholder="0" /></li>
+    <li>...the current time is <%= Now() %></li>                                                 <!--  how can I pass this along? I want the timestamp to happen on submit push, not server write -->
+    <li><input type="submit" value="add new inventory to database" /></li>
+    
+  </ul>
+    
+</form>

@@ -1,0 +1,16 @@
+<ul id="items_list">
+  <% @items.each do |item| %>
+    <li>
+      <h2> item listing! </h2>
+      <!-- <h2><a href="/posts/<%= item.id %> "><%= post.title %></a></h2> -->
+      <div id="item_container">
+        <p><%= item.id %></p>
+        <p><%= item.name %></p>
+        <p><%= item.price %></p>
+        <p><%= item.description %></p>
+        <p><%= item.quantity %></p>
+        <p><%= item.creation_timestamp %></p>       
+      </div>
+    </li>
+  <% end %>
+</ul>
