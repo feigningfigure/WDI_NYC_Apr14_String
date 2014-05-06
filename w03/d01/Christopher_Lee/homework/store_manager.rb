@@ -95,12 +95,8 @@ def attributes_by_id(single_product)
   attributes
 end
 
-
-
-
 def update(category, query_term, id)
   @conn.exec("UPDATE products SET #{category} = '#{query_term}' WHERE id = '#{id}';")
-  puts "Worked"
 end
 
 def display_products
@@ -188,12 +184,8 @@ def menu
     changes_array = attributes_by_id(product)
 
     unless new_name.length + description.length == 0
-    puts "You updated #{changes_array[1]} (##{changes_array[0]}), #{changes_array[3]}, that costs #{changes_array[2]}"
+    puts "You updated #{changes_array[1]} (##{changes_array[0]}), #{changes_array[3]}, that costs $#{changes_array[2]}"
     end
-    # def update(category, query_term, id)
-    #   @conn.exec("UPDATE products SET #{category} = '#{query_term}' WHERE id = '#{id}';")
-    #   puts "Your record has been updated"
-    # end
 
   when "D"
     # Order
