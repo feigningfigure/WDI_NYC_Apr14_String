@@ -111,7 +111,6 @@ end
 
 def delete(id)
   @conn.exec("DELETE FROM products WHERE id = '#{id}';")
-  puts "Your record has been deleted"
 end
 
 # pry
@@ -127,9 +126,9 @@ def menu
   puts "C: Update product"
   puts "D: "
   puts "E: "
-  puts "F: "
+  puts "F: Delete a product"
   puts "G: Display products"
-  puts "Q: "
+  puts "Q: Quit"
   puts ""
   command = gets.chomp.upcase
 
@@ -192,7 +191,18 @@ def menu
   when "E"
     # Ship
   when "F"
-    # Delete
+    puts "What is the id of the product do you wish to delete?"
+    id = gets.chomp.to_i
+    product = select_by_id(id)
+    current_name = name_by_id(product)
+    puts "Do you really want to delete #{current_name}?(Yes/No)"
+    response = gets.chomp.upcase
+    if response = "Yes" || "Y"
+      puts "#{current_name} has been deleted"
+      delete(id)
+    else
+      puts "Delete aborted"
+    end
   when "G"
     display_products
   when "Q"
