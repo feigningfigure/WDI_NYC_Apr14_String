@@ -1,0 +1,16 @@
+<img class="icon marg" src="assets/rock.png">
+<h2>vs</h2>
+<% num = rand(1..3) %>
+<% case num.to_i %>
+<% when 1 %>
+<img class="icon" src="assets/rock.png">
+<h1 class="draw">IT'S A TIE!</h1>
+<% when 2 %>
+<img class="icon" src="assets/paper.png">
+<h1 class="lose">LOSER!</h1>
+<% when 3 %>
+<img class="icon" src="/assets/scissors.png">
+<h1 class="win">WINNING!</h1>
+<% end %>
+
+<a class="again" href="/">PLAY AGAIN?<a>
