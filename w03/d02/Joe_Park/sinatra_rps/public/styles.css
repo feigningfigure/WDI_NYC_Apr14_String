@@ -1,0 +1,48 @@
+/* Rock Paper Scissors morning exercise */
+
+/* Palette from: http://blog.caspio.com/tech_tips/free-web-design-tools-to-style-your-website/ */
+
+body {
+  padding: 0px 20px 50px 20px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size:38px;
+  color: #000;
+}
+h2 {
+  font-size: 30px;
+  color: #ee5921;
+}
+h3 {
+  font-size: 22px;
+  color: #cc0000;
+}
+p {
+  margin: 0 0 20px 0px;
+}
+p.aside {
+  font-size: 12px
+}
+a {
+  color: #484848;
+  text-decoration: none;
+}
+a:hover {
+  color: #ee5921;
+}
+
+.bluestrong {
+  color: #3d82ab;
+  font-weight: bold;
+}
+.greenstrong {
+  color: #72a435;
+  font-weight: bold;
+}
+
+.block { margin: 40px 0px 50px 20px;}
+ul { margin-left: 20px;}
+ul li {padding-bottom: 10px;}
