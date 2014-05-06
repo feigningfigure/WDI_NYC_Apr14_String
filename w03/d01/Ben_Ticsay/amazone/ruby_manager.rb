@@ -51,11 +51,7 @@ require 'pg'
 
 
 
-# # UPDATE table1 
-# #    SET col1 = othertable.col2,
-# #        col2 = othertable.col3 
-# #   FROM othertable 
-# #  WHERE othertable.col1 = 123;
+
 
 # 	puts "Your record has been updated"
 # end
@@ -72,20 +68,36 @@ require 'pg'
 # update(update_id, new_name, new_description, new_price)
 
 # #ORDER
-def order(order_id)
-# HOW DO YOU ADD TO EXISTING QUANTITY?
-	@conn.exec("UPDATE students SET quantity = '#{order_term}.to_i + ' WHERE id = '#{order_id}';")
-puts "You have added 10 KitKat Bars and now have 50 KitKat Bars left."
-# end
+def order
+	@product_row = @conn.exec("SELECT * FROM products WHERE id = '#{order_id}';")
+	
+	product_row.each do |prod_val|
+		@number_1 = prod_val["quantity"].to_i 
+	end
+	order_result = @number_1 + order_number.to_i
+
+@conn.exec("UPDATE students SET quantity = '#{order_result}'' WHERE id = '#{order_id}';")
+
+end
+
+	puts "What is the id of the product you wish to order?"
+	order_id = gets.chomp
+	puts "You have #{product_row["quantity"]} #{product_row["name"]}. How many do you wish to order?." 
+	order_number = gets.chomp
+
+
+order
+
+
 
 # #SHIP
-# def ship()
+def ship()
 	
-# end
+end
 
 # #DELETE
-# def delete(delete_id)
-# 	@conn.exec("DELETE FROM products WHERE id = '#{delete_id}';")
-# 	puts "Your record has been deleted"
-# end
+def delete(delete_id)
+	@conn.exec("DELETE FROM products WHERE id = '#{delete_id}';")
+	puts "Your record has been deleted"
+end
 

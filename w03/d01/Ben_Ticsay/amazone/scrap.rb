@@ -32,11 +32,12 @@ puts "You updated #{new_name} #{update_id}, #{new_description}, that costs $#{ne
 puts "What is the id of the product you wish to order?"
 order_id = gets.chomp
 puts "You have 40 KitKat Bars. How many do you wish to order?." 
-= gets.chomp
+order_number = gets.chomp
 puts "You have added 10 KitKat Bars and now have 50 KitKat Bars left." 
 
 
 #SHIP
+
 puts "You have #{quantity} #{name}. How many are you shipping?."  
 ship_quantity = gets.chomp
 puts "You have sold #{ship_quantity} #{name}. You now have #{post_ship_quant} #{name} left."
@@ -49,6 +50,11 @@ puts "Do you really want to delete 'KitKat Bar'?"
 confirm_del = gets.chomp
 puts "You have deleted #{name}"
 
+# # UPDATE table1 
+# #    SET col1 = othertable.col2,
+# #        col2 = othertable.col3 
+# #   FROM othertable 
+# #  WHERE othertable.col1 = 123;
 
 
 
