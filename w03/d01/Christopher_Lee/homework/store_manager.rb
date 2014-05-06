@@ -85,12 +85,22 @@ def name_by_id(single_product)
   end
 end
 
+def attributes_by_id(single_product)
+  attributes = []
+  single_product.each do |product|
+     product.each do |k, v|
+       attributes << v
+     end
+  end
+  attributes
+end
+
 
 
 
 def update(category, query_term, id)
   @conn.exec("UPDATE products SET #{category} = '#{query_term}' WHERE id = '#{id}';")
-  puts "Your record has been updated"
+  puts "Worked"
 end
 
 def display_products
@@ -99,6 +109,7 @@ def display_products
     product.each do |k, v|
       puts "#{k}: #{v}"
     end
+    puts "\n"
   end
 end
 
@@ -160,15 +171,25 @@ def menu
       id = gets.chomp.to_i
       product = select_by_id(id)
       current_name = name_by_id(product)
+
     puts "What is '#{current_name}'s' new name?"
-      new_name = gets.chomp
+    new_name = gets.chomp.split.map(&:capitalize).join(' ')
      update("name", new_name, id) unless new_name.length == 0
-    # puts "What is 'KitKat Bar''s new description?"
 
-    # puts "What is 'KitKat Bar''s new price?"
+    puts "What is '#{current_name}'s new description?"
+    description = gets.chomp
+    update("description", description, id) unless description.length == 0
 
-    # puts "You updated KitKat Super Bar (#1), A delicious candy bar, that costs $2.50"
+    puts "What is '#{current_name}'s new price?"
+    new_price = gets.chomp
+    new_price = new_price.to_f && update("price", new_price, id) unless new_price.length == 0
 
+    product = select_by_id(id)
+    changes_array = attributes_by_id(product)
+
+    unless new_name.length + description.length == 0
+    puts "You updated #{changes_array[1]} (##{changes_array[0]}), #{changes_array[3]}, that costs #{changes_array[2]}"
+    end
     # def update(category, query_term, id)
     #   @conn.exec("UPDATE products SET #{category} = '#{query_term}' WHERE id = '#{id}';")
     #   puts "Your record has been updated"
