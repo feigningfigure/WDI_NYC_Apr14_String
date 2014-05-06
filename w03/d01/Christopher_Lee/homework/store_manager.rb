@@ -53,13 +53,33 @@ end
 
 def search(category, query_term)
   result = @conn.exec("SELECT * FROM products WHERE #{category} = '#{query_term}';")
-
-  # result.each do |student|
-  #   student.each do |k, v|
-  #     puts "#{k}: #{v}"
-  #   end
-  # end
+  result.each do |product|
+    product.each do |k, v|
+      puts "#{k}: #{v}"
+    end
+    puts "\n"
+  end
 end
+
+def search_by_id(id)
+  single_product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';")
+  single_product.each do |product|
+    product.each do |k, v|
+      puts "#{k}: #{v}"
+    end
+    "\n"
+  end
+end
+
+# def search_by_id(id)
+#   result = @conn.exec("SELECT * FROM products WHERE #{category} = '#{query_term}';")
+#   result.each do |product|
+#     product.each do |k, v|
+#       puts "#{k}: #{v}"
+#     end
+#     puts "\n"
+#   end
+# end
 
 
 def display_products
@@ -69,13 +89,6 @@ def display_products
       puts "#{k}: #{v}"
     end
   end
-end
-
-def display_product(id)
-  single_product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';")
-  single_product.each do |product|
-      puts "#{product["id"]}"
-    end
 end
 
 def delete(id)
@@ -97,6 +110,7 @@ def menu
   puts "D: "
   puts "E: "
   puts "F: "
+  puts "G: "
   puts "Q: "
   puts ""
   command = gets.chomp.upcase
@@ -117,15 +131,29 @@ def menu
     create_product(desired_name, price, description)
     puts "You created #{desired_name} (##{select_newest_product(desired_name)}), #{description}, that costs $#{price}"
   when "B"
-    # Display Clients
+    puts "Do you wish to search by 'id' or 'name'?"
+    category = gets.chomp
+    if category == "id"
+    puts "What is the product id?"
+    id = gets.chomp.to_i
+    puts "Here is the product matching id(##{id})"
+    puts "#{search_by_id(id)}"
+    else
+    puts "What your product called?"
+    name = gets.chomp.split.map(&:capitalize).join(' ')
+    puts "Here are all the products that matched your search:"
+    "#{search(category, name)}"
+    end
   when "C"
-    # Create Animal
+    # Update
   when "D"
-    # Create Client
+    # Order
   when "E"
-    # Adopt Animal
+    # Ship
   when "F"
-    # Put Animal Up For Adoption
+    # Delete
+  when "G"
+    display_products
   when "Q"
     Kernel.exit
   end
