@@ -1,5 +1,6 @@
 # require the gem to interact with psql
 require 'pg'
+require 'faker'
 
 # connect to database using method 'connect'
 @conn = PG.connect(dbname: 'students_db')
@@ -35,12 +36,13 @@ end
 
 # UPDATE students SET first_name = '' WHERE id = '';
 def update(category, query_term, id)
-  @conn.exec("UPDATE students SET #{category} = '#{first_name}' WHERE id '#{id}';")
+  @conn.exec("UPDATE students SET #{category} = '#{query_term}' WHERE id '#{id}';")
 end
 
 # DELETE FROM students WHERE id = ''
 def delete (id)
   @conn.exec("DELETE FROM students WHERE id = '#{id}';")
+  puts "Your record has been deleted"
 end
 
 def seed
