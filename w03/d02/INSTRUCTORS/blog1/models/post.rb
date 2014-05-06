@@ -36,6 +36,12 @@ class Post
         '#{author}'
       );
     SQLSTRING
+
+    # actually create a row in my db
+    self.connect_to_db.exec(sql_string)
+
+    # should return a new instance of post
+
   end
 
 end

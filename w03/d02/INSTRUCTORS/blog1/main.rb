@@ -10,3 +10,7 @@ get '/' do
   @posts = Post.all
   erb :index
 end
+
+get '/posts/create' do
+  Post.create({title: "My Title", body: "My Body", author: "me"})
+end
