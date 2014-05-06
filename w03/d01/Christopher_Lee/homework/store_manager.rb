@@ -121,13 +121,13 @@ def menu
   puts "Welcome to the AmaZone Inventory Manager"
   puts "Please choose from the menu below: "
   puts ""
-  puts "A: Create a new product"
+  puts "A: Create a New Product"
   puts "B: Search"
-  puts "C: Update product"
-  puts "D: Order"
-  puts "E: "
-  puts "F: Delete a product"
-  puts "G: Display products"
+  puts "C: Update Product"
+  puts "D: Ship Product"
+  puts "E: Order Product"
+  puts "F: Delete a Product"
+  puts "G: Display Products"
   puts "Q: Quit"
   puts ""
   command = gets.chomp.upcase
@@ -189,6 +189,31 @@ def menu
   when "D"
     puts "Here is your current inventory:"
     display_products
+    puts "Please enter the id of the product you would like ship out:"
+    id = gets.chomp.to_i
+    product = select_by_id(id)
+    changes_array = attributes_by_id(product)
+    current_name = name_by_id(product)
+    current_amount = changes_array[4].to_i
+    if current_amount == 0
+      puts "You don't have any of those to ship out. Order more!"
+      response = menu
+    end
+    puts "You have #{current_amount} #{current_name}. How many are you shipping?."
+    order = gets.chomp.to_i
+    if order > current_amount
+      puts "You don't have enough of those to ship out"
+      puts "You currently have #{current_amount} #{current_name}s"
+      response = "D"
+    end
+    unless order > current_amount
+      updated_stock = current_amount.to_i - order
+      update("quantity", updated_stock, id)
+      puts "You have sold #{order} #{current_name}s. You now have #{updated_stock} #{current_name}s left."
+    end
+  when "E"
+    puts "Here is your current inventory:"
+    display_products
     puts "Please enter the id of the product you would like to order more of:"
     id = gets.chomp.to_i
     product = select_by_id(id)
@@ -200,8 +225,6 @@ def menu
     updated_stock = order + current_amount.to_i
     update("quantity", updated_stock, id)
     puts "You have added #{order} #{current_name}s and now have #{updated_stock} #{current_name}s left."
-  when "E"
-    # Ship
   when "F"
     puts "What is the id of the product do you wish to delete?"
     id = gets.chomp.to_i
