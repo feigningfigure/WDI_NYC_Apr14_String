@@ -20,10 +20,23 @@ def display_students
   end
 end
 
-def search(input)
-result = @conn.exec("SELECT * FROM students WHERE first_name = '#{input}' OR last_name = #{input}';");
+# SELECT * FROM students WHERE first_name or last_name = '';
+def search(category, query_term)
+result = @conn.exec("SELECT * FROM students WHERE #{category} = '#{query_term}';");
   puts student
   result.each do |student|
     puts "#{k}: #{v}"
   end
 end
+
+# UPDATE students SET first_name = '' WHERE id = '';
+def update(category, querty_term, id)
+  @conn.exec("SELECT * FROM students WHERE #{first_name} = '#{id}';");
+end
+
+# DELETE FROM students WHERE id = '';
+def delete(id)
+  @conn.exec("DELETE FROM students WHERE id = '#{id}';");
+end
+
+
