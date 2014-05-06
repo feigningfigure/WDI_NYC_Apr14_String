@@ -16,5 +16,6 @@ arr_students.each do |student|
   first_name = student.split[0]
   last_name = student.split[1]
   language = arr_languages.sample
+
   arr_developers << Developer.new(language, {:first_name => first_name, :last_name => last_name})
 end
