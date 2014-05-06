@@ -124,7 +124,7 @@ def menu
   puts "A: Create a new product"
   puts "B: Search"
   puts "C: Update product"
-  puts "D: "
+  puts "D: Order"
   puts "E: "
   puts "F: Delete a product"
   puts "G: Display products"
@@ -187,7 +187,19 @@ def menu
     end
 
   when "D"
-    # Order
+    puts "Here is your current inventory:"
+    display_products
+    puts "Please enter the id of the product you would like to order more of:"
+    id = gets.chomp.to_i
+    product = select_by_id(id)
+    changes_array = attributes_by_id(product)
+    current_name = name_by_id(product)
+    current_amount = changes_array[4].to_i
+    puts "You have #{current_amount} #{current_name}. How many do you wish to order?."
+    order = gets.chomp.to_i
+    updated_stock = order + current_amount.to_i
+    update("quantity", updated_stock, id)
+    puts "You have added #{order} #{current_name}s and now have #{updated_stock} #{current_name}s left."
   when "E"
     # Ship
   when "F"
