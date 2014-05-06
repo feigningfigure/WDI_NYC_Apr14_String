@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+  <title>MYSPACE</title>
+
+</head>
+<body>
+
+  <center><a href="/" class="logo">MYSPACE</a>
+ <form action="/friend">
+  <input type="text" name="username" placeholder="Search">
+  <button type="submit" >Search</button>
+</form>
+<% if @message %>
+<h5 class="error"><%= @message %></h5>
+<% end %>
+  <%= yield %>
+</center>
+</body>
+</html>
