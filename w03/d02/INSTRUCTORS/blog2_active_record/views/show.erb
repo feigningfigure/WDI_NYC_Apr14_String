@@ -4,7 +4,7 @@
         <div>
           <p><%= @post.body %></p>
           <p>
-            by <%= @post.author %> on <%= @post.created_at %>
+            by <%= @post.author %> <img src="<%= @post.author_photo %>"/> on <%= @post.created_at %>
           </p>
           <p>
             <a href="#">edit</a> | <a href="/posts/<%= @post_id %>/delete">delete</a>
