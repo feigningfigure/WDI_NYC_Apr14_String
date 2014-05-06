@@ -5,7 +5,13 @@ require 'pry'
 
 def add_product(name, price, description)
 	@conn.exec("INSERT INTO products (name, price, description, quantity) VALUES ('#{name}', '#{price}', '#{description}', 0);")
-	puts "You created '#{name}' id, '#{description}', that costs $'#{price}'."
+	new = @conn.exec("SELECT id FROM products WHERE name = '#{name}';")
+		new.each do |item|
+			item.each do |k, v|
+				id = v
+				puts "You created #{name} (##{id}), #{description}, that costs $#{price}."
+			end
+		end
 end
 
 def search_id(id)
@@ -26,18 +32,36 @@ def search_name(name)
 	end
 end
 
-def update(id, name, description, price)
+def update(id, name, description, price=nil)
 	if name != ""
 	@conn.exec("UPDATE products SET name = '#{name}' WHERE id = '#{id}';")
 	end
 	if description != ""
 	@conn.exec("UPDATE products SET description = '#{description}' WHERE id = '#{id}';")
 	end
-	if price != ""
-	@conn.exec("UPDATE products SET price = price WHERE id = '#{id}';")
+	if price != 0
+	@conn.exec("UPDATE products SET price = '#{price}' WHERE id = '#{id}';")
 	end
-	@conn.exec("SELECT * FROM products WHERE id = #{id};")
-	# puts "You updated #{update.values_at('name')} (##{update[0]['id']}), #{update[0]['description']}, that costs $#{update[0]['price']}."
+
+	name_v = @conn.exec("SELECT name FROM products WHERE id = '#{id}';")
+		name_v.each do |item|
+			item.each do |k, v|
+				name = v
+			end
+		end
+	description_v = @conn.exec("SELECT description FROM products WHERE id = '#{id}';")
+		description_v.each do |item|
+			item.each do |k, v|
+				description = v
+			end
+		end
+	price_v = @conn.exec("SELECT price FROM products WHERE id = '#{id}';")
+		price_v.each do |item|
+			item.each do |k, v|
+				price = v
+			end
+		end
+	puts "You updated #{name} (##{id}), #{description}, that costs $#{price}."
 end
 
 def delete(id)
@@ -62,13 +86,13 @@ def order(id, order)
 end
 
 #CREATE
-# puts "What is your product called?"
-# 	name = gets.chomp
-# puts "How much does it cost?"
-# 	price = gets.chomp.to_f
-# puts "Provide a short description of the product."
-# 	description = gets.chomp
-# add_product(name, price, description)
+puts "What is your product called?"
+	name = gets.chomp
+puts "How much does it cost?"
+	price = gets.chomp.to_f
+puts "Provide a short description of the product."
+	description = gets.chomp
+add_product(name, price, description)
 
 #SEARCH
 # puts "Do you wish to search by 'ID' or 'Name'?"
@@ -83,19 +107,31 @@ end
 # 		search_name(name)
 # 	end
 
-#UPDATE
-puts "What is the id of the product you'd like to update?"
-	id = gets.chomp.to_i
-@conn.exec("SELECT name FROM products WHERE id = '#{id}';")
-	name_v = result.values_at('name')
-	puts name_v
-# puts "What is the new name of #{product[0]['name']}?"
-# 	name = gets.chomp
-# puts "What is the new description of #{product[0]['description']}?"
-# 	description = gets.chomp
-# puts "What is the new price of #{product[0]['price']}?"
-# 	price = gets.chomp.to_f
-# update(id, name, description, price)
+#UPDATE - DONE
+# puts "What is the id of the product you'd like to update?"
+# 	id = gets.chomp.to_i
+# 	name_v = @conn.exec("SELECT name FROM products WHERE id = '#{id}';")
+# 	name_v.each do |item|
+# 		item.each do |k, v|
+# 			current_name = v
+# 	puts "What is the new name of #{current_name}?"
+# 		name = gets.chomp
+# 	if name == ""
+# 		puts "What is the new description of #{current_name}?"
+# 	else
+# 		puts "What is the new description of #{name}?"
+# 	end
+# 		description = gets.chomp
+# 	if name == ""
+# 		puts "What is the new price of #{current_name}?"
+# 	else
+# 		puts "What is the new price of #{name}?"
+# 	end
+# 		price = gets.chomp.to_f
+# 	update(id, name, description, price)
+# 		end
+# 	end		
+
 
 #ORDER
 # puts "What is the id of the product you'd like to order?"
