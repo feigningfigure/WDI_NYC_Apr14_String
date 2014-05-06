@@ -1,8 +1,31 @@
 class Post
 
+  attr_accessor :title, :body, :author, :id, :created_at
+
+  def initialize(attributes_hash)
+    # does not create on the database
+    # only creates a Ruby instance
+    @title = attributes_hash[:title]
+    @body = attributes_hash[:body]
+    @author = attributes_hash[:author]
+  end
+
   # a method that establishes link to DB
   def self.connect_to_db
     PG.connect(dbname: 'blog1')
+  end
+
+  def destroy
+    # destroys an instance of Post
+    Post.find
+  end
+
+  def self.find(id)
+    posts = self.all
+    results = posts.select do |post|
+      post["id"] == id.to_s
+    end
+    results
   end
 
   # a method that fetches all rows from table
@@ -38,7 +61,7 @@ class Post
     SQLSTRING
 
     # actually create a row in my db
-    self.connect_to_db.exec(sql_string)
+    result = self.connect_to_db.exec(sql_string)
 
     # should return a new instance of post
 
