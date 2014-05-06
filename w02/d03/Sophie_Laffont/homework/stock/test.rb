@@ -1,0 +1,1 @@
+quote = YahooFinance::get_standard_quotes("goog")
