@@ -15,6 +15,8 @@ require 'rdio_api'
 get '/' do
   @last_search = get_search_history(1)
   @second_to_last = get_search_history(2)
+  @third_to_last = get_search_history(3)
+  @fourth_to_last = get_search_history(4)
   erb :index
 end
 
@@ -207,3 +209,9 @@ end
 #     <img src= "<%= album["icon"] %>">
 #   <% end %>
 #  <%=  @album_art_array %>
+
+
+# <%= @last_search %>
+# <%= @second_to_last %>
+# <%= @third_to_last %>
+# <%= @fourth_to_last %>
