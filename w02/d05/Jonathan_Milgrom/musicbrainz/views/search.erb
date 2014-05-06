@@ -1,0 +1,8 @@
+<h3> Here are the results of your search </h3>
+
+
+<ul>
+  <% @suggestion_array.each do |artist| %>
+  <li><a href="/artist/<%= artist[:mbid] %>"><%= artist[:name] %></a></li>
+    <% end %>
+</ul>

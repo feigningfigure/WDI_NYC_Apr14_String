@@ -1,0 +1,9 @@
+<div id="title">Search Results</div>
+
+<div class="results">
+<ul>
+  <% @suggestion_array.each do |artist| %>
+  <li><a href="/artist/<%= artist[:mbid] %>"><%= artist[:name] %></a></li>
+    <% end %>
+</ul>
+</div>
