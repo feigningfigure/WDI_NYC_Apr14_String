@@ -29,9 +29,9 @@ class Post
   end
 
   # a method that fetches all rows from table
-  def self.all
+  def self.all(option_clause=nil)
     posts = []
-    self.connect_to_db.exec("SELECT * FROM posts").each do |post|
+    self.connect_to_db.exec("SELECT * FROM posts #{option_clause}").each do |post|
       posts << post
     end
     posts
@@ -61,10 +61,21 @@ class Post
     SQLSTRING
 
     # actually create a row in my db
-    result = self.connect_to_db.exec(sql_string)
+    self.connect_to_db.exec(sql_string)
+
+    newest_result = self.all("ORDER BY id desc").first
+
+    id_of_newest = newest_result["id"]
+
+    new_post = Post.new({
+      title: title,
+      body: body,
+      created_at: created_at,
+      id: id_of_newest.to_i
+    })
 
     # should return a new instance of post
-
+    return new_post
   end
 
 end
