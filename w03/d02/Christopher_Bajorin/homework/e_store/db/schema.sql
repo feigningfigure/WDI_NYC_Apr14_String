@@ -5,5 +5,5 @@ CREATE TABLE items
   price decimal,
   description  text,
   quantity integer,
-  created_at timestamp
+  created_at timestamp default current_timestamp
 );

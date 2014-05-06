@@ -1,29 +1,33 @@
-INSERT INTO posts
-(title, created_at, body, author)
+INSERT INTO items
+(name, price, description, quantity)
+
 VALUES
 (
-  'My First Post',
-  'May 6, 2014',
-  'This post goes first!',
-  'wdi_string_class'
+  'Bike',
+  '500.00',
+  'A wonderful bicycle',
+  '5'
 );
 
-INSERT INTO posts
-(title, created_at, body, author)
+INSERT INTO items
+(name, price, description, quantity)
+
 VALUES
 (
-  'My Second Post',
-  'May 6, 2014',
-  'This post goes second!',
-  'wdi_string_class'
+  'Book',
+  '19.95',
+  'A fascinating read',
+  '3'
 );
 
-INSERT INTO posts
-(title, created_at, body, author)
+INSERT INTO items
+(name, price, description, quantity)
+
 VALUES
 (
-  'My Third Post',
-  'May 6, 2014',
-  'This post goes third!',
-  'wdi_string_class'
+  'Computer',
+  '1200.00',
+  'A barely functioning piece of crap',
+  '1'
 );
+

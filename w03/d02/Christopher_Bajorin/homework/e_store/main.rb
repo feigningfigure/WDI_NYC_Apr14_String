@@ -1,8 +1,8 @@
 require 'sinatra'
 require 'sinatra/reloader'
-require 'pg'
 require 'active_record'
 require 'pry'
+require_relative 'models/item'
 
 ActiveRecord::Base.establish_connection({
   database: "e_store",
@@ -11,49 +11,69 @@ ActiveRecord::Base.establish_connection({
 
 
 get '/' do
-  redirect '/items'
+  @items = Item.all
+  erb :index
 end
 
 get '/items' do
 
+  name = params[:name]
+  price = params[:price].to_f
+  description = params[:description]
+  quantity = params[:quantity].to_i
 
+  Item.create(
+    name: name,
+    price: price,
+    description: description,
+    quantity: quantity
+  )
+  redirect "/"
   erb :items
 end
 
 
 
 get '/items/new' do
-
+  # just a form
+  erb :new
 end
 
 
 
 get '/items/:id/view' do
+  # show me an item by id
+  @item_id = params[:id]
+  @item = Item.find(@item_id)
 
+  erb :view
 end
 
 
 
 get '/items/:id/edit' do
-
+  # item_id = params[:id]
+  # item = Item.find(item_id)
+  redirect '/'
+  # erb :edit
 end
 
 
 
 get '/items/:id/delete' do
 
+  item_id = params[:id]
+  item = Item.find(item_id)
+  item.destroy
+  redirect "/"
+  "You have deleted #{item_id.to_s}"
+  erb :delete
 end
 
 
 
 
 
-# # MODELS
-# require_relative 'models/post'
-
-# # LIBRARIES
-
-# require_relative 'lib/facebook'
 
 # get '/' do
 #   @posts = Post.all
@@ -63,34 +83,4 @@ end
 # get '/posts/new' do
 #   # shows a form to input new post
 #   erb :new
-# end
-
-# get '/posts/:id' do
-#   # show me a single post with given id
-#   @post_id = params[:id]
-#   @post = Post.find(@post_id)
-#   erb :show
-# end
-
-# get '/posts/:id/delete' do
-#   # deletes a single post with given id
-#   post_id = params[:id]
-#   post = Post.find(post_id)
-#   post.destroy
-#   redirect "/"
-#   # "You have deleted #{post_id.to_s}"
-# end
-
-# post '/posts' do
-#   # processes new post data
-#   title = params[:title]
-#   body = params[:body]
-#   author = params[:author]
-
-#   Post.create(
-#     title: title,
-#     body: body,
-#     author: author
-#   )
-#   redirect "/"
 # end
