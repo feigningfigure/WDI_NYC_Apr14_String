@@ -19,7 +19,7 @@ end
 get '/posts/:id' do
   # show me a single post with given id
   @post_id = params[:id]
-  @post = Post.find(@post_id).first
+  @post = Post.find(@post_id)
   erb :show
 end
 
@@ -28,7 +28,8 @@ get '/posts/:id/delete' do
   post_id = params[:id]
   post = Post.find(post_id)
   post.destroy
-  "You have deleted #{post_id.to_s}"
+  redirect "/"
+  # "You have deleted #{post_id.to_s}"
 end
 
 post '/posts' do
