@@ -1,0 +1,16 @@
+<form action="/items" method="POST">
+  <p><%= @item.name %></p>
+  <p>
+    <input type="text" name="name" placeholder="<%= @item.name %>" />
+  </p>
+  <p>
+    <input type="text" name="price" placeholder="<%= @item.price %>" />
+  </p>
+  <p>
+    <input type="text" name="quantity" placeholder="<%= @item.quantity %>" />
+  </p>
+  <p>
+    <textarea name="description" placeholder="Enter Your Description Here"></textarea>
+  </p>
+  <input type="submit" value="Complete"/>
+</form>
