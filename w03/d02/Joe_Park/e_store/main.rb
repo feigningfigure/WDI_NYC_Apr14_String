@@ -25,10 +25,10 @@ get '/items/new' do
 	erb :new
 end
 
-get '/items/:id/view' do
+get '/items/:id/show' do
 	item_id = params[:id]
 	@item = Item.find(item_id)
-	erb :view
+	erb :show
 end
 
 
@@ -62,14 +62,15 @@ post '/items' do
 	redirect "/"
 	end
 
-post '/item/:id/edit' do
-	
+post '/items/:id/edit' do
+	edit_item_id = params[:id]
+	update_item = Item.find(edit_item_id)
 
-	name = params[:name]
-	price = params[:price]
-	description = params[:description]
-	quantity = params[:quantity]
 
-	item.save
+	update_item.name = params[:name]
+	update_item.price = params[:price]
+	update_item.description = params[:description]
+	update_item.quantity = params[:quantity]
+	update_item.save
 	redirect "/"
 end

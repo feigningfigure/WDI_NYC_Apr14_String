@@ -2,19 +2,19 @@
 <html>
 <head>
 	<title>AMAZONE E STORE</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+<div class="pg_container">
+	<div class="top_content">
 	<h1>Welcome to AMAZONE E STORE</h1>
-	<h3>What would you like to do?</h3>
-
-<nav>
-	<a href="/items/new">CREATE</a>
-</nav>
-
-	<%= yield %>
-
+		<a href="/items/new">CREATE</a>
+	</div>
+	<div class="content">
+		<%= yield %>
+	</div>
 
 <p><a href="/">Back to Home</a></p>
-
+</div>
 </body>
 </html>

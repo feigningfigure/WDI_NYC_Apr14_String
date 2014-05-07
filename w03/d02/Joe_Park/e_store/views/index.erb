@@ -1,9 +1,8 @@
-<h1>Amazone E Store</h1>
-
+<h2>All Items in Database</h2>
 <ul>
 	<% @items.each do |item| %>
 		<li>
-			<h2>Name: <a href="/items/<%= item.id %>/view"><%= item.name %></a></h2>
+			<h3><a href="/items/<%= item.id %>/show"><%= item.name %></a></h3>
 
 		</li>
 	<% end %>

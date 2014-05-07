@@ -1,0 +1,12 @@
+.pg_container{
+	width: 960px;
+	margin: 10px auto;
+	padding: 20px;
+}
+.top_content{
+	background-color: cyan;
+	padding: 20px;
+}
+.content{
+	background-color: orange;
+}
