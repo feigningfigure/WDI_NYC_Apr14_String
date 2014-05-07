@@ -1,0 +1,13 @@
+<h1>Amazone E Store</h1>
+
+<ul>
+	<% @items.each do |item| %>
+		<li>
+			<h2>Name: <a href="/items/<%= item.id %>/view"><%= item.name %></a></h2>
+
+		</li>
+	<% end %>
+</ul>
+
+
+ 

@@ -1,0 +1,10 @@
+<label>Edit/Update Item</label>
+<form action="/items/<%= @edit_item.id %>/edit" method="POST">
+	<p><%= @edit_item.name %>: <input type="text" name="name" placeholder="New Name" /></p>
+	<p><%= @edit_item.price %>: <input type="text" name="price" placeholder="New Price" /></p>
+	<p><%= @edit_item.description %>: <textarea name="description" placeholder="Enter New Description Here"></textarea></p>
+	<p><%= @edit_item.quantity %>: <input type="text" name="quantity" placeholder="New Quantity" /></p>
+	<input type="submit" value="Submit UPDATE" />
+</form>
+
+
