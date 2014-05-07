@@ -2,14 +2,15 @@
   <% @items.each do |item| %>
     <li>
       <h2><a href="/items/<%= item.id %>/view "><%= item.name %></a></h2>
-      <div>
-        <p><%= item.price %></p>
-        <p>
-          by <%= item.description %> with <%= item.quantity %>
 
-           on <%= item.created_at %>
-        </p>
-      </div>
+
+          <ul>
+            <li>Price: $<%= item.price %></li>
+            <li>Description: <%= item.description %></li>
+            <li>Quantity: <%= item.quantity %></li>
+            <li>Date/Time: <%= item.created_at %></li>
+          </ul>
+
     </li>
   <% end %>
 </ul>

@@ -1,28 +1,24 @@
-<form action="/items/#{item.id}" method="POST">
-  <p>
-    <input type="text" name="name" placeholder="product/service name" />
-  </p>
-  <p>
-    <input type="number" name="price" placeholder="price" />
-  </p>
+<h1>Edit item</h1>
+<form action="/items/<%= @item.id %>" method= post>
+  <input type="hidden" name="_method" value="put" />
 
-  <p>
-    <input type="text" name="description" placeholder="description" />
-  </p>
+  <label for="item_name">Name:</label><br />
+  <input id="name" name="item[name]" type="text" value="<%= @item.name %>" />
+  <br />
 
-   <p>
-    <input type="number" name="quantity" placeholder="quantity" />
-  </p>
+  <label for="item_price">Price:</label><br />
+  <input id="price" name="item[price]" type="number" value="<%= @item.price %>" />
+  <br />
 
+   <label for="item_description">Description:</label><br />
+  <input id="description" name="item[description]" type="text" value="<%= @item.description %>" />
+  <br />
 
-  <input type="submit" value="Update Item" />
+   <label for="item_quantity">Quantity:</label><br />
+  <input id="quantity" name="item[quantity]" type="number" value="<%= @item.quantity %>" />
+  <br />
 
+  <input type="submit" value="Edit item" />
 </form>
 
 
-<!-- form.update action="/task/#{task.id}" method="POST"
-    input type="hidden" name="_method" value="PUT"
-    -if task.completed_at.nil?
-      input type="submit" value="  " title="Complete Task"
-    -else
-      input type="submit" value="✓" title="Uncomplete Task" -->

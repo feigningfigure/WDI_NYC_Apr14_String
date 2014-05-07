@@ -23,12 +23,7 @@ get '/items/new' do
   erb :new
 end
 
-# get '/items/:id' do
-#   # show me a single item with given id
-#   @item_id = params[:id]
-#   @item = Item.find(@item_id)
-#   erb :show
-# end
+
 
 get '/items/:id/view' do
   @item_id = params[:id]
@@ -37,11 +32,20 @@ get '/items/:id/view' do
 end
 
 
-get '/items/:id/edit' do
-  @item_id = params[:id]
-  @item = Item.update(@item_id)
 
+get "/items/:id/edit" do
+  @item = Item.find(params[:id])
+  @name = "Edit Form"
   erb :edit
+end
+
+put "/items/:id" do
+  @item = Item.find(params[:id])
+  if @item.update_attributes(params[:item])
+    redirect "/items/#{@item.id}/view"
+  else
+    erb :"edit"
+  end
 end
 
 
