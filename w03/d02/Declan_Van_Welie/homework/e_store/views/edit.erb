@@ -1,0 +1,18 @@
+<form action="/items/<%= @item.id %>" method="POST">
+  <p>
+    <input type="text" name="name" value="<%= @item.name %>" />
+  </p>
+  <p>
+    <input type="text" name="price" value="<%= @item.price %>" />
+  </p>
+   <p>
+    <input type="text" name="description" value= "<%= @item.description %>"/>
+  </p>
+  <p>
+    <input type="text" name="quantity" value= "<%= @item.quantity %>" />
+  </p>
+  <!-- <p>
+    <textarea name="body" placeholder="Enter Your Post Here"></textarea>
+  </p> -->
+  <input type="submit" value="Update Item" />
+</form>
