@@ -66,7 +66,6 @@ get '/items/:id/edit' do
 @item = Item.find(@item_id)
 #get new information from the user
 #update the new information to the database
-# item.update(item_name,price,description,quantity)
 erb :edit
 
 end
@@ -75,10 +74,10 @@ post '/items/:id/edit' do
   # processes new post data
   item_id = params[:id]
   item = Item.find(item_id)
-  item_name = params[:item_name]
-  price = params[:price]
-  description = params[:description]
-  quantity = params[:quantity]
+  item.item_name = params[:item_name]
+  item.price = params[:price]
+  item.description = params[:description]
+  item.quantity = params[:quantity]
 
   #to update the database
   item.save!
@@ -89,5 +88,5 @@ post '/items/:id/edit' do
   #   description: description,
   #   quantity: quantity
   # )
-  redirect "/items/#{item_id}/view"
+  redirect "/"
 end
