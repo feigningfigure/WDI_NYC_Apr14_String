@@ -11,6 +11,8 @@ ActiveRecord::Base.establish_connection({
 
 require_relative 'models/item'
 
+
+#SELECT * FROM items;
 get '/' do
 	@items = Item.all
 	erb :index
@@ -20,6 +22,7 @@ get '/items/new' do
 	erb :new
 end
 
+#INSERT INTO items (name, price, description, quantity) VALUES ('#{name}', '#{price}', '#{description}', '#{quantity}');
 post '/items' do
 	name = params[:name]
 	price = params[:price]
@@ -35,18 +38,21 @@ post '/items' do
 	redirect "/"
 end
 
+# SELECT * FROM items WHERE id = '#{id}';
 get '/items/:id/view' do
 	@item_id = params[:id]
 	@item = Item.find(@item_id)
 	erb :show
 end
 
+# SELECT * FROM items WHERE id = '#{id}';
 get '/items/:id/edit' do
 	@item_id = params[:id]
 	@item = Item.find(@item_id)
 	erb :edit
 end
 
+# UPDATE items SET name = '#{name}', price = '#{price}', description = '#{description}', quantity = '#{quantity}' WHERE id = '#{id}';
 post '/items/:id/edit' do
 	item_id = params[:id]
 	item = Item.find(item_id)
@@ -58,6 +64,7 @@ post '/items/:id/edit' do
 	redirect "/items/#{item_id}/view"
 end
 
+# DELETE FROM items WHERE id = '#{id}';
 get '/items/:id/delete' do
   item_id = params[:id]
   item = Item.find(item_id)
