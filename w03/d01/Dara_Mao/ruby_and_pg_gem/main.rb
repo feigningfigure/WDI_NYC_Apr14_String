@@ -1,4 +1,6 @@
 require 'pg'
+require 'faker'
+
 
 @conn = PG.connect(dbname: 'students_db')
 #in pry, load "./main.rb"
@@ -57,5 +59,8 @@ def delete(id)
   @conn.exec("DELETE FROM students WHERE id = '#{id}';")
 end
 
-
-
+def seed
+  1000.times do
+    add_student(Faker::Name.first_name, Faker::Name.last_name, "#{rand(1..12)}/#{rand(1..28)}/#{rand(50..99)}")
+  end
+end
