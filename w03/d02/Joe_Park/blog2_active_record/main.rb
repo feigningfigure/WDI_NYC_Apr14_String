@@ -1,10 +1,22 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'active_record'
 require 'pg'
 require 'pry'
+require 'httparty'
+
+# establishes connection once and for all...
+ActiveRecord::Base.establish_connection({
+  database: "blog1",
+  adapter: "postgresql"
+})
 
 # MODELS
 require_relative 'models/post'
+
+# LIBRARIES
+
+require_relative 'lib/facebook'
 
 get '/' do
   @posts = Post.all
