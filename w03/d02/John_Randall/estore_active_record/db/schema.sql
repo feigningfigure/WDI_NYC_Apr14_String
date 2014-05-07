@@ -1,10 +1,11 @@
 -- "schema" is the SQL code required to 'build' your database tables, etc.
 
-CREATE TABLE posts
+CREATE TABLE items
 (
-  id  serial NOT NULL primary key,
-  title varchar(255),
-  created_at date,
-  body  text,
-  author varchar(255)
+  item_id  serial NOT NULL primary key,
+  item_name varchar(255),
+  item_price decimal,
+  item_description  text,
+  item_quantity_in_inventory integer,
+  item_creation_timestamp timestamp
 );
