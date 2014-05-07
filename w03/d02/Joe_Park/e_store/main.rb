@@ -27,6 +27,7 @@ end
 
 get '/items/:id/show' do
 	item_id = params[:id]
+	# SELECT * FROM items WHERE id = '#{item_id}';
 	@item = Item.find(item_id)
 	erb :show
 end
@@ -34,6 +35,7 @@ end
 
 get '/items/:id/edit' do
 	item_id = params[:id]
+	# SELECT * FROM items WHERE id = '#{item_id}';
 	@edit_item = Item.find(item_id)
 	erb :edit
 end
@@ -41,6 +43,7 @@ end
 
 get '/items/:id/delete' do
 	item_id = params[:id]
+	# SELECT * FROM items WHERE id = '#{item_id}';
 	item = Item.find(item_id)
 	item.destroy
 	redirect "/"
@@ -53,6 +56,7 @@ post '/items' do
 	description = params[:description]
 	quantity = params[:quantity]
 
+	# INSERT INTO products (name, price, description, quantity) VALUES('#{name}', '#{price}', '#{description}', '#{quantity}');
 	Item.create(
 		name: name,
 		price: price,
@@ -64,6 +68,7 @@ post '/items' do
 
 post '/items/:id/edit' do
 	edit_item_id = params[:id]
+	# SELECT * FROM items WHERE id = '#{edit_item_id}';
 	update_item = Item.find(edit_item_id)
 
 

@@ -1,6 +1,13 @@
+body{
+	background-color: #fff;
+}
+a.hover{
+	background-color: red;
+}
+
 .pg_container{
 	width: 960px;
-	margin: 10px auto;
+	margin: 0 auto;
 	padding: 20px;
 }
 .top_content{
@@ -9,4 +16,5 @@
 }
 .content{
 	background-color: orange;
+	padding: 20px;
 }
