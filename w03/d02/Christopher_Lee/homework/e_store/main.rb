@@ -53,6 +53,8 @@ get '/items/:id/view' do
   erb :view
 end
 
+# UPDATE edit item information
+
 
 get '/items/:id/edit' do
   item_id = params[:id]
@@ -60,18 +62,23 @@ get '/items/:id/edit' do
   erb :edit
 end
 
+#@item.name = params[:name]
+#@item.save!
+
 post '/items/:id/edit' do
   item_id = params[:id]
   @item = Item.find(item_id)
-  name = params[:name] unless params[:name].nil?
-  price = params[:price] unless params[:name].nil?
-  description = params[:description] unless params[:name].nil?
-  quantity = params[:quantity] unless params[:name].nil?
+  name = params[:name]
+  price = params[:price]
+  description = params[:description]
+  quantity = params[:quantity]
   @item.update(
     name: name,
     price: price,
     description: description,
-    quantity: quantity)
+    quantity: quantity
+    )
+  redirect "/"
 end
 
 # DELETE remove item DONE
@@ -84,44 +91,43 @@ get '/items/:id/delete' do
   # "You have deleted #{post_id.to_s}"
 end
 
+get '/order/:id' do
+  @item_id = params[:id]
+  @item = Item.find(@item_id)
+  @order_type = "order"
+  erb :order
+end
 
+get '/ship/:id' do
+  @item_id = params[:id]
+  @item = Item.find(@item_id)
+  @order_type = "ship"
+  erb :order
+end
 
-# get '/' do
-#   @posts = Post.all
-#   erb :index
-# end
+get '/ship/:id/limit_reached' do
+  @limit_reached = true
+  @item_id = params[:id]
+  @item = Item.find(@item_id)
+  @order_type = "ship"
+  erb :order
+end
 
-# get '/posts/new' do
-#   # shows a form to input new post
-#   erb :new
-# end
-
-# get '/posts/:id' do
-#   # show me a single post with given id
-#   @post_id = params[:id]
-#   @post = Post.find(@post_id)
-#   erb :show
-# end
-
-# get '/posts/:id/delete' do
-#   # deletes a single post with given id
-#   post_id = params[:id]
-#   post = Post.find(post_id)
-#   post.destroy
-#   redirect "/"
-#   # "You have deleted #{post_id.to_s}"
-# end
-
-# post '/posts' do
-#   # processes new post data
-#   title = params[:title]
-#   body = params[:body]
-#   author = params[:author]
-
-#   Post.create(
-#     title: title,
-#     body: body,
-#     author: author
-#   )
-#   redirect "/"
-# end
+post "/place/:order_type/:id" do
+  @item_id = params[:id]
+  @item = Item.find(@item_id)
+  order_value = params[:order_value].to_i
+  order_type = params[:order_type]
+  if order_type == "ship" && order_value > @item.quantity
+    redirect "/ship/#{@item_id}/limit_reached"
+  elsif order_type == "order"
+    total_value = order_value + @item.quantity
+    @item.quantity = total_value
+    @item.save!
+  else
+    total_value = @item.quantity - order_value
+    @item.quantity = total_value
+    @item.save!
+  end
+  redirect '/'
+end
