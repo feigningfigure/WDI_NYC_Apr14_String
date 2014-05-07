@@ -1,0 +1,23 @@
+#Description of the task
+desc "Say Hello"
+#This is the name (:symbol) and the code block of the task
+task :hello do
+  #This is the task that runs in the code
+  puts "Hello"
+end
+
+desc "Make an Index HTML file"
+task :make_index_file do
+  index_file = File.open("index.html","w")
+  index_file.puts <<-HTML
+  <!DOCTYPE html>
+  <<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  </html>
+HTML
+  end
