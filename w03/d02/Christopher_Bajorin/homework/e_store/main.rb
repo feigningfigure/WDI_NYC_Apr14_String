@@ -2,12 +2,13 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'active_record'
 require 'pry'
-require_relative 'models/item'
 
 ActiveRecord::Base.establish_connection({
   database: "e_store",
   adapter: "postgresql"
 })
+
+require_relative 'models/item'
 
 
 get '/' do
@@ -15,7 +16,7 @@ get '/' do
   erb :index
 end
 
-get '/items' do
+post '/items' do
 
   name = params[:name]
   price = params[:price].to_f
@@ -28,7 +29,7 @@ get '/items' do
     description: description,
     quantity: quantity
   )
-  redirect "/"
+  redirect '/'
   erb :items
 end
 
@@ -52,13 +53,27 @@ end
 
 
 get '/items/:id/edit' do
-  # item_id = params[:id]
-  # item = Item.find(item_id)
-  redirect '/'
-  # erb :edit
+  @item_id = params[:id]
+  @item = Item.find(@item_id)
+
+  erb :edit
 end
 
+post '/items/:id/e' do
+  item_id = params[:id]
+  name = params[:name]
+  price = params[:price].to_f
+  description = params[:description]
+  quantity = params[:quantity].to_i
 
+  Item.update(item_id, {name: name})
+  Item.update(item_id, {price: price})
+  Item.update(item_id, {description: description})
+  Item.update(item_id, {quantity: quantity})
+
+  redirect '/'
+  erb :items
+end
 
 get '/items/:id/delete' do
 
@@ -69,18 +84,3 @@ get '/items/:id/delete' do
   "You have deleted #{item_id.to_s}"
   erb :delete
 end
-
-
-
-
-
-
-# get '/' do
-#   @posts = Post.all
-#   erb :index
-# end
-
-# get '/posts/new' do
-#   # shows a form to input new post
-#   erb :new
-# end

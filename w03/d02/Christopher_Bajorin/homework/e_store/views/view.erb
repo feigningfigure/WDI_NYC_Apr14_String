@@ -1,20 +1,27 @@
-<!--
-<% #if @post %>
-  <div class="post">
-   <h2><%= @post.title %></h2>
+
+<% if @item %>
+  <div class="item">
+   <h2><%= @item.name %></h2>
         <div>
-          <p><%= @post.body %></p>
           <p>
-            by <%= @post.author %> <img src="<%= @post.author_photo %>"/> on <%= @post.created_at %>
+            <%= @item.price %>
           </p>
           <p>
-            <a href="#">edit</a> | <a href="/posts/<%= @post_id %>/delete">delete</a>
+            <%= @item.description %>
+          </p>
+          <p>
+            <%= @item.quantity %>
+          </p>
+          <p>
+          <%= @item.created_at %>
+          </p>
+          <p>
+            <a href="/items/<%= @item_id %>/edit">edit</a> | <a href="/items/<%= @item_id %>/delete">delete</a>
           </p>
         </div>
   </div>
-<% #else %>
-  <div class="post">
-    No post found with that ID!
+<% else %>
+  <div class="item">
+    No item found with that ID!
   </div>
-<% #end %>
--- >
+<% end %>
