@@ -1,0 +1,18 @@
+
+<% if @item %>
+  <div class="item_list">
+   <ul>
+
+    <li>Name:<%= @item.name %></li>
+    <li>Price: $<%= @item.price %></li>
+    <li>Product Description:<%= @item.description %><li>
+    <li>Quantity: <%= @item.int %></li>
+    <li>Added to table:  <%= @item.created_at%></li>
+
+   </ul>
+
+   <% else %>
+   <div class = "error">
+    No such Page
+  </div>
+  <% end %>
