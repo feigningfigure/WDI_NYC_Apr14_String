@@ -1,0 +1,13 @@
+<form action="/items/<%= @item.id %>" method="POST">
+  <p> You currently have <%= @item.quantity %> <%= @item.name %>s.
+  </p>
+  <p>
+    How many <%= @item.name %>s would you like to ship?
+  </p>
+   <p>
+    <input type="text" name="shipment" placeholder= "Quantity you're shipping"/>
+  </p>
+  <p> <%= @ship %> <p/>
+
+  <input type="submit" value="Ship Item" />
+</form>

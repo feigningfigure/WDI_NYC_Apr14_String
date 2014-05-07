@@ -9,10 +9,8 @@
           </ul>
           <a href="/items/<%= @item_id %>/edit">edit</a>
             <a href="/items/<%= @item_id %>/delete">delete</a>
+             <a href="/items/<%= @item_id %>/ship">Ship an item</a>
+             <a href="/items/<%= @item_id %>/order">Order an item</a>
         </div>
-  </div>
-<% else %>
-  <div class="item">
-    No item found with that ID!
-  </div>
+
 <% end %>
