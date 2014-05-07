@@ -1,24 +1,38 @@
+<h2> Inventory Item Index </h2>
 <ul id="items_list">
   <% if @items.length >0 
     @items.each do |item| %>
       <li>
-        <h2> item listing </h2>
+        
         <div id="item_container">
 
-          <ul>
-            <li>item_id: <%= item.item_id %></li>
-            <li>item_name: <%= item.item_name %></li>
-            <li>item_price: <%= item.item_price %></li>
-            <li>item_description: <%= item.item_description %></li>
-            <li>item_quantity_in_inventory: <%= item.item_quantity_in_inventory %></li>
-            <li>item_creation_timestamp: <%= item.item_creation_timestamp %></li>
+          <ul class='left_side_list'>
+            <li>item_id:</li>
+            <li>item_name:</li>
+            <li>item_price:</li>
+            <!-- <li>item_description:</li> -->
+            <li>item_quantity_in_inventory:</li>
+            <li>item_creation_timestamp:</li>
           </ul>
 
-          <ul>
-            <li><a href='/items/<%= item.item_id %>/view'>focus</a></li>
-            <li><a href='/items/<%= item.item_id %>/edit'>edit</a></li>
-            <li><a href='/items/<%= item.item_id %>/delete'>delete</a></li>
+          <ul class='right_side_list'>
+            <li><%= item.item_id %></li>
+            <li><%= item.item_name %></li>
+            <li><%= item.item_price %></li>
+            <!-- <li><%= item.item_description %></li> -->
+            <li><%= item.item_quantity_in_inventory %></li>
+            <li><%= item.item_creation_timestamp %></li>
           </ul>
+
+          <div class ='float_clear'>
+          </div>
+          <div id='item_options_bar'>
+            <ul>
+              <li><a href='/items/<%= item.item_id %>/view'>focus</a></li>
+              <li><a href='/items/<%= item.item_id %>/edit'>edit</a></li>
+              <li><a href='/items/<%= item.item_id %>/delete'>delete</a></li>
+            </ul>
+          </div>
 
         </div>
       </li>

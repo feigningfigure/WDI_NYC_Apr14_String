@@ -5,7 +5,7 @@
 
 
 
-<div class='left_pair'>
+<div id='left_pair'>
     <ul>
       <li>current item_id: <%= @item.item_id %> </li>
       <li>current item_name: <%= @item.item_name %></li>
@@ -16,7 +16,7 @@
 </div>
 
 
-<div class='right_pair'>
+<div id='right_pair'>
 
   <form action="/items/<%= @item.item_id %>/edit_submit" method="POST">  
   

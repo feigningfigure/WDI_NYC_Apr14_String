@@ -126,10 +126,12 @@ post 'items/:id/edit_submit' do
 
   @item = Item.find(item_id)
   
-  item.item_name = params[:item_name]
-  item.item_price = params[:item_price]
-  item.item_description = params[:item_description]
-  item.item_quantity_in_inventory = params[:item_quantity_in_inventory]
+  @item.item_name = params[:item_name]
+  @item.item_price = params[:item_price]
+  @item.item_description = params[:item_description]
+  @item.item_quantity_in_inventory = params[:item_quantity_in_inventory]
+
+  @item.save
 
   redirect('/')
 end
