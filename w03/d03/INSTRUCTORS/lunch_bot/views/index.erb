@@ -1,0 +1,12 @@
+<h2>My Lunch Spots</h2>
+
+<ul>
+
+<% @lunches.each do |lunch| %>
+<li>
+<%= lunch.name %> (<%= lunch.rating %> stars)
+</li>
+<% end %>
+</ul>
+
+<p><a href="/new">add a new lunch spot</a></p>
