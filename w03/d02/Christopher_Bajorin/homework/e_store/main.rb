@@ -3,6 +3,7 @@ require 'sinatra/reloader'
 require 'active_record'
 require 'pry'
 
+
 ActiveRecord::Base.establish_connection({
   database: "e_store",
   adapter: "postgresql"
@@ -12,6 +13,7 @@ require_relative 'models/item'
 
 
 get '/' do
+
   @items = Item.all
   erb :index
 end
@@ -22,7 +24,7 @@ post '/items' do
   price = params[:price].to_f
   description = params[:description]
   quantity = params[:quantity].to_i
-
+# @conn.exec("INSERT INTO products (name, price, description, quantity) VALUES ('#{name}', '#{price}', '#{description}', '#{quantity}'');")
   Item.create(
     name: name,
     price: price,
@@ -44,7 +46,9 @@ end
 
 get '/items/:id/view' do
   # show me an item by id
+  #
   @item_id = params[:id]
+  # @item = @conn.exec("SELECT * FROM products WHERE id = params[:id];")
   @item = Item.find(@item_id)
 
   erb :view
@@ -54,6 +58,7 @@ end
 
 get '/items/:id/edit' do
   @item_id = params[:id]
+  # @item = @conn.exec("SELECT * FROM products WHERE id = params[:id];")
   @item = Item.find(@item_id)
 
   erb :edit
@@ -65,7 +70,7 @@ post '/items/:id/e' do
   price = params[:price].to_f
   description = params[:description]
   quantity = params[:quantity].to_i
-
+# @conn.exec("UPDATE products SET category = 'params[:category]' WHERE id = 'params[:id]';")
   Item.update(item_id, {name: name})
   Item.update(item_id, {price: price})
   Item.update(item_id, {description: description})
@@ -78,6 +83,7 @@ end
 get '/items/:id/delete' do
 
   item_id = params[:id]
+  # @item = @conn.exec("SELECT * FROM products WHERE id = params[:id];")
   item = Item.find(item_id)
   item.destroy
   redirect "/"
