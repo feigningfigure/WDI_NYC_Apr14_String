@@ -1,0 +1,15 @@
+<p>hey</p>
+<ul class="items">
+	<% @items.each do |item| %>
+    <li>
+      <h2><a href="/items/<%= item.id %>/view"><%= item.name %></a></h2>
+      <div>
+        <p>Price: $<%= item.price %></p>
+        <p>Description: <%= item.description %></p>
+        <p>Quantity: <%= item.quantity %></p>
+      </div>
+    </li>
+  <% end %>
+</ul>	
+
+<a href="/items/new">Create new item</a>
