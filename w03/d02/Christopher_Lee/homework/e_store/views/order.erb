@@ -1,0 +1,16 @@
+<h1>You currently have <%= @item.quantity %> <%= @item.name %>'s </h1>
+
+<% if @limit_reached %>
+  <h2> You don't have enough in stock </h2>
+<% end %>
+
+<% if @order_type == "order" %>
+  <h1>How many <%= @item.name %>'s would you like to order?</h1>
+<% else %>
+  <h1>How many <%= @item.name %>'s would you like to ship?</h1>
+<% end %>
+
+<form action="/place/<%= @order_type %>/<%= @item.id %>" method="POST">
+    <input type="integer" name="order_value" placeholder="quantity"/>
+    <input type="submit" value="Complete"/>
+</form>

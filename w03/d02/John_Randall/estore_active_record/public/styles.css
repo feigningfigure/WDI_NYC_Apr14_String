@@ -1,0 +1,92 @@
+
+
+/* GLOBAL */
+
+body {
+  border-width: 5px;
+  border-color: green;
+
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+}
+
+nav ul {
+  /*padding: 20px;
+
+  text-decoration: none;
+  *//*background-color: silver;*/
+  
+  margin: auto;
+}
+
+nav li {
+  padding: 10px;
+  margin: 30px;
+  background-color: silver;
+  display: inline;
+}
+
+#item_container{
+  margin: 30px auto 30px auto;
+}
+
+.left_side_list{
+  float:left;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.right_side_list{
+  float:left;
+  text-align: left;
+
+}
+
+#item_options_bar{
+  margin: 20px;
+}
+
+#item_options_bar ul{
+  margin: auto;
+}
+
+#item_options_bar li {
+  font-size: 14px;
+  padding: 2px;
+  margin: 5px;
+  background-color: silver;
+  float: inline
+}
+
+
+.float_left{
+  float:left;
+}
+
+.float_right{
+  float:right;
+}
+
+.float_clear{
+  clear: both;
+}
+
+.right_justify{
+  background-color: red;
+}
+
+
+#left_pair{float:left;
+background-color: blue}
+
+#right_pair{float:right;
+background-color: red}
+

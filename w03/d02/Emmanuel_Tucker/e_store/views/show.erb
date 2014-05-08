@@ -1,0 +1,19 @@
+<% if @item %>
+<div class="item">
+     <h2><%=@item.name %></h2>
+     <div>
+          <p>
+     <%=@item.description %></p>
+          <p>
+          <%= @item.price %>
+     <%= @item.created_at %>
+          </p>
+          <p>
+     <a href = "#">edit</a> | a href="items/">delete</a>
+</p>
+</div>
+<%else%>
+<div class= "item">
+</div>
+<%end%>
+
