@@ -8,7 +8,7 @@ get '/' do
 end
 
 
-get '/:num' do
+get '/num' do
 	@num = params[:num].to_i
 
 	erb :blocks
