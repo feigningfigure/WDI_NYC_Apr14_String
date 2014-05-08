@@ -68,6 +68,14 @@ text-transform: uppercase;
 color: white;
 }
 
+h5{
+font-size: 40px;
+font-family: 'Oswald', sans-serif;
+text-align: center;
+text-transform: uppercase;
+color: white;
+}
+
 .username{
 
 width: 650px;
@@ -141,14 +149,73 @@ padding: 80px 45px 75px 45px;
 .story4{
   width: 1200px;
   height: 85px;
-  background-color: black;
+  background-color: pink;
+  padding: 15px;
+  float:left;
 
 }
 
 .story4p{
 font-family: 'Roboto Slab', serif;
+font-size: 20px;
+text-align: center;
+color: #2c3c33;
+padding: 25px 0px 25px 0px;
+}
+
+.story5{
+  width: 800px;
+  height: 480px;
+  background-image:url('http://stanfordclark.files.wordpress.com/2011/11/aladdin.jpg');
+  background-size: cover;
+  float:left;
+
+}
+
+.story6{
+  width: 400px;
+  height: 480px;
+  background-color: #72c1a2;
+  float:left;
+
+}
+
+.story6p{
+font-family: 'Roboto Slab', serif;
+font-size: 70px;
+text-align: center;
+color: white;
+padding: 100px 0px 100px 0px;
+}
+
+.story7{
+  width: 400px;
+  height: 250px;
+  background-color: red;
+  float:left;
+
+}
+
+.story7p{
+font-family: 'Roboto Slab', serif;
 font-size: 30px;
 text-align: center;
 color: white;
-padding: 80px 0px 75px 0px;
+padding: 100px 0px 100px 0px;
 }
+
+.story8{
+  width: 400px;
+  height: 250px;
+  background-color: orange;
+  float:left;
+}
+
+.the_end {
+  width: 1200px;
+  height: 400px;
+  background-color: black;
+  float:left;
+}
+
+
