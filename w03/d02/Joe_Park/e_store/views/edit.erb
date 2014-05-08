@@ -1,0 +1,8 @@
+<label>Edit/Update Item</label>
+<form action="/items/<%= @edit_item.id %>/edit" method="POST">
+	<p><input type="text" name="name" value="<%= @edit_item.name %>" /></p>
+	<p><input type="text" name="price" value="<%= @edit_item.price %>" /></p>
+	<p><textarea name="description" value="<%= @edit_item.description %>"><%= @edit_item.description %></textarea></p>
+	<p><input type="text" name="quantity" value="<%= @edit_item.quantity %>" /></p>
+	<input type="submit" value="Submit UPDATE" />
+</form>
