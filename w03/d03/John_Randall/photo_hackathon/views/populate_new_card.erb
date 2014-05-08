@@ -1,0 +1,56 @@
+
+  <div class="card_focus">
+          <p><img src="<%= @@additional_card[:instagram_picture_url] %>"/></p>
+          <h2><%= @@additional_card[:username] %></h2>
+  </div>
+
+<div class="update">
+<form action="/populate" method="POST">
+  <p>
+    Are they male?
+    <input type="text" name="male?" value="false">
+  </p>
+  <p>
+    Are they wearing glasses?
+    <input type="text" name="glasses" value="false">
+  </p>
+  <p>
+    Are they wearing a hat?
+    <input type="text" name="hat" value="false">
+  </p>
+  <p>
+    Do they have facial hair?
+    <input type="text" name="facial_hair" value="false">
+  </p>
+  <p>
+    Do they have a beard?
+    <input type="text" name="beard" value="false">
+  </p>
+  <p>
+    Do they have a mustache?
+    <input type="text" name="mustache" value="false">
+  </p>
+  <p>
+    Are they wearing jewelry?
+    <input type="text" name="jewelry" value="false">
+  </p>
+  <p>
+    Are they wearing earrings?
+    <input type="text" name="earings" value="false">
+  </p>
+    <p>
+    Do they have any facial piercings?
+    <input type="text" name="facial_piercing" value="false">
+  </p>
+  <p>
+    What is their hair color?
+    <input type="text" name="hair_color" value="none">
+  </p>
+  <p>
+    What is their eye color?
+    <input type="text" name="eye_color" value="none" >
+  </p>
+
+  <input type="submit" value="Create card" />
+</form>
+</div>

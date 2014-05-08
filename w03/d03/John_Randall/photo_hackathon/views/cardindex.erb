@@ -1,0 +1,12 @@
+<div class="gameboard">
+	<h2>Index of cards</h2>
+
+<div class="card_grid">
+  <% @cards.each do |card| %>
+    <div class="card">
+      <p><a href="/cards/<%=card.id%>"><img src="<%= card.instagram_picture_url %>"/></a></p>
+      <h3><%= card.username %></h3>
+    </div>
+  <% end %>
+</div>
+</div>
