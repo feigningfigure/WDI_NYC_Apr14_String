@@ -1,0 +1,16 @@
+body { 
+  text-align: center;
+  background-image: blue;
+  background-position: center;
+  color: white;
+  font-family: helvetica;
+  text-shadow: 1px 2px black; 
+}
+
+.box {
+	background: blue;
+	float: center;
+	width: 80px;
+	height: 90px;
+	margin: 10px;
+}
