@@ -1,0 +1,22 @@
+<div class="display">
+<h1>WDI lunch list</h1>
+	<ul>
+		<% @lunch_item.each do |item| %>
+			<li>
+				<%= item.lunch_name %>: <%= item.rating %>
+
+			</li>
+
+		<% end %>
+
+	</ul>
+</div>
+
+<div class="user_input">
+	<label>Create New Lunch Rating</label>
+	<form action="/lunches" method="POST">
+		<input type="text" name="lunch_name" placeholder="Lunch Name" /><br />
+		<input type="text" name="rating" placeholder="Rating" />
+		<input type="submit" value="SUBMIT" />
+	</form>
+</div>
