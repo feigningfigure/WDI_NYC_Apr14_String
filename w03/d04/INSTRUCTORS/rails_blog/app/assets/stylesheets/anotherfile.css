@@ -29,3 +29,7 @@ input {
   color: white;
   letter-spacing: 1px;
 }
+
+.author_photo {
+  width: 20px;
+}
