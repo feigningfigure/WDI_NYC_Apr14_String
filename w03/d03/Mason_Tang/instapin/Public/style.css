@@ -1,0 +1,63 @@
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.wall {
+
+  margin: 20px;
+  padding: 10px;
+}
+
+.wall img {
+  display: inline-block;
+  position: relative;
+  float: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-height: 45%;
+}
+
+.banner img {
+  display: block;
+  margin: 0 auto;
+  max-height: 25%;
+  max-width: 25%;
+  /*margin: 0px 0px 0px 500px;*/
+  a
+}
+
+.picture {
+  text-align: center;
+
+}
+
+.picture img{
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-height: 45%;
+}
+
+.pictwo img {
+  float: left;
+  margin: 0 auto;
+  max-height: 25%;
+}
+
+
+.form {
+  margin-left: 575px;
+  margin-top: 80px;
+}
+
+
+.gallery {
+  margin-left: 20px;
+  margin-top: 8px;
+}
