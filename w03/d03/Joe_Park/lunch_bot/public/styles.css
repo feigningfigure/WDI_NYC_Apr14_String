@@ -1,0 +1,27 @@
+body{
+	font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.pg_container{
+	width: 600px;
+	margin: 0 auto;
+}
+
+.content{
+	width: 450px;
+	margin: 0 auto;
+	border: 2px solid #999;
+	padding: 20px;
+	border-radius: 30px;
+}
+
+.user_input{
+	display: inline-block;
+	float: right;
+	margin-top: 25px;
+}
+
+.display{
+	display: inline-block;
+}

@@ -1,0 +1,40 @@
+<p>Edit Item view </p>
+
+<p>enter data in the field you would like to edit</p>
+
+
+
+
+<div id='left_pair'>
+    <ul>
+      <li>current item_id: <%= @item.item_id %> </li>
+      <li>current item_name: <%= @item.item_name %></li>
+      <li>current item_price: <%= @item.item_price %></li>
+      <li>current item_description: <%= @item.item_description %></li>
+      <li>current item_quantity_in_inventory: <%= @item.item_quantity_in_inventory %></li>
+    </ul>
+</div>
+
+
+<div id='right_pair'>
+
+  <form action="/items/<%= @item.item_id %>/edit_submit" method="POST">  
+  
+    <ul>
+      <li></li>
+      <li>item name: <input type="text" name="item_name" placeholder="item" /></li>
+      <li>item price: $<input type="text" name="item_price" placeholder="0.00" /></li>
+      <li>item description: <textarea name="item_description" placeholder="item description here"></textarea></li>
+      <li>quantity in stock:<input type="text" name="item_quantity_in_inventory" placeholder="0" /></li>
+      <li><input type="submit" value="add new inventory to database" /></li>  
+    </ul>
+
+  </form>
+
+<ul>
+  <li><a href='/items/<%= @item.item_id %>/view'>focus</a></li>
+  <li><a href='/items/<%= @item.item_id %>/edit'>edit</a></li>
+  <li><a href='/items/<%= @item.item_id %>/delete'>delete</a></li>
+</ul>
+
+</div

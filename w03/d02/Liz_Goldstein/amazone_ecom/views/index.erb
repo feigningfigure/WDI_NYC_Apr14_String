@@ -1,0 +1,14 @@
+
+<ul class="items">
+  <% @items.each do |item| %>
+    <li>
+      <h2><a href="/items/<%= item.id %> "><%= item.name %></a></h2>
+      <div>
+        <p>Description: <%= item.description %></p>
+        <p>ID#: <%= item.id %></p>
+        <p>Cost: $<%= item.price %></p>
+        <p>Current quantity: <%= item.quantity %></p>
+      </div>
+    </li>
+  <% end %>
+</ul>
