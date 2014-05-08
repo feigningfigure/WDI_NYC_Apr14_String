@@ -1,0 +1,133 @@
+Last login: Mon May  5 13:45:19 on ttys002
+GA General Assembly  Web Development Immersive 
+------------------------------------------
+git version 1.9.2
+Homebrew 0.9.5
+ruby 1.9.3p448 (2013-06-27 revision 41675) [x86_64-darwin13.1.0]
+psql (PostgreSQL) 9.3.4
+Rails 4.1.0
+heroku-toolbelt/3.7.3 (x86_64-darwin10.8.0) ruby/1.9.3
+------------------------------------------
+type unwelcome to remove this message
+pickle ~
+$ gem install pg
+Building native extensions.  This could take a while...
+Successfully installed pg-0.17.1
+1 gem installed
+pickle ~
+$ require 'psql'
+-bash: require: command not found
+pickle ~
+$ load psql
+-bash: load: command not found
+pickle ~
+$ load 'psql'
+-bash: load: command not found
+pickle ~
+$ brew install postgresql
+Warning: postgresql-9.3.4 already installed
+pickle ~
+$ initdb /usr/local/var/postgres -E utf8
+The files belonging to this database system will be owned by user "pickle".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.UTF-8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+initdb: directory "/usr/local/var/postgres" exists but is not empty
+If you want to create a new database system, either remove or empty
+the directory "/usr/local/var/postgres" or run initdb
+with an argument other than "/usr/local/var/postgres".
+pickle ~
+$ createdb ${USER}
+createdb: database creation failed: ERROR:  database "pickle" already exists
+pickle ~
+$ # Ensure that Postgres launches whenever we login
+pickle ~
+$ mkdir -p ~/Library/LaunchAgents
+pickle ~
+$ cp /usr/local/Cellar/postgresql/9.*/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
+pickle ~
+$ # Start Postgres now
+pickle ~
+$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+homebrew.mxcl.postgresql: Already loaded
+pickle ~
+$ Start Postgres now
+-bash: Start: command not found
+pickle ~
+$ pickle ~
+-bash: pickle: command not found
+pickle ~
+$ Start Postgres now
+-bash: Start: command not found
+pickle ~
+$ #Start Postgres now
+pickle ~
+$ cd ~/Desktop
+pickle ~/Desktop
+$ psql
+psql (9.3.4)
+Type "help" for help.
+
+pickle=# ^C
+pickle=# quit
+pickle-# \q
+pickle ~/Desktop
+$ ls
+README copy.md
+Screen Shot 2014-05-05 at 2.19.23 PM.png
+luis-mom/
+personal alias
+ruby_and_pg_gem/
+to do
+w03 alias
+wdi_misc.
+~$GA Live Stream NPS-Feedback.xlsx
+~$GALiveStreamNPS-Feedback.xlsx
+~$little list of worries.xlsx
+pickle ~/Desktop
+$ cd ruby_and_pg_gem
+pickle ~/Desktop/ruby_and_pg_gem
+$ ls
+create_database-terminal_output.txt
+create_table.sql
+main.rb
+pickle ~/Desktop/ruby_and_pg_gem
+$ psql
+psql (9.3.4)
+Type "help" for help.
+
+pickle=# \c students_db
+You are now connected to database "students_db" as user "pickle".
+students_db=# display_students
+students_db-# SELECT * FROM students
+students_db-# SELECT * FROM students;
+ERROR:  syntax error at or near "display_students"
+LINE 1: display_students
+        ^
+students_db=# \c students_db
+You are now connected to database "students_db" as user "pickle".
+students_db=# SELECT * FROM student;
+ERROR:  relation "student" does not exist
+LINE 1: SELECT * FROM student;
+                      ^
+students_db=# SELECT * FROM students;
+ id | first_name | last_name | birthdate  
+----+------------+-----------+------------
+  1 | neel       | patel     | 2014-05-05
+  2 | neel2      | patel2    | 2014-05-05
+  3 | charlie    | brown     | 1973-09-04
+(3 rows)
+
+students_db=# SELECT * FROM students;
+ id | first_name | last_name | birthdate  
+----+------------+-----------+------------
+  1 | neel       | patel     | 2014-05-05
+  2 | neel2      | patel2    | 2014-05-05
+  3 | charlie    | brown     | 1973-09-04
+(3 rows)
+
+students_db=# 
