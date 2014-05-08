@@ -2,6 +2,8 @@ require 'sinatra'
 require 'httparty'
 require 'pry'
 require 'rdio_api'
+# require api helper
+require_relative 'lib/api'
 
 # Echowrap.configure do |config|
 #   config.api_key =      'EYWYMJLC2MMGVFF1C '
