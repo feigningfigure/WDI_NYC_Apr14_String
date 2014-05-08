@@ -1,0 +1,10 @@
+
+<h3>Type quantity to be added below. When shipping, submit quantity to be shipped as a negative integer.</3>
+
+<form method="POST">
+  <p>
+    <input type="text" name="quantity" value="<%= @item.quantity %>" />
+  </p>
+
+  <input type="submit" action="/items/<%= @item.id %>/quantity" value="Order more" />
+</form>
