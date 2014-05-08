@@ -1,0 +1,17 @@
+<form action="/items/<%= @item.id %>/update" method="POST">
+  <p>
+    <input type="text" name="name" placeholder="item name" />
+  </p>
+  <p>
+    <input type="number" name="price" placeholder="price" />
+  </p>  
+  <p>
+    <input type="text" name="description" placeholder="item description" />
+  </p>
+  <p>
+    <input type="number" name="quantity" placeholder="quantity" />
+  </p>  
+  
+
+  <input type="submit" value="Update Item" />
+</form>

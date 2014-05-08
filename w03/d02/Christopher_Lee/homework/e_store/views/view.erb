@@ -1,0 +1,17 @@
+<% if @item %>
+  <ul>
+    <li>ID: <%= @item.id %></li>
+    <li>Name: <%= @item.name %></li>
+    <li>Price: <%= @item.price %></li>
+    <li>Description: <%= @item.description %></li>
+    <li>Quantity: <%= @item.quantity %></li>
+    <li>Created at: <%= @item.created_at %></li>
+  </ul>
+<% else %>
+    No product found with that ID!
+  </div>
+<% end %>
+
+<p>
+  <a href="/items/<%= @item.id %>/edit">edit</a> | <a href="/posts/<%= @item.id %>/delete">delete</a>
+</p>
