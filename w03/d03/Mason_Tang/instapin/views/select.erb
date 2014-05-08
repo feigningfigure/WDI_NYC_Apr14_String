@@ -1,0 +1,36 @@
+
+
+
+
+<!--
+<p>
+<img src="<%= @random_image_url %>" />
+</p>
+<form action="/save">
+    <input type="submit" value="Select">
+</form>
+
+
+<p>
+<img src="<%= @random_image_url2 %>" />
+</p>
+<form action="/save">
+    <input type="submit" value="Select">
+</form>
+-->
+<div class = "gallery">
+ <FORM METHOD="LINK" ACTION="/gallery">
+      <INPUT TYPE="submit" VALUE="Gallery">
+    </FORM>
+</div>
+
+<div class= picture>
+<a href=" /save/<%= @picture_one.id %>"><img src="<%= @picture_one.url %>"></a>
+
+
+
+<a href="/save/<%= @picture_two.id %>"><img src="<%= @picture_two.url %>"></a>
+</div>
+
+
+
