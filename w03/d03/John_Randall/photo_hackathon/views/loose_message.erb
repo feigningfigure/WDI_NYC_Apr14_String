@@ -1,0 +1,24 @@
+<div class="wrong">
+	<h3>YOU LOSE!</h3>
+
+<h4>You have used <%= Game_engine.wrong_guess_counter %> of your <%=Game_engine.guesses_allowed %> allowed guesses!<h4>
+
+
+<p>The correct answer was...</p>
+<div class="card_focus">
+        <div>
+          <p><img src="<%= Game_engine.winner.instagram_picture_url %>"/></p>
+          <h2><%= Game_engine.winner.username %></h2>
+          
+        </div>
+  </div>
+
+
+
+
+
+<h3><a href='/reset_game'> Play Again? </a></p></h3>
+</div>
+
+
+
