@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <title>Lunches!</title>
+</head>
+
+
+<body>
+
+
+
+<h2>Index of Lunches</h2>
+
+
+<%= @lunches.class %>
+
+<ul>
+        <% @lunches.each do |lunch| %>
+
+                <li><%= lunch.name %></li>
+                <ul>
+
+                    <li>
+                              <% lunch.rating.times do %>
+                              <img src='http://www.clker.com/cliparts/f/9/8/1/1216181106356570529jean_victor_balin_icon_star.svg.med.png' width=50px height=50px>
+                            <% end %>
+
+                            <% (10 - lunch.rating).times do %>
+                              <img src='http://www.clipartbest.com/cliparts/9T4/KoB/9T4KoBXTE.png' width=50px height=50px>
+                            <% end %>
+                            <br>
+                            <br>
+
+                    </li>
+                </ul>
+        <% end %>
+</ul>
+
+
+
+
+
+
+</body>
+
+</html>
+
+
