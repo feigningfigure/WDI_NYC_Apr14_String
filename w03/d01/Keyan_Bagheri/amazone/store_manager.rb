@@ -69,19 +69,19 @@ def update
 		sleep(1.0/2.0)
 	end
 	id = gets.chomp
-	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';")[0]
+	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';").first
 	puts "What is the new name for #{product['name']}?"
 	name = gets.chomp
 	@conn.exec("UPDATE products SET name = '#{name}' WHERE id = '#{id}';") unless name == ''
-	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';")[0]
+	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';").first
 	puts "What is the new description #{product['name']}?"
 	description = gets.chomp
 	@conn.exec("UPDATE products SET description = '#{description}' WHERE id = '#{id}';") unless description == ''
-	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';")[0]
+	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';").first
 	puts "What is the new price of #{product['name']}?"
 	price = gets.chomp
 	@conn.exec("UPDATE products SET price = '#{price}' WHERE id = '#{id}';") unless price == ''
-	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';")[0]
+	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';").first
 	puts
 	puts Rainbow("You updated #{product['name']} (#{id}), #{product['description']}, that costs #{product['price']}").magenta
 end
@@ -95,7 +95,7 @@ def order
 		sleep(1.0/2.0)
 	end
 	id = gets.chomp
-	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';")[0]
+	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';").first
 	if (product['quantity'] == nil || product['quantity'].to_i == 0)
 		puts "You have no #{product['name']} in stock. How many do you wish to order?"
 		order = gets.chomp.to_i
@@ -105,7 +105,7 @@ def order
 		order = gets.chomp.to_i
 		@conn.exec("UPDATE products SET quantity = '#{product['quantity'].to_i + order}' WHERE id = '#{id}';")
 	end
-	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';")[0]
+	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';").first
 	puts
 	puts Rainbow("You have added #{order} #{product['name']} and now have #{product['quantity']} #{product['name']}s left.").magenta
 end
@@ -119,7 +119,7 @@ def ship
 		sleep(1.0/2.0)
 	end
 	id = gets.chomp
-	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';")[0]
+	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';").first
 	if (product['quantity'] == nil || product['quantity'].to_i == 0)
 		puts
 		puts Rainbow("You have no #{product['name']} in stock. Would you like to order some? (y/n)").red
@@ -134,7 +134,7 @@ def ship
 		shipment = gets.chomp.to_i
 		if product['quantity'].to_i > shipment
 			@conn.exec("UPDATE products SET quantity = '#{product['quantity'].to_i - shipment}' WHERE id = '#{id}';")
-			product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';")[0]
+			product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';").first
 			puts
 			puts Rainbow("You have sold #{shipment} #{product['name']}s and now have #{product['quantity']} #{product['name']}s left.").magenta
 		else
@@ -154,7 +154,7 @@ def remove
 		sleep(1.0/2.0)
 	end
 	id = gets.chomp
-	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';")[0]
+	product = @conn.exec("SELECT * FROM products WHERE id = '#{id}';").first
 	puts Rainbow("Do you really want to delete #{product['name']}? (y/n)").red
 	answer = gets.chomp
 	if answer == 'y'
@@ -193,26 +193,26 @@ def menu
 	puts Rainbow("  (i)	inventory").blue
 	puts Rainbow("  (q)	quit").red
 	puts
-	input = gets.chomp
+	input = gets.chomp.downcase
 
 	case input
-	when "?"
+	when ("?" or "search")
 		search
-	when "d"
+	when ("d" or "display")
 		display
-	when "a"
+	when ("a" or "add")
 		add
-	when "u"
+	when ("u" or "update")
 		update
-	when "o"
+	when ("o" or "order")
 		order
-	when "s"
+	when ("s" or "ship")
 		ship
-	when "r"
+	when ("r" or "remove")
 		remove
-	when "i"
+	when ("i" or "inventory")
 		inventory
-	when "q"
+	when ("q" or "quit")
 		Kernel.exit
 	end
 end
