@@ -6,7 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-post = Post.create({
-  title: "First Post!",
-  body: "Yeah!"
-  })
+# Jonathan Milgrom's solution
+100.times  do
+  Post.create({
+    # J.M. original
+    # title: Faker::Name.name,
+
+    # Chris B.
+    title: Faker::Lorem.sentence(3),
+
+    body: Faker::Lorem.paragraph(1),
+    # Joe's amendment
+    author_name: Faker::Name.name
+    })
+end

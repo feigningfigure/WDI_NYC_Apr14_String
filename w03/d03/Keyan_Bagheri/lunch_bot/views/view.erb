@@ -1,0 +1,18 @@
+<% if @lunch %>
+  <div class="lunch">
+   <h2><%= @lunch.lunch_name %></h2>
+        <div>
+          <% @lunch.rating.times do %>
+                              <img src='http://www.clker.com/cliparts/f/9/8/1/1216181106356570529jean_victor_balin_icon_star.svg.med.png' width=20px height=20px>
+                            <% end %>
+                            <br>
+                            <br>
+            <a href="#">edit</a> | <a href="/lunches/<%= @lunch.id %>/delete">delete</a>
+          </p>
+        </div>
+  </div>
+<% else %>
+  <div class="lunch">
+    No lunch found with that ID!
+  </div>
+<% end %>
