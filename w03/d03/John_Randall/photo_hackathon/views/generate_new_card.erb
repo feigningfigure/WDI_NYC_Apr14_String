@@ -1,0 +1,14 @@
+<div class='gameboard'>
+  <h3>pick a card to add to the deck</h3>
+
+    <div class='card_grid'>
+          <% @@selfie_array.each do |selfie|
+              selfie_username = selfie[0]
+              selfie_url = selfie[1] %>
+            <div class='card'>
+                <a href="/generate_new_card/<%= selfie_username %>"><p><img src='<%= selfie_url%>'></p></a>
+                </h3><%= selfie_username %></h3>
+            </div>
+        <% end %>
+    </div>
+</div>
