@@ -1,0 +1,33 @@
+<div class="gameboard">
+    <h2>Guess Who!</h2>
+  <ul>
+    <% Game_engine.grid_cards.each do |card| %>
+    <div class="card">
+      <p><a href="/winner_inquiry/<%=card.username%>"><img src="<%= card.instagram_picture_url %>"/></a></p>
+      <h3><%= card.username %></h3>
+    </div>
+    <%end%>
+  </ul>
+</div>
+
+
+<div class="question_block">
+      <ul>
+         <% Game_engine.array_of_questions.each do |question_obj| %>
+                      <div class="question_list">
+                         <li><a href="question_selection/<%=question_obj.question_sym%>"><%= question_obj.question_text %></a></li>
+
+                              <% if question_obj.question_revealed_status == true%>
+                                  <li>
+                                      <% revealed_sym = question_obj.question_sym  %>
+                                      <%= Game_engine.winner.return_property_when_passed_symbol(revealed_sym) %>
+                                  </li>
+                              <% else %>
+                              <% end %>
+
+                      </div>
+          <% end %>
+      </ul>
+</div>
+
+
