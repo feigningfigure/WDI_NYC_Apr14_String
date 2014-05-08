@@ -1,12 +1,7 @@
-###Week03-Day4
+## Rectangles (and Kittens)
 
-#WORK IN YOUR OWN FOLDER ONLY!
-#Your pull-request title must start with `hw_w03_submission`
 
----
-
-## Morning Exercise:
-### Rectangles (and Kittens)
+### You will...
 
 #### Make Rectangles!
 
@@ -31,21 +26,3 @@
 
 ##### Hint
 - Check out:  http://PlaceKitten.com/
-
-
-## Part 2: 
-### To Come
-
-
-
-
-
-
-
-
-
-
------------------
-
-#WORK IN YOUR OWN FOLDER ONLY!
-
