@@ -1,0 +1,15 @@
+<a href= "/items/new">Create New Item</a>
+
+<ul class="items">
+  <% @items.each do |item| %>
+    <li>ID: <%= item.id %></li>
+    <li><a href= "/items/<%= item.id %>/view">Name: <%= item.name %></a></li>
+    <li>Price: <%= item.price %></li>
+    <li>Description: <%= item.description %></li>
+    <li>Quantity: <%= item.quantity %></li>
+    <li>Created at: <%= item.created_at %></li>
+    <p>
+      <a href="/items/<%= item.id %>/edit">edit</a> | <a href="/items/<%= item.id %>/delete">delete</a>
+    </p>
+  <% end %>
+</ul>

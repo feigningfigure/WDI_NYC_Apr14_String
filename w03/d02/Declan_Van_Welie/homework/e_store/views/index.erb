@@ -1,0 +1,16 @@
+<ul class="items">
+  <% @items.each do |item| %>
+    <li>
+      <h2><a href="/items/<%= item.id %> "><%= item.name %></a></h2>
+      <div>
+        <p><%= item.id %></p>
+        <p><%= item.price %></p>
+        <p><%= item.description %></p>
+        <p><%= item.quantity %></p>
+        <p>
+         <%= item.created_at %>
+        </p>
+      </div>
+    </li>
+  <% end %>
+</ul>

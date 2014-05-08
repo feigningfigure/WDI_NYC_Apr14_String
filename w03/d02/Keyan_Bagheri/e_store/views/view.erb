@@ -1,0 +1,18 @@
+<% if @product %>
+  <div class="product">
+   <h2><%= @product.name %></h2>
+        <div>
+          <p><%= @product.description %></p>
+          <p>
+            <%= @product.quantity %> available for $<%= @product.price %> a piece.
+          </p>
+          <p>
+            <a href="/product/<%= @product.id %>/edit">edit</a> | <a href="/product/<%= @product.id %>/delete">delete</a> | <a href="/product/<%= @product.id %>/order">order</a> | <a href="/product/<%= @product.id %>/ship">ship</a>
+          </p>
+        </div>
+  </div>
+<% else %>
+  <div class="product">
+    No products found with that ID!
+  </div>
+<% end %>

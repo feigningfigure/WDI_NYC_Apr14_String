@@ -1,0 +1,24 @@
+<h1>Edit item</h1>
+<form action="/items/<%= @item.id %>" method= post>
+  <input type="hidden" name="_method" value="put" />
+
+  <label for="item_name">Name:</label><br />
+  <input id="name" name="item[name]" type="text" value="<%= @item.name %>" />
+  <br />
+
+  <label for="item_price">Price:</label><br />
+  <input id="price" name="item[price]" type="number" value="<%= @item.price %>" />
+  <br />
+
+   <label for="item_description">Description:</label><br />
+  <input id="description" name="item[description]" type="text" value="<%= @item.description %>" />
+  <br />
+
+   <label for="item_quantity">Quantity:</label><br />
+  <input id="quantity" name="item[quantity]" type="number" value="<%= @item.quantity %>" />
+  <br />
+
+  <input type="submit" value="Edit item" />
+</form>
+
+
