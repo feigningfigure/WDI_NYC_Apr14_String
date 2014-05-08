@@ -1,55 +1,60 @@
-<h1>THE EXPLORER'S MISHAP...</h1>
-
-<h1><%= @place %></h1>
-<h1><%= @adjective %></h1>
-<h1><%= @animal %></h1>
-<h1><%= @adverb %></h1>
-<h1><%= @verb %></h1>
-<h1><%= @flower %></h1>
-<h1><%= @celeb %></h1>
-<h1><%= @restaurant %></h1>
-<h1><%= @flavor %></h1>
-
-
-
-<!-- INTAGRAM INPUTS -->
-<div class="col span_6_of_12 main_image">
-<img src= <%= image_url %>>
+<div class= "storymaster">
+<div class = "username">
+<h1><%= username %></h1>
+<h4>ANYTHING ANYTHING</h4>
 </div>
 
-<h3>tag:<%= tags[0] %></h3>
-<h3>Year: <%= created_time %></h3>
-<h3>image description:<%= text %></h3>
-<!-- <h3>image:</h3> -->
-<h3>how many friends:<%= count %></h3>
-<h3>username:<%= username %></h3>
+<div class="instagram">
+    <img src= <%= image_url %>>
+</div>
+
+<div class="story1">
+<p class="story1p"><%= username %> woke up to find him/herself in <%= @flower %> land not too far from <%= @place %>.</p>
+</div>
 
 
-<p>
-In the farthest reaches of <%= @place %>.
-There is a/n <%= @adjective %> <%= @animal %> that never
-<%= @verb %> until <%= @adverb %>.
+<div class="story2">
+<h4 class ="story2p"><%= username %> slept through an apocolypse and could not find a <%= @animal %> in site.</h4>
+</div>
 
-There is one <%= @place %>, who found this
-out the <%= @adjective %> way - when s/he was forced to
-explore the <%= @place %> and the <%= @animal %>
-<%= @adverb %> attacked.
+<div class="story3">
+<h4 class ="story3p">After days and nights of eating -unappetizing food- during <%= created_time %>, <%= username %> found a dirty -container-.</h4>
+</div>
+
+<div class="story4">
+<p class ="story4p"><%= username %> thought it could liven up the <%= @restaurant %> so he/she went about cleaning it.</p>
+</div>
+
+<div class="story5">
+</div>
+
+<div class ="story6">
+<p class="story6p">Suddenly a genie appeared!</p>
+</div>
+
+<div class ="story7">
+<p class="story7p">The genie who has <%= count %> friends including <%= @celeb %> said : <%= text %></p>
+</div>
+
+<div class ="story8">
+<p class="story7p"><%= username %> thought <%= @adjective %></p>
+</div>
+
+<div class ="story7">
+<p class="story7p">but it was hard on a diet of just <%= @flavor %> flavored food...</p>
+</div>
+
+<div class="story4">
+<h5>so <%= username %> just brushed the genie off as a -figment of imagination-.</h5>
+</div>
+
+<div class="the_end">
+
+</div>
+
+</div>
 
 
 
-In the farthest reaches of <%= @place %>. There was a/an <%= @adjective %> <%= @animal %> that <%= @adverb %> <%= @verb %> when it found a/an <%= @flower %> fossil.
 
-Everyday day in year <%= created_time %> the <%= @animal %> goes on Youtube and watches videos of <%= @celeb %>. For lunch it would eat at <h1><%= @restaurant %></h1> and for dessert it goes to would eat <h1><%= @flavor %></h1> icecream. Then it would go home take a nice long siesta.
-
-<%= @animal %> 's best friend, <%= username %>, wakes him up in year <%= created_time %> to introduce him to <%= count %>friends at a house party.
-
-
-<%= username %> woke up to find him/herself in Acropyland. He/She slept through an apocolypse and could not find a soul in site. After days and nights of eating -unappetizing food- he/she found a dirty -container-. <%= username %>thought it could liven up the -room in house- so he/she went about cleaning it. Suddenly a genie appeared!
-
-<h3>The genie said : <%= text %></h3>
-
- The genie told <%= username %> it would grant it just one wish.
- <%= username %>thought <%= @adjective %> but it was hard on a diet of just -unappetizing food- that he/she just brushed the genie off as a/an -figment of imagination-. THE END.
-
-</p>
 

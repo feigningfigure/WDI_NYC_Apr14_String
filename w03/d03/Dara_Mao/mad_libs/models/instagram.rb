@@ -9,12 +9,12 @@
 
 #Returns any tag
 # def tags
-  tags = result["data"][19]["tags"] #returns an array each do
+tags = result["data"][19]["tags"] #returns an array each do
   # return tags
 # end
 #When the image was created
 # def created_time
-  created_time = result["data"][19]["created_time"]
+created_time = result["data"][19]["created_time"]
   # return created_time
 # end
 #Description of the image
@@ -34,7 +34,7 @@ location = result["data"][index]["location"]["name"] #hash
 #count = how many friends who likes her
 count = result["data"][17]["likes"]["count"]
 
-end
+# end
 
 
 #TO-DO
