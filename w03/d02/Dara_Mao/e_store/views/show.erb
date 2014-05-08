@@ -1,0 +1,19 @@
+<% if @item %>
+  <div class="item">
+   <h2><%= @item.item_name %></h2>
+        <div>
+          <p><%= @item.description %></p>
+          <p>
+             <%= @item.quantity %> on <%= @item.created_at %>
+          </p>
+          <p>
+            <a href="/items/<%= @item_id %>/edit">edit</a>
+            <a href="/items/<%= @item_id %>/delete">delete</a>
+          </p>
+        </div>
+  </div>
+<% else %>
+  <div class="item">
+    No post found with that ID!
+  </div>
+<% end %>
