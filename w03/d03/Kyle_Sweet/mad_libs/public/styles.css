@@ -150,7 +150,7 @@ padding: 80px 45px 75px 45px;
   width: 1200px;
   height: 85px;
   background-color: pink;
-  padding: 15px;
+  padding: 15px 0px 15px 0px;
   float:left;
 
 }
@@ -213,8 +213,9 @@ padding: 100px 0px 100px 0px;
 
 .the_end {
   width: 1200px;
-  height: 400px;
-  background-color: black;
+  height: 600px;
+  background-image:url('http://blog.hammerfilms.com/wp-content/uploads/2012/10/XTU_The_End.jpg');
+  background-size: cover;
   float:left;
 }
 
