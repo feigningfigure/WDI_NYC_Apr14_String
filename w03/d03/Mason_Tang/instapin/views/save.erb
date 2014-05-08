@@ -1,0 +1,26 @@
+
+
+<form action="/update/<%= @photo.id %>" method="post">
+  <p>
+    <input type="text" name="title" placeholder="Title" />
+  </p>
+
+
+  <p>
+    <input type="text" name="description" placeholder="Description" />
+  </p>
+
+  <!--  <p>
+    <input type="text" name="liked" placeholder="Liked" />
+  </p>
+ -->
+
+
+  <input type="submit" value="Save Photo" />
+
+</form>
+
+
+<div class= "pictwo">
+<img src="<%= @photo.url %>">
+</div>
