@@ -1,0 +1,16 @@
+<% if @item %>
+  <div class="item">
+   <h2><%= @item.name %></h2>
+        <div>
+          <ul>
+            <li><%= @item.price %></li>
+            <li><%= @item.description %></li>
+            <li><%= @item.quantity %></li>
+          </ul>
+          <a href="/items/<%= @item_id %>/edit">edit</a>
+            <a href="/items/<%= @item_id %>/delete">delete</a>
+             <a href="/items/<%= @item_id %>/ship">Ship an item</a>
+             <a href="/items/<%= @item_id %>/order">Order an item</a>
+        </div>
+
+<% end %>
