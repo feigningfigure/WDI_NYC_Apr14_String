@@ -1,0 +1,12 @@
+<h2>All Items in Database</h2>
+<ul>
+	<% @items.each do |item| %>
+		<li>
+			<h3><a href="/items/<%= item.id %>/show"><%= item.name %></a></h3>
+
+		</li>
+	<% end %>
+</ul>
+
+
+ 
