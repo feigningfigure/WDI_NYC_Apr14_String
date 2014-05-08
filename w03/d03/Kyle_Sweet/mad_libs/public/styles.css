@@ -1,0 +1,154 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.storymaster{
+width:1200px;
+margin:0 auto;
+}
+
+
+
+h1{
+font-size: 120px;
+font-family: 'Oswald', sans-serif;
+margin: 0 auto;
+text-align: center;
+text-transform: uppercase;
+color: white;
+padding: 10px 20px 20px 20px;
+}
+
+
+h4{
+font-size: 55px;
+font-family: 'Oswald', sans-serif;
+text-align: center;
+text-transform: uppercase;
+color: white;
+}
+
+.username{
+
+width: 650px;
+height: 450px;
+background-color: #3f3f3f;
+float:left;
+}
+
+
+
+
+img{
+  height: 450px;
+  width: 550px;
+  float: right;
+}
+
+
+.story1{
+  width: 1200px;
+  height: 200px;
+  background-color: #72c1a2;
+  float:left;
+}
+
+.story1p{
+font-family: 'Roboto Slab', serif;
+font-size: 30px;
+text-align: center;
+color: white;
+padding: 80px 0px 75px 0px;
+}
+
+
+.story2{
+  width: 500px;
+  height: 400px;
+  background-image:url('http://fc00.deviantart.net/fs47/f/2009/231/1/3/Apocalypse_by_inSOLense.jpg');
+  background-size: cover;
+  opacity:0.9;
+  float:left;
+}
+
+
+.story2p{
+font-size: 45px;
+line-height: 50px;
+text-align: center;
+color: #ede500;
+padding: 80px 45px 75px 45px;
+}
+
+
+.story3{
+  width: 700px;
+  height: 400px;
+  background-color:black;
+  opacity:0.9;
+  float:left;
+}
+
+
+.story3p{
+font-size: 45px;
+line-height: 50px;
+text-align: center;
+color: white;
+padding: 80px 45px 75px 45px;
+}
+
+.story4{
+  width: 1200px;
+  height: 85px;
+  background-color: black;
+
+}
+
+.story4p{
+font-family: 'Roboto Slab', serif;
+font-size: 30px;
+text-align: center;
+color: white;
+padding: 80px 0px 75px 0px;
+}
