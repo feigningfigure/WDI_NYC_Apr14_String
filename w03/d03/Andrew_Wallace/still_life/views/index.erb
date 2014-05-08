@@ -1,0 +1,15 @@
+
+
+	<% @results.each do |image| %>
+
+<div id="image">
+		<form action="/photos/new" method="GET">
+			<img src="<%= image %>" />
+			<input type="hidden" name="img_url" value="<%= image %>" /><br>
+			<input type="submit" value="Save" />
+		</form></br>
+</div>
+	<% end %>
+
+
+
