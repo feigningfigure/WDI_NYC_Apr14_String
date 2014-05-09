@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  get "/search" => "movies#index"
+
+  post '/search' => 'movies#search'
+
+  get '/all' => "movies#all"
+
+  # get "/movies" => "movies#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
