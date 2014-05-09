@@ -1,0 +1,19 @@
+<!-- SHOW POSTS HERE -->
+
+<ul class="movies">
+<% @movies.each do |movie| %>
+  <li>
+    <h2 class="movie_title"><%= movie.title %></h2>
+    <p class="author_name">by <%= movie.author_name %>
+      <%# random_person_photo  # bad idea %>
+    <img class="author_photo" src="<%= movie.author_photo %>" />
+    </p>
+    <p class="movie_body"><%= movie.body %></p>
+  </li>
+<% end %>
+</ul>
+
+<!-- hello should appear -->
+<%= my_method %>
+
+<!--  -->
