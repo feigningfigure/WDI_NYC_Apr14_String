@@ -4,11 +4,11 @@ get '/' => "my_movies#index"
 
 
 
-post '/movie/:title/create' => "my_movies#create"
+post '/:title/create' => "my_movies#create"
 
 
 
-get '/movie/#{@movie.id}/show' => "my_movies#show"
+get '/:title/show' => "my_movies#show"
 
 
 
