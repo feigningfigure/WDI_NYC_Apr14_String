@@ -1,9 +1,10 @@
-100.times do
+Crayon.delete_all
 
+100.times do
   # this will make a new instance of Crayon
   # then save it to the database in one swoop.
   Crayon.create({
-    name: Faker::Lorem.sentence(1),
+    name: Faker::Commerce.color,
     intensity: rand(100)
   })
 
