@@ -16,9 +16,9 @@ end
 def create
     @movie = movie.new(:title params[:title])
 
-    respond_to do |format|
-      if @movie.save
-        format.html { redirect_to @movie, notice: 'Movie was successfully created.' }
+    # respond_to do |format|
+    #   if @movie.save
+    #     format.html { redirect_to @movie, notice: 'Movie was successfully created.' }
         end
 end
 
