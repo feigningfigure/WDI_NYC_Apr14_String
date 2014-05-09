@@ -1,0 +1,50 @@
+<div class="update">
+<form action="/cards/<%= @card.id %>/update" method="POST">
+  <p>
+    Are they male?
+    <input type="text" name="male?" value="<%= @card.male %>">
+  </p>
+  <p>
+    Are they wearing glasses?
+    <input type="text" name="glasses" value="<%= @card.glasses %>">
+  </p>
+  <p>
+    Are they wearing a hat?
+    <input type="text" name="hat" value="<%= @card.hat %>">
+  </p>
+  <p>
+    Do they have facial hair?
+    <input type="text" name="facial_hair" value="<%= @card.facial_hair %>">
+  </p>
+  <p>
+    Do they have a beard?
+    <input type="text" name="beard" value="<%= @card.beard %>">
+  </p>
+  <p>
+    Do they have a mustache?
+    <input type="text" name="mustache" value="<%= @card.mustache %>">
+  </p>
+  <p>
+    Are they wearing jewelry?
+    <input type="text" name="jewelry" value="<%= @card.jewelry %>">
+  </p>
+  <p>
+    Are they wearing earrings?
+    <input type="text" name="earings" value="<%= @card.earings %>">
+  </p>
+    <p>
+    Do they have any facial piercings?
+    <input type="text" name="facial_piercing" value="<%= @card.facial_piercing %>">
+  </p>
+  <p>
+    What is their hair color?
+    <input type="text" name="hair_color" value="<%= @card.hair_color %>">
+  </p>
+  <p>
+    What is their eye color?
+    <input type="text" name="eye_color" value="<%= @card.eye_color %>">
+  </p>
+
+  <input type="submit" value="Update card" />
+</form>
+</div>
