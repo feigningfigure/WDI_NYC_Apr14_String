@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   get '/movies/all' => "movies#all"
 
-
 end
+
