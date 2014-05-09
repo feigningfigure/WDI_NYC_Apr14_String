@@ -1,5 +1,5 @@
 class MoviesController < ActionController::Base
-  # sets the default layout
+
   layout "application"
 
   def index
@@ -7,6 +7,13 @@ class MoviesController < ActionController::Base
   end
 
   def search
-
+    movie_title = params[:movie_search]
+    Movie.search(movie_title)
+    @movies = Movie.all
   end
+
+  def all
+    @movies = Movie.all
+  end
+
 end
