@@ -9,7 +9,8 @@ class MoviesController < ActionController::Base
   def search
     movie_title = params[:movie_search]
     Movie.search(movie_title)
-    @movies = Movie.all
+    movies = Movie.order(id: :desc)
+    @movie = movies.first
   end
 
   def all
