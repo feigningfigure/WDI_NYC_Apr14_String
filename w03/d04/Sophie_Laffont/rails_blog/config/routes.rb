@@ -18,4 +18,8 @@ Rails.application.routes.draw do
 
   # DELETE /posts/:id - delete a post
 
+  # GET /cats - show photos of cats
+  # (this is really bad namespacing/RESTful-routing)
+  get "/cats" => "posts#cats"
+
 end

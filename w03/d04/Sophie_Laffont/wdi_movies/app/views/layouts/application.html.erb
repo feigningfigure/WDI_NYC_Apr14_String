@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsBlog</title>
+  <title>WdiMovies</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
 </head>
 <body>
 
-<h1>Posts</h1>
-
-<nav>
-  <%= link_to "all posts", "/posts" %> |
-  <%= link_to "new post", "/posts/new" %>
-  |
-  <%= link_to "cats", "/cats" %>
-</nav>
 <%= yield %>
 
 </body>
