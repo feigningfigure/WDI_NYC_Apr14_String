@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  year: 2014-05-08
+  rated: MyString
+  released: 2014-05-08
+  runtime: 2014-05-08 18:55:48
+  genre: MyString
+  director: MyString
+  writer: MyString
+  actors: MyString
+  plot: MyText
+  movie_poster: MyString
+
+two:
+  title: MyString
+  year: 2014-05-08
+  rated: MyString
+  released: 2014-05-08
+  runtime: 2014-05-08 18:55:48
+  genre: MyString
+  director: MyString
+  writer: MyString
+  actors: MyString
+  plot: MyText
+  movie_poster: MyString

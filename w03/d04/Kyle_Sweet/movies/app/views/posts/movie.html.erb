@@ -1,0 +1,21 @@
+<div class = "movie">
+
+<img class = "poster" src="<%= Movie.poster %>" />
+
+
+    <h1><%= Movie.title %> </h1>
+
+    <ul>
+
+    <h2>  <%= Movie.year %> </h2>
+    <h3>Director: <%= Movie.director%></h3>
+    <h4>Rated: <%= Movie.rating %></h4>
+    <h4>Genre: <%= Movie.genre %> </h4>
+    <h4>Runtime:<%= Movie.runtime %> </h4>
+
+    </ul>
+
+    <h4>Synopsis:</h4>
+    <p><%= Movie.plot %></p>
+
+</div>
