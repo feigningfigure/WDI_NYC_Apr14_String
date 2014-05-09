@@ -1,0 +1,8 @@
+<DOCTYPE html>
+
+<ul>
+	<% @lunch.each do |lunch| %>
+		<li><%= lunch.name %></li>
+		<li><%= lunch.rating %></li>
+		<% end %>
+</ul>

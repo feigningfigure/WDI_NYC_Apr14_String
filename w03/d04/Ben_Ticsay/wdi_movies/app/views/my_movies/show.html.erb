@@ -1,0 +1,23 @@
+<!-- <p><%= @movie %></p> -->
+
+
+
+<ul class="movies">
+<% @.each do |movie| %>
+  <li>
+    <h2 class="movie_title"><%= m_ovie.title %></h2>
+    <p class="movie_year">by <%= mo_vie.year %></p>
+    <p class="movie_rated"><%= m_ovie.rated %></p>
+    <p class="movie_released">by <%= mo_vie.released %></p>
+    <p class="movie_runtime"><%= mo_vie.runtime %></p>
+    <p class="movie_genre">by <%= mo_vie.genre %></p>
+    <p class="movie_director"><%= m_ovie.director %></p>
+    <p class="movie_writer">by <%= m_ovie.writer %></p>
+    <p class="movie_actors"><%= m_ovie.actors %></p>   
+    <p class="movie_plot"><%= m_ovie.plot %></p>
+    <p class="movie_movie_poster">by <%= m_ovie.movie_poster %></p>
+   
+
+  </li>
+<% end %>
+</ul>
