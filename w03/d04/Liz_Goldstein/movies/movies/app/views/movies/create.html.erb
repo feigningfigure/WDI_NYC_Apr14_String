@@ -1,0 +1,13 @@
+
+<% title_query = params[:movie_title].gsub(" ","%20") =
+  movie_hash = JSON.parse(HTTParty.get("http://www.omdbapi.com/?t=#{title_query}")) %>
+
+
+<% Movie.create(
+  title: title,
+  rated: rated
+)%>
+
+
+
+redirect '/'
