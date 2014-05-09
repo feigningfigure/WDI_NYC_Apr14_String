@@ -1,0 +1,15 @@
+<% if @items %>
+  <div class="items">
+   <h2><%= @items.id %></h2>
+        <div>
+          <p><%= @items.name %></p>
+          <p>
+            <a href="#">edit</a> | <a href="/items/<%= @items_id %>/delete">delete</a>
+          </p>
+        </div>
+  </div>
+<% else %>
+  <div class="items">
+    No post found with that ID!
+  </div>
+<% end %>
