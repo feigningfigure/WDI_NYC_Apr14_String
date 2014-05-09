@@ -1,0 +1,21 @@
+<% @new_movie.each do |key, value| %>
+	<p><%= "#{key}: #{value}" %></p>
+<% end %>
+
+<img src='<%= @new_movie["Poster"] %>' />
+
+
+<form action="/movies/all" method="POST">
+	<input type="hidden" name="title" value="<%= @new_movie["Title"] %>" />
+	<input type="hidden" name="year" value="<%= @new_movie["Year"] %>" />
+	<input type="hidden" name="rated" value="<%= @new_movie["Rated"] %>" />
+	<input type="hidden" name="released" value="<%= @new_movie["Released"] %>" />
+	<input type="hidden" name="runtime" value="<%= @new_movie["Runtime"] %>" />
+	<input type="hidden" name="genre" value="<%= @new_movie["Genre"] %>" />
+	<input type="hidden" name="director" value="<%= @new_movie["Director"] %>" />
+	<input type="hidden" name="writer" value="<%= @new_movie["Writer"] %>" />
+	<input type="hidden" name="actors" value="<%= @new_movie["Actors"] %>" />
+	<input type="hidden" name="plot" value="<%= @new_movie["Plot"] %>" />
+	<input type="hidden" name="movieposter" value="<%= @new_movie["Poster"] %>" />
+	<input type="submit" value="SAVE" />
+</form>
