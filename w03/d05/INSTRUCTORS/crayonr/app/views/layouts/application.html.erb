@@ -7,6 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<h1>Crayonr</h1>
+  <nav>
+    <%= link_to "all", crayons_path %> |
+    <%= link_to "new", crayons_new_path %>
+  </nav>
 
 <%= yield %>
 
