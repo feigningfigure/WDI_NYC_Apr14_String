@@ -1,0 +1,10 @@
+<ul class="lunch_spots">
+  <% @lunches.each do |lunch| %>
+    <li>
+      <h2><%= lunch.name %></a></h2>
+      <div>
+        <p><%= lunch.rating %></p>
+      </div>
+    </li>
+  <% end %>
+</ul>

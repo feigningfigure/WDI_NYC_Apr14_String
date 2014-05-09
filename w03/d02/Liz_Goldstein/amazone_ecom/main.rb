@@ -13,13 +13,7 @@ ActiveRecord::Base.establish_connection({
 })
 
 get '/' do
-   # result = @conn.exec("SELECT * FROM products WHERE id = '#{query}';")
-  # puts result
-  # result.each do |match|
-  #   match.each do |k, v|
-  #     puts "#{k} : #{v}"
-  #     end
-  #   end
+
   @items = Item.all
   erb :index
 end
