@@ -1,1 +1,8 @@
 <!-- SHOW POSTS HERE -->
+<% @posts.each do |post| %>
+	<li>
+		<h2><%= post.title %></h2>
+		<p><%= post.author_name %></p>
+		<p><%= post.body %></p>
+	</li>
+<% end %>
