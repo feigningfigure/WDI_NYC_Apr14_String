@@ -6,7 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-post = Post.create({
+post = 100.times do Post.create({
   title: "First Post!",
   body: "Yeah!"
+  name: "blah blah"
   })
