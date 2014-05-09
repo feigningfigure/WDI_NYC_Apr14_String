@@ -1,0 +1,23 @@
+<!--
+<ul class="posts">
+<% @posts.each o |post| %>
+  <li>
+    <h2 class="post_title"><%= post.title %></h2>
+    <p class="author_name">by <%= post.author_name %>
+      <%# random_person_photo  # bad idea %>
+    <img class="author_photo" src="<%= post.author_photo %>" />
+    </p>
+    <p class="post_body"><%= post.body %></p>
+  </li>
+<% en %>
+</ul>
+
+<! hello should appear -->
+
+
+
+ <form>
+   <input type="text" name="title" placeholder="title"/>
+   <input type="text" name="body" placeholder="body"/>
+  <input type="submit" value="Create Post"/>
+</form>
