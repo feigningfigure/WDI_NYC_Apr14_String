@@ -1,0 +1,8 @@
+<ul class="friends">
+  <% @friends.each do |friend| %>
+    <li>
+      <h2><%= friend.name %></h2>
+      <p><img src="<%= friend.photo_url %>"/></p>
+    </li>
+  <% end %>
+</ul>
