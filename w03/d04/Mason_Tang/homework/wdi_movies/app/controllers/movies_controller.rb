@@ -35,6 +35,10 @@ class MoviesController < ActionController::Base
       redirect_to "/"
   end
 
+  def show
+
+  end
+
 
 
   def all
