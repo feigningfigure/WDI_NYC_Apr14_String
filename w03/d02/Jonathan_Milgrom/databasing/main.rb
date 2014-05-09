@@ -2,12 +2,17 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'pg'
 
-@conn = PG.({dbname: blog1})
+
+
+def connect_to_db
+	return PG.connect({dbname: 'blog1'})
+end
 
 get '/' do
+
   @posts = []
-  @conn.exec("SELECT * FROM posts").each do
-    |post| @posts << post
+  connect_to_db.exec("SELECT * FROM posts").each do |post| 
+  		@posts << post
   end
   @posts.to_s
 end

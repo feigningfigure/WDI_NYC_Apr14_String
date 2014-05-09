@@ -2,7 +2,7 @@
 ###Week03-Day04
 
 #WORK IN YOUR OWN FOLDER ONLY!
-#Your pull-request ti	tle must start with `hw_w02_submission`
+#Your pull-request ti	tle must start with `hw_w03_submission`
 
 ---
 
@@ -35,7 +35,9 @@
 
 
 ---
-##Movies!
+
+
+## Movies!
 - Create a Rails application
 	- Using `httparty` to make requests to [OMDbapi](http://www.omdbapi.com/) , retrieve information about a movie
 	- Your page should have a form where a user can enter a movie title
@@ -46,7 +48,7 @@
 - When a user enters in a movie title, that film's data should be automatically inserted into the database.
 - A `get` request to '/all' should respond with an html table displaying ALL the all the film information in your database
 
-***BONUS***
+#### Bonus!
 
 - Add a feature that allows the user to delete a movie entry from the database.   
 - Use the `seed` file to pre-populate your database

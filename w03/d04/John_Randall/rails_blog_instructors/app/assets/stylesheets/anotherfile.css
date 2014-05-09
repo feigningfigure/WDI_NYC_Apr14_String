@@ -1,0 +1,31 @@
+/* I AM INSIDE ANOTHER CSS FILE */
+
+body {
+  font-family: 'Helvetica'
+}
+
+input {
+  display: block;
+}
+
+.posts {
+  list-style-type: none;
+}
+
+.posts li {
+  width: 60%;
+  margin: 0 auto;
+  border: 1px dotted black;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.posts li h2 {
+  padding: 10px;
+}
+
+.post_title {
+  background-color: black;
+  color: white;
+  letter-spacing: 1px;
+}

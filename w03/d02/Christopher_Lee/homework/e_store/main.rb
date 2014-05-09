@@ -24,6 +24,7 @@ get '/' do
 erb :index
 end
 
+
 # CREATE form for a new service DONE
 get '/items/new' do
   erb :new

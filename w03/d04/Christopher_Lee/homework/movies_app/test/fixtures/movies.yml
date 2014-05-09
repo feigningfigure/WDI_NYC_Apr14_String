@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  year: MyString
+  rated: MyString
+  released: MyString
+  runtime: MyString
+  genre: MyString
+  director: MyString
+  writer: MyString
+  actors: MyString
+  plot: MyString
+  language: MyString
+  country: MyString
+  awards: MyString
+  poster: MyString
+  metascore: MyString
+  imdbrating: MyString
+  imdbvotes: MyString
+  imbdbid: MyString
+  type: 
+  response: MyString
+
+two:
+  title: MyString
+  year: MyString
+  rated: MyString
+  released: MyString
+  runtime: MyString
+  genre: MyString
+  director: MyString
+  writer: MyString
+  actors: MyString
+  plot: MyString
+  language: MyString
+  country: MyString
+  awards: MyString
+  poster: MyString
+  metascore: MyString
+  imdbrating: MyString
+  imdbvotes: MyString
+  imbdbid: MyString
+  type: 
+  response: MyString

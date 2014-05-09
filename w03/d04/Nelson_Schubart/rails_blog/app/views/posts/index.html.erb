@@ -1,1 +1,12 @@
 <!-- SHOW POSTS HERE -->
+
+<ul class="posts">
+  <% @posts.each do |post| %>
+  <li>
+    <h2 class="post_tile"><%= post.title %></h2>
+    <p class= ><%= post.body %></p>
+  </li>
+  <% end %>
+</ul>
+
+
