@@ -1,7 +1,9 @@
 <div class="crayons">
   <% @crayons.each do |crayon| %>
     <p class="crayon" style="color: <%= crayon.name %>">
-      <%= crayon.name %>
+      <%# fancy ternary operator:  predicate ? true result : false result %>
+      <%= crayon.name %> belongs to <%= crayon.owner ? crayon.owner.fancy_name : "no one" %>
+      <%= link_to "show", "/crayons/#{crayon.id}" %>
     </p>
   <% end %>
 </div>
