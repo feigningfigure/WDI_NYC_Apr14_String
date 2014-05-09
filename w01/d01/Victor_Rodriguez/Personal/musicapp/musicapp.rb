@@ -5,7 +5,7 @@ get '/' do
 erb: index
 end
 
-  
+
 require 'sinatra'
 require 'sinatra/reloader'
 require 'musicbrainz'
@@ -46,3 +46,7 @@ get '/search' do
   @artist_search = params[:artist_search]
   erb :search
 end
+
+def seed
+  1000.times.do
+  add_student (Faker::Name.first_name, Fake::Name.last_name, )
