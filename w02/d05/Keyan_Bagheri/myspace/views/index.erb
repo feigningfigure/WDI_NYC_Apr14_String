@@ -1,13 +1,12 @@
-<h3>Hi I'm Tom, your first friend</h3>
+<h3> Hi I'm Tom, your first friend </h3>
 
 <% if @message %>
-	<h5><%= @message %></h5>
-	<% else %>
-	<h5>Search for your friends below</h5>
-	<% end %>
+	<h5> <%= @message %> </h5>
+<% else %>
+	<h5> Search for a friend below </h5>
+<% end %>
 
 <form action="/friend">
-	<input type="text" name="username" placeholder="Search for a friend" />
-	<button type="submit">Search</button>
+	<input type="text" name="username" placeholder="Search for a friend">
+	<button type="submit">Search!</button>
 </form>
-
