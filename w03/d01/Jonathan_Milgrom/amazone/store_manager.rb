@@ -92,7 +92,7 @@ def program
 
 		new_quantity = product_hash["quantity"] - quantity	
 		update("quantity", new_quantity, id)
-
+sub
 		print_new_quantity(id)
 
 		puts "you have shipped #{quantity} items of #{product_hash["name"]}"
