@@ -1,0 +1,30 @@
+body {
+	padding-top: 160px;
+	padding-left: 40px;
+	background: #3E4349;
+	text-align: center;
+	color: #DDCDE8;
+	font-family: Courier;
+	background-image: url('http://chexydecimal.com/wp-content/uploads/2011/08/magic-8-ball.jpg');
+	background-position: center;
+	background-size: 140%;
+	text-shadow: white 1px;
+	max-width: 40%;
+	text-align: center;
+}
+
+.askme {
+	width: 65%;
+}
+
+h1 {
+	font-size: 45px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+input {
+	height: 18px;
+}

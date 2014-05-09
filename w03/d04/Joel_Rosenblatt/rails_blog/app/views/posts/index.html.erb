@@ -1,1 +1,5 @@
 <!-- SHOW POSTS HERE -->
+<% @posts = Posts.all %>
+<% @posts.each do |post| %>
+<h1><%= post %></h1>
+<% end %>

@@ -1,0 +1,12 @@
+<%# this DOES need a crying clown hat %>
+<%= form_for @crayon, url: "/crayons" do |f| %>
+
+  <p>
+    Name: <%= f.text_field :name %>
+  </p>
+  <p>
+  Intensity: <%= f.text_field :intensity %>
+  </p>
+  <%= f.submit "Create" %>
+
+<% end %>
