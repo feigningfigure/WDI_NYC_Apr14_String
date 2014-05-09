@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  get "/search" => "movies#index"
+  get "/" => "movies#index"
 
+  get '/search' => 'movies#index'
   post '/search' => 'movies#search'
 
   get '/all' => "movies#all"
