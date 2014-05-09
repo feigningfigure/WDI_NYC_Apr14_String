@@ -1,0 +1,17 @@
+<ul>
+        <% @lunches.each do |lunch| %>
+
+                <li><a href="/lunches/<%= lunch.id %> "><%= lunch.lunch_name %></a></li>
+                <ul>
+
+                    <li>
+                              <% lunch.rating.times do %>
+                              <img src='http://www.clker.com/cliparts/f/9/8/1/1216181106356570529jean_victor_balin_icon_star.svg.med.png' width=20px height=20px>
+                            <% end %>
+                            <br>
+                            <br>
+
+                    </li>
+                </ul>
+        <% end %>
+</ul>
