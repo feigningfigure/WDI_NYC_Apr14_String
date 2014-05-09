@@ -1,0 +1,18 @@
+<h1> Amazon eStore Database! </h1>
+<form action="/items/new" method="GET">
+  <input type="submit" value="Create New Item" />
+</form>
+
+<ul class="items">
+  <% @item.each do |item| %>
+    <li>
+      <h2><a href="/items/<%= item.id %>/view"><%= item.name %></a></h2>
+      <div>
+        <p>price: $<%= item.price %></p>
+        <p>description: <%= item.description %></p> 
+        <p>quantity: <%= item.quantity %></p>
+      </div>
+    </li>
+  <% end %>
+</ul>
+

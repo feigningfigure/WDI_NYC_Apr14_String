@@ -1,0 +1,18 @@
+
+
+<% @all_photos.each do |entry|   %>
+
+
+	<img src="<%=  entry["url"] %>">
+ 
+	<form  action="/delete" method="post">
+	<input type='hidden' name='id' value='<%= entry.id %>' >
+	<a href="/">Back</a>
+	<input type="submit" name="delete" value="Delete" />
+
+	</form>
+
+
+
+	<% end %>
+

@@ -78,4 +78,6 @@ def length_count
 	return count
 end
 
+# DELETE FROM students WHERE id = '';
+
 
