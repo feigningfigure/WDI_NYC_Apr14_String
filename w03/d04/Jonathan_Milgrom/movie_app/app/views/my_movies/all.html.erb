@@ -1,0 +1,20 @@
+<h1>Database of Movies</h1>
+
+<ul>
+	<% @movies.each do |movie| %>
+		<li><ul>
+			<div><li><%= movie.title %></li></div>
+			<div><li><%= movie.year %></li></div>
+			<div><li><%= movie.rated %></li></div>
+			<div><li><%= movie.released %></li></div>
+			<div><li><%= movie.runtime %></li></div>
+			<div><li><%= movie.genre %></li></div>
+			<div><li><%= movie.director %></li></div>
+			<div><li><%= movie.writer %></li></div>
+			<div><li><%= movie.actors %></li></div>
+			<div><li><%= movie.plot %></li></div>
+			<div><li><img class="pic" src="<%= movie.movie_poster %>"</li></div>
+
+		</ul></li>	
+	<% end %>
+</ul>

@@ -1,0 +1,16 @@
+body {
+	background-color: white;
+	text-align: center;
+}
+
+.list {
+	text-align: left;
+}
+
+
+.inline {
+
+	display: inline-block;
+
+
+}

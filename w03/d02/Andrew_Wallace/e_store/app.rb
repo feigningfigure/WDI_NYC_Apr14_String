@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'active_record'
 require 'pry'
+require 'pg'
 
 
 # ESTABLISH CONNECTION TO DATABASE
