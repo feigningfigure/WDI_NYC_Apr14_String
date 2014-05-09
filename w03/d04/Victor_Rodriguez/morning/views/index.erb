@@ -1,0 +1,10 @@
+<ul class="rectangles">
+  <% @rectangles.each do |rectangle| %>
+    <li>
+      <h2><a href="/rectangles/<%= rectangles.num %> "><%= rectangles.id %></a></h2>
+      <div>
+        <p><%= rectangles.description %></p>
+      </div>
+    </li>
+  <% end %>
+</ul>
