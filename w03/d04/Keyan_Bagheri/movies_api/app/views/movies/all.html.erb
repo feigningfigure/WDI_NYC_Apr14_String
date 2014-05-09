@@ -1,0 +1,8 @@
+<% @movies.each do |movie| %>
+
+<li>
+	<h2><%= movie.title %></h2>
+		<h2><%= movie.director %></h2>
+			<p><%= movie.plot %></p>
+		</li>
+		<% end %>
