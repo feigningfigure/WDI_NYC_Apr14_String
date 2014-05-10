@@ -1,0 +1,24 @@
+body {
+text-align: center;
+background-image: url(http://1.bp.blogspot.com/_ffZts3mhvEM/TBpjMj2KcdI/AAAAAAAAAro/LnQryhtYAVQ/s400/mib_retro_wp.jpg);
+color: #ffff66;
+font-family: "PT Sans", Arial, Helvetica, sans-serif;
+font-size: 18px;
+}
+
+a{
+font-style: bold;
+}
+
+}
+h1{
+  font-size: 70px;
+}
+
+img {
+  max-width: 240px;
+  max-height: 240px;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 6px;
+}
