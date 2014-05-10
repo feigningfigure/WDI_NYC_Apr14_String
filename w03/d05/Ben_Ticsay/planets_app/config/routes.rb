@@ -8,5 +8,13 @@ post "/planets" => "planets#create"
 
 get "/planets/:id" => "planets#show"
 
+get "/moons" => "moons#index"
+
+get "/moons/new" => "moons#new"
+
+post "/moons" => "moons#create"
+
+get "/moons/:id" => "moons#show"
+
 
 end
