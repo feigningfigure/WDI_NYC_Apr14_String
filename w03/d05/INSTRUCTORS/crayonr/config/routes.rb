@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     # CREATE crayon path
     post "/crayons" => "crayons#create"
 
+    # SHOW crayon/:id path
+    get "/crayons/:id" => "crayons#show"
 
 
 
