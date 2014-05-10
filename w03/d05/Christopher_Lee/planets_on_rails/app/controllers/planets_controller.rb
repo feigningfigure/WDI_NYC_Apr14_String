@@ -9,13 +9,14 @@ class PlanetsController < ApplicationController
   end
 
   def create
-    render :text => params.inspect
-    # @planet = Planet.new(planet_params)
-    # @planet.save
-    #  redirect_to :action => "index"
+    # render :text => params.inspect
+    @planet = Planet.new(planet_params)
+    @planet.save
+    redirect_to :action => "index"
   end
 
-   def task_params
-      params.require(:task).permit(:task)
+  private
+   def planet_params
+      params.require(:planet).permit(:name, :image_url, :diameter, :mass, :life)
     end
 end
