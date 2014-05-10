@@ -29,10 +29,11 @@ crayon = Crayon.new({
 # 100.times do
 #   # this will make a new instance of Crayon
 #   # then save it to the database in one swoop.
-#   Crayon.create({
-#     name: Faker::Commerce.color,
-#     intensity: rand(100),
-#     owner_id: Owner.all.id
-#   })
+  Crayon.create({
+    name: Faker::Commerce.color,
+    intensity: rand(100),
+    owner_id: Owner.all.id
+  })
+  # delays the DB writing until now
   crayon.save
 end

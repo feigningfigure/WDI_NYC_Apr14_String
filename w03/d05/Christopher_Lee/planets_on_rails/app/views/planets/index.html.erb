@@ -1,0 +1,12 @@
+<h1>Planets#index</h1>
+<ul>
+  <% @planets.each do |planet| %>
+  <h1><%= planet.name %></h1>
+  <li>diameter: <%= planet.diameter %></li>
+  <li>mass: <%= planet.mass %></li>
+  <li>life: <%= planet.life %></li>
+  <li><%= planet.image_url %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Create New Planet',{controller: "planets", action: "new"} %>
