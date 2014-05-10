@@ -32,7 +32,10 @@ class CrayonsController < ApplicationController
 
     Crayon.create({
         name: crayon_attributes[:name],
-        intensity: crayon_attributes[:intensity]
+        intensity: crayon_attributes[:intensity],
+        # randomly assigning an owner when a new crayon is made
+        # this is a temporary workaround until we learn otherwise
+        owner_id: Owner.all.sample.id
       })
 
     # useful for debugging
@@ -41,6 +44,16 @@ class CrayonsController < ApplicationController
     # send user back to all crayons page
     redirect_to crayons_path
 
+  end
+
+  def show
+    # grab id from url params
+    crayon_id = params[:id]
+
+    # query database to find only the record that i need
+    @crayon = Crayon.find(crayon_id)
+
+    # render json: crayon
   end
 
 end
