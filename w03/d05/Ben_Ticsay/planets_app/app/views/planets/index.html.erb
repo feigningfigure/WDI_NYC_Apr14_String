@@ -1,1 +1,14 @@
-index.html.erb
+<div class="planets">
+  <% @planets.each do |planet| %>
+    <p class="planet" style="">
+
+    	<%= planet.name %>
+    	<%= planet.diameter %>
+    	<%= planet.mass %>
+    	<%= planet.life %>
+    	<img src="<%= planet.image_url %>">
+
+
+    </p>
+  <% end %>
+</div>
