@@ -6,6 +6,7 @@
   <li>mass: <%= planet.mass %></li>
   <li>life: <%= planet.life %></li>
   <li><%= planet.image_url %></li>
+  <%= link_to 'Delete', planet, :method => 'delete' %>
   <% end %>
 </ul>
 

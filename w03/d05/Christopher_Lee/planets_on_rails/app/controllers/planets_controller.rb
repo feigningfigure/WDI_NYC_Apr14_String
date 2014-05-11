@@ -15,6 +15,12 @@ class PlanetsController < ApplicationController
     redirect_to :action => "index"
   end
 
+   def destroy
+    @planet = Planet.find(params[:id])
+    @planet.destroy
+    redirect_to :back, :notice => 'Planet has been destroyed.'
+  end
+
   private
    def planet_params
       params.require(:planet).permit(:name, :image_url, :diameter, :mass, :life)
