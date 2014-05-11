@@ -1,2 +1,2 @@
-class Planets < ActiveRecord::Base
+class Planet < ActiveRecord::Base
 end
