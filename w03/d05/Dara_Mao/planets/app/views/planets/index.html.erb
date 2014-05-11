@@ -1,0 +1,8 @@
+<div class="planets">
+  <% @planets.each do |planet| %>
+    <p>
+      <%= planet.name %>:
+      <%= link_to "show details", "/planets/#{planet.id}" %>
+    </p>
+  <% end %>
+</div>
