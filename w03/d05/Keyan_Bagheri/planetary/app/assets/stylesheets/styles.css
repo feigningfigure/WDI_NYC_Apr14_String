@@ -1,0 +1,53 @@
+body {
+	background-image: url('http://2.bp.blogspot.com/-CAfTxnknkgI/USZPm5Bs80I/AAAAAAAAAo8/1RoQVqkpS8E/s1600/space-map-hd-wallpaper_1.jpg');
+	background-position: fixed;
+	margin: 20px auto auto auto;
+	text-align: center;
+	color: white;
+	font-family: helvetica;
+
+}
+
+h1 {
+	font-size: 28px;
+	background: rgba(0,150,150,.1);
+	margin: 10px auto;
+}
+
+p{
+	background: rgba(0,150,150,.1);
+}
+
+nav {
+	margin: 10px auto;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 400px;
+	max-height: 300px;
+	border: solid #A77080 2px;
+}
+
+a {
+	color: #82E79C;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+hr {
+	width: 50px;
+}
+
+.header a {
+	color: #3FE8FE;
+}
+
+h3 {
+	color: #82E79C;
+}

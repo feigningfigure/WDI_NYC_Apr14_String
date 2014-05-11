@@ -1,0 +1,9 @@
+<% @moons.each  do |moon| %>
+<% if Planet.find_by_id(moon.planet_id).nil? %>
+<% planet_name = "none" %>
+<% else planet = Planet.find(moon.planet_id)%>
+<% planet_name = planet.name %>
+<% end %>
+  <h1><a href="moons/<%=moon.id%>"><%= moon.name %> - Planet: <%=planet_name%></a></h1>
+<hr>
+<% end %>
