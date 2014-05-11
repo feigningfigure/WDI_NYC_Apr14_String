@@ -1,0 +1,11 @@
+
+
+
+<%= form_for @planet, url: "/planets", html: {class: "nifty_form"} do |f| %>
+  Name <%= f.text_field    :name, placeholder: 'Name' %>
+  Diameter <%= f.text_field    :diameter %>
+  Mass <%= f.text_field    :mass %>
+  Life <%= f.text_field    :life %>
+  Image URL <%= f.text_field    :image_url %>
+  <%= f.submit "Create" %>
+<% end %>

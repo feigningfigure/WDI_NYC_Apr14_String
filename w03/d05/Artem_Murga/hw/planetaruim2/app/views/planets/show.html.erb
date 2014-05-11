@@ -1,0 +1,18 @@
+
+<body>
+
+	Name : <%= @planet.attributes["name"]%>
+	<br>
+	Diameter : <%= @planet.attributes["diameter"]%>
+	<br>
+	Mass : <%= @planet.attributes["mass"]%>
+	<br>
+	Life : <%= @planet.attributes["life"] == true ? "Colonized" : "Not colonized yet"%>
+
+
+	<!-- #faced with problem with auth -->
+	<!-- #<form  action="/planets/delete" method="post">
+	<#input type="submit" name="<%= @planet.id %>" value="Delete">
+	<#/form> -->
+
+	</body>
