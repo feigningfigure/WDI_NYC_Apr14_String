@@ -15,6 +15,10 @@
 
 <tbody>
 	<% @planets.each do |planet| %>
+	<% if planets.size == 0 %>
+	<em> No planets found </em>
+	<% end %>
+
 	<tr>
 	<td><%= planet.name %></td>
 	<td><%= planet.image_url %></td>

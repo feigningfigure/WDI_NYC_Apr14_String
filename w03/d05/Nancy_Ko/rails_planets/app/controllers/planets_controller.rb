@@ -7,7 +7,7 @@ class PlanetsController < ApplicationController
   end
 
 
-GET / planets / 1
+# GET / planets / 1
   def show
   end
 
