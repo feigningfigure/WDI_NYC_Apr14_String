@@ -12,7 +12,7 @@ font-style: bold;
 
 }
 h1{
-  font-size: 70px;
+  font-size: 40px;
 }
 
 img {
@@ -22,3 +22,65 @@ img {
   border-radius: 15px;
   border-width: 6px;
 }
+
+.welcome_box {
+  margin: auto;
+  height: auto;
+  width: 500px;
+  background-color: rgba(128, 128, 128, 0.7);
+  border-color: #ffff66;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 6px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.planet_box{
+  margin: auto;
+  height: auto;
+  width: 600px;
+  background-color: rgba(128, 128, 128, 0.7);
+  border-color: #ffff66;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 6px;
+  margin-top: 30px;
+  padding-bottom: 290px;
+  padding-left: 30px;
+}
+
+.planet_image{
+  float: left;
+}
+
+.planet_facts{
+  float: left;
+ text-align: left;
+ margin-left: 20px;
+}
+
+.new_planet_form{
+ margin: auto;
+  height: auto;
+  width: 500px;
+  background-color: rgba(128, 128, 128, 0.7);
+  border-color: #ffff66;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 6px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+/*.welcome_box {
+  margin: auto;
+  height: 100px;
+  width: 500px;
+  background-color: gray;
+  opacity: 0.7;
+  border-color: #ffff66;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 6px;
+  margin-top: 30px;
+}*/
