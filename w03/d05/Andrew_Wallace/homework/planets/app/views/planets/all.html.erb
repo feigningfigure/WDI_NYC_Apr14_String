@@ -1,0 +1,8 @@
+<% @planets.each do |planet| %>
+
+<p>
+  <%= planet.name %> has a diameter of <%= planet.diameter %>, a mass of <%= planet.convert_mass %> Earths and <%= planet.life ? "has life" : "is unable to sustain life." %>
+</p>
+<br>
+
+<% end %>
