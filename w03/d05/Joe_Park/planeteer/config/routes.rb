@@ -8,4 +8,10 @@ Rails.application.routes.draw do
 
   get "/planets/:id" => "planets#show"
 
+  get "/moons/new" => "moons#new"
+
+  post "/moons" => "moons#create"
+
+
+
 end

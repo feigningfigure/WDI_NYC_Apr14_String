@@ -10,4 +10,17 @@
 	</ul>
 
 
+
+</div>
+
+<div class="moons">
+	<% @moons = Moon.all %>
+
+		<% @moons.each do |moon| %>
+			<%= moon.name %>
+			<img src="<%= moon.image_url %>" />
+			<%= moon.planet_id %>
+		<% end %>
+
+
 </div>
