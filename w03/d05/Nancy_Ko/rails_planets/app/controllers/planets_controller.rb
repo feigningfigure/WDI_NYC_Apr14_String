@@ -2,7 +2,8 @@ class PlanetsController < ApplicationController
 
 	# GET / planets 
   def index
-  	@planets = Planet.all
+  	# @planets = Planet.all
+   #  render :index
   end
 
 
