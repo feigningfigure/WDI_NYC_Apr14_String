@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140510165227) do
+ActiveRecord::Schema.define(version: 20140511154339) do
+
+  create_table "moons", force: true do |t|
+    t.integer  "planet_id"
+    t.string   "name"
+    t.string   "image_url"
+    t.integer  "diameter"
+    t.decimal  "mass"
+    t.boolean  "life"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "planets", force: true do |t|
     t.string   "name"
