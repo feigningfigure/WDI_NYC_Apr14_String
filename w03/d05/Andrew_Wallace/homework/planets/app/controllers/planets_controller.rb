@@ -1,5 +1,7 @@
 class PlanetsController < ApplicationController
 
+layout "application"
+
   def index
 
   end

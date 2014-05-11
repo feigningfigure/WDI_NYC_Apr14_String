@@ -1,5 +1,5 @@
-<p><%= link_to "Home", "/" %> |  <%= link_to "Back", "/planets/" %></p>
-<%= form_for @planet, url: "/planets" do |f| %>
+<p><%= link_to "Home", "/" %> |  <%= link_to "Back", "/moons/" %></p>
+<%= form_for @moon, url: "/moons" do |f| %>
 
 <%= f.text_field :name, :placeholder => "Name", class: 'input' %><br>
 <%= f.text_field :image_url, :placeholder => "Image URL", class: 'input' %><br>
@@ -8,4 +8,3 @@
 <p>Is there life?<%= f.select :life, {"YES" => true, "NO" => false}, {include_blank: true} , class: 'drop_down'%></p>
 <%= f.submit "Create", class: 'button'%>
 <% end %>
-

@@ -9,17 +9,17 @@
 Planet.destroy_all
 Moon.destroy_all
 
-planets = Planet.create([
+Planet.create([
 
 { name: "Mercury",
-image_url: "http://upload.wikimedia.org/wikipedia/commons/3/30/Mercury_in_color_-_Prockter07_centered.jpg",
+image_url: "Mercury.png",
 diameter: 4880,
 mass: 55,
 life: false
 },
 
 { name: "Venus",
-image_url: "http://upload.wikimedia.org/wikipedia/commons/8/85/Venus_globe.jpg",
+image_url: "Venus.png",
 diameter: 12092,
 mass: 815,
 life: false
@@ -27,7 +27,7 @@ life: false
 
 
 {name: "Earth",
-image_url: "http://upload.wikimedia.org/wikipedia/commons/6/6f/Earth_Eastern_Hemisphere.jpg",
+image_url: "Earth.png",
 diameter: 12742,
 mass: 1000,
 life: true
@@ -35,7 +35,7 @@ life: true
 
 
 {name: "Mars",
-image_url: "http://upload.wikimedia.org/wikipedia/commons/e/e4/Water_ice_clouds_hanging_above_Tharsis_PIA02653_black_background.jpg",
+image_url: "Mars.png",
 diameter: 6787,
 mass: 107,
 life: false
@@ -43,7 +43,7 @@ life: false
 
 
 {name: "Jupiter",
-image_url: "http://upload.wikimedia.org/wikipedia/commons/5/5a/Jupiter_by_Cassini-Huygens.jpg",
+image_url: "Jupiter.png",
 diameter: 142984,
 mass: 317800,
 life: false
@@ -51,7 +51,7 @@ life: false
 
 
 {name: "Saturn",
-image_url: "http://upload.wikimedia.org/wikipedia/commons/2/25/Saturn_PIA06077.jpg",
+image_url: "Saturn.png",
 diameter: 25000,
 mass: 95152,
 life: false
@@ -59,7 +59,7 @@ life: false
 
 
 {name: "Uranus",
-image_url: "http://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg",
+image_url: "Uranus.png",
 diameter: 51118,
 mass: 14536,
 life: false
@@ -67,9 +67,16 @@ life: false
 
 
 {name: "Neptune",
-image_url: "http://upload.wikimedia.org/wikipedia/commons/0/06/Neptune.jpg",
+image_url: "Neptune.png",
 diameter: 49528,
 mass: 14536,
 life: false
 }
+])
+
+
+Moon.create([
+  {
+
+  }
 ])

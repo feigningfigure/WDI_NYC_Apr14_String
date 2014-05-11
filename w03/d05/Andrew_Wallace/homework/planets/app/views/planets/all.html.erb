@@ -1,8 +1,19 @@
-<% @planets.each do |planet| %>
+<div id="wrapper">
+  <p><%= link_to "Home", "/" %> |  <%= link_to "Back", "/planets/" %></p>
+    <% @planets.each do |planet| %>
+    <div id="planet_box">
+      <% link_to "/planets/#{planet.id}" %>
+      <div>
+    <%= link_to image_tag(planet.image_url, class: "box_img"), "/planets/#{planet.id}" %>
 
-<p>
-  <%= planet.name %> has a diameter of <%= planet.diameter %>, a mass of <%= planet.convert_mass %> Earths and <%= planet.life ? "has life" : "is unable to sustain life." %>
-</p>
-<br>
+      </div>
+      <div>
+    <p><%= link_to planet.name, "/planets/#{planet.id}" %></p>
+    </div>
+
+</div>
 
 <% end %>
+
+
+
