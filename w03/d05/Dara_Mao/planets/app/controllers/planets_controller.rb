@@ -1,4 +1,5 @@
 class PlanetsController < ApplicationController
+  # has_many :moon
 
   def index
     @planets = Planet.all

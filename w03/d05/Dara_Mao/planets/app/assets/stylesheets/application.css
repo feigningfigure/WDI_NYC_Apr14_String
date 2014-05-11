@@ -1,3 +1,11 @@
+p{
+  background-color: pink;
+  font-size: 30px;
+  font-color: white;
+  text-align: center
+}
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

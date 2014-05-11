@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+# PLANETS
   #Display a list of all planets
   get '/planets' => "planets#index"
 
@@ -11,6 +13,15 @@ Rails.application.routes.draw do
   #Display a specific planet
   get 'planets/:id' => "planets#show"
 
+# MOOONS
+  get '/mooons' => "mooons#index"
+  #Return a form for creating a new moon
+  get '/mooons/new' => "mooons#new"
+
+  #Create a new moon
+  post '/mooons' => "mooons#create"
+
+ get 'mooons/:id' => "mooons#show"
 
 #=====================================================================================
 
