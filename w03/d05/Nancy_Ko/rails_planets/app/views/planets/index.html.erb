@@ -1,6 +1,32 @@
 <h1>Rails Planets</h1>
 <p>What planet would you like to see?</p>
 
+<table>
+  <thead>
+    <tr>
+      <th>Planet</th>
+      <th>image_url</th>
+      <th>diameter</th>
+      <th>mass</th>
+      <th>life?</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
 
+<tbody>
+	<% @planets.each do |planet| %>
+	<tr>
+	<td><%= planet.name %></td>
+	<td><%= planet.image_url %></td>
+	<td><%= planet.diameter %></td>
+	<td><%= planet.mass %></td>
+	<td><%= planet.life %></td>
+	<td><%= link_to 'Show' planet  %></td>
+        <td><%= link_to 'Edit', planet  %></td>
+        <td><%= link_to 'Destroy', planet  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
 
-
+<%= link_to 'Back', planets_path %> 
