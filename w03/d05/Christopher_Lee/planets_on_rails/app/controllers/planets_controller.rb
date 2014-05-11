@@ -3,6 +3,7 @@ class PlanetsController < ApplicationController
   def index
     @planet = Planet.new
     @planets = Planet.all
+    @moons = Moon.where(planet_id: 1)
   end
 
   def new
