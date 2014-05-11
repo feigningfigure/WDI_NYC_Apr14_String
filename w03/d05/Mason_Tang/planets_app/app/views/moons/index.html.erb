@@ -1,0 +1,12 @@
+<div class="moons">
+  <% @moons.each do |moon| %>
+    <p class="planet" style="">
+
+      <%= moon.name %>
+
+      <img src="<%= moon.image_url %>">
+
+
+    </p>
+  <% end %>
+</div>

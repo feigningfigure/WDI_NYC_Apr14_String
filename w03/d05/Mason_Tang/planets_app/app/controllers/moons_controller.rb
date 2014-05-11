@@ -1,46 +1,33 @@
-class PlanetsController < ApplicationController
+class MoonsController < ApplicationController
 
   def index
-
-    @planets = Planet.all
-
+    # @moons = Moon.all
+    @moon = Planet.find(params[:order_id])
   end
 
 
   def new
-    @planet = Planet.new
+    @moon = Moon.new
   end
 
-
-
-
   def create
-    planet_attributes = params[:planet]
 
+    moon_attributes = params[:moon]
 
-    Planet.create({
-        name: planet_attributes[:name],
-        image_url: planet_attributes[:image_url],
-
-        diameter: planet_attributes[:diameter],
-        mass: planet_attributes[:mass],
-
-        life: planet_attributes[:life],
+    Moon.create({
+        name: moon_attributes[:name],
+        image_url: moon_attributes[:image_url],
+        planet_id: moon_attributes[:planet_id]
       })
-
 
     redirect_to "/planets"
   end
 
-
-
-
   def show
-  planet_id = params[:id]
-
-    # query database to find only the record that i need
-    @planet = Planet.find(planet_id)
-
+    # @moon = Moon.find_by_planet_id(params[:planet_id])
+    # planet_id = params[:id]
+     @moon = Moon.where(planet_id: params[:planet_id])
   end
+
 
 end

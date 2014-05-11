@@ -1,5 +1,5 @@
 class PlanetsController < ApplicationController
-
+  has_many :moons
 	def index
 
 		@planets = Planet.all
@@ -29,10 +29,8 @@ class PlanetsController < ApplicationController
       })
 
 
-    redirect_to "/planets"
+    redirect_to planets_path
 	end
-
-
 
 
 	def show
@@ -43,4 +41,7 @@ class PlanetsController < ApplicationController
 
 	end
 
+
+
 end
+
