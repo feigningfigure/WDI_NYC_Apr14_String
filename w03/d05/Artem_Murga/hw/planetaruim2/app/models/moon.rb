@@ -1,5 +1,2 @@
-class Planet < ActiveRecord::Base
-
-	belongs_to :planet
-
+class Moon < ActiveRecord::Base
 end

@@ -1,18 +1,22 @@
-<h1>Welcome to planetarium 2</h1>
-
-<a href="/">TO HOME</a>
+<a href="/">HOME</a>
 <hr>
 
-<% Planet.all.each do |p| %>
 
-	Name : <%= p.attributes["name"]%>
+<% Planet.all.order("id").each do |p| %>
+
+	<img class=imglist src="<%= p.attributes["image_url"]%>">
+	<p>Name : <%= p.attributes["name"]%></p>
 	<br>
-	Diameter : <%= p.attributes["diameter"]%>
+	<p>Diameter : <%= p.attributes["diameter"] %>% of Earth </p>
 	<br>
-	Mass : <%= p.attributes["mass"]%>
+	<p>Mass : <%= p.attributes["mass"]%>% of Earth </p>
 	<br>
-	Life : <%= p.attributes["life"] == true ? "Colonized" : "Not colonized yet"%>
+	<p>Life : <%= p.attributes["life"] == true ? "Colonized" : "Not colonized yet"%></p>
+	<br>
+	<p># in Solar System : <%= p.attributes["id"]%></p>
+
 	<hr>
+
 
 
 <% end %>

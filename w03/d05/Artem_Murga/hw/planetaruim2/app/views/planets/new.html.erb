@@ -1,11 +1,16 @@
+<a href="/">HOME</a>
+<hr>
 
 
 
 <%= form_for @planet, url: "/planets", html: {class: "nifty_form"} do |f| %>
-  Name <%= f.text_field    :name, placeholder: 'Name' %>
-  Diameter <%= f.text_field    :diameter %>
-  Mass <%= f.text_field    :mass %>
-  Life <%= f.text_field    :life %>
-  Image URL <%= f.text_field    :image_url %>
-  <%= f.submit "Create" %>
+  <p><%= f.text_field    :name, placeholder: 'Name' %></p>
+  <p class="inputs"><%= f.text_field    :diameter, placeholder: 'Diameter (% of Earth)'  %></p>
+  <p class="inputs"><%= f.text_field    :mass, placeholder: 'Mass (% of Earth)'  %></p>
+  <p class="inputs"><%= f.text_field    :life, placeholder: 'Colonized? (true/false)'  %></p>
+  <p class="inputs"><%= f.text_field    :image_url, placeholder: 'Image of url'  %></p>
+  
+  <div class="actions"><%= f.submit "Create", :class => "button" %></div>
+
+
 <% end %>

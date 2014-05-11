@@ -22,7 +22,9 @@ Rails.application.routes.draw do
 
   get '/planets/:id' => "planets#show"
 
-  get '/moons' => "moon#all"
+  get '/moons' => "moons#index"
+
+  get '/moons/new' => "moons#new"
 
 ### experiments 
 
