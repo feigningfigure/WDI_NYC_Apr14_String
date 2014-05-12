@@ -1,0 +1,12 @@
+<%= form_for @crayon, url: "/planets" do |f| %>
+
+  <p>
+    Name: <%= f.text_field :name %>
+  </p>
+  <p>
+  Intensity: <%= f.text_field :intensity %>
+  </p>
+  <%= f.submit "Create" %>
+
+
+<% end %>
