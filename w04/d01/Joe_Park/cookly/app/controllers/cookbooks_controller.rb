@@ -5,5 +5,13 @@ class CookbooksController < ApplicationController
 		# render json: @cookbooks
 	end
 
+	
+	def show
+		# define @cookbook
+		@cookbook = Cookbook.find(params[:id])
+
+
+	end
+
 
 end

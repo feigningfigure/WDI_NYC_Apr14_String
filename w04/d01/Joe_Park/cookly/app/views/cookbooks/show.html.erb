@@ -1,0 +1,11 @@
+<h2 class="cookbook_title"><%= @cookbook.title %></h2>
+
+<p class="cookbook_description">
+	<%= @cookbook.description %>
+</p>
+
+<ul class="recipes">
+	<% @cookbook.recipes do |recipe| %>
+		<li class="recipe"><% recipe.title %></li>
+	<% end %>
+</ul>
