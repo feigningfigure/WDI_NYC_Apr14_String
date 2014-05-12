@@ -1,0 +1,21 @@
+
+<% id = params[:id].to_i %>
+<% moon = Moons.find(id) %>
+
+<% if Planet.find_by_id(moon.planet_id).nil? %>
+<% planet_name = "none" %>
+<% else planet = Planet.find(moon.planet_id)%>
+<% planet_name = planet.name %>
+<% end %>
+
+<h3><%= moon.name %></h3>
+  <ul>
+  	<li>Planet orbiting:  <%=planet.name%></li>
+  	<li>Diameter:  <%=moon.diameter%></li>
+  	<li>Mass:  <%=moon.mass%></li>
+  	<li>Life on moon:  <%=moon.life%></li>
+  <hr>
+
+  <nav class="header">
+    <a href="update/<%=moon.id%>">update<a> | <a href="delete/<%=moon.id%>">delete<a> 
+  </nav>

@@ -1,0 +1,9 @@
+<div class="mooons">
+  <% @mooons.each do |mooon| %>
+    <p>
+      <%= mooon.name %>:
+      <%= link_to "show details", "/mooons/#{mooon.id}" %>
+
+    </p>
+  <% end %>
+</div>

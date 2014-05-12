@@ -1,0 +1,10 @@
+<h1>Welcome to the Planet App</h1>
+
+<ul><% @planets.each do |planet| %>
+	<div><li><%= planet.name %></li></div>
+	<div><li><%= planet.diameter %></li></div>
+	<div><li><%= planet.mass %></li></div>
+	<div><li>planet-status: <%= if planet.life then "good and well" else "not a planet" end %></li></div>
+	<div><li><img class="pic" src="<%= planet.image_url %>"</li></div>
+	<% end %>
+</ul>
