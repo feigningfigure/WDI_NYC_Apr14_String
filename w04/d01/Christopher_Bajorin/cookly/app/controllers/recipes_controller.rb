@@ -1,16 +1,15 @@
 class RecipesController < ApplicationController
 
   def create
-    stuff = Recipe.create(recipes_attributes)
+    Recipe.create(recipes_attributes)
 
-    render json: {
-      strong_params: recipes_attributes,
-     cookbook_id: params[:id]
+    # render json: {
+    #   strong_params: recipes_attributes
 
-    }
+    # }
 
 
-    # redirect_to cookbooks_path
+    redirect_to cookbooks_path
   end
 
   private

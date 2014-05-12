@@ -6,7 +6,7 @@
 <%= form_for @recipe, url: "/recipes", method: "POST" do |f| %>
   <%= f.text_field :title, { placeholder: "title" } %>
   <%= f.text_field :content, {placeholder: "content"} %>
-
+  <%= f.hidden_field :cookbook_id, value: @cookbook.id %>
   <%= f.submit %>
 <% end %>
 <ul class="recipes">
