@@ -5,7 +5,7 @@ Recipe.delete_all
 
 100.times do 
 	
-	Cookbook.create({
+	cookbook = Cookbook.create({
 		title: Faker::Lorem.sentence(3),
 		description: Faker::Lorem.paragraphs(2).join("")
 	})
@@ -15,7 +15,7 @@ Recipe.delete_all
 
 	10.times do 
 	# add those 10 recipes to the array of recipes
-	Recipe.create({
+	recipes << Recipe.create({
 		title: Faker::Lorem.sentence(3),
 		content: Faker::Lorem.paragraphs(2).join("")
 	})

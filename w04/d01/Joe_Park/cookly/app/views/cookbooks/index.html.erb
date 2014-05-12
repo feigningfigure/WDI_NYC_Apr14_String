@@ -1,3 +1,7 @@
+<!-- TODO: make this a partial -->
+<%= render partial: "cookbookform", locals: { cookbook_local: @cookbook } %>
+
+
 <h2>Cookbooks</h2>
 <ul class="cookbooks">
 	<% @cookbooks.each do |cookbook| %>
