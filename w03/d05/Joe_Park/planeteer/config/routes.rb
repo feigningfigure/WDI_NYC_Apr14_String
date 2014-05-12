@@ -12,5 +12,7 @@ Rails.application.routes.draw do
 
   post "/moons" => "moons#create"
 
+  # get "/planets/:id/moons/:planet_id" => "moons#show"
+
 
 end
