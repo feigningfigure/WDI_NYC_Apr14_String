@@ -1,0 +1,17 @@
+<a href="/">HOME</a>
+<hr>
+
+<% Moon.all.each do |p| %>
+
+	<p>Name : <%= p.attributes["name"]%></p>
+
+	<br>
+	<% @id = p.attributes["planet_id"] - 1 %>
+	<p>Primary planet #: <%= p.attributes["planet_id"]%></p>
+	<hr>
+
+	<br>
+	
+<% end %>
+
+</ul>
