@@ -1,0 +1,11 @@
+render text: "hello"
+<% @planets.each do |planet| %>
+
+
+    <p>
+      <%# fancy ternary operator:  predicate ? true result : false result %>
+      <%= planet.name %>
+      <%= link_to "show", "/planets/#{planet.id}" %>
+
+    </p>
+<% end %>
