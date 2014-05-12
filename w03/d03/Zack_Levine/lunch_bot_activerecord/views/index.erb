@@ -1,0 +1,13 @@
+<ul class="posts">
+<%# this gets @lunches = Lunch.all via AcriveRecord%>
+  <% @lunches.each do |lunch| %>
+    <li>
+      <div>
+        <p><%= lunch.lunch_name %></p>
+        <p>
+          by <%= lunch.rating %> on <%= lunch.lunch_name %>
+        </p>
+      </div>
+    </li>
+  <% end %>
+</ul>
