@@ -1,4 +1,7 @@
 <h2 class="cookbook_title"><%= @cookbook.title %></h2>
+<p>
+  <%= link_to "edit", "/cookbooks/#{@cookbook.id}/edit" %>
+</p>
 <p class="cookbook_description">
   <%= @cookbook.description %>
 </p>
