@@ -1,0 +1,25 @@
+// Place all the styles related to the Planets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: black;
+}
+div {
+  width: 400px;
+  background-color: red;
+  margin: 0 auto;
+  padding: 50px;
+}
+h1 {
+  color: black;
+}
+ul li {
+  width: 200px;
+  color: blue;
+  font-family: helvetica;
+  padding: 10px;
+}
+.fields {
+  background-color: none;
+  color: black
+}
