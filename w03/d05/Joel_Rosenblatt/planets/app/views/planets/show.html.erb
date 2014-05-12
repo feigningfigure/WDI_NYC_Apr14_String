@@ -1,0 +1,10 @@
+<img class="single" src=<%= @planet.image_url %>>
+<h3><%= @planet.name %></h3>
+<p>Diameter: <%= @planet.diameter %> km</p>
+<p>Mass: <%= @planet.mass %> Earth Mass</p>
+<% case @planet.life %>
+<% when true %>
+<p>Inhabited: Yes</p>
+<% when false %>
+<p>Inhabited: No</p>
+<% end %>
