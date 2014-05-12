@@ -1,0 +1,22 @@
+
+<nav class="link">
+    <%= link_to "Log a newly discovered planet", planets_new_path %>
+  </nav>
+
+
+<% @planets.each do |planet| %>
+
+<div class= "planet_list_show">
+    <p>
+      <div class= "planet_thumb">
+
+
+<%= link_to "/planets/#{planet.id}" do %> <%= planet.name %>
+    <%= image_tag "#{planet.image_url}", width: 75 %>
+<% end %>
+
+</div>
+    </p>
+
+  </div>
+<% end %>
