@@ -1,0 +1,33 @@
+<div class="section group planet_info">
+  <div class="col span_2_of_12 title">
+  <h1><%= @planet.name %></h1>
+  <hr>
+  <p>diameter: <%= @planet.diameter %>
+  <p> mass: <%= @planet.mass %></p>
+  <p>life: <%= @planet.life %></p>
+  </ul>
+  </div>
+  <div class="col span_6_of_12">
+      <img src="<%= @planet.image_url %>">
+  </div>
+   <div class="col span_4_of_12 title">
+  <h2>Moons</h2>
+  <hr>
+  </div>
+
+
+  <% moons = Moon.where(planet_id: @planet.id) %>
+    <% moons.each do |moon| %>
+     <div class="col span_1_of_12 title">
+        <img src=<%= moon.image_url %>>
+      </div>
+      <div class="col span_2_of_12 moon_title">
+        <h4><%= moon.name %></h4>
+        <p>diameter: <%= moon.diameter %></p>
+        <p>life: <%= moon.life %></p>
+      </div>
+      <div class="col span_1_of_12">
+        <%= link_to 'Edit', "/planets/edit_moon/#{moon.id}/#{@planet.id}", class: "edit" %>
+        <%= link_to 'Delete', "/planets/destroy_moon/#{moon.id}", class: "edit" %>
+      </div>
+  <% end %>

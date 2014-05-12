@@ -5,16 +5,25 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700' %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=PT+Serif' %>
+  <%= stylesheet_link_tag 'application','http://fonts.googleapis.com/css?family=PT+Sans' %>
 </head>
 <body>
-<% flash.each do |name, message| %>
-  <div id="flash_<%= name %>">
-    <%= message %>
-  </div>
-<% end %>
 
+<nav>
+  <div class="nav-brand"><a href='/planets'><h4>SOLARSYSTEM.IO</h4></a></div>
+</nav>
 
+<div class="container">
+  <% flash.each do |name, message| %>
+    <div id="flash_<%= name %>">
+      <%= message %>
+    </div>
+  <% end %>
 <%= yield %>
+</div>
 
 </body>
 </html>
