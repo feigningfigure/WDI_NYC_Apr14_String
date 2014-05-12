@@ -2,13 +2,16 @@ class RecipesController < ApplicationController
 
   def create
 
-    Recipe.create(recipes_attributes)
+    Recipe.create(recipe_attributes)
 
-    redirect_to root_path
+    # render json: Recipe.create(recipe_attributes)
+    redirect_to "/cookbooks/#{recipe_attributes[:cookbook_id]}"
   end
 
   private
 
-  # ??????
+  def recipe_attributes
+    params.require(:recipe).permit(:title, :content, :cookbook_id)
+  end
 
 end
