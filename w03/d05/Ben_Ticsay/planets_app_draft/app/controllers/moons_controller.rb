@@ -1,6 +1,5 @@
 class MoonsController < ApplicationController
 
-
   def index
     # @moons = Moon.all
     @planet = Planet.find(params[:planet_id])
@@ -45,14 +44,6 @@ class MoonsController < ApplicationController
 
 
   end
-
-
-
-
-
-
-
-
 
 
 end

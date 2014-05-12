@@ -1,12 +1,10 @@
 class PlanetsController < ApplicationController
 
 	def index
-		
+
 		@planets = Planet.all
 
 	end
-
-
 
 
 	def new
@@ -16,24 +14,23 @@ class PlanetsController < ApplicationController
 
 
 
-	def create_planet
+	def create
 		planet_attributes = params[:planet]
 
-		 Planet.create({
+
+    Planet.create({
         name: planet_attributes[:name],
         image_url: planet_attributes[:image_url],
-  
+
         diameter: planet_attributes[:diameter],
         mass: planet_attributes[:mass],
-  
+
         life: planet_attributes[:life],
       })
-   
 
-    redirect_to "/planets"
+
+    redirect_to planets_path
 	end
-
-
 
 
 	def show
@@ -42,35 +39,9 @@ class PlanetsController < ApplicationController
     # query database to find only the record that i need
     @planet = Planet.find(planet_id)
 
-
-
 	end
-
-
-
-	def newmoon
-
-		@moon = Moon.new
-		
-	end
-
-
-	def create_moon
-
-	moon_attributes = params[:moon]
-
-		 Moon.create({
-        name: moon_attributes[:name],
-        image_url: moon_attributes[:image_url],
-  
-        planet_id: moon_attributes[:planet_id],
-      })
-   
-
-    redirect_to "/planets"
-	end
-
 
 
 
 end
+
