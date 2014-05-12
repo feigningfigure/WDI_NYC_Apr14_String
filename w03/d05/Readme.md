@@ -1,4 +1,4 @@
-1###Week03-Day05
+###Week03-Day05
 
 #WORK IN YOUR OWN FOLDER ONLY!
 #Your pull-request ti	tle must start with `hw_w03_submission`
@@ -67,10 +67,6 @@ Create a Rails app with the below CRUD functionality for a single model:
 
 
 ###***Remember*** - Make sure your database works in rails console first.  Only then should you worry about routes, controller actions, and views ###
-
-
-
-
 
 
 ---
