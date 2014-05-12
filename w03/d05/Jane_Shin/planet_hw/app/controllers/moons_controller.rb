@@ -11,6 +11,8 @@ def create
 		name: moon_attributes[:name],
 		planet_id: moon_attributes[:planet_id]
 		})
+
+	redirect_to '/planets/#{moon_attributes[:planet_id]}/moons'
 end
 
 def show
