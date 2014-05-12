@@ -1,0 +1,18 @@
+<h2 class="country_title"><%= @country.title %></h2>
+<p class="country_description">
+  <%= @country.description %>
+</p>
+<h3>Oilfields</h3>
+<%= form_for @oilfield, url: "/recipes" do |f| %>
+  <%= f.text_field :title, { placeholder: "title" } %>
+  <%= f.text_field :content, {placeholder: "content"} %>
+  <%= f.submit %>
+<% end %>
+<ul class="oilfields">
+  <% @country.oilfields.order(id: :desc).each do |oilfield| %>
+    <li class="oilfield">
+      <h4><%= oilfield.title %></h4>
+      <p><%= oilfield.content %></p>
+    </li>
+  <% end %>
+</ul>
