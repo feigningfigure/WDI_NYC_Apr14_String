@@ -13,10 +13,14 @@
       <li><%= moon.image_url %></li>
       <li><%= moon.diameter %></li>
       <li><%= moon.life %></li>
+      <%= link_to 'Delete', "/planets/destroy_moon/#{moon.id}" %>
     <% end %>
+    <br>
+    <br>
+  <%= link_to 'Create New Moon', "/planets/new_moon/#{planet.id}" %>
+  <h3>Planet Options</h3>
   <%= link_to 'Delete', planet, :method => 'delete' %>
   <%= link_to 'Edit', edit_planet_path(planet) %>
-  <%= link_to 'Create New Moon', "/planets/new_moon/#{planet.id}" %>
   <% end %>
 </ul>
 <%= link_to 'Create New Planet',{controller: "planets", action: "new"} %>

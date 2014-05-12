@@ -55,6 +55,12 @@ class PlanetsController < ApplicationController
     redirect_to :back, :notice => 'Planet has been destroyed.'
   end
 
+  def destroy_moon
+    @moon = Moon.find(params[:id])
+    @moon.destroy
+    redirect_to :back, :notice => 'Moon has been destroyed.'
+  end
+
   private
 
    def planet_params
