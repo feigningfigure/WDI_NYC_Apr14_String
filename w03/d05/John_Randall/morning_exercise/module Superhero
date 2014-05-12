@@ -1,0 +1,8 @@
+module Superhero
+  def fly
+  end
+
+  def save_people
+  end
+
+end

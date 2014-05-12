@@ -1,0 +1,86 @@
+body {
+text-align: center;
+background-image: url(http://1.bp.blogspot.com/_ffZts3mhvEM/TBpjMj2KcdI/AAAAAAAAAro/LnQryhtYAVQ/s400/mib_retro_wp.jpg);
+color: #ffff66;
+font-family: "PT Sans", Arial, Helvetica, sans-serif;
+font-size: 18px;
+}
+
+a{
+font-style: bold;
+}
+
+}
+h1{
+  font-size: 40px;
+}
+
+img {
+  max-width: 240px;
+  max-height: 240px;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 6px;
+}
+
+.welcome_box {
+  margin: auto;
+  height: auto;
+  width: 500px;
+  background-color: rgba(128, 128, 128, 0.7);
+  border-color: #ffff66;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 6px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.planet_box{
+  margin: auto;
+  height: auto;
+  width: 600px;
+  background-color: rgba(128, 128, 128, 0.7);
+  border-color: #ffff66;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 6px;
+  margin-top: 30px;
+  padding-bottom: 290px;
+  padding-left: 30px;
+}
+
+.planet_image{
+  float: left;
+}
+
+.planet_facts{
+  float: left;
+ text-align: left;
+ margin-left: 20px;
+}
+
+.new_planet_form{
+ margin: auto;
+  height: auto;
+  width: 500px;
+  background-color: rgba(128, 128, 128, 0.7);
+  border-color: #ffff66;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 6px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+/*.welcome_box {
+  margin: auto;
+  height: 100px;
+  width: 500px;
+  background-color: gray;
+  opacity: 0.7;
+  border-color: #ffff66;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 6px;
+  margin-top: 30px;
+}*/

@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+  background-image: url("/assets/background.jpg");
+  text-align: center;
+  color: white;
+  font-family: 'Rock Salt', cursive;
+ }
+
+ nav {
+  padding: 10px;
+ }
+
+ a {
+  text-decoration: none;
+  color: white;
+ }
+
+ img {
+  height: 100px;
+  width: 100px;
+  border-radius: 1000px;
+  border: solid white 3px;
+ }
+
+ img:hover {
+  border: solid rgba(255, 255, 255, .7);;
+ }
+
+.planets {
+  display: inline;
+}
+
+.window{
+  background: rgba(255, 255, 255, .1);
+  border-radius: 40px;
+  overflow: scroll;
+  width: 400px;
+  height: 400px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.single {
+  margin-top: 35px;
+}
+.single:hover {
+  zoom: 225%;
+  border: solid white;
+}
+
+input {
+  padding: 5px;
+}
+
+.create {
+  background-color: white;
+    border-radius:0px 0px 20px 20px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    color: transparent;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 24px;
+    text-decoration:none;
+    text-shadow:0px 0px 0px #70706f;
+  }
+.create:hover {
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 500px) {
+  .window {
+  width: 300px;
+}
