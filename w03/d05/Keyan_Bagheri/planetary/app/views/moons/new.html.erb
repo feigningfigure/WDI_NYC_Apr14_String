@@ -1,0 +1,18 @@
+
+<form action="/moons" method="post">
+<p><input type="text" name="name" placeholder="Name of Moon"></p>
+<% if @id > 0 %>
+<input type= "hidden" name="planet_id" value=<%=@id%>>
+<% else %>
+<p>
+<input type="text" name="planet_id" placeholder="ID of nearby planet"></p>
+<%end%>
+<p>
+<input type="text" name="diameter" placeholder="Diameter of Moon"></p>
+<p>
+<input type="text" name="mass" placeholder="Mass of Moon"></p>
+<p>
+<input type="text" name="life" placeholder="Moon has life?"></p>
+<p>
+<input type="submit" name="submit" value="submit">
+</form>

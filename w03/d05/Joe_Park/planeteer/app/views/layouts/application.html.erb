@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Planeteer</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Roboto+Condensed' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="pg_container">
+	<div class="pg_top">
+		<h1>PLANETEER</h1>
+		<nav>
+			<%= link_to "Home", planets_path %><%= link_to "New Planet", planets_new_path %><%= link_to "New Moon", moons_new_path %>
+		</nav>
+	</div>
+
+	<div class="content">
+	
+		<%= yield %>
+	
+	</div>
+</div>
+
+</body>
+</html>
