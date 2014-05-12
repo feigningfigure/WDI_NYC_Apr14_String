@@ -3,9 +3,17 @@ Rails.application.routes.draw do
   # root route
   root to: "cookbooks#index"
 
+  # display all cookbooks
   get "/cookbooks" => "cookbooks#index"
 
-  get "/cookbooks/:id" => "cookbooks#show"
+  # display one cookbook
+  get "/cookbooks/:id" => "cookbooks#show", as: :cookbook
+
+  # display the EDIT form for a cookbook
+  get "/cookbooks/:id/edit" => "cookbooks#edit", as: :edit_cookbook
+
+  # process an UPDATE or edit to a cookbook record
+  patch "/cookbooks/:id" => "cookbooks#update"
 
   # renders a NEW cookbook form
   # get "/cookbooks/new" => "cookbooks#new"
@@ -13,8 +21,19 @@ Rails.application.routes.draw do
   # this processes the form input
   post "/cookbooks" => "cookbooks#create"
 
-  get "/secret" => "cookbooks#secret_code"
+  # for demo purposes
+  # get "/secret" => "cookbooks#secret_code"
 
+  # post or ADD one or more recipes
   post "/recipes" => "recipes#create"
+
+  # get one RECIPE
+  get "/recipes/:id" => "recipes#index", as: :recipe
+
+  # get EDIT form for recipes
+  get "/recipes/:id/edit" => "recipes#edit", as: :edit_recipe
+
+  # process form data for UPDATE or edit actions
+  patch "/recipes/:id" => "recipes#update"
 
 end

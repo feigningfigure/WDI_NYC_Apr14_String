@@ -14,6 +14,29 @@
  *= require_self
  */
 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+
+body{
+  font-family: 'Vollkorn', serif;
+  font-size: 15px;
+}
+
+.film_copy p:first-of-type{
+  margin-top: 5px;
+}
+
+.film_copy p:nth-child(3){
+  padding: 5px 0 3px;
+  border-top: 1px dotted black;
+  border-bottom:  1px dotted black;
+}
+
 input {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
@@ -47,11 +70,23 @@ input {
   border-bottom: 2px solid black;
 }
 
-h1{
-  font-family: 'jakobbold';
-  font-size: 50px;
+.title h1{
+  margin-bottom: 10px;
 }
 
+.title h3{
+  margin-top: 0;
+  display: inline-block;
+  padding-right: 30px;
+}
+
+h1, h2, h3{
+  font-family: 'jakobbold';
+}
+
+h1{
+  font-size: 50px;
+}
 
 img{
   width: 100%;
