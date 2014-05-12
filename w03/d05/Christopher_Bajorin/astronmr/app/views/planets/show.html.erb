@@ -1,6 +1,7 @@
-<h3>Planets</3>
-
-    <h4><%= @planet.name%></h4>
+<h1>Planets</h1>
+<div class="planet_list">
+  <div class="each_planet">
+    <h3><%= @planet.name%> <a href="/planets/<%=@planet.id%>/edit">Edit</a> / <a href="/planets/<%=@planet.id%>/delete">Delete</a></h3>
     <img src="<%= @planet.image_url %>">
     <p>Diameter: <%= @planet.diameter%></p>
     <p>Mass:     <%= @planet.mass%></p>

@@ -1,4 +1,28 @@
-/*
+body {
+  background: url("http://www.snazzyspace.com/defaultimages/000000_shooting-star.gif");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #cdccca;
+  font-size: 1.5rem;
+}
+nav {
+  margin: 0 auto;
+}
+
+.planet_list {
+  margin: 0 auto;
+  width: 50rem;
+}
+.each_planet {
+  color: #cdccca;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 200px;
+}
+.each_planet img {
+  float: right;
+}
+
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *

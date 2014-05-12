@@ -18,6 +18,12 @@ Rails.application.routes.draw do
   post '/planets' => 'planets#create'
 
   #DISPLAY a specific planet
-  get '/planets/:id' => 'planets#show'
+  get '/planets/:id/show' => 'planets#show'
+
+  get '/planets/:id/edit' => 'planets#edit'
+
+  post '/planets' => 'planets#update'
+
+  get '/planets/:id/delete' => 'planets#delete'
 
 end

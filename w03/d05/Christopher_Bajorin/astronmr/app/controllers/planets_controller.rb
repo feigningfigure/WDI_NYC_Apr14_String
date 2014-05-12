@@ -10,23 +10,34 @@ class PlanetsController < ApplicationController
   end
 
   def create
-
+    new_planet = params[:planet]
     Planet.create({
-      name: params[:name],
-      image_url: params[:image_url],
-      diameter: params[:diameter],
-      mass: params[:mass],
-      life: params[:life]
+      name: new_planet[:name],
+      image_url: new_planet[:image_url],
+      diameter: new_planet[:diameter],
+      mass: new_planet[:mass],
+      life: new_planet[:life]
       })
 
-    redirect '/planets'
+    redirect_to '/planets'
   end
 
 
   def show
     @planet = Planet.find(params[:id])
+  end
 
-    # render :show
+  def edit
+    @update_planet = Planet.find(params[:id])
+  end
+
+  def update
+    binding.pry
+  end
+
+  def delete
+    Planet.delete(params[:id])
+    redirect_to '/planets'
   end
 
 

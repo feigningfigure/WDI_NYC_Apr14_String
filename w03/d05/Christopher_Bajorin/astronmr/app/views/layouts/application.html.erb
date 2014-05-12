@@ -7,8 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <nav>
+    <%= link_to "all", planets_path %> |
+    <%= link_to "new", planets_new_path %>
+  </nav>
 <%= yield %>
-
 </body>
 </html>

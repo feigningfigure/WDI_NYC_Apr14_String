@@ -1,11 +1,11 @@
-<h3>Planets</3>
+<h3>Planets</h3>
 
   <div class="planet_list">
   <% @planets.each do |planet| %>
     <div class ="each_planet">
-    <h4><%= planet.name%></h4>
+    <h4><a href="planets/<%=planet.id%>/show"><%= planet.name%></a></h4>
     <img src="<%= planet.image_url %>">
-    <p>Diameter: <%= planet.diameter%></p>
+    <p>Diameter: <%= planet.diameter%>km</p>
     <p>Mass:     <%= planet.mass%></p>
     <p>Life:     <%= planet.life ? "Yes" : "No"%></p>
     </div>
