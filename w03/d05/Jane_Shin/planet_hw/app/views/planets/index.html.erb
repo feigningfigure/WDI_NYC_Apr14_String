@@ -1,0 +1,12 @@
+<div class="border">
+<% @planets.each do |planet| %>
+	<h4><%= planet.name %></h4>
+	<ul>
+		<li><%= planet.name %></li>
+		<li><%= planet.image_url%></li>
+		<li><%= planet.diameter %></li>
+		<li><%= planet.mass %></li>
+		<li><%= planet.life %></li>
+	</ul>
+<% end %>
+</div>
