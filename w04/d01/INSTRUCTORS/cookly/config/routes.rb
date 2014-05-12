@@ -5,7 +5,11 @@ Rails.application.routes.draw do
 
   get "/cookbooks" => "cookbooks#index"
 
-  get "/cookbooks/:id" => "cookbooks#show"
+  get "/cookbooks/:id" => "cookbooks#show", as: :cookbook
+
+  get "/cookbooks/:id/edit" => "cookbooks#edit", as: :edit_cookbook
+
+  patch "/cookbooks/:id" => "cookbooks#update"
 
   # renders a NEW cookbook form
   # get "/cookbooks/new" => "cookbooks#new"
