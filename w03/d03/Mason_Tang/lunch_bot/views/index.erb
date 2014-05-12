@@ -1,0 +1,13 @@
+<ul class="lunches">
+  <% @lunches.each do |lunch| %>
+    <li>
+      <h2><a href="/lunches/<%= lunch.id %> "><%= lunch.name %></a></h2>
+
+
+          <ul>
+            <li>Rating: $<%= lunch.rating %></li>
+          </ul>
+
+    </li>
+  <% end %>
+</ul>
