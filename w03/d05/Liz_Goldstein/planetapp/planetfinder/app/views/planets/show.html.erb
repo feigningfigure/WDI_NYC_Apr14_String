@@ -12,7 +12,14 @@
         <p>Diameter: <%= planet.diameter %>
         <p>Mass: <%= planet.mass %>
         <p>Supports life? <%= planet.life %>
+        <p>Has moons? <%= planet.find_moon %></p>
       </div>
-    </div>
+      </div>
+<h2>Add a Moon to <%= planet.name %></h2>
 
+  <%= form_for Moon.new do |f| %>
 
+  <p>Name: <%= f.text_field :name %></p>
+  <%= f.hidden_field :planet_id, :value => "#{planet.id}".to_i %>
+  <p><%= f.submit "Create!" %></p>
+  <% end %>

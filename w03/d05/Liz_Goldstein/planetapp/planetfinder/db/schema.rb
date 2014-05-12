@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140510015812) do
+ActiveRecord::Schema.define(version: 20140511215341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "moons", force: true do |t|
+    t.string   "name"
+    t.integer  "planet_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "planets", force: true do |t|
     t.string   "name"

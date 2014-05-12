@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Planet.delete_all
+Moon.delete_all
 
 # Planet.create({
 #     name: "Mars",
@@ -13,4 +14,9 @@ Planet.delete_all
 #     diameter: 5,
 #     mass: 50,
 #     life: true
+#   })
+
+# Moon.create({
+#     name: "Titan",
+#     planet_id: 2
 #   })

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
 
-
   get "planets" => "planets#index"
 
   get "planets/new" => "planets#new"
@@ -9,6 +8,17 @@ Rails.application.routes.draw do
   post "/planets" => "planets#create"
 
   get "planets/:id" => "planets#show"
+
+
+  get "moons" => "moons#index"
+
+  get "moons/new" => "moons#new"
+
+  post "/moons" => "moons#create"
+
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
