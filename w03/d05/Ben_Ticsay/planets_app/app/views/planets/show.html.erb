@@ -1,0 +1,10 @@
+
+  <h2><%= @planet.name %></h2>
+<p>
+	<%= @planet.diameter %>
+	<%= @planet.mass %>
+	<%= @planet.life %>
+	<img src="<%= @planet.image_url %>">
+</p>
+
+  <%= link_to "add moons", "/planets/#{@planet.id}/newmoon" %>
