@@ -1,0 +1,21 @@
+<% id = params[:id].to_i %>
+<% planet = Planet.find(id) %>
+
+<form action="/planets/update/<%=params[:id]%>" method="post">
+<p>Name</p>
+<p>
+<input type="text" name="name" value="<%=planet.name%>"></p>
+<p>Photo Url</p>
+<p>
+<input type="text" name="photo" value="<%=planet.photo%>"></p>
+<p>Diameter</p>
+<p>
+<input type="text" name="diameter" value="<%=planet.diameter%>"></p>
+<p>Mass</p>
+<p>
+<input type="text" name="mass" value="<%=planet.mass%>"></p>
+<p>Life</p>
+<p>
+<input type="text" name="life" value="<%=planet.life%>"></p>
+<input type="submit" name="submit" value="submit">
+</form>
