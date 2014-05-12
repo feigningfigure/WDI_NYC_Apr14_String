@@ -1,0 +1,24 @@
+
+<%= form_for @update_planet, url: "/planets" do |f| %>
+
+  <p>
+    Name: <%= f.text_field :name, @update_planet.name %>
+  </p>
+  <p>
+  Image URL: <%= f.text_field :image_url, @update_planet.image_url%>
+  </p>
+  <p>
+    Diameter: <%= f.text_field :diameter, @update_planet.diameter%>
+  </p>
+  <p>
+  Mass: <%= f.text_field :mass, @update_planet.mass%>
+  </p>
+    <p>
+  Life exists? <%= f.text_field :life, @update_planet.life%>
+  </p>
+  <p>
+
+
+  <%= f.submit "Update" %>
+
+<% end %>

@@ -1,0 +1,15 @@
+<%= form_for @moon, url: "/planets/:id" do |m| %>
+
+  <p>
+    Name: <%= m.text_field :name %>
+  </p>
+  <p>
+  Image Url: <%= m.text_field :image_url %>
+  </p>
+
+
+
+
+  <%= m.submit "Create" %>
+
+<% end %>
