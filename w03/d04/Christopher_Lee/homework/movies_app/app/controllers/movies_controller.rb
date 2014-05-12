@@ -1,4 +1,5 @@
 class MoviesController < ActionController::Base
+  # should inherit from ApplicationController
 
   layout "application"
 
