@@ -1,0 +1,18 @@
+
+
+  <div>
+    <h1><%= @planet.name %></h1>
+    <img src="<%=@planet.image_url%>">
+    <h3>Diameter <small>(Miles)</small></h3>
+      <p><%=@planet.diameter%> tons</p>
+    <h3>Mass <small>(Earth Mass)</small></h3>
+      <p><%=@planet.mass%> size</p>
+    <h3>Habitable <small>life?</small></h6>
+      <p><%=@planet.life%> </p>
+
+      <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+  </div>
+
+
+
+
