@@ -6,8 +6,12 @@ class MoonsController < ActionController::Base
 		@moons = Moons.all
 	end
 
-	def new
+	def newer
+		
+	end
 
+	def new
+		@id = params[:id].to_i
 	end
 
 	def show

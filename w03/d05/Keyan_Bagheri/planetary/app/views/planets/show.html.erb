@@ -1,26 +1,26 @@
 
 <% id = params[:id].to_i %>
 <% planet = Planet.find(id) %>
-<% if Moons.find_by_planet_id(id).nil? %>
-<% moon = "none" %>
-<% elsif Moons.all.find_by_planet_id(id)%>
-<% moon = Moons.find_by_planet_id(id).name%>
-<% else moons = Moons.all.find_by_planet_id(id) %>
-<% moon = [] %>
-<% moons.each do |x|%>
-<% moon << x.name %>
+<% moons = []%>
+<% Moons.all.each do |moon| %>
+<% if moon.planet_id == planet.id %>
+<% moons << moon.name %>
 <% end %>
-<% moon = moon.join(", ") %>
 <% end %>
+<% if moons.length >= 1 %>
+<% orbiting_moons = moons.join(", ") %>
+<% else orbiting_moons = "none" %>
+<% end %>
+
 <h3><%= planet.name %></h3>
   <img src="<%= planet.photo %>">
   <ul>
   	<li>Diameter = <%=planet.diameter%></li>
   	<li>Mass = <%=planet.mass%></li>
   	<li>Life on planet = <%=planet.life%></li>
-  	<li>Moons it boasts = <%= moon %></li>
+  	<li>Moons it boasts = <%= orbiting_moons %></li>
   <hr>
 
   <nav class="header">
-    <a href="update/<%=planet.id%>">update<a> | <a href="/moons/new">add moon<a> | <a href="delete/<%=planet.id%>">delete<a> 
+    <a href="update/<%=planet.id%>">update<a> | <a href="/moons/new/<%=id%>">add moon<a> | <a href="delete/<%=planet.id%>">delete<a> 
   </nav>

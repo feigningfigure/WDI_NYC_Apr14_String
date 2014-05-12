@@ -18,7 +18,9 @@ Rails.application.routes.draw do
 
   get "/moons" => "moons#index"
 
-  get "/moons/new" => "moons#new"
+  get "/moons/newer" => "moons#newer"
+
+  get "/moons/new/:id" => "moons#new"
 
   post "/moons" => "moons#create"
 

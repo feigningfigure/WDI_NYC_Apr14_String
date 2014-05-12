@@ -4,6 +4,6 @@
 <% else planet = Planet.find(moon.planet_id)%>
 <% planet_name = planet.name %>
 <% end %>
-  <h1><a href="moons/<%=moon.id%>"><%= moon.name %> - Planet: <%=planet_name%></a></h1>
+  <h1><a href="/moons/<%=moon.id%>"><%= moon.name %> - Planet: <%=planet_name%></a></h1>
 <hr>
 <% end %>
