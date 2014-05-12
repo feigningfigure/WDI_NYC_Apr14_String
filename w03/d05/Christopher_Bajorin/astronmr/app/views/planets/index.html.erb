@@ -4,7 +4,7 @@
   <% @planets.each do |planet| %>
     <div class ="each_planet">
     <h4><%= planet.name%></h4>
-    <img src="<% planet.image_url %>">
+    <img src="<%= planet.image_url %>">
     <p>Diameter: <%= planet.diameter%></p>
     <p>Mass:     <%= planet.mass%></p>
     <p>Life:     <%= planet.life ? "Yes" : "No"%></p>
