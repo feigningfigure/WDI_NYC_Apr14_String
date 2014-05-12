@@ -1,14 +1,17 @@
+
+
 <div class="planets">
   <% @planets.each do |planet| %>
     <p class="planet" style="">
 
-    	<%= planet.name %>
-    	<%= planet.diameter %>
-    	<%= planet.mass %>
-    	<%= planet.life %>
+    	Planet name: <%= planet.name %><br>
+    	Diameter: <%= planet.diameter %><br>
+    	Mass: <%= planet.mass %><br>
+    	Life: <%= planet.life %><br>
     	<img src="<%= planet.image_url %>">
 
 
     </p>
   <% end %>
+
 </div>
