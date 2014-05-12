@@ -1,0 +1,6 @@
+<h2>Cookbooks</h2>
+<ul class="cookbooks">
+  <% @cookbooks.each do |cookbook| %>
+    <li><%= link_to cookbook.title, "/cookbooks/#{cookbook.id}" %></li>
+  <% end %>
+</ul>
