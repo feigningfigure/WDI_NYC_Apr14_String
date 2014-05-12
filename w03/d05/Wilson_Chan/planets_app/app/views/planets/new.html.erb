@@ -1,0 +1,28 @@
+
+  <div>
+    <h2>Create A New Planet</h2>
+
+    <%= form_for(:planet, :url => {:action => 'create'}) do |form| %>
+
+<div class="fields">
+  <ul>
+        <li><%= form.text_field(:name) %></li>
+
+        <li><%= form.text_field(:diameter) %></li>
+
+        <li><%= form.text_field(:mass) %></li>
+
+        <li><%= form.text_field(:life) %></li>
+
+  </ul>
+
+
+    <div>
+      <%= submit_tag("Create Planet") %>
+    </div>
+
+</div>
+
+  <% end %>
+</div>
+
