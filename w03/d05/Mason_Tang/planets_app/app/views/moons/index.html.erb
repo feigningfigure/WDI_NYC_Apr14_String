@@ -1,12 +1,22 @@
-<div class="moons">
-  <% @moons.each do |moon| %>
-    <p class="planet" style="">
-
-      <%= moon.name %>
-
-      <img src="<%= moon.image_url %>">
 
 
-    </p>
-  <% end %>
-</div>
+<h1>Moons in <%= @planet.name %></h1>
+
+<table>
+  <tr>
+    <th>Moon name</th>
+  </tr>
+
+<% for moon in @moons %>
+  <tr>
+    <td><%= moon.name %></td>
+    <td><%= link_to 'Show', planet_moon_path(@planet, moon) %></td>
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New moon', new_planet_moon_path(@planet) %>
+<%= link_to 'Back to Planet', @planet %>

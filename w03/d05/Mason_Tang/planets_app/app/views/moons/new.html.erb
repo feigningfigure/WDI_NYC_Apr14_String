@@ -1,4 +1,7 @@
-<%= form_for @moon, url: "/planets/:id/moons" do |f| %>
+
+
+
+<%= form_for @moon, url: "/planets/:planet_id/moons" do |f| %>
 
   <p>
     Name: <%= f.text_field :name %>
@@ -6,9 +9,7 @@
   <p>
   Image Url: <%= f.text_field :image_url %>
   </p>
-  <p>
-  Planet_id: <%= f.text_field :planet_id %>
-  </p>
+
 
 
 
@@ -16,3 +17,5 @@
   <%= f.submit "Create" %>
 
 <% end %>
+
+<%= link_to 'Back', planet_moons_path(@planet) %>
