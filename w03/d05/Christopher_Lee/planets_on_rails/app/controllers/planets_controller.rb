@@ -40,12 +40,26 @@ class PlanetsController < ApplicationController
    @planet = Planet.find(params[:id])
   end
 
+  def edit_moon
+    @moon = Moon.find(params[:id])
+    @planet = params[:planet_id]
+  end
+
   def update
     planet = Planet.find params[:id]
     if planet.update(planet_params)
       redirect_to planets_path, :notice => 'Planet has sucessfully been updated.'
     else
-      redirect_to :back, :notice => 'There was an error updating the planet.'
+      redirect_to :back, :notice => 'There was an error updating this planet.'
+    end
+  end
+
+  def update_moon
+    moon = Moon.find params[:id]
+    if moon.update(moon_params)
+       redirect_to planets_path, :notice => 'Moon has sucessfully been updated.'
+    else
+      redirect_to :back, :notice => 'There was an error updating this moon.'
     end
   end
 

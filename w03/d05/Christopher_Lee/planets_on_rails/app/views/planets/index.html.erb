@@ -14,6 +14,7 @@
       <li><%= moon.diameter %></li>
       <li><%= moon.life %></li>
       <%= link_to 'Delete', "/planets/destroy_moon/#{moon.id}" %>
+      <%= link_to 'Edit', "/planets/edit_moon/#{moon.id}/#{planet.id}" %>
     <% end %>
     <br>
     <br>

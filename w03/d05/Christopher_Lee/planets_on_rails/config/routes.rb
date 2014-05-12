@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/planets/new_moon/:id' => 'planets#new_moon'
   post '/planets/create_moon' => 'planets#create_moon'
   get '/planets/destroy_moon/:id'  => 'planets#destroy_moon'
+  get '/planets/edit_moon/:id/:planet_id' => 'planets#edit_moon'
+  post '/planets/:id/:planet_id' => 'planets#update_moon'
 
   # get '/planets' => 'planets#index'
   # get '/planets/new' => 'planets#new'
