@@ -1,0 +1,9 @@
+<div class="planets">
+  <% @planets.each do |planet| %>
+    <p class="planet" style="color: <%= planet.name %>">
+      <%# fancy ternary operator:  predicate ? true result : false result %>
+      <%= planet.name %> belongs to <%= planet.owner ? planet.owner.fancy_name : "no one" %>
+      <%= link_to "show", "/planets/#{planet.id}" %>
+    </p>
+  <% end %>
+</div>
