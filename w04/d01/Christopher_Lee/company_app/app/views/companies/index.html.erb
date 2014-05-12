@@ -1,0 +1,12 @@
+<h1>This is the Index File</h1>
+
+
+<ul class="companies">
+  <% @companies.each do |company| %>
+    <li><h1><%= link_to company.name, "/companies/#{company.id}" %></h1></li>
+    <% company.products.each do |product| %>
+      <li><%= product.name %></li>
+      <li><img src=<%= product.image_url %>></li>
+    <% end %>
+  <% end %>
+</ul>
