@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @moon.name %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @moon.image_url %>
+</p>
+
+<p>
+  <strong>Diameter:</strong>
+  <%= @moon.diameter %>
+</p>
+
+<p>
+  <strong>Mass:</strong>
+  <%= @moon.mass %>
+</p>
+
+<p>
+  <strong>Life:</strong>
+  <%= @moon.life %>
+</p>
+
+<%= link_to 'Edit', edit_moon_path(@moon) %> |
+<%= link_to 'Back', moons_path %>
