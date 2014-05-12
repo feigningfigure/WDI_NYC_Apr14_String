@@ -24,6 +24,7 @@ end
 
 def show
 	@planet = Planet.find(params[:id])
+	binding.pry
 end
 
 def delete

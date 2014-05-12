@@ -7,8 +7,11 @@
 		<li><%= @planet.life %></li>
 	</ul>
 
-	<%= @planet.moons.each { |moon| puts moon.name } %>
 
-	<a href="/planets/<%= @planet.id %>/moons/new">Add moons to your planet</a>
+	<ul>
+	<% @planet.moons.each do |moon| %>
+		<!-- <li><%=# moon.name %></li> -->
+		<li><%= moon.name %></li>
+	<% end %>
+	</ul>
 
-	<a href="/planets">Back Home</a>

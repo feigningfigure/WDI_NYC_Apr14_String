@@ -16,15 +16,10 @@ def create
 end
 
 def show
-	# @planet_id = params[:planet_id]
-	# @moons = Moon.where(planet_id: params[:planet_id])
-	# x = 0
-	# @moon_names = []
-	# until x = moons.length do
-	# 	@moon_names << moons[x].name
- # 		x +=1
- # 	end
-	@moon = Moon.where(planet_id: params[:planet_id])
+	moon = Moon.find(params[:id])
+	p_id = moon.planet.id
+	@moons = Moon.where(planet_id: p_id)
+	
 end
 
 	
