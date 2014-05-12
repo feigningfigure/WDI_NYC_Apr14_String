@@ -7,7 +7,7 @@ class PlanetsController < ApplicationController
   end
 
 
-# GET / planets / 1
+# GET / planets /
   def show
   end
 
@@ -26,11 +26,12 @@ class PlanetsController < ApplicationController
   end
 
 
-# THIS SHOULD UPDATE 
+# THIS SHOULD UPDATE BUT NOT WORKING
   # def update
   # 	respond_to do |format|
   # 		if @planet.update
   # 			format.html {redirect_to @planets, notice: "Planet was successfully updated."}
   # 			format.json { render :show, status: :ok, location: @planet }
   # end
+
 end
