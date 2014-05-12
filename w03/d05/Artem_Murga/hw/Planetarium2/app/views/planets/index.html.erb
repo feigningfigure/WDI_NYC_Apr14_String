@@ -1,0 +1,25 @@
+<a href="/">HOME</a>
+<hr>
+
+
+<% Planet.all.order("id").each do |p| %>
+
+	<img class=imglist src="<%= p.attributes["image_url"]%>">
+	<p>Name : <%= p.attributes["name"]%></p>
+	<br>
+	<p>Diameter : <%= p.attributes["diameter"] %>% of Earth </p>
+	<br>
+	<p>Mass : <%= p.attributes["mass"]%>% of Earth </p>
+	<br>
+	<p>Life : <%= p.attributes["life"] == true ? "Colonized" : "Not colonized yet"%></p>
+	<br>
+	<p># in Solar System : <%= p.attributes["id"]%></p>
+	<br>
+	<p>ID of Moons: <%= p.attributes["moon_id"]%></p>
+	<hr>
+
+
+
+<% end %>
+
+</ul>

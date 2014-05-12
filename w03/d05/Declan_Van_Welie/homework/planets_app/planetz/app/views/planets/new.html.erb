@@ -1,0 +1,36 @@
+<%# this DOES need a crying clown hat %>
+
+
+
+<div class= "new">
+
+<nav class= "link">
+
+    <%= link_to "View planetary database", planets_path %>
+</nav>
+
+<%= form_for @planet, url: "/planets" do |f| %>
+
+  <p>
+    Name: <%= f.text_field :name, class: "form" %>
+  </p>
+  <p>
+  Image: <%= f.text_field :image_url, class: "form" %>
+  </p>
+
+<p>
+  Diameter: <%= f.text_field( :diameter, class: "form" )%>
+  </p>
+<p>
+  Mass: <%= f.text_field :mass, class: "form" %>
+  </p>
+
+  <p>
+  Life: <%= f.text_field :life, class: "form" %>
+  </p>
+
+  <%= f.submit "Create", class: "submit" %>
+
+<% end %>
+
+</div>
