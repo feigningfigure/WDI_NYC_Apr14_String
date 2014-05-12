@@ -1,0 +1,13 @@
+
+
+
+
+
+<div class="section group">
+  <div class="col span_4_of_12 main_list">
+    <% @planets.each do |planet| %>
+      <h1><%= link_to planet.name, planet_path(id: planet.id) %></h1>
+    <% end %>
+    <%= link_to 'Create New Planet',{controller: "planets", action: "new"}, class: "add" %>
+  </div>
+</div>
