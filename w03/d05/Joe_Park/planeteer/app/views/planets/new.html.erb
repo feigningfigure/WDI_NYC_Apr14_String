@@ -5,7 +5,7 @@
 	<li>Image: <%= f.text_field :image_url %></li>
 	<li>Diameter: <%= f.text_field :diameter %></li>
 	<li>Mass: <%= f.text_field :mass %></li>
-	<li>Existence of Life <%= f.select :life, [['Affirmative', true], ['Negative', false]] %></li>
+	<li>Existence of Life: <%= f.select :life, [['Affirmative', true], ['Negative', false]] %></li>
 </ul>
 	<%= f.submit "Create New Entry" %>
 

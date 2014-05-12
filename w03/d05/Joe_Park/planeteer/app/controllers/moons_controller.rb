@@ -12,6 +12,7 @@ class MoonsController < ApplicationController
 			name: moon_attributes[:name],
 			image_url: moon_attributes[:image_url],
 			planet_id: Planet.find(moon_attributes[:planet_id]).id
+			
 		})
 
 		redirect_to planets_path
