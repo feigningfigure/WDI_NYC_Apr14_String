@@ -1,11 +1,45 @@
 p{
-  background-color: pink;
-  font-size: 30px;
-  font-color: white;
-  text-align: center
+ font-size: 55px;
+font-family: 'Oswald', sans-serif;
+text-align: center;
+text-transform: uppercase;
+color: white;
+background-color: blue;
 }
 
+.planet{
+  background-color: blue;
+  font-color: blue;
+  margin: 0 auto;
+  clear: both;
+}
 
+h1{
+font-size: 55px;
+font-family: 'Oswald', sans-serif;
+text-align: center;
+text-transform: uppercase;
+color: white;
+}
+
+h2{
+font-size: 40px;
+font-family: 'Oswald', sans-serif;
+text-align: center;
+text-transform: uppercase;
+color: white;
+background-color: black
+}
+
+nav{
+  color:black;
+}
+
+img{
+  height: 550px;
+  width: 550px;
+  float: center;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

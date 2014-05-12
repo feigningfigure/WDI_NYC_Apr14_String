@@ -21,4 +21,9 @@ def index
       redirect_to mooons_path
     end
 
+    def show
+      mooon_id = params[:id]
+      @mooon = Mooon.find(mooon_id)
+    end
+
 end

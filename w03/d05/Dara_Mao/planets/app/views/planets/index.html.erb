@@ -1,9 +1,9 @@
-<div class="planets">
+<div class="planet">
   <% @planets.each do |planet| %>
-    <p>
+    <h1>
       <%= planet.name %>:
       <%= link_to "show details", "/planets/#{planet.id}" %>
       <%= link_to "create new moons", "/mooons/new" %>
-    </p>
+    </h1>
   <% end %>
 </div>

@@ -5,7 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+Mooon.delete_all
+# Planet.delete_all
 
 planet_array = [
   'Mercury',
@@ -18,6 +19,7 @@ planet_array = [
   'Nepture'
 ]
 
+
 mooon = []
 25.times  do
   mooon << Mooon.create({
@@ -26,9 +28,9 @@ mooon = []
     diameter: 868.55,
     mass: 7.3477,
     life: true,
-    planet_name: planet_array.sample
+    planet_id: rand(1...8)
     })
-# mooon.planet_name = planet.name
+# mooon.planet_id = planet.id
 
 # mooon.save
 end
