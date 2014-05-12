@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: planets
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)
+#  image_url  :string(255)
+#  diameter   :integer
+#  mass       :integer
+#  life       :boolean
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  image_url: MyString
+  diameter: 1
+  mass: 1
+  life: false
+
+two:
+  name: MyString
+  image_url: MyString
+  diameter: 1
+  mass: 1
+  life: false
