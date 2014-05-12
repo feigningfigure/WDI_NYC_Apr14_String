@@ -1,0 +1,217 @@
+body {
+	background-image: url(sky.jpg);
+	text-align: center;
+	background-color: black;
+	background-size: 100%;
+	font-family: 'Aldrich', sans-serif;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center; 
+	/*can't make it working*/
+	/*font-family: 'nasa';*/
+  	/*src: url('/assets/nasa.ttf');*/
+  	/*src: local(), url('/assets/nasa.ttf') format('nasa'), url('/assets/nasa.ttf')*/
+}
+
+nav {
+	margin-top: 40%;
+	margin-left: -70px;
+	letter-spacing: 3px;
+	word-spacing: 60px;
+}
+
+p {
+	display: inline;
+	color: black;
+	font-size: 40px;
+	text-align: left;
+	
+}
+
+a:link {color:#F2F2EA; text-decoration: none;}     
+a:visited {color:#F2F2EA;text-decoration: none;} 
+a:hover {color:#B5B8CA; text-decoration: none;}  
+a:active {color:black; text-decoration: none;}  
+
+
+
+.vertical {
+	font-style: italic;
+	font-size: 50px;
+	font-weight: bolder;
+
+}
+
+
+.text {
+	color: white;
+}
+
+
+.imglist {
+	float: left;
+	height: 200px;
+	width: 225px;
+}
+
+.inputs {
+
+	display: block;
+	text-align: center;
+/*
+	padding: 10px;
+	width: 400px;*/
+	/*background: rgba(255, 255, 255, 0.5);*/
+
+}
+
+
+
+	
+.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9dce2c', endColorstr='#8cb82b');
+	background-color:#9dce2c;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:40px;
+/*	line-height:65px;
+*/	width:200px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #689324;
+}
+.button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8cb82b), color-stop(1, #9dce2c) );
+	background:-moz-linear-gradient( center top, #8cb82b 5%, #9dce2c 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8cb82b', endColorstr='#9dce2c');
+	background-color:#8cb82b;
+}.button:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+	/*background: rgba(255, 255, 255, 0.5);
+	padding: 10px;
+	width: 200px;
+	color: black;*/
+}
+
+
+
+
+
+
+textarea:focus, input:focus
+{
+    outline: 0;
+}
+.nifty_form {
+	color: blue;
+	height: 555px;
+}
+
+
+#planet_name {
+
+	height: 40px;
+	width: 200px;
+	border-radius: 20px;
+	text-align: center;
+	background-color: #D8CED6;
+	margin-top: 150px;
+	color: black;
+	outline: 0;
+	/*border-color: grey;*/
+
+}
+
+#planet_diameter {
+
+	height: 40px;
+	width: 200px;
+	border-radius: 20px;
+	text-align: center;
+	background-color: #D8CED6;
+	color: black;
+	outline: 0;
+	/*border-color: grey;*/
+
+}
+
+#planet_mass {
+
+	height: 40px;
+	width: 200px;
+	border-radius: 20px;
+	text-align: center;
+	background-color: #D8CED6;
+	color: black;
+	outline: 0;
+	/*border-color: grey;*/
+
+}
+
+#planet_life {
+
+	height: 40px;
+	width: 200px;
+	border-radius: 20px;
+	text-align: center;
+	background-color: #D8CED6;
+	color: black;
+	outline: 0;
+	/*border-color: grey;*/
+
+}
+
+#planet_image_url {
+
+	height: 40px;
+	width: 200px;
+	border-radius: 20px;
+	text-align: center;
+	background-color: #D8CED6;
+	color: black;
+	outline: 0;
+	f
+	/*border-color: grey;*/
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

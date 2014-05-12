@@ -1,0 +1,8 @@
+
+<%= image_tag(@planet.image_url, class: "alone_image") %>
+<p>
+  <%= @planet.name %> has a diameter of <%= @planet.diameter %>, a mass of <%= @planet.convert_mass %> Earths and <%= @planet.life ? "has life" : "is unable to sustain life." %>
+</p>
+<p><%= link_to "Home", "/" %> |  <%= link_to "Back", "/planets/" %></p>
+
+
