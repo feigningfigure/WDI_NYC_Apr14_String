@@ -1,0 +1,13 @@
+<div class="welcome_box">
+<h3>Hello, planets!</h3>
+
+
+
+<% @planets.each do |planet| %>
+
+        <li><%= planet.name %>,
+        <%= link_to "show facts", "/planets/#{planet.id}" %>
+
+  <% end %>
+</div>
+

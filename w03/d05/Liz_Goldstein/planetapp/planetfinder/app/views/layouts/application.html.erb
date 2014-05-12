@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+Planetfinder
+  </title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<h1>PlanetFinder</h1>
+<nav>
+    <%= link_to "All Known Planets", planets_path %> |
+    <%= link_to "Play God (Create)", planets_new_path %>
+
+  </nav>
+
+<body>
+
+<%= yield %>
+
+</body>
+</html>

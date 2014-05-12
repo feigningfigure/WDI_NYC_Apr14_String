@@ -1,0 +1,11 @@
+<%= form_for @moon, url: "/moons" do |f| %>
+	
+<ul>	
+	<li>Name: <%= f.text_field :name %></li>
+	<li>Image: <%= f.text_field :image_url %></li>
+	<li>Planet: <%= f.text_field :planet_id %></li>
+
+</ul>
+	<%= f.submit "Add New Moon" %>
+
+<% end %>
