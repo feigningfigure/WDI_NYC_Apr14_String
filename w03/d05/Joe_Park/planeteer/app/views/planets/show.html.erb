@@ -1,0 +1,33 @@
+<div class="planets_display">
+	<h1>Planet in Detail</h1>
+
+	<img src="<%= @planet.image_url %>" />
+	
+	<ul>
+		<li>Name: <%= @planet.name %></li>
+		<li>Diameter: <%= @planet.diameter %></li>
+		<li>Mass: <%= @planet.mass %></li>
+		<li>Life: <%= @planet.life %></li>
+	</ul>
+
+
+
+</div>
+
+<div class="moons">
+	<h2>Moons</h2>
+	<% @moons = Moon.all %>
+
+		<% @moons.each do |moon| %>
+			<% if @planet.id == moon.planet_id %>
+			<div class="test">
+				<%= moon.name %>
+				<img src="<%= moon.image_url %>" />
+			</div>
+			<% end %>
+		<% end %>
+
+
+</div>
+
+

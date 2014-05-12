@@ -1,0 +1,25 @@
+
+<div class= "all">
+
+    <%= link_to "View planetary database", planets_path %>
+</div>
+
+<div class= "planet_list">
+<p class="name">
+
+<%= @planet.name %>
+
+</p>
+
+
+<div class= "planet_image">
+
+  <img src= <%= @planet.image_url %> width="275" >
+<p class="show">
+  Mass: <%= @planet.mass %>E21 kg
+
+  Diameter: <%= @planet.diameter %> miles
+
+</p>
+</div>
+</div>
