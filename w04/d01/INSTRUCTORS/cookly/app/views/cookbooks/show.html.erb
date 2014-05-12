@@ -6,16 +6,14 @@
   <%= @cookbook.description %>
 </p>
 <h3>Recipes</h3>
-<%= form_for @recipe, url: "/recipes" do |f| %>
-  <%= f.text_field :title, { placeholder: "title" } %>
-  <%= f.text_field :content, { placeholder: "content" } %>
-  <%= f.hidden_field :cookbook_id, value: @cookbook.id %>
-  <%= f.submit %>
-<% end %>
+<%= render partial: "recipes/recipeform", locals: { recipe_local: @recipe, cookbook_id: @cookbook.id }%>
 <ul class="recipes">
   <% @cookbook.recipes.order(id: :desc).each do |recipe| %>
     <li class="recipe">
       <h4><%= recipe.title %></h4>
+      <p>
+        <%= link_to "edit", "/recipes/#{recipe.id}/edit" %>
+      </p>
       <p><%= recipe.content %></p>
     </li>
   <% end %>
