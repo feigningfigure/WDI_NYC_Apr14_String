@@ -1,8 +1,14 @@
+<a href="/">Home</a>
+
+<% @movies.each do |movie| %>
+  <h1><%= movie.title %></h1>
+  <img src="<%= movie.movie_poster %>">
+ \
+<% end %>
 
 
 
-
-<ul class="movies">
+<!-- <ul class="movies">
 <% @movies.each do |movie| %>
   <li>
     <h2 class="movie_title"><%= movie.title %></h2>
@@ -23,3 +29,4 @@
   </li>
 <% end %>
 </ul>
+ -->

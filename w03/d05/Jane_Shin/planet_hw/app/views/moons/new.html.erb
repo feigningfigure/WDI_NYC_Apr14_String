@@ -1,0 +1,12 @@
+<%= form_for @moon, url: "/planets/5/moons" do |f| %>
+	
+	<p>
+	  Name: <%= f.text_field :name %>
+	</p>
+	<p>
+	  Planet ID: <%= f.text_field :planet_id %>
+	</p>
+
+	<%= f.submit %>
+
+<% end %>
