@@ -1,0 +1,14 @@
+	<h4><%= @planet.name %></h4>
+	<ul>
+		<li><%= @planet.name %></li>
+		<li><%= image_tag(@planet.image_url) %></li>
+		<li><%= @planet.diameter %></li>
+		<li><%= @planet.mass %></li>
+		<li><%= @planet.life %></li>
+	</ul>
+
+	<%= @planet.moons.each { |moon| puts moon.name } %>
+
+	<a href="/planets/<%= @planet.id %>/moons/new">Add moons to your planet</a>
+
+	<a href="/planets">Back Home</a>
