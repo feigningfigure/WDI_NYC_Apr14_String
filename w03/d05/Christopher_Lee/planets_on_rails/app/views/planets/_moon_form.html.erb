@@ -1,0 +1,13 @@
+<h1>New Moon</h1>
+<%= form_for @moon do |f| %>
+  <%= f.hidden_field :planet_id, :value => @planet %>
+  <%= f.label :name %>
+  <%= f.text_field :name%>
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url%>
+  <%= f.label :diameter %>
+  <%= f.text_field :diameter %>
+  <%= f.label :life %>
+  <%= f.text_field :life %>
+  <%= f.submit %>
+<% end %>
