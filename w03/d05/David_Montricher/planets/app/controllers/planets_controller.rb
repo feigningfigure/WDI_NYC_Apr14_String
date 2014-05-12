@@ -1,7 +1,7 @@
 class PlanetsController < ApplicationController
 
   def index
-    #Display a list of all planets
+    #Display all planets from database
     @planets = Planet.all
 
     render :index
@@ -18,8 +18,15 @@ class PlanetsController < ApplicationController
     # Absolutely no mass assignment
 
     Planet.create({
-      name: planet_attributes[:name]
+      name: planet_attributes[:name],
+      image_url: planet_attributes[:image_url],
+      diameter: planet_attributes[:diameter],
+      mass: planet_attributes[:mass],
+      life: planet_attributes[:life]
       })
+
+    # back to all crayons page
+    redirect_to planets_path
   end
 
   def show
