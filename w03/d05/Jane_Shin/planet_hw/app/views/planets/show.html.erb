@@ -1,0 +1,17 @@
+	<h4><%= @planet.name %></h4>
+	<ul>
+		<li><%= @planet.name %></li>
+		<li><%= image_tag(@planet.image_url) %></li>
+		<li><%= @planet.diameter %></li>
+		<li><%= @planet.mass %></li>
+		<li><%= @planet.life %></li>
+	</ul>
+
+
+	<ul>
+	<% @planet.moons.each do |moon| %>
+		<!-- <li><%=# moon.name %></li> -->
+		<li><%= moon.name %></li>
+	<% end %>
+	</ul>
+

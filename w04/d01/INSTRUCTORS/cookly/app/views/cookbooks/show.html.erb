@@ -2,9 +2,17 @@
 <p class="cookbook_description">
   <%= @cookbook.description %>
 </p>
-
+<h3>Recipes</h3>
+<%= form_for @recipe, url: "/recipes" do |f| %>
+  <%= f.text_field :title, { placeholder: "title" } %>
+  <%= f.text_field :content, {placeholder: "content"} %>
+  <%= f.submit %>
+<% end %>
 <ul class="recipes">
-  <% @cookbook.recipes.each do |recipe| %>
-    <li class="recipe"><%= recipe.title %></li>
+  <% @cookbook.recipes.order(id: :desc).each do |recipe| %>
+    <li class="recipe">
+      <h4><%= recipe.title %></h4>
+      <p><%= recipe.content %></p>
+    </li>
   <% end %>
 </ul>

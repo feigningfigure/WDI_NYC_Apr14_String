@@ -1,0 +1,45 @@
+
+body {
+  background: black;
+  color: white;
+}
+
+header {
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center
+}
+
+header img {
+  max-width: 250px;
+  margin-left: 550px;
+}
+
+.planets img {
+  max-width: 200px;
+  margin: 0 auto;
+
+  display: inline-block
+
+}
+
+.planets {
+  float: center;
+  margin: 0 auto;
+  text-align: center;
+  font-family: helvetica;
+  font-size: 20px;
+}
+
+.newform {
+  text-align: center;
+  font-family: helvetica;
+}
+
+nav {
+  margin-left: 40px;
+  font-size: 25px;
+  color: white;
+}
