@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   # (this is really bad namespacing/RESTful-routing)
   get "/cats" => "posts#cats"
 
+  get "/david" => "david#index"
+
 end
