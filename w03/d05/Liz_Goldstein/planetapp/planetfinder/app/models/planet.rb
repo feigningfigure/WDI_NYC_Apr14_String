@@ -4,8 +4,8 @@ class Planet < ActiveRecord::Base
       def find_moon
         newmoons = []
         newmoons << Moon.find_by_planet_id(self.id)
-        if newmoons == nil
-          puts "No moons"
+        if newmoons.any? == false
+          puts "NO!"
         else
           newmoons[0][:name]
         end

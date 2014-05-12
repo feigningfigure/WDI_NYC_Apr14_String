@@ -18,8 +18,7 @@
 <h2>Add a Moon to <%= planet.name %></h2>
 
   <%= form_for Moon.new do |f| %>
-
-  <p>Name: <%= f.text_field :name %></p>
+  <p>Moon Name: <%= f.text_field :name %></p>
   <%= f.hidden_field :planet_id, :value => "#{planet.id}".to_i %>
-  <p><%= f.submit "Create!" %></p>
+  <p><%= f.submit "Add moon!" %></p>
   <% end %>
