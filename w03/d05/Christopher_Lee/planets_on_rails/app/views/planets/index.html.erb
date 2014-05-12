@@ -1,28 +1,13 @@
-<h1>Planets#index</h1>
-<ul>
-  <% @planets.each do |planet| %>
-  <h1><%= link_to planet.name, planet_path(id: planet.id) %></h1>
-  <!-- <h1><%= planet.name %></h1> -->
-  <li>diameter: <%= planet.diameter %></li>
-  <li>mass: <%= planet.mass %></li>
-  <li>life: <%= planet.life %></li>
-  <li><%= planet.image_url %></li>
-  <h2>Moons</h2>
-    <% moons = Moon.where(planet_id: planet.id) %>
-    <% moons.each do |moon| %>
-      <h3> <%= moon.name %> </h3>
-      <li><%= moon.image_url %></li>
-      <li><%= moon.diameter %></li>
-      <li><%= moon.life %></li>
-      <%= link_to 'Delete', "/planets/destroy_moon/#{moon.id}" %>
-      <%= link_to 'Edit', "/planets/edit_moon/#{moon.id}/#{planet.id}" %>
+
+
+
+
+
+<div class="section group">
+  <div class="col span_4_of_12 main_list">
+    <% @planets.each do |planet| %>
+      <h1><%= link_to planet.name, planet_path(id: planet.id) %></h1>
     <% end %>
-    <br>
-    <br>
-  <%= link_to 'Create New Moon', "/planets/new_moon/#{planet.id}" %>
-  <h3>Planet Options</h3>
-  <%= link_to 'Delete', planet, :method => 'delete' %>
-  <%= link_to 'Edit', edit_planet_path(planet) %>
-  <% end %>
-</ul>
-<%= link_to 'Create New Planet',{controller: "planets", action: "new"} %>
+    <%= link_to 'Create New Planet',{controller: "planets", action: "new"}, class: "add" %>
+  </div>
+</div>

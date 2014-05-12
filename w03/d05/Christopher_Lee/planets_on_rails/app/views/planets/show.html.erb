@@ -5,7 +5,8 @@
   <p>diameter: <%= @planet.diameter %>
   <p> mass: <%= @planet.mass %></p>
   <p>life: <%= @planet.life %></p>
-  </ul>
+   <%= link_to 'Edit', edit_planet_path(@planet), class: "add space" %>
+   <%= link_to 'Delete', @planet, :method => 'delete', class: "add space" %>
   </div>
   <div class="col span_6_of_12">
       <img src="<%= @planet.image_url %>">
@@ -18,16 +19,22 @@
 
   <% moons = Moon.where(planet_id: @planet.id) %>
     <% moons.each do |moon| %>
-     <div class="col span_1_of_12 title">
+     <div class="col span_1_of_12 title right">
         <img src=<%= moon.image_url %>>
       </div>
-      <div class="col span_2_of_12 moon_title">
+      <div class="col span_2_of_12 moon_title right">
         <h4><%= moon.name %></h4>
         <p>diameter: <%= moon.diameter %></p>
         <p>life: <%= moon.life %></p>
       </div>
-      <div class="col span_1_of_12">
+      <div class="col span_1_of_12 right">
         <%= link_to 'Edit', "/planets/edit_moon/#{moon.id}/#{@planet.id}", class: "edit" %>
         <%= link_to 'Delete', "/planets/destroy_moon/#{moon.id}", class: "edit" %>
       </div>
   <% end %>
+  <div class="span_8_of_2 tall">
+  </div>
+    <div class="span_4_of_12 right">
+     <%= link_to 'Create New Moon', "/planets/new_moon/#{@planet.id}", class: "add" %>
+    </div>
+
