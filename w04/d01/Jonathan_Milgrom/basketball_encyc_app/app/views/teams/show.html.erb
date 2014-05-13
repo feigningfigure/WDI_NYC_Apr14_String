@@ -1,0 +1,18 @@
+
+<h1><%= @team.city.upcase %> <%= @team.name.upcase %></h1>
+<p><img src=<%= @team.url %>></p>
+
+<ul><% @team.players.each do |player| %>
+	<li><%= player.name %></li>
+	<li><%= player.height %> inches</li>
+	<li>from <%= player.college %></li>
+	<li><%= link_to "edit", "/teams/#{@team.id}/edit" %></li>
+	<% end %>
+</ul>
+<%= form_for @player, url: "/players", method: "POST" do |f| %>
+  <%= f.text_field :name, {placeholder: "name"} %>
+  <%= f.text_field :height, {placeholder: "height"} %>
+  <%= f.text_field :college, {placeholder: "college"} %>
+  <%= f.hidden_field :team_id, :value => @team.id %>
+  <%= f.submit %>
+<% end %>
