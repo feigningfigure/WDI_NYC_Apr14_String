@@ -1,0 +1,7 @@
+<h1 class="flavor_name"><%= @ice_cream_flavors.name %></h1>
+<ul class="toppings">
+<% @toppings.each do |topping| %>
+<li><%= link_to topping.name, "/ice_cream_flavors/toppings/#{topping.name}" %></li>
+<!-- The above not working. find method -->
+<% end %>
+</ul>

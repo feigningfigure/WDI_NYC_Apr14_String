@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SuperheroesOnRails</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav>
+	<%= link_to "SuperTeams Index", superteams_path() %>
+	<%= link_to "link text...", :controller => "superteams" %>			<!-- QUESTION: WHY DOES THIS GO TO ROOT? -->
+
+</nav>
+
+<%= yield %>
+
+</body>
+</html>
