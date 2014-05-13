@@ -1,0 +1,2 @@
+module CookieWatchersHelper
+end

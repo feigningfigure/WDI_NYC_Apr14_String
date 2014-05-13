@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cookie_watcher.name %>
+</p>
+
+<p>
+  <strong>Cookies:</strong>
+  <%= @cookie_watcher.cookies %>
+</p>
+
+<%= link_to 'Edit', edit_cookie_watcher_path(@cookie_watcher) %> |
+<%= link_to 'Back', cookie_watchers_path %>
