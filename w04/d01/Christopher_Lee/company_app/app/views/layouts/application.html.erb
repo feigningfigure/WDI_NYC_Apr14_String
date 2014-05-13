@@ -5,11 +5,28 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'application','http://fonts.googleapis.com/css?family=Vollkorn' %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700' %>
 </head>
 <body>
-<nav>
-  <%= link_to "Companies", '/' %>
-</nav>
+<div id="header">
+  <div id="logo">
+      <%= link_to '/' do %>
+      <h1>CONGLOMERATES</h1>
+      <% end %>
+    </div>
+  <div id="nav">
+      <ul>
+          <!-- <li><a href="http://shop.industrystandardny.com">Shop</a></li>
+            <li><a href="http://industrystandardny.com/about">About</a></li>
+            <li><a href="http://industrystandardny.com/journal">Journal</a></li>
+            <li><a href="http://industrystandardny.com/contact">Contact</a></li> -->
+        </ul>
+    </div>
+    <div id="checkout_iframe">
+    </div>
+</div>
+
 <div class="container">
 <%= yield %>
 </div>

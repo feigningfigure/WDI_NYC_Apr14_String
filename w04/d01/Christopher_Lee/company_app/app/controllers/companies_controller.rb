@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   def index
-    @companies = Company.order(id: :desc)
+    @companies = Company.order(assets_in_billions: :desc)
     @company = Company.new
   end
 
