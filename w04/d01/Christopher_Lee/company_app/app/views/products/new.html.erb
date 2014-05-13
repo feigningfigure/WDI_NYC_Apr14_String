@@ -1,4 +1,4 @@
-<h1>Add a new product</h1>
+<h1 class="new_product">Add a new product</h1>
 <%= form_for @product, url: "/products", method: "post" do |f| %>
   <%= f.text_field :name, {placeholder: "name"} %>
   <%= f.text_field :image_url, {placeholder: "image_url"}%>

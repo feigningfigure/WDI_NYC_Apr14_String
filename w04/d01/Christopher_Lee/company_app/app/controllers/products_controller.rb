@@ -19,7 +19,8 @@ class ProductsController < ApplicationController
   def update
     product = Product.find(params[:id])
     product.update_attributes(product_attributes)
-    redirect_to "/companies/#{params[:id]}"
+    # render json: product_attributes
+    redirect_to "/companies/#{product_attributes[:company_id]}"
   end
 
 
