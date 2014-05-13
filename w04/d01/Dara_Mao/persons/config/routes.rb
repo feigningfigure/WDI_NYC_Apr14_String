@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #PERSON
 
   get "/people" => "people#index"
 
@@ -7,6 +8,18 @@ Rails.application.routes.draw do
 
   get "/people/:id/edit" => "people#edit", as: :edit_person
   patch "/people/:id" => "people#update"
+
+
+  # COMPUTER
+
+  post "/computers" => "computers#create"
+
+  get "/computers/:id" => "computers#index", as: :computer
+  get "/computers/:id/edit" => "computers#edit", as: :edit_computer
+
+  patch "/computers/:id" => "computers#update"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
