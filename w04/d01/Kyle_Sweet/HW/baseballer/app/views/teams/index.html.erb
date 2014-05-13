@@ -1,0 +1,8 @@
+<h1>Teams</h1>
+
+
+<ul class="teams">
+  <% @team.each do |team| %>
+    <li><%= link_to team.title, "/teams/#{teams.id}" %></li>
+  <% end %>
+</ul>

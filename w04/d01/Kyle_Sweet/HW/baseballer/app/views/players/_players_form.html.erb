@@ -1,0 +1,6 @@
+<%= form_for players_local do |f| %>
+  <%= f.text_field :name, { placeholder: "name" } %>
+  <%= f.text_field :number, { placeholder: "number" } %>
+  <%= f.hidden_field :position, value: "position" %>
+  <%= f.submit %>
+<% end %>

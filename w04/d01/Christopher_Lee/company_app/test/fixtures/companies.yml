@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  image_url: MyString
+  assets_in_billions: 1
+  founded: 1
+
+two:
+  name: MyString
+  image_url: MyString
+  assets_in_billions: 1
+  founded: 1

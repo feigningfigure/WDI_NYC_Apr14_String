@@ -1,0 +1,7 @@
+<%= form_for country_local do |f| %>
+  <%= f.text_field :name, { placeholder: "name" } %>
+  <%= f.text_field :population, { placeholder: "population" } %>
+  <%= f.text_field :language, { placeholder: "language" } %>
+  <%= f.hidden_field :continent_id, value: continent_id %>
+  <%= f.submit %>
+<% end %>
