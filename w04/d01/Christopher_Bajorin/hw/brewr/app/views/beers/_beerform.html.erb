@@ -1,0 +1,7 @@
+<%= form_for beer_local do |f| %>
+  <%= f.text_field :name, { placeholder: "name" } %>
+  <%= f.text_field :style, { placeholder: "style" } %>
+  <%= f.text_field :description, { placeholder: "description" } %>
+  <%= f.hidden_field :brewery_id, value: brewery_id %>
+  <%= f.submit %>
+<% end %>
