@@ -1,0 +1,8 @@
+<%= render partial: "countryform", locals: { country_local: @country } %>
+
+<h2>Countries</h2>
+<ul class="countries">
+  <% @countries.each do |country| %>
+    <li><%= link_to country.title, "/countries/#{country.id}" %></li>
+  <% end %>
+</ul>

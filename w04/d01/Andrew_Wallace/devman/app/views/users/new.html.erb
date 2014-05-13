@@ -1,0 +1,9 @@
+
+
+
+<p><%= link_to "Home", "/" %> |  <%= link_to "Back", "/users/" %></p>
+<%= form_for @user, url: "/users" do |f| %>
+
+<%= f.text_field :name, :placeholder => "Name", class: 'input' %><br>
+<%= f.submit "Create", class: 'button'%>
+<% end %>

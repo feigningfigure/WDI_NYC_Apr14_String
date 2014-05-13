@@ -1,0 +1,27 @@
+<h1>Listing cookie_watchers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cookies</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cookie_watchers.each do |cookie_watcher| %>
+      <tr>
+        <td><%= cookie_watcher.name %></td>
+        <td><%= cookie_watcher.cookies %></td>
+        <td><%= link_to 'Show', cookie_watcher %></td>
+        <td><%= link_to 'Edit', edit_cookie_watcher_path(cookie_watcher) %></td>
+        <td><%= link_to 'Destroy', cookie_watcher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cookie watcher', new_cookie_watcher_path %>

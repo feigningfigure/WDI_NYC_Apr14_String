@@ -1,0 +1,595 @@
+POSTLast login: Thu May  8 10:12:10 on ttys001
+GA General Assembly  Web Development Immersive 
+------------------------------------------
+git version 1.9.2
+Homebrew 0.9.5
+ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-darwin13.0.0]
+psql (PostgreSQL) 9.3.4
+Rails 4.0.2
+heroku-toolbelt/3.7.3 (x86_64-darwin10.8.0) ruby/1.9.3
+------------------------------------------
+type unwelcome to remove this message
+daramao ~
+$ string
+daramao ~/code/wdi/WDI_NYC_Apr14_String on master[?]
+$ ls
+Readme.md  guides/    tools/     w01/       w02/       w03/
+daramao ~/code/wdi/WDI_NYC_Apr14_String on master[?]
+$ cd w03
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03 on master[?]
+$ ls
+README.md  d01/       d02/       d03/       d04/
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03 on master[?]
+$ cd d04
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04 on master[?]
+$ ls
+ASSIGNMENT_FILES/    Emmanuel_Tucker/     Liz_Goldstein/
+Andrew_Wallace/      INSTRUCTORS/         Mason_Tang/
+Artem_Murga/         Jane_Shin/           Nancy_Ko/
+Ben_Ticsay/          Joe_Park/            Nelson_Schubart/
+Christopher_Bajorin/ Joel_Rosenblatt/     Readme.md
+Christopher_Lee/     John_Randall/        Sophie_Laffont/
+Dara_Mao/            Jonathan_Milgrom/    Victor_Rodriguez/
+David_Montricher/    Keyan_Bagheri/       Wilson_Chan/
+Declan_Van_Welie/    Kyle_Sweet/          Zack_Levine/
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04 on master[?]
+$ cd Dara_Mao/
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao on master[?]
+$ ls
+README.md          rectangles_kitten/
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao on master[?]
+$ rails new first_rails_app
+      create  
+      create  README.rdoc
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/assets/javascripts/application.js
+      create  app/assets/stylesheets/application.css
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/views/layouts/application.html.erb
+      create  app/assets/images/.keep
+      create  app/mailers/.keep
+      create  app/models/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/secret_token.rb
+      create  config/initializers/session_store.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  test/fixtures
+      create  test/fixtures/.keep
+      create  test/controllers
+      create  test/controllers/.keep
+      create  test/mailers
+      create  test/mailers/.keep
+      create  test/models
+      create  test/models/.keep
+      create  test/helpers
+      create  test/helpers/.keep
+      create  test/integration
+      create  test/integration/.keep
+      create  test/test_helper.rb
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor/assets/javascripts
+      create  vendor/assets/javascripts/.keep
+      create  vendor/assets/stylesheets
+      create  vendor/assets/stylesheets/.keep
+         run  bundle install
+^[[BFetching gem metadata from https://rubygems.org/..........
+Fetching additional metadata from https://rubygems.org/..
+Resolving dependencies...
+Installing rake (10.3.1)
+Using i18n (0.6.9)
+Installing minitest (4.7.5)
+Installing multi_json (1.10.0)
+Installing thread_safe (0.3.3)
+Installing tzinfo (0.3.39)
+Using activesupport (4.0.2)
+Using builder (3.1.4)
+Using erubis (2.7.0)
+Using rack (1.5.2)
+Using rack-test (0.6.2)
+Using actionpack (4.0.2)
+Using mime-types (1.25.1)
+Installing polyglot (0.3.4)
+Using treetop (1.4.15)
+Using mail (2.5.4)
+Using actionmailer (4.0.2)
+Using activemodel (4.0.2)
+Using activerecord-deprecated_finders (1.0.3)
+Installing arel (4.0.2)
+Using activerecord (4.0.2)
+Using bundler (1.5.2)
+Installing coffee-script-source (1.7.0)
+Installing execjs (2.0.2)
+Installing coffee-script (2.2.0)
+Installing thor (0.19.1)
+Using railties (4.0.2)
+Installing coffee-rails (4.0.1)
+Using hike (1.2.3)
+Installing jbuilder (1.5.3)
+Installing jquery-rails (3.1.0)
+Using json (1.8.1)
+Using tilt (1.4.1)
+Installing sprockets (2.11.0)
+Using sprockets-rails (2.0.1)
+Using rails (4.0.2)
+Using rdoc (4.1.1)
+Installing sass (3.2.19)
+Installing sass-rails (4.0.3)
+Installing sdoc (0.4.0)
+Installing sqlite3 (1.3.9)
+Installing turbolinks (2.2.2)
+Installing uglifier (2.5.0)
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+^R
+^[[daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao on master[?]
+$ cd first_rails_app/
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ ls
+Gemfile       Rakefile      config/       lib/          test/
+Gemfile.lock  app/          config.ru     log/          tmp/
+README.rdoc   bin/          db/           public/       vendor/
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ tree
+.
+├── Gemfile
+├── Gemfile.lock
+├── README.rdoc
+├── Rakefile
+├── app
+│   ├── assets
+│   │   ├── images
+│   │   ├── javascripts
+│   │   │   └── application.js
+│   │   └── stylesheets
+│   │       └── application.css
+│   ├── controllers
+│   │   ├── application_controller.rb
+│   │   └── concerns
+│   ├── helpers
+│   │   └── application_helper.rb
+│   ├── mailers
+│   ├── models
+│   │   └── concerns
+│   └── views
+│       └── layouts
+│           └── application.html.erb
+├── bin
+│   ├── bundle
+│   ├── rails
+│   └── rake
+├── config
+│   ├── application.rb
+│   ├── boot.rb
+│   ├── database.yml
+│   ├── environment.rb
+│   ├── environments
+│   │   ├── development.rb
+│   │   ├── production.rb
+│   │   └── test.rb
+│   ├── initializers
+│   │   ├── backtrace_silencers.rb
+│   │   ├── filter_parameter_logging.rb
+│   │   ├── inflections.rb
+│   │   ├── mime_types.rb
+│   │   ├── secret_token.rb
+│   │   ├── session_store.rb
+│   │   └── wrap_parameters.rb
+│   ├── locales
+│   │   └── en.yml
+│   └── routes.rb
+├── config.ru
+├── db
+│   └── seeds.rb
+├── lib
+│   ├── assets
+│   └── tasks
+├── log
+├── public
+│   ├── 404.html
+│   ├── 422.html
+│   ├── 500.html
+│   ├── favicon.ico
+│   └── robots.txt
+├── test
+│   ├── controllers
+│   ├── fixtures
+│   ├── helpers
+│   ├── integration
+│   ├── mailers
+│   ├── models
+│   └── test_helper.rb
+├── tmp
+│   └── cache
+│       └── assets
+└── vendor
+    └── assets
+        ├── javascripts
+        └── stylesheets
+
+38 directories, 36 files
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ cd app/
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app/app on master[?]
+$ ls
+assets/      controllers/ helpers/     mailers/     models/      views/
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app/app on master[?]
+$ cd views/
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app/app/views on master[?]
+$ ls
+layouts/
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app/app/views on master[?]
+$ cd layouts/
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app/app/views/layouts on master[?]
+$ ls
+application.html.erb
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app/app/views/layouts on master[?]
+$ cd ../../
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app/app on master[?]
+$ tree
+.
+├── assets
+│   ├── images
+│   ├── javascripts
+│   │   └── application.js
+│   └── stylesheets
+│       └── application.css
+├── controllers
+│   ├── application_controller.rb
+│   └── concerns
+├── helpers
+│   └── application_helper.rb
+├── mailers
+├── models
+│   └── concerns
+└── views
+    └── layouts
+        └── application.html.erb
+
+12 directories, 5 files
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app/app on master[?]
+$ cd ../
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ rails -v
+Rails 4.0.2
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ bundle
+Using rake (10.3.1)
+Using i18n (0.6.9)
+Using minitest (4.7.5)
+Using multi_json (1.10.0)
+Using thread_safe (0.3.3)
+Using tzinfo (0.3.39)
+Using activesupport (4.0.2)
+Using builder (3.1.4)
+Using erubis (2.7.0)
+Using rack (1.5.2)
+Using rack-test (0.6.2)
+Using actionpack (4.0.2)
+Using mime-types (1.25.1)
+Using polyglot (0.3.4)
+Using treetop (1.4.15)
+Using mail (2.5.4)
+Using actionmailer (4.0.2)
+Using activemodel (4.0.2)
+Using activerecord-deprecated_finders (1.0.3)
+Using arel (4.0.2)
+Using activerecord (4.0.2)
+Using coffee-script-source (1.7.0)
+Using execjs (2.0.2)
+Using coffee-script (2.2.0)
+Using thor (0.19.1)
+Using railties (4.0.2)
+Using coffee-rails (4.0.1)
+Using hike (1.2.3)
+Using jbuilder (1.5.3)
+Using jquery-rails (3.1.0)
+Using json (1.8.1)
+Using bundler (1.5.2)
+Using tilt (1.4.1)
+Using sprockets (2.11.0)
+Using sprockets-rails (2.0.1)
+Using rails (4.0.2)
+Using rdoc (4.1.1)
+Using sass (3.2.19)
+Using sass-rails (4.0.3)
+Using sdoc (0.4.0)
+Using sqlite3 (1.3.9)
+Using turbolinks (2.2.2)
+Using uglifier (2.5.0)
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ rake db:create
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ bundle install
+Using rake (10.3.1)
+Using i18n (0.6.9)
+Using minitest (4.7.5)
+Using multi_json (1.10.0)
+Using thread_safe (0.3.3)
+Using tzinfo (0.3.39)
+Using activesupport (4.0.2)
+Using builder (3.1.4)
+Using erubis (2.7.0)
+Using rack (1.5.2)
+Using rack-test (0.6.2)
+Using actionpack (4.0.2)
+Using mime-types (1.25.1)
+Using polyglot (0.3.4)
+Using treetop (1.4.15)
+Using mail (2.5.4)
+Using actionmailer (4.0.2)
+Using activemodel (4.0.2)
+Using activerecord-deprecated_finders (1.0.3)
+Using arel (4.0.2)
+Using activerecord (4.0.2)
+Using coffee-script-source (1.7.0)
+Using execjs (2.0.2)
+Using coffee-script (2.2.0)
+Using thor (0.19.1)
+Using railties (4.0.2)
+Using coffee-rails (4.0.1)
+Using hike (1.2.3)
+Using jbuilder (1.5.3)
+Using jquery-rails (3.1.0)
+Using json (1.8.1)
+Using bundler (1.5.2)
+Using tilt (1.4.1)
+Using sprockets (2.11.0)
+Using sprockets-rails (2.0.1)
+Using rails (4.0.2)
+Using rdoc (4.1.1)
+Using sass (3.2.19)
+Using sass-rails (4.0.3)
+Using sdoc (0.4.0)
+Using sqlite3 (1.3.9)
+Using turbolinks (2.2.2)
+Using uglifier (2.5.0)
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ rails -v
+You cannot specify the same gem twice with different version requirements.
+You specified: jbuilder (>= 0) and jbuilder (~> 1.2)
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ bundle
+You cannot specify the same gem twice with different version requirements.
+You specified: jbuilder (~> 2.0) and jbuilder (~> 1.2)
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ bundle
+You cannot specify the same gem twice with different version requirements.
+You specified: jbuilder (~> 2.0) and jbuilder (~> 1.2)
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ bundle
+Your Gemfile lists the gem jbuilder (~> 1.2) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of just one of them later.
+Your Gemfile lists the gem sdoc (>= 0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of just one of them later.
+Fetching gem metadata from https://rubygems.org/...........
+Fetching additional metadata from https://rubygems.org/..
+Resolving dependencies...
+Using rake (10.3.1)
+Using i18n (0.6.9)
+Using minitest (4.7.5)
+Using multi_json (1.10.0)
+Using thread_safe (0.3.3)
+Using tzinfo (0.3.39)
+Using activesupport (4.0.2)
+Using builder (3.1.4)
+Using erubis (2.7.0)
+Using rack (1.5.2)
+Using rack-test (0.6.2)
+Using actionpack (4.0.2)
+Using mime-types (1.25.1)
+Using polyglot (0.3.4)
+Using treetop (1.4.15)
+Using mail (2.5.4)
+Using actionmailer (4.0.2)
+Using activemodel (4.0.2)
+Using activerecord-deprecated_finders (1.0.3)
+Using arel (4.0.2)
+Using activerecord (4.0.2)
+Using bundler (1.5.2)
+Using coffee-script-source (1.7.0)
+Using execjs (2.0.2)
+Using coffee-script (2.2.0)
+Using thor (0.19.1)
+Using railties (4.0.2)
+Using coffee-rails (4.0.1)
+Using hike (1.2.3)
+Using jbuilder (1.5.3)
+Using jquery-rails (3.1.0)
+Using json (1.8.1)
+Installing pg (0.17.1)
+Using tilt (1.4.1)
+Using sprockets (2.11.0)
+Using sprockets-rails (2.0.1)
+Using rails (4.0.2)
+Using rdoc (4.1.1)
+Using sass (3.2.19)
+Using sass-rails (4.0.3)
+Using sdoc (0.4.0)
+Using turbolinks (2.2.2)
+Using uglifier (2.5.0)
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ rake db:create
+rake aborted!
+ActiveRecord::AdapterNotSpecified: development database is not configured
+
+Tasks: TOP => db:create
+(See full trace by running task with --trace)
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ trace
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ subl .
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ bundle
+Using rake (10.3.1)
+Using i18n (0.6.9)
+Using minitest (4.7.5)
+Using multi_json (1.10.0)
+Using thread_safe (0.3.3)
+Using tzinfo (0.3.39)
+Using activesupport (4.0.2)
+Using builder (3.1.4)
+Using erubis (2.7.0)
+Using rack (1.5.2)
+Using rack-test (0.6.2)
+Using actionpack (4.0.2)
+Using mime-types (1.25.1)
+Using polyglot (0.3.4)
+Using treetop (1.4.15)
+Using mail (2.5.4)
+Using actionmailer (4.0.2)
+Using activemodel (4.0.2)
+Using activerecord-deprecated_finders (1.0.3)
+Using arel (4.0.2)
+Using activerecord (4.0.2)
+Using coffee-script-source (1.7.0)
+Using execjs (2.0.2)
+Using coffee-script (2.2.0)
+Using thor (0.19.1)
+Using railties (4.0.2)
+Using coffee-rails (4.0.1)
+Using hike (1.2.3)
+Using jbuilder (1.5.3)
+Using jquery-rails (3.1.0)
+Using json (1.8.1)
+Using pg (0.17.1)
+Using bundler (1.5.2)
+Using tilt (1.4.1)
+Using sprockets (2.11.0)
+Using sprockets-rails (2.0.1)
+Using rails (4.0.2)
+Using rdoc (4.1.1)
+Using sass (3.2.19)
+Using sass-rails (4.0.3)
+Using sdoc (0.4.0)
+Using turbolinks (2.2.2)
+Using uglifier (2.5.0)
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ rake db:create
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:831:in `initialize'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:831:in `new'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:831:in `connect'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:548:in `initialize'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/connection_handling.rb:53:in `connection'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/tasks/postgresql_database_tasks.rb:8:in `connection'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/tasks/postgresql_database_tasks.rb:17:in `create'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/tasks/database_tasks.rb:73:in `create'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/tasks/database_tasks.rb:87:in `block in create_current'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/tasks/database_tasks.rb:183:in `block in each_current_configuration'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/tasks/database_tasks.rb:182:in `each'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/tasks/database_tasks.rb:182:in `each_current_configuration'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/tasks/database_tasks.rb:86:in `create_current'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.2/lib/active_record/railties/databases.rake:20:in `block (2 levels) in <top (required)>'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/task.rb:240:in `call'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/task.rb:240:in `block in execute'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/task.rb:235:in `each'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/task.rb:235:in `execute'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/task.rb:179:in `block in invoke_with_call_chain'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/task.rb:172:in `invoke_with_call_chain'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/task.rb:165:in `invoke'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/application.rb:150:in `invoke_task'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/application.rb:106:in `block (2 levels) in top_level'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/application.rb:106:in `each'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/application.rb:106:in `block in top_level'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/application.rb:115:in `run_with_threads'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/application.rb:100:in `top_level'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/application.rb:78:in `block in run'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/application.rb:176:in `standard_exception_handling'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/lib/rake/application.rb:75:in `run'
+/Users/daramao/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rake-10.3.1/bin/rake:33:in `<top (required)>'
+/Users/daramao/.rbenv/versions/2.0.0-p353/bin/rake:23:in `load'
+/Users/daramao/.rbenv/versions/2.0.0-p353/bin/rake:23:in `<main>'
+Couldn't create database for {"adapter"=>"postgresql", "pool"=>5, "timeout"=>5000, "database"=>"first_rails"}
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ rake db:create
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ rails generate model Post title: string body: text
+      invoke  active_record
+      create    db/migrate/20140508152527_create_posts.rb
+      create    app/models/post.rb
+      invoke    test_unit
+      create      test/models/post_test.rb
+      create      test/fixtures/posts.yml
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ rake db:migrate
+==  CreatePosts: migrating ====================================================
+-- create_table(:posts)
+   -> 0.0055s
+==  CreatePosts: migrated (0.0055s) ===========================================
+
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ rails console
+Loading development environment (Rails 4.0.2)
+irb(main):001:0> posts = Post.all
+  Post Load (1.2ms)  SELECT "posts".* FROM "posts"
+=> #<ActiveRecord::Relation []>
+irb(main):002:0> 

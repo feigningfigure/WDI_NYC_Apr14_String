@@ -1,0 +1,16 @@
+<h2 class="user_name"><%= @user.name %></h2>
+<p>
+  <%= link_to "edit", "/users/#{@user.id}/edit" %>
+</p>
+<h3>Devices</h3>
+<ul class="devices">
+  <% @user.devices.order(id: :desc).each do |device| %>
+    <li class="device">
+      <h4><%= device.model %></h4>
+      <p>
+        <%= link_to "edit", "/devices/#{device.id}/edit" %>
+      </p>
+      <p><%= device.description %></p>
+    </li>
+  <% end %>
+</ul>
