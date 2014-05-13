@@ -1,0 +1,16 @@
+<% id = params[:id].to_i %>
+<% moon = Moons.find(id) %>
+
+<form action="/moons/update/<%=params[:id]%>" method="post">
+<p>Name</p>
+<p><input type="text" name="name" value="<%=moon.name%>"></p>
+<p>Planet ID</p>
+<p><input type="text" name="planet_id" value="<%=moon.planet_id%>"></p>
+<p>Diameter</p>
+<p><input type="text" name="diameter" value="<%=moon.diameter%>"></p>
+<p>Mass</p>
+<p><input type="text" name="mass" value="<%=moon.mass%>"></p>
+<p>Life</p>
+<p><input type="text" name="life" value="<%=moon.life%>"></p>
+<input type="submit" name="submit" value="submit">
+</form>

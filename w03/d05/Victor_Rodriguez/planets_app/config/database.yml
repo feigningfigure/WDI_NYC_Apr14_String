@@ -1,0 +1,25 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: <%= File.basename(Rails.root) %>_development
+  pool: 5
+  host: localhost
+  username:  
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: <%= File.basename(Rails.root) %>_test
+  pool: 5
+  host: localhost
+  username: 
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: <%= File.basename(Rails.root) %>_production
+  pool: 5
+  username: 
+  password:

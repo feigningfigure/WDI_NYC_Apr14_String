@@ -1,0 +1,24 @@
+
+      <% planet = Planet.find(params[:id]) %>
+
+        <h1><%= planet.name %>!</h1>
+
+      <div class= "planet_box">
+       <div class= "planet_image">
+        <p><%= image_tag planet.image_url %></p>
+      </div>
+
+       <div class="planet_facts">
+        <p>Diameter: <%= planet.diameter %>
+        <p>Mass: <%= planet.mass %>
+        <p>Supports life? <%= planet.life %>
+        <p>Has moons? <%= planet.find_moon %></p>
+      </div>
+      </div>
+<h2>Add a Moon to <%= planet.name %></h2>
+
+  <%= form_for Moon.new do |f| %>
+  <p>Moon Name: <%= f.text_field :name %></p>
+  <%= f.hidden_field :planet_id, :value => "#{planet.id}".to_i %>
+  <p><%= f.submit "Add moon!" %></p>
+  <% end %>

@@ -1,0 +1,26 @@
+
+<% id = params[:id].to_i %>
+<% planet = Planet.find(id) %>
+<% moons = []%>
+<% Moons.all.each do |moon| %>
+<% if moon.planet_id == planet.id %>
+<% moons << moon.name %>
+<% end %>
+<% end %>
+<% if moons.length >= 1 %>
+<% orbiting_moons = moons.join(", ") %>
+<% else orbiting_moons = "none" %>
+<% end %>
+
+<h3><%= planet.name %></h3>
+  <img src="<%= planet.photo %>">
+  <ul>
+  	<li>Diameter = <%=planet.diameter%></li>
+  	<li>Mass = <%=planet.mass%></li>
+  	<li>Life on planet = <%=planet.life%></li>
+  	<li>Moons it boasts = <%= orbiting_moons %></li>
+  <hr>
+
+  <nav class="header">
+    <a href="update/<%=planet.id%>">update<a> | <a href="/moons/new/<%=id%>">add moon<a> | <a href="delete/<%=planet.id%>">delete<a> 
+  </nav>
