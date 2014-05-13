@@ -1,8 +1,16 @@
 # blow up database each time
 Cookbook.delete_all
 Recipe.delete_all
+Chef.delete_all
 
+chefs = []
+10.times do
+  chefs << Chef.create({
+    name: Faker::Name.name
+    bio: Faker::Lorem.paragraphs(2).join("")
+    })
 
+end
 
 
 100.times do
@@ -29,6 +37,8 @@ Recipe.delete_all
     # use .recipes to attach recipes
     cookbook.recipes << recipe
   end
+
+  cookbook.chef = chefs.sample
 
   # save the newly created cookbook
   cookbook.save!
