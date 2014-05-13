@@ -22,6 +22,22 @@ class CompaniesController < ApplicationController
     redirect_to '/'
   end
 
+  def edit
+    @company = Company.find(params[:id])
+    # render partial: "cookbookform", locals: { cookbook_local: @cookbook }
+  end
+
+  def update
+
+    company = Company.find(params[:id])
+
+    company.update_attributes(company_attributes)
+
+    # render json: cookbook
+    redirect_to "/companies/#{params[:id]}"
+  end
+
+
 
   private
 
