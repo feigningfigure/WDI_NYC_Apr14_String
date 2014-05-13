@@ -1,9 +1,16 @@
 <h1>This is the Index File</h1>
 
+<%= form_for @company do |f| %>
+  <%= f.text_field :name, {placeholder: "name"} %>
+  <%= f.text_field :image_url, {placeholder: "image_url"} %>
+  <%= f.text_field :assets_in_billions, {placeholder: "assets"} %>
+  <%= f.text_field :founded, {placeholder: "founded"} %>
+  <%= f.submit "Create" %>
+<% end %>
 
 <ul class="companies">
   <% @companies.each do |company| %>
-    <li><h1><%= link_to company.name, "/companies/#{company.id}" %></h1></li>
+    <h1><%= link_to "#{company.name}", "/companies/#{company.id}" %></h1>
     <% company.products.each do |product| %>
       <li><%= product.name %></li>
       <li><img src=<%= product.image_url %>></li>
