@@ -1,0 +1,21 @@
+<h2 class="scene_title"><%= @scene.title %></h2>
+<p>
+  <%= link_to "edit", "/scenes/#{@scene.id}/edit" %>
+</p>
+<p class="scene_heading">
+  <%= @scene.heading %>
+</p>
+
+<h3>Dialogues</h3>
+<%= render partial: "dialogues/dialogueform", locals: { dialogue_local: @dialogue, scene_id: @scene.id }%>
+<ul class="dialogues">
+  <% @scene.dialogues.order(id: :desc).each do |dialogue| %>
+    <li class="dialogue">
+      <h4><%= dialogue.character %></h4>
+      <p>
+        <%= link_to "edit", "/dialogues/#{dialogue.id}/edit" %>
+      </p>
+      <p><%= dialogue.content %></p>
+    </li>
+  <% end %>
+</ul>

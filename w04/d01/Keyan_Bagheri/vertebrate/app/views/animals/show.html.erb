@@ -1,0 +1,22 @@
+
+<% id = params[:id].to_i %>
+<% animal = Animal.find(id) %>
+
+<% if Vertebrae.find_by_id(animal.vertebrae_id).nil? %>
+<% vertebrae_name = "none" %>
+<% else vertebrae = Vertebrae.find(animal.vertebrae_id)%>
+<% vertebrae_name = vertebrae.name %>
+<% end %>
+
+<h3><%= animal.name %></h3>
+  <ul>
+  	<li>Vertebrate class:  <%=vertebrae.name%></li>
+  	<br>
+  	<li>Scientific name: <%=animal.scientific_name%></li>
+  	<br>
+  	<li>Characteristics:  <%=animal.characteristics%></li>
+  <hr>
+
+  <nav class="header">
+    <a href="update/<%=animal.id%>">update<a> | <a href="delete/<%=animal.id%>">delete<a> 
+  </nav>

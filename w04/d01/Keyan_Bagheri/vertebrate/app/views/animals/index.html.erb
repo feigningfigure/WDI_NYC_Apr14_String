@@ -1,0 +1,11 @@
+<h2>Animals</h2>
+<% @animals.each  do |animal| %>
+<% if Vertebrae.find_by_id(animal.vertebrae_id).nil? %>
+<% vertebrae_name = "none" %>
+<% else vertebrae = Vertebrae.find(animal.vertebrae_id)%>
+<% vertebrae_name = vertebrae.name %>
+<% end %>
+  <h1><a href="/animals/<%=animal.id%>"><%= animal.name %>
+  <br>Class: <%=vertebrae_name%></a></h1>
+<hr>
+<% end %>

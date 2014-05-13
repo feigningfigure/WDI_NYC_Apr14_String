@@ -1,0 +1,25 @@
+
+<h2><%= @author.first_name %> <%=@author.last_name %></h2>
+<p>Born: <%= @author.birth %></p>
+<p>Died: <%= @author.death %></p>
+ <%= link_to "edit", "/authors/#{@author.id}/edit" %>
+
+<br>
+
+<h3>Books By <%= @author.first_name %> <%=@author.last_name %></h3>
+
+  <li>
+  <% @author.books.order(:title).each do |book| %>
+   <p> <%= book.title %></p>
+
+</li>
+  <% end %>
+
+<h3>Add a book we're msising:</h3>
+
+<%= form_for Book.new do |f| %>
+
+  <p>Title: <%= f.text_field :title %></p>
+ <%= f.hidden_field :author_id, :value => @author.id.to_i %>
+  <p><%= f.submit "Add title" %></p>
+  <% end %>

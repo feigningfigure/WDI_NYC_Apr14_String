@@ -1,0 +1,21 @@
+<%= form_for @planet, url: "/planets" do |f| %>
+	
+	<p>
+	  Name: <%= f.text_field :name %>
+	</p>
+	<p>
+	  Image URL: <%= f.text_field :image_url%>
+	</p>
+	<p>
+	  Diameter: <%= f.text_field :diameter %>
+	</p>
+	<p>
+	  Mass: <%= f.text_field :mass %>
+	</p>
+	<p>
+	  Is there life? <%= f.select :life, [['Yes', true], ['No', false]]%>
+	</p>
+
+	<%= f.submit %>
+
+<% end %>

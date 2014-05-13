@@ -1,0 +1,7 @@
+<%= form_for @product, url: "/products/#{@product.id}", method: "patch" do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :image_url %>
+  <%= f.text_field :founded %>
+  <%= f.hidden_field :company_id, value: @company.id %>
+  <%= f.submit %>
+<% end %>
