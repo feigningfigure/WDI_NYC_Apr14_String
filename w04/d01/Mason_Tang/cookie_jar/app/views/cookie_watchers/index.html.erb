@@ -1,0 +1,16 @@
+<h1>Who stole the cookie from the cookie jar?</h1>
+
+<h2><span class="accusor_name"><%= @accuser.name %>:</span> "<%= @thief.name %> stole the cookie from the cookie jar."</h2>
+
+<h2><span class="thief_name"><%= @thief.name %>:</span> "Who, me?"</h2>
+
+<h2><span class="accusor_name"><%= @accuser.name %>:</span> "Yes, you!"</h2>
+
+<h2><span class="thief_name"><%= @thief.name %>:</span> "Not me! Couldn't be! Wasn't me!"</h2>
+
+<h2><span class="accusor_name"><%= @accuser.name %>:</span> "Then who?"</h2>
+
+<p></p>
+
+<h3>(<%= @thief.name %>: <%= @thief.cookies %> cookie(s) eaten so far...)</h3>
+
