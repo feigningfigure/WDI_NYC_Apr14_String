@@ -9,6 +9,7 @@ post "/teams" => "teams#create"
 
 get "/teams/:id" => "teams#show" 
 
-get "/players" => "players#show"
+post "/players" => "players#create"
+
 
 end
