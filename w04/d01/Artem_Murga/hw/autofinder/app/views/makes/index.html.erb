@@ -1,0 +1,19 @@
+
+
+<%= link_to "Home", "/" %>
+
+<p><%= link_to "Create", "/makes/create" %></p>
+
+
+
+<% @makes.each do |i| %>
+	<br>
+
+
+	
+	<p><%= link_to i.name,  "/show/make/@make.id"  %> is from <%= i.country %> and has the following models: <%= i.models.as_json.each do |i| i["name"] end %> </p>
+
+
+	<br>
+
+<% end %>
