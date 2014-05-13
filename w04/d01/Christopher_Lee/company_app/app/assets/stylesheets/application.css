@@ -1,0 +1,279 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+* {
+margin: 0;
+padding: 0;
+}
+
+#header {
+height: 125px;
+background: #ffffff;
+position: relative;
+line-height: 125px;
+border-bottom: 1px solid #dadfe1;
+}
+
+.clearfix:before, .clearfix:after {
+content: " ";
+display: table;
+}
+
+element.style {
+}
+#header {
+height: 125px;
+background: #ffffff;
+position: relative;
+}
+.clearfix {
+}
+* {
+margin: 0;
+padding: 0;
+}
+user agent stylesheetdiv {
+display: block;
+}
+Pseudo ::before element
+.clearfix:before, .clearfix:after {
+content: " ";
+display: table;
+}
+Pseudo ::after element
+.clearfix:after {
+clear: both;
+}
+
+body {
+font-family: 'Open Sans', sans-serif;
+font-weight: 400;
+font-size: 17px;
+color: #7f7f7f;
+line-height: 1;
+background: #ffffff;
+letter-spacing: 0.035em;
+}
+
+h1,h2,h3,h4{
+  font-family: 'Vollkorn', serif;
+}
+
+#logo {
+margin: 0 auto;
+text-align: center;
+}
+
+#nav {
+position: absolute;
+top: 0;
+left: 0;
+padding-left: 50px;
+}
+
+#nav ul {
+list-style: none;
+}
+
+#nav li {
+display: block;
+float: left;
+margin-right: 22px;
+line-height: 125px;
+}
+
+#nav li.mobile {
+display: none;
+}
+
+#nav a {
+text-transform: uppercase;
+font-size: 12px;
+letter-spacing: 0.1em;
+}
+
+a, a:link, a:visited, a:active, a:focus {
+color: #155399;
+text-decoration: none;
+transition: color 0.1s linear 0s;
+-moz-transition: color 0.1s linear 0s;
+-webkit-transition: color 0.1s linear 0s;
+}
+
+a, input[type='submit'], input[type='reset'], button {
+cursor: pointer;
+text-decoration: none;
+-webkit-appearance: none;
+border-radius: 0;
+}
+
+#checkout_iframe {
+position: absolute;
+top: 57px;
+width: 445px;
+right: 0;
+}
+
+img {
+max-width: 100%;
+height: auto;
+display: block;
+margin: 0;
+padding: 0;
+}
+
+input {
+border: 1px solid #dadfe1;
+outline: none;
+background: white;
+display: block;
+width: 100%;
+-webkit-appearance: none;
+font-size: 14px;
+font-weight: 500;
+color: #3e474c;
+line-height: 1em;
+padding: 1em 1.1em;
+-webkit-border-radius: 0.25em;
+-moz-border-radius: 0.25em;
+-ms-border-radius: 0.25em;
+-o-border-radius: 0.25em;
+border-radius: 0.25em;
+margin: 10px 0;
+}
+
+.assets h1{
+}
+
+.add{
+  color: #7f7f7f;
+  text-align: center;
+  float: left;
+}
+
+.new_product{
+  margin-top: 40px;
+}
+
+.product_line{
+  max-height: 100px;
+  margin-bottom: 30px;
+  display: inline-block;
+  float: right;
+}
+
+
+/*  GRID OF TWELVE   ============================================================================= */
+
+.span_12_of_12 {
+  width: 100%;
+}
+
+.span_11_of_12 {
+  width: 91.53%;
+}
+
+.span_10_of_12 {
+  width: 83.06%;
+}
+
+.span_9_of_12 {
+  width: 74.6%;
+}
+
+.span_8_of_12 {
+  width: 66.13%;
+}
+
+.span_7_of_12 {
+  width: 57.66%;
+}
+
+.span_6_of_12 {
+  width: 49.2%;
+}
+
+.span_5_of_12 {
+  width: 40.73%;
+}
+
+.span_4_of_12 {
+  width: 32.26%;
+}
+
+.span_3_of_12 {
+  width: 23.8%;
+}
+
+.span_2_of_12 {
+  width: 15.33%;
+}
+
+.span_1_of_12 {
+  width: 6.86%;
+}
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content:"";
+  display:table;
+}
+.group:after {
+  clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+
+
+.company{
+  margin-top: 80px;
+}
