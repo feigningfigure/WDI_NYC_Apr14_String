@@ -7,16 +7,27 @@
   </div>
 </div>
 
-<div class="section group">
-  <div class="col span_2_of_12">
+
+
+
+ <div class="section group table">
+    <div class="table-row">
+    <% @company.products.each do |product| %>
+        <div class="col span_1_of_12 product_line">
+          <%= link_to "/products/#{product.id}/edit" do %>
+          <img src=<%= product.image_url %>>
+          <% end %>
+        </div>
+    <% end %>
+
+      <div class="col span_1_of_12 product_line">
+        <%= link_to "/products/#{@company.id}/new/" do %>
+        <h1 class="add">+<h1>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <% @company.products.order(id: :desc).each do |product| %>
-  <div class="col span_1_of_12">
-    <img src=<%= product.image_url %>>
-    <p><%= link_to "edit", "/products/#{product.id}/edit" %></p>
-  </div>
-  <% end %>
-</div>
+
 
 <%= link_to "Add new product", "/products/#{@company.id}/new/" %>
 
