@@ -1,0 +1,6 @@
+<%= form_for dialogue_local do |f| %>
+  <%= f.text_field :character, { placeholder: "character" } %>
+  <%= f.text_field :content, { placeholder: "content" } %>
+  <%= f.hidden_field :scene_id, value: scene_id %>
+  <%= f.submit %>
+<% end %>
