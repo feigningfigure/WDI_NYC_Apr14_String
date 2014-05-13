@@ -1,0 +1,34 @@
+<h2>Welcome to WDI Stocks<h2>
+
+<div id='big_container'>
+
+<div id='form_container'>
+  <form name="stock_form" action="/" method="GET">
+    Stock Ticker Symbol: <input type="text" name="stock_code"><br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+<% if @stock_code != nil %>
+    <div id='output_container'>
+    <p class='pre_header'>information for </p>
+    <h3 id='stock_heading'><%= @api_response.name %> (<%= @stock_code %>)</h3>
+      <ul>
+        <li>Last Trade: <%= @api_response.lastTrade %></li>
+        <li>Change: <%= @api_response.change %></li>
+        <li>Change Points: <%= @api_response.changePoints %></li>
+        <li>Change Percent: <%= @api_response.changePercent %></li>
+        <li>Previous Close : <%= @api_response.previousClose %></li>
+        <li>Day High/Low: <%= @api_response.dayHigh %>/<%= @api_response.dayLow %></li>
+        <li>Volume: <%= @api_response.volume %></li>
+        <li>average DailyVolume : <%= @api_response.averageDailyVolume  %></li>
+        <li>Day Range: <%= @api_response.dayRange %></li>
+        <li>TickerTrend: <%= @api_response.tickerTrend %></li>
+      </ul>
+
+    </div>
+<% end %>
+
+
+</div>
