@@ -1,0 +1,11 @@
+
+<form action="/animals" method="post">
+<% if @id > 0 %>
+<input type= "hidden" name="vertebrae_id" value=<%=@id%>>
+<% else %>
+<input type="text" name="vertebrae_id" placeholder="id of vertebrae class"></p>
+<%end%>
+<p><input type="text" name="name" placeholder="name of animal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="scientific_name" placeholder= "scientific name"></p>
+<p><textarea rows=4 cols=41 name="characteristics" placeholder= "characteristics of animal"></textarea></p>
+<input type="submit" name="submit" value="submit">
+</form>
