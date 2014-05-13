@@ -1,0 +1,20 @@
+<h2 class="genre_title"><%= @genre.title %></h2>
+<p>
+  <%= link_to "edit", "/genres/#{@genre.id}/edit" %>
+</p>
+<p class="genre_description">
+  <%= @genre.description %>
+</p>
+<h3>Bands</h3>
+<%= render partial: "bands/bandform", locals: { band_local: @recipe, genre_id: @genre.id }%>
+<ul class="bands">
+  <% @genre.bands.order(id: :desc).each do |band| %>
+    <li class="band">
+      <h4><%= band.name %></h4>
+      <p>
+        <%= link_to "edit", "/bands/#{band.id}/edit" %>
+      </p>
+      <p><%= band.bio %></p>
+    </li>
+  <% end %>
+</ul>
