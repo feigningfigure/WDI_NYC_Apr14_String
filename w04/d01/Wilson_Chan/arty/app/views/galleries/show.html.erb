@@ -1,0 +1,18 @@
+<h2 class="gallery_title"><%= @cookbook.title %></h2>
+<p class="gallery_description">
+  <%= @gallery.description %>
+</p>
+<h3>Artists</h3>
+<%= form_for @artist, url: "/artists" do |f| %>
+  <%= f.text_field :name, { placeholder: "name" } %>
+  <%= f.text_field :decription, {placeholder: "description"} %>
+  <%= f.submit %>
+<% end %>
+<ul class="artists">
+  <% @gallery.artists.order(id: :desc).each do |artists| %>
+    <li class="artist">
+      <h4><%= artist.title %></h4>
+      <p><%= artist.content %></p>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,12 @@
+<%= form_for @gallery, url: "/galleries", method: "POST" do |f| %>
+  <%= f.text_field :name, {placeholder: "title"} %>
+  <%= f.text_field :address, {placeholder: "address"} %>
+  <%= f.submit %>
+<% end %>
+
+<h2>Galleries</h2>
+<ul class="galleries">
+  <% @galleries.each do |gallery| %>
+    <li><%= link_to gallery.title, "/galleries/#{gallery.id}" %></li>
+  <% end %>
+</ul>
