@@ -42,6 +42,7 @@ class CookbooksController < ApplicationController
   def edit
     @cookbook = Cookbook.find(params[:id])
     # render json: @cookbook
+    render partial: "cookbookform", locals: { cookbook_local: @cookbook }
   end
 
    def update
