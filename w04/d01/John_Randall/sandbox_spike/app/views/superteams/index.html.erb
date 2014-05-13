@@ -1,0 +1,23 @@
+<h1>Listing superteams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @superteams.each do |superteam| %>
+      <tr>
+        <td><%= link_to 'Show', superteam %></td>
+        <td><%= link_to 'Edit', edit_superteam_path(superteam) %></td>
+        <td><%= link_to 'Destroy', superteam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Superteam', new_superteam_path %>
