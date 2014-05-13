@@ -1,0 +1,43 @@
+body { 
+  text-align: center;
+  background-image: url('http://ak1.ostkcdn.com/images/products/7550743/7550743/Old-Dutch-Hammered-Stainless-Steel-Cookie-Jar-P14983513.jpeg');
+  background-repeat: no-repeat;
+  color: black;
+  font-family: helvetica;
+  text-shadow: 1px 1px gray;
+}
+h1 {
+  margin-top: auto;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 68px;
+  text-shadow: 1px 2px white; 
+  color: #DE7615;
+}
+p {
+  float: right;
+  font-size: 18px;
+  margin-left: 250px;
+}
+input {
+  border: 0;
+  padding: 10px;
+  font-size: 18px;
+}
+input[type="submit"] {
+  background: red;
+  color: white;
+}
+
+ul {
+  display: inline;
+}
+
+a {
+  font-family: 'Oswald', sans-serif;
+  color: #6DDFFC;
+  text-decoration: none;
+}
+a:visited {
+  font-family: 'Oswald', sans-serif;
+  color: #6DDFFC;
+}
