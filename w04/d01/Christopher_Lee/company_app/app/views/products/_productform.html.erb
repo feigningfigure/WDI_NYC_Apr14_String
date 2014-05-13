@@ -1,0 +1,7 @@
+<%= form_for product_local do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :image_url %>
+  <%= f.text_field :founded %>
+  <%= f.hidden_field :company_id, value: company_id %>
+  <%= f.submit %>
+<% end %>

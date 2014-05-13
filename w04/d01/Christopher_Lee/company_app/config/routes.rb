@@ -14,4 +14,12 @@ Rails.application.routes.draw do
   # update
   patch "/companies/:id" => "companies#update"
 
+  # products
+  post "/products" => "products#create"
+
+  # product edit
+  get "/products/:id/edit" => "products#edit", as: :edit_product
+
+  # UPDATE
+  patch "/products/:id" => "products#update"
 end
