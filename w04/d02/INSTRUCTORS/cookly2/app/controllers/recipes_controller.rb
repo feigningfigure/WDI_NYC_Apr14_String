@@ -22,6 +22,11 @@ class RecipesController < ApplicationController
     # render json: params
   end
 
+  def show
+    # shows one recipe
+    @recipe = Recipe.find(params[:id])
+  end
+
   private
 
   def recipe_attributes

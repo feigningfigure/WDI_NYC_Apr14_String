@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   post "/recipes" => "recipes#create"
 
   # get one RECIPE
-  get "/recipes/:id" => "recipes#index", as: :recipe
+  get "/recipes/:id" => "recipes#show", as: :recipe
 
   # get EDIT form for recipes
   get "/recipes/:id/edit" => "recipes#edit", as: :edit_recipe

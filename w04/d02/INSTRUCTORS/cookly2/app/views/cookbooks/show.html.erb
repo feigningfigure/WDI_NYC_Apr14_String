@@ -12,9 +12,9 @@
     <li class="recipe">
       <h4><%= recipe.title %></h4>
       <p>
+        <%= link_to "show", "/recipes/#{recipe.id}" %> |
         <%= link_to "edit", "/recipes/#{recipe.id}/edit" %>
       </p>
-      <p><%= recipe.content %></p>
     </li>
   <% end %>
 </ul>
