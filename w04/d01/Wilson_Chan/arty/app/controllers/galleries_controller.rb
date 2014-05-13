@@ -44,7 +44,7 @@ def show
   # strong params
   def artist_attributes
     # whitelisting parts of the params hash, that are DB-safe
-    params.require(:artist).permit(:name, :description)
+    params.require(:gallery).permit(:name, :address)
   end
 
 end
