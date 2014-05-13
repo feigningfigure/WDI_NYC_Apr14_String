@@ -39,6 +39,22 @@ class CookbooksController < ApplicationController
     redirect_to cookbooks_path
   end
 
+  def edit
+    @cookbook = Cookbook.find(params[:id])
+    # render json: @cookbook
+    render partial: "cookbookform", locals: { cookbook_local: @cookbook }
+  end
+
+   def update
+
+    cookbook = Cookbook.find(params[:id])
+
+    cookbook.update_attributes(cookbook_attributes)
+
+    # render json: cookbook
+    redirect_to "/cookbooks/#{params[:id]}"
+  end
+
   private
 
   # strong params

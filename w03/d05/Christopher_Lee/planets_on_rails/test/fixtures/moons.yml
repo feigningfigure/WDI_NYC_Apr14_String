@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  planet_id: 1
+  name: MyString
+  image_url: MyString
+  diameter: 1
+  mass: 9.99
+  life: false
+
+two:
+  planet_id: 1
+  name: MyString
+  image_url: MyString
+  diameter: 1
+  mass: 9.99
+  life: false

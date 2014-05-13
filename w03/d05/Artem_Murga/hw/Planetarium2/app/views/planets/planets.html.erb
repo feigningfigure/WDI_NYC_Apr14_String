@@ -1,0 +1,14 @@
+<a href="/">HOME</a>
+<hr>
+
+<% Planet.all.each do |p| %>
+<div class="text">
+	<p class="text">Name:<%= p.attributes["name"]%></p>
+	<br>
+	<p>Diameter : <%= p.attributes["diameter"]%></p>
+	<br>
+	<p>Mass : <%= p.attributes["mass"]%></p>
+	<br>
+	<p>Life : <%= p.attributes["life"] == true ? "Colonized" : "Not colonized yet"%></p>
+	<hr>
+</div>
