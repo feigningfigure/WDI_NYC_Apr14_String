@@ -10,3 +10,11 @@ post = Post.create({
   title: "First Post!",
   body: "Yeah!"
   })
+
+100.times do
+  Post.create({
+    title: Faker::Lorem.sentence(3),
+    body: Faker::Lorem.paragraph,
+    author_name: Faker::Name.name
+    })
+end
