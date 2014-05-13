@@ -1,0 +1,13 @@
+<h1><%= @game.title %></h1>
+
+<%= @game.genre %>
+
+
+<h2>Edit</h2>
+<%= form_for @game do |f| %>
+	<%= f.text_field :title, {value: @game.title, placeholder: "title"} %>
+	<%= f.text_field :genre, {value: @game.genre, placeholder: "genre"} %>
+	<%= f.hidden_field :studio_id, value: @game.studio_id %>
+	<%= f.submit %>
+
+<% end %>
