@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<nav>
+  <%= link_to "Companies", '/' %>
+</nav>
+<div class="container">
 <%= yield %>
+</div>
 
 </body>
 </html>

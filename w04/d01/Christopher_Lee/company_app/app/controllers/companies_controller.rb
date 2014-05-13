@@ -5,11 +5,8 @@ class CompaniesController < ApplicationController
   end
 
    def show
-    # define @cookbook
     @company = Company.find(params[:id])
 
-    # makes the form work
-    @products = Product.new
   end
 
   def create
@@ -24,7 +21,6 @@ class CompaniesController < ApplicationController
 
   def edit
     @company = Company.find(params[:id])
-    # render partial: "cookbookform", locals: { cookbook_local: @cookbook }
   end
 
   def update

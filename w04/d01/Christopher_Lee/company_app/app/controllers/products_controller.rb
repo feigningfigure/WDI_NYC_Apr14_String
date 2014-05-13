@@ -1,4 +1,9 @@
 class ProductsController < ApplicationController
+  def new
+    @company = params[:id]
+    @product = Product.new
+  end
+
   def create
     Product.create(product_attributes)
     # render json: Recipe.create(recipe_attributes)

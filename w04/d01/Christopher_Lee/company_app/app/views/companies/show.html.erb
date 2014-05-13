@@ -1,15 +1,22 @@
-<h2 class="company_name"><%= @company.name %></h2>
-<p>
-  <%= link_to "edit", "/companies/#{@company.id}/edit" %>
-</p>
-<h3>Products</h3>
-<ul class="products">
+<div class="section group">
+   <div class="col span_2_of_12">
+  </div>
+  <div class="col span_8_of_12">
+   <img src=<%= @company.image_url %>>
+   <%= link_to "edit", "/companies/#{@company.id}/edit" %>
+  </div>
+</div>
+
+<div class="section group">
+  <div class="col span_2_of_12">
+  </div>
   <% @company.products.order(id: :desc).each do |product| %>
-    <li class="product">
-      <h4><%= product.name %></h4>
-      <p>
-        <%= link_to "edit", "/products/#{product.id}/edit" %>
-      </p>
-    </li>
+  <div class="col span_1_of_12">
+    <img src=<%= product.image_url %>>
+    <p><%= link_to "edit", "/products/#{product.id}/edit" %></p>
+  </div>
   <% end %>
-</ul>
+</div>
+
+<%= link_to "Add new product", "/products/#{@company.id}/new/" %>
+

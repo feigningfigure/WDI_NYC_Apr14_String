@@ -22,4 +22,6 @@ Rails.application.routes.draw do
 
   # UPDATE
   patch "/products/:id" => "products#update"
+
+  get "/products/:id/new/" => "products#new"
 end

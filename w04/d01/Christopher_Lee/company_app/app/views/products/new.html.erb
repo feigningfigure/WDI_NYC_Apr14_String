@@ -1,0 +1,8 @@
+<h1>Add a new product</h1>
+<%= form_for @product, url: "/products", method: "post" do |f| %>
+  <%= f.text_field :name, {placeholder: "name"} %>
+  <%= f.text_field :image_url, {placeholder: "image_url"}%>
+  <%= f.text_field :founded, {placeholder: "founded"} %>
+  <%= f.hidden_field :company_id, value: @company %>
+  <%= f.submit %>
+<% end %>
