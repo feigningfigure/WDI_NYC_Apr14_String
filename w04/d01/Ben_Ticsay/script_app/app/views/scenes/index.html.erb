@@ -1,0 +1,8 @@
+<%= render partial: "sceneform", locals: { scene_local: @scene } %>
+
+<h2>Scenes</h2>
+<ul class="scenes">
+  <% @scenes.each do |scene| %>
+    <li><%= link_to scene.title, "/scenes/#{scene.id}" %></li>
+  <% end %>
+</ul>

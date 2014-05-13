@@ -1,0 +1,6 @@
+<%= form_for oilfield_local do |f| %>
+  <%= f.text_field :title, { placeholder: "title" } %>
+  <%= f.text_field :content, { placeholder: "content" } %>
+  <%= f.hidden_field:country_id, value: country_id %>
+  <%= f.submit %>
+<% end %>
