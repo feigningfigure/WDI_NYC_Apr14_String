@@ -6,6 +6,7 @@
 	<li><%= player.name %></li>
 	<li><%= player.height %> inches</li>
 	<li>from <%= player.college %></li>
+	<li><%= link_to "edit", "/teams/#{@team.id}/edit" %></li>
 	<% end %>
 </ul>
 <%= form_for @player, url: "/players", method: "POST" do |f| %>

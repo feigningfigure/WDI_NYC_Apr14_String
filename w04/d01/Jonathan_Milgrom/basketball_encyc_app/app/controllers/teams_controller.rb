@@ -19,6 +19,11 @@ class TeamsController < ApplicationController
 	
 	end
 
+	def edit
+		id = params[:id]
+		@team = Team.find(id)
+	end
+
  private
 	  # strong params
 	def new_team_attributes
