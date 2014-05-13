@@ -1,0 +1,71 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
+
+
+
+
+
+
+
+
+
+
+
+
+###Week04-Day01
+
+#WORK IN YOUR OWN FOLDER ONLY!
+#Your pull-request title must start with `hw_w04_submission`
+
+---
+
+### Morning Exercise 
+
+#### Who stole the cookie from the cookie jar?
+
+- Create a rails application called `cookie_jar`
+
+- Create a `CookieWatcher` model
+- name : string
+- cookies : int
+
+- A get request to `/` should show the lyrics:
+- [accuser's name]: "Who stole the cookie from the cookie jar? [theif's name] stole the cookie from the cookie jar."
+- [theif's name]: "Who, me?"
+- [accuser's name]: "Yes, you!"
+- [theif's name]: "Not me! Couldn't be! Wasn't me!"
+- [accuser's name]: "Then who?"
+
+- When someone is chosen as a thief, their `cookies` should be incremented because they clearly stole the cookie
+
+
+**Seed the table with these names**
+
+spring_wdi = ["Joe", "Artem", "John R.", "Wilson", "Nelson", "Chris B.", "Chris Lee", "Ben", "Joel", "Declan", "Andrew", "Manny", "Nancy", "Dara", "Jonathan", "Liz", "Jane", "Victor", "David", "Kyle", "Keyan", "Mason", "Sophie", "Zack"]
+Hide full text

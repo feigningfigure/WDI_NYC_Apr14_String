@@ -1,0 +1,16 @@
+
+<ul>
+    <li> <%= @superteam.name %></li>
+      <ul>
+        <li><%= @superteam.headquarters %></li>
+        <li><%= @superteam.headquarters_location %></li>
+        <li>	known members: <% @superheroes.each do |superhero| %>
+        		<%= link_to superhero.name, superhero(superhero) %>
+        		<% end %>
+        	
+        </li>
+      </ul>
+    <p> <%= link_to('destroy SuperTeam (mwahahahahah!)', :action => "destroy") %>
+    <%= link_to('edit SuperTeam', :action => "edit") %><p>
+
+</ul>
