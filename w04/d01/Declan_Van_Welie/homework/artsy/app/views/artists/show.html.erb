@@ -10,7 +10,7 @@
   Movement: <%= @artist.movement %>
 </p>
 <p class="artist_nationality">
- Nationality: <%= @artist.nationality %>
+ Country of origin: <%= @artist.nationality %>
 </p>
 <h3>Works</h3>
 <%= render partial: "works/workform", locals: { work_local: @work, artist_id: @artist.id }%>
