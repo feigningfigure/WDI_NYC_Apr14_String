@@ -1,8 +1,4 @@
-<%= form_for @country, url: "/countries", method: "POST" do |f| %>
-  <%= f.text_field :title, {placeholder: "title"} %>
-  <%= f.text_field :description, {placeholder: "description"} %>
-  <%= f.submit %>
-<% end %>
+<%= render partial: "countryform", locals: { country_local: @country } %>
 
 <h2>Countries</h2>
 <ul class="countries">

@@ -21,14 +21,36 @@ class CountriesController < ApplicationController
 
     Country.create(country_attributes)
 
-      render json: {
-        strong_params: country_attributes
-      }
+      # render json: {
+      #   strong_params: country_attributes
+      # }
 
 
     redirect_to countries_path
 
   end
+
+
+  def edit
+    @country = Country.find(params[:id])
+
+    render partial: "countryform", locals: { country_local: @country }
+  end
+
+  def update
+
+    country = Country.find(params[:id])
+
+    country.update_attributes(country_attributes)
+
+
+    redirect_to "/countries/#{params[:id]}"
+  end
+
+
+
+
+
 
   private
 
