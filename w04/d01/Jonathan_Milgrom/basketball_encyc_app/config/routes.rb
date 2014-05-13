@@ -3,11 +3,11 @@ Rails.application.routes.draw do
 
 root to: "teams#index"
 
-get "/teams" => "teams#index" 
+get "/teams" => "teams#index", as: :teams 
 
-post "/teams" => "teams#create"
+post "/teams" => "teams#create", as: :new_team
 
-get "/teams/:id" => "teams#show" 
+get "/teams/:id" => "teams#show", as: :team 
 
 get "/teams/:id/edit" => "teams#edit", as: :edit_team
 
