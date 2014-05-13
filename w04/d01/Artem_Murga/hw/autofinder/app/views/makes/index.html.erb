@@ -1,19 +1,12 @@
 
+<h2>Makes</h2>
 
-<%= link_to "Home", "/" %>
+<ul class="makes">
 
-<p><%= link_to "Create", "/makes/create" %></p>
+<% @make.each do |make| %>
 
-
-
-<% @makes.each do |i| %>
-	<br>
-
-
-	
-	<p><%= link_to i.name,  "/show/make/@make.id"  %> is from <%= i.country %> and has the following models: <%= i.models.as_json.each do |i| i["name"] end %> </p>
-
-
-	<br>
-
+<li> <%=link_to make.name, "/makes/#{make.id}" %> is from <%= make.country %> and has the following models: <%= make.models.name %>
+	 
 <% end %>
+
+</ul>

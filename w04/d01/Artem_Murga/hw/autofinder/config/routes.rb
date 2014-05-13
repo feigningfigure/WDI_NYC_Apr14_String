@@ -7,9 +7,11 @@ Rails.application.routes.draw do
   get '/makes/:id' => "makes#show"
 
 
-  get '/makes/create' => "makes#create"
+  post '/makes' => "makes#create"
 
   post '/makes/create/new' => "makes#new"
+
+  
   # post 'makes/new' => "makes#new"
 
 

@@ -1,8 +1,10 @@
 class MakesController < ApplicationController
 
 	def index
-		@makes = Make.order(id: :asc)
+		@makes = Make.order(id: :desc)
+		@make = Make.all.order("id")
 		
+		# render json: @makes
 	end
 
 	def show
