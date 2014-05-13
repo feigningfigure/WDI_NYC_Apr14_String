@@ -13,10 +13,19 @@
 
 ActiveRecord::Schema.define(version: 20140513014808) do
 
-  create_table "galleries", force: true do |t|
+  create_table "artists", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "gallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "recipes", force: true do |t|
+  create_table "galleries", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
