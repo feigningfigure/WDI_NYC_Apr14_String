@@ -1,0 +1,6 @@
+<!-- TODO: make this a partial -->
+<%= form_for @person do |f| %>
+  <%= f.text_field :name, {placeholder: "name"} %>
+  <%= f.text_field :profession, {placeholder: "profession"} %>
+  <%= f.submit %>
+<% end %>

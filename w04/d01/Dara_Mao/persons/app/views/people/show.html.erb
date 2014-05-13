@@ -1,0 +1,7 @@
+<h2 class="list_of_people"><%= @person.name %></h2>
+<p>
+  <%= link_to "edit", "/people/#{@person.id}/edit" %>
+</p>
+<p class="person_description">
+  <%= @person.profession %>
+</p>
