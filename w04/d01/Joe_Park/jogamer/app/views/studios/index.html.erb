@@ -10,6 +10,6 @@
 <h2>Studios!</h2>
 <ul class="studios">
 	<% @studios.each do |studio| %>
-		<li><%= link_to studio.name, "/studios/#{studio.id}" %></li>
+		<li><%= link_to studio.name, "/studios/#{studio.id}", :target => "_blank" %></li>
 	<% end %>
 </ul>

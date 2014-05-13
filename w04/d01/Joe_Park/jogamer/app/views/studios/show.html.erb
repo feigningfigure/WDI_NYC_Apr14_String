@@ -1,4 +1,8 @@
 <h2 class="studio_name"><%= @studio.name %></h2>
+<p>
+	<%= link_to "Edit", "/studios/#{@studio.id}/edit" %>
+</p>
+
 
 <p><%= @studio.description %></p>
 <p><%= @studio.location %></p>
@@ -15,11 +19,11 @@
 
 
 <ul class="games">
-	<% @studio.games.each do |game| %>
+	<% @studio.games.order(id: :desc).each do |game| %>
 	<li>
 		<h4><%= game.title %></h4>
 		<p><%= game.genre %></p>
-
+		<p><%= link_to "Details", "/games/#{game.id}" %></p>
 	</li>
 
 	<% end %>

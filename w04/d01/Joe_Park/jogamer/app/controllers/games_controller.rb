@@ -4,10 +4,29 @@ class GamesController < ApplicationController
 
 		Game.create(game_attributes)
 
-		redirect_to root_path
+		redirect_to "/studios/#{game_attributes[:studio_id]}"
 
 	end
 
+	def show
+		@game = Game.find(params[:id])
+
+	end
+
+	def edit
+
+		@game = Game.find(params[:id])
+
+	end
+
+	def update
+		game = Game.find(params[:id])
+
+		game.update_attributes(game_attributes)
+
+		redirect_to "/studios/#{game.studio.id}"
+
+	end
 
 
 	private
