@@ -1,0 +1,29 @@
+<h4 class="artist_name">
+  Name: <%= @artist.name %></h4>
+<p>
+  <%= link_to "edit", "/artists/#{@artist.id}/edit" %>
+</p>
+<p class="artist_birth_year">
+  Birth year: <%= @artist.birth_year %>
+</p>
+<p class="artist_movement">
+  Movement: <%= @artist.movement %>
+</p>
+<p class="artist_nationality">
+ Country of origin: <%= @artist.nationality %>
+</p>
+<h3>Works</h3>
+<%= render partial: "works/workform", locals: { work_local: @work, artist_id: @artist.id }%>
+<ul class="works">
+  <% @artist.works.order(id: :desc).each do |work| %>
+    <li class="work">
+      <h4>Title: <%= work.title %></h4>
+      <p>Medium: <%= work.medium %></p>
+      <p>Year finished: <%= work.year_finished %></p>
+      <img src=<%= work.image_url %> height="200" />
+       <p>
+        <%= link_to "edit", "/works/#{work.id}/edit" %>
+      </p>
+    </li>
+  <% end %>
+</ul>
