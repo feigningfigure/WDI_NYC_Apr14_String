@@ -1,0 +1,9 @@
+<%= form_for @superteam, method: "POST" do |f| %>
+  <%= f.text_field :name, {placeholder: "name"} %>
+  <%= f.text_field :headquarters, {placeholder: "headquarters"} %>
+  <%= f.text_field :headquarters_location, {placeholder: "headquarters_location"} %>
+
+  <%= f.hidden_field :id %>                   <!-- QUESTION: WHY ISN'T THIS NEEDED? -->
+
+  <%= f.submit %>
+<% end %>

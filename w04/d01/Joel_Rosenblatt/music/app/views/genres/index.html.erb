@@ -1,0 +1,8 @@
+<%= render partial: "genreform", locals: { genre_local: @genre } %>
+
+<h2>Genres</h2>
+<ul class="genres">
+  <% @genres.each do |genre| %>
+    <li><%= link_to genre.name, "/genres/#{genre.id}" %></li>
+  <% end %>
+</ul>
