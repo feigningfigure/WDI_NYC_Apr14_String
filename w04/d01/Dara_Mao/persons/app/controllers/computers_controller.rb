@@ -1,23 +1,19 @@
 class ComputersController < ApplicationController
 
   def create
-
-    Computer.create(recipe_attributes)
-
+    Computer.create(computer_attributes)
     redirect_to "/people/#{computer_attributes[:person_id]}"
   end
 
   def edit
     @computer = Computer.find(params[:id])
-    render partial: "computerform", locals: { computer_local: @recipe, person_id: @computer.person.id }
+    render partial: "computerform", locals: { computer_local: @computer, person_id: @computer.people.id }
   end
 
   def update
-    computer = Recipe.find(params[:id])
-
+    computer = Computer.find(params[:id])
     computer.update_attributes computer_attributes)
-
-    redirect_to "/people/#{computer.person.id}"
+    redirect_to "/people/#{computer.people.id}"
     # render json: params
   end
 

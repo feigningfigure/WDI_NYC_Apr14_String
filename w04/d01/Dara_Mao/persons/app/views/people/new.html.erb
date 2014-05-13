@@ -1,5 +1,5 @@
-<%= form_for @people, url: "/people", method: "POST" do |f| %>
-  <%= f.text_field :name, {placeholder: "name"} %>
+<%= form_for @person, url: "/people", method: "POST" do |f| %>
+  <%= f.text_field :name, {placeholder: "title"} %>
   <%= f.text_field :profession, {placeholder: "profession"} %>
   <%= f.submit %>
 <% end %>

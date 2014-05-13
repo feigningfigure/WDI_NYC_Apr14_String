@@ -17,13 +17,13 @@ class PeopleController < ApplicationController
     redirect_to people_path
   end
 
-    def edit
+  def edit
     @person = Person.find(params[:id])
     # render json: @person
     render partial: "personform", locals: { person_local: @person }
   end
 
-   def update
+  def update
 
     person = Person.find(params[:id])
 
