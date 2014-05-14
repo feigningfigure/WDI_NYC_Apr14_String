@@ -1,0 +1,9 @@
+<h2>Make an Ice Cream Sundae</h2>
+<h3>Pick a flavor to start</h3>
+<ul class="ice_cream_flavors">
+  <% @ice_cream_flavors.each do |flavor| %>
+    <li><%= link_to flavor.name, "/ice_cream_flavors/#{flavor.id}" %></li>
+
+
+  <% end %>
+</ul>
