@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20140514001224) do
   create_table "countries", force: true do |t|
     t.string   "name"
     t.string   "language"
-    t.float    "gdp"
+    t.string   "flag_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

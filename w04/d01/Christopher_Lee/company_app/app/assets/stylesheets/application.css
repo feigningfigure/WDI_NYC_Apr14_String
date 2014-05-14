@@ -97,7 +97,7 @@ text-align: center;
 #nav {
 position: absolute;
 top: 0;
-left: 0;
+right: 0;
 padding-left: 50px;
 }
 
@@ -269,6 +269,7 @@ margin: 10px 0;
 
 .company{
   margin-top: 80px;
+  padding-bottom: 60px;
 }
 
 .table{

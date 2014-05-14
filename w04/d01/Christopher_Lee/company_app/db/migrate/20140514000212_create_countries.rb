@@ -3,7 +3,7 @@ class CreateCountries < ActiveRecord::Migration
     create_table :countries do |t|
       t.string :name
       t.string :language
-      t.float :gdp
+      t.string :flag_url
 
       t.timestamps
     end
