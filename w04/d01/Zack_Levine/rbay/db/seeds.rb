@@ -1,7 +1,14 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# killa session destroy
+Member.delete_all
+Auction.delete_all
+
+members = Member.new({
+  screen_name: Faker::Name.name,
+  member_profile: Faker::Lorem.paragraphs(2).join("")
+})
+
+auctions = Auction.new({
+  item: Faker::Commerce.product_name,
+  description: Faker::Company.catch_phrase,
+  member_id: Faker::Number.number(5)
+  })

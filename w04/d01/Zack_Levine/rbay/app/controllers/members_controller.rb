@@ -1,11 +1,8 @@
 class MembersController < ApplicationController
 
   def index
-    @member = Member.order(screen_name: :member_profile)
+    @members = Member.all
 
-    # new instance of cookbook for the form helper
-    @member = Member.new
-    # render json: @members
   end
   def show
     # by default...
@@ -19,3 +16,4 @@ class MembersController < ApplicationController
 
     # binding.pry
   end
+end
