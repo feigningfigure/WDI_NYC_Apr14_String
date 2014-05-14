@@ -27,7 +27,7 @@ players = []
 end
 
 
-5.times do 
+20.times do 
 	studio = Studio.new({
 
 		name: Faker::Company.name,
@@ -45,12 +45,17 @@ end
 		})
 
 		
-		3.times do
-			game_player = players.pop
+		# 3.times do
+			# game_player = players.pop
+		game_player = []
+		x = rand(20..50)
+		game_player = players.shuffle.first(x)
 
+		game_player.each do |player|
 			game.add_group(
-				game_player.id
+				player.id
 			)
+
 		end
 
 		game.save
