@@ -1,0 +1,5 @@
+<h2 class="topping"><%= @toppings.name %></h2>
+<% @toppings.each do |topping| %>
+<p>
+  <%= link_to "", "/toppings/#{@topping.id}/add_topping" %>
+</p>

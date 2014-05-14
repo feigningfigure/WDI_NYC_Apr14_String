@@ -24,4 +24,12 @@ Rails.application.routes.draw do
   patch "/products/:id" => "products#update"
 
   get "/products/:id/new/" => "products#new"
+
+
+  ### Countries ###
+
+  get '/countries/new' => "countries#new"
+
+  post '/countries' => "countries#create"
+
 end

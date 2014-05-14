@@ -2,10 +2,10 @@
 <p class="gallery_address">
   <%= @gallery.address %>
 </p>
-<h3>Artists</h3>
+<h3>Lists of Artists</h3>
 <%= form_for @artist, url: "/artists" do |f| %>
   <%= f.text_field :name, { placeholder: "name" } %>
-  <%= f.text_field :decription, {placeholder: "description"} %>
+  <%= f.text_field :description, {placeholder: "description"} %>
   <%= f.submit %>
 <% end %>
 <ul class="artists">

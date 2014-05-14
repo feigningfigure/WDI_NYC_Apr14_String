@@ -1,0 +1,11 @@
+<%= @company.name %>
+
+<h2>Companies</h2>
+
+<ul>
+  <% @company.order(id: :desc).each do |company| %>
+    <li class="company">
+      <h4><%= company.name %></h4>
+    </li>
+    <% end %>
+</ul>
