@@ -21,11 +21,18 @@ end
 
 def edit
     @author = Author.find(params[:id])
+
     # render json: @author
     # # render partial: "cookbookform", locals: { cookbook_local: @cookbook }
     # # render "/authors/#{@author.id}/edit"
     # binding.pry
     render "edit"
+  end
+
+ def update
+    author = Author.find(params[:id])
+    author.update_attributes(author_attributes)
+    redirect_to "/authors/#{params[:id]}"
   end
 
 
