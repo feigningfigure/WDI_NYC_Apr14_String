@@ -1,0 +1,14 @@
+<%= form_for @product do |f| %>
+  <%= f.text_field :name, { placeholder: "Name"} %>
+  <%= f.text_field :price, { placeholder: "Price"} %>
+  <%= f.text_field :description, { placeholder: "Description"} %>
+  <%= f.hidden_field :company_id, value: @company.id %>
+  <%= f.submit "Add Device", class: 'button' %>
+<% end %>
+
+<h2>Products</h2>
+<ul class="users">
+  <% @products.each do |product| %>
+    <li><%= link_to product.name, "/products/#{product.id}" %></li>
+  <% end %>
+</ul>
