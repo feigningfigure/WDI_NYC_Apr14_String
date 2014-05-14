@@ -7,15 +7,15 @@ Rails.application.routes.draw do
 
   get "/galleries/:id" => "galleries#show"
 
-  # renders a NEW gallery form
-  # get "/galleries/new" => "galleries#new"
+  #renders a NEW gallery form
+  get "/galleries/new" => "galleries#new"
 
   # this processes the form input
-  # post "/galleries" => "galleries#create"
+  post "/galleries" => "galleries#create"
 
-  # get "/secret" => "galleries#secret_code"
+  get "/secret" => "galleries#secret_code"
 
-  # post "/artists" => "artists#create"
+  post "/artists" => "artists#create"
 
 
 end

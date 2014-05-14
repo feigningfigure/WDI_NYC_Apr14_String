@@ -6,7 +6,7 @@
   <%= f.submit %>
 <% end %>
 
-<h2>Galleries</h2>
+<h2>List of Galleries</h2>
 <ul class="galleries">
   <% @galleries.each do |gallery| %>
     <li><%= link_to gallery.name, "/galleries/#{gallery.id}" %></li>

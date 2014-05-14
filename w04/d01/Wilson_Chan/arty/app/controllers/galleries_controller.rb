@@ -22,30 +22,29 @@ def show
     # binding.pry
   end
 
-  # def create
-  #   # add .create soon..
+  def create
+    # add .create soon..
 
-  #   # old way...
-  #   # gallery_attributes = params[:gallery]
+    # old way...
+    # gallery_attributes = params[:gallery]
 
-  #   # new way... *but requires private_method
-  #   Artist.create(artist_attributes)
+    # new way... *but requires private_method
+    Gallery.create(gallery_attributes)
 
-  #   render json: {
-  #     strong_params: artist_attributes
-  #   }
+    # render json: {
+    #   strong_params: gallery_attributes
+    # }
 
+    # when done...
+    redirect_to galleries_path
+  end
 
-  #   # when done...
-  #   redirect_to artists_path
-  # end
+  private
 
-  # private
-
-  # # strong params
-  # def artist_attributes
-  #   # whitelisting parts of the params hash, that are DB-safe
-  #   params.require(:gallery).permit(:name, :address)
-  # end
+  # strong params
+  def gallery_attributes
+    # whitelisting parts of the params hash, that are DB-safe
+    params.require(:gallery).permit(:name, :address)
+  end
 
 end
