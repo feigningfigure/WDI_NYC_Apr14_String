@@ -39,7 +39,7 @@ ingredients.each do |ingredient_name|
 end
 
 
-100.times do
+10.times do
 
   cookbook = Cookbook.new({
     title: Faker::Lorem.sentence(3).to_s,
@@ -50,7 +50,7 @@ end
   recipes = []
 
   # make 10 random recipes
-  10.times do
+  5.times do
     #add each of those 10 recipes to the array of recipes
     recipe = Recipe.create({
       title: Faker::Lorem.sentence(3).to_s,
