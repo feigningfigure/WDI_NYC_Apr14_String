@@ -71,13 +71,16 @@ Rails.application.routes.draw do
   get '/superteams/:id' => 'superteams#show',               as: :superteam  #singular
   delete '/superteams/:id/destroy' => 'superteams#destroy' 
 
+  # THIS IS A HACK to make the 'link_to' work
+  get '/superteams/:id/destroy' => 'superteams#destroy' 
+
   
 
 
 
 #### SUPERHEROES
 
-  get '/' => 'superheroes#index'
+  # get '/' => 'superheroes#index'
   get '/superheroes' => 'superheroes#index',                as: :superheroes
 
   get '/superheroes/new' => 'superheroes#new',              as: :new_superhero
@@ -90,7 +93,8 @@ Rails.application.routes.draw do
   get '/superheroes/:id' => 'superheroes#show',             as: :superhero
   delete '/superheroes/:id/destroy' => 'superheroes#destroy' 
 
-
+  # THIS IS A HACK to make the 'link_to' work
+  get '/superheroes/:id/destroy' => 'superheroes#destroy' 
 
 
 end

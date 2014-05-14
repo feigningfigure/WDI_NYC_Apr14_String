@@ -8,7 +8,7 @@ class SuperteamsController < ApplicationController
 
   def show
     @superteam = Superteam.find_by(id: params[:id])
-    @superheroes = Superhero.where(superteam_id: params[:id])
+    # @superheroes = Superhero.where(superteam_id: params[:id])
     # render json: @superteam
   end
 
@@ -19,10 +19,15 @@ class SuperteamsController < ApplicationController
 
   def new
     @superteam = Superteam.new()
-    render json: @superteam
+    # render json: @superteam
   end
 
-  # def create
+  def create
+    # render json: params[:name]
+    Superteam.create(superteam_attributes)
+      
+    redirect_to '/superteams'
+  end
 
   def edit
     @superteam = Superteam.find_by(id: params[:id])

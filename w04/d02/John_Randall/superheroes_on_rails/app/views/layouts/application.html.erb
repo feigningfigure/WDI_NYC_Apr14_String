@@ -9,8 +9,14 @@
 <body>
 
 <nav>
-	<%= link_to "SuperTeams Index", superteams_path() %>
-	<%= link_to "link text...", :controller => "superteams" %>			<!-- QUESTION: WHY DOES THIS GO TO ROOT? -->
+
+<%= link_to "SuperTeams!", superteams_path %> | 
+<%= link_to "SuperHeroes!", superheroes_path %> | 
+
+<%= link_to "new superteam", new_superteam_path %> | 
+<%= link_to "new superhero", new_superhero_path %> | 
+
+	
 
 </nav>
 

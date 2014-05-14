@@ -48,7 +48,10 @@ Please feel free to use a different markup language if you do not plan to run
 - Write a seed file to pre-populate your database
 
 
-- A user should be able to ***Create*** and ***Edit*** both, as well as set relationships
+- A user should be able to ***Create*** and 
+
+
+***Edit*** both, as well as set relationships
 
   - `example:` Create a Song and have it associated with a Band
   - **NOTE** - Make sure your Create function fully works before you take on the Edit function
