@@ -2,7 +2,7 @@ class MakesController < ApplicationController
 
 	def index
 		@makes = Make.order(id: :desc)
-		@make = Make.all.order("id")
+		@make = Make.new
 		
 		# render json: @makes
 	end
@@ -15,20 +15,21 @@ class MakesController < ApplicationController
 
 
 	def create
-		
-	end
-
-	def new
 		Make.create(make_attributes)
-		# render json: {
-		# 	strong_params: make_attributes
-		# }
-		redirect_to root
+		redirect_to makes_path 
 	end
 
-	# def new
+	def edit
+		# binding.pry
+		@make = Make.find(params[:id])
+		# render json: @make
+	end
 
-	# end
+	def update 
+		make = Make.find(params[:id])
+		make.update_attributes(make_attributes)
+		redirect_to "/makes/#{params[:id]}"
+	end
 
 
 	private 

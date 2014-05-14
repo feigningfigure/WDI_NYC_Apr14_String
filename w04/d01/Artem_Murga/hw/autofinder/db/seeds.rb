@@ -19,7 +19,27 @@
 
 # 
 
-Model.create({
-	name: "F36",
-	make_id: 1
+# Model.create({
+# 	name: "F36",
+# 	make_id: 1
+# 	})
+
+# Customer.create(
+# {
+# 	name: "John"
+# 	})
+
+# Customer.create ({
+# 	name: "Bill"
+# 	})
+
+Vin.create ({
+	vin_number: rand(1000..2000),
+	model_id: 1,
+	customer_id: 1,
 	})
+
+
+
+
+

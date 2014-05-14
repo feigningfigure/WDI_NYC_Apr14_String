@@ -1,3 +1,14 @@
+# == Route Map (Updated 2014-05-13 19:28)
+#
+#           Prefix Verb URI Pattern                 Controller#Action
+#             root GET  /                           makes#index
+#            makes GET  /makes(.:format)            makes#index
+#                  GET  /makes/:id(.:format)        makes#show
+#             make GET  /makes/:id/edit(.:format)   makes#edit
+#                  POST /makes(.:format)            makes#create
+# makes_create_new POST /makes/create/new(.:format) makes#new
+#
+
 Rails.application.routes.draw do
   
   root to: "makes#index"
@@ -6,13 +17,25 @@ Rails.application.routes.draw do
 
   get '/makes/:id' => "makes#show"
 
+  get "/makes/:id/edit" => "makes#edit", :as => :make
+
 
   post '/makes' => "makes#create"
 
   post '/makes/create/new' => "makes#new"
 
+  patch "/makes/:id/edit" => "makes#update"
+
+
+
+  post "/models/:id" => "models#create"
+
+  get "/models/:id" => "models#index", as: :model
+
+  get "/models/:id/edit" => "models#edit", as: :edit_model
+
+  patch "/models/:id" => "models#update"
   
-  # post 'makes/new' => "makes#new"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

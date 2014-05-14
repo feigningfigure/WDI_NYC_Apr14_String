@@ -1,12 +1,23 @@
 
 <h2>Makes</h2>
 
-<ul class="makes">
-
-<% @make.each do |make| %>
-
-<li> <%=link_to make.name, "/makes/#{make.id}" %> is from <%= make.country %> and has the following models: <%= make.models.name %>
-	 
+<%= form_for @make do |f| %>
+  <%= f.text_field :name, {placeholder: "name"} %>
+  <%= f.text_field :country, {placeholder: "country"} %>
+  
+  <%= f.submit %>
 <% end %>
 
+
+
+<ul class="makes">
+<% @makes.each do |make| %>
+<li> <%=link_to make.name, "/makes/#{make.id}" %> is from <%= make.country %> and has the following models:
+<ul>
+ <% make.models.each do |parameter|  %>
+  <li> <%= parameter.name %>  </li>
+  <% end %>
+</ul> 
+<% end %>
 </ul>
+
