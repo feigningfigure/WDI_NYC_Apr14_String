@@ -1,0 +1,13 @@
+<%= render partial: "breweryform", locals: { brewery_local: @brewery } %>
+
+
+<h2>Breweries</h2>
+<ul class="breweries">
+<% @breweries.each do |brewery| %>
+  <li class="brewery">
+    <h3><%= link_to brewery.name, "breweries/#{brewery.id}"%></h3>
+    <p class="location"><%=brewery.location%></p>
+  </li>
+<%end%>
+</ul>
+
