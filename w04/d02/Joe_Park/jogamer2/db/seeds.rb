@@ -47,11 +47,10 @@ end
 		
 		# 3.times do
 			# game_player = players.pop
-		game_player = []
+		# game_player = []
 		x = rand(20..50)
-		game_player = players.shuffle.first(x)
-
-		game_player.each do |player|
+		# game_player = players.shuffle.first(x)
+		players.shuffle.first(x).each do |player|
 			game.add_group(
 				player.id
 			)

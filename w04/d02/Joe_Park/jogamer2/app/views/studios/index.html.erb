@@ -1,10 +1,5 @@
 <h3>Register New Studio</h3>
-<%= form_for @studio do |f| %>
-	<%= f.text_field :name, {placeholder: "Studio Name"} %>
-	<%= f.text_field :description, {placeholder: "Studio Description"} %>
-	<%= f.text_field :location, {placeholder: "State ex. New York"} %>
-	<%= f.submit %>
-<% end %>
+<%= render partial: "studioform", locals: { studio_local: @studio } %>
 
 
 <h2>Studios!</h2>
