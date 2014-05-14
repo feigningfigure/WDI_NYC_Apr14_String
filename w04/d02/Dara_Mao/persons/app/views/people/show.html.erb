@@ -1,0 +1,21 @@
+<h2 class="list_of_people"><%= @person.name %></h2>
+<p>
+  <%= link_to "edit", "/people/#{@person.id}/edit" %>
+</p>
+<p class="person_description">
+  <%= @person.profession %>
+</p>
+<h3>Computers</h3>
+<%= render partial: "computers/computerform", locals: { computer_local: @computer, person_id: @person.id }%>
+<ul class="computers">
+  <% @person.computers.order(id: :desc).each do |computer| %>
+    <li class="computer">
+      <h4><%= computer.owner %></h4>
+      <p>
+        <%= link_to "edit", "/computers/#{computer.id}/edit" %>
+      </p>
+      <p><%= computer.maker %></p>
+    </li>
+  <% end %>
+</ul>
+
