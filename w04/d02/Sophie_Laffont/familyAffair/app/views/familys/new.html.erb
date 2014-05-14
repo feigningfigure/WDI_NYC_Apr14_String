@@ -1,0 +1,6 @@
+<!-- TODO: make this a partial -->
+<%= form_for @parent, url: "/parents", method: "POST" do |f| %>
+  <%= f.text_field :name, {placeholder: "name"} %>
+  <%= f.text_field :relationship, {placeholder: "relationship"} %>
+  <%= f.submit %>
+<% end %>

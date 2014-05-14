@@ -28,7 +28,7 @@ class CompaniesController < ApplicationController
 
     company.update_attributes(company_attributes)
 
-    # render json: cookbook
+    # render json: company_attributes
     redirect_to "/companies/#{params[:id]}"
   end
 

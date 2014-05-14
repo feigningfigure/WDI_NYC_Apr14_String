@@ -1,0 +1,9 @@
+<%= render partial: "vertebraeform", locals: {
+	vertebrae_local: @vertebrae } %>
+<h2>Animal Groups</h2>
+
+<% @vertebraes.each  do |vertebrae| %>
+  <h1><a href="vertebraes/<%=vertebrae.id%>"><%= vertebrae.name %></a></h1>
+<!--   <img class="sphere" src="<%= vertebrae.scientific_name %>"> -->
+<hr>
+<% end %>

@@ -1,0 +1,14 @@
+<!-- TODO: make this a partial -->
+<%= render partial: "cookbookform", locals: { cookbook_local: @cookbook } %>
+
+<h2>Cookbooks</h2>
+<ul class="cookbooks">
+  <% @cookbooks.each do |cookbook| %>
+    <li>
+      <h4 class="span_1_of_2"><%= link_to cookbook.title, "/cookbooks/#{cookbook.id}" %></h4>
+      <p class="span_2_of_2">
+        by <%= cookbook.chef.name %>
+      </p>
+    </li>
+  <% end %>
+</ul>

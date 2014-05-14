@@ -1,0 +1,8 @@
+<h2>Toppings</h2>
+<ul class="toppings">
+  <% @toppings.each do |topping| %>
+    <li>
+    	<%= link_to toppings.name, "/toppings/#{topping.id}" %>
+    </li>
+  <% end %>
+</ul>
