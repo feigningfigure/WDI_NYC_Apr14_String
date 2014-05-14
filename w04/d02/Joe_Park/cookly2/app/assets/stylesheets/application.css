@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+ /* google fonts */
+@import url(https://fonts.googleapis.com/css?family=Abel);
+/* font-family: 'Abel', sans-serif; */
+
+h1{
+	font-family: 'Abel', sans-serif;
+}
+
+h2{
+	font-family: 'Abel', sans-serif;
+}
+ul{
+	font-family: 'Abel', sans-serif;
+	list-style: none;
+}
