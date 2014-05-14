@@ -1,0 +1,7 @@
+<h1>Add a New Country</h1>
+<%= form_for @country, url: "/countries", method: "post" do |f| %>
+  <%= f.text_field :name, {placeholder: "name"} %>
+  <%= f.text_field :language, {placeholder: "language"}%>
+  <%= f.text_field :flag_url, {placeholder: "flag url"} %>
+  <%= f.submit %>
+<% end %>

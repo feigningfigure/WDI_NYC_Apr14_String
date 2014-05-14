@@ -1,0 +1,26 @@
+<h2><%= @beer.name %></h2>
+<h4 class="beer_style">
+    <i>Style:</i> <%= @beer.style%>
+</h4>
+<div class="beer_body">
+  <table>
+  <caption>Ingredients</caption>
+  <thead>
+      <tr>
+        <th>quantity</th>
+        <th>name</th>
+      </tr>
+  </thead>
+  <tbody>
+    <% @beer.quantities.each do |quantity| %>
+      <tr>
+        <td><%= quantity.amount %> of</td>
+        <td><%= quantity.ingredient.name %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+  <p class="beer_content">
+    <%= @beer.description %>
+  </p>
+</div>

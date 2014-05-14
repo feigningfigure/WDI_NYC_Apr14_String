@@ -1,0 +1,7 @@
+
+<!-- TODO: make this a partial, TO DO: EDIT TITLE/DECRIP params-->
+<%= form_for @team, url: "/teams", method: "POST" do |f| %>
+  <%= f.text_field :title, {placeholder: "title"} %>
+  <%= f.text_field :description, {placeholder: "description"} %>
+  <%= f.submit %>
+<% end %>

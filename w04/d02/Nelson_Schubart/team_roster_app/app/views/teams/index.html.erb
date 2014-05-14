@@ -1,0 +1,9 @@
+<!-- TODO: make this a partial -->
+<%= render partial: "teamform", locals: { team_local: @team } %>
+
+<h2>Teams</h2>
+<ul class="teams">
+  <% @teams.each do |team| %>
+    <li><%= link_to team.title, "/teams/#{team.id}" %></li>
+  <% end %>
+</ul>
