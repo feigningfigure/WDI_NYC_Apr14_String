@@ -1,0 +1,6 @@
+<%= form_for computer_local do |f| %>
+  <%= f.text_field :owner, { placeholder: "owner" } %>
+  <%= f.text_field :maker, { placeholder: "maker" } %>
+  <%= f.hidden_field :person_id, value: person_id %>
+  <%= f.submit %>
+<% end %>

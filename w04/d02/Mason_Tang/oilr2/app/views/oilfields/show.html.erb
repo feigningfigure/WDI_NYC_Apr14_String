@@ -1,0 +1,23 @@
+<h2><%= @oilfield.title %></h2>
+<div class="oilfield_body">
+  <table>
+  <caption>Operators</caption>
+  <thead>
+      <tr>
+        <th>percentage</th>
+        <th>name</th>
+      </tr>
+  </thead>
+  <tbody>
+    <% @oilfield.stakes.each do |stake| %>
+      <tr>
+        <td><%= stake.percentage %> </td>
+        <td><%= stake.operator.name %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+  <p class="oilfield_content">
+    <%= @oilfield.content %>
+  </p>
+</div>

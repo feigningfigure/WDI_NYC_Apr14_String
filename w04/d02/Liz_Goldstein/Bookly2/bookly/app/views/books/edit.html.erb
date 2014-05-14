@@ -1,0 +1,7 @@
+<h3>Edit Title</h3>
+
+<%= form_for @book do |f| %>
+  <%= f.text_field :title, :value => "#{@book.title}" %>
+
+  <%= f.submit %>
+<% end %>
