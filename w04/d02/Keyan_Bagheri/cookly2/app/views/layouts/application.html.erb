@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookly</title>
+  <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h1 class="span_1_of_2">Cookly</h1>
+<nav class="span_2_of_2">
+  <%= link_to "cookbooks", cookbooks_path %> |
+  <%= link_to "chefs", chefs_path %>
+</nav>
+<%= yield %>
+
+</body>
+</html>
