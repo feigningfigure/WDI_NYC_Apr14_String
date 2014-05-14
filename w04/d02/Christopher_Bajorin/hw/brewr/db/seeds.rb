@@ -38,7 +38,7 @@ end
 
   3.times do
     beer = Beer.create({
-      name: Faker::Lorem.words(1).to_s,
+      name: Faker::Lorem.words(1).join(""),
       style: Faker::Lorem.characters(3).to_s,
       description: Faker::Lorem.sentence(2).to_s,
       })

@@ -17,6 +17,10 @@ class BeersController < ApplicationController
     redirect_to "/breweries/#{beer.brewery.id}"
   end
 
+  def examine
+    @beer = Beer.find(params[:id])
+  end
+
   private
 
   def beer_attributes

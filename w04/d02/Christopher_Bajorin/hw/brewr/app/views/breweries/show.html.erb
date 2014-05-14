@@ -12,7 +12,7 @@
 <ul class="beers">
 <% @brewery.beers.order(id: :desc).each do |beer| %>
   <li class="beer">
-    <h4><%= beer.name %><h5><%= link_to "edit", "/beers/#{beer.id}/edit" %></h5></h4>
+    <h4><%= beer.name %><h5><%= link_to "edit", "/beers/#{beer.id}/edit" %> | <%= link_to "examine", "/beers/#{beer.id}"%></h5></h4>
     <p class="beer_style">
       Style: <%= beer.style %>
     </p>
