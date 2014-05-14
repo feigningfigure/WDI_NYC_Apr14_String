@@ -1,0 +1,12 @@
+
+
+body {
+  background-color: white
+  color: black;
+}
+
+header img {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}

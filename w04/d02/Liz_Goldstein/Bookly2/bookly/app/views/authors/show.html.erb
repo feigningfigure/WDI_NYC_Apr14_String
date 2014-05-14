@@ -1,0 +1,32 @@
+
+<h2><%= @author.first_name %> <%=@author.last_name %></h2>
+<p>Born: <%= @author.birth %></p>
+<p>Died: <%= @author.death %></p>
+ <%= link_to "Edit Author Info", "/authors/#{@author.id}/edit" %>
+
+<br>
+<h3>Add a book by <%= @author.first_name %> <%=@author.last_name %> we're msising:</h3>
+
+<%= form_for @book do |f| %>
+
+  <p>Title: <%= f.text_field :title %></p>
+ <%= f.hidden_field :author_id, :value => @author.id.to_i %>
+  <p><%= f.submit "Add title" %></p>
+  <% end %>
+
+<h3>Books By <%= @author.first_name %> <%=@author.last_name %></h3>
+
+<ul>
+  <% @author.books.order(:id).each do |book| %>
+   <p><li> <%= book.title %>. <% book.genrecatalogs.each do |genre| %>
+    Rating: <%= genre.rating %>,
+    Genre: <%=genre.genre.genre %><% end %>
+
+    <%= link_to " Edit Listing", "/books/#{book.id}/edit" %></p>
+
+</li>
+  <% end %>
+</ul>
+
+
+
