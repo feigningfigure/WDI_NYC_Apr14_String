@@ -8,8 +8,19 @@ class ArtistsController < ApplicationController
 
   def edit
     @artist = Artist.find(params[:id])
-    render partial: "artistform", locals: { artist_local: @artist, cookbook_id: @artist.cookbook.id }
+    render partial: "artistform", locals: { artist_local: @artist, gallery_id: @artist.gallery.id }
   end
+
+
+  def update
+    artist = Artist.find(params[:id])
+
+    artist.update_attributes(artist_attributes)
+
+    redirect_to "/galleries/#{gallery.cookbook.id}"
+    # render json: params
+  end
+
 
   def show
     # shows one artist
