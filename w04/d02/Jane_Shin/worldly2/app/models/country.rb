@@ -3,9 +3,9 @@ class Country < ActiveRecord::Base
 	has_many :people, through: :visas
 	has_many :visas
 
-	def add_visa(quantity, person_name)
-		visa = Visa.find_by_name(person_name)
-		if visa
+	def add_visa(person_name)
+		person = Person.find_by_name(person_name)
+		if person
 			self.visas << Visa.create({
 				quantity: quantity
 				})

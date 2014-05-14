@@ -3,12 +3,7 @@
 <ul>
 <% @country.people.each do |person| %>
 	<li><%= person.name %><li>
-	 <li>
-	 	<ul><% @country.people.each do |person| %>
-	 	  <li><%= person.name %><li>
-	 	    <% end %>
-	 	</ul>
-	 </li>
+	<li><%= person.visas.length %></li>
 <% end %>
 </ul>
 

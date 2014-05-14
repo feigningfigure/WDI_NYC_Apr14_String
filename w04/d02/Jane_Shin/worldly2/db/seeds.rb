@@ -17,6 +17,13 @@ Visa.delete_all
 			population: rand(45..200),
 			language: Faker::Lorem.word
 			})
+
+		20.times do
+			person = Person.create({
+			name: Faker::Name.name
+			})
+			person.add_visa(name)
+		end
 	end
 
 	countries.each do |country|
@@ -27,35 +34,31 @@ countries = Country.all
 
 end
 
-20.times do
-	person = Person.create({
-		name: Faker::Name.name
-		})
-end
 
-2.times do
-	people = Person.all
-	people_array = []
-	people.each do |person|
-		people_array << person
-	end
 
-	countries = Country.all
-	country_array = []
-	countries.each do |country|
-		country_array << country
-	end
+# 2.times do
+# 	people = Person.all
+# 	people_array = []
+# 	people.each do |person|
+# 		people_array << person
+# 	end
 
-	15.times do
-		id_person = people_array.shuffle.pop.id
-		id_country = country_array.shuffle.pop.id
-		quant = rand(1..10)
+# 	countries = Country.all
+# 	country_array = []
+# 	countries.each do |country|
+# 		country_array << country
+# 	end
 
-		visa = Visa.create({
-			country_id: id_country,
-			person_id: id_person,
-			quantity: quant
-			})
-	end
-end
+# 	15.times do
+# 		id_person = people_array.shuffle.pop.id
+# 		id_country = country_array.shuffle.pop.id
+# 		quant = rand(1..10)
+
+# 		visa = Visa.create({
+# 			country_id: id_country,
+# 			person_id: id_person,
+# 			quantity: quant
+# 			})
+# 	end
+# end
 
