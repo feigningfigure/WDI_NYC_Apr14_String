@@ -1,8 +1,13 @@
 class CookbooksController < ApplicationController
 
+  # before filter :name_of_some_method
+  before_action :authenticate_with_basic_auth
+
   def index
     @cookbooks = Cookbook.order(id: :desc)
 
+    # # current user???!?!!?!?
+    # @current_user = current_user
     # new instance of cookbook for the form helper
     @cookbook = Cookbook.new
     # render json: @cookbooks

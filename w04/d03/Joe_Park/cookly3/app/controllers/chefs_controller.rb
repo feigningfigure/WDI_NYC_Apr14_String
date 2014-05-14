@@ -1,5 +1,9 @@
 class ChefsController < ApplicationController
 
+  # before filter :name_of_some_method
+  before_action :authenticate_with_basic_auth
+
+
   def index
     # show me all the chefs
     @chefs = Chef.all

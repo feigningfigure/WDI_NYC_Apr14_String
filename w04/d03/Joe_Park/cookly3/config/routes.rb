@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # root route
-  root to: "cookbooks#index"
+  root to: "home#index"
 
   # display all cookbooks
   get "/cookbooks" => "cookbooks#index"

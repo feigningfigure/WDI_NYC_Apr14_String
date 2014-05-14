@@ -1,5 +1,9 @@
 class RecipesController < ApplicationController
 
+  # before filter :name_of_some_method
+  before_action :authenticate_with_basic_auth
+
+
   def create
 
     Recipe.create(recipe_attributes)

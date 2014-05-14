@@ -28,6 +28,7 @@
         <nav>
         <%= link_to "cookbooks", cookbooks_path %> |
         <%= link_to "chefs", chefs_path %>
+        <%= "| Welcome back, #{current_user.name}!" if current_user %>
         </nav>
     </header>
   </div>
