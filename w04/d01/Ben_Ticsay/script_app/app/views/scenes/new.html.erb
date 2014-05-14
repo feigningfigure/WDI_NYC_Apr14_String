@@ -1,0 +1,5 @@
+<%= form_for @scene, url: "/scenes", method: "POST" do |f| %>
+  <%= f.text_field :title, {placeholder: "title"} %>
+  <%= f.text_field :heading, {placeholder: "heading"} %>
+  <%= f.submit %>
+<% end %>
