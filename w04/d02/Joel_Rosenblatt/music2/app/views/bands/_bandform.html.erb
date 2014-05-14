@@ -1,0 +1,6 @@
+<%= form_for band_local do |f| %>
+  <%= f.text_field :name, { placeholder: "Name" } %>
+  <%= f.text_field :bio, { placeholder: "Short Biography" } %>
+  <%= f.hidden_field :genre_id, value: genre_id %>
+  <%= f.submit %>
+<% end %>

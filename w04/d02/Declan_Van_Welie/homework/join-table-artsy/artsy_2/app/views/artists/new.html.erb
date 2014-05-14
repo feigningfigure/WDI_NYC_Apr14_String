@@ -1,0 +1,7 @@
+<%= form_for @artist, url: "/artists", method: "POST" do |f| %>
+  <%= f.text_field :name, {placeholder: "name"} %>
+  <%= f.text_field :birth_year, {placeholder: "birth_year"} %>
+  <%= f.text_field :movement, {placeholder: "movement"} %>
+  <%= f.text_field :nationality, {placeholder: "nationality"} %>
+  <%= f.submit %>
+<% end %>
