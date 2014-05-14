@@ -18,7 +18,10 @@ Rails.application.routes.draw do
 
   get "/games/:id/edit" => "games#edit", as: :edit_game
 
-
   patch "/games/:id" => "games#update"
+
+  get "/players/:id" => "players#show"
+
+  post "/players" => "players#create"
 
 end

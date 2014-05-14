@@ -1,13 +1,32 @@
-<h1><%= @game.title %></h1>
+<h2><%= @game.title %></h2>
 
-<%= @game.genre %>
+<p>Genre: <%= @game.genre %> </p>
+
+<ul>
+<% @game.groups.each do |group| %>
+	<li>Player Name: <%= link_to group.player.name, "/players/#{group.player.id}" %></li>
+	<li>Email: <%= group.player.email %></li>
+	<br />
+
+<% end %>
+</ul>
 
 
-<h2>Edit</h2>
+
+<h4>Edit Game Info</h4>
 <%= form_for @game do |f| %>
 	<%= f.text_field :title, {value: @game.title, placeholder: "title"} %>
 	<%= f.text_field :genre, {value: @game.genre, placeholder: "genre"} %>
 	<%= f.hidden_field :studio_id, value: @game.studio_id %>
+	<%= f.submit %>
+
+<% end %>
+
+<h4>Add Player</h4>
+<%= form_for @player do |f| %>
+	<%= f.text_field :name, {placeholder: "Player Name"} %>
+	<%= f.text_field :email, {placeholder: "Email"} %>
+
 	<%= f.submit %>
 
 <% end %>

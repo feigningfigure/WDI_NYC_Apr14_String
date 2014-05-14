@@ -22,7 +22,6 @@
 	<% @studio.games.order(id: :desc).each do |game| %>
 	<li>
 		<h4><%= game.title %></h4>
-		<p><%= game.genre %></p>
 		<p><%= link_to "Details", "/games/#{game.id}" %></p>
 	</li>
 
