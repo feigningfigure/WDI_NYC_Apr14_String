@@ -1,0 +1,9 @@
+<!-- TODO: make this a partial -->
+<%= render partial: "parentform", locals: { parent_local: @parent } %>
+
+<h2>Parents</h2>
+<ul class="parents">
+  <% @parents.each do |parent| %>
+    <li><%= link_to parent.name, "/parents/#{parent.id}" %></li>
+  <% end %>
+</ul>

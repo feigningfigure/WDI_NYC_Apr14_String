@@ -1,0 +1,8 @@
+<%= render partial: "boxingteamform", locals: { boxingteam_local: @boxingteam } %>
+
+<h2>Boxing Teams</h2>
+<ul class="boxingteams">
+  <% @boxingteams.each do |boxingteam| %>
+    <li><%= link_to boxingteam.title, "/boxingteams/#{boxingteam.id}" %></li>
+  <% end %>
+</ul>

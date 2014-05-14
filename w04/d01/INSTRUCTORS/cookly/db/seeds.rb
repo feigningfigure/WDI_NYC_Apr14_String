@@ -1,5 +1,11 @@
 # blow up database each time
 Cookbook.delete_all
+<<<<<<< HEAD
+
+100.times do
+
+  Cookbook.create({
+=======
 Recipe.delete_all
 
 
@@ -8,10 +14,13 @@ Recipe.delete_all
 100.times do
 
   cookbook = Cookbook.new({
+>>>>>>> 37ba2b78ffaa8dbf8b9ab3dfccea0af6c5b7733f
     title: Faker::Lorem.sentence(3).to_s,
     description: Faker::Lorem.paragraphs(2).join("")
     })
 
+<<<<<<< HEAD
+=======
   # empty array of recipes
   recipes = []
 
@@ -33,4 +42,5 @@ Recipe.delete_all
   # save the newly created cookbook
   cookbook.save!
 
+>>>>>>> 37ba2b78ffaa8dbf8b9ab3dfccea0af6c5b7733f
 end

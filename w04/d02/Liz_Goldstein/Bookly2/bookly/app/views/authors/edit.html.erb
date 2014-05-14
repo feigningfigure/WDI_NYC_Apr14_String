@@ -1,0 +1,9 @@
+<h3>Edit info</h3>
+
+<%= form_for @author do |f| %>
+  <%= f.text_field :first_Name, :value => "#{@author.first_name}" %>
+  <%= f.text_field :last_name, :value => "#{@author.last_name}  " %>
+  <%= f.text_field :birth, :value => "#{@author.birth}" %>
+  <%= f.text_field :death, :value => "#{@author.death}" %>
+  <%= f.submit %>
+<% end %>
