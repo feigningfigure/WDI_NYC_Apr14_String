@@ -1,0 +1,9 @@
+<!-- TODO: make this a partial -->
+<%= render partial: "producerform", locals: { producer_local: @producer } %>
+
+<h2>Producers</h2>
+<ul class="producers">
+  <% @producers.each do |producer| %>
+<li><%= link_to producer.title, "/producers/#{producer.id}" %></li>
+  <% end %>
+</ul>
