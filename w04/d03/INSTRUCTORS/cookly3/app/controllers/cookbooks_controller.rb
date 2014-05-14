@@ -5,10 +5,10 @@ class CookbooksController < ApplicationController
 
   def index
     @cookbooks = Cookbook.order(id: :desc)
-
+    @chef = current_user
     # # current user???!?!!?!?
     # @current_user = current_user
-    binding.pry
+    # binding.pry
     # new instance of cookbook for the form helper
     @cookbook = Cookbook.new
     # render json: @cookbooks
@@ -66,7 +66,7 @@ class CookbooksController < ApplicationController
   # strong params
   def cookbook_attributes
     # whitelisting parts of the params hash, that are DB-safe
-    params.require(:cookbook).permit(:title, :description)
+    params.require(:cookbook).permit(:title, :description, :chef_id)
   end
 
 end
