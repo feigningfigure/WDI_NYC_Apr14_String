@@ -1,0 +1,28 @@
+
+<% id = params[:id].to_i %>
+<% animal = Animal.find(id) %>
+
+
+<h3><%= animal.name %></h3>
+  <ul>
+<% if Vertebrae.find_by_id(animal.vertebrae_id).nil? %>
+<li>Vertebrae Group = none</li>
+<% else %>
+<% vertebrae = Vertebrae.find(animal.vertebrae_id)%>
+  	<li>Vertebrate class:  <a href="/vertebraes/<%=vertebrae.id%>"><%=vertebrae.name%></a></li>
+<% end %>
+  	<br>
+  	<li>Scientific name: <%=animal.scientific_name%></li>
+    <br>
+    <li>Animal can be found:</li>
+    <% animal.locations.each do |location| %>
+    <li><%= location.quanitity %> <%= location.unit %> of <%= location.region.name %>
+      <%end%>
+      <br>
+      <br>
+  	<li>Characteristics:  <%=animal.characteristics%></li>
+  <hr>
+
+  <nav class="header">
+    <a href="update/<%=animal.id%>">update<a> | <a href="delete/<%=animal.id%>">delete<a> 
+  </nav>

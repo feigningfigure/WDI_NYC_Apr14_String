@@ -1,0 +1,22 @@
+
+
+<h2 class="team_title"><%= @team.title %></h2>
+<p>
+  <%= link_to "edit", "/teams/#{@team.id}/edit" %>
+</p>
+<p class="team_description">
+  <%= @team.description %>
+</p>
+<h3>Recipes</h3>
+<%= render partial: "players/recipeform", locals: { recipe_local: @player, team_id: @team.id }%>
+<ul class="players">
+  <% @team.players.order(:id).each do |player| %>
+    <li class="player">
+      <h4><%= player.title %></h4>
+      <p>
+        <%= link_to "edit", "/players/#{recipe.id}/edit" %>
+      </p>
+      <p><%= player.content %></p>
+    </li>
+  <% end %>
+</ul>
