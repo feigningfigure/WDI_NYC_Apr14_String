@@ -1,9 +1,9 @@
-Artist.delete_all
-Work.delete_all
+# Artist.delete_all
+# Work.delete_all
 
 birthdays = (1400..2014).to_a.shuffle!
 
-100.times do
+10.times do
 
   artist = Artist.new({
     name: Faker::Name.name.to_s,
@@ -16,11 +16,13 @@ birthdays = (1400..2014).to_a.shuffle!
 "still life","landscape", "portrait", "nude", "abstract", "self portait", "genre painting", "religious iconography","illustration"
 ]
 
-    subject.each do |subject_matter|
+medium = ["sculpture", "painting", "printmaking", "photography", "video", "multimedia", "mixed media", "performance", "textiles", "drawing", "pastel", "installation"]
+
+    subject_matter.each do |theme|
     Subject.create({
-      genre: subject_matter
+      genre: theme
       })
-end
+    end
 
   works = []
 
@@ -28,19 +30,33 @@ images = ['http://4.bp.blogspot.com/-nUAilJKIsJs/UOmO6zEY24I/AAAAAAAAD4Q/pMBWGBy
 
   3.times do
 
-    works << Work.create({
+    work << Work.create({
       title: Faker::Lorem.sentence(3).to_s,
       year_finished: birthdays.last,
       image_url: images.sample
       })
 
+    random_subjects = Subject.all.to_a.pop
+    medium_pick = medium.sample
 
-works.each do |work|
+    work.add_material( medium_pick,
+      random_subjects)
+  end
 
-artist.works << work
+  work.save
+
+  works << work
 end
 
-artist.save!
 
-end
+    works.each do |work|
+
+    artist.works << work
+    end
+
+  # artist.save!
+
+  # end
+
+
 
