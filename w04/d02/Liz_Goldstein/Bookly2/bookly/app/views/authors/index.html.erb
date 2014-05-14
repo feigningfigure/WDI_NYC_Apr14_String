@@ -1,0 +1,19 @@
+<h2>Authors!</h2>
+
+
+  <h3>Update our database--Add an author:</h3>
+  <%= form_for Author.new do |f| %>
+
+  <p>First Name: <%= f.text_field :first_name %></p>
+  <p>Last Name: <%= f.text_field :last_name %></p>
+  <p>Born: <%= f.text_field :birth %></p>
+  <p>Died: <%= f.text_field :death %></p>
+  <p><%= f.submit "Create!" %></p>
+  <% end %>
+
+<ul class="authors">
+  <% @authors.each do |author| %>
+    <li><%= link_to "#{author.last_name}, " "#{author.first_name}", "/authors/#{author.id}" %></li>
+  <% end %>
+</ul>
+
