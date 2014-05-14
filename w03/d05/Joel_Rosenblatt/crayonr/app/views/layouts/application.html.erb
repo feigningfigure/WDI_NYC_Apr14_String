@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MusicApp</title>
+  <title>Crayonr</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>MusicApp</h1>
-<nav>
-  <%= link_to "genres", genres_path %>
-</nav>
+<h1>Crayonr</h1>
+  <nav>
+    <%= link_to "all", crayons_path %> |
+    <%= link_to "new", crayons_new_path %>
+  </nav>
+
 <%= yield %>
 
 </body>
