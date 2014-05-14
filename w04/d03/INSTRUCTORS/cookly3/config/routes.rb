@@ -44,4 +44,15 @@ Rails.application.routes.draw do
   # get ONE chef
   get "/chefs/:id" => "chefs#show"
 
+  # show NEW chef form
+  get "/chef/new" => "chefs#new"
+
+  # process chef CREATE action from form
+  post "/chefs" => "chefs#create"
+
+  # show LOGIN form
+  get "/chef/login" => "chefs#login"
+
+  # process login form
+  post "/chef/login" => "chefs#process_login"
 end
