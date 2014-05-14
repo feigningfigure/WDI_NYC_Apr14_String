@@ -1,0 +1,107 @@
+Last login: Thu May  8 11:24:14 on ttys001
+GA General Assembly  Web Development Immersive 
+------------------------------------------
+git version 1.9.2
+Homebrew 0.9.5
+ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-darwin13.0.0]
+psql (PostgreSQL) 9.3.4
+Rails 4.0.2
+heroku-toolbelt/3.7.3 (x86_64-darwin10.8.0) ruby/1.9.3
+------------------------------------------
+type unwelcome to remove this message
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ touch app/controllers/posts_controller.rb
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[?]
+$ git add -A .
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master[+]
+$ git commit -m "w03d04 my first rails app working files"
+[master 41de92d] w03d04 my first rails app working files
+ 61 files changed, 836 insertions(+)
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/.gitignore
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/Gemfile
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/Gemfile.lock
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/README.rdoc
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/Rakefile
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/assets/images/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/assets/javascripts/application.js
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/assets/stylesheets/application.css
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/controllers/application_controller.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/controllers/concerns/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/controllers/posts_controller.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/helpers/application_helper.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/mailers/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/models/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/models/concerns/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/models/post.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/views/layouts/application.html.erb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/views/posts/greeting.html.erb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/app/views/posts/index.html.erb
+ create mode 100755 w03/d04/Dara_Mao/first_rails_app/bin/bundle
+ create mode 100755 w03/d04/Dara_Mao/first_rails_app/bin/rails
+ create mode 100755 w03/d04/Dara_Mao/first_rails_app/bin/rake
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config.ru
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/application.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/boot.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/database.yml
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/environment.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/environments/development.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/environments/production.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/environments/test.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/initializers/backtrace_silencers.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/initializers/filter_parameter_logging.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/initializers/inflections.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/initializers/mime_types.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/initializers/secret_token.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/initializers/session_store.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/initializers/wrap_parameters.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/locales/en.yml
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/config/routes.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/db/migrate/20140508152527_create_posts.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/db/schema.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/db/seeds.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/lib/assets/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/lib/tasks/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/log/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/public/404.html
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/public/422.html
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/public/500.html
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/public/favicon.ico
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/public/robots.txt
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/test/controllers/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/test/fixtures/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/test/fixtures/posts.yml
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/test/helpers/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/test/integration/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/test/mailers/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/test/models/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/test/models/post_test.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/test/test_helper.rb
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/vendor/assets/javascripts/.keep
+ create mode 100644 w03/d04/Dara_Mao/first_rails_app/vendor/assets/stylesheets/.keep
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master
+$ git pull upstream master
+remote: Counting objects: 19, done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 13 (delta 3), reused 10 (delta 0)
+Unpacking objects: 100% (13/13), done.
+From github.com:ga-students/WDI_NYC_Apr14_String
+ * branch            master     -> FETCH_HEAD
+   b610de9..d2d992d  master     -> upstream/master
+Merge made by the 'recursive' strategy.
+ w03/d04/INSTRUCTORS/rectangles/README.md         | 28 ++++++++++++++++++++++++++++
+ w03/d04/INSTRUCTORS/rectangles/main.rb           | 12 ++++++++++++
+ w03/d04/INSTRUCTORS/rectangles/public/styles.css |  7 +++++++
+ w03/d04/INSTRUCTORS/rectangles/views/blocks.erb  |  5 +++++
+ w03/d04/INSTRUCTORS/rectangles/views/kittens.erb |  0
+ w03/d04/INSTRUCTORS/rectangles/views/layout.erb  | 15 +++++++++++++++
+ 6 files changed, 67 insertions(+)
+ create mode 100644 w03/d04/INSTRUCTORS/rectangles/README.md
+ create mode 100644 w03/d04/INSTRUCTORS/rectangles/main.rb
+ create mode 100644 w03/d04/INSTRUCTORS/rectangles/public/styles.css
+ create mode 100644 w03/d04/INSTRUCTORS/rectangles/views/blocks.erb
+ create mode 100644 w03/d04/INSTRUCTORS/rectangles/views/kittens.erb
+ create mode 100644 w03/d04/INSTRUCTORS/rectangles/views/layout.erb
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao/first_rails_app on master
+$ cd ../
+daramao ~/code/wdi/WDI_NYC_Apr14_String/w03/d04/Dara_Mao on master[?]
+$ 

@@ -1,0 +1,25 @@
+<%= form_for(@cookie_watcher) do |f| %>
+  <% if @cookie_watcher.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cookie_watcher.errors.count, "error") %> prohibited this cookie_watcher from being saved:</h2>
+
+      <ul>
+      <% @cookie_watcher.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :cookies %><br>
+    <%= f.number_field :cookies %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

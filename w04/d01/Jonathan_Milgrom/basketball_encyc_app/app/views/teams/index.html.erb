@@ -1,0 +1,14 @@
+
+<%= form_for @team, url: "/teams", method: "POST" do |f| %>
+  <%= f.text_field :city, {placeholder: "city"} %>
+  <%= f.text_field :name, {placeholder: "name"} %>
+  <%= f.text_field :url, {placeholder: "url"} %>
+  <%= f.submit %>
+<% end %>
+
+<h2>teams</h2>
+<ul class="teams">
+  <% @teams.each do |team| %>
+    <li><%= link_to team.name, "/teams/#{team.id}" %></li>
+  <% end %>
+</ul>
