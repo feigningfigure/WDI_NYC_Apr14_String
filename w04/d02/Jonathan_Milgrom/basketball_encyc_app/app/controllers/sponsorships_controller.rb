@@ -1,16 +1,16 @@
 class SponsorshipsController < ApplicationController
 
 	def create
-		Team.create(new_team_attributes)
+		Sponsorship.create(new_sponsorship_attributes)
 
-		redirect_to teams_path
+		redirect_to "/teams/#{new_sponsorship_attributes[:team_id]}"
 	end
 
 private
 	  # strong params
-	def new_sponsor_attributes
+	def new_sponsorship_attributes
 	    # whitelisting parts of the params hash, that are DB-safe
-	   params.require(:sponsorship).permit(:name, :city, :url)
+	   params.require(:sponsorship).permit(:team_id, :shoe_id)
 	end
 
 end
