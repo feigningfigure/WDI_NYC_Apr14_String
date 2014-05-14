@@ -8,7 +8,7 @@ genres = [
 'Comedy',
 'Crime',
 'Erotica',
-'Faction',
+'Fiction',
 'Fantasy',
 'Historical',
 'Horror',

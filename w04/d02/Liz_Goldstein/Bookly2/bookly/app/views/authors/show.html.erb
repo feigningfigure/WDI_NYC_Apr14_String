@@ -18,10 +18,15 @@
 
 <ul>
   <% @author.books.order(:id).each do |book| %>
-   <p><li> <%= book.title %>, <%= link_to " Edit Listing", "/books/#{book.id}/edit" %></p>
+   <p><li> <%= book.title %>. <% book.genrecatalogs.each do |genre| %>
+    Rating: <%= genre.rating %>,
+    Genre: <%=genre.genre.genre %><% end %>
+
+    <%= link_to " Edit Listing", "/books/#{book.id}/edit" %></p>
 
 </li>
   <% end %>
 </ul>
+
 
 
