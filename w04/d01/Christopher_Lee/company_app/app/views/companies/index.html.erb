@@ -9,16 +9,23 @@
         <h2>$<%= company.assets_in_billions %> billion in assets</h2>
     </div>
   </div>
-  <div class="section group">
-  <% company.products.each do |product| %>
-      <div class="col span_1_of_12">
-        <img class="product_line" src=<%= product.image_url %>>
-      </div>
+
+  <div class="section group table">
+    <div class="table-row">
+    <% company.products.each do |product| %>
+        <div class="col span_1_of_12 product_line">
+          <%= link_to "/products/#{product.id}/edit" do %>
+          <img src=<%= product.image_url %>>
+          <% end %>
+        </div>
     <% end %>
-    <div class="col span_1_of_12">
-      <%= link_to "/products/#{company.id}/new/" do %>
-      <h1 class="add">+<h1>
-      <% end %>
+
+      <div class="col span_1_of_12 product_line">
+        <%= link_to "/products/#{company.id}/new/" do %>
+        <h1 class="add">+<h1>
+        <% end %>
+      </div>
+      <!-- might need to throw an nth child to get this to work -->
     </div>
   </div>
 
