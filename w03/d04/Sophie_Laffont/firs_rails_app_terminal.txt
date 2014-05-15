@@ -1,0 +1,388 @@
+Last login: Wed May  7 19:09:12 on ttys001
+GA General Assembly  Web Development Immersive 
+------------------------------------------
+git version 1.8.5.2 (Apple Git-48)
+Homebrew 0.9.5
+ruby 1.9.3p448 (2013-06-27 revision 41675) [x86_64-darwin13.1.0]
+psql (PostgreSQL) 9.3.4
+Rails 4.1.0
+heroku-toolbelt/3.7.3 (x86_64-darwin10.8.0) ruby/1.9.3
+------------------------------------------
+type unwelcome to remove this message
+pickle ~/Desktop/morning_thursday/views
+$ git pull upstream master
+fatal: Not a git repository (or any of the parent directories): .git
+pickle ~/Desktop/morning_thursday/views
+$ wdi
+pickle ~/code/wdi
+$ la
+-bash: la: command not found
+pickle ~/code/wdi
+$ ls
+WDI_NYC_Apr14_String/ class/                personal/             pre-commit*           projects/
+pickle ~/code/wdi
+$ cd WDI_NYC_Apr14_String/
+pickle ~/code/wdi/WDI_NYC_Apr14_String on master
+$ git pull upstream master
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+pickle ~/code/wdi/WDI_NYC_Apr14_String on master
+$ git add -A .
+pickle ~/code/wdi/WDI_NYC_Apr14_String on master
+$ git commi -m "thursday morning"
+git: 'commi' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+	commit
+	column
+	config
+pickle ~/code/wdi/WDI_NYC_Apr14_String on master
+$ git commit -m "thursday morning"
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+pickle ~/code/wdi/WDI_NYC_Apr14_String on master
+$ git push origin master
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+pickle ~/code/wdi/WDI_NYC_Apr14_String on master
+$ cd ~desktop
+-bash: cd: ~desktop: No such file or directory
+pickle ~/code/wdi/WDI_NYC_Apr14_String on master[?]
+$ cd~/desktop
+-bash: cd~/desktop: No such file or directory
+pickle ~/code/wdi/WDI_NYC_Apr14_String on master[?]
+$ ls
+Readme.md  guides/    tools/     w01/       w02/       w03/
+pickle ~/code/wdi/WDI_NYC_Apr14_String on master[?]
+$ cd ~/desktop
+pickle ~/desktop
+$ ls
+CODE-PRINT.doc                      w03 alias
+INSTRUCTORS copy/                   wdi_misc.
+morning_thursday/                   ~$GA Live Stream NPS-Feedback.xlsx
+personal alias                      ~$GALiveStreamNPS-Feedback.xlsx
+rails/                              ~$little list of worries.xlsx
+to do
+pickle ~/desktop
+$ cd rails
+pickle ~/desktop/rails
+$ nudle
+-bash: nudle: command not found
+pickle ~/desktop/rails
+$ bundle
+Could not locate Gemfile
+pickle ~/desktop/rails
+$ bundle install
+Could not locate Gemfile
+pickle ~/desktop/rails
+$ cd ~/desktop
+pickle ~/desktop
+$ ls
+CODE-PRINT.doc
+INSTRUCTORS copy/
+Screen Shot 2014-05-08 at 11.09.02 AM.png
+Screen Shot 2014-05-08 at 11.09.52 AM.png
+morning_thursday/
+personal alias
+rails/
+to do
+w03 alias
+wdi_misc.
+~$GA Live Stream NPS-Feedback.xlsx
+~$GALiveStreamNPS-Feedback.xlsx
+~$little list of worries.xlsx
+pickle ~/desktop
+$ cd rails/
+pickle ~/desktop/rails
+$ LS
+first_rails.app
+pickle ~/desktop/rails
+$ rm -rf first_rails.app/
+pickle ~/desktop/rails
+$ ls
+pickle ~/desktop/rails
+$ rails new first_rails_app
+      create  
+      create  README.rdoc
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/assets/javascripts/application.js
+      create  app/assets/stylesheets/application.css
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/views/layouts/application.html.erb
+      create  app/assets/images/.keep
+      create  app/mailers/.keep
+      create  app/models/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/session_store.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  test/fixtures
+      create  test/fixtures/.keep
+      create  test/controllers
+      create  test/controllers/.keep
+      create  test/mailers
+      create  test/mailers/.keep
+      create  test/models
+      create  test/models/.keep
+      create  test/helpers
+      create  test/helpers/.keep
+      create  test/integration
+      create  test/integration/.keep
+      create  test/test_helper.rb
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor/assets/javascripts
+      create  vendor/assets/javascripts/.keep
+      create  vendor/assets/stylesheets
+      create  vendor/assets/stylesheets/.keep
+         run  bundle install
+Fetching gem metadata from https://rubygems.org/..........
+Fetching additional metadata from https://rubygems.org/..
+Resolving dependencies...
+Using rake 10.3.1
+Using i18n 0.6.9
+Using json 1.8.1
+Using minitest 5.3.3
+Using thread_safe 0.3.3
+Using tzinfo 1.1.0
+Using activesupport 4.1.0
+Using builder 3.2.2
+Using erubis 2.7.0
+Using actionview 4.1.0
+Using rack 1.5.2
+Using rack-test 0.6.2
+Using actionpack 4.1.0
+Using mime-types 1.25.1
+Using polyglot 0.3.4
+Using treetop 1.4.15
+Using mail 2.5.4
+Using actionmailer 4.1.0
+Using activemodel 4.1.0
+Using arel 5.0.1.20140414130214
+Using activerecord 4.1.0
+Using bundler 1.6.2
+Using coffee-script-source 1.7.0
+Using execjs 2.0.2
+Using coffee-script 2.2.0
+Using thor 0.19.1
+Using railties 4.1.0
+Using coffee-rails 4.0.1
+Using hike 1.2.3
+Using multi_json 1.10.0
+Using jbuilder 2.0.7
+Using jquery-rails 3.1.0
+Using tilt 1.4.1
+Using sprockets 2.11.0
+Using sprockets-rails 2.1.3
+Using rails 4.1.0
+Using rdoc 4.1.1
+Using sass 3.2.19
+Using sass-rails 4.0.3
+Using sdoc 0.4.0
+Using spring 1.1.2
+Using sqlite3 1.3.9
+Using turbolinks 2.2.2
+Using uglifier 2.5.0
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+pickle ~/desktop/rails
+$ ls
+first_rails_app/
+pickle ~/desktop/rails
+$ cd first_rails_app/
+pickle ~/desktop/rails/first_rails_app
+$ ls
+Gemfile       Rakefile      config/       lib/          test/
+Gemfile.lock  app/          config.ru     log/          tmp/
+README.rdoc   bin/          db/           public/       vendor/
+pickle ~/desktop/rails/first_rails_app
+$ subl .
+pickle ~/desktop/rails/first_rails_app
+$ bundle
+Resolving dependencies...
+Using rake 10.3.1
+Using i18n 0.6.9
+Using json 1.8.1
+Using minitest 5.3.3
+Using thread_safe 0.3.3
+Using tzinfo 1.1.0
+Using activesupport 4.1.0
+Using builder 3.2.2
+Using erubis 2.7.0
+Using actionview 4.1.0
+Using rack 1.5.2
+Using rack-test 0.6.2
+Using actionpack 4.1.0
+Using mime-types 1.25.1
+Using polyglot 0.3.4
+Using treetop 1.4.15
+Using mail 2.5.4
+Using actionmailer 4.1.0
+Using activemodel 4.1.0
+Using arel 5.0.1.20140414130214
+Using activerecord 4.1.0
+Using bundler 1.6.2
+Using coffee-script-source 1.7.0
+Using execjs 2.0.2
+Using coffee-script 2.2.0
+Using thor 0.19.1
+Using railties 4.1.0
+Using coffee-rails 4.0.1
+Using hike 1.2.3
+Using multi_json 1.10.0
+Using jbuilder 2.0.7
+Using jquery-rails 3.1.0
+Using pg 0.17.1
+Using tilt 1.4.1
+Using sprockets 2.11.0
+Using sprockets-rails 2.1.3
+Using rails 4.1.0
+Using rdoc 4.1.1
+Using sass 3.2.19
+Using sass-rails 4.0.3
+Using sdoc 0.4.0
+Using spring 1.1.2
+Using turbolinks 2.2.2
+Using uglifier 2.5.0
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+pickle ~/desktop/rails/first_rails_app
+$ rake db:create
+pickle ~/desktop/rails/first_rails_app
+$ rails generate model Post title:string body:text
+Warning: Running `gem pristine --all` to regenerate your installed gemspecs (and deleting then reinstalling your bundle if you use bundle --path) will improve the startup performance of Spring.
+/Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/sid.rb:17:in `fiddle_func': uninitialized constant Spring::SID::DL (NameError)
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/sid.rb:30:in `sid'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/sid.rb:39:in `pgid'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/server.rb:78:in `set_pgid'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/server.rb:34:in `boot'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/server.rb:14:in `boot'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/client/run.rb:36:in `block in boot_server'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/client/run.rb:34:in `fork'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/client/run.rb:34:in `boot_server'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/client/run.rb:18:in `call'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/client/command.rb:7:in `call'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/client/rails.rb:23:in `call'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/client/command.rb:7:in `call'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/client.rb:26:in `run'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/bin/spring:48:in `<top (required)>'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/binstub.rb:11:in `load'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/spring-1.1.2/lib/spring/binstub.rb:11:in `<top (required)>'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/site_ruby/1.9.1/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /Users/pickle/.rbenv/versions/1.9.3-p448/lib/ruby/site_ruby/1.9.1/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /Users/pickle/Desktop/rails/first_rails_app/bin/spring:16:in `<top (required)>'
+	from bin/rails:3:in `load'
+	from bin/rails:3:in `<main>'
+pickle ~/desktop/rails/first_rails_app
+$ bundle
+Resolving dependencies...
+Using rake 10.3.1
+Using i18n 0.6.9
+Using json 1.8.1
+Using minitest 5.3.3
+Using thread_safe 0.3.3
+Using tzinfo 1.1.0
+Using activesupport 4.1.0
+Using builder 3.2.2
+Using erubis 2.7.0
+Using actionview 4.1.0
+Using rack 1.5.2
+Using rack-test 0.6.2
+Using actionpack 4.1.0
+Using mime-types 1.25.1
+Using polyglot 0.3.4
+Using treetop 1.4.15
+Using mail 2.5.4
+Using actionmailer 4.1.0
+Using activemodel 4.1.0
+Using arel 5.0.1.20140414130214
+Using activerecord 4.1.0
+Using bundler 1.6.2
+Using coffee-script-source 1.7.0
+Using execjs 2.0.2
+Using coffee-script 2.2.0
+Using thor 0.19.1
+Using railties 4.1.0
+Using coffee-rails 4.0.1
+Using hike 1.2.3
+Using multi_json 1.10.0
+Using jbuilder 2.0.7
+Using jquery-rails 3.1.0
+Using pg 0.17.1
+Using tilt 1.4.1
+Using sprockets 2.11.0
+Using sprockets-rails 2.1.3
+Using rails 4.1.0
+Using rdoc 4.1.1
+Using sass 3.2.19
+Using sass-rails 4.0.3
+Using sdoc 0.4.0
+Using turbolinks 2.2.2
+Using uglifier 2.5.0
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+pickle ~/desktop/rails/first_rails_app
+$ rails generate model Post title:string body:text
+      invoke  active_record
+      create    db/migrate/20140508152021_create_posts.rb
+      create    app/models/post.rb
+      invoke    test_unit
+      create      test/models/post_test.rb
+      create      test/fixtures/posts.yml
+pickle ~/desktop/rails/first_rails_app
+$ 

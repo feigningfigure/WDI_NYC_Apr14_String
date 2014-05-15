@@ -1,1 +1,19 @@
 <!-- SHOW POSTS HERE -->
+
+<ul class="posts">
+<% @posts.each do |post| %>
+  <li>
+    <h2 class="post_title"><%= post.title %></h2>
+    <p class="author_name">by <%= post.author_name %>
+      <%# random_person_photo  # bad idea %>
+    <img class="author_photo" src="<%= post.author_photo %>" />
+    </p>
+    <p class="post_body"><%= post.body %></p>
+  </li>
+<% end %>
+</ul>
+
+<!-- hello should appear -->
+<%= my_method %>
+
+<!--  -->
