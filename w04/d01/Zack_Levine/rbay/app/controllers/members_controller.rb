@@ -12,4 +12,12 @@ class MembersController < ApplicationController
     # makes the form work
     # @members = Member.new
   end
+
+  def create
+    Member.create(params[:member_id],params[:member_profile])
+
+     redirect_to "/members/#{member_bucket_info[:member_id]}"
+  end
+
 end
+
