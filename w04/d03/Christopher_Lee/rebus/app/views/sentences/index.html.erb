@@ -1,0 +1,20 @@
+<h1>THIS IS THE INDEX!!!</h1>
+
+<%= form_for @sentence, url: "/sentences/create", method: "post" do |f| %>
+<%= f.text_field :photo_1 %>
+<%= f.select :word_1, ['ate' ,'ran' ,'smoked' ,'bought'] %>
+<%= f.text_field :photo_2 %>
+<%= f.select :word_2, ['while', 'at', 'for', 'with', 'in'] %>
+<%= f.text_field :photo_3 %>
+<%= f.submit %>
+<% end %>
+
+
+
+<% @sentences.each do |sentence| %>
+  <img src=<%= sentence[:photo_1] %>>
+  <h1> <%= sentence[:word_1] %></h1>
+  <img src=<%= sentence[:photo_2] %>>
+  <h1> <%= sentence[:word_2] %></h1>
+  <img src=<%= sentence[:photo_3] %>>
+<% end %>

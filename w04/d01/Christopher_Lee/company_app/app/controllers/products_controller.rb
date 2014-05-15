@@ -26,10 +26,10 @@ class ProductsController < ApplicationController
   end
 
   def add_distributor
-    product = Product.find(params[:product_id])
-    selected_country = Country.find(params[:id])
+    product = Product.find(params[:distributor][:product_id])
+    selected_country = Country.find(params[:country][:id])
     product.distributors.create(country: selected_country)
-    redirect_to "products/#{product.id}/edit"
+    redirect_to "/products/#{product.id}/edit"
   end
 
   private
