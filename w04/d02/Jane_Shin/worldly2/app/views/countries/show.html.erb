@@ -1,0 +1,10 @@
+<h2><%= @country.name %></h2>
+
+<ul>
+<% @country.people.each do |person| %>
+	<li><%= person.name %><li>
+	<li><%= person.visas.length %></li>
+<% end %>
+</ul>
+
+<%= render partial: "people/personform", locals: { person_local: @person } %>
