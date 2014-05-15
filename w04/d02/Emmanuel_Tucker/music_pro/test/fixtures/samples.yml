@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  beat_id: 
+  song_id: 
+  producer_id: 
+  gb: 
+
+two:
+  beat_id: 
+  song_id: 
+  producer_id: 
+  gb: 
