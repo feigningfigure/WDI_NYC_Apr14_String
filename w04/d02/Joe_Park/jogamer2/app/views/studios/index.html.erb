@@ -1,0 +1,10 @@
+<h3>Register New Studio</h3>
+<%= render partial: "studioform", locals: { studio_local: @studio } %>
+
+
+<h2>Studios!</h2>
+<ul class="studios">
+	<% @studios.each do |studio| %>
+		<li><%= link_to studio.name, "/studios/#{studio.id}", :target => "_blank" %></li>
+	<% end %>
+</ul>

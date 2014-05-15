@@ -1,0 +1,14 @@
+<h2>Player Profile</h2>
+<h3><%= @player.name %></h3>
+<p><%= @player.email %></p>
+
+<h4>Games Owned by <%= @player.name %></h4>
+
+<ul>
+<% @player.groups.each do |group| %>
+	<li><%= link_to group.game.title, "/games/#{group.game.id}" %></li>
+
+
+<% end %>
+</ul>
+

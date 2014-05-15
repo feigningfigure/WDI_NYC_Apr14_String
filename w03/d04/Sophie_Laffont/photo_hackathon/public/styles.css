@@ -1,0 +1,42 @@
+body {
+  background: url(/images/scary.jpg);
+  background-repeat: repeat;
+}
+
+
+.wrapper {
+  width: 640px;
+  margin: 0 auto;
+}
+
+h1, h2, nav {
+  font-family: 'Creepster', cursive;
+  text-align: center;
+}
+
+h1 {
+  font-size: 140px;
+  margin-top: -50px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+nav {
+  margin-top: -120px;
+/*  text-align: center;*/
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Creepster', arial, sans-serif;
+  color: black;
+  letter-spacing: 5px;
+}
+
+a:hover {
+  color: red;
+}
