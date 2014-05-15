@@ -1,0 +1,8 @@
+<%= render partial: "continentform", locals: { continent_local: @continent } %>
+
+<ul>
+<% @continents.each do |continent| %>
+	<li><%= link_to continent.name, "/continents/#{continent.id}" %></li>
+<% end %>
+</ul>
+

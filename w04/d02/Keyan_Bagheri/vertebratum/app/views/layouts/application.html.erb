@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vertebrately</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <img src="http://ct.mob0.com/Fonts/animals.png">
+  <div class="everything">
+ <h1>Vertebrately</h1>
+
+  <nav class="header">
+    <%= link_to "vertebrae groups", vertebraes_path %> |
+    <%= link_to "animals", animals_path %> 
+  </nav>
+
+<%= yield %>
+</div>
+<img src="http://ct.mob0.com/Fonts/CharacterMap/animals.png">
+</body>
+</html>

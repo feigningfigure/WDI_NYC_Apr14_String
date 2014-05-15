@@ -1,0 +1,24 @@
+<h2 class="brewery_name"><%= @brewery.name %></h2>
+
+<h4 class="brewery_location"><%= @brewery.location %></h4>
+<p><%= link_to "edit", "/breweries/#{@brewery.id}/edit" %>
+
+<p class = "brewery_description">
+  <%= @brewery.description %>
+</p>
+
+<h3>Beers</h3>
+<%= render partial: "beers/beerform", locals: { beer_local: @beer, brewery_id: @brewery.id }%>
+<ul class="beers">
+<% @brewery.beers.order(id: :desc).each do |beer| %>
+  <li class="beer">
+    <h4><%= beer.name %><h5><%= link_to "edit", "/beers/#{beer.id}/edit" %> | <%= link_to "examine", "/beers/#{beer.id}"%></h5></h4>
+    <p class="beer_style">
+      Style: <%= beer.style %>
+    </p>
+    <p class="beer_description">
+      <%= beer.description %>
+    </p>
+  </li>
+<%end%>
+</ul>

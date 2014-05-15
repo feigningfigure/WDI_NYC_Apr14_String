@@ -1,0 +1,16 @@
+<%= @continent.name %>
+<%= @continent.area %>
+<%= link_to "edit", "/continents/#{@continent.id}/edit" %>
+<%= link_to "Home", "/continents" %>
+
+<%= render partial: "countries/countryform", locals: { country_local: @country, continent_id: @continent.id } %>
+<ul>
+  <% @continent.countries.order(id: :desc).each do |country| %>
+	  <li>
+	  	<h5><%= link_to country.name, "/countries/#{country.id}" %></h5>
+	  	<p><%= country.population%></p>
+	  	<p><%= country.language%></p>
+	  	<p><%= link_to "edit", "/countries/#{country.id}/edit" %></p>
+	  </li>
+  <% end %>
+</ul>

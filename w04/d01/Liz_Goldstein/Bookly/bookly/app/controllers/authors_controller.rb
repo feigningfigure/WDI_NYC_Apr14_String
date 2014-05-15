@@ -12,7 +12,6 @@ class AuthorsController < ApplicationController
 
 
 def create
-
     Author.create(author_attributes)
     # render json: {
     #   strong_params: author_attributes
