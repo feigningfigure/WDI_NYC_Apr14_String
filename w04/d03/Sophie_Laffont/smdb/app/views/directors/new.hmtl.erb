@@ -1,0 +1,17 @@
+
+<%# this DOES need a crying clown hat %>
+<%= form_for @director, url: "/directors" do |f| %>
+
+
+<a href="/new">See New Director</a>
+
+  	<ul>
+	    <li>Name: <%= f.text_field :name, placeholder:"type the director name" %>
+	    </li>
+    </ul>
+
+	<%= f.submit "Create" %>
+
+
+
+<% end %>
