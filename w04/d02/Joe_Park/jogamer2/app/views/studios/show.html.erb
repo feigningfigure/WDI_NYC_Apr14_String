@@ -1,0 +1,29 @@
+<h2 class="studio_name"><%= @studio.name %></h2>
+<p>
+	<%= link_to "Edit", "/studios/#{@studio.id}/edit" %>
+</p>
+
+
+<p><%= @studio.description %></p>
+<p><%= @studio.location %></p>
+
+
+<h3>Games by <%= @studio.name %></h3>
+<h4>Add a Game</h4>
+<%= form_for @game, url: "/games", method: "POST" do |f| %>
+	<%= f.text_field :title, {placeholder: "title"} %>
+	<%= f.text_field :genre, {placeholder: "genre"} %>
+	<%= f.hidden_field :studio_id, value: @studio.id %>
+	<%= f.submit %>
+<% end %>
+
+
+<ul class="games">
+	<% @studio.games.order(id: :desc).each do |game| %>
+	<li>
+		<h4><%= game.title %></h4>
+		<p><%= link_to "Details", "/games/#{game.id}" %></p>
+	</li>
+
+	<% end %>
+</ul>
