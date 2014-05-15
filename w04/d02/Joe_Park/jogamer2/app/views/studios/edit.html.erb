@@ -1,0 +1,9 @@
+<h3>Edit Studio Profile</h3>
+
+<%= form_for @studio do |f| %>
+	<%= f.text_field :name, {value: @studio.name, placeholder: "name"} %>
+	<%= f.text_field :description, {value: @studio.description, placeholder: "description"} %>
+	<%= f.submit %>
+
+
+<% end %>
