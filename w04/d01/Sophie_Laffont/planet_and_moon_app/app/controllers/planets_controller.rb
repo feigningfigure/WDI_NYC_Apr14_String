@@ -17,7 +17,7 @@ layout "application"
 				image_url: new_planet[:image_url],
 				diameter: new_planet[:diameter],
 				mass: new_planet[:mass],
-				life: new_planet[:life],		
+				life: new_planet[:life],
 				})
 		redirect_to planets_path
 	end
@@ -25,6 +25,7 @@ layout "application"
 	def show
 		planet_id = params[:id]
 		@planet = Planet.find(planet_id)
+		@moons = @planet.moons
 	end
 
 end
