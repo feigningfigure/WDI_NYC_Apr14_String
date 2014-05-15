@@ -5,15 +5,24 @@ class SentencesController < ApplicationController
   end
 
   def create
-    # Sentence.create(sentence_attributes)
-    params[:photo_1] = Sentence.get_photo(params[:photo_1])
-    params[:photo_2] = Sentence.get_photo(params[:photo_2])
-    params[:photo_3] = Sentence.get_photo(params[:photo_3])
-    render json: {
-      strong_params: sentence_attributes
-    }
+    # sentence_attributes["photo_1"] = Sentence.get_photo!(sentence_attributes[:photo_1])
+    # sentence_attributes["photo_2"] = Sentence.get_photo!(sentence_attributes[:photo_2])
+    # sentence_attributes["photo_3"] = Sentence.get_photo!(sentence_attributes[:photo_3])
 
-    # redirect_to '/'
+    # photo_1 = Sentence.get_photo!(sentence_attributes[:photo_1])
+    # sentence_attributes["photo_1"] = photo_1
+    # photo_2 = Sentence.get_photo!(sentence_attributes[:photo_1])
+    # sentence_attributes["photo_2"] = photo_2
+    # photo_3 = Sentence.get_photo!(sentence_attributes[:photo_1])
+    # sentence_attributes["photo_2"] = photo_3
+    # Sentence.get_photo!(sentence_attributes[:photo_2])
+    # Sentence.get_photo!(sentence_attributes[:photo_3])
+    # render json: {
+    #   strong_params: sentence_attributes
+    # }
+    Sentence.create(sentence_attributes)
+
+    redirect_to '/'
   end
 
   private
