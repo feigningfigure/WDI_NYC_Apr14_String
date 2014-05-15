@@ -1,6 +1,12 @@
 class CookbooksController < ApplicationController
 
   def index
+<<<<<<< HEAD
+    @cookbooks = Cookbook.all
+    # render json: @cookbooks
+  end
+
+=======
     @cookbooks = Cookbook.order(id: :desc)
 
     # new instance of cookbook for the form helper
@@ -63,4 +69,5 @@ class CookbooksController < ApplicationController
     params.require(:cookbook).permit(:title, :description)
   end
 
+>>>>>>> 37ba2b78ffaa8dbf8b9ab3dfccea0af6c5b7733f
 end
