@@ -1,5 +1,7 @@
 class PhotosController < ActionController::Base
 
+  layout "application"
+
   def index
 
     @photos = [Photo.get_photo]
