@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
   def edit
     @product = Product.find(params[:id])
     @company = Company.find(@product.company_id)
+    @countries = Country.all
   end
 
 
@@ -23,7 +24,9 @@ class ProductsController < ApplicationController
     redirect_to "/companies/#{product_attributes[:company_id]}"
   end
 
+  def add_distributor
 
+  end
 
   private
 

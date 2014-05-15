@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
+  get "/cookbooks" => "cookbooks#index"
+
+=======
   # root route
   root to: "cookbooks#index"
 
@@ -36,4 +40,5 @@ Rails.application.routes.draw do
   # process form data for UPDATE or edit actions
   patch "/recipes/:id" => "recipes#update"
 
+>>>>>>> 37ba2b78ffaa8dbf8b9ab3dfccea0af6c5b7733f
 end

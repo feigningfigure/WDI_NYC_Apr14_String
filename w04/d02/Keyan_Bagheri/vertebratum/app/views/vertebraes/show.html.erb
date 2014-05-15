@@ -1,0 +1,31 @@
+
+<% id = params[:id].to_i %>
+<% vertebrae = Vertebrae.find(id) %>
+
+<h3><%= vertebrae.name %></h3>
+  <ul>
+  <li>Scientific name: <%= vertebrae.scientific_name %></li>
+  <br>
+    <li>Characteristics: <%=vertebrae.characteristics%></li>
+    <br>
+    <li>Animals it includes:</li>
+<% animals = [] %>
+<% Animal.all.each do |animal| %>
+<% if animal.vertebrae_id == vertebrae.id %>
+<% animals << animal.name %>
+<% end %>
+<% end %>
+<% if animals.length >= 1 %>
+<% Animal.all.each do |animal| %>
+<% if animal.vertebrae_id == vertebrae.id %>
+<a href="/animals/<%=animal.id%>"><%=animal.name%> | </a>
+<% end %>
+<% end %>
+<% else %>
+<p>"none"</p>
+<% end %>
+  <hr>
+
+  <nav class="header">
+    <a href="update/<%=vertebrae.id%>">update</a> | <a href="delete/<%=vertebrae.id%>">delete</a> 
+  </nav>
