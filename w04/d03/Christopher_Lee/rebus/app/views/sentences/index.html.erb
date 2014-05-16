@@ -9,10 +9,16 @@
 <%= f.submit %>
 <% end %>
 
-<% @sentences.each do |sentence| %>
-  <img src=<%= Sentence.get_photo!(sentence[:photo_1]) %>>
-  <h1> <%= sentence[:word_1] %></h1>
-  <img src=<%= Sentence.get_photo!(sentence[:photo_2]) %>>
-  <h1> <%= sentence[:word_2] %></h1>
-  <img src=<%= Sentence.get_photo!(sentence[:photo_3]) %>>
-<% end %>
+
+<div class="section group">
+  <div class="col span_6_of_12">
+      <% @sentences.each do |sentence| %>
+      <img src=<%= sentence[:photo_1] %>>
+      <h1> <%= sentence[:word_1] %></h1>
+      <img src=<%= sentence[:photo_2] %>>
+      <h1> <%= sentence[:word_2] %></h1>
+      <img src=<%= sentence[:photo_3] %>>
+    <% end %>
+  </div>
+</div>
+
