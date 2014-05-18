@@ -2,7 +2,7 @@
 Gallery.delete_all
 Artist.delete_all
 
-100.times do
+25.times do
 
   gallery = Gallery.new({
     name: Faker::Name.name,

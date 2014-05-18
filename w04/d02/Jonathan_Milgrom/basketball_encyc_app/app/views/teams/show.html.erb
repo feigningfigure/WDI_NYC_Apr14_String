@@ -1,0 +1,35 @@
+
+<h1><%= @team.city %> <%= @team.name %></h1>
+<%= link_to "edit", "/teams/#{@team.id}/edit" %>
+<p><img src=<%= @team.url %>></p>
+
+<% @team.players.each do |player| %>
+	<h3><%= player.name %></h3>
+	<ul>
+		<li><%= player.height %> inches</li>
+		<li>from <%= player.college %></li>
+		<li><%= link_to "edit", "/players/#{player.id}/edit" %></li>
+		<li><%= link_to "delete", "/players/#{player.id}/delete" %></li>
+	</ul>
+<% end %>
+<%= form_for @player, url: "/players", method: "POST" do |f| %>
+  <%= f.text_field :name, {placeholder: "name"} %>
+  <%= f.text_field :height, {placeholder: "height"} %>
+  <%= f.text_field :college, {placeholder: "college"} %>
+  <%= f.hidden_field :team_id, :value => @team.id %>
+  <%= f.submit %>
+<% end %>
+
+
+<h3>Team shoes</h3>
+<% @team.shoes.each do |shoe| %>
+	<ul>
+		<li><%= shoe.brand %></li>
+	</ul>
+<% end %>
+
+<%= form_for @sponsorship, url: "/sponsorships", method: "POST" do |f| %>
+  <%= f.text_field :shoe_id, {placeholder: "shoe id"} %>
+  <%= f.hidden_field :team_id, :value => @team.id %>
+  <%= f.submit %>
+<% end %>
