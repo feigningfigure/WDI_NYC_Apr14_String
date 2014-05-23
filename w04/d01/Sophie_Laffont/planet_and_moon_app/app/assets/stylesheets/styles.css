@@ -1,0 +1,53 @@
+ 
+body{
+	background-image: url('http://fc09.deviantart.net/fs15/i/2007/099/a/3/Starry_Sky_1_by_Ulfhednin.jpg');
+	font-family: "Courier", sans-serif ;
+	
+}
+
+
+
+a:link {
+	color:#F6E2C9;
+	text-decoration:none;
+}
+	      /* unvisited link */
+a:visited {
+	color:#F6E2C9;
+	text-decoration:none;
+	}  /* visited link */
+
+a:hover {
+	color:#ED4242;
+	text-decoration:none;
+	}  /* mouse over link */
+a:active {
+	color:#ED4242;
+	text-decoration:underline;
+	}  /* selected link */
+
+h1{
+	text-align: center;
+	color:#E8C9B4;
+	font-family: "Courier", sans-serif; 
+	font-size: 48px;
+	font-weight: 400;
+}
+
+h2{
+	text-align: left;
+	margin-left: 100px;
+	color:#ABA08E;
+}
+
+h3{
+text-align:right;
+font-color:#ABA08E;
+font-size: 12px;
+
+}
+
+img{
+	/*float:right;*/
+	clear:both;
+}

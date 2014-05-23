@@ -1,0 +1,15 @@
+<% id = params[:id].to_i %>
+<% vertebrae = Vertebrae.find(id) %>
+
+<form action="/vertebraes/update/<%=params[:id]%>" method="post">
+<p>Name</p>
+<p>
+<input type="text" name="name" value="<%=vertebrae.name%>"></p>
+<p>Scientific_name</p>
+<p>
+<input type="text" name="scientific_name" value="<%=vertebrae.scientific_name%>"></p>
+<p>characteristics</p>
+<p>
+<input type="text" name="characteristics" value="<%=vertebrae.characteristics%>"></p>
+<input type="submit" name="submit" value="submit">
+</form>
