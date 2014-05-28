@@ -10,6 +10,7 @@
 
 When you define an anonymous function in Ruby, it **encloses** the scope in which it was defined, meaning it will always refer to the same variables that existed when it was first defined, even after those variables have "fallen out of scope" for the rest of the program.
 
+Take a look at `closures_counters.rb`.
 
 ## Exercise - Closures
 
