@@ -1,0 +1,7 @@
+<% @artists.each do |artist| %>
+
+  <p>
+    <%= artist.name %> <%= link_to "delete", artist_path(artist), method: :delete %>
+  </p>
+
+<% end %>
