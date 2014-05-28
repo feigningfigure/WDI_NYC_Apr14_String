@@ -31,8 +31,6 @@ def make_logger(name, log)
     end
 end
 
----
-
 puts "CLASSES:"; puts
 
 messages = []
@@ -55,7 +53,7 @@ messages = []
 log_error = make_logger("ERROR", messages)
 log_info = make_logger("INFO", messages)
 
-log_error.call("Incorrect user password.")
+log_error.call("Incorrect user password.") #parameter that gets called in through the pipes |message| above
 log_info.call("User logged in.")
 log_info.call("User posted a news update.")
 log_error.call("User attempted to do something productive.")
