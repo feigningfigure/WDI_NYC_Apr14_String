@@ -35,26 +35,22 @@ class SmartCalculator
 		@operators = {}
 	end
 
-	def teach(name, &input_block)
-		@operators[name] = input_block
+	def teach(name_key, &input_block_converted_to_proc_by_amprasand)
+		@operators[name_key] = input_block_converted_to_proc_by_amprasand
 	end
 
-	# def teach(name, input_block)
-	# 	@operators[name] = Proc.new { input_block
-	# end
-
-	def run(name, arg1, arg2)
-		#add, 2, 3
-		#return 5
-
-		proc_of_the_moment = @operators[name]
-
+	def run(name_key, arg1, arg2)
+		#input - #add, 2, 3
+		#output - # 5
+		proc_of_the_moment = @operators[name_key]
 		proc_of_the_moment.call(arg1, arg2)
 	end
 end
 
 $calc = SmartCalculator.new()
 $calc.teach("add") { |num1, num2| num1 + num2 }
+$calc.teach("subtract") { |num1, num2| num1 - num2 }
+$calc.teach("multiply") { |num1, num2| num1 * num2 }
 $calc.teach("divide") { |num1, num2| num1 / num2 }
 puts $calc.run("add", 5, 10) #=> 15
 puts $calc.run("divide", 1000, 10) #=> 100

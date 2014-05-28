@@ -1,34 +1,3 @@
-# ## Exercise 5 - SmartCalculator
-
-# Let's write a `SmartCalculator` class that can be taught new operators. Starter code:
-
-# ```ruby
-# class SmartCalculator
-
-#   def initialize()
-#     @operators = {}
-#   end
-
-# end
-# ```
-
-# Implement `SmartCalculator` such that this code:
-
-# ```ruby
-# calc = SmartCalculator.new
-# calc.teach("add") { |num1, num2| num1 + num2 }
-# calc.teach("divide") { |num1, num2| num1 / num2 }
-# puts calc.run("add", 5, 10) #=> 15
-# puts calc.run("divide", 1000, 10) #=> 100
-# ```
-
-# Results in this output:
-
-# ```
-# 15
-# 100
-# ```
-
 class SmartCalculator
 	attr_accessor :operators
 	def initialize()
