@@ -30,3 +30,19 @@ for x in (0..2) do
 	end
 	x +=1
 end
+
+# ruby my_each(colors) { |color| puts "I love #{color.upcase}!" }
+
+def my_each(array)
+	new_array = []
+
+	for item in array
+		if yield(item)
+			new_array.push(item)
+		end
+	end
+end
+
+my_each(ruby_colors) do |color|
+	puts "I love #{color.upcase}!"
+end
