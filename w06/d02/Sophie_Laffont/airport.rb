@@ -10,18 +10,6 @@ api_response = {
     }
 }
 
-
-api_response["airports"].keys.each.do |code|
-puts <section>
-puts "\t<h1>#{code}"</h1>
-weathers.each do |weather|
-    puts "\t<div>#{weather}</div>"
-
-end
-puts "/section"
-end
-
-
 def airports_with_weather(data)
     # FILL ME IN
 end
