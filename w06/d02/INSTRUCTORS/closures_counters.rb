@@ -1,33 +1,13 @@
-# count <- local
-# @count <- instance
-# $count <- global
-# @@count <- class
-
 class Counter
-
-  # We'll use a class variable to keep track of
-  # how many Counters have ever been created.
-  @@count = 0
-
   def initialize(name)
-    # We'll use an instance variable to keep track of
-    # EACH counter's calls
     @count = 0
     @name = name
-
-    # Increment the CLASS counter
-    @@count += 1
-
-    puts "I have initialized the #{name} Counter."
-    puts "There have now been #{@@count} Counters made."
   end
 
   def call()
     @count += 1
     puts "This counter (#{@name}) has been called #{@count} times."
-    puts "There are #{@@count} Counters in the wild."
   end
-
 end
 
 def make_counter(name)
@@ -52,11 +32,6 @@ puts "I've defined #{cat_counter} and #{dog_counter}."; puts
 puts
 
 3.times { dog_counter.call() }
-
-puts
-
-cat_counter.call()
-dog_counter.call()
 
 puts; puts
 
