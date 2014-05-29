@@ -1,3 +1,5 @@
+# Define some convenience methods for log message formatting.
+
 def timestamp()
     return Time.now.strftime("%F %T")
 end
@@ -7,6 +9,8 @@ def log_format(name, count, message)
 end
 
 class Logger
+    # name: The name of the logger.
+    # log: An array to which all messages will be appended.
     def initialize(name, log)
         @name = name
         @count = 0
@@ -25,35 +29,22 @@ end
 
 # ---
 
+def prove_sameness(log_error, log_info)
+    log_error.call("Incorrect user password.")
+    log_info.call("User logged in.")
+    log_info.call("User posted a news update.")
+    log_error.call("User attempted to do something productive.")
+    log_info.call("Admin deleted user account.")
+end
+
 puts "CLASSES:"; puts
-
 messages = []
-
-log_error = Logger.new("ERROR", messages)
-log_info = Logger.new("INFO", messages)
-
-log_error.call("Incorrect user password.")
-log_info.call("User logged in.")
-log_info.call("User posted a news update.")
-log_error.call("User attempted to do something productive.")
-log_info.call("Admin deleted user account.")
-
+prove_sameness(Logger.new("ERROR", messages), Logger.new("INFO", messages))
 puts messages.join("\n")
 
 puts
 
 puts "CLOSURES:"; puts
-
 messages = []
-
-log_error = make_logger("ERROR", messages)
-log_info = make_logger("INFO", messages)
-
-log_error.call("Incorrect user password.")
-log_info.call("User logged in.")
-log_info.call("User posted a news update.")
-log_error.call("User attempted to do something productive.")
-log_info.call("Admin deleted user account.")
-
+prove_sameness(make_logger("ERROR", messages), make_logger("INFO", messages))
 puts messages.join("\n")
-

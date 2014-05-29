@@ -1,7 +1,7 @@
-class BoxingTeamController < ApplicationController
+class BoxingTeamsController < ApplicationController
 
   def index
-    @boxingteam = BoxingTeam.order(id: :desc)
+    @boxingteam = BoxingTeam.order(:name, :location)
 
     # new instance of boxing team for the form helper
     @boxingteam = BoxingTeam.new
