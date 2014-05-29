@@ -25,11 +25,12 @@ Visa.delete_all
 			person.add_visa(name)
 		end
 	end
-
+	
+	countries = Country.all
 	countries.each do |country|
 	  continent.countries << country
 	end
-countries = Country.all
+
 	continent.save!
 
 end
