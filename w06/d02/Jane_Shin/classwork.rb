@@ -1,18 +1,18 @@
-# example 1
+example 1
 
-# colors = ["mauve", "chartreuse", "seafoam"]
+colors = ["mauve", "chartreuse", "seafoam"]
 
-# def my_each (array)
-# 	for item in array
-# 		yield(item)
-# 	end
-# end
+def my_each (array)
+	for item in array
+		yield(item)
+	end
+end
 
-# my_each(colors) { |color| puts "I love #{color.upcase}!" }
+my_each(colors) { |color| puts "I love #{color.upcase}!" }
 
 
 
-# example 2
+example 2
 
 api_response = {
     "airports" => {
@@ -27,7 +27,7 @@ api_response = {
 }
 
 def airports_with_weather(data)
-  	data.each do |code, weather|
+  	data.each do |code, weathers|
 		yield
 	end  
 end
