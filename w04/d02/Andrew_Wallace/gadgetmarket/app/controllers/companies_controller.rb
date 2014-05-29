@@ -11,12 +11,12 @@ class CompaniesController < ApplicationController
 
 # SHOW USERS
   def show
-
+    #render json: params
     # Set the instance variable to be equal to the finding the user by their id within the User table.
     @company = Company.find(params[:id])
-
+    #render json: @company
   #   # This line is needed for the form to work.
-    @product = Product.new
+   # @product = Product.new
   end
 
 # CREATE A NEW USER -- SECURELY WHICH MEANS CALL THE PRIVATE METHOD AT THE BOTTOM.
@@ -30,25 +30,30 @@ class CompaniesController < ApplicationController
   end
 
 # EDIT USER
-  # def edit
-  #   @user = User.find(params[:id])
+  def edit
+    @company = Company.find(params[:id])
 
-  # #FURTHER EXPLANATION NEEDED OF PARTIALS
-  #   render partial: "userform", locals: { user_local: @user }
-  # end
+  #FURTHER EXPLANATION NEEDED OF PARTIALS
+    #render partial: "userform", locals: { user_local: @user }
+  end
 
-# UPDATE USER
-  # def update
+# UPDATE COMPANY
+  def update
 
-  #   user = User.find(params[:id])
+    company = Company.find(params[:id])
 
-  #   # Update the user attributes of the user
-  #   user.update_attributes(user_attributes)
+    # Update the user attributes of the user
+    company.update_attributes(company_attributes)
 
-  #   # After update, send vistor to page of the user id they just updated.
-  #   redirect_to "/users/#{params[:id]}"
-  # end
+    # After update, send vistor to page of the user id they just updated.
+    redirect_to "/companies/#{params[:id]}"
+  end
 
+# DELETE COMPANY
+def delete
+  Company.find_by(id: params[:id]).destroy
+  redirect_to '/companies'
+end
 
 
 #----PRIVATE METHODS----
