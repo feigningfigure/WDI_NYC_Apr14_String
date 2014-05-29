@@ -1,0 +1,19 @@
+<!-- TODO: make this a partial -->
+<div class="section group">
+        <div class="col span_1_of_2 one">
+<%= render partial: "cookbookform", locals: { cookbook_local: @cookbook } %>
+</div>
+<div class="col span_1_of_2 other">
+<h2>Cookbooks</h2>
+<ul class="cookbooks">
+  <% @cookbooks.each do |cookbook| %>
+    <li>
+      <h4><%= link_to cookbook.title, "/cookbooks/#{cookbook.id}" %></h4>
+      <p>
+        by <%= cookbook.chef.name %>
+      </p>
+    </li>
+  <% end %>
+</ul>
+</div>
+      </div>
