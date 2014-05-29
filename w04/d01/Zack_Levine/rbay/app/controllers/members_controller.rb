@@ -2,18 +2,22 @@ class MembersController < ApplicationController
 
   def index
     @members = Member.all
-
   end
-  def show
-    # by default...
-    # render :name_of_this_method
 
+  #single member view interlude...
+  def info
     # define @cookbook
-    @member = Member.find(params[:screen_name])
+    @members = Member.find(params[:id])
 
     # makes the form work
-    @member = Member.new
-
-    # binding.pry
+    # @members = Member.new
   end
+
+  def create
+    Member.create(params[:member_id],params[:member_profile])
+
+     redirect_to "/members/#{member_bucket_info[:member_id]}"
+  end
+
 end
+
