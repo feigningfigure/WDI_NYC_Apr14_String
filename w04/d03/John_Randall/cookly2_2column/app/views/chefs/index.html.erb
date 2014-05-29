@@ -1,0 +1,59 @@
+<h2>Chefs</h2>
+<ul class="chefs">
+  <% @chefs.each do |chef| %>
+    <li>
+      
+      <div class="span_1_of_2">
+            <h4 class="chef_name"><%= link_to chef.name, "/chefs/#{chef.id}" %></h4>
+      </div>
+      
+      <div class="span_2_of_2">
+            <ul class="cookbooks">
+            <% chef.cookbooks.each do |cookbook| %>
+              <li class="cookbook_title">
+                <%= link_to cookbook.title, "/cookbooks/#{cookbook.id}" %>
+              </li>
+            <% end %>
+            </ul>
+      </div>
+      
+    </li>
+  <% end %>
+</ul>
+  
+
+
+
+
+so why do optionA:
+  <style>
+    #header_div{
+      styles for header
+    }  
+
+    header{
+      unused, nothing here
+    }
+  </style>
+
+  <header>
+    <div id='header_div'>
+      all content here
+    </div>
+  </header>
+
+
+
+
+
+rather than optionB:
+  <style>
+    #header_element{
+      styles for header
+    }  
+  </style>
+
+
+  <header id='header_element'>
+      all content here
+  </header>
