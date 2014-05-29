@@ -1,0 +1,6 @@
+<%= form_for @moon, url: "/planets/#{@planet_id}/moons" do |f| %>
+  <ul class="form_elements">
+    <li>Name: <%= f.text_field :name, placeholder:"type the planet name" %></li>
+  </ul>
+  <%= f.submit "Create" %>
+<% end %>
