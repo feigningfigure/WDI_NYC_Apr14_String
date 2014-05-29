@@ -55,3 +55,16 @@ In groups of three, write down the value that these expressions resolve to:
 
 ## Homework
 
+### Loggers
+
+(see INSTRUCTORS folder for files)
+
+Fill in the `make_logger()` function in `closures_loggers.rb`.
+
+Use `closures_counters.rb` as a guideline.
+
+
+#### Bonus
+
+Complete Exercise 5 - SmartCalculator at the end of `blocks_and_procs.md`.
+
