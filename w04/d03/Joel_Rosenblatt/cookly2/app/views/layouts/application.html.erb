@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <!-- Responsive and mobile friendly stuff -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cookly</title>
+
+  <link rel="stylesheet" href="css/html5reset.css" media="all">
+  <link rel="stylesheet" href="css/responsivegridsystem.css" media="all">
+  <link rel="stylesheet" href="css/col.css" media="all">
+  <link rel="stylesheet" href="css/2cols.css" media="all">
+
+  <!-- Responsive Stylesheets -->
+  <link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 769px)" href="/css/1024.css">
+  <link rel="stylesheet" media="only screen and (max-width: 768px) and (min-width: 481px)" href="/css/768.css">
+  <link rel="stylesheet" media="only screen and (max-width: 480px)" href="/css/480.css">
+
+  <script src="js/modernizr-2.5.3-min.js"></script>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="section group">
+      <h1>Cookly</h1>
+  </div>
+<nav>
+  <%= link_to "cookbooks", cookbooks_path %> |
+  <%= link_to "chefs", chefs_path %>
+</nav>
+<%= yield %>
+
+      <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+
+  <!--[if (lt IE 9) & (!IEMobile)]>
+  <script src="js/selectivizr-min.js"></script>
+  <![endif]-->
+
+
+  <!-- More Scripts-->
+  <script src="js/responsivegridsystem.js"></script>
+
+</body>
+</html>
+
