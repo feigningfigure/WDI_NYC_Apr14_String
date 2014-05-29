@@ -1,31 +1,31 @@
-class UsersController < ApplicationController
+class DevicesController < ApplicationController
 
 # INDEX METHOD
   def index
     #Define the instance variable 'users' and sort them in index by descending order by their id.
-    @users = User.order(id: :desc)
+    @devices = Device.order(id: :desc)
 
     # Create a new instance of user that can be used by the form helper
-    @user = User.new
+    @device = Device.new
   end
 
 # SHOW USERS
   def show
 
     # Set the instance variable to be equal to the finding the user by their id within the User table.
-    @user = User.find(params[:id])
+    @device = Device.find(params[:id])
 
   #   # This line is needed for the form to work.  (BUT WHY?)
-  @device = Device.new
+  #   # @device = Device.new
   end
 
 # CREATE A NEW USER -- SECURELY WHICH MEANS CALL THE PRIVATE METHOD AT THE BOTTOM.
   def create
 
-    User.create(user_attributes)
+    Device.create(device_attributes)
 
     #Rails helper 'redirect_to' to the Rails helper for the path for 'users'.
-    redirect_to users_path
+    redirect_to devices_path
 
   end
 
@@ -54,11 +54,11 @@ class UsersController < ApplicationController
 #----PRIVATE METHODS----
 private
 
-  def user_attributes # Called up to create a new user.
+  def device_attributes # Called up to create a new user.
 
     # Whitelist (allow only certain parameters to pass through from the form)
     # LEARN MORE ABOUT THE FOLLOWING LINE.
-    params.require(:user).permit(:name)
+    params.require(:device).permit(:manufacturer, :name, :year, :purchase_date, :description, :user_id)
   end
 
 end
