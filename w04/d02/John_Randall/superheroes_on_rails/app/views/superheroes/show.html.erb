@@ -1,0 +1,14 @@
+
+<ul>
+    <li> <%= @superhero.name %></li>
+      <ul>
+        <li>super power: <%= @superhero.super_power %></li>
+        <li>super team affiliation: <%= link_to @superhero.superteam.name, superteam_path(@superhero.superteam) %></li>
+        		
+        	
+        </li>
+      </ul>
+    <p> <%= link_to('destroy superhero (mwahahahahah!)', :action => "destroy") %>   <!-- QUSTION: WHY IS THIS 'GET' - HOW CAN I MAKE IT 'DELETE'? -->
+    <%= link_to('edit superhero', :action => "edit") %><p>
+
+</ul>
