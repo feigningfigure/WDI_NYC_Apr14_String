@@ -3,3 +3,8 @@
  h2 {
  	font-family: lato;
  }
+
+ul li {
+	list-style: none;
+	
+}
