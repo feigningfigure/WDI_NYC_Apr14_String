@@ -1,0 +1,16 @@
+
+<h2> SuperHeroes!</h2>
+
+<ul>
+  <% @superheroes.each do |superhero| %>
+     
+    <li> <%= link_to "#{superhero.name}", "/superheroes/#{superhero.id}" 
+    # AKA 'show'
+    %> </li>
+    
+      <ul>
+        <li>super power: <%= superhero.super_power %></li>
+        <li>super team affiliation: <%= link_to superhero.superteam.name, superteam_path(superhero.superteam) %></li>
+      </ul>
+  <% end %>
+</ul>

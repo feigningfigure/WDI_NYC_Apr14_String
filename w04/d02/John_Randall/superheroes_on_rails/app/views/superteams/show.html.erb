@@ -1,0 +1,17 @@
+
+<ul>
+    <li> <%= @superteam.name %></li>
+      <ul>
+        <li><%= @superteam.headquarters %></li>
+        <li><%= @superteam.headquarters_location %></li>
+        <li>	known members: <% @superteam.superheroes.each do |superhero| %>
+            <%= link_to superhero.name, superhero_path(superhero) %>
+            <% end %></li>
+        		
+        	
+        </li>
+      </ul>
+    <p> <%= link_to('destroy SuperTeam (mwahahahahah!)', :action => "destroy") %>   <!-- QUSTION: WHY IS THIS 'GET' - HOW CAN I MAKE IT 'DELETE'? -->
+    <%= link_to('edit SuperTeam', :action => "edit") %><p>
+
+</ul>
