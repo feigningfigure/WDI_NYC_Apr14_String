@@ -1,0 +1,9 @@
+<%= form_for @device do |f| %>
+  <%= f.text_field :manufacturer, { placeholder: "Manufacturer" } %>
+  <%= f.text_field :name, { placeholder: "Name" } %>
+  <%= f.text_field :year, { placeholder: "Model Year" } %>
+  <%= f.text_field :purchase_date, { placeholder: "Purchase Date" } %>
+  <%= f.text_field :description, { placeholder: "Description" } %>
+  <%= f.hidden_field :user_id, value: user_id %>
+  <%= f.submit "Add Device", class: 'button' %>
+<% end %>

@@ -5,7 +5,6 @@ end
 
 private
 def auction
-      params.require(:auction).permit(:item, :description, :belongs_to)
-        end
-
+  params.require(:auction).permit(:item, :description, :belongs_to)
+end
 end
