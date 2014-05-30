@@ -2,34 +2,35 @@
 
 
 function dollarsToPounds(dollars){
-	var result = dollars*1.6745;
-	var toPoundResult = result.toFixed(2) + " pounds";
-	console.log(toPoundResult);
-	return toPoundResult
+	var result = dollars/1.6745;
+	var to_pound_result = result.toFixed(2) + " pounds";
+	return to_pound_result
 }
 
 
 function poundsToDollars(pounds){
-	var result = pounds/1.6745;
-	var toDollarResult = result.toFixed(2) + " dollars";
-	console.log(toDollarResult);
-	return toDollarResult
+	var result = pounds*1.6745;
+	var to_dollar_result = result.toFixed(2) + " dollars";
+	return to_dollar_result
 }
+
+console.log(dollarsToPounds(5));
+console.log(poundsToDollars(10));
 
 
 function currencyConverter(from, to, amount){
-	if(from == "dollars" && to == "pounds") { 
-		var result = dollarsToPounds(amount); 
-		return result
-	} else {
-	if(from == "pounds" && to == "dollars"){
-		var result = poundsToDollars(amount);
-		return result
+	var result;
+
+	if(from === "dollars" && to === "pounds") { 
+		result = dollarsToPounds(amount); 
+	} else if (from === "pounds" && to === "dollars") {
+		result = poundsToDollars(amount);
 	} else {
 		console.log("Cannot perform the requested conversion");
-		return null
+		result = null;
 	}
-	};
+	
+	return result
 }
 
-currencyConverter("dollars", "pounds", 5)
+console.log(currencyConverter("dollars", "pounds", 20));
