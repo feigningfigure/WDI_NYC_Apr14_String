@@ -10,9 +10,12 @@ function rando(){
 }
 
 
-// setTimeout(note(), rando());
 
 
-var setInterval = setInterval(note(), rando())
+var setInterval = setInterval(note(), rando());
 
 clearInterval(interval)
+
+
+
+// setTimeout(note(), rando());
