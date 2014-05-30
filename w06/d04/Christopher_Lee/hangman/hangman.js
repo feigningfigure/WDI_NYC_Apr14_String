@@ -14,27 +14,34 @@
 
 function Hangman(word){
   var letters = word.split('');
+  var playerProgress = [];
   this.progress = function(){
-      var playerProgress = [];
+    if (playerProgress.length === 0){
       // for each letter in the string ...
       for (var i = 0; i < word.length; i++){
         // add an underscore to the array
         playerProgress.push("_");
       }
+    }
   return playerProgress.join(" "); // array => string
   };
 
+  // its adding the number of letters to the array regardless of what is in it
+
   this.guess = function(letter_guess){
     var indices = [];
-    var idx = chars.indexOf(letter_guess);
+    var idx = letters.indexOf(letter_guess);
     while (idx != -1) {
         indices.push(idx);
-        idx = chars.indexOf(letter_guess, idx + 1);
+        idx = letters.indexOf(letter_guess, idx + 1);
     }
     if(indices.length > 0){
-      return indices
+      indices.forEach(function(correct_letter) {
+        playerProgress[correct_letter] = letter_guess
+      });
+      return true
     }
-
+    //else return false and increment the counter
   }
 }
 
@@ -44,6 +51,8 @@ var game = new Hangman("detective");
 console.log(game.progress());
 
 game.guess("e");
+
+console.log(game.progress());
 
 var game = new Hangman("gandhi");
 
@@ -65,3 +74,7 @@ while (idx != -1) {
     idx = chars.indexOf("z", idx + 1);
 }
 
+// Like each in Ruby
+a.forEach(function(entry) {
+    console.log(entry);
+});
