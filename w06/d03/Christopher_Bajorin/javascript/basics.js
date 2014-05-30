@@ -52,10 +52,8 @@ function stringPrint(string) {
 
 stringPrint("things")
 
-function countDown() {
-  return console.log(10)
+function countDown(x) {
   var delay = 1000;
-  var x = 9;
   var interval = setInterval(function() {
     if (x > 0) {
       console.log(x);
@@ -63,10 +61,10 @@ function countDown() {
     }
   }, delay)
 
-  var stop = 10000;
+  var stop = (x+1)*1000;
   setTimeout(function() {
     clearInterval(interval);
     console.log("0!"); }, stop);
 }
 
-countDown()
+countDown(12)
