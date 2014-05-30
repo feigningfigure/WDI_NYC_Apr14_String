@@ -14,11 +14,13 @@
 
 // make sure you didn't break other stuff
 
-function Hangman(word){
+function Hangman(word_array){
+  var word = word_array[Math.floor(Math.random() * word_array.length)];
   var letters = word.split('');
   var playerProgress = [];
   var incorrectGuesses = 0;
   var giveUp = false;
+  var previousGuesses = [];
 
   this.progress = function(){
     if(incorrectGuesses >= 5 || giveUp === true) {
@@ -50,16 +52,28 @@ function Hangman(word){
       });
       return true
     } else {
-      incorrectGuesses++;
-      console.log(incorrectGuesses);
-      return false
+      // find out the .include of Javascript
+      if(previousGuesses.indexOf(letter_guess) != -1){
+        return false
+      }else{
+        incorrectGuesses++;
+        previousGuesses.push(letter_guess);
+        // console.log(incorrectGuesses);
+        return false
+      }
     }
     //else return false and increment the counter. make sure it increments  the counter first. correctly incrementing the counter. now returns null after 5 guesses.
   };
+  this.incorrect = function(){
+    return incorrectGuesses
+  }
+
+  this.guesses = function(){
+    return previousGuesses
+  }
 
   this.giveUp = function(){
     giveUp = true;
-    return word
   }
 }
 
@@ -92,7 +106,7 @@ game.guess("d");  //=> null
 
 
 
-
+var game = new Hangman(["detective", "gandhi", "liberace", "brooklyn"]);
 var game = new Hangman("gandhi");
 
 console.log(game.progress());
@@ -117,3 +131,12 @@ while (idx != -1) {
 a.forEach(function(entry) {
     console.log(entry);
 });
+
+
+// var myArray = ['January', 'February', 'March'];
+
+var game = new Hangman(["detective", "gandhi"]);
+
+word_array = ["detective", "gandhi"]
+
+word = word_array[Math.floor(Math.random() * word_array.length)];
