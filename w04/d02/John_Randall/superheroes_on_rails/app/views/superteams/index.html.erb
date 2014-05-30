@@ -1,0 +1,16 @@
+
+<h2> SuperTeams!</h2>
+
+<ul>
+  <% @superteams.each do |superteam| %>
+     
+    <li> <%= link_to "#{superteam.name}", "/superteams/#{superteam.id}" 
+    # AKA 'show'
+    %> </li>
+    
+      <ul>
+        <li><%= superteam.headquarters %></li>
+        <li><%= superteam.headquarters_location %></li>
+      </ul>
+  <% end %>
+</ul>
