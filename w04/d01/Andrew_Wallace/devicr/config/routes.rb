@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+#ROOT INDEX
+root to: "users#index"
+
 #INDEX OF USERS
 get '/users' => 'users#index', as: :users
 
@@ -15,7 +18,7 @@ patch '/users/:id' => 'users#update'
 
 
 #SHOW INDIVIDUAL USER
-get '/users/:id' => 'users#show', as: :users
+get '/users/:id' => 'users#show', as: :user
 
 #DELETE USER
 delete '/users/:id' => 'users#destroy'
