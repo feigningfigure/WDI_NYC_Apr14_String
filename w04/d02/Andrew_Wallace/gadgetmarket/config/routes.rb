@@ -21,8 +21,9 @@ patch '/companies/:id' => 'companies#update'
 get '/companies/:id' => 'companies#show', as: :company
 
 #DELETE USER
-delete '/companies/:id' => 'companies#destroy'
-
+delete '/companies/:id/delete' => 'companies#delete'
+# #HACK to make the 'link_to' work
+ get '/companies/:id/delete' => 'companies#delete'
 #-------DEVICE ROUTES---------#
 
 #INDEX OF DEVICES

@@ -1,0 +1,31 @@
+These are the "link_to" permutations
+		by Pathname -->
+			<%= link_to "superteams_path", superteams_path %>	| 
+			<%= link_to "new_superteam_path", new_superteam_path %> | 
+			<!-- link_to "edit_superteam_path", edit_superteam_path 	(doesn't work because it doesn't pass id, which controller#edit is expecting to recieve)
+				link_to "superteam", superteam_path 				(doesn't work because it doesn't pass id, which controller#show is expecting to recieve) 
+		by action 																										QUESTION: IS THIS AKA controler method)-->
+			<%= link_to "link to action: index", :action => "index" %> |
+			<!-- link_to "link to action: show", :action => "show" 		No route matches {:action=>"show", :controller=>"superteams"}  			QUESTION: WHY
+				link_to "link to action: destory", :action => "destroy" %>	No route matches {:action=>"destroy", :controller=>"superteams"}		QUESITON: WHY? -->
+			<%= link_to "link to action: create", :action => "create" %> | 															<!-- QUESTION: THIS WORKS BUT IT SHOULDN'T, WHY DOES IT WORK? -->
+			<%= link_to "link to action: new", :action => "new" %> |
+			<!-- link_to "link to action: edit", :action => "edit"		No route matches {:action=>"edit", :controller=>"superteams"}
+				link_to "link to action: update", :action => "update"		No route matches {:action=>"update", :controller=>"superteams"}			QUESTION: WHY-->
+			<%= link_to "link to action: new", :action => "new" %> |
+		<!-- by controller -->
+			<%= link_to "link to controller: superteams", :controller => "superteams" %> |
+			<%= link_to "link to controller: superheroes", :controller => "superheroes" %>
+
+
+<!-- ### EXPLORING LINK STRUCTURE -->
+		<%= link_to "link to action", :action => "index" %>
+		<%= link_to "link to controller", :controller => "superteams" %>
+		<%= link_to "link model_path (@model)", model_path(@model) %>
+		<%= link_to model.name, model_path(model) %>
+		<%= link_to "link to action, id", :action => "edit", :id => @item %>
+		<%= link_to "link to controller, action", :controller => "items", :action => "index" %>
+		<%= link_to "link to nested path", parent_child_path(@parent, @child) %>
+		<%= link_to "link to path plural", models_path %>
+		<%= link_to "link to controller, action, id", :controller => "items", :action => "edit", :id => @item %>
+		<%= link_to "link to nested path plural", parent_child_path(@parent) %>

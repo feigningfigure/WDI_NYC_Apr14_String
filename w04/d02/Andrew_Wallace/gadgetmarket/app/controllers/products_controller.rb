@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
 
 
 
-# CREATE A NEW USER -- SECURELY WHICH MEANS CALL THE PRIVATE METHOD AT THE BOTTOM.
+# CREATE A NEW PRODUCT -- SECURELY WHICH MEANS CALL THE PRIVATE METHOD AT THE BOTTOM.
   def create
 
     Product.create(product_attributes)
@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
 
   end
 
-# EDIT USER
+# EDIT PRODUCT
   # def edit
   #   @user = User.find(params[:id])
 
@@ -40,7 +40,7 @@ class ProductsController < ApplicationController
   #   render partial: "userform", locals: { user_local: @user }
   # end
 
-# UPDATE USER
+# UPDATE PRODUCT
   # def update
 
   #   user = User.find(params[:id])

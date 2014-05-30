@@ -25,11 +25,16 @@ Rails.application.routes.draw do
 
   get "/products/:id/new/" => "products#new"
 
+  ## add a country to a product
+
+  post "/products/add_distributor" => "products#add_distributor"
+
 
   ### Countries ###
 
   get '/countries/new' => "countries#new"
 
   post '/countries' => "countries#create"
+
 
 end
