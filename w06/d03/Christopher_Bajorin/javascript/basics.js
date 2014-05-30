@@ -17,16 +17,56 @@ module.exports.repl.ignoreUndefined = false;
 // for (var i = 0; i < myArray.length; i += 1) {
 // }
 
-function callbackMeMaybe(number, callback) {
-  var result = number * 100000;
-  callback(number);
+// function callbackMeMaybe(number, callback) {
+//   var result = number * 100000;
+//   callback(number);
+// }
+
+// function notify(number) {
+//   console.log("The number is " + number);
+// }
+
+// function stuff(number) {
+//   console.log("This damn number is " + number);
+// }
+// callbackMeMaybe(20, notify);
+
+
+
+// function randomTime() {
+//   var random = Math.floor(Math.random() * 10000);
+//   return random;
+// }
+
+// function insertString() {
+//   console.log("this is a string!");
+// }
+
+function stringPrint(string) {
+  var delay = Math.floor(Math.random()*10000);
+  var interval = setInterval(function() { console.log(string); }, delay);
+
+  var stop = Math.floor(Math.random()*100000);
+  setTimeout(function() { clearInterval(interval); console.log("stuff"); }, stop);
 }
 
-function notify(number) {
-  console.log("The number is " + number);
+stringPrint("things")
+
+function countDown() {
+  return console.log(10)
+  var delay = 1000;
+  var x = 9;
+  var interval = setInterval(function() {
+    if (x > 0) {
+      console.log(x);
+      x -= 1;
+    }
+  }, delay)
+
+  var stop = 10000;
+  setTimeout(function() {
+    clearInterval(interval);
+    console.log("0!"); }, stop);
 }
 
-function stuff(number) {
-  console.log("This damn number is " + number);
-}
-callbackMeMaybe(20, notify);
+countDown()
