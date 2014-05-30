@@ -26,8 +26,8 @@ Remember to use `console.log()` to examine the return values of your functions.
   * **Returns**: a number representing the converted amount
 
   ```javascript
-  currencyConverter("dollars", "pounds", "5"); //=> 16.717
-  currencyConverter("pounds", "dollars", "10"); //=> 2.99096727881797
+  currencyConverter("dollars", "pounds", "5"); //=> 2.99096727881797
+  currencyConverter("pounds", "dollars", "10"); //=> 16.717
   ```
 
 5. Can you make sure the output is only 2 decimal places?
@@ -35,5 +35,5 @@ Remember to use `console.log()` to examine the return values of your functions.
   Hint: Spend some time perusing the [MDN docs on Number objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 
   ```javascript
-  currencyConverter("pounds", "dollars", "10"); //=> 2.99
+  currencyConverter("dollars", "pounds", "5"); //=> 2.99
   ```
