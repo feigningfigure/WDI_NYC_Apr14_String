@@ -45,7 +45,37 @@ function madPerson(){
 setTimeout(madPerson, 5000);
 
 setTimeout(function(){console.log("I am anonoymous.") }, 5000);
-var interval = setInterval(madPerson, 2000)
+var setInterval = setInterval(madPerson, 2000)
+
+clearInterval(interval)
+
+
+// LAB PART A - Chris Lee Solution
+
+function stringPrint(string){
+	var delay = Math.random()*4000;
+	setTimeout(function(){ console.log(string) }, delay);
+}
+
+
+// LAB PART B - Joel Solution
+
+function visualPeacemaker(string) {
+
+  var delay = Math.random()*2000;
+  var interval = setInterval(function(){ console.log(string); }, delay);
+
+  var stop = Math.random()*8000;
+  setTimeout(function( ) { clearInterval(interval); console.log("biiiiiiiiiiiiiip") }, stop);
+}
+
+visualPeacemaker("bip")
+
+
+
+
+
+
 
 
 
