@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SuperheroesOnRails</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav>
+
+<%= link_to "SuperTeams!", superteams_path %> | 
+<%= link_to "SuperHeroes!", superheroes_path %> | 
+
+<%= link_to "new superteam", new_superteam_path %> | 
+<%= link_to "new superhero", new_superhero_path %> | 
+
+	
+
+</nav>
+
+<%= yield %>
+
+</body>
+</html>
