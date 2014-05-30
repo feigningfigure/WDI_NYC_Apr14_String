@@ -12,11 +12,18 @@
 //   };
 // }
 
+// make sure you didn't break other stuff
+
 function Hangman(word){
   var letters = word.split('');
   var playerProgress = [];
+  var incorrectGuesses = 0;
+  var giveUp = false;
+
   this.progress = function(){
-    if (playerProgress.length === 0){
+    if(incorrectGuesses >= 5 || giveUp === true) {
+      return word
+    } else if (playerProgress.length === 0){
       // for each letter in the string ...
       for (var i = 0; i < word.length; i++){
         // add an underscore to the array
@@ -35,13 +42,24 @@ function Hangman(word){
         indices.push(idx);
         idx = letters.indexOf(letter_guess, idx + 1);
     }
-    if(indices.length > 0){
+    if (incorrectGuesses >= 5 || giveUp === true){
+      return null
+    } else if (indices.length > 0) {
       indices.forEach(function(correct_letter) {
         playerProgress[correct_letter] = letter_guess
       });
       return true
+    } else {
+      incorrectGuesses++;
+      console.log(incorrectGuesses);
+      return false
     }
-    //else return false and increment the counter
+    //else return false and increment the counter. make sure it increments  the counter first. correctly incrementing the counter. now returns null after 5 guesses.
+  };
+
+  this.giveUp = function(){
+    giveUp = true;
+    return word
   }
 }
 
@@ -53,6 +71,27 @@ console.log(game.progress());
 game.guess("e");
 
 console.log(game.progress());
+
+game.guess("b");
+game.guess("x");
+game.guess("y");
+game.guess("z");
+game.guess("b");
+
+console.log(game.progress());
+
+
+
+var game = new Hangman("detective");
+game.progress();  //=> "_ _ _ _ _ _ _ _ _"
+game.giveUp();    //=> "detective"
+game.guess("d");  //=> null
+
+
+
+
+
+
 
 var game = new Hangman("gandhi");
 
