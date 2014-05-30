@@ -13,6 +13,7 @@
 // }
 
 function Hangman(word){
+  var letters = word.split('');
   this.progress = function(){
       var playerProgress = [];
       // for each letter in the string ...
@@ -23,8 +24,17 @@ function Hangman(word){
   return playerProgress.join(" "); // array => string
   };
 
-  this.guess = function(letter){
-    return "this is " + letter
+  this.guess = function(letter_guess){
+    var indices = [];
+    var idx = chars.indexOf(letter_guess);
+    while (idx != -1) {
+        indices.push(idx);
+        idx = chars.indexOf(letter_guess, idx + 1);
+    }
+    if(indices.length > 0){
+      return indices
+    }
+
   }
 }
 
@@ -33,7 +43,7 @@ var game = new Hangman("detective");
 
 console.log(game.progress());
 
-game.guess("b");
+game.guess("e");
 
 var game = new Hangman("gandhi");
 
@@ -44,4 +54,14 @@ console.log(game.progress());
 // var game = new Hangman("gandhi");
 
 // game.progress(); //=> "_ _ _ _ _ _"
+
+
+
+// Works!
+var indices = [];
+var idx = chars.indexOf("z");
+while (idx != -1) {
+    indices.push(idx);
+    idx = chars.indexOf("z", idx + 1);
+}
 
