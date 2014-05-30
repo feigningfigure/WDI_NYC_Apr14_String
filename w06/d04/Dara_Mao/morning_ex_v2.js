@@ -45,6 +45,8 @@ function currencyConverter(from, to, amount){
 console.log(currencyConverter("dollars","pounds", "5"));
 console.log(currencyConverter("pounds", "dollars", "10"));
 
+//===============================================================
+
 function Person (name){
   var ssn = 3425324;
 

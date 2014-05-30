@@ -11,6 +11,9 @@ function Hangman (word){
     // convert the array back to a string
     return playerProgress.join("");// array => string
   };
+
+  this.guess = function(){
+  }
 }
 
 //Calling the function

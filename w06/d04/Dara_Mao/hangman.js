@@ -6,9 +6,9 @@ function Hangman (word){
   // define the behavior of the object
   this.progress = function(){
 
-    word_array = word.split("")
+    word_array = "word".split("")
     slots = word_array.length
-    var array = new Array(slots);
+    // var array = new Array(slots);
     for (var i = 0; i < slots; i++){
        array.push("_")
       }
