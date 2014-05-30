@@ -6,7 +6,7 @@ function Person(name){
 	this.ssn = 790886;
 	this.sayHi = function(){
 		console.log("Hi! I'm " + this.name);
-		console.log("You seem friendly. My SS# " + this.ssn)
+		console.log("You seem friendly. My SS# " + this.ssn);
 	}
 }
 
