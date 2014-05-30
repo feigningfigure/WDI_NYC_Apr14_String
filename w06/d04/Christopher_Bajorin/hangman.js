@@ -1,23 +1,18 @@
 function Hangman(word) {
-
-  // FILL ME IN
   var wordLength = word.length;
+  var wordArray = word.split("");
+
   this.progress = function() {
-    // FILL ME IN
-    console.log(wordLength);
-  }
-}
-
-
-{
-  this
-  {
-    {
-
+    var string = [];
+    while (wordLength > 0) {
+      string.push("_");
+      wordLength -= 1;
     }
+
+   console.log(string.join(" "));
+   console.log(wordArray);
   }
 }
-
 
 var game = new Hangman("detective");
 
