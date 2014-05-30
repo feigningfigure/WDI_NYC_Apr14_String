@@ -1,7 +1,5 @@
 function Hangman(word) {
-	// var LETTERS = [];
-	// this.game = []
-	// this.word = word;
+
 	this.progress = function(){
 		var letters = [];
 
