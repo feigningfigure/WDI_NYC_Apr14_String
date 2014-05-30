@@ -10,15 +10,14 @@ class UsersController < ApplicationController
   end
 
 # SHOW USERS
-  # def show
+  def show
 
-  #   # Set the instance variable to be equal to the finding the user by their id within the User table.
-  #   user_id = params[:id]
-  #   @user = User.find(user_id)
+    # Set the instance variable to be equal to the finding the user by their id within the User table.
+    @user = User.find(params[:id])
 
   #   # This line is needed for the form to work.  (BUT WHY?)
-  #   # @device = Device.new
-  # end
+  @device = Device.new
+  end
 
 # CREATE A NEW USER -- SECURELY WHICH MEANS CALL THE PRIVATE METHOD AT THE BOTTOM.
   def create
@@ -30,6 +29,7 @@ class UsersController < ApplicationController
 
   end
 
+# EDIT USER
   # def edit
   #   @user = User.find(params[:id])
 
@@ -37,6 +37,7 @@ class UsersController < ApplicationController
   #   render partial: "userform", locals: { user_local: @user }
   # end
 
+# UPDATE USER
   # def update
 
   #   user = User.find(params[:id])
