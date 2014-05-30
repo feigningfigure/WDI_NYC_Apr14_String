@@ -3,17 +3,19 @@
       <img src= <%= @product.image_url %>>
     </div>
 
-    <% @countries.each do |country| %>
+
+    <% @product.countries.each do |country| %>
       <div class= "col span_1_of_12">
          <img src= <%= country.flag_url %>>
       </div>
-      <div class= "col span_7_of_12">
-        <%= form_for @distibutor, url: "/products/add_distributor", method:"post" do |f| %>
-        <%= f.text_field :distributor_name
-        <% end %>
-        <p>add <%= country.name %><p>
-      </div>
       <% end %>
+      <div class= "col span_7_of_12">
+        <%= form_for @distributor, url: "/products/add_distributor", method:"post" do |f| %>
+        <%= select("country", "id", @countries.collect {|r| [ r.name, r.id ] }, { :include_blank => true }) %>
+        <%= f.hidden_field :product_id, value: @product.id %>
+        <%= f.submit %>
+        <% end %>
+      </div>
     </div>
 </div>
 

@@ -4,10 +4,11 @@
 <ul class="members">
   <% @members.each do |member| %>
     <li>
-      <h4><%= link_to member.title, "/member/#{member.id}" %></h4>
+      <h4><%= member.screen_name %></h4>
+      <h4>member id iz...<%= link_to member.id, "/members/#{member.id}"%></h4>
       <p>
-<!--         by <%= cookbook.chef.name %>
- -->      </p>
+        <%= member.member_profile %>
+     </p>
     </li>
   <% end %>
 </ul>
