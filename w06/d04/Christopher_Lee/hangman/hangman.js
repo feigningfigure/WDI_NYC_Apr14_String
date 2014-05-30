@@ -15,12 +15,17 @@
 // make sure you didn't break other stuff
 
 function Hangman(word_array){
-  var word = word_array[Math.floor(Math.random() * word_array.length)];
+   if(typeof word_array === 'string'){
+    var word = word_array;
+    } else{
+    var word = word_array[Math.floor(Math.random() * word_array.length)];
+    };
   var letters = word.split('');
   var playerProgress = [];
   var incorrectGuesses = 0;
   var giveUp = false;
   var previousGuesses = [];
+  var hintAsk = false;
 
   this.progress = function(){
     if(incorrectGuesses >= 5 || giveUp === true) {
@@ -76,6 +81,27 @@ function Hangman(word_array){
     giveUp = true;
   }
 }
+  // available_letters = word - player progress
+
+  //function
+
+  // this.hint = function(){
+  //     if(hintAsk === false){
+
+  //     } else{
+
+  //       incorrectGuesses++;
+  //     }
+
+  //   // 1) get index of random letter then 1.5) check to see if the player progress array already has that letter using indexOf, could be a while loop 2) initiate reveal with existing function
+  //   //var randomLetter =
+
+  //   letters[(Math.round(Math.random() * (letters.length)))]
+  // }
+}
+
+
+
 
 
 var game = new Hangman("detective");
