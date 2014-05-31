@@ -21,7 +21,12 @@ function Hangman(word_array){
     var word = word_array[Math.floor(Math.random() * word_array.length)];
     };
   var letters = word.split('');
+  // #QUESTION: what is the correct way to do this?
   var playerProgress = [];
+  for (var i = 0; i < word.length; i++){
+        // add an underscore to the array
+        playerProgress.push("_");
+      }
   var incorrectGuesses = 0;
   var giveUp = false;
   var previousGuesses = [];
@@ -120,10 +125,6 @@ function Hangman(word_array){
   return hint
   }
 }
-
-var arr = ['a','b','_'];
-
-var arr = ['a','b'];
 
 // // Works!
 // var indices = [];
