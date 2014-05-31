@@ -4,7 +4,7 @@ function Hangman(word_array) {
   var guess_counter = 0
   var letter_guesses = []
   var word = word_array[Math.floor(Math.random() * word_array.length)];
-  var hint_counter = []
+  var hint_counter = 0
   var hint_array = []
 
 
@@ -62,6 +62,7 @@ function Hangman(word_array) {
 
     } else if (guess_counter === 5) {
       return null;
+      console.log("Game over!");
     }
   }
 
@@ -92,7 +93,10 @@ console.log(word.contains(letter));
   // console.log(guess_counter);
 }
 
-
+this.giveUp = function(){
+  guess_counter = 5;
+  console.log(word);
+}
 
  this.incorrect = function(){
 
@@ -134,6 +138,7 @@ game.guess("e");
 game.progress();
 game.incorrect();
 game.guesses();
+game.giveUp();
 game.guess("x");
 game.guess("v");
 game.guess("y");
