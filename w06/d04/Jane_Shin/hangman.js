@@ -22,7 +22,7 @@ var count = 0;
 				}
 				return "true"	
 			}else{
-				console.log(count+=1);
+				console.log(count++);
 				return "false"
 			}
 		}else{
@@ -66,26 +66,3 @@ console.log(game.progress());
 // if(word.charAt(i) === letter){
 // 	array[i] = letter;
 // }
-
-// scrap ===============
-	// this.guess
-		// function match_letter(letter, index, array){
-		// 	array[word.indexOf(letter)] = element;
-		// }
-		// playerprogress.filter(match_letter(letter));
-
-// helper code from interwebz ======================
-
-// for (var i = 0; i word.length; i++) {
-//     if (i == 3) continue;
-//     text += "The number is " + i + "<br>";
-// }
-
-
-// var numbersarray=[-3, 5, 34, 19]
-
-// function greaterThanFive(element, index, array) {
-//  return (element > 5)
-// }
-
-// var FiveplusArray=numbersarray.filter(greaterThanFive) //new array contains [34, 19]
