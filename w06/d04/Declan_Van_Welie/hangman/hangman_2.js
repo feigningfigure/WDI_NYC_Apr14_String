@@ -56,6 +56,8 @@ playerProgress = []
 
 }
 
+//THe below works:!!!
+
 
  guess = function(letter){
 
