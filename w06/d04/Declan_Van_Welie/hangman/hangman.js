@@ -32,36 +32,32 @@ function Hangman(word_array) {
 
 
 
- this.guess = function(letter){
+    this.guess = function(letter){
 
-  //
-  word_list = word.split("")
-  letter_guesses.push(letter);
+        // Turn the word into an array first.
+        word_list = word.split("")
 
+        // Add to the letter_guesses array with each guess.
+        letter_guesses.push(letter);
 
-  //turn the word into an array first and keep the playerProgress array an array (no join). Then replace that index each time. Splice does not seem to be working.
+        // Replace each index in the playerProgress array that matches the letter.
+        for (var i = 0; i < word_list.length; i++) {
+        if (word_list[i] === letter && guess_counter < 5) {
+        playerProgress[i] = letter;
 
-    for (var i = 0; i < word_list.length; i++){
-    if (word_list[i] === letter && guess_counter < 5) {
-      playerProgress[i] = letter;
-      // playerProgress[i].replace("_", letter);
-      // playerProgress.splice(word_list[i], word_list.length + 1, letter);
+        //  Alternate (but more complicated) methods to add to the playerProgress array:
+        // playerProgress[i].replace("_", letter);
+        // playerProgress.splice(word_list[i], word_list.length + 1, letter);
 
-            // playerProgress[i] = letter;
-      // console.log("true");
-       // playerProgress.splice(word_array[2], 0, letter);
-      // } else {
-      // console.log("false");
-      // playerProgress.push("_");
+        } else if (guess_counter === 5) {
+        return null;
+        console.log("Game over!");
+        } else if (playerProgress.join("") === word) {
 
-    } else if (guess_counter === 5) {
-      return null;
-      console.log("Game over!");
-    } else if (playerProgress.join("") === word){
-  return null;
+        return null;
 
-}
-  }
+        }
+    }
 
 
 
