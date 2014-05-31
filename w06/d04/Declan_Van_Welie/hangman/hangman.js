@@ -4,6 +4,8 @@ function Hangman(word_array) {
   var guess_counter = 0
   var letter_guesses = []
   var word = word_array[Math.floor(Math.random() * word_array.length)];
+  var hint_counter = []
+  var hint_array = []
 
 
   this.progress = function(){
@@ -11,8 +13,10 @@ function Hangman(word_array) {
 
 
    for (var i = 0; i < word.length; i++) {
+    hint_array.push(word[i]);
+    if (playerProgress.length <= word.length){
     playerProgress.push("_");
-
+    }
 
 
     };
@@ -26,6 +30,7 @@ function Hangman(word_array) {
 
 
     console.log(playerProgress.join(" "));
+
 
 
   }
@@ -59,13 +64,17 @@ function Hangman(word_array) {
       return null;
     }
   }
+
+  //Apparently you're not supposed to do the below because it tampers with the constants in JS. Explore options using indexOf.
     if ( !String.prototype.contains ) {
     String.prototype.contains = function() {
         return String.prototype.indexOf.apply( this, arguments ) !== -1;
     }
 }
 
-if (!word.contains(letter)) {
+//Attempting to add in a second requirement to the if statement that checks if the letter has already been guessed. if (!word.contains(letter) && !playerProgress.indexOf(letter)){
+
+if (!word.contains(letter)){
   guess_counter += 1;
 }
 
@@ -95,11 +104,26 @@ console.log(word.contains(letter));
  }
 
 
+
+
+// this.hint = function(){
+
+
+// }
+
+
+
+  // var random_letter = word[Math.floor(Math.random() * word.length)];
+
+  // if (!playerProgress.contains(random_letter))
+  // console.log(word.);
+
+  //Push the word into an array, and remove   letters as the player guesses them. That way, you can console.log a random letter from that array as a hint.
 }
 
 
-
 var game = new Hangman (["ghandi", "detective"]);
+
 
 game.progress();
 game.guess("q");
