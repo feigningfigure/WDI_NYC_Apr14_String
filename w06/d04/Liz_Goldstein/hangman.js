@@ -8,30 +8,27 @@ function Hangman(word) {
     return playerProgress.join(" ");
   };
 ////////
+var word_counter = 0;
   this.guess = function(letter) {
 
   var word_array = word.split("");
+
   for (var i = 0; i < word.length; i++) {
     if (word_array[i] !== letter) {
-        word_array[i] = "_";}
-
-    // else
-    //   "Bad guess";
+        word_array[i] = "_";
+        var value = "Good guess"
+        }
+    else
+    // else { return "bad guess";}
 }
-return word_array.join("");
+word_counter++
+return word_array.join(" ") + " " + word_counter + " " + value
 
-// for (var i = 0; i < word.length; i++) {
-//   if (word_array[i] !== letter) {
-//         word_array[i] = "_";}
-//         word_array.join("");
-// }
-        // word[i] + " appears!" ;}
-
-      // else { return "No " + letter};
 
   }
+
 }
 
 var game = new Hangman ("detective");
-console.log(game.progress());
-console.log(game.guess("d"));
+// console.log(game.progress());
+console.log(game.guess("e"));

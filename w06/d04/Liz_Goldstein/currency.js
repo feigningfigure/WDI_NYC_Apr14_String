@@ -15,7 +15,6 @@
 
 //above works, trying to do it all in one method
 function currencyConverter(start, end, amount) {
-
   if (start === "dollars") {
   var convert = amount / 1.67;
 }

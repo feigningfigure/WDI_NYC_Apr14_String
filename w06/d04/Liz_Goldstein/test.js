@@ -6,6 +6,7 @@
 for (var i = 0; i < word.length; i++) {
   if (word_array[i] !== letter) {
         word_array[i] = "_";}
+  else {}
         word_array.join("");
 
 }
