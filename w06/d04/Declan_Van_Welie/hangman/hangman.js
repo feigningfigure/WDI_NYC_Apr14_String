@@ -7,6 +7,15 @@ function Hangman(word_array) {
     var hint_counter = 0
     var hint_array = []
 
+    //The below is an add-on that allows you to call .contains (similar to the Ruby method) on a JS string. Apparently you're not supposed to do this because it tampers with the constants in JS. I plan on exploring other options using indexOf.
+        if ( !String.prototype.contains ) {
+        String.prototype.contains = function() {
+
+            return String.prototype.indexOf.apply( this, arguments ) !== -1;
+
+        }
+        }
+
     this.progress = function(){
 
         for (var i = 0; i < word.length; i++) {
@@ -20,7 +29,7 @@ function Hangman(word_array) {
 
         if (guess_counter === 5) {
         console.log(word);
-        return null;
+            return null;
         } else if (playerProgress.join("") === word){
         console.log("You win!");
         }
@@ -54,89 +63,66 @@ function Hangman(word_array) {
         console.log("Game over!");
         } else if (playerProgress.join("") === word) {
 
-        return null;
+            return null;
 
         }
     }
 
+        //Add in a second requirement to the if statement that checks if the letter has already been guessed. if (!word.contains(letter) && !playerProgress.indexOf(letter)){
 
+        // guess_counter_joined = guess_counter.join(""); && !guess_counter_joined.contains(letter)
 
+        if (!word.contains(letter)) {
+          guess_counter += 1;
+        }
 
-  //Apparently you're not supposed to do the below because it tampers with the constants in JS. Explore options using indexOf.
-    if ( !String.prototype.contains ) {
-    String.prototype.contains = function() {
-        return String.prototype.indexOf.apply( this, arguments ) !== -1;
+        if (guess_counter === 5) {
+          console.log("Game over!");
+          return null
+        }
+
+         if (playerProgress === word) {
+          console.log("You win!");
+          return null
+        }
+
+        console.log(word.contains(letter));
+
+        }
+
+    this.giveUp = function() {
+        guess_counter = 5;
+        console.log(word);
     }
-}
 
-//Attempting to add in a second requirement to the if statement that checks if the letter has already been guessed. if (!word.contains(letter) && !playerProgress.indexOf(letter)){
+    this.incorrect = function() {
+        console.log(guess_counter);
+    }
 
-if (!word.contains(letter)){
-  guess_counter += 1;
-}
-
-if (guess_counter === 5) {
-  console.log("Game over!");
-  return null
-}
-
- if (playerProgress === word){
-  console.log("You win!");
-  return null
-}
-
-console.log(word.contains(letter));
-  // console.log(guess_counter);
-}
-
-this.giveUp = function(){
-  guess_counter = 5;
-  console.log(word);
-}
-
- this.incorrect = function(){
-
-  console.log(guess_counter);
- }
-
- this.guesses = function(){
-  console.log(letter_guesses);
- }
+    this.guesses = function(){
+        console.log(letter_guesses);
+    }
 
 
-this.hint = function(){
-  // Check if the space in the playerProgress is filled with an underscore. If so, fill in the space at the index the random letter was in in the hint_array
+    this.hint = function(){
 
-  //look for an index containing an underscore in the playerProgress array.
-  for (var i = 0; i < playerProgress.length; i++)
-// if the character hasn't been guessed, put in a character
-    { if (playerProgress[i] === "_" && hint_counter < 1){ playerProgress[i] = hint_array[i];
-      hint_counter += 1;
-      console.log(hint_array[i]);
+        for (var i = 0; i < playerProgress.length; i++)
+        // Look for an index containing an underscore in the playerProgress array. If the character hasn't been guessed, put in a character
+        { if (playerProgress[i] === "_" && hint_counter < 1) {
+        playerProgress[i] = hint_array[i];
+        hint_counter += 1;
+        console.log(hint_array[i]);
 
-  } else if (i === "_" && hint_counter > 1){
-    playerProgress[i] = hint_array[i];
-    guess_counter += 1;
-    console.log(hint_array[i]);
-  }
+        } else if (i === "_" && hint_counter > 1){
+        playerProgress[i] = hint_array[i];
+        guess_counter += 1;
+        console.log(hint_array[i]);
+        }
 
-}
+        }
 
-}
+    }
 
-// this.hint = function(){
-
-
-// }
-
-
-
-  // var random_letter = word[Math.floor(Math.random() * word.length)];
-
-  // if (!playerProgress.contains(random_letter))
-  // console.log(word.);
-
-  //Push the word into an array, and remove   letters as the player guesses them. That way, you can console.log a random letter from that array as a hint.
 }
 
 
