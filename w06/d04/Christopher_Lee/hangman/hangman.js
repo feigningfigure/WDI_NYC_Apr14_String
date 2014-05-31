@@ -26,6 +26,8 @@ function Hangman(word_array){
   var giveUp = false;
   var previousGuesses = [];
   var hintAsk = false;
+  var hintArray = word.split('');
+  var hint = hintArray[Math.floor(Math.random() * word_array.length)];
 
   this.progress = function(){
     if(incorrectGuesses >= 5 || giveUp === true) {
@@ -80,9 +82,40 @@ function Hangman(word_array){
   this.giveUp = function(){
     giveUp = true;
   }
-}
-  // available_letters = word - player progress
 
+  function remove(arr, item) {
+      for(var i = arr.length; i--;) {
+          if(arr[i] === item) {
+              arr.splice(i, 1);
+          }
+      }
+  }
+
+  this.hint = function(){
+  playerProgress.forEach(function(guessed_letter) {
+    hintArray.forEach(function(original_letter) {
+      if(guessed_letter === original_letter){
+          remove(hintArray, guessed_letter);
+        }
+    });
+  });
+  hint = hintArray[Math.floor(Math.random() * word_array.length)];
+  // put it into playerProgress - kinda like guessing a correct letter
+  var indices = [];
+  var idx = letters.indexOf(hint);
+    while (idx != -1) {
+        indices.push(idx);
+        idx = letters.indexOf(hint, idx + 1);
+    }
+  indices.forEach(function(correct_letter) {
+        playerProgress[correct_letter] = hint
+      });
+  // last thing: remove it from hintArray
+  remove(hintArray, hint)
+  // return hint
+  return hint
+  }
+}
   //function
 
   // this.hint = function(){
@@ -93,12 +126,23 @@ function Hangman(word_array){
   //       incorrectGuesses++;
   //     }
 
-  //   // 1) get index of random letter then 1.5) check to see if the player progress array already has that letter using indexOf, could be a while loop 2) initiate reveal with existing function
+  //   // 1) update hintArray to reflect previous guesses 2) initiate reveal with existing function
   //   //var randomLetter =
 
   //   letters[(Math.round(Math.random() * (letters.length)))]
   // }
 }
+
+// 1) implment free hinting 2) go back and add conditional functionality
+
+
+playerProgress.forEach(function(guessed_letter) {
+    hintArray.forEach(function(original_letter) {
+      if(guessed_letter === original_letter){
+          remove(hintArray, guessed_letter);
+        }
+    });
+});
 
 
 
