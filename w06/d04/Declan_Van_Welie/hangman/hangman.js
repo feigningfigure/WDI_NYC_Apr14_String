@@ -1,42 +1,33 @@
 function Hangman(word_array) {
 
-  var playerProgress = []
-  var guess_counter = 0
-  var letter_guesses = []
-  var word = word_array[Math.floor(Math.random() * word_array.length)];
-  var hint_counter = 0
-  var hint_array = []
+    var playerProgress = []
+    var guess_counter = 0
+    var letter_guesses = []
+    var word = word_array[Math.floor(Math.random() * word_array.length)];
+    var hint_counter = 0
+    var hint_array = []
 
+    this.progress = function(){
 
-  this.progress = function(){
+        for (var i = 0; i < word.length; i++) {
 
+            if (playerProgress.length < word.length) {
+            playerProgress.push("_");
+            hint_array.push(word[i]);
+            }
 
+        };
 
-   for (var i = 0; i < word.length; i++) {
-    if (playerProgress.length < word.length){
-    playerProgress.push("_");
-    hint_array.push(word[i]);
+        if (guess_counter === 5) {
+        console.log(word);
+        return null;
+        } else if (playerProgress.join("") === word){
+        console.log("You win!");
+        }
+
+        console.log(playerProgress.join(" "));
+
     }
-
-
-    };
-
-     // return playerProgress.join(" ");
-
-     if (guess_counter === 5) {
-      console.log(word);
-      return null
-      } else if (playerProgress.join("") === word){
-  console.log("You win!");
-
-}
-
-
-    console.log(playerProgress.join(" "));
-
-    // console.log(hint_array);
-
-  }
 
 
 
