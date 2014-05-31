@@ -51,7 +51,7 @@ function Hangman(word_array){
         indices.push(idx);
         idx = letters.indexOf(letter_guess, idx + 1);
     }
-    if (incorrectGuesses >= 5 || giveUp === true){
+    if (incorrectGuesses >= 5 || giveUp === true || playerProgress.indexOf('_') === -1){
       return null
     } else if (indices.length > 0) {
       indices.forEach(function(correct_letter) {
@@ -113,147 +113,67 @@ function Hangman(word_array){
   // last thing: remove it from hintArray
   remove(hintArray, hint)
   // return hint
+  if (hintAsk === true){
+    incorrectGuesses++;
+  }
+  hintAsk = true;
   return hint
   }
 }
-  //function
 
-  // this.hint = function(){
-  //     if(hintAsk === false){
+var arr = ['a','b','_'];
 
-  //     } else{
+var arr = ['a','b'];
 
-  //       incorrectGuesses++;
-  //     }
+// // Works!
+// var indices = [];
+// var idx = chars.indexOf("z");
+// while (idx != -1) {
+//     indices.push(idx);
+//     idx = chars.indexOf("z", idx + 1);
+// }
 
-  //   // 1) update hintArray to reflect previous guesses 2) initiate reveal with existing function
-  //   //var randomLetter =
-
-  //   letters[(Math.round(Math.random() * (letters.length)))]
-  // }
-}
-
-// 1) implment free hinting 2) go back and add conditional functionality
-
-
-playerProgress.forEach(function(guessed_letter) {
-    hintArray.forEach(function(original_letter) {
-      if(guessed_letter === original_letter){
-          remove(hintArray, guessed_letter);
-        }
-    });
-});
+// // Like each in Ruby
+// a.forEach(function(entry) {
+//     console.log(entry);
+// });
 
 
+// // var myArray = ['January', 'February', 'March'];
+
+// var game = new Hangman(["detective", "gandhi"]);
+
+// word_array = ["detective", "gandhi"]
+
+// word = word_array[Math.floor(Math.random() * word_array.length)];
 
 
-
-var game = new Hangman("detective");
-
-console.log(game.progress());
-
-game.guess("e");
-
-console.log(game.progress());
-
-game.guess("b");
-game.guess("x");
-game.guess("y");
-game.guess("z");
-game.guess("b");
-
-console.log(game.progress());
+// // goal: get rid of all duplicates in the word detective
+// // then randomly select a letter from remaining
+// //1) find letter in the playerProgress array
+// //2) delete all instances from the hint array
+// //2) move on to the next letter and repeat
 
 
 
-var game = new Hangman("detective");
-game.progress();  //=> "_ _ _ _ _ _ _ _ _"
-game.giveUp();    //=> "detective"
-game.guess("d");  //=> null
+// // works
+// playerProgress.forEach(function(guessed_letter) {
+//     hintArray.forEach(function(original_letter) {
+//       if(guessed_letter === original_letter){
+//           remove(hintArray, guessed_letter);
+//         }
+//     });
+// });
 
 
-var game = new Hangman(["detective", "gandhi", "liberace", "brooklyn"]);
-var game = new Hangman("gandhi");
+//  // http://stackoverflow.com/questions/5767325/remove-specific-element-from-an-array
 
-console.log(game.progress());
-
-// game.progress(); //=> "_ _ _ _ _ _ _ _ _"
-
-// var game = new Hangman("gandhi");
-
-// game.progress(); //=> "_ _ _ _ _ _"
-
+// function remove(arr, item) {
+//       for(var i = arr.length; i--;) {
+//           if(arr[i] === item) {
+//               arr.splice(i, 1);
+//           }
+//       }
+//   }
 
 
-// Works!
-var indices = [];
-var idx = chars.indexOf("z");
-while (idx != -1) {
-    indices.push(idx);
-    idx = chars.indexOf("z", idx + 1);
-}
-
-// Like each in Ruby
-a.forEach(function(entry) {
-    console.log(entry);
-});
-
-
-// var myArray = ['January', 'February', 'March'];
-
-var game = new Hangman(["detective", "gandhi"]);
-
-word_array = ["detective", "gandhi"]
-
-word = word_array[Math.floor(Math.random() * word_array.length)];
-
-
-// goal: get rid of all duplicates in the word detective
-// then randomly select a letter from remaining
-//1) find letter in the playerProgress array
-//2) delete all instances from the hint array
-//2) move on to the next letter and repeat
-
-
-
-d e _ e _ _ _ _ e.forEach letter
-
-detective.delete letter
-
-end
-
-hintArray = detective.split('');
-
-var hintArray = [ 'd', 'e', 't', 'e', 'c', 't', 'i', 'v', 'e' ]
-
-var playerProgress = [ 'd','e','_','e','_','_','_','_','e' ]
-
-[ 'd','e','_','e','_','_','_','_','e' ].each do |letter|
-array_2.each do |letter_2|
- if letter === letter_2
-  delete letter_2
- end
-end
-
-
-
-// works
-playerProgress.forEach(function(guessed_letter) {
-    hintArray.forEach(function(original_letter) {
-      if(guessed_letter === original_letter){
-          remove(hintArray, guessed_letter);
-        }
-    });
-});
-
-
-
-function remove(arr, item) {
-      for(var i = arr.length; i--;) {
-          if(arr[i] === item) {
-              arr.splice(i, 1);
-          }
-      }
-  }
-
-  // http://stackoverflow.com/questions/5767325/remove-specific-element-from-an-array
