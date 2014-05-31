@@ -31,7 +31,7 @@ function Hangman(word_array) {
 
     console.log(playerProgress.join(" "));
 
-    console.log(hint_array);
+    // console.log(hint_array);
 
   }
 
@@ -108,7 +108,25 @@ this.giveUp = function(){
  }
 
 
+this.hint = function(){
+  // Check if the space in the playerProgress is filled with an underscore. If so, fill in the space at the index the random letter was in in the hint_array
 
+  //look for an index containing an underscore in the playerProgress array.
+  for (var i = 0; i < playerProgress.length; i++)
+// if the character hasn't been guessed, put in a character
+    { if (playerProgress[i] === "_" && hint_counter < 1){ playerProgress[i] = hint_array[i];
+      hint_counter += 1;
+      console.log(hint_array[i]);
+
+  } else if (i === "_" && hint_counter > 1){
+    playerProgress[i] = hint_array[i];
+    guess_counter += 1;
+    console.log(hint_array[i]);
+  }
+
+}
+
+}
 
 // this.hint = function(){
 
@@ -126,28 +144,36 @@ this.giveUp = function(){
 }
 
 
-var game = new Hangman (["ghandi", "detective"]);
+var game = new Hangman (["ghandi", "detective", "elephant", "zorro", "zoo"]);
 
 
-game.progress();
-game.guess("q");
-game.progress();
-game.guess("d");
-game.progress();
-game.guess("e");
-game.progress();
-game.incorrect();
-game.guesses();
-game.giveUp();
-game.guess("x");
-game.guess("v");
-game.guess("y");
-game.guesses();
-game.progress();
-game.guess("w");
-game.guess("g");
+// game.progress();
+// game.hint();
+// game.progress();
+// game.guess("q");
+// game.progress();
+// game.guess("d");
+// game.hint();
+// game.progress();
+// game.guess("e");
+// game.hint();
+// game.progress();
+// game.incorrect();
+// game.guesses();
+// game.guess("x");
+// game.guess("v");
+// game.guess("y");
+// game.guesses();
+// game.progress();
+// game.guess("w");
+// game.guess("g");
 
 // game.guess("t");
 // game.progress();
 
 // Add a guess counter to the game to track the number of guesses that have been made
+
+game.progress();
+game.guess("e");
+game.guess("c");
+game.guess("a");
