@@ -13,10 +13,16 @@ function Hangman(word_array) {
    for (var i = 0; i < word.length; i++) {
     playerProgress.push("_");
 
+
+
     };
 
      // return playerProgress.join(" ");
 
+     if (guess_counter === 5) {
+      console.log(word);
+      return null
+      }
 
 
     console.log(playerProgress.join(" "));
@@ -37,10 +43,10 @@ function Hangman(word_array) {
   //turn the word into an array first and keep the playerProgress array an array (no join). Then replace that index each time. Splice does not seem to be working.
 
     for (var i = 0; i < word_list.length; i++){
-    if (word_list[i] === letter) {
-      // playerProgress[i] = letter;
+    if (word_list[i] === letter && guess_counter < 5) {
+      playerProgress[i] = letter;
       // playerProgress[i].replace("_", letter);
-      playerProgress.splice(word_list[i], word_list.length + 1, letter);
+      // playerProgress.splice(word_list[i], word_list.length + 1, letter);
 
             // playerProgress[i] = letter;
       // console.log("true");
@@ -49,6 +55,8 @@ function Hangman(word_array) {
       // console.log("false");
       // playerProgress.push("_");
 
+    } else if (guess_counter === 5) {
+      return null;
     }
   }
     if ( !String.prototype.contains ) {
@@ -61,9 +69,14 @@ if (!word.contains(letter)) {
   guess_counter += 1;
 }
 
-if (playerProgress === word){
-  console.log("You win!");
+if (guess_counter === 5) {
+  console.log("Game over!");
+  return null
+}
 
+ if (playerProgress === word){
+  console.log("You win!");
+  return null
 }
 
 console.log(word.contains(letter));
@@ -86,7 +99,7 @@ console.log(word.contains(letter));
 
 
 
-var game = new Hangman (["detective", "ghandi"]);
+var game = new Hangman (["ghandi", "detective"]);
 
 game.progress();
 game.guess("q");
@@ -97,6 +110,13 @@ game.guess("e");
 game.progress();
 game.incorrect();
 game.guesses();
+game.guess("x");
+game.guess("v");
+game.guess("y");
+game.guesses();
+game.progress();
+game.guess("w");
+game.guess("g");
 
 // game.guess("t");
 // game.progress();
