@@ -1,4 +1,5 @@
-function Hangman(word) {
+function Hangman(words) {
+var word = words[Math.floor(Math.random() * words.length)]
 var playerprogress = [];
 var count = 0;
 
@@ -37,7 +38,8 @@ var count = 0;
 
 }
 
-var game = new Hangman("detective");
+// var game = new Hangman("detective");
+var game = new Hangman(["camera", "picture", "gandhi"]);
 
 console.log(game.progress()); //=> "_ _ _ _ _ _ _ _ _"
 console.log(game.guess("e")); 
@@ -51,6 +53,9 @@ console.log(game.guess("x")); //2
 // console.log(game.guess("x")); //5
 // console.log(game.guess("x")); //6
 console.log(game.progress());
+
+
+
 
 // node testing ========================
 
