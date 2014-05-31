@@ -26,10 +26,7 @@ function Hangman(word_array) {
      if (guess_counter === 5) {
       console.log(word);
       return null
-      } else if (playerProgress.join("") === word){
-  console.log("You win!");
-
-}
+      }
 
 
     console.log(playerProgress.join(" "));
@@ -66,14 +63,8 @@ function Hangman(word_array) {
     } else if (guess_counter === 5) {
       return null;
       console.log("Game over!");
-    } else if (playerProgress.join("") === word){
-  return null;
-
-}
+    }
   }
-
-
-
 
   //Apparently you're not supposed to do the below because it tampers with the constants in JS. Explore options using indexOf.
     if ( !String.prototype.contains ) {
@@ -182,21 +173,7 @@ var game = new Hangman (["ghandi", "detective", "elephant", "zorro", "zoo"]);
 
 // Add a guess counter to the game to track the number of guesses that have been made
 
-// game.progress();
-// game.guess("e");
-// game.guess("c");
-// game.guess("a");
 game.progress();
-// game.giveUp();
-// game.guess("p");
-
 game.guess("e");
 game.guess("c");
-game.hint();
-game.progress();
-game.guess("o");
-game.progress();
-game.guess("t");
-game.guess("r");
-game.progress();
-game.guess("y");
+game.guess("a");
