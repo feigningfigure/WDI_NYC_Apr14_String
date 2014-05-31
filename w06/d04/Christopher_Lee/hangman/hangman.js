@@ -128,10 +128,6 @@ game.giveUp();    //=> "detective"
 game.guess("d");  //=> null
 
 
-
-
-
-
 var game = new Hangman(["detective", "gandhi", "liberace", "brooklyn"]);
 var game = new Hangman("gandhi");
 
@@ -166,3 +162,54 @@ var game = new Hangman(["detective", "gandhi"]);
 word_array = ["detective", "gandhi"]
 
 word = word_array[Math.floor(Math.random() * word_array.length)];
+
+
+// goal: get rid of all duplicates in the word detective
+// then randomly select a letter from remaining
+//1) find letter in the playerProgress array
+//2) delete all instances from the hint array
+//2) move on to the next letter and repeat
+
+
+
+d e _ e _ _ _ _ e.forEach letter
+
+detective.delete letter
+
+end
+
+hintArray = detective.split('');
+
+var hintArray = [ 'd', 'e', 't', 'e', 'c', 't', 'i', 'v', 'e' ]
+
+var playerProgress = [ 'd','e','_','e','_','_','_','_','e' ]
+
+[ 'd','e','_','e','_','_','_','_','e' ].each do |letter|
+array_2.each do |letter_2|
+ if letter === letter_2
+  delete letter_2
+ end
+end
+
+
+
+// works
+playerProgress.forEach(function(guessed_letter) {
+    hintArray.forEach(function(original_letter) {
+      if(guessed_letter === original_letter){
+          remove(hintArray, guessed_letter);
+        }
+    });
+});
+
+
+
+function remove(arr, item) {
+      for(var i = arr.length; i--;) {
+          if(arr[i] === item) {
+              arr.splice(i, 1);
+          }
+      }
+  }
+
+  // http://stackoverflow.com/questions/5767325/remove-specific-element-from-an-array
