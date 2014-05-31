@@ -13,9 +13,9 @@ function Hangman(word_array) {
 
 
    for (var i = 0; i < word.length; i++) {
-    hint_array.push(word[i]);
-    if (playerProgress.length <= word.length){
+    if (playerProgress.length < word.length){
     playerProgress.push("_");
+    hint_array.push(word[i]);
     }
 
 
@@ -31,7 +31,7 @@ function Hangman(word_array) {
 
     console.log(playerProgress.join(" "));
 
-
+    console.log(hint_array);
 
   }
 
