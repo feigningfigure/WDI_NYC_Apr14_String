@@ -1,9 +1,9 @@
-function Hangman(word) {
+function Hangman(word_array) {
 
   var playerProgress = []
   var guess_counter = 0
   var letter_guesses = []
-  // var word = word_array[Math.floor(Math.random() * word_array.length)];
+  var word = word_array[Math.floor(Math.random() * word_array.length)];
 
 
   this.progress = function(){
@@ -86,7 +86,7 @@ console.log(word.contains(letter));
 
 
 
-var game = new Hangman ("detective");
+var game = new Hangman (["detective", "ghandi"]);
 
 game.progress();
 game.guess("q");
