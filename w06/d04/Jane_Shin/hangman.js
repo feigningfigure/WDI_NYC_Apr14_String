@@ -8,9 +8,7 @@ var count = 0;
 				playerprogress.push("_");
 			}
 		}
-
 		return playerprogress.join(" ");
-
 	};
 
 	this.guess = function(letter) {
@@ -32,6 +30,11 @@ var count = 0;
 		}
 	};
 
+	this.giveUp = function(){
+		count = 5;
+		return word
+	};
+
 }
 
 var game = new Hangman("detective");
@@ -41,11 +44,12 @@ console.log(game.guess("e"));
 console.log(game.guess("c"));
 console.log(game.guess("x")); //1
 console.log(game.progress());
+console.log(game.giveUp());
 console.log(game.guess("x")); //2
-console.log(game.guess("x")); //3
-console.log(game.guess("x")); //4
-console.log(game.guess("x")); //5
-console.log(game.guess("x")); //6
+// console.log(game.guess("x")); //3
+// console.log(game.guess("x")); //4
+// console.log(game.guess("x")); //5
+// console.log(game.guess("x")); //6
 console.log(game.progress());
 
 // node testing ========================
