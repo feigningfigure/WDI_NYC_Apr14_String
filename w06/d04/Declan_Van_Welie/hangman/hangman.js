@@ -2,6 +2,9 @@ function Hangman(word) {
 
   var playerProgress = []
   var guess_counter = 0
+  var letter_guesses = []
+  // var word = word_array[Math.floor(Math.random() * word_array.length)];
+
 
   this.progress = function(){
 
@@ -15,9 +18,10 @@ function Hangman(word) {
      // return playerProgress.join(" ");
 
 
+
     console.log(playerProgress.join(" "));
 
-    return playerProgress.join(" ");
+
   }
 
 
@@ -26,17 +30,17 @@ function Hangman(word) {
  this.guess = function(letter){
 
   //
-  word_array = word.split("")
+  word_list = word.split("")
+  letter_guesses.push(letter);
 
-  guess_counter += 1
 
   //turn the word into an array first and keep the playerProgress array an array (no join). Then replace that index each time. Splice does not seem to be working.
 
-    for (var i = 0; i < word_array.length; i++){
-    if (word_array[i] === letter) {
+    for (var i = 0; i < word_list.length; i++){
+    if (word_list[i] === letter) {
       // playerProgress[i] = letter;
       // playerProgress[i].replace("_", letter);
-      playerProgress.splice(word_array[i], word_array.length + 1, letter);
+      playerProgress.splice(word_list[i], word_list.length + 1, letter);
 
             // playerProgress[i] = letter;
       // console.log("true");
@@ -51,12 +55,30 @@ function Hangman(word) {
     String.prototype.contains = function() {
         return String.prototype.indexOf.apply( this, arguments ) !== -1;
     }
+}
+
+if (!word.contains(letter)) {
+  guess_counter += 1;
+}
+
+if (playerProgress === word){
+  console.log("You win!");
 
 }
-    console.log(word.contains(letter));
-    console.log(guess_counter);
+
+console.log(word.contains(letter));
+  // console.log(guess_counter);
+}
 
 
+
+ this.incorrect = function(){
+
+  console.log(guess_counter);
+ }
+
+ this.guesses = function(){
+  console.log(letter_guesses);
  }
 
 
@@ -67,13 +89,14 @@ function Hangman(word) {
 var game = new Hangman ("detective");
 
 game.progress();
-game.guess("t");
+game.guess("q");
 game.progress();
 game.guess("d");
 game.progress();
 game.guess("e");
 game.progress();
-
+game.incorrect();
+game.guesses();
 
 // game.guess("t");
 // game.progress();
