@@ -27,7 +27,7 @@ function Hangman(words) {
 				return "true"	
 			}else{
 				if(guessed_letters.indexOf(letter) === -1){
-					count++;
+					// count++;
 					guessed_letters.push(letter);
 				}
 				return "false"
@@ -55,18 +55,23 @@ function Hangman(words) {
 
 	this.hint = function() {
 		for (var i = 0; i < word.length; i++) {
-			if (word.charAt(i) !== playerprogress[i]) {
-				playerprogress[i] = word.charAt(i);
+			if (word[i] !== playerprogress[i]) {
+				for (var t = 0; t < word.length; t++) {
+					if (word[t] === word[i] ) {
+						playerprogress[t] = word[t];
+					} 
+				}
 				hint_count++;
 					if (hint_count > 1) {
 						count++;
 					} 
-				return word.charAt(i)
+				return word[i]
 			}
 		}
 	};
 
 }
+
 
 var game = new Hangman(["detective"]);
 // var game = new Hangman(["camera", "picture", "gandhi"]);
