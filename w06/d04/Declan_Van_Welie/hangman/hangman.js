@@ -33,9 +33,8 @@ function Hangman(word_array) {
         } else if (playerProgress.join("") === word){
         console.log("You win!");
         }
-
         console.log(playerProgress.join(" "));
-
+        console.log(guess_counter);
     }
 
 
@@ -68,9 +67,14 @@ function Hangman(word_array) {
         }
     }
 
-        //Add in a second requirement to the if statement that checks if the letter has already been guessed. if (!word.contains(letter) && !playerProgress.indexOf(letter)){
+        //Add in a second requirement to the if statement that checks if the letter has already been guessed. Not currently working:
 
-        // guess_counter_joined = guess_counter.join(""); && !guess_counter_joined.contains(letter)
+        // joined_guesses = letter_guesses.join("");
+
+        // if (!word.contains(letter) && !joined_guesses.contains(letter)){
+        //      guess_counter += 1;
+        // }
+
 
         if (!word.contains(letter)) {
           guess_counter += 1;
@@ -81,12 +85,13 @@ function Hangman(word_array) {
           return null
         }
 
-         if (playerProgress === word) {
+         if (playerProgress.join("") === word) {
           console.log("You win!");
           return null
         }
 
         console.log(word.contains(letter));
+
 
         }
 
@@ -167,9 +172,16 @@ game.guess("e");
 game.guess("c");
 game.hint();
 game.progress();
+game.guesses();
 game.guess("o");
 game.progress();
+game.guesses();
 game.guess("t");
 game.guess("r");
 game.progress();
 game.guess("y");
+game.guess("p");
+game.guess("v");
+game.guess("h");
+game.guess("v");
+game.guesses();
