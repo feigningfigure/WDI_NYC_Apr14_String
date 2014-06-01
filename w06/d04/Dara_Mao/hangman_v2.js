@@ -1,26 +1,40 @@
 
 game_count = [];
 playerProgress = [];
+words = []
 
-function Hangman (word){
-    this.word = word
+
+function Hangman (words){
+
+//Phase 3: Pick a random word from an array of inputs
+function chooseWord () {
+  var index_num =  Math.floor(Math.random()*words.length)
+  var random_word = words[index_num];
+  return random_word
+}
+    word = chooseWord();
+    this.word = word;
     this.game_count = game_count;
     this.playerProgress = playerProgress;
 
     for (var i = 0; i < word.length; i++){
-      // Add an underscore to the array
+// Adds underscores to represent the length of the word
         playerProgress.push("_ ");
     }
 
 //.progress shows whats in the playerProgress array
   this.progress = function(){
     var index_num = -1;
-    // index_num = word.indexOf(new_word)
-    // playerProgress[index_num] = new_word;
-    // Convert the array back to a string
     result = playerProgress.join("");
     return result; // array => string
   };
+
+   this.giveUp = function(){
+    // Prints the word
+        console.log(word)
+    // Set playerProgress to null
+        letter = null;
+   }
 
   this.guess = function(letter){
     var index_num = -1;
@@ -42,12 +56,14 @@ function Hangman (word){
      return;
    };
 
+
+
  }
 
 
 //Calling the function
 
-var game = new Hangman ("detective");
+var game = new Hangman(["detective", "gandhi"]);
 console.log(game.progress());
 console.log(game.guess("t"));
 console.log(game.progress());
@@ -61,4 +77,5 @@ console.log(game.progress());
 console.log(game.guess("l"));
 console.log(game.guess("d"));
 console.log(game.progress());
-// console.log(game.progress());
+console.log(game.giveUp());
+
