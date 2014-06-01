@@ -14,12 +14,25 @@ function Hangman(word){
 };
 }
 
-var game = new Hangman("detective");
+var game = new Hangman("detective");{
+  this.clue = "abcdefghijklmnopqrstuvwxyz".split("");
+  this.word = word;
+  this.correctGuesses = [];
+  for(var j=0; j<word.length; j++) {
+      this.correctGuesses[j] = "*";
+  };
+  this.incorrectGuesses = [];
+  this.end = false;
+};
 
 Game.guess = function(letter){
-  wordArray = this.word.split("");
+  wordArray = this.clue.split("");
 
-  for(var k=0; k<this.alpha.length; k++){
+  var wordContainsLetter = false;
+  var isValidInput = false;
+  var alreadyGuessed = false;
+
+  for(var k=0; k<this.clue.length; k++){
     if(this.alpha[k] === letter){
       isValidInput = true;
     }
