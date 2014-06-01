@@ -8,7 +8,6 @@ function Hangman(word) {
     return playerProgress.join(" ");
   };
 ////////
-var word_counter = 0;
   this.guess = function(letter) {
 
   var word_array = word.split("");
@@ -16,13 +15,11 @@ var word_counter = 0;
   for (var i = 0; i < word.length; i++) {
     if (word_array[i] !== letter) {
         word_array[i] = "_";
-        var value = "Good guess"
         }
-    else
-    // else { return "bad guess";}
+
+    else { false; return "bad guess";}
 }
-word_counter++
-return word_array.join(" ") + " " + word_counter + " " + value
+return word_array.join(" ");
 
 
   }
@@ -31,4 +28,4 @@ return word_array.join(" ") + " " + word_counter + " " + value
 
 var game = new Hangman ("detective");
 // console.log(game.progress());
-console.log(game.guess("e"));
+console.log(game.guess("x"));
