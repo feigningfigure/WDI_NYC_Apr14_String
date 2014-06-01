@@ -32,7 +32,7 @@ function Hangman(words) {
 					return "true"
 				}else{
 					if(guessed_letters.indexOf(letter) === -1){
-						// count++;
+						count++;
 						guessed_letters.push(letter);
 					}
 					return "false"
@@ -91,20 +91,20 @@ console.log(game.guess("d")); //#1
 // console.log(game.progress());
 // console.log(game.giveUp());
 console.log(game.guess("x")); //#2
-console.log(game.guess("t")); //#3
-console.log(game.guess("i")); //#4
-console.log(game.guess("v")); //#5
+console.log(game.guess("y")); //#3
+console.log(game.guess("u")); //#4
+console.log(game.guess("r")); //#5
 console.log(game.progress());
 console.log(game.guess("x")); //#6
 console.log(game.progress());
-// console.log(game.guesses());
-// console.log(game.incorrect()); //=>2
-// console.log(game.hint());
-// console.log(game.progress());
-// console.log(game.incorrect()); //=>2
-// console.log(game.hint());
-// console.log(game.progress());
-// console.log(game.incorrect()); //=>3
+console.log(game.guesses());
+console.log(game.incorrect()); //=>2
+console.log(game.hint());
+console.log(game.progress());
+console.log(game.incorrect()); //=>2
+console.log(game.hint());
+console.log(game.progress());
+console.log(game.incorrect()); //=>3
 
 
 
