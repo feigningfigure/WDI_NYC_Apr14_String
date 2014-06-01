@@ -28,7 +28,9 @@ function Hangman (word){
     if (index_num === -1){
       game_count.push(1)
       console.log("false")
-       // return game_count;
+      if ( game_count.length >= 5){
+        console.log ("Game Over")
+      }
     } else {
       console.log("true")
         //update playerProgress
