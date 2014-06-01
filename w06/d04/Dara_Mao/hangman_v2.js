@@ -2,6 +2,7 @@
 game_count = [];
 playerProgress = [];
 words = []
+guessed_letters = []
 
 
 function Hangman (words){
@@ -16,6 +17,7 @@ function chooseWord () {
     this.word = word;
     this.game_count = game_count;
     this.playerProgress = playerProgress;
+    this.guessed_letters =  guessed_letters;
 
     for (var i = 0; i < word.length; i++){
 // Adds underscores to represent the length of the word
@@ -39,6 +41,9 @@ function chooseWord () {
   this.guess = function(letter){
     var index_num = -1;
     index_num = word.indexOf(letter)
+    this.letter = letter;
+    guessed_letters.push(this.letter);
+
     if (index_num === -1){
       game_count.push(1)
       console.log("false")
@@ -52,29 +57,43 @@ function chooseWord () {
         playerProgress[index_num] = letter;
         result = playerProgress.join("");
         // console.log(result)
-       return true;
+      return;
      }
      return;
    };
+
+// Shows all the guesses so far in the game
+   this.guesses = function () {
+    console.log(guessed_letters)
+   }
+// this.guesses function ends
  }
 
 
 //Calling the function
 
-var game = new Hangman(["detective", "gandhi","sunday","maybe"]);
+var game = new Hangman(["detective"]);
+ // ,"gandhi","sunday","maybe"]);
 console.log(game.progress());
 console.log(game.guess("t"));
 console.log(game.progress());
 console.log(game.guess("l"));
-console.log(game.guess("l"));
-console.log(game.guess("l"));
-console.log(game.guess("l"));
+console.log(game.guess("k"));
+console.log(game.guesses());
+console.log(game.guess("a"));
+console.log(game.guess("m"));
 console.log(game.progress());
-console.log(game.guess("e"));
-console.log(game.progress());
-console.log(game.guess("l"));
-console.log(game.guess("d"));
-console.log(game.progress());
+console.log(game.guesses());
+// console.log(game.guess("l"));
+// console.log(game.guess("l"));
+// console.log(game.guess("l"));
+// console.log(game.guess("l"));
+// console.log(game.progress());
+// console.log(game.guess("e"));
+// console.log(game.progress());
+// console.log(game.guess("l"));
+// console.log(game.guess("d"));
+// console.log(game.progress());
 // console.log(game.giveUp());
 // console.log(game.progress());
 // console.log(game.guess("e"));
