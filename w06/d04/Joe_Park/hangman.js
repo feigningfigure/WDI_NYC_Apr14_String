@@ -1,36 +1,54 @@
 function Hangman(word){
 	// FILL ME IN
-	var stringLength = word.length;
-	var splitString = word.split("", stringLength);
+	this.word = "hello";
 
-	this.word = word;
+	var wordLength = this.word.length;
+	var splitString = this.word.split("", wordLength);
+	var joinedString = splitString.join(" ");
+	
 
 	this.progress = function(){
 		// FILL ME IN
 		var playerProgress = [];
-
-		for (var i = 0; i < word.length; i++){
+		for (var i = 0; i < wordLength; i++){
 			playerProgress.push("_");
 		}
-
 		return playerProgress.join(" ");
-		
 	};
 
+	this.guess = function(letter){
+		for (var i = 0; i < joinedString.length; i++){
+			if(joinedString.match(letter)){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	};
 }
-
-
-
-	// var string_length = word.length;
-
-	// var split_string = word.split("", string_length);
-
 
 
 var game = new Hangman("detective");
 
 console.log(game.progress()); //=> "_ _ _ _ _ _ _ _ _"
+console.log(game.guess("f"));  //=> false
+console.log(game.guess("d"));
+console.log(game.guess("e"));
+console.log(game.guess("v"));
+console.log(game.guess("i"));  //=> true
+console.log(game.progress());  //=> "_ _ t _ _ t _ _ _"
 
-var game = new Hangman("gandhi");
+// var words = ["blah", "hello", "gandhi"]
+// function randomWord(words) {
+//     return words[Math.floor(Math.random() * words.length)];
+// }
 
-console.log(game.progress()); //=> "_ _ _ _ _ _"
+
+// var playerProgress = "";
+// for (var i = 0; i < stringLength; i++){
+//     playerProgress += "_";
+// }  
+// return playerProgress;
+
+
+
