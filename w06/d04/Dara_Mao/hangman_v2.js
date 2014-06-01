@@ -32,8 +32,8 @@ function chooseWord () {
    this.giveUp = function(){
     // Prints the word
         console.log(word)
-    // Set playerProgress to null
-        letter = null;
+    // Set guess to null
+        this.guess = null;
    }
 
   this.guess = function(letter){
@@ -44,6 +44,7 @@ function chooseWord () {
       console.log("false")
       if ( game_count.length >= 5){
         console.log ("Game Over")
+        this.guess = undefined;
       }
     } else {
       console.log("true")
@@ -55,15 +56,12 @@ function chooseWord () {
      }
      return;
    };
-
-
-
  }
 
 
 //Calling the function
 
-var game = new Hangman(["detective", "gandhi"]);
+var game = new Hangman(["detective", "gandhi","sunday","maybe"]);
 console.log(game.progress());
 console.log(game.guess("t"));
 console.log(game.progress());
@@ -77,5 +75,11 @@ console.log(game.progress());
 console.log(game.guess("l"));
 console.log(game.guess("d"));
 console.log(game.progress());
-console.log(game.giveUp());
+// console.log(game.giveUp());
+// console.log(game.progress());
+// console.log(game.guess("e"));
+// console.log(game.progress());
+// console.log(game.guess("l"));
+// console.log(game.guess("d"));
+// console.log(game.progress());
 
