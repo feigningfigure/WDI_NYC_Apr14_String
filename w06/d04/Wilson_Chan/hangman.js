@@ -33,7 +33,7 @@ Game.guess = function(letter){
   var alreadyGuessed = false;
 
   for(var k=0; k<this.clue.length; k++){
-    if(this.alpha[k] === letter){
+    if(this.clue[k] === letter){
       isValidInput = true;
     }
   };
@@ -43,6 +43,26 @@ Game.guess = function(letter){
       alreadyGuessed = true;
     }
   };
+
+     //another conditional version (must add variable above)
+      // Convert user letter to lowercase
+    userGuess = userGuess.toLowerCase();
+
+    for (x = 0; x < splitWord.length; x++) {
+        // Check to see if the letter exists in the word
+        if (userGuess == splitWord[x]) {
+            // Add their guess to guesses
+            guesses.push(userGuess);
+            // If it does exist, replace the proper _ position
+            // With the guessed letter
+            underscore.replace([x], userGuess);
+        }
+        // If it does not exist, add their guess to wrong guesses
+        else if (userGuess != splitWord[x]) {
+            wrongGuesses.push(userGuess);
+            numOfGuesses--;
+        }
+    }
 
 // pick a letter at random function
 //targetLetter, a global variable set above, is picking a wordlist from the json file at random.
