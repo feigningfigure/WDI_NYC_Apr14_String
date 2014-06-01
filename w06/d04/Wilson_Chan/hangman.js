@@ -16,13 +16,29 @@ function Hangman(word){
 
 var game = new Hangman("detective");
 
+Game.guess = function(letter){
+  wordArray = this.word.split("");
+
+  for(var k=0; k<this.alpha.length; k++){
+    if(this.alpha[k] === letter){
+      isValidInput = true;
+    }
+  };
+
+  for(var j=0; j<this.guesses.length; j++){
+    if(this.guesses[j] === letter){
+      alreadyGuessed = true;
+    }
+  };
+
 // pick a letter at random function
 //targetLetter, a global variable set above, is picking a wordlist from the json file at random.
 //Math.random returns a number in a range from 0 < 1. It will never return 1 itself.
 //and then, we multiply by the numbers in wordlist // Math.floor rounds down to the nearest whole number
-function newLetter() {
-    targetletter = letter[Math.floor(Math.random() * letter.length)];
-}
+// function newLetter() {
+//     targetletter = letter[Math.floor(Math.random() * letter.length)];
+// }
+
 
 console.log(game.progress()); //=>"_ _ _ _ _ _ _ _ _"
 // game.guess("a");  //=> false
