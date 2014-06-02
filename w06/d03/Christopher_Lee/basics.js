@@ -88,3 +88,8 @@ console.log(myActualAge);
 
 
 
+
+(function() {
+  console.log(myvar); // undefined
+  var myvar = "local value";
+})();

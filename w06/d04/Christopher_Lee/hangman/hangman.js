@@ -14,6 +14,8 @@
 
 // make sure you didn't break other stuff
 
+// start looking at books to figure out how you can refactor this
+
 function Hangman(word_array){
    if(typeof word_array === 'string'){
     var word = word_array;
