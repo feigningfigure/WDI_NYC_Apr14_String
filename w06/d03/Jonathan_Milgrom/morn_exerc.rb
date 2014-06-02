@@ -19,3 +19,22 @@ def compare(word, array)
 	end
 end
 
+@dollars_to_pounds = 0.6
+
+def dollars_converter(base)
+	result = base * @dollars_to_pounds
+end
+
+def pounds_converter(base)
+	result = base * 1/@dollars_to_pounds
+end
+
+def converter(base_currency, num)
+
+	case base_currency
+	when "dollars"
+		self.dollars_converter(num)
+	when "pounds"
+		self.pounds_converter(num)
+	end
+end
