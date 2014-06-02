@@ -6,12 +6,20 @@
 // Set your initial balances for the savings and checking accounts
 
 
-
+console.log('feed me javascripts')
 $(document).ready(function(){
 
   // SEE:  https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers.onclick
 
   // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
+$("#checking_deposit_button").click(function(){
+    // To get the value of the input field use $("task_input").val();
+    var deposit_value = parseFloat($("#checking_deposit_input").val());
+    var current_value = parseFloat($('#balance1').text().replace( /^\D+/g, ''));
+    var checking_balance = deposit(deposit_value, current_value);
+    $('#balance1').text(checking_balance);
+    deposit_value.val('');
+  });
 
 
   // Create a click event that is raised when the user clicks on the "savingsDeposit" element.
@@ -23,7 +31,13 @@ $(document).ready(function(){
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
 
 
-};
+});
+
+function deposit(amount, current_value){
+  current_value += amount;
+  return "$" + current_value
+}
+
 
 function withdrawFunds(amount, primary, secondary)
 {
@@ -34,3 +48,19 @@ function updateDisplay()
 {
 
 }
+
+// this is how its done $('#balance1').text('$250');
+//1) get input: deposit
+//2) run existing value through function with how much they want to deposit
+//3) return result with $('#balance1').text('$250');
+
+
+// Take these two, jam them into deposit, and return final amount to #balance1
+
+
+//what you need to update the value of
+// $('#balance1')
+// use +=
+
+// seems like you need to be able to get ahold of whatever this is
+// <input type="text" placeholder="enter an amount" />
