@@ -1,13 +1,23 @@
 function Hangman(word) {
 
-  this.word = word;
+
 
   var playerProgress = []
 
+
+
+
   this.progress = function(){
+
+    if (playerProgress.length === 0) {
     for(i = 0; i < word.length; i ++) {
       playerProgress.push("_");
-    };
+    }} else {
+      for (i in indices) {
+      playerProgress[indices[i]] = "e"
+  }
+    }
+
     return playerProgress.join(" ");
   };
 
@@ -16,17 +26,18 @@ function Hangman(word) {
 
 
 
-
+var index, indices = [];
  this.guess = function(letter) {
     var startIndex = 0, letterLen = letter.length;
-    var index, indices = [];
+
 
     while ((index = word.indexOf(letter, startIndex)) > -1) {
         indices.push(index);
         startIndex = index + letterLen;
     }
     if (indices.length > 0) {
-      return true
+
+      return indices
     } else {
       return false
     }
