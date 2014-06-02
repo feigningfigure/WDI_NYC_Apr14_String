@@ -13,3 +13,4 @@ function Person(name){
 friend = new Person("Joe")
 console.log(friend.ssn);
 friend.sayHi();
+console.log(friend.name);

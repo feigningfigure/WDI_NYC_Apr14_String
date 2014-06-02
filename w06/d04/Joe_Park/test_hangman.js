@@ -1,30 +1,31 @@
-function Hangman(words){
+function Hangman(words) {
 	// FILL ME IN
 	// this.word = word;
 	var word = randomWord(words);
 	var playerProgress = [];
-	var attempts = 0
+	var attempts = 0;
 	var guesses = [];
+	var hint_counter = 0;
 
 	this.progress = function(){
 		// FILL ME IN
-		if (attempts <5){	
+		if (attempts < 5) {	
 			if (playerProgress.length === 0) {
-				for (var i = 0; i < word.length; i++){
+				for (var i = 0; i < word.length; i++) {
 					playerProgress.push("_");
 				}
-			}
+			} 
 			return playerProgress.join(" ");
-		} else {
+		} else if (attempts >= 5) {
 			return word
-		}
+		} 
 	};
 
 
 	this.guess = function(letter) {
 		
 		if (attempts < 5){
-			if (word.indexOf(letter) !== -1){
+			if (word.indexOf(letter) !== -1) {
 				for (var i = 0; i < word.length; i++) {
 					if (word[i] === letter) {
 						playerProgress[i] = letter;
@@ -36,7 +37,7 @@ function Hangman(words){
 					attempts++;
 					guesses.push(letter);
 				}
-				return "you're fucked"
+				return false
 			} 
 		} else {
 			playerProgress = word.split("", word.length);
@@ -45,21 +46,33 @@ function Hangman(words){
 	};
 
 
-	this.giveup = function(){
+	this.giveup = function() {
 		attempts = 5;
 		playerProgress = word.split("", word.length);
 		return word
 	}
 
-	this.incorrect = function(){
+	this.incorrect = function() {
 		return attempts
 	}
 
-	this.guesses = function(){
+	this.guesses = function() {
 		return guesses
 	}
 
+	this.hint = function(){
+		var random = Math.floor(Math.random() * word.length);;
+		var letter = word[random];
+		if (hint_counter === 0) {
+			this.guess(letter);
+			hint_counter++;
+		} else {
 
+			attempts++;
+			this.guess(letter);
+		}
+		return letter
+	}
 
 	function randomWord(words) {
 	  return words[Math.floor(Math.random() * words.length)];
@@ -70,26 +83,32 @@ function Hangman(words){
 
 var words = ["detective"]
 var game = new Hangman(words);
-// console.log(game.word);
-console.log(game.progress()); //=> "_ _ _ _ _ _ _ _ _"
-console.log(game.guess("e"));  //=> false
-console.log(game.guess("x"));
-console.log(game.guess("y"));
-console.log(game.guess("x"));
-console.log(game.guess("m"));
-console.log(game.guesses());
-console.log(game.incorrect());
-// console.log(game.giveup());
+console.log(game.progress());
+// console.log(game.guess("e"));
 // console.log(game.guess("x"));
 // console.log(game.guess("y"));
+// console.log(game.guess("d"));
+// console.log(game.guess("t"));
+// console.log(game.guess("c"));
+// console.log(game.guess("z"));
+// console.log(game.guess("z"));
+// console.log(game.guess("i"));
+// console.log(game.guess("w"));
 // console.log(game.guess("p"));
-// console.log(game.guess("t"));  //=> true
-// console.log(game.guess("x"));
-console.log(game.progress());  //=> "_ _ t _ _ t _ _ _"
-
+// console.log(game.guesses());
+console.log(game.hint());
+console.log(game.incorrect());
+console.log(game.hint());
+console.log(game.progress());
+console.log(game.incorrect());
+console.log(game.hint());
+console.log(game.incorrect());
+console.log(game.progress());
 // "incentive", "perplexed", "gandhi", "school"
 
-
+// word.split("").join(" ").length === playerProgress) {
+// 			return "You've won"
+// 		}
 
 
 // var playerProgress = "";
