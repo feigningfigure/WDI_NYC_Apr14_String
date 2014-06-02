@@ -25,7 +25,7 @@ var game = new Hangman("detective");{
   this.end = false;
 };
 
-Game.guess = function(letter){
+guess = function(letter){
   wordArray = this.clue.split("");
 
   var wordContainsLetter = false;
@@ -44,25 +44,25 @@ Game.guess = function(letter){
     }
   };
 
-     //another conditional version (must add variable above)
-      // Convert user letter to lowercase
-    userGuess = userGuess.toLowerCase();
+    //  //another conditional version (must add variable above)
+    //   // Convert user letter to lowercase
+    // userGuess = userGuess.toLowerCase();
 
-    for (x = 0; x < splitWord.length; x++) {
-        // Check to see if the letter exists in the word
-        if (userGuess == splitWord[x]) {
-            // Add their guess to guesses
-            guesses.push(userGuess);
-            // If it does exist, replace the proper _ position
-            // With the guessed letter
-            underscore.replace([x], userGuess);
-        }
-        // If it does not exist, add their guess to wrong guesses
-        else if (userGuess != splitWord[x]) {
-            wrongGuesses.push(userGuess);
-            numOfGuesses--;
-        }
-    }
+    // for (x = 0; x < splitWord.length; x++) {
+    //     // Check to see if the letter exists in the word
+    //     if (userGuess == splitWord[x]) {
+    //         // Add their guess to guesses
+    //         guesses.push(userGuess);
+    //         // If it does exist, replace the proper _ position
+    //         // With the guessed letter
+    //         underscore.replace([x], userGuess);
+    //     }
+    //     // If it does not exist, add their guess to wrong guesses
+    //     else if (userGuess != splitWord[x]) {
+    //         wrongGuesses.push(userGuess);
+    //         numOfGuesses--;
+    //     }
+    // }
 
 // pick a letter at random function
 //targetLetter, a global variable set above, is picking a wordlist from the json file at random.
