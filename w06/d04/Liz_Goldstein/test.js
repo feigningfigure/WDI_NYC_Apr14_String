@@ -1,14 +1,41 @@
-word = "kitten";
-empty_word = ["_", "_", "_", "_", "_", "_",];
-word_array = word.split("");
-letter ="k";
+// word = "kitten";
+// empty_word = ["_", "_", "_", "_", "_", "_",];
+// word_array = word.split("");
+// letter ="k";
 
 
-for (var i = 0; i < word.length; i++) {
-    if (word_array[i] === letter) {
-          empty_word[i] = letter;}
+// var messages = ["Good!", "Great!", "Awesome!", "Super!", "Nice!"];
+// function getMessage() {
+//    return messages[Math.floor(Math.random() * messages.length)];
+// }
+
+
+
+
+
+function Check(word){
+
+
+
+this.guess = function(){
+   var random_words = word
+   var word = random_words[Math.floor(Math.random() * random_words.length)];
+   return word;
 }
- console.log(empty_word);
+
+this.test = function(){
+  return word;}
+
+}
+
+var game = new Check(["detective", "kitten", "test"]);
+console.log(game.test());
+console.log(game.guess());
+// for (var i = 0; i < word.length; i++) {
+//     if (word_array[i] === letter) {
+//           empty_word[i] = letter;}
+// }
+//  console.log(empty_word);
 
 
 

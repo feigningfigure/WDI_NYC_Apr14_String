@@ -1,14 +1,19 @@
 function Hangman(word) {
 
-  this.progress = function(){
+var word = chosenWord()
+var guess_counter = 0;
+
+function chosenWord() {
+   return word[Math.floor(Math.random() * word.length)];
+}
+
+this.progress = function(){
     var playerProgress = [];
     for (var i = 0; i < word.length; i++) {
       playerProgress.push("_");
     }
     return playerProgress;
   };
-
-var guess_counter = 0;
 
 this.guess = function(letter) {
     if (guess_counter === 0) {
@@ -28,7 +33,7 @@ function gameStatus()
 }
 
 if (guess_counter < 6)
-{return current_progress + " " + gameStatus();}
+{return current_progress + " " + gameStatus(); + guesses}
 else {return "NO YOUR GAME IS OVER TOO MANY GUESSES";}
 }
 
@@ -42,7 +47,7 @@ this.seeProgress = function () {
 
 }
 
-var game = new Hangman ("detective");
+var game = new Hangman (["detective", "kitten", "puppy"]);
 // console.log(game.progress());
 console.log(game.guess("x"));
 console.log(game.guess("t"));
