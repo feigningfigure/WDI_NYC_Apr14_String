@@ -1,4 +1,3 @@
-
 game_count = [];
 playerProgress = [];
 words = []
@@ -13,6 +12,7 @@ function chooseWord () {
   var random_word = words[index_num];
   return random_word
 }
+debugger;
     word = chooseWord();
     this.word = word;
     this.game_count = game_count;
@@ -67,17 +67,25 @@ function chooseWord () {
     console.log(guessed_letters)
    }
 // this.guesses function ends
+
+    this.hint = function () {
+        var hint = playerProgresses
+        var index_num =  Math.floor(Math.random()*words.length)
+    }
+    this.game = function (){
+
+    }
+
  }
 
 
 //Calling the function
 
-var game = new Hangman(["detective"]);
- // ,"gandhi","sunday","maybe"]);
+var game = new Hangman(["detective" ,"gandhi","sunday","maybe"]);
 console.log(game.progress());
 console.log(game.guess("t"));
 console.log(game.progress());
-console.log(game.guess("l"));
+console.log(game.guess("g"));
 console.log(game.guess("k"));
 console.log(game.guesses());
 console.log(game.guess("a"));
