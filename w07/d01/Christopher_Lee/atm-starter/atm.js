@@ -13,12 +13,14 @@ $(document).ready(function(){
 
   // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
 $("#checking_deposit_button").click(function(){
-    // To get the value of the input field use $("task_input").val();
     var deposit_value = parseFloat($("#checking_deposit_input").val());
+    // parseFloat($("#checking_deposit_input").val());
     var current_value = parseFloat($('#balance1').text().replace( /^\D+/g, ''));
     var checking_balance = deposit(deposit_value, current_value);
+
     $('#balance1').text(checking_balance);
-    deposit_value.val('');
+
+    $("#checking_deposit_input").val('');
   });
 
 
@@ -35,7 +37,7 @@ $("#checking_deposit_button").click(function(){
 
 function deposit(amount, current_value){
   current_value += amount;
-  return "$" + current_value
+  return "$" + current_value.toFixed(2);
 }
 
 
