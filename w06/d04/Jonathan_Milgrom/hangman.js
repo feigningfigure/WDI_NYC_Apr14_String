@@ -16,15 +16,19 @@ function Hangman(arrayOfWords) {
 	}
 
 	function incorrect_guess_array_length() {
-		return incorrect_guess_array.length + hintCount;
-	}
-	
-	function hintCounter() {
-		return hintCount++;
+		return incorrect_guess_array.length;
 	}
 
+	function hintCounter() {
+		hintCount++;
+	}
+
+	this.turns = function() {
+		return incorrect_guess_array_length() + hintCount;
+	};
+
 	this.guess = function(guess_letter){
-		if (incorrect_guess_array_length() < 5 && gameOn === true) {
+		if (this.turns() < 5 && gameOn === true) {
 			for (var i=0; i < array.length; i++) {
 				if (array[i] === guess_letter) {
 					correct_guess_array.push(guess_letter);
@@ -92,10 +96,11 @@ function Hangman(arrayOfWords) {
 						localWordArray.splice(i, 1);
 					} 
 				}
-			}
-		}		
+					}		
 		var remainingCorrectGuesses = localWordArray;
-		this.guess(remainingCorrectGuesses[randomIndex(remainingCorrectGuesses.length)]);
+		var hint = remainingCorrectGuesses[randomIndex(remainingCorrectGuesses.length)];
+		console.log(hint);
+		this.guess(hint);
 		hintCounter();
 		return this.progress;
 	}
