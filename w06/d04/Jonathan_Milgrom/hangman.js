@@ -88,7 +88,7 @@ function Hangman(arrayOfWords) {
 	//randomly selecting a correct letter
 	this.hint = function() {
 		var localCorrectGuessArray = correct_guess_array;
-		var localWordArray = array;
+		var localWordArray = array.slice(0);
 		if (correct_guess_array_length() > 0) {
 			for (var i=0; i < array.length; i++) {
 				for (var j=0; j < correct_guess_array_length(); j++) {
@@ -97,12 +97,17 @@ function Hangman(arrayOfWords) {
 					} 
 				}
 					}		
-		var remainingCorrectGuesses = localWordArray;
-		var hint = remainingCorrectGuesses[randomIndex(remainingCorrectGuesses.length)];
-		console.log(hint);
-		this.guess(hint);
+			var remainingCorrectGuesses = localWordArray;
+			var hinty = remainingCorrectGuesses[randomIndex(remainingCorrectGuesses.length)];
+			console.log(hinty);
+			this.guess(hinty);
+			hintCounter();
+			console.log(array);
+			return this.progress();
+		} 
 		hintCounter();
-		return this.progress;
+		this.guess(array[randomIndex(array.length)]);
+		return this.progress();
 	}
 }
 
