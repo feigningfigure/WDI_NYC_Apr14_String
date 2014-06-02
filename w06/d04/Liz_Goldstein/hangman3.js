@@ -36,6 +36,10 @@ this.giveUp = function() {
   return "The word was" + " " + word;
 }
 
+this.seeProgress = function () {
+  return "So far you've got: " + current_progress + " with " + (5 - guess_counter) + " left to guess" ;
+}
+
 }
 
 var game = new Hangman ("detective");
@@ -43,6 +47,7 @@ var game = new Hangman ("detective");
 console.log(game.guess("x"));
 console.log(game.guess("t"));
 console.log(game.guess("e"));
+console.log(game.seeProgress());
 console.log(game.guess("f"));
 console.log(game.guess("l"));
 console.log(game.guess("c"));

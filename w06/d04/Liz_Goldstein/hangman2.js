@@ -1,40 +1,33 @@
 function Hangman(word) {
 
-  // this.progress = function(){
-  //   var playerProgress = [];
-  //   for (var i = 0; i < word.length; i++) {
-  //     playerProgress.push("_");
-  //   }
-  //   return playerProgress.join(" ");
-  // };
-//////
-  var word_array = word.split("");
-
- var substitution = function(word, word_array){
-  for (var i = 0; i < word.length; i++) {
-    if (word_array[i] !== letter) {
-        word_array[i] = "_";
-        var value = "Good guess"
-        return word_array + value
-        }
+  this.progress = function(){
+    var playerProgress = [];
+    for (var i = 0; i < word.length; i++) {
+      playerProgress.push("_");
+    }
+    return playerProgress;
+  };
+////////
 
 var word_counter = 0;
-
   this.guess = function(letter) {
-  for (var i = 0; i < word.length; i++) {
-    if (word_array[i] === letter){
-      substitution(word, word_array);
-    }
-   // else {return value = "Bad guess";}
-}
+      var progress = this.progress();
+      var word_array = word.split("");
+      for (var i = 0; i < word.length; i++) {
+        if (word_array[i] === letter) {
+          progress[i] = letter;}
+          }
 word_counter++
-// return word_array.join(" ") + " " + word_counter + " " + value
 
+var game_status = function gameStatus()
+{ if (word_counter === 5){return "Game over"};
+}
 
-  }
-
+return progress + " " + word_counter + game_status
+}
 }
 
 var game = new Hangman ("detective");
 // console.log(game.progress());
-console.log(game.guess("e"));
+console.log(game.guess("x"));
+console.log(game.guess("t"));
