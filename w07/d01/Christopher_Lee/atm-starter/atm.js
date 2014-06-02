@@ -7,8 +7,10 @@
 
 
 console.log('feed me javascripts')
-$(document).ready(function(){
 
+$(document).ready(function(){
+  no_fund_alert($('#balance1'))
+  no_fund_alert($('#balance2'))
   // SEE:  https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers.onclick
 
   // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
@@ -21,6 +23,8 @@ $("#checking_deposit_button").click(function(){
     $('#balance1').text(checking_balance);
 
     $("#checking_input").val('');
+
+    no_fund_alert($('#balance1'))
   });
 
 
@@ -35,6 +39,8 @@ $("#savings_deposit_button").click(function(){
     $('#balance2').text(savings_balance);
 
     $("#savings_input").val('');
+
+    no_fund_alert($('#balance2'))
   });
 
 
@@ -46,9 +52,14 @@ $("#checking_withdraw_button").click(function(){
     var current_value = parseFloat($('#balance1').text().replace( /^\D+/g, ''));
     var checking_balance = withdrawFunds(withdraw_value, current_value);
 
-    $('#balance1').text(checking_balance);
-
+    if (balanceValidate(current_value, withdraw_value)){
+      $('#balance1').text(checking_balance);
+    }else{
+      alert("You do not have sufficient funds!");
+    }
     $("#checking_input").val('');
+
+    no_fund_alert($('#balance1'))
   });
 
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
@@ -62,6 +73,8 @@ $("#savings_withdraw_button").click(function(){
     $('#balance2').text(savings_balance);
 
     $("#savings_input").val('');
+
+    no_fund_alert($('#balance2'))
   });
 
 
@@ -79,10 +92,27 @@ function withdrawFunds(amount, primary)
   return "$" + primary.toFixed(2);
 }
 
+function balanceValidate(current_value, withdraw_value){
+  if(withdraw_value > current_value){
+    return false
+  } else{
+    return true
+  }
+}
+
 function updateDisplay()
 {
 
 }
+
+function no_fund_alert(balance){
+    if(parseFloat(balance.text().replace( /^\D+/g, '')) <= 0){
+       balance.css("background-color","red");
+    }else{
+      balance.css("background-color","white");
+    }
+  }
+
 
 // this is how its done $('#balance1').text('$250');
 //1) get input: deposit
@@ -99,3 +129,12 @@ function updateDisplay()
 
 // seems like you need to be able to get ahold of whatever this is
 // <input type="text" placeholder="enter an amount" />
+
+// function accountEmpty(balance_1, balance_2){
+//   if(balance1)
+// }
+
+
+// $('#balance1')
+
+// $('#balance1').css("background-color","red")
