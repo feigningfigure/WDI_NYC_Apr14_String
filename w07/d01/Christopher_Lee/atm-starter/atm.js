@@ -13,24 +13,56 @@ $(document).ready(function(){
 
   // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
 $("#checking_deposit_button").click(function(){
-    var deposit_value = parseFloat($("#checking_deposit_input").val());
+    var deposit_value = parseFloat($("#checking_input").val());
     // parseFloat($("#checking_deposit_input").val());
     var current_value = parseFloat($('#balance1').text().replace( /^\D+/g, ''));
     var checking_balance = deposit(deposit_value, current_value);
 
     $('#balance1').text(checking_balance);
 
-    $("#checking_deposit_input").val('');
+    $("#checking_input").val('');
   });
 
 
   // Create a click event that is raised when the user clicks on the "savingsDeposit" element.
 
+$("#savings_deposit_button").click(function(){
+    var deposit_value = parseFloat($("#savings_input").val());
+    // parseFloat($("#checking_deposit_input").val());
+    var current_value = parseFloat($('#balance2').text().replace( /^\D+/g, ''));
+    var savings_balance = deposit(deposit_value, current_value);
+
+    $('#balance2').text(savings_balance);
+
+    $("#savings_input").val('');
+  });
+
 
   // Create a click event that is raised when the user clicks on the "checkingWithdraw" element.
 
+$("#checking_withdraw_button").click(function(){
+    var withdraw_value = parseFloat($("#checking_input").val());
+    // parseFloat($("#checking_deposit_input").val());
+    var current_value = parseFloat($('#balance1').text().replace( /^\D+/g, ''));
+    var checking_balance = withdrawFunds(withdraw_value, current_value);
+
+    $('#balance1').text(checking_balance);
+
+    $("#checking_input").val('');
+  });
 
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
+
+$("#savings_withdraw_button").click(function(){
+    var withdraw_value = parseFloat($("#savings_input").val());
+    // parseFloat($("#checking_deposit_input").val());
+    var current_value = parseFloat($('#balance2').text().replace( /^\D+/g, ''));
+    var savings_balance = withdrawFunds(withdraw_value, current_value);
+
+    $('#balance2').text(savings_balance);
+
+    $("#savings_input").val('');
+  });
 
 
 });
@@ -40,10 +72,11 @@ function deposit(amount, current_value){
   return "$" + current_value.toFixed(2);
 }
 
-
-function withdrawFunds(amount, primary, secondary)
+// function withdrawFunds(amount, primary, secondary)
+function withdrawFunds(amount, primary)
 {
-
+  primary -= amount
+  return "$" + primary.toFixed(2);
 }
 
 function updateDisplay()
