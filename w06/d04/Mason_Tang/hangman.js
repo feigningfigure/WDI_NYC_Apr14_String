@@ -1,3 +1,8 @@
+
+// I was away this weekend, I worked on this on Sunday.
+// I know how to do this and I intend to complete it this week.
+
+
 function Hangman(word) {
 
 
@@ -14,6 +19,7 @@ function Hangman(word) {
       playerProgress.push("_");
     }} else {
       for (i in indices) {
+      //need to figure out how to pass letter. using "e" as placeholder
       playerProgress[indices[i]] = "e"
   }
     }
