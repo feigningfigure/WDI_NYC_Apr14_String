@@ -5,32 +5,39 @@
 
 // Set your initial balances for the savings and checking accounts
 
-
-
 $(document).ready(function(){
+  //Deposit balance
+  var checking_balance = $("#checkingAccount > div");
+
+  $($("#checkingAccount > input:button:first")).click(function(){
+
+//Deposit field
+  var checking_input = $("#checkingAccount > input:text");
+  checking_balance.append(checking_input.val());
+
+  checking_input.val("");
+  });
+});
+
+
+// function withdrawFunds(amount, primary, secondary)
+// {
+
+// }
+
+// function updateDisplay()
+// {
+
+// }
 
   // SEE:  https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers.onclick
 
   // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
 
-
-  // Create a click event that is raised when the user clicks on the "savingsDeposit" element.
+    // Create a click event that is raised when the user clicks on the "savingsDeposit" element.
 
 
   // Create a click event that is raised when the user clicks on the "checkingWithdraw" element.
 
 
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
-
-
-};
-
-function withdrawFunds(amount, primary, secondary)
-{
-
-}
-
-function updateDisplay()
-{
-
-}
