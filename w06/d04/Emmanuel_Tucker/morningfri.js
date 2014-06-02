@@ -2,11 +2,11 @@
 
 
 
-function dollarsToPounds(5) {
+function dollarsToPounds(pounds) {
 
-   if (5 === 2.99096727881797)return
+   if (5 === 2.99096727881797) return 5
 
-console.log()
+console.log(5)
 
 }
 
