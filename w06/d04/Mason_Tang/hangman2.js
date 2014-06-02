@@ -10,7 +10,29 @@ function Hangman(word) {
     return playerProgress.join(" ");
   };
 
+
+  word_array = word.split("")
+
+
+
+  this.guess = function(letter){
+    var index = word_array.indexOf(letter);
+    console.log(index)
+
+
+  }
+
+
+
+
+
+
+
 }
+
+
+
+
 
 
 

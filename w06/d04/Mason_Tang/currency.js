@@ -13,11 +13,11 @@ function poundsToDollars(pounds) {
 }
 
 function currencyConverter(curr1, curr2, amt) {
-  if (curr1 == "dollars") {
+  if (curr1 === "dollars") {
     var dollars = amt * 0.5970
     return dollars
     console.log(dollars);
-  } else if (curr1 == "pounds") {
+  } else if (curr1 === "pounds") {
     var pounds = amt * 1.6751
     return pounds
     console.log(pounds);
