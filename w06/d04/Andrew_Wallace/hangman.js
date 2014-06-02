@@ -27,14 +27,4 @@ function Hangman(word) {
     }
   }
 
-  this.gameOver = function() {
-    if (badGuesses > 5) {
-      console.log("You lose!");
-    } else {
-    }
-  }
-}
 
-var game = new Hangman("detective");
-// game.progress();
-game.guess("e");
