@@ -14,11 +14,8 @@ $(document).ready(function(){
 
   // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
 $('#checking-deposit-button').click(function(){
-    // var input = $("#checking-input");
-    // console.log(input);
 
-    // $('.balance').append(input.val());
-
+// # The parseInt function parses a string and returns an integer.
   var $input1 = parseInt($("#checking-input").val());
   var $input2 = parseInt($("#balance1").text().replace(/[^0-9\.]/g,''));
     $("#balance1").text("$" + ($input1 + $input2));
@@ -29,10 +26,9 @@ $('#checking-deposit-button').click(function(){
   // Create a click event that is raised when the user clicks on the "savingsDeposit" element.
 $('#checking-withdraw-button').click(function(){
 
-  // var $input1 = parseInt($("#checking-input").val());
-  // var $input2 = parseInt($("#balance1").text().replace(/[^0-9\.]/g,''));
-  //   $("#balance1").text("$" + ($input1 - $input2));
-  // });
+  var $input1 = parseInt($("#checking-input").val());
+  var $input2 = parseInt($("#balance1").text().replace(/[^0-9\.]/g,''));
+    $("#balance1").text("$" + ($input1 - $input2));
 
 });
 
