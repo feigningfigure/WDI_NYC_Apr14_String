@@ -53,7 +53,7 @@ $(document).ready(function(){
       console.log(balance2)
     });
 
-};
+});
 
 function withdrawFunds(amount, primary, secondary){
 
