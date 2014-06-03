@@ -5,23 +5,53 @@
 
 // Set your initial balances for the savings and checking accounts
 
-
+var balance1 = 0
+var balance2 = 0
+var checkingAmount = $('checkingAmount')
+var savingAmount = $('savingAmount')
 
 $(document).ready(function(){
+
 
   // SEE:  https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers.onclick
 
   // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
 
+    $('#checkingDepositbutton').click(function(){
+      var input = $('#checkingAmount');
+      console.log(input);
+      balance1 += parseInt(input.val())
+
+       console.log(balance1)
+    });
 
   // Create a click event that is raised when the user clicks on the "savingsDeposit" element.
+    $("#savingDepositbutton").click(function(){
+      var input = $('#savingAmount');
+      console.log(input);
+      balance2 += parseInt(input.val())
 
+      console.log(balance2)
+    });
 
   // Create a click event that is raised when the user clicks on the "checkingWithdraw" element.
+    $("#checkingWithdrawbutton").click(function(){
+      var input = $('#checkingAmount');
+      console.log(input);
+      balance1 -= parseInt(input.val())
 
+       console.log(balance1)
+
+    });
 
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
+    $("#savingWithdrawbutton").click(function(){
+      var input = $('#savingAmount');
+      console.log(input);
+      balance2 -= parseInt(input.val())
 
+      console.log(balance2)
+    });
 
 };
 
