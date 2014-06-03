@@ -1,0 +1,41 @@
+body {
+  background-color: #C67171;
+  text-align: center;
+  font-family: helvetica;
+}
+
+#greeting {
+  color: #C67171;
+  margin: 40px auto;
+  font-size: 30px;
+  border: solid BlanchedAlmond 3px;
+  border-radius: 90px;
+  width: 200px;
+  background-color: #FFEFD5;
+}
+
+#task_input {
+  padding: 10px;
+  border-radius: 90px;
+  width: 200px;
+}
+
+#add_task_button {
+  width: 50px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 800px;
+  background-color: #B0171F;
+  margin-top: 20px;
+  color: white;
+}
+
+
+ul {
+  color: white;
+  list-style-type:none;
+}
+
+li:hover {
+  color: BlanchedAlmond;
+}
