@@ -1,7 +1,6 @@
-// function polling(status) {
-// 	$(document).ready(function()) {
+function polling(status) {
 	
-
-
-// 	}
-// }
+	
+}
+	$( document ).ready(function()) {
+	}
