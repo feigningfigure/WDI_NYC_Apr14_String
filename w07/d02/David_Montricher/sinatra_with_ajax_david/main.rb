@@ -1,7 +1,5 @@
 require 'sinatra'
 require 'sinatra/reloader'
-require 'pry'
-require 'json'
 
 FILENAME = "quiz_db"
 
@@ -11,7 +9,7 @@ def get_data()
 		return results
 	else
 		{"quizzes" => []}
-	end
+  end
 end
 
 def save_data(data)
@@ -21,17 +19,22 @@ def save_data(data)
 	end
 end
 
-get '/' do
-	erb :index
+get "/" do
+  erb :index
 end
 
 post '/quizzes' do
+  # binding.pry
+  # we use get_data to...
+  data = get_data
+  puts request
+  puts request.params
 
-	binding.pry
-	data = get_data
+  new_quiz = request.params["quiz_name"]
 
-	save_data(data)
+  data.push("")
 
+  save_data(data)
 end
 
 
