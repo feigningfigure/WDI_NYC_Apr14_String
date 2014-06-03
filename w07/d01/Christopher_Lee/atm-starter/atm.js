@@ -9,8 +9,8 @@
 console.log('feed me javascripts')
 
 $(document).ready(function(){
-  no_fund_alert($('#balance1'))
-  no_fund_alert($('#balance2'))
+  noFundAlert($('#balance1'))
+  noFundAlert($('#balance2'))
   // SEE:  https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers.onclick
 
   // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
@@ -24,7 +24,7 @@ $("#checking_deposit_button").click(function(){
 
     $("#checking_input").val('');
 
-    no_fund_alert($('#balance1'))
+    noFundAlert($('#balance1'))
   });
 
 
@@ -40,7 +40,7 @@ $("#savings_deposit_button").click(function(){
 
     $("#savings_input").val('');
 
-    no_fund_alert($('#balance2'))
+    noFundAlert($('#balance2'))
   });
 
 
@@ -54,12 +54,16 @@ $("#checking_withdraw_button").click(function(){
 
     if (balanceValidate(current_value, withdraw_value)){
       $('#balance1').text(checking_balance);
-    }else{
+    }else if( parseFloat($('#balance2').text().replace( /^\D+/g, '')) >= Math.abs(current_value - withdraw_value) ){
+      console.log("went through");
+      overdraftProtection($('#balance2'), withdraw_value, $('#balance1'))
+    } else{
       alert("You do not have sufficient funds!");
     }
+
     $("#checking_input").val('');
 
-    no_fund_alert($('#balance1'))
+    noFundAlert($('#balance1'))
   });
 
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
@@ -70,11 +74,18 @@ $("#savings_withdraw_button").click(function(){
     var current_value = parseFloat($('#balance2').text().replace( /^\D+/g, ''));
     var savings_balance = withdrawFunds(withdraw_value, current_value);
 
-    $('#balance2').text(savings_balance);
+    if (balanceValidate(current_value, withdraw_value)){
+      $('#balance2').text(checking_balance);
+    }else if( parseFloat($('#balance1').text().replace( /^\D+/g, '')) >= Math.abs(current_value - withdraw_value) ){
+      console.log("went through");
+      overdraftProtection($('#balance1'), withdraw_value, $('#balance2'))
+    } else{
+      alert("You do not have sufficient funds!");
+    }
 
     $("#savings_input").val('');
 
-    no_fund_alert($('#balance2'))
+    noFundAlert($('#balance2'))
   });
 
 
@@ -105,7 +116,23 @@ function updateDisplay()
 
 }
 
-function no_fund_alert(balance){
+// Math.abs(parseFloat($('#balance2').text().replace( /^\D+/g, '') - 25);
+
+
+
+function overdraftProtection(other_account, withdraw_amount, current_account){
+  var overdraft_amount = Math.abs(parseFloat(current_account.text().replace( /^\D+/g, '')) - withdraw_amount);
+  console.log(overdraft_amount);
+  // if(parseFloat(other_account.text().replace( /^\D+/g, '')) >= overdraft_amount){
+    // take money away from other account
+    other_account.text(withdrawFunds(overdraft_amount, parseFloat(other_account.text().replace( /^\D+/g, '')) ));
+    // reduce current account to 0
+    noFundAlert(other_account);
+    current_account.text('$0');
+}
+
+
+function noFundAlert(balance){
     if(parseFloat(balance.text().replace( /^\D+/g, '')) <= 0){
        balance.css("background-color","red");
     }else{
