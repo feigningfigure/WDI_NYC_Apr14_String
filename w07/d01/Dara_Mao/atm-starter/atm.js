@@ -20,7 +20,7 @@ $(document).ready(function(){
         } else {
             alert("Please enter a valid deposit!");
         }
-        checking_balance.html(both_sum());
+        checking_balance.html(both_sum);
         checking_input.val("");
         change_c_color(checking_sum);
     });
@@ -90,10 +90,9 @@ $(document).ready(function(){
 });
 
 
-function both_sum(checking_sum, savings_sum, checking_input)
+function both_sum()
 {
-    var overdraft = checking_sum + savings_sum - checking_input;
-    return overdraft;
+    var overdraft = this.checking_sum + this.savings_sum - this.checking_input;
 }
 
 
