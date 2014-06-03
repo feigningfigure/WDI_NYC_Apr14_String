@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'pry'
 
 FILENAME = "quiz_db"
 
@@ -9,6 +10,7 @@ def get_data()
 		return results
 	else
 		{"quizzes" => []}
+	end
 end
 
 def save_data(data)
@@ -18,6 +20,20 @@ def save_data(data)
 	end
 end
 
+get '/' do
+	erb :index
+end
+
+post '/quizzes' do
+
+	binding.pry
+	data = get_data
+
+
+
+	save_data(data)
+
+end
 
 
 
