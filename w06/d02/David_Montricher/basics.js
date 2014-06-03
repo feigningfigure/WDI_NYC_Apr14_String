@@ -9,3 +9,6 @@ var myFavoriteNumber = 500;
 if (myFavoriteNumber < 1000) {
   console.log("Dude, your favorite number is weaksauce");
 }
+
+
+
