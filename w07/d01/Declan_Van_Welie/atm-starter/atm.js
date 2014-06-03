@@ -21,7 +21,7 @@ var input = $("#check_amount_input").val();
 
 amount_entered = parseInt(input);
 
-
+checking_balance = amount_entered + checking_balance
 
 $("#balance1").text(amount_entered);
 
@@ -34,11 +34,9 @@ $("#savings_deposit").click(function(){
 
 var input = $("#savings_amount_input").val();
 
-amount_entered = parseInt(input);
+checking_balance = parseInt(input);
 
-
-
-$("#balance2").text(amount_entered);
+$("#balance2").text(checking_balance);
 
 
 
@@ -52,12 +50,24 @@ var input = $("#check_amount_input").val();
 
 amount_entered = parseInt(input);
 
+// existing_balance = $(this).prevAll('checking_deposit').val()
+// balance = parseInt(existing_balance);
 
+total = (checking_balance - amount_entered);
 
-$("#balance1").text(amount_entered);
+if (total <= 0){
 
+return null
 
+} else if (total === 0) {
 
+$("#checkingAccount").css()
+
+} else {
+
+$("#balance1").text(checking_balance - amount_entered );
+
+}
 });
 
 
