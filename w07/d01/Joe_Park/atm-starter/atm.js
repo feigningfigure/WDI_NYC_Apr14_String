@@ -8,27 +8,31 @@
 $(document).ready(function(){
 	var currentCheckBalance = $('#balance1');
 	var currentSavingBalance = $('#balance2');
-  
+
   $('#checkDeposit').on('click', function(){
 		var balanceInt = balanceToInteger(currentCheckBalance);
 
   	var input = $('#transAmount');
   	
   	updateDisplay(depositFunds(balanceInt, input));
+
+  	balanceColor();
   	
   	input.val('');
 	});
 
 	$('#checkWithdrawl').on('click', function(){
 		var balanceInt = balanceToInteger(currentCheckBalance);
-
+		var backUpSaving = balanceToInteger(currentSavingBalance);
   	var input = $('#transAmount');
   	
-  	var result = withdrawFunds(balanceInt, input);
+  	var result = withdrawFunds(balanceInt, input, backUpSaving);
 
   	if (result !== false){
   	  updateDisplay(result);	
   	}
+
+  	balanceColor();
 
   	input.val('');
 	});
@@ -39,6 +43,8 @@ $(document).ready(function(){
   	var input = $('#transAmount2');
   	
   	updateDisplaySaving(depositFunds(balanceInt, input));
+
+  	balanceColor();
   	
   	input.val('');
 	});
@@ -53,6 +59,8 @@ $(document).ready(function(){
   	if (result !== false){
   	  updateDisplaySaving(result);	
   	}
+
+  	balanceColor();
   	
   	input.val('');
 	});
@@ -65,10 +73,20 @@ $(document).ready(function(){
 		currentSavingBalance.html(('$' + number.toString()));
 	}
 
-	function withdrawFunds(amount, primary, secondary) {
-		var i = parseInt(primary.val(), 10);
-		if (amount > i){ 
-			return amount - i
+	function withdrawFunds(primary, amount, secondary) {
+		var i = parseInt(amount.val(), 10);
+		if (primary >= i){ 
+			return primary - i
+		} else if ((primary < i) && (i <= primary + secondary)) {
+			remainder = i - primary
+			secondary = secondary - remainder
+			primary = 0;
+			updateDisplaySaving(secondary);
+			return primary;
+		} else if ((primary = 0) && (i <= secondary)) {
+			secondary -= i
+			updateDisplaySaving(secondary);
+			return primary = 0;
 		} else {
 			alert("Insufficient Funds!");
 			return false;
@@ -83,10 +101,21 @@ $(document).ready(function(){
 		return parseInt(string.text().replace('$', ''), 10);
 	}
 
+	function balanceColor(){
+		if (balanceToInteger(currentCheckBalance) === 0) {
+			$('#balance1').css('background-color', '#c0392b');
+		} else {
+			$('#balance1').css('background-color', '#ecf0f1');
+		}
+
+		if (balanceToInteger(currentSavingBalance) === 0) {
+			$('#balance2').css('background-color', '#c0392b');
+		} else {
+			$('#balance2').css('background-color', '#ecf0f1');
+		}
+	}
+		balanceColor();
 });
-
-
-
 
 
 
