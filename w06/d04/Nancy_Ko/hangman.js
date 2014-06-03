@@ -14,11 +14,14 @@ function Hangman(word) {
     return playProgress.join(" ");
   };
 
-  // this.guess = function(letter) {
-  //   var singleCharacter = []
-  //   var get
-  //   if(letter.search(singleCharacter) ===  
-  //   }			
+  this.guess = function(letter) {
+    if (word.indexOf(letter) === -1) { 
+      return false;        
+    } else {
+      return true;
+    }
+      
+  }
 }
 	 
    // var result = "", // initialize list
@@ -32,6 +35,8 @@ function Hangman(word) {
 var game = new Hangman("detective");
 
 console.log(game.progress()); //=> " _ _ _ _ _ _ _ _ _"
+console.log(game.guess("a")); //=> false
+console.log(game.guess("t")); //=> true
 
 // var game = new Hangman("gandhi");
 
