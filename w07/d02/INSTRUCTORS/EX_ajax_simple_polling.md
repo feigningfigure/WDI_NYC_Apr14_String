@@ -29,9 +29,17 @@ Get polled!
 Simulate the "cool factor" of a quiz app that tells every user
 when a new quiz was created.
 
-You can accomplish this by opening your app in **two** browser tabs,
-creating a new quiz in one tab, then switching tabs and waiting for
-the update to be displayed.
+You can accomplish this with the following steps:
+
+1. Open two browser tabs, both pointing to `http://localhost:4567/`
+2. In Tab A, create a new quiz.
+3. Switch to Tab B and verify that the page updated **even though
+   you didn't do anything on Tab B**.
+
+In other words, if your friend on Mars has their browser open on your
+app, and you create a new quiz from your browser here on Earth, they
+should see a change on their computer even though they're just chilling
+out and looking at the page.
 
 ## Requirements
 
