@@ -68,7 +68,7 @@ $("#checkingAccount").css("background-color", "red")
 } else {
 
 $("#balance1").text(checking_balance - amount_entered );
-$("#checkingAccount").css("background-color", "grey")
+$("#checkingAccount").css("background-color", "grey");
 
 }
 });
@@ -99,7 +99,7 @@ $("#savingsAccount").css("background-color", "red")
 } else {
 
 $("#balance2").text(savings_balance - amount_entered );
-$("#savingsAccount").css("background-color", "grey")
+$("#savingsAccount").css("background-color", "grey");
 
 }
 });
