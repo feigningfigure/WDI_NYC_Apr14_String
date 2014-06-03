@@ -6,7 +6,7 @@
 // Set your initial balances for the savings and checking accounts
 // var balance1 = 0;
 // var balance2 = 0;
-var balance = 100
+var balance = 1000
 
 $(document).ready(function(){
 
@@ -14,25 +14,32 @@ $(document).ready(function(){
 
   // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
 $('#checking-deposit-button').click(function(){
-    alert("hi there");
-  //     // Clears the input form
-  //   input.val('');
-  // });
+    // var input = $("#checking-input");
+    // console.log(input);
+
+    // $('.balance').append(input.val());
+
+  var $input1 = parseInt($("#checking-input").val());
+  var $input2 = parseInt($("#balance1").text().replace(/[^0-9\.]/g,''));
+    $("#balance1").text("$" + ($input1 + $input2));
+  });
 
 });
 
   // Create a click event that is raised when the user clicks on the "savingsDeposit" element.
 $('#checking-withdraw-button').click(function(){
-alert("hi there");
-      // Clears the input form
-  //   input.val('');
+
+  // var $input1 = parseInt($("#checking-input").val());
+  // var $input2 = parseInt($("#balance1").text().replace(/[^0-9\.]/g,''));
+  //   $("#balance1").text("$" + ($input1 - $input2));
   // });
 
 });
 
   // Create a click event that is raised when the user clicks on the "checkingWithdraw" element.
 $('#savings-deposit-button').click(function(){
-alert("hi there");
+    var input = $("#checking-input");
+
       // Clears the input form
   //   input.val('');
   // });
@@ -48,7 +55,7 @@ alert("hi there");
 
 });
 
-})
+
 
 function withdrawFunds(amount, primary, secondary)
 {
