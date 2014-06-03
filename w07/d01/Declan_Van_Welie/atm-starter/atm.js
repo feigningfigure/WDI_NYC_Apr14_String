@@ -55,17 +55,18 @@ amount_entered = parseInt(input);
 
 total = (checking_balance - amount_entered);
 
-if (total <= 0){
+if (total < 0){
 
 return null
 
 } else if (total === 0) {
 
-$("#checkingAccount").css()
+$("#checkingAccount").css("background-color", "red")
 
 } else {
 
 $("#balance1").text(checking_balance - amount_entered );
+$("#checkingAccount").css("background-color", "grey")
 
 }
 });
@@ -74,7 +75,31 @@ $("#balance1").text(checking_balance - amount_entered );
 
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
 
+$("#checking_withdrawal").click(function(){
 
+var input = $("#check_amount_input").val();
+
+amount_entered = parseInt(input);
+
+// existing_balance = $(this).prevAll('checking_deposit').val()
+// balance = parseInt(existing_balance);
+
+total = (checking_balance - amount_entered);
+
+if (total < 0){
+
+return null
+
+} else if (total === 0) {
+
+$("#checkingAccount").css("background-color", "red")
+
+} else {
+
+$("#balance1").text(checking_balance - amount_entered );
+$("#checkingAccount").css("background-color", "grey")
+
+}
 
 function withdrawFunds(amount, primary, secondary)
 {
