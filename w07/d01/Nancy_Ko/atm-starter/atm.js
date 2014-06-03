@@ -4,26 +4,30 @@
 // and all the images and sub-frames have finished loading.
 
 // Set your initial balances for the savings and checking accounts
-
-
-
-$(document).ready(function(){
-
+$(document).ready(function() {
+var checking_balance = parseInt($("#balance1"));
+var savings_balance = parseInt($("#balance2"));
   // SEE:  https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers.onclick
 
   // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
 
+  $("#checking_deposit_button").click(function() {
+  		var checking_input = parseInt($("#checking_deposit").val());
+  		checking_balance + checking_input
+
+  });
 
   // Create a click event that is raised when the user clicks on the "savingsDeposit" element.
+$("#savings_deposit_button").click(function() {
+  		var savings_input = parseInt($("#savings_deposit").val());
+  		savings_balance = savings_input.val()
 
 
   // Create a click event that is raised when the user clicks on the "checkingWithdraw" element.
 
 
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
-
-
-};
+});
 
 function withdrawFunds(amount, primary, secondary)
 {
