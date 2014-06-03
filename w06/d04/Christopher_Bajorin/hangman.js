@@ -32,8 +32,8 @@ var Hangman = function(words, guesses) {
     var resultString = resultArray.join("");
     if (resultString === wordString) {
       console.log("Congratulations, you guessed: " + wordString);
-     }
-     else {
+    }
+    else {
       console.log(resultArray.join(" "));
     }
   }
@@ -94,12 +94,14 @@ var Hangman = function(words, guesses) {
     console.log("The word was: " + wordArray.join(''));
   }
 }
-// var game = new Hangman(six, 5);
+var game = new Hangman(six, 5);
 var myrepl = repl.start("HANGMAN>");
-myrepl.context.Hangman = Hangman
-myrepl.context.four = four
-myrepl.context.five = five
-myrepl.context.six = six
-myrepl.context.seven = seven
-myrepl.context.eight = eight
-myrepl.context.nine = nine
+myrepl.context.Hangman = Hangman;
+myrepl.context.game = game;
+myrepl.context.four = four;
+myrepl.context.five = five;
+myrepl.context.six = six;
+myrepl.context.seven = seven;
+myrepl.context.eight = eight;
+myrepl.context.nine = nine;
+console.log("game created with a six letter word and 5 guesses. var game = new Hangman(seven, 5) for new game");
