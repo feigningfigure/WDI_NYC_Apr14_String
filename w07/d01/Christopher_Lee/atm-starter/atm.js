@@ -20,11 +20,15 @@ $("#checking_deposit_button").click(function(){
     var current_value = parseFloat($('#balance1').text().replace( /^\D+/g, ''));
     var checking_balance = deposit(deposit_value, current_value);
 
+   if(validInput($("#checking_input"))) {
+          alert("Please enter a valid amount");
+    }else{
     $('#balance1').text(checking_balance);
 
     $("#checking_input").val('');
 
     noFundAlert($('#balance1'))
+    }
   });
 
 
@@ -36,11 +40,15 @@ $("#savings_deposit_button").click(function(){
     var current_value = parseFloat($('#balance2').text().replace( /^\D+/g, ''));
     var savings_balance = deposit(deposit_value, current_value);
 
+    if(validInput($("#savings_input"))) {
+          alert("Please enter a valid amount");
+    }else{
     $('#balance2').text(savings_balance);
 
     $("#savings_input").val('');
 
     noFundAlert($('#balance2'))
+    }
   });
 
 
@@ -52,6 +60,10 @@ $("#checking_withdraw_button").click(function(){
     var current_value = parseFloat($('#balance1').text().replace( /^\D+/g, ''));
     var checking_balance = withdrawFunds(withdraw_value, current_value);
 
+
+    if(validInput($("#checking_input"))) {
+          alert("Please enter a valid amount");
+    }else{
     if (balanceValidate(current_value, withdraw_value)){
       $('#balance1').text(checking_balance);
     }else if( parseFloat($('#balance2').text().replace( /^\D+/g, '')) >= Math.abs(current_value - withdraw_value) ){
@@ -64,6 +76,7 @@ $("#checking_withdraw_button").click(function(){
     $("#checking_input").val('');
 
     noFundAlert($('#balance1'))
+    }
   });
 
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
@@ -74,6 +87,9 @@ $("#savings_withdraw_button").click(function(){
     var current_value = parseFloat($('#balance2').text().replace( /^\D+/g, ''));
     var savings_balance = withdrawFunds(withdraw_value, current_value);
 
+    if(validInput($("#checking_input"))) {
+          alert("Please enter a valid amount");
+    }else{
     if (balanceValidate(current_value, withdraw_value)){
       $('#balance2').text(checking_balance);
     }else if( parseFloat($('#balance1').text().replace( /^\D+/g, '')) >= Math.abs(current_value - withdraw_value) ){
@@ -86,6 +102,7 @@ $("#savings_withdraw_button").click(function(){
     $("#savings_input").val('');
 
     noFundAlert($('#balance2'))
+    }
   });
 
 
@@ -118,6 +135,11 @@ function updateDisplay()
 
 // Math.abs(parseFloat($('#balance2').text().replace( /^\D+/g, '') - 25);
 
+function validInput(input){
+     if(!$.trim(input.val()).length) {
+        return true
+     }
+}
 
 
 function overdraftProtection(other_account, withdraw_amount, current_account){
@@ -165,3 +187,5 @@ function noFundAlert(balance){
 // $('#balance1')
 
 // $('#balance1').css("background-color","red")
+
+
