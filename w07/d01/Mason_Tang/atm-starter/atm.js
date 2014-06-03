@@ -21,7 +21,7 @@ $(document).ready(function(){
       var input = $('#checkingAmount');
       console.log(input);
       balance1 += parseInt(input.val())
-
+      updateCheckingDisplay(balance1);
        console.log(balance1)
     });
 
@@ -30,7 +30,7 @@ $(document).ready(function(){
       var input = $('#savingAmount');
       console.log(input);
       balance2 += parseInt(input.val())
-
+      updateCheckingDisplay(balance2);
       console.log(balance2)
     });
 
@@ -39,7 +39,7 @@ $(document).ready(function(){
       var input = $('#checkingAmount');
       console.log(input);
       balance1 -= parseInt(input.val())
-
+      updateCheckingDisplay(balance1);
        console.log(balance1)
 
     });
@@ -49,18 +49,20 @@ $(document).ready(function(){
       var input = $('#savingAmount');
       console.log(input);
       balance2 -= parseInt(input.val())
-
+      updateCheckingDisplay(balance2);
       console.log(balance2)
     });
 
 };
 
-function withdrawFunds(amount, primary, secondary)
-{
+function withdrawFunds(amount, primary, secondary){
 
 }
 
-function updateDisplay()
-{
+function updateCheckingDisplay(){
+  $("#balance1").html(balance1);
+}
 
+function updateSavingsDisplay(){
+  $("#balance2").html(balance2);
 }

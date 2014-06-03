@@ -9,7 +9,7 @@ $(document).ready(function(){
 		// To get the value of the input field use $("#task_input").val()
 		var input = $("#task_input");
 
-		//  Adds user input to the ul 
+		//  Adds user input to the ul
 		todoList.append('<li>' + input.val() + '</li>');
 
 		// Clears the input form
