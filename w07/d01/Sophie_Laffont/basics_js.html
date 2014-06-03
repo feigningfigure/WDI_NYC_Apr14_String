@@ -1,0 +1,36 @@
+<!doctype html>
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/node -->
+<html>
+    <head>
+        <title>Yo</title>
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+            </head>
+    <body>
+        <h1>Hey!</h1>
+        <script type="text/javascript">
+            // console.log("Hello, world!");
+
+            // console.log(document);
+
+            // var names = ["John", "Jack", "Jane"];
+            // var validNames = ["John", "Billy"];
+
+            // var result = names.concat(validNames);
+
+            // console.log(result);
+
+            var newEl = document.createElement("div");
+
+            // the characters around div mean it will not be interepreted
+            // as an html element
+            newEl.innerHTML = "I am a &lt;div&gt; hear me roar.";
+            console.log(newEl);
+
+            // document.body refers the the HMTL body
+            document.body.appendChild(newEl);
+
+        </script>
+
+    </body>
+</html>
