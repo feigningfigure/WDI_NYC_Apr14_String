@@ -35,10 +35,22 @@ post '/quizzes' do
   #{"quizzes" => } Is what your data variable should no look like. But it may not be empty
   puts request
   puts request.params
-  new_quiz = request.params["quiz_name"]
+  new_quiz = {"title" => request.params["quiz_name"]}
   data["quizzes"].push(new_quiz)
   save_data(data)
-  data.to_json
+
+  # the below is data in the .done function of the AJAX. Whatever response the server sends back to the browser, jQuery sets that as data
+  message = request.params["quiz_name"]
+
+  message.to_json
 end
 
 # persist things by just saving them into the array
+
+get '/quizzes' do
+  content_type :json
+  # get_data - everything that is currently in db
+  # if you want to send it back to browser, you have to to .to_json
+  db_contents = get_data
+  db_contents.to_json
+end
