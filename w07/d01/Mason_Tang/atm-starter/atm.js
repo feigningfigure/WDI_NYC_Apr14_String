@@ -55,7 +55,9 @@ $(document).ready(function(){
     } else if(balance1 < input.val() && input.val() <= (balance1 + balance2)) {
       console.log("moveforward")
       withdrawFunds(input.val(), balance1, balance2)
-    } else {}
+    } else {
+      alert("Not Enough Funds!")
+    }
 
 
     });
@@ -66,7 +68,9 @@ $(document).ready(function(){
       if(balance2 >= input.val()){
       balance2 -= parseInt(input.val())
       updateSavingsDisplay(balance2);
-      } else {}
+      } else {
+        alert("Not Enough Funds!")
+      }
 
     });
 
