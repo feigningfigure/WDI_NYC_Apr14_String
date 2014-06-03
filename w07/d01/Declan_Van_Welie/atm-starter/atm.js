@@ -23,7 +23,7 @@ amount_entered = parseInt(input);
 
 checking_balance = amount_entered + checking_balance
 
-$("#balance1").text(amount_entered);
+$("#balance1").text(checking_balance);
 
 
 
@@ -34,9 +34,11 @@ $("#savings_deposit").click(function(){
 
 var input = $("#savings_amount_input").val();
 
-checking_balance = parseInt(input);
+savings_amount_entered = parseInt(input);
 
-$("#balance2").text(checking_balance);
+savings_balance = savings_amount_entered + savings_balance
+
+$("#balance2").text(savings_balance);
 
 
 
@@ -75,16 +77,16 @@ $("#checkingAccount").css("background-color", "grey")
 
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
 
-$("#checking_withdrawal").click(function(){
+$("#savings_withdrawal").click(function(){
 
-var input = $("#check_amount_input").val();
+var input = $("#savings_amount_input").val();
 
 amount_entered = parseInt(input);
 
 // existing_balance = $(this).prevAll('checking_deposit').val()
 // balance = parseInt(existing_balance);
 
-total = (checking_balance - amount_entered);
+total = (savings_balance - amount_entered);
 
 if (total < 0){
 
@@ -92,14 +94,15 @@ return null
 
 } else if (total === 0) {
 
-$("#checkingAccount").css("background-color", "red")
+$("#savingsAccount").css("background-color", "red")
 
 } else {
 
-$("#balance1").text(checking_balance - amount_entered );
-$("#checkingAccount").css("background-color", "grey")
+$("#balance2").text(savings_balance - amount_entered );
+$("#savingsAccount").css("background-color", "grey")
 
 }
+});
 
 function withdrawFunds(amount, primary, secondary)
 {
