@@ -52,6 +52,9 @@ $(document).ready(function(){
       if(balance1 >= input.val()){
       balance1 -= parseInt(input.val())
       updateCheckingDisplay(balance1);
+    } else if(balance1 < input.val() && input.val() <= (balance1 + balance2)) {
+      console.log("moveforward")
+      withdrawFunds(input.val(), balance1, balance2)
     } else {}
 
 
@@ -70,7 +73,10 @@ $(document).ready(function(){
 });
 
 function withdrawFunds(amount, primary, secondary){
-
+  balance2 = (balance1 + balance2) - amount
+  balance1 = 0
+  updateCheckingDisplay(balance1);
+  updateSavingsDisplay(balance2);
 }
 
 function updateCheckingDisplay(){
