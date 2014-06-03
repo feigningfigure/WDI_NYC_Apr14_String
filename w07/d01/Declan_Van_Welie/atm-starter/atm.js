@@ -104,10 +104,18 @@ $("#savingsAccount").css("background-color", "grey")
 }
 });
 
-function withdrawFunds(amount, primary, secondary)
-{
+// function withdrawFunds(amount, primary, secondary){
+//   if (primary + secondary <= amount){
+//     return null;
+//   } else {
+//     primary - amount = first_total;
 
-}
+//     whats_left = secondary - first_total;
+
+//     $("#balance2").text(whats_left);
+//     }
+
+// }
 
 function updateDisplay()
 {
