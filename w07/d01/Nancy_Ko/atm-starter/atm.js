@@ -4,7 +4,7 @@
 // and all the images and sub-frames have finished loading.
 
 // Set your initial balances for the savings and checking accounts
-$(document).ready(function(){
+$(document).ready(function() {
 var checking_balance = parseInt($("#balance1"));
 var savings_balance = parseInt($("#balance2"));
   // SEE:  https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers.onclick
