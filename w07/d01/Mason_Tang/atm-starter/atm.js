@@ -10,8 +10,21 @@ var balance2 = 0
 var checkingAmount = $('checkingAmount')
 var savingAmount = $('savingAmount')
 
+
+
 $(document).ready(function(){
 
+  if(balance1 !== 0){
+    $('#balance1').css("background-color", "grey")
+  } else {
+    $('#balance1').css("background-color", "red")
+  }
+
+  if(balance2 !== 0){
+    $('#balance2').css("background-color", "grey")
+  } else {
+    $('#balance2').css("background-color", "red")
+  }
 
   // SEE:  https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers.onclick
 
@@ -62,8 +75,18 @@ function withdrawFunds(amount, primary, secondary){
 
 function updateCheckingDisplay(){
   $("#balance1").html(balance1);
+    if(balance1 !== 0){
+    $('#balance1').css("background-color", "grey")
+  } else {
+    $('#balance1').css("background-color", "red")
+  }
 }
 
 function updateSavingsDisplay(){
   $("#balance2").html(balance2);
+  if(balance2 !== 0){
+    $('#balance2').css("background-color", "grey")
+  } else {
+    $('#balance2').css("background-color", "red")
+  }
 }
