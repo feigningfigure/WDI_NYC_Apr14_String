@@ -5,29 +5,89 @@
 
 // Set your initial balances for the savings and checking accounts
 
-
-
 $(document).ready(function(){
 	var currentCheckBalance = $('#balance1');
-	var x = parseInt($('#balance1').text().replace('$', ''), 10);
-
-  // SEE:  https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers.onclick
-
-  // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
+	var currentSavingBalance = $('#balance2');
   
-  $('#chkdeposit').click(function(){
+  $('#checkDeposit').on('click', function(){
+		var balanceInt = balanceToInteger(currentCheckBalance);
 
-  	var input = $('#transamount');
-
-  	var newBalance = x + parseInt(input.val(), 10);
+  	var input = $('#transAmount');
   	
-  	currentCheckBalance.html(('$' + newBalance.toString()));
-
-
+  	updateDisplay(depositFunds(balanceInt, input));
+  	
+  	input.val('');
 	});
 
+	$('#checkWithdrawl').on('click', function(){
+		var balanceInt = balanceToInteger(currentCheckBalance);
+
+  	var input = $('#transAmount');
+  	
+  	var result = withdrawFunds(balanceInt, input);
+
+  	if (result !== false){
+  	  updateDisplay(result);	
+  	}
+
+  	input.val('');
+	});
+
+	$('#savingDeposit').on('click', function(){
+		var balanceInt = balanceToInteger(currentSavingBalance);
+
+  	var input = $('#transAmount2');
+  	
+  	updateDisplaySaving(depositFunds(balanceInt, input));
+  	
+  	input.val('');
+	});
+
+	$('#savingWithdrawl').on('click', function(){
+		var balanceInt = balanceToInteger(currentSavingBalance);
+
+  	var input = $('#transAmount2');
+
+  	var result = withdrawFunds(balanceInt, input);
+
+  	if (result !== false){
+  	  updateDisplaySaving(result);	
+  	}
+  	
+  	input.val('');
+	});
+
+	function updateDisplay(number) {
+		currentCheckBalance.html(('$' + number.toString()));
+	}
+
+	function updateDisplaySaving(number) {
+		currentSavingBalance.html(('$' + number.toString()));
+	}
+
+	function withdrawFunds(amount, primary, secondary) {
+		var i = parseInt(primary.val(), 10);
+		if (amount > i){ 
+			return amount - i
+		} else {
+			alert("Insufficient Funds!");
+			return false;
+		}
+	}
+
+	function depositFunds(amount, primary, secondary) {
+		return amount + parseInt(primary.val(), 10);
+	}
+
+	function balanceToInteger(string){
+		return parseInt(string.text().replace('$', ''), 10);
+	}
 
 });
+
+
+
+
 
 
 
@@ -39,15 +99,8 @@ $(document).ready(function(){
 
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
 
-	function withdrawFunds(amount, primary, secondary) {
 
-	}
 
-	function updateDisplay() {
 
-	}
 
-	function depositFunds(amount, primary, secondary) {
-		// currentChkBalance = currentChkBalance
-	}
 
