@@ -68,11 +68,11 @@ $(document).ready(function(){
 function withdrawFunds(amount, primary, secondary){
 
 if ( $("#checkingWithdraw").click ){
-  checking = checkingValue;
+  checking =;
 } 
 
 else if ($("#savingsWithdraw").click ) {
-  console.log("false");
+  // console.log("false");
 };
 
 
