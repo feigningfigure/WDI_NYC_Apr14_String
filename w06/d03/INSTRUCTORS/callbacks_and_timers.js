@@ -29,6 +29,9 @@ function notify(){
 	console.log("This is an annoying song. Sidenote - I am the result of the callback");
 }
 
+callbackMeMaybe(737, function(){ console.log("Still a callback") })
+
+
 function madPerson(cow){
 	console.log("&#YT*^!@&!!!");
 	console.log(cow);
@@ -45,7 +48,7 @@ function madPerson(){
 setTimeout(madPerson, 5000);
 
 setTimeout(function(){console.log("I am anonoymous.") }, 5000);
-var setInterval = setInterval(madPerson, 2000)
+var interval = setInterval(madPerson, 2000)
 
 clearInterval(interval)
 
