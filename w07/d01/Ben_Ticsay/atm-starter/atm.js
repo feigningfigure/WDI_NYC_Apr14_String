@@ -15,6 +15,18 @@ var savingsInput = $('savingInput')
 
 $(document).ready(function(){
 
+  if(balance1 !== 0){
+    $('#balance1').css("background-color", "grey")
+  } else {
+    $('#balance1').css("background-color", "red")
+  }
+
+  if(balance2 !== 0){
+    $('#balance2').css("background-color", "grey")
+  } else {
+    $('#balance2').css("background-color", "red")
+  }
+
   // SEE:  https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers.onclick
 
   // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
@@ -51,17 +63,28 @@ $("#savingsWithdraw").click(function(){
 
 };
 
-function withdrawFunds(amount, primary, secondary)
-{
-
+function withdrawFunds(amount, primary, secondary){  
+  balance2 = (balance1 + balance2) - amount
+  balance1 = 0
+  updateCheckingDisplay(balance1);
+  updateSavingsDisplay(balance2);
 }
 
 function updateCheckingDisplay() {
   $("#balance1").html(balance1);
+    if(balance1 !== 0){
+    $('#balance1').css("background-color", "grey")} else {
+    $('#balance1').css("background-color", "red")
+  }
 }
 
 function updateSavingsDisplay() {
   $("#balance2").html(balance2);
+    if(balance2 !== 0){
+    $('#balance2').css("background-color", "grey")
+  } else {
+    $('#balance2').css("background-color", "red")
+  }
 }
 
 
