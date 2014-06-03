@@ -87,11 +87,11 @@ $("#savings_withdraw_button").click(function(){
     var current_value = parseFloat($('#balance2').text().replace( /^\D+/g, ''));
     var savings_balance = withdrawFunds(withdraw_value, current_value);
 
-    if(validInput($("#checking_input"))) {
+    if(validInput($("#savings_input"))) {
           alert("Please enter a valid amount");
     }else{
     if (balanceValidate(current_value, withdraw_value)){
-      $('#balance2').text(checking_balance);
+      $('#balance2').text(savings_balance);
     }else if( parseFloat($('#balance1').text().replace( /^\D+/g, '')) >= Math.abs(current_value - withdraw_value) ){
       console.log("went through");
       overdraftProtection($('#balance1'), withdraw_value, $('#balance2'))
