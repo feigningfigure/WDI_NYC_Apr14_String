@@ -19,38 +19,39 @@ $(document).ready(function(){
 
     $('#checkingDepositbutton').click(function(){
       var input = $('#checkingAmount');
-      console.log(input);
       balance1 += parseInt(input.val())
       updateCheckingDisplay(balance1);
-       console.log(balance1)
+
     });
 
   // Create a click event that is raised when the user clicks on the "savingsDeposit" element.
     $("#savingDepositbutton").click(function(){
       var input = $('#savingAmount');
-      console.log(input);
+
       balance2 += parseInt(input.val())
-      updateCheckingDisplay(balance2);
-      console.log(balance2)
+      updateSavingsDisplay(balance2);
+
     });
 
   // Create a click event that is raised when the user clicks on the "checkingWithdraw" element.
     $("#checkingWithdrawbutton").click(function(){
       var input = $('#checkingAmount');
-      console.log(input);
+      if(balance1 >= input.val()){
       balance1 -= parseInt(input.val())
       updateCheckingDisplay(balance1);
-       console.log(balance1)
+    } else {}
+
 
     });
 
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
     $("#savingWithdrawbutton").click(function(){
       var input = $('#savingAmount');
-      console.log(input);
+      if(balance2 >= input.val()){
       balance2 -= parseInt(input.val())
-      updateCheckingDisplay(balance2);
-      console.log(balance2)
+      updateSavingsDisplay(balance2);
+      } else {}
+
     });
 
 });
