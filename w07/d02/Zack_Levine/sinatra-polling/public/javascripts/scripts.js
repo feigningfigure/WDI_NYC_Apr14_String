@@ -21,44 +21,56 @@ function setEventHandlers(){
 	var $show_button = $("#show-button");
 
 	$show_button.click(function(){
-		console.log("Show button has been clicked");
 
+		clickingIsFun(); //running this function
+
+	});
+
+	function clickingIsFun() {
+
+		console.log("Show button has been clicked");
 
 		$.ajax({
 			url: '/quizzes',
 			type: 'GET',
 			dataType: 'json',
-		}).done(function(data){
-			console.log(data);
-			var $quiz_list = $("#quiz_list");
-			$quiz_list.empty();
-			data.quizzes.forEach(function(item){
-				$quiz_list.append("<li>"+ item["title"] +"</li>")
-			})
-		})	
-	});
+			success : handleData
+		});
 
-}
+	}
+
+	function handleData(data) {
+		console.log(data);
+		var $quiz_list = $("#quiz_list");
+		$quiz_list.empty();
+		data.quizzes.forEach(function(item){
+			$quiz_list.append("<li>"+ item["title"] +"</li>")
+		})
+	};
+};
 
 
 //testing setInterval
 var nIntervId;
- 
+
 function changeColor() {
-  nIntervId = setInterval(flashText, 500);
+	nIntervId = setInterval(flashText, 500);
 }
- 
+
 function flashText() {
-  var oElem = document.getElementById("my_box");
-  oElem.style.color = oElem.style.color == "red" ? "blue" : "red";
+	var oElem = document.getElementById("my_box");
+	oElem.style.color = oElem.style.color == "red" ? "blue" : "red";
 }
- 
+
 function stopTextColor() {
-  clearInterval(nIntervId);
+	clearInterval(nIntervId);
 }
+
 
 $( document ).ready(function(){
 
-	setEventHandlers();
-
+	setEventHandlers();//running these funcitons
+	changeColor();
+	setInterval(clickingIsFun, 3500);
+	setInterval(handleData, 4600);
 });
