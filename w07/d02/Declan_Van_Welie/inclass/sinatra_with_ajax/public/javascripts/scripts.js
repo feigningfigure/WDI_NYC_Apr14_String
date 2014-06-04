@@ -13,10 +13,14 @@ var sec = $('#countDown span').text()
 var timer = setInterval(function() {
    $('#countDown span').text(--sec);
    if (sec == 0) {
+    $('#countDown span').text("Times up!")
       $('#countDown').fadeOut('slow');
       clearInterval(timer);
    }
 }, 1000);
+
+
+
 
 
 
@@ -67,11 +71,18 @@ var $quiz_list = $("#quiz_list");
  }).done(function(data){
   console.log(data);
 
-$quiz_list.empty();
+// $quiz_list.empty();
 data.quizzes.forEach(function(item){
-$quiz_list.prepend("<li>" + item["title"] + "</li>")
+$quiz_list.prepend("<li>" + item["name"] + "</li>")
+   if (item["name"].toLowerCase() == "michael jackson") {
+     $("#answer span").text("Correct!");
+  } else {
+    $("#answer span").text("Nope!");
+  }
 })
   // for (i=0; i<data.quizzes.length; i++){
+
+ // if (data.quizzes.length-1()["name"] === "Michael Jackson") {
 
 
 },5000);

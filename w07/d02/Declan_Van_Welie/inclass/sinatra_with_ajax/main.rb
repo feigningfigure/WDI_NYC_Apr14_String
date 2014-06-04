@@ -43,7 +43,7 @@ data = get_data
 puts request
 puts request.params
 # You can pluck out the params input from the submitted form. You can do so by referring to the name you gave the params on the ajax side in the
-new_quiz = {"title" => request.params["quiz_name"]}
+new_quiz = {"name" => request.params["quiz_name"]}
 
 data["quizzes"].push(new_quiz)
 

@@ -12,11 +12,14 @@ body{
   margin: auto;
   letter-spacing: 1px;
   font-size: 30px;
+  padding: 0px;
 }
 
 #main{
     position: center;
   text-align: center;
+  padding: 0px;
+  margin: 0px;
 }
 
 #quiz_input{
@@ -42,12 +45,31 @@ color: white;
     padding:0px;
 }
 
+#countdown{
+  margin: 20px;
+}
+
 span.counter{
    font-family: 'Raleway', sans-serif;
    color: rgba(247, 89, 61, 1);
    font-size: 50px;
    padding: 0px;
-   margin:0px;
+   margin:20px;
+
+
+}
+
+#answer{
+  margin: 30px;
+
+}
+
+span.correct{
+   font-family: 'Raleway', sans-serif;
+   color: rgba(89, 163, 196, 1);
+   font-size: 50px;
+   padding: 20px;
+   margin:20px;
 
 
 }
