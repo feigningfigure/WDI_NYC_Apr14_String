@@ -1,0 +1,13 @@
+function setEventHandlers(){
+
+	
+
+
+
+}
+
+
+$(function(){
+	setEventHandlers();
+
+});
