@@ -11,11 +11,27 @@ function setEventHandlers(){
 			data: {quiz_name: $input.val()},
 		}).done(function(data){
 			console.log(data);
-			alert("You have added " + data)
 			$input.val('');
 		});
 
 	});
+
+	setInterval(function(){
+		var $quiz_new = $("#quiz_new");
+
+		$.ajax({
+			url: '/quizzes',
+			type: 'GET',
+			dataType: 'json',
+		}).done(function(data){
+			console.log(data);
+			$quiz_new.empty();
+			data.quizzes.forEach(function(item){
+				$quiz_new.html("<li>"+ item["title"] +"</li>")
+			})
+		});
+
+	}, 4000);
 
 	var $show_button = $("#show_button");
 
@@ -40,8 +56,12 @@ function setEventHandlers(){
 }
 
 
+
+
 $( document ).ready(function(){
 
 	setEventHandlers();
 
 });
+
+
