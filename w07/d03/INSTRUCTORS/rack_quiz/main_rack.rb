@@ -40,6 +40,10 @@ class QuizApp
 
         handle_content_type()
 
+        if @body.nil?
+            @code = 404
+        end
+
         response = [
             @code,
             @headers,
