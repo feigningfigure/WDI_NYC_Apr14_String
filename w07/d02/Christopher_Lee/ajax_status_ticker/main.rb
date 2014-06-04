@@ -29,7 +29,7 @@ get '/' do
 end
 
 post '/quizzes' do
-  content_type :json
+  #content_type :json
   data = get_data
   puts request
   puts request.params
