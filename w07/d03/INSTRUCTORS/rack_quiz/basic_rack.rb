@@ -10,7 +10,7 @@ class QuizApp
         ap(request)
 
         headers = {
-            "Content-Type" => "text/html"
+            "Content-Type" => "text/html" # this should be application/json when we return the raw data
         }
 
         if request["REQUEST_METHOD"] == "GET"
