@@ -30,11 +30,12 @@ $(document).ready(function(){
     //Checking Withdrawal Click Event
     $($("#checkingAccount > input:button:last")).click(function(){
         //Checking Withdrawal Update Balance
-// checking_balance.html()
-// (checking_sum + savings_sum)
+        // checking_balance.html()
+        // (checking_sum + savings_sum)
         if (checking_input.val() > checking_balance.html()){
             savings_sum = savings_sum - checking_input.val();
             // alert(savings_sum);
+            checking_sum = 0;
             savings_balance.html(savings_sum);
             //     checking_sum = checking_sum - checking_input.val()
             // if (checking_sum < 0){
