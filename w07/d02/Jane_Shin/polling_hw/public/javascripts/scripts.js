@@ -1,51 +1,51 @@
 
 function setEventHandlers(){
 
-	$("#add_quiz_button").click(function(){
+	$("#add_prince_button").click(function(){
 		console.log("Submit button has been clicked");
 
-		var $input = $("#quiz_input");
+		var $name_input = $("#prince_input");
 
 		$.ajax({
-			url: '/quizzes',
+			url: '/princes',
 			type: 'POST',
 			dataType: 'json' ,
-			data: {quiz_name: $input.val()},
+			data: {prince_name: $name_input.val()},
 		}).done(function(data){
 			console.log(data);
 			alert("You have added " + data);
-			$input.val('');
+			$name_input.val('');
 		});
 
 	});
 
 
 
-	setInterval(function(){
-				var $quiz_list = $("#quiz_list");
-			$.ajax({
-			url: '/quizzes',
-			type: 'GET',
-			dataType: 'json',
-		}).done(function(data){
-			console.log(data);
-
-			$quiz_list.empty();
-			data.quizzes.forEach(function(item){
-				$quiz_list.append("<li>"+ item["title"] +"</li>")
-			})
-		})	
-	}, 5000);
+setInterval(function(){
+	var $name_list = $("#prince_list");
+	
+	$.ajax({
+		url: '/princes',
+		type: 'GET',
+		dataType: 'json',
+	}).done(function(data){
+		console.log(data);
+		$name_list.empty();
+		data.princes.prince_name.forEach(function(item){
+			$name_list.append("<li>"+ item["prince_name"] +"</li>")
+		})
+	})	
+}, 5000);
 	
 
-	// var $show_button = $("#show_button");
+	var $show_button = $("#show_button");
 
-	// $show_button.click(function(){
-	// 	console.log("Show button has been clicked");
+	$show_button.click(function(){
+		console.log("Show button has been clicked");
 
 
 	// 	$.ajax({
-	// 		url: '/quizzes',
+	// 		url: '/princes',
 	// 		type: 'GET',
 	// 		dataType: 'json',
 	// 	}).done(function(data){

@@ -3,14 +3,14 @@ require 'sinatra/reloader'
 require 'pry'
 require 'json'
 
-FILENAME = "prince_db"
+FILENAME = "quiz_db"
 
 def get_data()
 	if File.exists?(FILENAME)
 		results = JSON.parse(File.read(FILENAME))
 		return results
 	else
-		{"princes" => []}
+		{"quizzes" => []}
 	end
 end
 
@@ -25,7 +25,7 @@ get '/' do
 	erb :index
 end
 
-post '/princes' do
+post '/quizzes' do
 	content_type :json
 
 	# binding.pry
@@ -34,19 +34,19 @@ post '/princes' do
 	puts request
 	puts request.params
 	# binding.pry
-	new_vote = {"new_vote" => request.params["prince_name"]}
+	new_quiz = {"title" => request.params["quiz_name"]}
 
-	data["princes"].push(new_vote)
+	data["quizzes"].push(new_quiz)
 
 	save_data(data)
 
 	#the below is data in the .done function of the AJAX call 
-	message = request.params["prince_name"]
+	message = request.params["quiz_name"]
 	message.to_json
 
 end
 
-get '/princes' do 
+get '/quizzes' do 
 	content_type :json
 
 	db_contents = get_data
