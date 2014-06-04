@@ -7,6 +7,16 @@ function Hangman(word) {
     return guesses.join(" ");
   }
 
+  this.guess = function(letter){
+    // console.log(letter)
+    word.split("").forEach(function(x_letter) {
+      if(x_letter === letter)
+        { console.log("true");}
+      else {console.log("false");}
+    });
+
+}
+
 }
 
 var game = new Hangman("detective");
@@ -14,7 +24,7 @@ var game = new Hangman("detective");
 console.log("___________");
 console.log(game.progress());
 
-console.log(false)
+// console.log(false)
 console.log(game.guess("a"));
 
 // console.log(true)
