@@ -8,11 +8,18 @@ function Hangman(word) {
   }
 
   this.guess = function(letter){
-    // console.log(letter)
+    guesses = []
     word.split("").forEach(function(x_letter) {
       if(x_letter === letter)
-        { console.log("true");}
-      else {console.log("false");}
+        {
+          i = 0
+          while (i < word.length){
+          guesses[i] = letter;
+          return guesses;
+          i++}
+          console.log(guesses)
+        }
+      else {return false;}
     });
 
 }
@@ -28,7 +35,7 @@ console.log(game.progress());
 console.log(game.guess("a"));
 
 // console.log(true)
-// console.log(game.guess("d"));
+console.log(game.guess("d"));
 
 // console.log("d__________");
 // console.log(game.progress());
