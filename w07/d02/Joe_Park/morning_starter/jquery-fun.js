@@ -43,16 +43,16 @@ $(document).ready(function() {
 	// 	}
 	// }
 
-	// joel's 1 function
-	// var showme = function(link_for, element_to){
- //    link_for.click(function(){
- //    var moreAndLess = element_to.is(':visible') ? 'More' : 'Less';
- //    $(this).text(moreAndLess);
+// 	// joel's 1 function
+// var showme = function(link_for, element_to){
+// 	link_for.click(function(){
+// 	var moreAndLess = element_to.is(':visible') ? 'More' : 'Less';
+// 	$(this).text(moreAndLess);
 
- //    element_to.slideToggle();
- //  });
- //  }
+// 		element_to.slideToggle();
+//   	});
+//  	}
 
- //  showme($("#less-link1"), $("#less-text1"))
+//   showme($("#less-link1"), $("#less-text1"))
 
- //  showme($("#less-link2"), $("#less-text2"))
+//   showme($("#less-link2"), $("#less-text2"))
