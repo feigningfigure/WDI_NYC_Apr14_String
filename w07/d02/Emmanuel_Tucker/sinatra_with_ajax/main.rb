@@ -1,4 +1,4 @@
-require 'sinatra'
+	require 'sinatra'
 require 'sinatra/reloader'
 require 'pry'
 require 'json'
@@ -40,13 +40,13 @@ post '/quizzes' do
 
 	save_data(data)
 
-	#the below is data in the .done function of the AJAX call 
+	#the below is data in the .done function of the AJAX call
 	message = request.params["quiz_name"]
 	message.to_json
 
 end
 
-get '/quizzes' do 
+get '/quizzes' do
 	content_type :json
 
 	db_contents = get_data
