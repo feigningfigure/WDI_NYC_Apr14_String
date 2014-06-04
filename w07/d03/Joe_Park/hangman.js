@@ -13,9 +13,11 @@ function Hangman(word){
 
 	this.guess = function(letter){
 		if ( word.indexOf(letter) !== -1) {
-			var i = 0
-			guesses[i] = letter;
-			return true;
+			for (var i = 0; i < word.length; i++) {
+				i = word.split("").indexOf(letter);
+				guesses[i] = letter;
+				return true;
+			}	
 		} else {
 			return false;
 		}
@@ -40,5 +42,5 @@ console.log(game.progress());
 console.log(true);
 console.log(game.guess("t"));
 
-// console.log("d _ t _ _ t _ _ _");
-// console.log(game.progress());
+console.log("d _ t _ _ t _ _ _");
+console.log(game.progress());
