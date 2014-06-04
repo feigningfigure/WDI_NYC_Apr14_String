@@ -13,14 +13,14 @@ $(document).ready(function(){
 
   // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
 
-  var checkRaw = $("#balance1");
-  var checkBalance = Number(checkRaw.text().substr(1));
-  var checkAmount = $("#checking_amount");
-  // var checkValue = Number(checkAmount.val());
-  var saveRaw = $("#balance2");
-  var saveBalance = Number(saveRaw.text().substr(1));
-  var saveAmount = $("#saving_amount");
-  // var checkValue = Number(checkAmount.val());
+  var $checkRaw = $("#balance1");
+  var checkBalance = Number($checkRaw.text().substr(1));
+  var $checkAmount = $("#checking_amount");
+  // var checkValue = Number($checkAmount.val());
+  var $saveRaw = $("#balance2");
+  var saveBalance = Number($saveRaw.text().substr(1));
+  var $saveAmount = $("#saving_amount");
+  // var checkValue = Number($checkAmount.val());
 
   if (checkBalance === 0) {
     $("#balance1").css('background-color','red');
@@ -30,45 +30,48 @@ $(document).ready(function(){
   } 
 
   $("#make_checking_deposit").on('click', function() {
-		checkBalance += Number(checkAmount.val());
-  	updateDisplay(checkRaw, checkBalance);
+		checkBalance += Number($checkAmount.val());
+  	updateDisplay($checkRaw, checkBalance);
   });
 
   // changed order of checking withdraw
 
   $("#make_checking_withdrawal").on('click', function() {
-    if (Number(checkAmount.val()) < checkBalance) { 	
-      if (checkBalance - checkAmount.val() >= 0) {
-  	  	withdrawFunds(checkRaw, checkAmount);	
-  			checkBalance -= checkAmount.val();
-  	  	updateDisplay(checkRaw, checkBalance);
-      }else if (checkBalance+saveBalance >=  checkAmount.val()) {
-        withdrawFunds(checkAmount, checkRaw, saveRaw); 
-      // checkBalance -= checkAmount.val();
-        updateDisplay(checkRaw, checkBalance);
-    	} else {
-    	 	alert ("You don't have enough funds to withdraw.");
-    	}
-    } else if (Number(checkAmount.val()) < (checkBalance + saveBalance)) {
-      withdrawFunds(checkAmount, checkRaw, saveRaw); 
-      saveBalance -= checkAmount.val();
-      updateDisplay(checkRaw, checkBalance);
+    // if (Number($checkAmount.val()) < checkBalance) { 	
+
+      if (checkBalance - $checkAmount.val() >= 0) {
+  	  	withdrawFunds($checkRaw, $checkAmount);	
+  			checkBalance -= $checkAmount.val();
+  	  	updateDisplay($checkRaw, checkBalance);
+
+      // } else if (checkBalance+saveBalance >=  $checkAmount.val()) {
+      //   withdrawFunds($checkAmount, $checkRaw, $saveRaw); 
+      //   // checkBalance -= $checkAmount.val();
+      //   (checkBalance+saveBalance) -=  $checkAmount.val();
+      //   updateDisplay($checkRaw, checkBalance);
+
+
+    	// } else {
+    	//  	alert ("You don't have enough funds to withdraw.");
+    	// }
+
+    } else if ((checkBalance + saveBalance) >= Number($checkAmount.val()) {
+      withdrawFunds($checkAmount, $checkRaw, $saveRaw); 
+      saveBalance -= $checkAmount.val();
+      updateDisplay($checkRaw, checkBalance);
+
     } else {
       alert ("come back when you get paid");
     }
+
   });
 
   // Create a click event that is raised when the user clicks on the "savingsDeposit" element.
-
-  // var saveRaw = $("#balance2");  
+  
   $("#make_saving_deposit").on('click', function() {
-  // 	var depositAmount = $("#saving_amount");
-  // 	var balance = Number(saveRaw.text().substr(1));	
-		// balance += Number(depositAmount.val());
-  // 	updateDisplay(saveRaw, balance);
 
-    saveBalance += Number(saveAmount.val());
-    updateDisplay(saveRaw, saveBalance);
+    saveBalance += Number($saveAmount.val());
+    updateDisplay($saveRaw, saveBalance);
 
   });
 
@@ -77,10 +80,10 @@ $(document).ready(function(){
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
 
  $("#make_saving_withdrawal").on('click', function() {
-  if (saveBalance - saveAmount.val() >= 0) {
-      withdrawFunds(saveRaw, saveAmount); 
-      saveBalance -= saveAmount.val();
-      updateDisplay(saveRaw, saveBalance);
+  if (saveBalance - $saveAmount.val() >= 0) {
+      withdrawFunds($saveRaw, $saveAmount); 
+      saveBalance -= $saveAmount.val();
+      updateDisplay($saveRaw, saveBalance);
    } else {
       alert ("You don't have enough funds to withdraw.");
     }
