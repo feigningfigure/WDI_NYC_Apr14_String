@@ -1,5 +1,5 @@
 require 'rack'
-require 'ap'
+require 'awesome_print'
 require 'erb'
 require 'json'
 
@@ -23,7 +23,8 @@ class QuizApp
             elsif request["PATH_INFO"] == "/quizzes"
 
                 # give this variable a better name
-                html_body = {:quizzes => ['a', 'b', 'c']}.to_json
+                respsonse_body = {:quizzes => ['a', 'b', 'c']}.to_json
+                headers["Content-Type"] = "application/json"
 
             end
 
@@ -31,12 +32,12 @@ class QuizApp
 
         # don't do this when we want to serve JSON
         layout_tmpl = ERB.new(File.read("layout.erb"))
-        request_body = layout_tmpl.result(binding())
+        response_body = layout_tmpl.result(binding())
 
         response = [
             200,
             headers,
-            [request_body]
+            [response_body]
         ]
 
         puts "PRINTING THE RESPONSE:"
