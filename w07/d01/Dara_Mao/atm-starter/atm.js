@@ -11,6 +11,8 @@ $(document).ready(function(){
     var savings_input = $("#savingsAccount > input:text");
     var savings_sum = 0;
     this.savings_sum = savings_sum;
+    this.savings_balance = savings_balance;
+    this.savings_input = savings_input;
 
     //Checking Deposit Click Event
     $($("#checkingAccount > input:button:first")).click(function(){
@@ -20,7 +22,7 @@ $(document).ready(function(){
         } else {
             alert("Please enter a valid deposit!");
         }
-        checking_balance.html(both_sum);
+        checking_balance.html(checking_sum);
         checking_input.val("");
         change_c_color(checking_sum);
     });
@@ -28,10 +30,20 @@ $(document).ready(function(){
     //Checking Withdrawal Click Event
     $($("#checkingAccount > input:button:last")).click(function(){
         //Checking Withdrawal Update Balance
-
+// checking_balance.html()
+// (checking_sum + savings_sum)
         if (checking_input.val() > checking_balance.html()){
-            alert("Not enough money in your account!")
+            savings_sum = savings_sum - checking_input.val();
+            // alert(savings_sum);
+            savings_balance.html(savings_sum);
+            //     checking_sum = checking_sum - checking_input.val()
+            // if (checking_sum < 0){
+            //     savings_sum = checking_sum + savings_sum;
+            //     // checking_sum = 0;
+            // }
         } else if (!isNaN(checking_input.val()) && checking_input.val() > 0){
+            //Needs to bring the checking_sum down to 0 and the remaining from the saving_sum
+
             checking_sum -= parseFloat(checking_input.val());
         } else {
             alert("Please enter a valid withdrawal amount!")
@@ -87,6 +99,7 @@ $(document).ready(function(){
             savings_balance.css("color","grey");
         }
     });
+
 });
 
 
