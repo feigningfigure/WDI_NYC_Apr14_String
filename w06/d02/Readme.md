@@ -4,7 +4,7 @@
 
 ---
 
-## Morning Excercise
+## Morning Exercise
 
 ### Nested Arrays & Hashes
 
