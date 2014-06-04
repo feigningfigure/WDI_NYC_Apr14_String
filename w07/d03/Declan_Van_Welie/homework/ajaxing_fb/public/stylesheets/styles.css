@@ -35,15 +35,6 @@ border: none;
 color: white;
 }
 
-#img {
-    background-image: url(http://www.behindwoods.com/tamil-movie-news-1/nov-10-04/images/michael-jackson-22-11-10.jpg);
-    background-repeat: no-repeat;
-    background-position: 0px +160px;
-    margin: auto;
-    width: 200px;
-    height: 200px;
-    padding:0px;
-}
 
 #countdown{
   margin: 20px;

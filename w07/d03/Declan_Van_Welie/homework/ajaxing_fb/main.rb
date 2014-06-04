@@ -51,7 +51,15 @@ puts request.params
 
 result = HTTParty.get("https://graph.facebook.com/#{user}")
 
-json.parse(result)
+JSON.parse(result)
+
+id = result["id"]
+name = result["name"]
+gender = result["gender"]
+locale = result["locale"]
+un = result["username"]
+
+
 
 
 # You can pluck out the params input from the submitted form. You can do so by referring to the name you gave the params on the ajax side in the view?
