@@ -13,7 +13,7 @@ function Hangman(word) {
     if (word.indexOf(letter) !== -1) {
       for (var i = 0; i < word.length; i++) {
         if (word[i] === letter) {
-          playerProgress[i] = letter;
+          guesses[i] = letter;
         }
       }
       return true
@@ -22,9 +22,9 @@ function Hangman(word) {
         guesses.push(letter);
       }
       return false
-    }
-  }
-    };
+      }
+      }
+  };
 
 var game = new Hangman("detective");
 
