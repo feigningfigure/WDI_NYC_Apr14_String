@@ -1,47 +1,51 @@
 require 'rack'
 require 'ap'
 require 'erb'
+require 'json'
+
 
 class QuizApp
-  def call(request)
-    puts "PRINTING THE REQUEST:"
-    ap(request)
+    def call(request)
+        puts "PRINTING THE REQUEST:"
+        ap(request)
 
-    if request["REQUEST_METHOD"] == "GET"
-      
-      if request["PATH_INFO"] == "/"
-          
+        headers = {
+            "Content-Type" => "text/html" # this should be application/json when we return the raw data
+        }
+
+        if request["REQUEST_METHOD"] == "GET"
+
+            if request["PATH_INFO"] == "/"
+
+                index_tmpl = ERB.new(File.read("index.erb"))
+                html_body = index_tmpl.result()
+
+            elsif request["PATH_INFO"] == "/quizzes"
+
+                # give this variable a better name
+                html_body = {:quizzes => ['a', 'b', 'c']}.to_json
+
+            end
+
+        end
+
+        # don't do this when we want to serve JSON
         layout_tmpl = ERB.new(File.read("layout.erb"))
-        
-        index_tmpl = ERB.new(File.read("index.erb"))
+        request_body = layout_tmpl.result(binding())
 
-        html_body = index_tmpl.result(binding)
+        response = [
+            200,
+            headers,
+            [request_body]
+        ]
 
-        request_body = layout_tmpl.result(binding)
-  
-      elsif request["PATH_INFO"] == "/quizzes"
-  
-        request_body = "<h1>Quiz List</h1>"
+        puts "PRINTING THE RESPONSE:"
+        ap(response)
 
-      end
-    
+        return response
     end
-
-    response = [
-      200,
-      {
-        'Content-Type' => 'text/html'
-      },
-      [request_body]
-    ]
-
-    puts "PRINTING THE RESPONSE:"
-    ap(response)
-
-    return response
-  end
 end
 
 app = QuizApp.new()
 
-Rack::Server.new( { :app => app, :server => 'webrick', :Port => 8080} ).start
+Rack::Handler::WEBrick.run(app)
