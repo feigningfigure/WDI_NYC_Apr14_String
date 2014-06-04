@@ -17,11 +17,11 @@ $("#find_user_button").click(function(){
 
 // URl: the URL where we want to go.
  $.ajax({
-  url: '/quizzes',
+  url: '/users',
   type: 'POST',
   dataType: 'json',
   // Optional field. data can be a params hash, or whatever else you want to send back to the browser
-  data: {quiz_name: $input.val()}
+  data: {user_name: $input.val()}
  }).done(function(data){
   console.log(data);
   // alert("You've added" + " " + data);
@@ -43,7 +43,7 @@ setInterval(function(){
 var $show_users = $("#show_div");
 
   $.ajax({
-  url: '/quizzes',
+  url: '/users',
   type: 'GET',
   dataType: 'json',
  }).done(function(data){
