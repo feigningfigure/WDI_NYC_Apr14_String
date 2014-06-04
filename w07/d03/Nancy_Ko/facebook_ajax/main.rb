@@ -9,6 +9,8 @@ require 'httparty'
 
 
 get '/' do
-	"HIHIHIHIHI"
-	# erb :index
+	
+	erb :index
 end
+
+
