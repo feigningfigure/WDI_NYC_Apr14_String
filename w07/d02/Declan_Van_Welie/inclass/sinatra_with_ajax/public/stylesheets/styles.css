@@ -1,0 +1,100 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+body{
+  background-color: rgba(80, 92, 110, 1);
+}
+
+#title{
+
+  position: center;
+  text-align: center;
+  width: 250px;
+  margin: auto;
+  letter-spacing: 1px;
+  font-size: 30px;
+}
+
+#main{
+    position: center;
+  text-align: center;
+}
+
+#quiz_input{
+background-color: rgba(69, 73, 47, 1);
+border: none;
+color:white;
+}
+
+
+#add_quiz_button{
+background-color: rgba(69, 73, 47, 1);
+border: none;
+color: white;
+}
+
+#img {
+    background-image: url(http://www.behindwoods.com/tamil-movie-news-1/nov-10-04/images/michael-jackson-22-11-10.jpg);
+    background-repeat: no-repeat;
+    background-position: 0px +160px;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    padding:0px;
+}
+
+span.counter{
+   font-family: 'Raleway', sans-serif;
+   color: rgba(247, 89, 61, 1);
+   font-size: 50px;
+   padding: 0px;
+   margin:0px;
+
+
+}
+
+h3.logo{
+
+/*  border: solid rgba(247, 89, 61, 1) 1px;*/
+  color: white;
+  padding:10px;
+  font-family: 'Raleway', sans-serif;
+  line-height: 25px;
+  position:  relative;
+
+}
+
+button.add_quiz{
+  background-color: solid rgba(247, 89, 61, 1);
+
+}
+
+#show_button{
+height: 30px;
+width: 50px;
+border: dotted black 2px;
+background-color: rgba(247, 89, 61, 1);
+padding:2px;
+text-align: center;
+line-height: 20px;
+position: center;
+margin: auto;
+
+}
+
+#show_div{
+  margin: 10px;
+}
+
+#quiz_list{
+  text-decoration: none;
+  color: white;
+  list-style-type: none;
+  font-family: 'Raleway', sans-serif;
+  padding: 20px;
+  margin: 5px;
+}
+
+/*li{
+  text-decoration: none;
+  color: white;
+}*/
