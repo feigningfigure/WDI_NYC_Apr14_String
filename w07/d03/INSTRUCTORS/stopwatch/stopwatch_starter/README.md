@@ -19,8 +19,3 @@ Create a stopwatch.  Watch the demo to see what your stopwatch should do.
 ***TIPS:***
 - Check out setInterval and clearInterval.
 - 1000 ms = 1 second
-
----------------
-
-## Homework
-
