@@ -1,29 +1,29 @@
 function Hangman(word) {
   var guesses = [];
-    this.progress = function() {
+  this.progress = function() {
 
-        word.split("").forEach(function(letter) {
-            guesses.push("_");
-        });
+      word.split("").forEach(function(letter) {
+          guesses.push("_");
+      });
 
-        return guesses.join(" ");
-    };
+      return guesses.join(" ");
+  };
 
-    this.guess = function(letter) {
-      if (word.indexOf(letter) !== -1) {
-        for (var i = 0; i < word.length; i++) {
-          if (word[i] === letter) {
-            playerProgress[i] = letter;
-          }
+  this.guess = function(letter) {
+    if (word.indexOf(letter) !== -1) {
+      for (var i = 0; i < word.length; i++) {
+        if (word[i] === letter) {
+          playerProgress[i] = letter;
         }
-        return true
-      } else if (word.indexOf(letter) === -1){
-        if (guesses.indexOf(letter) === -1){
-          guesses.push(letter);
-        }
-        return false
       }
+      return true
+    } else if (word.indexOf(letter) === -1){
+      if (guesses.indexOf(letter) === -1){
+        guesses.push(letter);
+      }
+      return false
     }
+  }
     };
 
 var game = new Hangman("detective");
