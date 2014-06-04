@@ -4,11 +4,11 @@ function setEventHandlers(){
 
 
 
-$("#add_quiz_button").click(function(){
+$("#find_user_button").click(function(){
 
   // Putting the $ in front of the variable name is good practice so you can know that the variable is a JQuery variable.
 
- var $input = $("#quiz_input");
+ var $input = $("#user_name_input");
 
  // syntax of an ajax request using JQuery
 // calling an ajax method on the base jquery
@@ -32,7 +32,7 @@ $("#add_quiz_button").click(function(){
 
 
 
-var $show_button = $("#add_quiz_button");
+var $show_button = $("#show_users");
 
 $show_button.click(function(){
 
@@ -40,7 +40,7 @@ $show_button.click(function(){
 
 setInterval(function(){
 
-var $quiz_list = $("#quiz_list");
+var $show_users = $("#show_div");
 
   $.ajax({
   url: '/quizzes',
@@ -49,9 +49,9 @@ var $quiz_list = $("#quiz_list");
  }).done(function(data){
   console.log(data);
 
-$quiz_list.empty();
+$show_users.empty();
 data.quizzes.forEach(function(item){
-$quiz_list.prepend("<li>" + item["name"] + "</li>")
+$show_users.prepend("<li>" + item["name"] + "</li>")
 
 })
   // for (i=0; i<data.quizzes.length; i++){
