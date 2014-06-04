@@ -1,4 +1,4 @@
-
+var $test = $("#quiz_list li").first();
 
 function setEventHandlers(){
   $('#add_quiz_button').click(function(){
@@ -31,6 +31,7 @@ function setEventHandlers(){
       data.quizzes.forEach(function(item){
         $quiz_list.prepend("<li class='quiz-title'>"+ item["title"] +"</li>")
       })
+      $test = $("#quiz_list li").first();
      })
 
 }
@@ -43,15 +44,21 @@ function pageUpdate() {
       dataType: 'json'
     }).done(function(data){
       console.log(data);
+      console.log($test);
+      $test = $("#quiz_list li").first();
       $quiz_list.empty();
       data.quizzes.forEach(function(item){
         $quiz_list.prepend("<li class='quiz-title'>"+ item["title"] +"</li>")
       })
       //$("#quiz_list li").first().addClass("highlight").append( "   (NEW)" );
-      $interval = setInterval(function(){ $("#quiz_list li").first().toggleClass("highlight")}, 200);
-      $("#quiz_list li").first().addClass("highlight").append( "   (NEW)" );
-
+      if($test.hasClass("flashed")){
+        $("#quiz_list li").first().addClass("highlight flashed").append( "   (NEW)" );
+      }else{
+        $interval = setInterval(function(){ $("#quiz_list li").first().toggleClass("highlight")}, 100);
+      $("#quiz_list li").first().addClass("highlight flashed").append( "   (NEW)" );
       setTimeout(function(){ clearInterval($interval) }, 500);
+      }
+
      })
 }
 
