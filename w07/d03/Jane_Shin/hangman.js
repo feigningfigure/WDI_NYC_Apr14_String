@@ -21,7 +21,7 @@ var guesses = [];
 				// for (var i=0; i < word.length; i++) {
 					// guesses[i] = letter;
 				// }
-				return "true"}
+				return "true"
 			guesses[i] = letter;				
 			} else {
 				return "false"
