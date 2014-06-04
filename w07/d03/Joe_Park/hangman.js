@@ -14,10 +14,11 @@ function Hangman(word){
 	this.guess = function(letter){
 		if ( word.indexOf(letter) !== -1) {
 			for (var i = 0; i < word.length; i++) {
-				i = word.split("").indexOf(letter);
-				guesses[i] = letter;
-				return true;
-			}	
+				if (word[i] === letter) {
+					guesses[i] = letter;
+				}
+			}
+			return true;	
 		} else {
 			return false;
 		}
