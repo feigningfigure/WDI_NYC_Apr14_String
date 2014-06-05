@@ -22,6 +22,8 @@ function Hangman(word) {
       console.log("false")
     }
 
+
+
   };
 }
 
