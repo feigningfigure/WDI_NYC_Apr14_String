@@ -1,7 +1,7 @@
-var i = 0;
+var $i = 0;
 
 function pullProfiles(){
-  i=0;
+  $i=0;
   var $profileList = $("#profile-list");
     $.ajax({
       url:'/profiles',
@@ -22,10 +22,10 @@ function pullProfiles(){
 
       // });
       data.profiles.forEach(function(item){
-        i++;
+        $i++;
         $profileList.prepend(
-          "<li class='profile-title'>"+ "<h3 class='less-link' id='less-link" + i + "'>" + item["name"] + "</h3>" + "</li> \
-          <div class='less-text' id='less-text" + i + "'> <li class='profile-detail'>"+ "id: " + item["id"] +"</li><li class='profile-detail'>"+ "first_name: " + item["first_name"] +"</li><li class='profile-detail'>"+ "middle_name: " + item["middle_name"] +"</li><li class='profile-detail'>"+ "last_name: " + item["last_name"] +"</li><li class='profile-detail'>"+ "locale_name: " + item["locale"] +"</li><li class='profile-detail'>"+ "gender: " + item["gender"] +"</li><li class='profile-detail'>"+ "username: " + item["username"] +"</li></div>"
+          "<li class='profile-title'>"+ "<h3 class='less-link' id='less-link" + $i + "'>" + item["name"] + "</h3>" + "</li> \
+          <div class='less-text' id='less-text" + $i + "'> <li class='profile-detail'>"+ "id: " + item["id"] +"</li><li class='profile-detail'>"+ "first_name: " + item["first_name"] +"</li><li class='profile-detail'>"+ "middle_name: " + item["middle_name"] +"</li><li class='profile-detail'>"+ "last_name: " + item["last_name"] +"</li><li class='profile-detail'>"+ "locale_name: " + item["locale"] +"</li><li class='profile-detail'>"+ "gender: " + item["gender"] +"</li><li class='profile-detail'>"+ "username: " + item["username"] +"</li></div>"
           )
       })
       setClicks();
@@ -57,18 +57,46 @@ $('#add_profile_button').click(function(){
 
 }
 
+// function setClicks(){
+//   $(function() {
+//     $("#less-link1").click(function () {
+//       console.log("i'm clicked");
+//       $("#less-text1").slideToggle();
+//     });
+//     $("#less-link2").click(function () {
+//       console.log("i'm clicked");
+//       $("#less-text2").slideToggle();
+//     });
+//   });
+// }
+
+// THROW A CONSOLE.LOG IN HERE
+
 function setClicks(){
   $(function() {
-    $("#less-link1").click(function () {
-      console.log("i'm clicked");
-      $("#less-text1").slideToggle();
-    });
-    $("#less-link2").click(function () {
-      console.log("i'm clicked");
-      $("#less-text2").slideToggle();
-    });
+      $(".less-link").click(function () {
+        var $id = $(this).attr('id');
+        var $textId = parseFloat($id.replace( /^\D+/g, ''));
+        console.log($id);
+        console.log($textId);
+        $("#less-text"+ $textId).slideToggle();
+        });
   });
 }
+
+// function setClicks(){
+//   $(function() {
+//     $("#less-link1").click(function () {
+//       console.log("i'm clicked");
+//       $("#less-text1").slideToggle();
+//     });
+    // $("#less-link2").click(function () {
+    //   console.log("i'm clicked");
+    //   $("#less-text2").slideToggle();
+    // });
+//   });
+// }
+
 
 $( document ).ready(function() {
   setEventHandlers();
