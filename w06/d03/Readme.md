@@ -26,3 +26,5 @@ Think about:
 
 ## Homework
 
+(no homework)
+
