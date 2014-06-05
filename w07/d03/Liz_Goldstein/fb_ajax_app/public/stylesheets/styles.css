@@ -14,3 +14,8 @@
 #show_div {
   margin: 10px;
 }
+
+#toggle_list{
+  visibility: hidden;
+/* display: none;*/
+}

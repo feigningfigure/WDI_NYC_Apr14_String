@@ -35,11 +35,16 @@ var $show_button = $("#show_button");
       var $record_list = $("#record_list");
       $record_list.empty();
       data.records.forEach(function(item){
-        $record_list.append("<li> Name: "+ item["name"] +"</li> <li> ID: " + item["id"] + "</li> <li> Location: " + item["location"] + "</li> <li> Gender: " + item["gender"] + "</li><li> Username: " + item["username"] + "</li>" )
+        $record_list.append("<li> <a id='show_name' href id='show_name' href='#'>Name: "+ item["name"] +"</a> </li>" + " <div id='toggle_list'> <li> ID: " + item["id"] + "</li> <li> Location: " + item["location"] + "</li> <li> Gender: " + item["gender"] + "</li><li> Username: " + item["username"] + "</li></div>" )
       })
 
     })
   });
+
+ $( "#show_name" ).click('slow', function () {
+    $("#toggle_list").toggle( showOrHide);
+  });
+
 
 }
 
