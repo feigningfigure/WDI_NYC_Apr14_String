@@ -16,7 +16,6 @@ function setEventHandlers(){
 			alert("You have added " + data);
 			$input.val('');
 		});
-
 	});
 
 	var $show_button = $("#show_friends");
@@ -43,19 +42,20 @@ function setEventHandlers(){
 			});
 
 			var $friend_list_item = $(".friend_list_item");
-
 			$friend_list_item.click(function() {
 				console.log("clicked");
 				var id_name = $(this).attr('id');
 				var id_num = id_name.slice(4,10);
-				var id_string = ("#" + id_name)
+				var id_string = ("#" + id_name);
 				var person = data.friends[id_num];
 				$(id_string).append("<li>Name: " + person["first_name"] + " " + person["last_name"] + "</li>");
 				$(id_string).append("<li>Gender: " + person["gender"] + "</li>");
 				$(id_string).append("<li>locale: " + person["locale"] + "</li>");
-			});
 
-		})
+parseFloat("less-link65 ".replace( /^\D+/g, ''));
+
+			});
+		});
 	});
 
 
