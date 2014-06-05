@@ -1,0 +1,60 @@
+scrap
+
+
+
+  # def index
+  # 	movie_url = "http://www.omdbapi.com/?t=True%20Grit"
+  #   @movies = movie_url.all
+  # end
+
+
+
+  # def new
+  # 	movie_url = "http://www.omdbapi.com/?t=True%20Grit"
+  #   @movie = movie_url.all
+  # end
+
+
+
+  params{title}
+
+.gsub(/[aeiou]/, '*')
+
+gsub('_', ' ')
+
+# THIS IS A MODEL
+class Movie < ActiveRecord::Base
+
+  # this kind of logic belongs here, and not in the controller
+
+
+
+  def movie_url
+    # make API call, turn the JSON into a Hash
+    response_hash = JSON.parse(HTTParty.get("http://uifaces.com/api/v1/random").body)
+
+    # extract the URL of photo and add it to an array of URLs
+    photo_url = response_hash["image_urls"]["bigger"]
+
+    # return just the URL
+    photo_url
+  end
+
+end
+
+
+
+movie_title = params[:title]
+:movie_title = movie_title.gsub(' ', '%20')
+
+movie_hash = JSON.parse(HTTParty.get(http://www.omdbapi.com/?t=      params#{title}.gsub(' ', '%20')%>)
+
+
+
+       True%20Grit    "))
+
+
+
+
+
+
