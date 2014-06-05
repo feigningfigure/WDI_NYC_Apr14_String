@@ -68,6 +68,8 @@ post '/quizzes' do
 	data["quizzes"].push(new_quiz)
 	save_data(data)
 
+	data.to_json
+
 binding.pry
 end
 ----- MAIN DOT RB -----
