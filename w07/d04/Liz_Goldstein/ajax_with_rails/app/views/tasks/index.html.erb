@@ -1,0 +1,17 @@
+<div>
+	<input id="task_text_input" placeholder="enter a task">
+	<input id="due_date_input" placeholder="enter a due date">
+
+	<button id="add_task_button">Add Task</button>
+
+<ul>
+  <%= binding.pry %>
+<% @tasks.each do |task| %>
+
+        <li><%= task.task_text %>,
+
+
+  <% end %>
+</ul>
+
+</div>
