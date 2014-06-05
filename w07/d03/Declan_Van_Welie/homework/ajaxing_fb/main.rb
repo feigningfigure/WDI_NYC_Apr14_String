@@ -1,5 +1,7 @@
 require 'json'
 require 'httparty'
+require 'sinatra'
+require 'pry'
 
 FILENAME = "user_db"
 
@@ -22,12 +24,34 @@ def save_data(data)
   end
 end
 
+# httparty request for the FB info
+# Make httparty call to retrieve information. Then use the former "new quiz"
+# data setup to write the information pulled to the "db"
+
+
+def grab_info(name)
+
+
+
+
+  result = HTTParty.get("https://graph.facebook.com/#{name}")
+
+  user_fb = JSON.parse(result)
+
+# id = result["id"]
+# name = result["name"]
+# gender = result["gender"]
+# locale = result["locale"]
+# un = result["username"]
+
+end
+
 
 
 
 get '/' do
 
-erb :index
+  erb :index
 
 end
 
@@ -37,44 +61,30 @@ post '/users' do
   content_type :json
 # This solves the issue of not already having a file to save to. It also saves whatever's already in the file to a variable so that we can add to it rather than just overwriting the file each time.
 
-data = get_data
+  data = get_data
 # {"quizzes" => []} This is what our data variable should now look like. But it may be empty
 
 
-puts request
-puts request.params
-
-
-# httparty request for the FB info
-# Make httparty call to retrieve information. Then use the former "new quiz"
-# data setup to write the information pulled to the "db"
-
-
-result = HTTParty.get("https://graph.facebook.com/#{user}")
-
-JSON.parse(result)
-
-id = result["id"]
-name = result["name"]
-gender = result["gender"]
-locale = result["locale"]
-un = result["username"]
-
-
-
+# puts request
+# puts request.params
+  joined_name = request.params["user_name"].gsub(" ", ".")
+  name = joined_name.downcase
 
 # You can pluck out the params input from the submitted form. You can do so by referring to the name you gave the params on the ajax side in the view?
-new_user = {"name" => request.params["user_name"]}
 
-data["users"].push(new_user)
+  new_user = grab_info(name)
 
-save_data(data)
+  # new_user = @user_fb
+
+  data["users"].push(new_user)
+
+  save_data(data)
 # # This has become the contents of the file returned to the browser (rather than the html that would be rendered in a redirect)
 # data.to_json
 
 # Data is whatever .to_json is operated on. It is not necessarily the "params" from the site.
-message = request.params["user_name"]
-message.to_json
+  message = request.params["user_name"]
+  message.to_json
 
 end
 
@@ -82,9 +92,9 @@ get '/users' do
   # We're telling the browser that whatever JSON we send back is what it's to treat as the response
   content_type :json
 # gets everything currenlty in your quiz_db
-db_contents = get_data
+  db_contents = get_data
 
-db_contents.to_json
+  db_contents.to_json
 
 
 
