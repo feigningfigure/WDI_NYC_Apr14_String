@@ -34,7 +34,7 @@ $button.click(function(){
 	var $facebook_list = $("#facebook_list");
 			$facebook_list.empty();
 			data.details.forEach(function(item){
-				$facebook_list.append("<li>"+ item["title"] +"</li>")
+				$facebook_list.append("<li>"+ item["first_name"] +"</li>")
 			}, 5000);
 		})
 	})

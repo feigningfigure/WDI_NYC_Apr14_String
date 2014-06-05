@@ -35,9 +35,11 @@ post '/details' do
 	puts request
 	puts request.params
 
-	new_detail = {"title" => request.params["detail_name"]}
+	new_detail = request.params["detail_name"]}
+	puts new_detail
 
-	data["details"].push(new_info)
+  url = "http://graph.facebook.com/#{details}"
+	name_json = HTTParty.get(url)
 
 	save_data(data)
 
@@ -50,10 +52,12 @@ end
 
 get '/details' do
 
-	details = params[:details]
+	def user_input
+	details = params[:facebook_input]
 
-	url = "http://graph.facebook.com/wilsonchan"
-	name_json = HTTParty.get(url)
+
+
+	end
 
 	content_type :json
 
