@@ -1,0 +1,121 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+body{
+  background-color: rgba(80, 92, 110, 1);
+}
+
+#title{
+
+  position: center;
+  text-align: center;
+  width: 250px;
+  margin: auto;
+  letter-spacing: 1px;
+  font-size: 30px;
+  padding: 0px;
+}
+
+#main{
+    position: center;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+#user_name_input{
+background-color: rgba(69, 73, 47, 1);
+border: none;
+color:white;
+}
+
+
+#find_user_button{
+background-color: rgba(69, 73, 47, 1);
+border: none;
+color: white;
+}
+
+#show_users{
+background-color: rgba(69, 73, 47, 1);
+border: none;
+color: white;
+}
+
+
+#countdown{
+  margin: 20px;
+}
+
+span.counter{
+   font-family: 'Raleway', sans-serif;
+   color: rgba(247, 89, 61, 1);
+   font-size: 50px;
+   padding: 0px;
+   margin:20px;
+
+
+}
+
+#answer{
+  margin: 30px;
+
+}
+
+span.correct{
+   font-family: 'Raleway', sans-serif;
+   color: rgba(89, 163, 196, 1);
+   font-size: 50px;
+   padding: 20px;
+   margin:20px;
+
+
+}
+
+h3.logo{
+
+/*  border: solid rgba(247, 89, 61, 1) 1px;*/
+  color: white;
+  padding:10px;
+  font-family: 'Raleway', sans-serif;
+  line-height: 30px;
+  position:  relative;
+
+}
+
+button.add_quiz{
+  background-color: solid rgba(247, 89, 61, 1);
+
+}
+
+
+#show_div{
+  margin: 10px;
+}
+
+#user_list{
+  text-decoration: none;
+  color: rgba(89, 163, 196, 1);
+  list-style-type: none;
+  font-family: 'Raleway', sans-serif;
+  padding: 20px;
+  margin: 5px;
+  font-size: 30px;
+
+
+}
+
+.user_data{
+  text-decoration: none;
+  color: rgba(89, 163, 196, .7);
+  list-style-type: none;
+  font-family: 'Raleway', sans-serif;
+  padding: 20px;
+  margin: 5px;
+  font-size: 20px;
+  display: none;
+}
+
+/*li{
+  text-decoration: none;
+  color: white;
+}*/

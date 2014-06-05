@@ -1,0 +1,9 @@
+li {
+	width: 20%;
+	float: left;
+	list-style: none;
+}
+
+ul {
+	clear: both;
+}
