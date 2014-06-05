@@ -2,14 +2,14 @@ var i = 0;
 
 function pullProfiles(){
   i=0;
-  var $profile_list = $("#profile_list");
+  var $profileList = $("#profile-list");
     $.ajax({
       url:'/profiles',
       type: 'GET',
       dataType: 'json'
     }).done(function(data){
       console.log(data);
-      $profile_list.empty();
+      $profileList.empty();
       //console.log(data.profiles[(data.profiles.length-1)]["name"]);
       // console.log(data.profiles[(data.profiles.length-1)]);
       $("#individual").text("");
@@ -23,11 +23,12 @@ function pullProfiles(){
       // });
       data.profiles.forEach(function(item){
         i++;
-        $profile_list.prepend(
-          "<li class='profile-title'>"+ "<a class='less-link' id='less-link" + i + "' href='#'>" + item["name"] + "</a>" + "</li>",
-          "<div id='less-text" + i + "'> <li class='profile-detail'>"+ "id: " + item["id"] +"</li><li class='profile-detail'>"+ "first_name: " + item["first_name"] +"</li><li class='profile-detail'>"+ "middle_name: " + item["middle_name"] +"</li><li class='profile-detail'>"+ "last_name: " + item["last_name"] +"</li><li class='profile-detail'>"+ "locale_name: " + item["locale"] +"</li><li class='profile-detail'>"+ "gender: " + item["gender"] +"</li><li class='profile-detail'>"+ "username: " + item["username"] +"</li></div>"
+        $profileList.prepend(
+          "<li class='profile-title'>"+ "<h3 class='less-link' id='less-link" + i + "'>" + item["name"] + "</h3>" + "</li> \
+          <div class='less-text' id='less-text" + i + "'> <li class='profile-detail'>"+ "id: " + item["id"] +"</li><li class='profile-detail'>"+ "first_name: " + item["first_name"] +"</li><li class='profile-detail'>"+ "middle_name: " + item["middle_name"] +"</li><li class='profile-detail'>"+ "last_name: " + item["last_name"] +"</li><li class='profile-detail'>"+ "locale_name: " + item["locale"] +"</li><li class='profile-detail'>"+ "gender: " + item["gender"] +"</li><li class='profile-detail'>"+ "username: " + item["username"] +"</li></div>"
           )
       })
+      setClicks();
      })
   }
 
@@ -48,6 +49,25 @@ $('#add_profile_button').click(function(){
       });
     });
 
+  $(function() {
+    $("#list-link").click(function () {
+      $("#profile-list").slideToggle();
+    });
+  });
+
+}
+
+function setClicks(){
+  $(function() {
+    $("#less-link1").click(function () {
+      console.log("i'm clicked");
+      $("#less-text1").slideToggle();
+    });
+    $("#less-link2").click(function () {
+      console.log("i'm clicked");
+      $("#less-text2").slideToggle();
+    });
+  });
 }
 
 $( document ).ready(function() {
@@ -56,14 +76,6 @@ $( document ).ready(function() {
   // you want it to stop after someone adds something
   pullProfiles();
   //setInterval(function(){pullProfiles()},1000);
-  $(function() {
-  $("#less-link1").click(function () {
-    $("#less-text1").slideToggle();
-  });
-  $("#less-link2").click(function () {
-    $("#less-text2").slideToggle();
-  });
-});
 });
 
 
