@@ -1,0 +1,29 @@
+#show_user_button{
+  margin: 20px;
+  height: 30px;
+  width: 50px;
+  border: solid black 1px;
+  background-color: orange;
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  padding: 2px;
+
+}
+
+#show_div {
+  margin: 10px;
+}
+
+#add_user_button{
+  margin: 10px;
+  height: 30px;
+  width: 50px;
+  border: solid black 1px;
+  background-color: green;
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  padding: 2px;
+
+}

@@ -1,0 +1,9 @@
+<h1>Gladiators</h1>
+
+<% @gladiators.each do |glad| %>
+<h4><%= glad.name %></h4>
+<ul>
+  <li>Weapon: <%= glad.weapon %></li>
+  <li>Won: <%= glad.victory_count %> times</li>
+</ul>
+<% end %>
