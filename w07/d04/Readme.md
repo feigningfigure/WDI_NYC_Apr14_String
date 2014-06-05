@@ -14,7 +14,7 @@
 
 - It should have a `gladiator` model with the following attributes:
 	- Name - string
-	- Weapon - string,m
+	- Weapon - string
 	- Victory Count - integer 
 	
 - Create all the components so that a get request to `/` will show a table of gladiatiors
