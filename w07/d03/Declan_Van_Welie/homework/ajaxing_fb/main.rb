@@ -76,7 +76,7 @@ post '/users' do
 
   # new_user = @user_fb
 
-  data["users"].push(new_user)
+  data["users"].push("user" => new_user)
 
   save_data(data)
 # # This has become the contents of the file returned to the browser (rather than the html that would be rendered in a redirect)
@@ -84,6 +84,9 @@ post '/users' do
 
 # Data is whatever .to_json is operated on. It is not necessarily the "params" from the site.
   message = request.params["user_name"]
+
+  # message = data.users[i]
+  # binding.pry
   message.to_json
 
 end

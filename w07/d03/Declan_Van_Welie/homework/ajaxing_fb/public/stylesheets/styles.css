@@ -22,14 +22,20 @@ body{
   margin: 0px;
 }
 
-#quiz_input{
+#user_name_input{
 background-color: rgba(69, 73, 47, 1);
 border: none;
 color:white;
 }
 
 
-#add_quiz_button{
+#find_user_button{
+background-color: rgba(69, 73, 47, 1);
+border: none;
+color: white;
+}
+
+#show_users{
 background-color: rgba(69, 73, 47, 1);
 border: none;
 color: white;
@@ -71,7 +77,7 @@ h3.logo{
   color: white;
   padding:10px;
   font-family: 'Raleway', sans-serif;
-  line-height: 25px;
+  line-height: 30px;
   position:  relative;
 
 }
@@ -81,30 +87,32 @@ button.add_quiz{
 
 }
 
-#show_button{
-height: 30px;
-width: 50px;
-border: dotted black 2px;
-background-color: rgba(247, 89, 61, 1);
-padding:2px;
-text-align: center;
-line-height: 20px;
-position: center;
-margin: auto;
-
-}
 
 #show_div{
   margin: 10px;
 }
 
-#quiz_list{
+#user_list{
   text-decoration: none;
-  color: white;
+  color: rgba(89, 163, 196, 1);
   list-style-type: none;
   font-family: 'Raleway', sans-serif;
   padding: 20px;
   margin: 5px;
+  font-size: 30px;
+
+
+}
+
+.user_data{
+  text-decoration: none;
+  color: rgba(89, 163, 196, .7);
+  list-style-type: none;
+  font-family: 'Raleway', sans-serif;
+  padding: 20px;
+  margin: 5px;
+  font-size: 20px;
+  display: none;
 }
 
 /*li{
