@@ -27,5 +27,6 @@ PLATFORMS
 
 DEPENDENCIES
   httparty
+  json
   pry
   sinatra
