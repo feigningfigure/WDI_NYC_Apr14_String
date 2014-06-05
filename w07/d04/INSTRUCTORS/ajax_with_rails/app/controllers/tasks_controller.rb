@@ -1,11 +1,13 @@
 class TasksController < ApplicationController
 
+	protect_from_forgery except: :create	
+
 	def index
 		# binding.pry
 		respond_to do |format|
 			# format.html { render json: Task.all }
-			format.html { @tasks = "I am a task requested by an HTML request!" }
-			format.json { render json: "I am responging to a JSON request!" }
+			format.html { @tasks = "Task.all" }
+			format.json { render json: "I am a response" }
 		end
 	end
 
@@ -14,7 +16,12 @@ class TasksController < ApplicationController
 	end
 
 	def create
+		# binding.pry
 
+		new_task = Task.create({task_text: params["task_text"], due_date: params["due_date"]})
+		respond_to do |format|
+			format.json { render json: new_task}
+		end
 	end
 
 	def show
