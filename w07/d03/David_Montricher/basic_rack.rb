@@ -11,7 +11,13 @@ class QuizApp
 
             if request["PATH_INFO"] == "/"
 
-                body = "<h1>My Quiz App</h1>"
+                layout_tmpl = ERB.new(File.read("layout.erb"))
+
+                index_tmpl = ERB.new(File.read("index.erb"))
+
+                html_body = index_tmpl.result(binding)
+
+                request_body = layout_tmpl.result(binding())
 
             elsif request["PATH_INFO"] == "/quizzes"
 
