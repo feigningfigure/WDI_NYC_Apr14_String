@@ -1,5 +1,23 @@
 /* I AM INSIDE ANOTHER CSS FILE */
 
+body {
+	font-family: 'Helvetica';
+}
+
 input {
   display: block;
+}
+
+.posts {
+	list-style-type: none;
+}
+
+.post_title {
+	background-color: black;
+	color: white;
+}
+
+.posts li {
+	width: 60%;
+
 }

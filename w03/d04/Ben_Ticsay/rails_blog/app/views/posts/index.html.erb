@@ -1,1 +1,15 @@
 <!-- SHOW POSTS HERE -->
+
+<ul class="posts">
+  <% @posts.each do |post| %>
+    <li>
+      <h2 class="post_title"><%= post.title %></a></h2>
+      <div>
+        <p class="post_body"><%= post.body %></p>
+        <p class="post_author">
+          by <%= post.author %>
+        </p>
+      </div>
+    </li>
+  <% end %>
+</ul>
