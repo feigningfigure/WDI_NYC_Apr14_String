@@ -1,0 +1,41 @@
+
+        <img src="<%= @selfie1 %>">
+        <img src="<%= @selfie2 %>">
+        <img src="<%= @selfie3 %>">
+<br>
+
+
+
+<div class="menu">
+<%= form_for Selfie.new do |f| %>
+
+<!--   	<img src="<%= @selfie1 %>"> -->
+<ul>
+<li><select name="kfm_1">
+
+<li></li>
+<li></li>
+
+<li><select name="kfm_2">
+    <option value="marry">Marry!</option>
+  <option value="murder">Murder!</option>
+  <option value="mate">Mate!</option>
+</select>
+<input type="hidden" name="url_2" value="<%= @selfie2 %>">
+
+<li></li>
+<li></li>
+
+<li><select name="kfm_3">
+    <option value="marry">Marry!</option>
+  <option value="murder">Murder!</option>
+  <option value="mate">Mate!</option>
+    </select>
+    <input type="hidden" name="url_3" value="<%= @selfie3 %>">
+  </div>
+
+<div class="button">
+  <input type="submit" value="Choose!" />
+</div>
+</form>
+    <p>A party game for lonely, judgemental people!</p>
