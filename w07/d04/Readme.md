@@ -22,7 +22,22 @@
 - Seed your database using the Faker gem
 
 
+---
 
 
+## Homework
+
+### Ajax on Rails
+
+Continue working on the Task app we started in class.
 
 
+#### Spec
+
+- Show all tasks on initial page load.
+- Append tasks added through form to the list on the page.
+
+
+#### Bonue
+
+Add update and delete functions.
