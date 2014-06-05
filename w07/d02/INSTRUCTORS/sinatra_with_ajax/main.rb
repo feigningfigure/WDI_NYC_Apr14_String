@@ -26,27 +26,24 @@ get '/' do
 end
 
 post '/quizzes' do
+	# what you're getting back
 	content_type :json
+	data = get_data()
 
-	# binding.pry
-	data = get_data
-	# {"quizzes" => []} Is what our data variable should now look like.  But it may not be empty
-	puts request
-	puts request.params
-	# binding.pry
-	new_quiz = {"title" => request.params["quiz_name"]}
+	new_title = request.params["quiz_name"]
 
+	data["quizzes"].each do |quiz|
+		if new_title == quiz["quiz_name"]
+			return {"error" => "That quiz exists"}.to_json()
+		end
+	end
+
+	new_quiz = {"title" => new_title}
 	data["quizzes"].push(new_quiz)
-
 	save_data(data)
+	return {"success" => "Sweet quiz bro"}.to_json()
 
-	#the below is data in the .done function of the AJAX call 
-	message = request.params["quiz_name"]
-	message.to_json
-
-end
-
-get '/quizzes' do 
+get '/quizzes' do
 	content_type :json
 
 	db_contents = get_data
