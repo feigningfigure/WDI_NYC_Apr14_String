@@ -2,12 +2,12 @@ function setEventHandlers(){
 
 $("#button").click(function(){
 	console.log("Submit button has been clicked");
-
-	var $input = $("#quiz_input");
+// input from index.erb
+	var $input = $("#facebook_input");
 
 	$.ajax({
 		url: '/details',
-		type: 'POST',
+		type: 'GET',
 		dataType: 'json' ,
 		data: {detail_name: $input.val()},
 	}).done(function(data){

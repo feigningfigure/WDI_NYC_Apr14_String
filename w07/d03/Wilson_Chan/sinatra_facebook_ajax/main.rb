@@ -49,6 +49,12 @@ post '/details' do
 end
 
 get '/details' do
+
+	details = params[:details]
+
+	url = "http://graph.facebook.com/wilsonchan"
+	name_json = HTTParty.get(url)
+
 	content_type :json
 
 	db_contents = get_data
