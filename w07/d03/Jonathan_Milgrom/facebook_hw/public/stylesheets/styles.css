@@ -1,0 +1,12 @@
+#show_button{
+	margin: 10px;
+	height: 25px;
+	width: 80px;
+	border: solid black 1px;
+	background-color: lightgrey;
+	color: red;
+	text-align: center;
+	line-height: 30px;
+	padding: 2px;
+
+}
