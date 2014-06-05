@@ -14,6 +14,24 @@ function setEventHandlers(){
 			$input.val('');
 			});
 		
+	setInterval(function(){
+		var $user_new = $("#user_new");
+
+		$.ajax({
+			url: '/users',
+			type: 'GET',
+			dataType: 'json',
+		}).done(function(data){
+			console.log(data);
+			$user_new.empty();
+			data.users.forEach(function(user){
+				$user_new.html("<li>"+ user["name"] +"</li>")
+			})
+		});
+
+	}, 1000);
+
+
 	});
 
 	$('#show_button').click(function(){
