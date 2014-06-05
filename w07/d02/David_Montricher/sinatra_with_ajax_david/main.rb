@@ -32,7 +32,7 @@ post '/quizzes' do
 
   new_quiz = request.params["quiz_name"]
 
-  data.push("")
+  data["quizzes"].push(new_quiz)
 
   save_data(data)
 end

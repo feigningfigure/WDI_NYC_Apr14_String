@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
 
 
+#get '/dialogues' => "dialogues#"
 
 
   # post or ADD one or more dialogues

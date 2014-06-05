@@ -15,8 +15,6 @@ function setEventHandler(){
   });
 };
 
-
-
 $( document ).ready(function(){
 
 

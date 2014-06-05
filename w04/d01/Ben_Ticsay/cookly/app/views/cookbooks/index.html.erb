@@ -1,0 +1,13 @@
+<!-- TODO: make this a partial -->
+<%= form_for @cookbook, url: "/cookbooks", method: "POST" do |f| %>
+  <%= f.text_field :title, {placeholder: "title"} %>
+  <%= f.text_field :description, {placeholder: "description"} %>
+  <%= f.submit %>
+<% end %>
+
+<h2>Cookbooks</h2>
+<ul class="cookbooks">
+  <% @cookbooks.each do |cookbook| %>
+    <li><%= link_to cookbook.title, "/cookbooks/#{cookbook.id}" %></li>
+  <% end %>
+</ul>
