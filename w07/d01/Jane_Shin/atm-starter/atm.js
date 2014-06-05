@@ -91,14 +91,36 @@ $(document).ready(function(){
  
 });
 
+
+
+function updateDisplay(raw_dollars, balance) {
+  // var balance = Number(raw_dollars.text().substr(1));  
+  // balance += Number(depositAmount.val());
+  raw_dollars.text('$' + balance);
+  if (balance === 0) {
+    raw_dollars.css('background-color','red');
+  } else {
+    raw_dollars.css('background-color','#E3E3E3');    
+  }
+};
+
+
+
 function withdrawFunds(amount, primary_account, secondary_account) {
 	var balance = Number(primary_account.text().substr(1));
     balance -= Number(amount.val());
 
-  if (balance < amount) {
+  if (balance < amount.val()) {
     var secondary_balance = Number(secondary_account.text().substr(1));
-    balance = secondary_balance + balance
+    balance = secondary_balance - balance;
+    updateDisplay(primary_account, 0);
+    updateDisplay(secondary_account, balance);
+  } else {
+    updateDisplay(primary_account, balance)
   }
+
+  
+
 
   // if (balance >= amount) {
 	 // balance -= Number(amount.val());
@@ -109,14 +131,5 @@ function withdrawFunds(amount, primary_account, secondary_account) {
 	// return balance;
 };
 
-function updateDisplay(raw_dollars, balance) {
-	// var balance = Number(raw_dollars.text().substr(1));	
-	// balance += Number(depositAmount.val());
-  raw_dollars.text('$' + balance);
-  if (balance === 0) {
-    raw_dollars.css('background-color','red');
-  } else {
-    raw_dollars.css('background-color','#E3E3E3');    
-  }
-};
+
 
