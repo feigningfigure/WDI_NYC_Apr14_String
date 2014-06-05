@@ -19,6 +19,28 @@ function setEventHandlers(){
     });
 
   });
+
+var $show_button = $("#show_button");
+
+  $show_button.click(function(){
+    console.log("Show button has been clicked");
+
+
+  $.ajax({
+      url: '/records',
+      type: 'GET',
+      dataType: 'json',
+    }).done(function(data){
+      console.log(data);
+      var $record_list = $("#record_list");
+      $record_list.empty();
+      data.records.forEach(function(item){
+        $record_list.append("<li> Name:"+ item["name"] +"</li> <li>" + item["id"] + "</li>")
+      })
+
+    })
+  });
+
 }
 
 $(document).ready(function(){

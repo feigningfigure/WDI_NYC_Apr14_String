@@ -40,22 +40,26 @@ post '/records' do
   puts request
   puts request.params
 
-  # continue posting below
-  new_name = {"name" => request.params["fb_name"]}
+  name = params["fb_name"]
+  fb_name_hash = get_fb(name)
 
+  # continue posting below
+  new_name = {"name" => fb_name_hash["name"],
+              "id" => fb_name_hash["id"],
+              "location" => fb_name_hash["locale"],
+              "gender" => fb_name_hash["gender"]}
+  # new_name = {"name" => request.params["fb_name"]}
   data["records"].push(new_name)
   save_data(data)
+  # binding
   #the below is data in the .done function of the AJAX call
   message = request.params["fb_name"]
   message.to_json
-
 end
 
-# get '/records' do
-#   content_type :json
+get '/records' do
+  content_type :json
+  db_contents = get_data
+  db_contents.to_json
+end
 
-#   db_contents = get_data
-
-#   db_contents.to_json
-
-# end
