@@ -6,8 +6,9 @@ class TasksController < ApplicationController
 		# binding.pry
 		respond_to do |format|
 			# format.html { render json: Task.all }
-			format.html { @tasks = "Task.all" }
-			format.json { render json: "I am a response" }
+			@tasks = Task.all
+			format.html {  }
+			format.json { render json: @tasks }
 		end
 	end
 

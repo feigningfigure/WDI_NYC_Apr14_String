@@ -4,14 +4,15 @@
 
 	<button id="add_task_button">Add Task</button>
 
-<ul>
-  <%= binding.pry %>
+<div id="task_div">
+  <li id="task_list">
+</ul>
+</div>
+
 <% @tasks.each do |task| %>
-
-        <li><%= task.task_text %>,
-
+ <ul id="task_list">
+     <li id="task_list"></li>
+    <li><%= task.task_text %></li>
 
   <% end %>
 </ul>
-
-</div>

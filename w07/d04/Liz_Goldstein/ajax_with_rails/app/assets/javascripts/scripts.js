@@ -1,16 +1,16 @@
-var jqXHR;
+// var jqXHR;
 
 function addEventListeners(){
 	var $add_task_button = $('#add_task_button'),
 			$task_text_input = $('#task_text_input'),
-			$due_date_input = $('#due_date_input');			
+			$due_date_input = $('#due_date_input');
 
 			$add_task_button.click(function(){
 				var params = {task_text: $task_text_input.val(),
 											due_date: $due_date_input.val()
 										};
 				var task = new Task;
-				task.create(params);							
+				task.create(params);
 			});
 }
 
@@ -23,6 +23,9 @@ var Task = function(){
 				data: params
 			}).done(function(data){
 				console.log(data);
+				$("#task_text_input").val('')
+				$('#due_date_input').val('')
+				$("#task_list").append("<li>" + data["task_text"] + "</li>");
 			});
 
 		// 	jqXHR.done(function(data) {
