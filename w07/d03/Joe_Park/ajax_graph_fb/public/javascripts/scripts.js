@@ -31,21 +31,6 @@ function setEventHandlers(){
 		});
 	});
 
-	$('#show_button').click(function(){
-		var $user_list = $("#user_list");
-
-		$.ajax({
-			url: '/users',
-			type: 'GET',
-			dataType: 'json',
-		}).done(function(data){
-			$user_list.empty();
-			data.users.forEach(function(user){
-				$user_list.append("<li>"+ user["name"] +"</li>");
-			});
-		});
-	});
-
 }
 
 
