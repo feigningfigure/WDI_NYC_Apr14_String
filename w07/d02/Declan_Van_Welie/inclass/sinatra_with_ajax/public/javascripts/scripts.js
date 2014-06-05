@@ -71,7 +71,7 @@ var $quiz_list = $("#quiz_list");
  }).done(function(data){
   console.log(data);
 
-// $quiz_list.empty();
+$quiz_list.empty();
 data.quizzes.forEach(function(item){
 $quiz_list.prepend("<li>" + item["name"] + "</li>")
    if (item["name"].toLowerCase() === "michael jackson") {
