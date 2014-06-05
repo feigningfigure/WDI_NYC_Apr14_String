@@ -1,46 +1,49 @@
 class TasksController < ApplicationController
 
+	protect_from_forgery except: :create	
 
-  def index
-    respond_to do |format|
-      # format.html { render json: Task.all }
-      format.html { @tasks = Task.all }
-      format.json { render json: Task.all }
-    end
+	def index
+		# binding.pry
+		respond_to do |format|
+			# format.html { render json: Task.all }
+			format.html { @tasks = "Task.all" }
+			format.json { render json: "I am a response" }
+		end
+	end
 
-  end
+	def new
 
-  def new
+	end
 
-  end
+	def create
+		# binding.pry
 
-  def create
+		new_task = Task.create({task_text: params["task_text"], due_date: params["due_date"]})
+		respond_to do |format|
+			format.json { render json: new_task}
+		end
+	end
 
-    render json "I am a json response"
+	def show
 
-  end
+	end
 
-  def show
+	def edit
 
-  end
+	end
 
-  def update
+	def update
 
-  end
+	end
 
-  def edit
+	def destroy
 
-  end
+	end
 
-  def destroy
+	private
 
-  end
-
-  private
-
-  def task_params
-    params.require(:task).permit(:text_text, :due_date, :completed)
-  end
-
+	def task_params
+		params.require(:task).permit(:task_text, :due_date, :completed)
+	end	
 
 end
