@@ -35,7 +35,7 @@ var $show_button = $("#show_button");
       var $record_list = $("#record_list");
       $record_list.empty();
       data.records.forEach(function(item){
-        $record_list.append("<li> Name:"+ item["name"] +"</li> <li>" + item["id"] + "</li>")
+        $record_list.append("<li> Name: "+ item["name"] +"</li> <li> ID: " + item["id"] + "</li> <li> Location: " + item["location"] + "</li> <li> Gender: " + item["gender"] + "</li><li> Username: " + item["username"] + "</li>" )
       })
 
     })

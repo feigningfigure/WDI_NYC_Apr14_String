@@ -47,7 +47,8 @@ post '/records' do
   new_name = {"name" => fb_name_hash["name"],
               "id" => fb_name_hash["id"],
               "location" => fb_name_hash["locale"],
-              "gender" => fb_name_hash["gender"]}
+              "gender" => fb_name_hash["gender"],
+              "username" => fb_name_hash["username"]}
   # new_name = {"name" => request.params["fb_name"]}
   data["records"].push(new_name)
   save_data(data)
