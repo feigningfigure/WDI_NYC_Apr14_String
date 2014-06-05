@@ -1,7 +1,32 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+@weapons_list = [
+  "Medieval Dagger",
+  "Baselard",
+  "Cinquedea",
+  "Ear dagger",
+  "Groes Messer",
+  "Katar",
+  "Mercygiver",
+  "Poniard",
+  "Rondel",
+  "Scramasax",
+  "Sgian",
+  "Stiletto",
+  "Dirk",
+  "Anelace",
+]
+
+# Gladiator.delete_all
+@weapons_list.each do |weapon|
+
+  Gladiator.create({
+    name: Faker::Name.name,
+    weapon: weapon,
+    victory_count: Faker::Number.digit.to_i
+
+    })
+
+end
+
+
+
+
