@@ -11,7 +11,12 @@ function setEventHandlers() {
 			data: {profile_name: $input.val()},
 		}).done(function(data){
 			console.log(data);
-			// HTTParty.get("data");
+			var dataObject = JSON.parse(data);
+			console.log(dataObject);
+			
+			for (key in dataObject)  {
+				$("#list").append("<li>" + dataObject[key] + "</li>");
+			}
 		});
 	});	
 }

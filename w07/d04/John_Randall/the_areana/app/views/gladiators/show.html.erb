@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gladiator.name %>
+</p>
+
+<p>
+  <strong>Weapon:</strong>
+  <%= @gladiator.weapon %>
+</p>
+
+<p>
+  <strong>Victory count:</strong>
+  <%= @gladiator.victory_count %>
+</p>
+
+<%= link_to 'Edit', edit_gladiator_path(@gladiator) %> |
+<%= link_to 'Back', gladiators_path %>

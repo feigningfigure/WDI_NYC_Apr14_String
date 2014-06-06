@@ -1,6 +1,6 @@
 function Hangman(word) {
   var wrongGuess = false;
-  var badGuesses = 0;
+  var badGuessCount = 0;
   var gameOver = false;
   var playerProgress = []
   var wordLength = word.length;
@@ -11,20 +11,48 @@ function Hangman(word) {
   }
 
   this.progress = function() {
-    console.log(playerProgress.join(" "));
+    return playerProgress.join(" ");
   }
 
   this.guess = function(letter) {
     wrongGuess = true;
     var placeholders = playerProgress;
-    for (var i = 0; i < word.length; i++) {
-      if (word.charAt(i) == letter.toLowerCase()) {
+    for (var i = 0; i <= word.length; i++) {
+      if (word.charAt(i) === letter.toLowerCase() && badGuessCount <= 5) {
         wrongGuess = false;
         placeholders[i] = letter;
       } else {
-        badGuesses++;
+      badGuessCount++;
       }
     }
   }
+}
+
+  // this.guess = function(letter) {
+  //   wrongGuess = true;
+  //   var placeholders = playerProgress;
+  //   for (var i = 0; i < word.length; i++) {
+  //     if (word.charAt(i) == letter.toLowerCase() && badGuesses <= 5) {
+  //       wrongGuess = false;
+  //       placeholders[i] = letter;
+  //     } else if ( badGuesses > 5) {
+  //       return "Tough luck, you lose."
+  //     } else {
+  //       badGuesses++;
+  //     }
+  //   }
+  // }
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
