@@ -15,6 +15,7 @@ class TasksController < ApplicationController
 	end
 
 	def create
+		 # PUT DATE CHANGE CODE
 		new_task = Task.create({task_text: params["task_text"], due_date: params["due_date"]})
 		respond_to do |format|
 			format.json { render json: new_task}
@@ -22,8 +23,8 @@ class TasksController < ApplicationController
 	end
 
 	def show
-
-
+@task = Task.find(params[:id]).destroy
+redirect_to '/'
 
 	end
 
@@ -42,7 +43,7 @@ class TasksController < ApplicationController
 	private
 
 	def task_params
-		params.require(:task).permit(:task_text, :due_date, :completed)
+		params.require(:task).permit(:task_text, :due_date, :completed, :id)
 	end
 
 end
