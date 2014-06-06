@@ -29,54 +29,15 @@
 
 ### Ajax on Rails
 
-We're going to create an app that keeps track of the places we'd like to visit.
+Continue working on the Task app we started in class.
 
-#### Specs
 
-- Create a rails app caled `vacationr`
+#### Spec
 
-- It should have a `to_visit` model with the following attributes:
+- Show all tasks on initial page load.
+- Append tasks added through form to the list on the page.
 
-	- place - string
-	- season - string
-	- priority - integer
-	
-	(you can add more attributes, if you like)
 
-- Seed the database using Faker
+#### Bonue
 
-- ***Use Rails form helpers instead of HTML forms***
-- ***Instead of creating two seperate forms, use a partial to dry your code***
-
-- Make Create and Read functions.
-
-- Each function should map to a Javascript function that includes an AJAX call within it.  For example, below is an example from class today of how a Read function could look:
-
-```this is javascript:
-
-function FetchTasks(){
-
-  $.ajax({
-    // the url where my JSON lives
-    url: "/tasks.json",
-    // the format I expect back (i.e. JSON)
-    dataType: "json",
-    // the HTTP verb I intend to use
-    type: "get",
-    // the callback function that fires on success (i.e. 200)
-    success: function(data){
-    
-      $('#main_container').empty();
-
-      data.forEach(function(task){
-        $('#main_container').append("<p>"+task.task_text+"</p>"); 
-      })
-
-    }
-  });
-
-}
-
-```
-
----------
+Add update and delete functions.
