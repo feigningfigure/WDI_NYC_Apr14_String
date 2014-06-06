@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   root to: 'tasks#index'
 
   resources :tasks
+ 
+end
 
-#      Prefix Verb   URI Pattern               Controller#Action
+# ======== gotta rake routes in terminal to see this ============
+#    Prefix Verb   URI Pattern               Controller#Action
 #      root GET    /                         tasks#index
 #     tasks GET    /tasks(.:format)          tasks#index
 #           POST   /tasks(.:format)          tasks#create
@@ -14,5 +17,3 @@ Rails.application.routes.draw do
 #           PATCH  /tasks/:id(.:format)      tasks#update
 #           PUT    /tasks/:id(.:format)      tasks#update
 #           DELETE /tasks/:id(.:format)      tasks#destroy
-
-end
