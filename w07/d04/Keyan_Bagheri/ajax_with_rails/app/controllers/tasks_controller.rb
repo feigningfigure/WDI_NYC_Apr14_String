@@ -6,8 +6,8 @@ class TasksController < ApplicationController
 		# binding.pry
 		respond_to do |format|
 			# format.html { render json: Task.all }
-			format.html { @tasks = "Task.all" }
-			format.json { render json: "I am a response" }
+			format.html { @tasks = Task.all }
+			format.json { render json: Task.all }
 		end
 	end
 
@@ -37,7 +37,11 @@ class TasksController < ApplicationController
 	end
 
 	def destroy
-
+		task_to_destroy = Task.find_by_id(params[:id])
+		task_to_destroy.destroy
+		respond_to do |format|
+			format.json { render json: "Item was deleted"}
+		end
 	end
 
 	private
