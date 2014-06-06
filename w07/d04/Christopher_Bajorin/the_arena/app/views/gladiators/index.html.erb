@@ -1,0 +1,14 @@
+<div class="gladiators">
+  <ul>
+  <% @gladiators.each do |gladiator| %>
+    <li>
+      <p>
+        <%= gladiator.name%> <br>
+        <%= gladiator.weapon%><br>
+        <%= gladiator.victory_count %>
+      </p>
+    </li>
+    <%end%>
+  </ul>
+</div>
+
