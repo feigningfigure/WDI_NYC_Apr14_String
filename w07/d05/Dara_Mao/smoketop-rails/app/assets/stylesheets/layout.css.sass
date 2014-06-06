@@ -1,0 +1,47 @@
+/* {{{ Colors */
+
+body, nav
+  background: $dark_peach
+
+#container
+  background: $light_peach
+
+#site-header
+  background: $light_blue
+
+#site-header h2
+  background: $dark_blue
+  color: $dark_blue_gray
+  border-color: $deep_blue
+
+/* }}} */
+
+
+body
+  font-family: arial, verdana, sans-serif
+  margin: 0
+
+#container
+  @include centered
+  width: $site_width
+
+#container, #site-header
+  overflow: auto
+
+main
+  padding-left: 25px
+
+#site-header
+  h1, h2
+    padding: 1em
+
+  h2
+    text-align: center
+    font-family: monospace
+    font-weight: normal
+    text-transform: uppercase
+    letter-spacing: 5px
+    word-spacing: 15px
+
+    border-style: solid
+    border-width: 5px 0 3px 0

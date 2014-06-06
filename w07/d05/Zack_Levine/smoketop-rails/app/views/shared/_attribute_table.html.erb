@@ -1,0 +1,8 @@
+<table>
+  <% attrs.each do |attr| %>
+    <tr class="<%= attr %>">
+      <td class="key"><strong><%= attr.humanize %></strong></td>
+      <td class="value"><%= model[attr] %></td>
+    </tr>
+  <% end %>
+</table>
