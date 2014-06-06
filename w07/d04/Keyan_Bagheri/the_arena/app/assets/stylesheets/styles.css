@@ -1,0 +1,10 @@
+body {
+  background-image: url('https://s3.amazonaws.com/uploads.hipchat.com/39979/779967/bfn7JvvV37rXuYV/upload.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+p {
+  background: RGBA(23,23,23,.2);
+}
