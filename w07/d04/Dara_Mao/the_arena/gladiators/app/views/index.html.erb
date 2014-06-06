@@ -1,0 +1,9 @@
+<h2>Gladiators</h2>
+
+<ul class="gladiators">
+  <% @gladiators.order(id: :desc).each do |gladiator| %>
+         <li><%= gladiator.name %></li>
+         <li><%= gladiator.weapon %></li>
+         <li><%= gladiator.victory_count %></li>
+  <% end %>
+</ul>
