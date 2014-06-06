@@ -1,0 +1,29 @@
+<%= form_for(@gladiator) do |f| %>
+  <% if @gladiator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gladiator.errors.count, "error") %> prohibited this gladiator from being saved:</h2>
+
+      <ul>
+      <% @gladiator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :weapon %><br>
+    <%= f.text_field :weapon %>
+  </div>
+  <div class="field">
+    <%= f.label :victory_count %><br>
+    <%= f.number_field :victory_count %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
