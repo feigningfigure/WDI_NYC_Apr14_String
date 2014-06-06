@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+#controls {
+  margin: 50px;
+  text-align: center;
+}
+
+body {
+  font-family: Raleway;
+}
+
+h1 {
+  font-size: 72px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 48px;
+  text-align: center;
+}
+
+button {
+  font-size: 36px;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 20px;
+}
+

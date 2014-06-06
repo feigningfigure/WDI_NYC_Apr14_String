@@ -37,7 +37,7 @@ setInterval(function() {
 			$quiz_list.empty();
 			data.quizzes.forEach(function(item){
 				$quiz_list.append("<li>"+ item["title"] +"</li>")
-			}, 5000);
+			}, 4000);
 			})
 		})
 	});
