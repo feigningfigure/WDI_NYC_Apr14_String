@@ -2,6 +2,7 @@ function addEventListeners(){
 var $add_task_button = $('#add_task_button'),
 $task_text_input = $('#task_text_input'),
 $due_date_input = $('#due_date_input');
+$delete_button = $('#delete_link')
 
 $add_task_button.click(function(){
 var params = {task_text: $task_text_input.val(),
@@ -23,12 +24,23 @@ data: params
 console.log(data);
 $('#task_text_input').val('');
 $('#due_date_input').val('');
-$("#task_list").prepend("<li>" + data["task_text"] + " " + data["due_date"]+ "</li>");
 });
 
 
 
 };
+//I think the add_task_button ends here
+$delete_button.click(function(event){
+$.ajax({
+url: '/tasks/id',
+type: "POST",
+dataType: "json",
+data: {"_method":"delete"}
+}).done(function(){
+	console.log("Deleted");
+});
+event.preventDefault();
+})
 
 };
 
@@ -41,7 +53,7 @@ dataType: 'json'
 }).done(function(data){
 var $task_list = $("#task_list");
 for (i=0; i<data.length; i++){
-var $display = $("#task_list").prepend("<li>" + data[i]["task_text"] + " " + data[i]["due_date"]+ "</li>");
+var $display = $("#task_list").prepend("<li>" + data[i]["task_text"] + " " + data[i]["due_date"]+ " <a id='delete_link' href=tasks/" + data[i]["id"] + ">DELETE</a></li>");
 };
 console.log($display);
 });
