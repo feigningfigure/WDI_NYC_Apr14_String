@@ -26,8 +26,6 @@ $('#task_text_input').val('');
 $('#due_date_input').val('');
 });
 
-
-
 };
 //I think the add_task_button ends here
 $delete_button.click(function(event){
@@ -53,8 +51,9 @@ dataType: 'json'
 }).done(function(data){
 var $task_list = $("#task_list");
 for (i=0; i<data.length; i++){
-var $display = $("#task_list").prepend("<li>" + data[i]["task_text"] + " " + data[i]["due_date"]+ " <a id='delete_link' href=tasks/" + data[i]["id"] + ">DELETE</a></li>");
+var $display = $("#task_list").prepend("<li>" + data[i]["task_text"] + " " + data[i]["due_date"]+ " Task complete? " + data[i]["completed"] + " <a id='delete_link' href=tasks/" + data[i]["id"] + ">DELETE</a></li>");
 };
+
 console.log($display);
 });
 
