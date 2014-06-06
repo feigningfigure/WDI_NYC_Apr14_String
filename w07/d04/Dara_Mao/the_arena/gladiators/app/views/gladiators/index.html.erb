@@ -1,0 +1,7 @@
+<h2>Gladiators</h2>
+
+<div class="gladiators">
+  <% @gladiators.order(id: :desc).each do |gladiator| %>
+         <h5><%= gladiator.name %></h5>
+  <% end %>
+</div>
