@@ -20,17 +20,11 @@ function setEventHandlers() {
     task.all();
   });
 
-  $task_list.click('li', function(){
-    // $("#task_list li").each(function(item){ item.attr("id") });
-    
-    // var task = new Task; 
-    // task.throwOut($(this).children().each(function(item){ $(item).attr("id") }));
-    // setTimeout(task.all, 500);
-    var hello = $(this).children()[9];
-    console.log($(hello).attr("id"));
-
-
-    // console.log($(this).children().each(function(item){ $(item)["id"] }));
+  $task_list.on('click', 'li', function(){
+    var task = new Task; 
+    task.throwOut($(this).attr("id"));
+    setTimeout(task.all, 500);
+    console.log($(this).attr("id"));
   });
 
 
