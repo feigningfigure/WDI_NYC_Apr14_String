@@ -1,8 +1,7 @@
 function addEventListeners(){
   var $add_task_button = $('#add_task_button'),
-      $task_text_input = $('#task_text_input'),
-      $due_date_input = $('#due_date_input'),
-      $errand = $('.errand');
+    $task_text_input = $('#task_text_input'),
+    $due_date_input = $('#due_date_input'),
 
       $add_task_button.click(function(){
         var params = {task_text: $task_text_input.val(),
@@ -19,10 +18,10 @@ function addEventListeners(){
   function setErrandClassEventHandlers(){
     $(".errand").click(function(){
       console.log("Hi");
-      var id_string = $(this).attr('id');
-      console.log(id_string)
+      var id = $(this).attr('id');
+      console.log(id)
       $.ajax({
-        url: '/tasks/' + id_string,
+        url: '/tasks/' + id,
         type: "DELETE",
         dataType: "json",
         data: id_string
