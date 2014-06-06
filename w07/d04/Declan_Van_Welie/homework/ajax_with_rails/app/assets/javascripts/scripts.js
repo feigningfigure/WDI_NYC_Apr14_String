@@ -45,7 +45,34 @@ var Task = function(){
 		// 		console.log("ALWAYS");
 		// 	});
 		};
+
+			this.show = function(){
+		 $.ajax({
+		    url: '/tasks',
+		    type: 'GET',
+		    dataType: 'json'
+		    }).done(function(data){
+		    console.log(data);
+	      $show_tasks_list.empty();
+	      data.tasks.forEach(function(task){
+	      	 $show_tasks_list.prepend(
+      "<li class='task_item'>" + item["task"].task_text + "</li>"
+      )
+
+      )};
+
+	    )};
+
+
+
+
+
+
+
+
 	};
+
+
 
 $(function(){
 
