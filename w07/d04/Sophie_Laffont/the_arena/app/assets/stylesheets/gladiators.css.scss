@@ -1,0 +1,44 @@
+// Place all the styles related to the Gladiators controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  color: #000;
+  padding: 0px 20px 50px 20px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size:38px;
+  color: #000;
+}
+h2 {
+  font-size: 30px;
+  color: #ee5921;
+}
+h3 {
+  font-size: 22px;
+  color: #cc0000;
+}
+
+p.note {
+  font-style: italic;
+}
+
+table {
+  width: 75%;
+  margin: 20px 0px 20px 0px;
+}
+
+th {
+  background: #ccc;
+  text-align: left;
+  padding: 5px;
+  margin: 10px 10px;
+}
+td {
+  text-align: left;
+  padding: 5px;
+  margin: 10px 10px;
+}
