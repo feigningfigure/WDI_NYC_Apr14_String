@@ -6,7 +6,7 @@ class TasksController < ApplicationController
 		# binding.pry
 		respond_to do |format|
 			# format.html { render json: Task.all }
-			format.html { @tasks = Task.all }
+			format.html { @tasks = "Task.all" }
 			# Adding in Task.all to try and return all tasks on the view page
 			format.json { render json: Task.all }
 		end
