@@ -9,3 +9,13 @@
 <div>
   <button id="show_all_button">Show All Tasks</button>
 </div>
+
+<!-- <h2>Tasks List</h2> -->
+<!-- <ul id="task_list"> -->
+    <% tasks.each do |task| %>
+        <li><%= task["task_text"] %></li>
+        <li><%= task["due_date"] %></li>
+        <li><%= task["completed"] %></li>
+    <% end %>
+<!-- </ul> -->
+
