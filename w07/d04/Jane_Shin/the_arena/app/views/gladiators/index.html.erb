@@ -1,0 +1,16 @@
+<h1>Gladitor Roster</h1>
+
+<table>
+	<th>Name</th>
+	<th>Weapon</th>
+	<th>Victory Count</th>
+
+	<% @gladiators.each do |gladiator| %>
+		<tr>
+			<td><%= gladiator.name %></td>
+			<td><%= gladiator.weapon %></td>
+			<td><%= gladiator.victory_count %></td>
+		</tr>
+	<% end %>
+
+</table>
