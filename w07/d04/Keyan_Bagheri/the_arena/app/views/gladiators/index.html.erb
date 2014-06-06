@@ -1,0 +1,4 @@
+<h2>Introducing your heroes</h2>
+  <% @gladiators.each do |gladiator| %>
+    <p class="name"><%= gladiator.name %> is a <%= gladiator.description %> who has slain <%= gladiator.victory_count %> foes with their <%= gladiator.weapon %></p>
+<% end %>
