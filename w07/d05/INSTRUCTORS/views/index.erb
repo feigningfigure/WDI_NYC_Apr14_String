@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+
+                // $("#users-list").load("/load", "times=5&enthusiasm=some");
+                $("#users-list").load("/load?enthusiasm=much", {times: 10, enthusiasm: "absolutely tons"});
+
+            });
+
+        </script>
+    </head>
+    <body>
+        Sup?
+
+        <ul id="users-list">
+
+            <%# rand(5).times do %>
+                <%#= "<li>HEY</li>" %>
+            <%# end %>
+
+            <li>Max</li>
+            <li>Elvis</li>
+            <li>Joffrey</li>
+
+        </ul>
+    </body>
+</html>

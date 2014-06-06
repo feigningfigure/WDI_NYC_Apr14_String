@@ -1,0 +1,12 @@
+<div>
+	<input id="task_text_input" placeholder="enter a task">
+	<input id="due_date_input" placeholder="enter a due date">
+
+	<button id="add_task_button">Add Task</button>
+
+  <% @task_list.each do |task| %>
+    <li><%=["task_text"]%></li>
+    <li><%=["due_date"]%></li>
+    <% end %>
+
+</div>
