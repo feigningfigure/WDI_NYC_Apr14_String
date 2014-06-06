@@ -1,0 +1,22 @@
+<h2>Gladiators</h2>
+
+<p>These are the warriors ready to do bloody battle for your pleasure.*</p>
+
+<table>
+  <th>Name</th>
+  <th>Weapon</th>
+  <th>Victory Count</th>
+
+<% @gladiators.each do |gladiator| %>
+  <tr>
+    <td> <%= gladiator.name %> </td>
+    <td> <%= gladiator.weapon %> </td>
+    <td> <%= gladiator.victory_count %> </td>
+  </tr>
+<% end %>
+
+</table>
+
+<p class="note">* Don't worry -- they're just slaves. They'll be better off in Elysium.  (They might even meet Matt Damon!)</p>
+
+
