@@ -50,15 +50,6 @@ var Show = function(){
 
 
 
-
-
-
-
-
-
-
-
-
 $(function(){
 
   addEventListeners();

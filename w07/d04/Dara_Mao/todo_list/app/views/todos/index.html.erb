@@ -7,7 +7,6 @@
 </div>
 
 <ul class="show_list">
-  <!-- <li><%#= @todos %></li> -->
   <% @todos.order(id: :desc).each do |todo| %>
     <li><%= todo.task_text %></li>
     <li><%= todo.due_date %></li>
