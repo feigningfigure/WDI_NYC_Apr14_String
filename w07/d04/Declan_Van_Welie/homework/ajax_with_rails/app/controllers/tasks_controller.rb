@@ -29,9 +29,7 @@ class TasksController < ApplicationController
 			# format.html { render json: Task.all }
 			format.html { @tasks = "Task.all" }
 			format.json { render json: Task.all }
-
-
-
+		end
 	end
 
 	def edit
