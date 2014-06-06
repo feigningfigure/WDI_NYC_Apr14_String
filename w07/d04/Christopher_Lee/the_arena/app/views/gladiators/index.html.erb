@@ -1,0 +1,7 @@
+<h1>Gladiators</h1>
+
+<% @gladiators.each do |gladiator| %>
+  <h1>Name: <%=  gladiator.name  %></h1>
+  <h3>Weapon: <%= gladiator.weapon  %></h3>
+  <h3>Victory Count: <%= gladiator.victory_count %></h3>
+<% end %>
