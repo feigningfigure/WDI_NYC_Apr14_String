@@ -1,5 +1,5 @@
 <% @beasts.each do |beast| %>
-  <article class="beast" id="beast-<%= beast.id %>">
+  <article class="beast" id="beast-<%= beast.id %>" data-diet="<%= beast.diet %>">
     <header>
       <h1><%= beast.name %></h1>
       <%= image_tag(beast.image_filename || 'unavailable.png') %>
