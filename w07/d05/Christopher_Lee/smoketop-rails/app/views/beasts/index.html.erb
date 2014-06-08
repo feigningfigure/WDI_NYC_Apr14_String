@@ -1,4 +1,14 @@
-<section id="beasts">
+<script id="welcome-template" type="text/template">
+  <p><%%= message %></p>
+</script>
+
+<style>
+.hidden{
+  display: none;
+}
+</style>
+
+<section id="beasts" class="hidden">
   <h1>Beasties below...</h1>
   <%= render "diet_form" %>
   <section id="beast-list">

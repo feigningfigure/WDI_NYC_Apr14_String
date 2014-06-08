@@ -1,3 +1,5 @@
+// need to setclicks for the JS to work
+// also AJAX get requests for pages
 
 function addEventListeners(){
   $('#beast-form input').on('change', function() {
@@ -26,6 +28,12 @@ function addEventListeners(){
         $("article[data-diet='herbivore']").show();
     }
   });
+
+  var welcomeTemplate = _.template($("#welcome-template").text());
+  var message = { message: "Welcome" };
+    $("main").prepend(
+      welcomeTemplate(message)
+    );
 }
 
 
