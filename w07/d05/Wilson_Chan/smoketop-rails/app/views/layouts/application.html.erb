@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- everything here displays sitewide -->
 <html>
   <head>
     <title><%= SmoketopApp::APPLICATION_TITLE %></title>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
   </head>
   <body>
 
@@ -13,24 +13,19 @@
 
       <header id="site-header">
         <h1><%= SmoketopApp::APPLICATION_TITLE %></h1>
-        <!-- the funny numbers are bullet points -->
         <h2>&#8226; &#8226; &#8226; A compendium of esoteric critters &#8226; &#8226; &#8226;</h2>
       </header>
 
       <nav>
         <ul>
-          <!-- rails links that are really html links are created. when the home link is clicked, it will go to the root path. In routes.rb the root destination is beasts#index -->
           <li><%= link_to "Home", root_path  %></li>
-         <!--  link_to is a rails helper method that generates html links. ***text, path or action*** the beast_path is mapped in the routes.rb file. get "/beasts" => "beasts#index" -->
           <li><%= link_to "List Beasts", beasts_path  %></li>
-      <!--    route.rb get "/about" => "beasts#about" but it is empty -->
           <li><%= link_to "About", about_path  %></li>
         </ul>
       </nav>
 
       <main>
         <%= yield %>
-
       </main>
 
     </div>
