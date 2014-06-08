@@ -9,6 +9,10 @@ function setEventHandlers() {
       $about_button = $("#about_button"),
       $diet_button_submit = $(".diet_button_submit");
 
+  $home_button.click(function(){
+    $show_section.html("<h1>  Welcome! </h1>");
+  });
+
   $beast_list_button.click(function(){
     var beast = new Beast;
     $show_section.html(
@@ -24,6 +28,7 @@ function setEventHandlers() {
       );
 
     beast.list_all();
+    $beast_list.empty();
     // beast_list_button.click(function() closing braces
   });
 
@@ -168,9 +173,6 @@ function setEventHandlers() {
             <img src='/assets/" + image + "'/> \
             </header> \
             <section class='entry-body'> \
-            <table> \
-            <h1> </h1> \
-            </table> \
             </article>"
             );
           // if statement closing brace:

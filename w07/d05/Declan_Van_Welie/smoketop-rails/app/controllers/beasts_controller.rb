@@ -10,7 +10,7 @@ class BeastsController < ApplicationController
 
     respond_to do |format|
       format.html { @beasts = Beast.all }
-      format.json { render json: Beast.all }
+      format.json { render json: Beast.all}
     end
     # if params[:diet]
     #   @diet = params[:diet]
@@ -19,7 +19,7 @@ class BeastsController < ApplicationController
     # end
 
     # if @diet != "any"
-    #   @beasts = Beast.where("diet = ?", params[:diet])
+    #   format.json { render json: Beast.where("diet = ?", "omnivore") }
     # else
     #   @beasts = Beast.all
     # end
