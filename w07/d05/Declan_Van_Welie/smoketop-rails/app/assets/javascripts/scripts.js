@@ -19,7 +19,7 @@ function setEventHandlers() {
       <input type='radio' name='diet' value='herbivore'>Herbivore<br> \
       <input type='radio' name='diet' value='carnivore'>Carnivore<br> \
       <input type='radio' name='diet' value='omnivore'>Omnivore<br> \
-      <input type='submit' value='Submit' class='diet_button_submit'> \
+      <input type='submit' value='Filter' class='diet_button_submit'> \
       </form>"
       );
 
@@ -32,11 +32,26 @@ function setEventHandlers() {
       var $checkedradio = $('[name="diet"]:radio:checked').val();
 
       alert($checkedradio);
+      $show_section.html(
+      "<h1> Beasties below... </h1> \
+      <strong>Diet:</strong> \
+      <form action=''> \
+      <input type='radio' name='diet' value='any'>Any<br> \
+      <input type='radio' name='diet' value='herbivore'>Herbivore<br> \
+      <input type='radio' name='diet' value='carnivore'>Carnivore<br> \
+      <input type='radio' name='diet' value='omnivore'>Omnivore<br> \
+      <input type='submit' value='Filter' class='diet_button_submit'> \
+      </form>"
+      );
 
-      if ($checkedradio == "herbivore"){
-        beast.list_herbivore();
-      }
-
+      if ($checkedradio === "any"){
+        beast.list_all();}
+      else if ($checkedradio === "herbivore"){
+        beast.list_herbivore();}
+      else if ($checkedradio === "carnivore"){
+        beast.list_carnivore();}
+      else if ($checkedradio === "omnivore"){
+        beast.list_omnivore();}
 
     });
 
@@ -51,6 +66,8 @@ function setEventHandlers() {
 
   var Beast = function(){
 
+
+
     this.list_all = function(){
       $.ajax({
         url: '/beasts',
@@ -62,11 +79,12 @@ function setEventHandlers() {
 
 
         data.forEach(function(beast){
+          var image = beast["image_filename"] || "unavailable.png"
           $show_section.append(
             "<article class='beast' id='beast-" + beast["id"] + "'> \
             <header> \
             <h1>" + beast["name"] + "</h1> \
-            <img src='/assets/" + beast["image_filename"] + "'/> \
+            <img src='/assets/" + image + "'/> \
             </header> \
             </article>"
             );
@@ -80,18 +98,79 @@ function setEventHandlers() {
         this.list_herbivore = function(){
       $.ajax({
         url: '/beasts',
+        // url: '/?diet=herbivore',
         type: 'GET',
         dataType: 'json'
       }).done(function(data){
         // $beast_list.empty();
         data.forEach(function(beast){
+          var image = beast["image_filename"] || "unavailable.png"
           if (beast["diet"] === "herbivore"){
           $show_section.append(
             "<article class='beast' id='beast-" + beast["id"] + "'> \
             <header> \
             <h1>" + beast["name"] + "</h1> \
-            <img src='/assets/" + beast["image_filename"] + "'/> \
+            <img src='/assets/" + image + "'/> \
             </header> \
+            </article>"
+            );
+          // if statement closing brace:
+          }
+          // data.forEach closing brackets/braces
+        });
+        // this.list .done function closing brace
+      });
+      // this.list function closing brace
+    }
+
+        this.list_carnivore = function(){
+      $.ajax({
+        url: '/beasts',
+        // url: '/?diet=herbivore',
+        type: 'GET',
+        dataType: 'json'
+      }).done(function(data){
+        // $beast_list.empty();
+        data.forEach(function(beast){
+          var image = beast["image_filename"] || "unavailable.png"
+          if (beast["diet"] === "carnivore"){
+          $show_section.append(
+            "<article class='beast' id='beast-" + beast["id"] + "'> \
+            <header> \
+            <h1>" + beast["name"] + "</h1> \
+            <img src='/assets/" + image + "'/> \
+            </header> \
+            </article>"
+            );
+          // if statement closing brace:
+          }
+          // data.forEach closing brackets/braces
+        });
+        // this.list .done function closing brace
+      });
+      // this.list function closing brace
+    }
+        this.list_omnivore = function(){
+      $.ajax({
+        url: '/beasts',
+        // url: '/?diet=herbivore',
+        type: 'GET',
+        dataType: 'json'
+      }).done(function(data){
+        // $beast_list.empty();
+        data.forEach(function(beast){
+          var image = beast["image_filename"] || "unavailable.png"
+          if (beast["diet"] === "omnivore"){
+          $show_section.append(
+            "<article class='beast' id='beast-" + beast["id"] + "'> \
+            <header> \
+            <h1>" + beast["name"] + "</h1> \
+            <img src='/assets/" + image + "'/> \
+            </header> \
+            <section class='entry-body'> \
+            <table> \
+            <h1> </h1> \
+            </table> \
             </article>"
             );
           // if statement closing brace:
