@@ -1,0 +1,11 @@
+<section id="beasts">
+  <h1>Beasties below...</h1>
+  <%= render "diet_form" %>
+  <section id="beast-list">
+    <%= render @beasts %> <!-- @beasts is an instance var -->
+  </section>
+</section>
+
+<!-- a way for me to check the values my params -->
+        <hr>
+        <%= params.inspect %>
