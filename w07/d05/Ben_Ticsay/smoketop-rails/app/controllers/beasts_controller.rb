@@ -18,13 +18,23 @@ class BeastsController < ApplicationController
     end
   end
 
-  def create
 
+   def create
+            Beast.create({
+                :name => params["name"]
+                # :diet => params["diet"],
+                # :light_ethology => params["light_ethology"],
+                # :habitat => params["habitat"],
+                # :size => params["size"],
+                # :description => params["description"]
+            })
+
+            render :json => {:message => "Success! Probably..."}
   end
 
   def destroy
 
-  end   
+  end
 
   def update
 
