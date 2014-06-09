@@ -1,0 +1,60 @@
+<script id="beastTemplate" type="text/template">
+ <section id="beasts">
+  <section id="beast-list">
+    <article class="beast">
+      <%%= name %>
+      <%%= image %>
+    </article>
+  </section>
+  <section id="entry-body">
+    <%%= attribute_table.html.erb %>
+    <%% p %>
+  </section>
+</script>
+
+
+
+<!-- FROM _DIET_FORM.HTML.ERB -->
+
+ <form action="/beasts" method="GET">
+  <strong>Diet:</strong>
+  <%= radio_button_tag 'diet', 'any', (@diet == 'any') %>
+  <label for="diet_any">Any</label>
+  <%= radio_button_tag 'diet', 'herbivore', (@diet == 'herbivore') %>
+  <label for="diet_herbivore">Herbivore</label>
+  <%= radio_button_tag 'diet', 'carnivore', (@diet == 'carnivore') %>
+  <label for="diet_carnivore">Carnivore</label>
+  <%= radio_button_tag 'diet', 'omnivore', (@diet == 'omnivore') %>
+  <label for="diet_omnivore">Omnivore</label>
+  <%= submit_tag "Filter" %>
+</form>
+
+
+<!-- FROM SCRIPTS.JS -->
+
+
+// $(document).ready(function() {
+
+// var beastTemplate = _.template($("#beastTemplate").text());
+// var beastList = $("#beast-list");
+// var beast = {
+//   name: name,
+//   image: $("#image_filename"),
+//   p: $("description_paragraphs")
+// }
+// $("#Filter").click(function() {
+
+
+
+//   $.ajax({
+//     url: "/beasts",
+//     type: "GET",
+//     dataType: "json",
+//     data:
+
+//   })
+
+// })
+
+
+// }

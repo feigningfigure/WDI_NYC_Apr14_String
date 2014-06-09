@@ -19,12 +19,31 @@ class BeastsController < ApplicationController
   end
 
   def create
+       if params["name"] == "Abraham Lincoln"
+            render :json => {:message => "FAILURE"}
+        else
+            Beast.create({
+                :name => params["name"],
+                :diet => params["diet"],
+                :light_ethology => params["light_ethology"],
+                :size => params["size"]
+
+            })
+
+             render :json => {:message => "Success! Probably..."}
+    end
+
+    # new_beast = Beast.create({name: params["name"]})
+    # respond_to do |format|
+    #   format.json { render json: new_beast}
+    # end
+
 
   end
 
   def destroy
 
-  end   
+  end
 
   def update
 
