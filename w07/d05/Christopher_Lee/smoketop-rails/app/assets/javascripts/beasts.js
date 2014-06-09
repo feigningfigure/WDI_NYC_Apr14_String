@@ -5,9 +5,9 @@ function addEventListeners(){
   setBeastClicks();
   loadWelcome();
 
-    $("#new-beast").click(function () {
-      $("#new-beast-form").slideToggle();
-    });
+  $("#new-beast").click(function () {
+    $("#new-beast-form").slideToggle();
+  });
 
   // $.ajax({
   //     url: '/',
@@ -37,6 +37,7 @@ function addEventListeners(){
 
       $("#beasts").show();
       setBeastClicks();
+      newBeast();
      // $("#beasts").removeClass("hidden");
   });
 
@@ -49,6 +50,36 @@ function addEventListeners(){
   });
 
 }
+
+function newBeast(){
+  var newBeastTemplate = _.template($("#newBeastTemplate").text());
+  var $beastList = $("#beast-list");
+  console.log("newBeast activated");
+  $("#add_beast_button").click(function(){
+        var newBeast = {
+          name: $("#name_input").val(),
+          diet: $("#diet_input").val(),
+          light_ethology: $("#light_ethology_input").val(),
+          habitat: $("#habitat_input").val(),
+          size: $("#size_input").val(),
+          description: $("#beast-description").val(),
+          image_filename: $("#image_input").val()
+        };
+
+        var newBeastHTML = newBeastTemplate(newBeast);
+        $beastList.prepend(newBeastHTML);
+
+        $.ajax({
+            url: "/",
+            type: "POST",
+            dataType: "json",
+            data: newBeast
+        }).done(function(data){
+            console.log(data);
+            });
+  });
+}
+
 
 function loadWelcome(){
   //$("#beasts").hide();

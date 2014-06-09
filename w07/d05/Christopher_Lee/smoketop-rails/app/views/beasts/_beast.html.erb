@@ -12,3 +12,34 @@
     </section>
   </article>
 <% end %>
+
+<script id="newBeastTemplate" type="text/template">
+<article class="beast" id="" data-diet= <%%= diet %>>
+    <header>
+      <h1><%%= name %></h1>
+      <img alt=<%%= name %> src=<%%="/assets/" + image_filename %>>
+    </header>
+    <section class="entry-body">
+      <table>
+    <tbody><tr class="diet">
+      <td class="key"><strong>Diet</strong></td>
+      <td class="value"><%%= diet %></td>
+    </tr>
+    <tr class="habitat">
+      <td class="key"><strong>Habitat</strong></td>
+      <td class="value"><%%= habitat %></td>
+    </tr>
+    <tr class="light_ethology">
+      <td class="key"><strong>Light ethology</strong></td>
+      <td class="value"><%%= light_ethology %></td>
+    </tr>
+    <tr class="size">
+      <td class="key"><strong>Size</strong></td>
+      <td class="value"><%%= size %></td>
+    </tr>
+</tbody></table>
+        <p><%%= description %></p>
+    </section>
+  </article>
+
+</script>
