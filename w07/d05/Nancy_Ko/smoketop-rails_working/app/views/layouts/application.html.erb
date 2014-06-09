@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="urf-8">
+    <title><%= SmoketopApp::APPLICATION_TITLE %></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+
+    <div id="container">
+
+      <header id="site-header">
+        <h1><%= SmoketopApp::APPLICATION_TITLE %></h1>
+        <h2>&#8226; &#8226; &#8226; A compendium of esoteric critters &#8226; &#8226; &#8226;</h2>
+      </header>
+
+      <nav>
+        <ul>
+          <li><%= link_to "Home", root_path  %></li>
+          <li><%= link_to "List Beasts", beasts_path  %></li>
+          <li><%= link_to "About", about_path  %></li>
+        </ul>
+      </nav>
+
+      <main>
+        <%= yield %>
+      </main>
+
+    </div>
+
+  </body>
+</html>
