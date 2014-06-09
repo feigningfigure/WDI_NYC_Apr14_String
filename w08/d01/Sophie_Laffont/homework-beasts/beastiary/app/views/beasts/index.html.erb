@@ -1,0 +1,33 @@
+<section id="beasts">
+  <h1>Beasties below...</h1>
+
+<!-- MAKE NEW BEAST SELECTION BUTTONS -->
+<form name="diet" class="diet-form">
+   <input type="radio" name='diet' class="diet-button" value='any'> any
+   <input type="radio" name='diet' class="diet-button" value='herbivore'> herbivore
+   <input type="radio" name='diet' class="diet-button" value='carnivore'> carnivore
+   <input type="radio" name='diet' class="diet-button" value='omnivore'> omnivore
+</form>
+
+ <section id="beast-list">
+    <%= render @beasts %>
+  </section>
+</section>
+<!-- UNDERSCORE TEMPLATE - USING KEYAN'S CODE FROM THE HIPCHAT-->
+<script id="beastTemplate" type="text/template">
+  <article class="beast">
+    <header>
+      <h1><%%= name %></h1>
+      <img src="/assets/<%%= image_filename || "unavailable.png" %>">
+   </header>
+
+    <section class="entry-body">
+
+      <p><strong>Diet:  </strong><%%= diet %></p>
+      <p><strong>Habitat:  </strong><%%= habitat %></p>
+      <p><strong>Light Ethology:  </strong><%%= light_ethology %></p>
+      <p><strong>Size:  </strong><%%= size %></p>
+        <p><%%= description %></p>
+    </section>
+  </article>
+</script>
