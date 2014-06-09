@@ -6,6 +6,8 @@ gem 'sass-rails', '~> 4.0.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'pry-rails'
+gem 'pry'
 
 group :development do
   gem 'annotate'
