@@ -2,7 +2,7 @@ function setEventHandlers(){
 
 $("#button").click(function(){
 	console.log("Submit button has been clicked");
-// input from index.erb
+
 	var $input = $("#facebook_input");
 
 	$.ajax({
