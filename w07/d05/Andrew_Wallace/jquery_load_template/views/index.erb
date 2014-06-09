@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery_load_template</title>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+      $("users-list").load("/load", "times=5");
+
+    });
+  </script>
+
+
+</head>
+<body>
+  Sup?
+
+  <ul id="users-list">
+
+    <li>Max</li>
+    <li>Elvis</li>
+    <li>Joffrey</li>
+
+  </ul>
+</body>
+</html>

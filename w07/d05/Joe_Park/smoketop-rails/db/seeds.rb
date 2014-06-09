@@ -1,5 +1,7 @@
 require 'ethology'
 
+# Beast.delete_all
+
 ActiveRecord::Base.connection.tables.each do |table|
   unless table == "schema_migrations"
     ActiveRecord::Base.connection.execute("TRUNCATE #{table}")
@@ -53,7 +55,7 @@ Beast.create!(
 )
 
 Beast.create!(
-  name: 'Windusk Burgæne',
+  name: 'Windusk Burgaene',
   diet: Diets::HERBIVORE,
   light_ethology: LightEthologies::NOCTURNAL,
   habitat: 'plains',
