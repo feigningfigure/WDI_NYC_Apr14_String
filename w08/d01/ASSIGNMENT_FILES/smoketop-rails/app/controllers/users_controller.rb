@@ -19,6 +19,10 @@ class UsersController < ApplicationController
     redirect_to :root
   end
 
+  def show
+    render :json => User.find(params[:id])
+  end
+
   private
 
   def user_params
