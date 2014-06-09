@@ -1,3 +1,25 @@
+var beastTemplate;
+
+var beast = {
+
+  fetch: function(id) {
+    var $this = this;
+    console.log("What is this?", this);
+    $.ajax({
+      url: "/beasts/" + id,
+      type: "GET",
+      dataType: "json"
+    }).done(function(result) {
+      console.log("What is this?", this);
+      console.log("What is $this?", $this);
+      $this.name = result.name;
+      $this.size = result.size;
+      $this.habitat = result.habitat;
+    });
+  }
+
+};
+
 function repopulateBeastList(diet) {
     var options = {
       diet: diet
@@ -43,8 +65,6 @@ function oldRepopulateBeastList(diet) {
 }
 
 function repopulateBeastListFromData(beasts) {
-  var beastTemplate = _.template($("#beast-template").text());
-
   $("#beast-list").empty();
   beasts.forEach(function(beast) {
     var beastHTML = beastTemplate({"beast": beast});
@@ -56,31 +76,34 @@ function repopulateBeastListFromData(beasts) {
 
 function setEventListeners() {
 
-  $("#diet-filter input:radio[name=diet]").click(function() {
+  jQuery("#diet-filter input:radio[name=diet]").click(function() {
     // This was the old way of doing it where the server returned HTML
     // oldRepopulateBeastList($(this).val());
-
-    repopulateBeastList($(this).val());
+    console.log("What is this?", this);
+    console.log("What is $(this)?", jQuery(this));
+    repopulateBeastList(jQuery(this).val());
   });
 
 }
 
 $(document).ready(function() {
 
+  beastTemplate = _.template($("#beast-template").text());
+
   setEventListeners();
 
-  // var html = beastTemplate({
-  //   beast: {
-  //     id: 5,
-  //     name: "Crocotillion",
-  //     image_filename: "crocotillion.png",
-  //     diet: "carnivore",
-  //     light_ethology: "nocturnal",
-  //     habitat: "swamp",
-  //     size: "large",
-  //     description_paragraphs: ["lol words"]
-  //   }
-  // })
+  var html = beastTemplate({
+    beast: {
+      id: 5,
+      name: "Crocotillion",
+      image_filename: "crocotillion.png",
+      diet: "carnivore",
+      light_ethology: "nocturnal",
+      habitat: "swamp",
+      size: "large",
+      description_paragraphs: ["lol words"]
+    }
+  })
 
   // $("#beast-list").html(html);
 
@@ -95,6 +118,20 @@ $(document).ready(function() {
   repopulateBeastListFromData(beastData);
 
 });
+
+
+// Ruby
+// { name: "Whargl" }
+// { :name => "Whargl" }
+
+// Javascript
+// { name: "Whargl" }
+// { "name": "Whargl" }
+
+
+
+
+
 
 
 
