@@ -42,21 +42,32 @@ $(document).ready(function() {
 
   var beastTemplate = _.template($("#beast-template").text());
 
+  // var html = beastTemplate({
+  //   beast: {
+  //     id: 5,
+  //     name: "Crocotillion",
+  //     image_filename: "crocotillion.png",
+  //     diet: "carnivore",
+  //     light_ethology: "nocturnal",
+  //     habitat: "swamp",
+  //     size: "large",
+  //     description_paragraphs: ["lol words"]
+  //   }
+  // })
 
-  var html = beastTemplate({
-    beast: {
-      id: 5,
-      name: "Crocotillion",
-      image_filename: "crocotillion.png",
-      diet: "carnivore",
-      light_ethology: "nocturnal",
-      habitat: "swamp",
-      size: "large",
-      description_paragraphs: ["lol words"]
-    }
-  })
+  // $("#beast-list").html(html);
 
-  $("#beast-list").html(html);
+  $.ajax({
+    url: "/beasts",
+    dataType: "json",
+    type: "GET"
+  }).done(function(beasts) {
+    $("#beast-list").empty();
+    beasts.forEach(function(beast) {
+      var beastHTML = beastTemplate({"beast": beast});
+      $("#beast-list").append(beastHTML);
+    });
+  });
 
 });
 
