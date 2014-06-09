@@ -5,15 +5,17 @@ function addEventListeners(){
   setBeastClicks();
   loadWelcome();
 
-  $.ajax({
-      url: '/tasks',
-      type: "GET",
-      dataType: "json"
-    }).done(function(httpResponse){
-      console.log("got httpresponse")
-      console.log(httpResponse);
-
+    $("#new-beast").click(function () {
+      $("#new-beast-form").slideToggle();
     });
+
+  // $.ajax({
+  //     url: '/',
+  //     type: "GET",
+  //     dataType: "json"
+  //   }).done(function(){
+  //     $("#beasts").hide();
+  //   });
 
   // $("#list-beasts").on('click', "a", function(){
   //   console.log("beasts is clicked");
@@ -25,6 +27,14 @@ function addEventListeners(){
   $("#list-beasts").click(function() {
       $("#welcome-message").hide();
       console.log("beasts is clicked");
+      $.ajax({
+        url: '/',
+        type: 'GET',
+        dataType: 'json'
+      }).done(function(data){
+        console.log(data);
+        });
+
       $("#beasts").show();
       setBeastClicks();
      // $("#beasts").removeClass("hidden");
@@ -80,5 +90,10 @@ function setBeastClicks(){
 }
 
 $(document).ready(function() {
+  // $("#beasts").hide();
   addEventListeners();
 });
+
+
+
+

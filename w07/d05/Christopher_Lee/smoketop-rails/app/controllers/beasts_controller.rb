@@ -8,17 +8,6 @@ class BeastsController < ApplicationController
 
   def index
     @beasts = Beast.all
-    # if params[:diet]
-    #   @diet = params[:diet]
-    # else
-    #   @diet = "any"
-    # end
-
-    # if @diet != "any"
-    #   @beasts = Beast.where("diet = ?", params[:diet])
-    # else
-    #   @beasts = Beast.all
-    # end
   end
 
   def create

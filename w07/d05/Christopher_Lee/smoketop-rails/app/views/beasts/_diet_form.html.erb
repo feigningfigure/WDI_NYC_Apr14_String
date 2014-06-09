@@ -9,3 +9,48 @@
   <input id="diet_omnivore" name="diet" type="radio" value="omnivore">
   <label for="diet_omnivore">Omnivore</label>
 </form>
+
+<div>
+  <a id="new-beast">Add a beast</a>
+    <form id="new-beast-form" style="display:none">
+      <input id="name_input" placeholder="enter beast name">
+      <label for="diet_input">Diet</label>
+      <select id="diet_input">
+        <option value="herbivore">herbivore</option>
+        <option value="carnivore">carnivore</option>
+        <option value="omnivore">omnivore</option>
+      </select>
+      <label for="light_ethology_input">Light Ethology</label>
+      <select id="light_ethology_input">
+        <option value="nocturnal">nocturnal</option>
+        <option value="diurnal">diurnal</option>
+        <option value="crepuscular">crepuscular</option>
+      </select>
+      <label for="habitat_input">Light Ethology</label>
+      <select id="habitat_input">
+        <option value="forest">forest</option>
+        <option value="ocean">ocean</option>
+        <option value="urban">urban</option>
+        <option value="subterranean">subterranean</option>
+        <option value="swamp">swamp</option>
+        <option value="mountain">mountain</option>
+        <option value="desert">desert</option>
+        <option value="jungle">jungle</option>
+        <option value="sky">sky</option>
+      </select>
+        <label for="size_input">size</label>
+        <select id="size_input">
+        <option value="minuscule">minuscule</option>
+        <option value="tiny">tiny</option>
+        <option value="small">small</option>
+        <option value="medium">medium</option>
+        <option value="large">large</option>
+        <option value="huge">huge</option>
+        <option value="colossal">colossal</option>
+      </select>
+      <textarea form="new-beast-form" id="beast-description" placeholder="Describe the beast">
+      </textarea>
+      <button id="add_beast_button">Add Beast</button>
+    </form>
+</div>
+
