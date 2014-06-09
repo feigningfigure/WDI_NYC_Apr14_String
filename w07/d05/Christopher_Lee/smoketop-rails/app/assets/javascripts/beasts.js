@@ -4,6 +4,7 @@
 function addEventListeners(){
   setBeastClicks();
   loadWelcome();
+  console.log("page has been loaded");
 
   $("#new-beast").click(function () {
     $("#new-beast-form").slideToggle();
@@ -101,7 +102,11 @@ function newBeast(){
             console.log(data);
             console.log("ajax worked");
             });
+        $("#beasts").show();
+        setBeastClicks();
+        newBeast();
   });
+
 }
 
 function loadAbout(){

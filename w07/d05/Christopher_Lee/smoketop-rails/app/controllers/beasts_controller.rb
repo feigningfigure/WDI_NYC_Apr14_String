@@ -7,7 +7,7 @@ class BeastsController < ApplicationController
   end
 
   def index
-    @beasts = Beast.all
+    @beasts = Beast.all.order('id DESC')
   end
 
   def create
@@ -20,7 +20,6 @@ class BeastsController < ApplicationController
     :description => params["description"],
     :image_filename => params["image_filename"]
     })
-    redirect_to '/beasts'
   end
 
   def destroy
