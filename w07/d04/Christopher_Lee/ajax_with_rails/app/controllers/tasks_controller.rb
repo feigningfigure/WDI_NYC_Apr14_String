@@ -33,7 +33,12 @@ class TasksController < ApplicationController
 	end
 
 	def update
-
+		binding.pry
+		tasks = Task.all
+		Task.update({task_text: params["task_text"]})
+		respond_to do |format|
+			format.json { render json: tasks}
+		end
 	end
 
 	def destroy
