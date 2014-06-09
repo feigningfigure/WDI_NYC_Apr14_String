@@ -1,0 +1,20 @@
+<% @beasts.each do |beast| %>
+  <article class="beast" id="beast-<%= beast.id %>">
+    <header>
+      <h1><%= beast.name %></h1>
+      <%= image_tag(beast.image_filename || 'unavailable.png') %>
+    </header>
+    <section class="entry-body">
+      <%= attribute_table beast, %w(diet habitat light_ethology size) %>
+      <% beast.description_paragraphs.each do |p| %>
+        <p><%= p %></p>
+      <% end %>
+    </section>
+    <section class='buttons'>
+      <%= button_to('show/edit via link', beast, {method: :get})%>
+        <button id="beast-show_btn-<%= beast.id %>" class="ajax_beast_show_btn">show/edit via jQuery</button>
+      <%= button_to('delete via link', beast, {method: :delete})%>
+        <button id="beast-delete_btn-<%= beast.id %>" class="ajax_beast_delete_btn">delete via jQuery</button>
+    </section>
+  </article>
+<% end %>
