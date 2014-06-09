@@ -101,6 +101,7 @@ function setEventHandlers() {
                     image_filename: $image_filename_input.val()
                     };
 
+      beast.create(params);
 
       $show_section.html(
       "<h1> Beasties below... </h1> \
@@ -124,7 +125,7 @@ function setEventHandlers() {
       <input type='submit' value='Submit' class='new_button_submit'/> \
       </form>"
       );
-      beast.create(params);
+
 
     });
 

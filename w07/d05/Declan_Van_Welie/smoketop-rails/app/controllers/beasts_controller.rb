@@ -28,6 +28,10 @@ class BeastsController < ApplicationController
     # end
   end
 
+  def new
+
+  end
+
   def create
     # Add in forms for a create page.
      new_beast = Beast.create(
@@ -39,6 +43,8 @@ class BeastsController < ApplicationController
        description: params["description"],
        image_filename: params["image_filename"]
        })
+
+     new_beast.save
 
     respond_to do |format|
       format.json { render json: new_beast }
