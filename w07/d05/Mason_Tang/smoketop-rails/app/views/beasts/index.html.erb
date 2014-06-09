@@ -2,6 +2,21 @@
   <h1>Beasties below...</h1>
   <%= render "diet_form" %>
   <section id="beast-list">
-    <%= render @beasts %>
+    <%= render "beast" %>
   </section>
 </section>
+
+<input id="new_beast_name" />
+<input id="new_beast_diet" />
+<input id="new_beast_habitat" />
+<input id="new_beast_light_ethology" />
+<input id="new_beast_size" />
+<button id="add_new_beast">CREATE!</button>
+
+<script id="beastTemplate" type="text/template">
+  <article class="beast">
+    <header>
+      <h1><%%= name %></h1>
+
+  </article>
+</script>
