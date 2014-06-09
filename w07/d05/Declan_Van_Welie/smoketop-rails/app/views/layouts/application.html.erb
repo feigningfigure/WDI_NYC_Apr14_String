@@ -2,8 +2,8 @@
 <html>
   <head>
     <title><%= SmoketopApp::APPLICATION_TITLE %></title>
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_include_tag "application"%>
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -17,14 +17,26 @@
 
       <nav>
         <ul>
-          <li><%= link_to "Home", root_path  %></li>
-          <li><%= link_to "List Beasts", beasts_path  %></li>
-          <li><%= link_to "About", about_path  %></li>
+          <li id= "home_button"><a>Home</a></li>
+          <li id="beasts_list_button"><a>List Beasts</a></li>
+          <li id="about_button"><a>About</a></li>
         </ul>
       </nav>
 
       <main>
-        <%= yield %>
+        <div class= "show_all">
+        <h1>  Welcome! </h1>
+        </div>
+
+        <ul class= "beast_list"></ul>
+
+
+
+
+
+
+
+
       </main>
 
     </div>
