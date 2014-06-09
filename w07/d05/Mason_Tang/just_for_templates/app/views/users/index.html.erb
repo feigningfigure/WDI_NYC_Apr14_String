@@ -1,0 +1,23 @@
+<ul id="user_list">
+    <% @users.each do |u| %>
+        <li>
+            <div><%= u.name %></div>
+            <div><%= u.favorite_color %></div>
+        </li>
+    <% end %>
+</ul>
+
+<input id="new_user_name" />
+<input id="new_user_favorite_color" />
+<button id="add_new_user">CREATE!</button>
+
+<script id="userTemplate" type="text/template">
+    <li class="user">
+        <div><%%= name %></div>
+        <div><%%= favorite_color %></div>
+    </li>
+</script>
+
+
+
+
