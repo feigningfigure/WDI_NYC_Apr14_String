@@ -1,5 +1,5 @@
 <% @beasts.each do |beast| %>
-  <article class="beast" id="beast-<%= beast.id %>">
+  <article class="beast" id="beast-<%= beast.id %>" data-diet="<%= beast.diet %>">
     <header>
       <h1><%= beast.name %></h1>
       <%= image_tag(beast.image_filename || 'unavailable.png') %>
@@ -10,5 +10,38 @@
         <p><%= p %></p>
       <% end %>
     </section>
+    <button class='remote-delete' id="<%= beast.id %>">Delete</button>
   </article>
 <% end %>
+
+<script id="newBeastTemplate" type="text/template">
+<article class="beast" id="" data-diet= <%%= diet %>>
+    <header>
+      <h1><%%= name %></h1>
+      <img alt=<%%= name %> src=<%%="/assets/" + image_filename %>>
+    </header>
+    <section class="entry-body">
+      <table>
+    <tbody><tr class="diet">
+      <td class="key"><strong>Diet</strong></td>
+      <td class="value"><%%= diet %></td>
+    </tr>
+    <tr class="habitat">
+      <td class="key"><strong>Habitat</strong></td>
+      <td class="value"><%%= habitat %></td>
+    </tr>
+    <tr class="light_ethology">
+      <td class="key"><strong>Light ethology</strong></td>
+      <td class="value"><%%= light_ethology %></td>
+    </tr>
+    <tr class="size">
+      <td class="key"><strong>Size</strong></td>
+      <td class="value"><%%= size %></td>
+    </tr>
+</tbody></table>
+        <p><%%= description %></p>
+    </section>
+    <button class='remote-delete' id="">Delete</button>
+  </article>
+
+</script>

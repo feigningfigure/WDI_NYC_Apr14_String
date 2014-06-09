@@ -6,10 +6,13 @@ ActiveRecord::Base.connection.tables.each do |table|
   end
 end
 
+
 # allow heredoc syntax for long-form text, but remove the indentations
 def deindent str
   str.gsub(/^ */, "").strip()
 end
+
+Beast.delete_all
 
 Beast.create!(
   name: 'Crocotillion',
@@ -53,7 +56,7 @@ Beast.create!(
 )
 
 Beast.create!(
-  name: 'Windusk Burgæne',
+  name: 'Windusk Burgane',
   diet: Diets::HERBIVORE,
   light_ethology: LightEthologies::NOCTURNAL,
   habitat: 'plains',
