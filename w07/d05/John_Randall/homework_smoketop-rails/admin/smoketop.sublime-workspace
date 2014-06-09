@@ -1,0 +1,1650 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"update",
+				"updateDisplay"
+			],
+			[
+				"checking",
+				"checkingAccount"
+			],
+			[
+				"with",
+				"withdraw"
+			],
+			[
+				"deposit",
+				"deposit_btn"
+			],
+			[
+				"col",
+				"col_count"
+			],
+			[
+				"row",
+				"row_count"
+			],
+			[
+				"ne",
+				"next_frame"
+			],
+			[
+				"cell",
+				"cell_colony"
+			],
+			[
+				"paren",
+				"parent_frame"
+			],
+			[
+				"parent",
+				"parent_colony"
+			],
+			[
+				"curr",
+				"current_frame"
+			],
+			[
+				"cur",
+				"current_frame"
+			],
+			[
+				"cells",
+				"cells_that_survive"
+			],
+			[
+				"cel",
+				"cell_container"
+			],
+			[
+				"out",
+				"outer_bounds"
+			],
+			[
+				"x_m",
+				"x_min"
+			],
+			[
+				"tell_",
+				"tell_blank_spaces_to_evolve"
+			],
+			[
+				"sur",
+				"surrounding_possition"
+			],
+			[
+				"curre",
+				"current_frame_cells_arr"
+			],
+			[
+				"star",
+				"starting_grid_cols"
+			],
+			[
+				"num",
+				"num_of_cells_to_seed"
+			],
+			[
+				"controller",
+				"controller_sandbox"
+			],
+			[
+				"size",
+				"font-size"
+			],
+			[
+				"ali",
+				"text-align"
+			],
+			[
+				"flo",
+				"float_left"
+			],
+			[
+				"redirec",
+				"redirect_to"
+			],
+			[
+				"token",
+				"token"
+			],
+			[
+				"toe",
+				"token_response_hash"
+			],
+			[
+				"tok",
+				"token_response_hash"
+			],
+			[
+				"access",
+				"access_token"
+			],
+			[
+				"google",
+				"google_authorization_code"
+			],
+			[
+				"redirect",
+				"redirect_URI"
+			],
+			[
+				"step",
+				"step2_url"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"styl",
+				"font-style"
+			],
+			[
+				"border",
+				"border-collapse"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"lis",
+				"list-style-image"
+			],
+			[
+				"trips",
+				"trips_on_route"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"departu",
+				"departure_time"
+			],
+			[
+				"trip",
+				"trip_id"
+			],
+			[
+				"city",
+				"city_departure_times"
+			],
+			[
+				"stop",
+				"stop_time"
+			],
+			[
+				"route",
+				"route_id"
+			],
+			[
+				"user",
+				"user_routes"
+			],
+			[
+				"home",
+				"home_stop"
+			],
+			[
+				"Home",
+				"home_stop"
+			],
+			[
+				"agency",
+				"agency_id"
+			],
+			[
+				"Project",
+				"ProjectEntries"
+			],
+			[
+				"passwo",
+				"password_confirmation"
+			],
+			[
+				"rout",
+				"route_options"
+			],
+			[
+				"stoptimes",
+				"stop_times"
+			],
+			[
+				"stoptime",
+				"stop_times"
+			],
+			[
+				"service",
+				"service_id"
+			],
+			[
+				"gtfs",
+				"gtfs_col_names"
+			],
+			[
+				"seed",
+				"seed_users"
+			],
+			[
+				"tran",
+				"transit_agency_id"
+			],
+			[
+				"file",
+				"file_name_to_models_hash"
+			],
+			[
+				"input",
+				"input_hash"
+			],
+			[
+				"files",
+				"files_to_process"
+			],
+			[
+				"fil",
+				"file_name_to_models_hash"
+			],
+			[
+				"Stop",
+				"stoptime"
+			],
+			[
+				"to_s",
+				"to_sym"
+			],
+			[
+				"delta",
+				"delta_field_name_mappings"
+			],
+			[
+				"agenc",
+				"agency_id"
+			],
+			[
+				"ag",
+				"agency_id"
+			],
+			[
+				"Game",
+				"game_question"
+			],
+			[
+				"super",
+				"superteam_id"
+			],
+			[
+				"for",
+				"form_for"
+			],
+			[
+				"hea",
+				"headquarters_location"
+			],
+			[
+				"head",
+				"headquarters"
+			],
+			[
+				"new",
+				"new_superteam"
+			],
+			[
+				"superte",
+				"superteams"
+			],
+			[
+				"Super",
+				"superteams"
+			],
+			[
+				"ras",
+				"raw_response"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"json",
+				"json_response"
+			],
+			[
+				"stock",
+				"stock_symbol"
+			],
+			[
+				"old",
+				"old_product_quantity_in_stock"
+			],
+			[
+				"req",
+				"required"
+			],
+			[
+				"produc",
+				"product_quantity_in_stock"
+			],
+			[
+				"y",
+				"yes_or_no"
+			],
+			[
+				"new_",
+				"new_product_description"
+			],
+			[
+				"new_prod",
+				"new_product_quantity_in_stock"
+			],
+			[
+				"old_pro",
+				"old_product_quantity_in_stock"
+			],
+			[
+				"quan",
+				"quantity_in_stock"
+			],
+			[
+				"po",
+				"positive_integer"
+			],
+			[
+				"product_",
+				"product_description"
+			],
+			[
+				"product",
+				"product_price"
+			],
+			[
+				"produ",
+				"product_description"
+			],
+			[
+				"key",
+				"keys"
+			],
+			[
+				"da",
+				"database_hash"
+			],
+			[
+				"fin",
+				"find"
+			],
+			[
+				"sear",
+				"search"
+			],
+			[
+				"ship",
+				"ship_product"
+			],
+			[
+				"ord",
+				"order_product"
+			],
+			[
+				"del",
+				"delete_product_record"
+			],
+			[
+				"up",
+				"update_product_record"
+			],
+			[
+				"create",
+				"create_product_record"
+			],
+			[
+				"tabl",
+				"table_name"
+			],
+			[
+				"ta",
+				"tablename"
+			],
+			[
+				"search",
+				"search_type"
+			],
+			[
+				"pro",
+				"product_quantity_in_stock"
+			],
+			[
+				"number",
+				"number_to_order"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"get",
+				"get_and_validate"
+			],
+			[
+				"db",
+				"dbname"
+			],
+			[
+				"artist",
+				"artist_hash"
+			],
+			[
+				"creator",
+				"creator_obj"
+			],
+			[
+				"ap",
+				"api_response_parsed"
+			],
+			[
+				"arrary",
+				"array_of_artists_to_expand_from"
+			],
+			[
+				"of",
+				"array_of_tested_artists"
+			],
+			[
+				"arra",
+				"array_of_tested_artists"
+			],
+			[
+				"build",
+				"build_array_of_related_artists"
+			],
+			[
+				"art",
+				"artists_arr_by_name"
+			],
+			[
+				"rele",
+				"release_group_objs_arr"
+			],
+			[
+				"api_",
+				"api_raw"
+			],
+			[
+				"arr",
+				"array_of_release_group_ids"
+			],
+			[
+				"release",
+				"release_group"
+			],
+			[
+				"api_re",
+				"api_response_array_of_release_groups"
+			],
+			[
+				"ar",
+				"array_of_recordings"
+			],
+			[
+				"fr",
+				"friendly_name"
+			],
+			[
+				"arti",
+				"artistA_discography"
+			],
+			[
+				"array_",
+				"array_of_recordings"
+			],
+			[
+				"text",
+				"text-align"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/johnrandall/code/wdi/projects_homework/homework_smoketop-rails/spec.TODO",
+			"settings":
+			{
+				"buffer_size": 1448,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/johnrandall/code/wdi/projects_homework/homework_smoketop-rails/app/controllers/beasts_controller.rb",
+			"settings":
+			{
+				"buffer_size": 790,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+			[
+				"add fol",
+				"Project: Add Folder"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"packa:d",
+				"Package Control: Disable Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"renam",
+				"File: Rename"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"add ",
+				"Project: Add Folder"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"html rail",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"rails",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"form",
+				"Snippet: form_tag"
+			],
+			[
+				"ren",
+				"File: Rename"
+			],
+			[
+				"linkto",
+				"Snippet: link_to (path)"
+			],
+			[
+				"brack",
+				"BracketHighlighter: Toggle Global Enable"
+			],
+			[
+				"",
+				"BracketHighlighter: Toggle Global Enable"
+			],
+			[
+				"link",
+				"Snippet: link_to (path)"
+			],
+			[
+				"hidden ",
+				"Snippet: form_for hidden_field"
+			],
+			[
+				"snip select",
+				"Snippet: select { |e| .. }"
+			],
+			[
+				"form rad",
+				"Snippet: form_for radio_box"
+			],
+			[
+				"label",
+				"Snippet: form_for label"
+			],
+			[
+				"snip field",
+				"Snippet: form_for file_field"
+			],
+			[
+				"form radio",
+				"Snippet: form_for radio_box"
+			],
+			[
+				"form la",
+				"Snippet: form_for label"
+			],
+			[
+				"stops",
+				"Strapdown.js Markdown: Preview in Sublime Text"
+			],
+			[
+				"git",
+				"Git: Checkout"
+			],
+			[
+				"markd",
+				"GitHub Flavored Markdown: Preview"
+			],
+			[
+				"markdown",
+				"GitHub Flavored Markdown: Preview"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"mov",
+				"File: Move"
+			],
+			[
+				"snip",
+				"Snippet: link_to (path)"
+			],
+			[
+				"linkt",
+				"Snippet: link_to model"
+			],
+			[
+				"snip lin",
+				"Snippet: link_to (path)"
+			],
+			[
+				"Snippet: ",
+				"Snippet: form_tag"
+			],
+			[
+				"synt",
+				"Set Syntax: Ruby"
+			],
+			[
+				"floo",
+				"Floobits - Join Recent Workspace"
+			],
+			[
+				"floot",
+				"Floobits - Share Directory (Public)"
+			],
+			[
+				"new fil",
+				"File: New File Relative to Current View"
+			],
+			[
+				"leave",
+				"Floobits - Leave Workspace"
+			],
+			[
+				"join",
+				"Floobits - Join Recent Workspace"
+			],
+			[
+				"leav",
+				"Floobits - Leave Workspace"
+			],
+			[
+				"floobi",
+				"Floobits - Join Recent Workspace"
+			],
+			[
+				"floo joi",
+				"Floobits - Join Workspace"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal ",
+				"Package Control: Install Package"
+			],
+			[
+				"add fold",
+				"Project: Add Folder"
+			],
+			[
+				"folder",
+				"Project: Add Folder"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"git:commit",
+				"Git: Commit"
+			],
+			[
+				"git: comm",
+				"Git: Commit"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git:com",
+				"Git: Commit"
+			],
+			[
+				"git:add",
+				"Git: Quick Add"
+			],
+			[
+				"git:st",
+				"Git: Status"
+			],
+			[
+				"git ini",
+				"Git: Init"
+			],
+			[
+				"git:l",
+				"Git: Log"
+			],
+			[
+				"git:stat",
+				"Git: Status"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"package control:",
+				"Package Control: List Packages"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"packa:in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"syn:ru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"mark",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"snip:if el	",
+				"Snippet: if … else … end"
+			],
+			[
+				"snipp",
+				"Snippet: if … end"
+			],
+			[
+				"syntax: ru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"sidebar",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"ab",
+				"About"
+			],
+			[
+				"syn:	ruby",
+				"Set Syntax: Ruby"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 515.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), 'wb' ).write( urllib2.urlopen( 'http://sublime.wbond.net/' +pf.replace( ' ','%20' )).read()); print( 'Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/johnrandall/code/wdi/projects_homework/homework_smoketop-rails/app/models/beast.rb",
+		"/Users/johnrandall/code/wdi/projects_homework/homework_smoketop-rails/app/assets/stylesheets/beasts.css.sass",
+		"/Users/johnrandall/code/wdi/projects_homework/homework_smoketop-rails/bin/bundle",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/.git/MERGE_MSG",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w07/d01/John_Randall/jquery_exercise/jquery_01.js",
+		"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w07/d01/John_Randall/jquery_exercise/index.html",
+		"/Users/johnrandall/Library/Application Support/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/Users/johnrandall/code/wdi/projects/conways_JR/modules/render_engine.rb",
+		"/Users/johnrandall/code/wdi/projects/conways_JR/modules/evolution_engine.rb",
+		"/Users/johnrandall/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/johnrandall/code/wdi/projects/conways_JR/classes/setable_matrix.rb",
+		"/Users/johnrandall/code/wdi/projects/conways_JR/conways_JR.rb",
+		"/Users/johnrandall/code/wdi/agile_web_dev_book/demo/config/routes.rb",
+		"/Users/johnrandall/code/wdi/agile_web_dev_book/demo/app/controllers/say_controller.rb",
+		"/Users/johnrandall/code/wdi/agile_web_dev_book/demo/Gemfile",
+		"/Users/johnrandall/code/wdi/agile_web_dev_book/demo/db/seeds.rb",
+		"/Users/johnrandall/code/wdi/agile_web_dev_book/demo/config/environments/test.rb",
+		"/Users/johnrandall/code/wdi/agile_web_dev_book/demo/config/initializers/session_store.rb",
+		"/Users/johnrandall/code/wdi/projects/sandbox/bin/bundle",
+		"/Users/johnrandall/code/wdi/projects/sandbox/bin/rails",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/config/routes.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/controllers/sandboxes_controller.rb",
+		"/Users/johnrandall/code/wdi/projects/sandbox/bin/rake",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/views/layouts/application.html.erb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/views/users/new.html.erb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/views/users/home.html.erb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/user.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/controllers/users_controller.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/helpers/google_auth_helper.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/helpers/google_calendar_helper.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/concerns/gtfs_parser.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/assets/stylesheets/styles.css",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/views/sessions/new.html.erb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/resources/Demo 2014-05-22.md",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/.git/COMMIT_EDITMSG",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/schema.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/controllers/sessions_controller.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/seeds.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/config/initializers/filter_parameter_logging.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/bin/rails",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/Rakefile",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/Gemfile",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/stop_time.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/helpers/application_helper.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/controllers/application_controller.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/assets/stylesheets/application.css",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/assets/javascripts/application.js",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/config/initializers/session_store.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/config/initializers/cookies_serializer.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/feed_info.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/frequency.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/.git/MERGE_MSG",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/config/secrets.yml",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/google_access_token.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/google_access_tokens.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/user_routes.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140521233001_create_google_access_tokens.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140521230806_create_google_access_tokens.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/trip.rb",
+		"/Users/johnrandall/Downloads/client_secret_737999546481-cjqe1jnfckp7jpbb3660qrnc1pppor9v.apps.googleusercontent.com.json",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/helpers/users_helper.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/assets/javascripts/users.js.coffee",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/config/application.rb",
+		"/Users/johnrandall/.bash_profile",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/helpers/sessions_helper.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140520154129_create_users.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/README.md",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/resources/design_diagrams.graffle",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140516150957_create_routes.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140516145129_create_agencies.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/config/initializers/mime_types.rb",
+		"/Users/johnrandall/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/route.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/concerns/google_oauth_helper.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/resources/sublime/commuter_cal.sublime-project",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/config/initializers/inflections.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/assets/stylesheets/sessions.css.scss",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/config/initializers/api.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/assets/images/.keep",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/gtfs_data/trips.txt",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/gtfs_data/stops.txt",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/gtfs_data/agency.txt",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140520193112_create_user_routes.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/tmp/cache/assets/development/sass/6b9715e9a9ed3bb047c0db14dae10088d794bff4/sessions.css.scssc",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/assets/javascripts/sessions.js.coffee",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/stop.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/gtfs_data/routes.txt",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140520154049_user.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140520145510_create_users.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/views/users/show.html.erb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/fare_attribute.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/controllers/commuter_cal.sublime-project",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/spec/models/fare_attribute_spec.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/spec/models/fare_rule_spec.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/spec/models/frequency_spec.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/assets/stylesheets/users.css.scss",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140519121032_create_users.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/agency.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/calendar_date.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140516151931_create_stop_times.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140516145703_create_stops.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/resources/data_models_gtfs_14-05-19.png",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/gtfs_data/stop_times.txt",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/gtfs_data/calendar_dates.txt",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/Gemfile.lock",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/gtfs_data/shapes.txt",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140516152253_create_shapes.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140516152104_create_calendar_dates.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140516151202_create_trips.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/bin/spring",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/google_api/client_secret_722879538801.apps.googleusercontent.com.json",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/gtfs/trip.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/readme_draft.md",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/app/models/stops.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140516123544_create_trips.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140516123404_create_stop_times.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140516123221_create_stops.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140516122951_create_shapes.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140516122756_create_routes.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/db/migrate/20140516122409_create_agencies.rb",
+		"/Users/johnrandall/code/wdi/projects/commuter_calx/db/gtfs_data/agency.txt",
+		"/Users/johnrandall/code/wdi/projects/commuter_calx/db/gtfs_data/routes.txt",
+		"/Users/johnrandall/code/wdi/projects/commuter_calx/db/gtfs_data/shapes.txt",
+		"/Users/johnrandall/code/wdi/projects/commuter_cal/x",
+		"/Users/johnrandall/code/wdi/projects/wdi_proj_1/google_api/client_secret_722879538801.apps.googleusercontent.com.json",
+		"/Users/johnrandall/code/wdi/projects/guess_whom/.git/MERGE_MSG",
+		"/Users/johnrandall/code/wdi/projects/guess_whom/app/models/card_tags.rb",
+		"/Users/johnrandall/code/wdi/projects/guess_whom/app/models/questions.rb"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<open folders>",
+			"",
+			"/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w04/d01/John_Randall/superheroes_on_rails",
+			"<open files>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"build",
+			"@@",
+			"LiveCells",
+			"#LEARN",
+			"there are",
+			"push_onto_next_frame_cells",
+			"?\n",
+			"next_frame_cells_arr",
+			"current_frame_cells_arr",
+			"row",
+			"def",
+			"%>",
+			"<%#=",
+			"jojo",
+			"class='clear'",
+			"3000home",
+			"home",
+			"post",
+			"google_access_token",
+			"WEB_APP_CLIENT_ID",
+			"logged in ",
+			"header_box",
+			"sessions_path",
+			"google_oauth_email_address",
+			"EMAIL_ADDRESS",
+			"GOOGLE_CLIENT_SECRET",
+			"GOOGLE_CLIENT_ID",
+			"GoogleOAuthHelper",
+			"FIX",
+			"LEARN",
+			"#LEARN",
+			"learn",
+			"departure_times",
+			"city_departure_times",
+			"relevant",
+			"relevant_departures_from_my_city",
+			"exit",
+			"city",
+			"stop_times_at_my_city",
+			"rides_at_my_city",
+			"arr_of_ids_of_trips_on_my_route",
+			"departures_from_my_city",
+			"h3",
+			"h2",
+			"h1",
+			"User",
+			"user",
+			" '",
+			"home_station",
+			"reading",
+			".index",
+			"gtfs_col_name",
+			"col_name_to_index_number_mappings_for_csv",
+			"active_record_field_name",
+			"puts",
+			"create",
+			"05-19",
+			"resources",
+			"csv",
+			"txt_file_name",
+			"arec_to_gtfs_name_mappings_delta",
+			"file_name_to_models_hash",
+			"options_hash",
+			"input_hash",
+			"ha",
+			"##",
+			"###",
+			"folder_url",
+			"agency_txt",
+			"parse_agency_txt",
+			"AR",
+			"file_name_to_models_hash",
+			"file",
+			"arec_to_gtfs_name_mappings_delta",
+			"ar",
+			"ar_",
+			"AR_",
+			",\n",
+			"ar_",
+			"ar_to",
+			"r_to",
+			"ar_",
+			"files_to_process",
+			"gtfs",
+			"delt",
+			"col_name_to_index_number_mappings_for_csv",
+			"gtfs_col_name",
+			"gtfs_col_names",
+			"col_name_to_index_number_mappings_for_csv",
+			"map",
+			"gtfs_col_names",
+			"gtfs_col_name",
+			"col_name_to_index_number_mappings_for_csv",
+			"index number mapp",
+			"col_name_to_index_number_mappings_for_csv",
+			"gtfs_col_name",
+			"col_name_to_index_number_mappings_for_csv",
+			"to_s",
+			"gtfs_col_name",
+			"delta_field_name_mappings",
+			"ar_to_gtfs_name_mappings",
+			"ar_col_names_of_concern",
+			"ar_col_names",
+			"active_record_column_name",
+			"gtfs_to_ar_name_mappings",
+			"field_name_mappings_for_gtfs_to_active_record",
+			"active_record_column_names_of_concern_arr",
+			"active_record_column_names_arr",
+			"gtfs_field_name",
+			"field_name_to_index_number_mappings_for_csv",
+			"field",
+			"field_name_to_index_number_mappings_for_csv",
+			"gtfs_column_names",
+			"input_folder_url",
+			"folder_url",
+			"csv_rows",
+			"gtfs_cvs_column_names",
+			"field_name_to_index_number_mappings_of_array_of_csv_rows",
+			"gtfs_column_names",
+			"array_of_csv_rows",
+			"array_of_",
+			"array_of_csv_rows",
+			"field_name_to_index_number_mappings_for_csv_input",
+			"active_record_column_names_of_concern",
+			"active_record_column_names_arr",
+			"header_row",
+			"field_name_to_index_number_mappings_for_csv_input",
+			"field_name_to_index_number_mappings_for_cvs_input"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"thank_you_msg_single",
+			"transaction_confirmation",
+			"do not",
+			"thing_to_search_in",
+			"scanner",
+			"mover",
+			"$discInHand",
+			"$",
+			"parent",
+			"chosenSourceStack",
+			"stack"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/johnrandall/code/wdi/projects_homework/homework_smoketop-rails/spec.TODO",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1448,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PlainTasks/PlainTasks.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/johnrandall/code/wdi/projects_homework/homework_smoketop-rails/app/controllers/beasts_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 790,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								345,
+								349
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 131.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 345.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-checkout":
+	{
+		"height": 124.0
+	},
+	"output.git-commit":
+	{
+		"height": 112.0
+	},
+	"output.git-init":
+	{
+		"height": 112.0
+	},
+	"output.markdown":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 200.0
+	},
+	"project": "smoketop.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"be",
+				"homework_smoketop-rails/app/controllers/beasts_controller.rb"
+			],
+			[
+				"cell",
+				"classes/cell.rb"
+			],
+			[
+				"sayc",
+				"app/controllers/say_controller.rb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"layout",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"styl",
+				"app/assets/stylesheets/styles.css"
+			],
+			[
+				"sessionnew",
+				"app/views/sessions/new.html.erb"
+			],
+			[
+				"gtfs",
+				"app/models/concerns/gtfs_parser.rb"
+			],
+			[
+				"css",
+				"app/assets/stylesheets/styles.css"
+			],
+			[
+				"appli",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"usernew",
+				"app/views/users/new.html.erb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"sche",
+				"db/schema.rb"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"ge",
+				"Gemfile"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"home",
+				"app/views/users/home.html.erb"
+			],
+			[
+				"session",
+				"app/controllers/sessions_controller.rb"
+			],
+			[
+				"usershome",
+				"app/views/users/home.html.erb"
+			],
+			[
+				"layou",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"sceh",
+				"db/schema.rb"
+			],
+			[
+				"schem",
+				"db/schema.rb"
+			],
+			[
+				"migruser",
+				"db/migrate/20140520154129_create_users.rb"
+			],
+			[
+				"secre",
+				"config/secrets.yml"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"users",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"application.j",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"styles",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"2",
+				"vendor/assets/responseive_grid_css/2cols.css"
+			],
+			[
+				"style",
+				"app/assets/stylesheets/styles.css"
+			],
+			[
+				"tripx",
+				"db/gtfs_data/trips.txt"
+			],
+			[
+				"sch",
+				"db/schema.rb"
+			],
+			[
+				"stop",
+				"app/models/stop_time.rb"
+			],
+			[
+				"app",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"user_",
+				"db/migrate/20140520193112_create_user_routes.rb"
+			],
+			[
+				"applicontr",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"trip",
+				"app/models/trip.rb"
+			],
+			[
+				"applicat",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"applihtml",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"sessioncon",
+				"app/controllers/sessions_controller.rb"
+			],
+			[
+				"seed",
+				"db/seeds.rb"
+			],
+			[
+				"20140520145510",
+				"db/migrate/20140520145510_create_users.rb"
+			],
+			[
+				"see",
+				"db/seeds.rb"
+			],
+			[
+				"agen",
+				"db/gtfs_data/agency.txt"
+			],
+			[
+				"stops",
+				"db/gtfs_data/stops.txt"
+			],
+			[
+				"index",
+				"app/views/superteams/index.html.erb"
+			],
+			[
+				"show",
+				"app/views/superteams/show.html.erb"
+			],
+			[
+				"new",
+				"app/views/superteams/new.html.erb"
+			],
+			[
+				"read",
+				"README.rdoc"
+			],
+			[
+				"",
+				"db/students.rb"
+			],
+			[
+				"contr",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"obj",
+				"homework/object_homework_2013-11-21.rb"
+			],
+			[
+				"chea",
+				"BEWD_NYC_6/CheatSheet.md"
+			],
+			[
+				"cha",
+				"~/DocProjects/GA/BEWD_NYC_6/CheatSheet.md"
+			],
+			[
+				"fizz",
+				"~/DocProjects/GA/BEWD_NYC_6/02_Variables_Conditionals/fixbuzz.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 387.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 127.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 3
+	}
+}
