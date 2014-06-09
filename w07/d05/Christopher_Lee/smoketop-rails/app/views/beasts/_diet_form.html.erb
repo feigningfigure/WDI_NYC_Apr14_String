@@ -1,12 +1,75 @@
-<form action="/beasts" method="GET">
+<form id="beast-form">
   <strong>Diet:</strong>
-  <%= radio_button_tag 'diet', 'any', (@diet == 'any') %>
+  <input checked="checked" id="diet_any" name="diet" type="radio" value="any">
   <label for="diet_any">Any</label>
-  <%= radio_button_tag 'diet', 'herbivore', (@diet == 'herbivore') %>
+  <input id="diet_herbivore" name="diet" type="radio" value="herbivore">
   <label for="diet_herbivore">Herbivore</label>
-  <%= radio_button_tag 'diet', 'carnivore', (@diet == 'carnivore') %>
+  <input id="diet_carnivore" name="diet" type="radio" value="carnivore">
   <label for="diet_carnivore">Carnivore</label>
-  <%= radio_button_tag 'diet', 'omnivore', (@diet == 'omnivore') %>
+  <input id="diet_omnivore" name="diet" type="radio" value="omnivore">
   <label for="diet_omnivore">Omnivore</label>
-  <%= submit_tag "Filter" %>
 </form>
+
+<div>
+  <a id="new-beast">Add a beast</a>
+    <form id="new-beast-form" style="display:none">
+      <input id="name_input" placeholder="enter beast name">
+      <label for="diet_input">Diet</label>
+      <select id="diet_input">
+        <option value="herbivore">herbivore</option>
+        <option value="carnivore">carnivore</option>
+        <option value="omnivore">omnivore</option>
+      </select>
+      <label for="light_ethology_input">Light Ethology</label>
+      <select id="light_ethology_input">
+        <option value="nocturnal">nocturnal</option>
+        <option value="diurnal">diurnal</option>
+        <option value="crepuscular">crepuscular</option>
+      </select>
+      <label for="habitat_input">Light Ethology</label>
+      <select id="habitat_input">
+        <option value="forest">forest</option>
+        <option value="ocean">ocean</option>
+        <option value="urban">urban</option>
+        <option value="subterranean">subterranean</option>
+        <option value="swamp">swamp</option>
+        <option value="mountain">mountain</option>
+        <option value="desert">desert</option>
+        <option value="jungle">jungle</option>
+        <option value="sky">sky</option>
+      </select>
+        <label for="size_input">size</label>
+        <select id="size_input">
+        <option value="minuscule">minuscule</option>
+        <option value="tiny">tiny</option>
+        <option value="small">small</option>
+        <option value="medium">medium</option>
+        <option value="large">large</option>
+        <option value="huge">huge</option>
+        <option value="colossal">colossal</option>
+      </select>
+      </select>
+        <label for="image_input">image</label>
+        <select id="image_input">
+        <option value="broog.png">broog</option>
+        <option value="cloud_mite.png">cloud mite</option>
+        <option value="crocotillion.png">crocotillion</option>
+        <option value="dune_bonk.png">dune bonk</option>
+        <option value="finbus.png">finbus</option>
+        <option value="meleunic.png">meleunic</option>
+        <option value="moggen.png">moggen</option>
+        <option value="nighe.png">nighe</option>
+        <option value="scryfledge.png">scryfledge</option>
+        <option value="shadewink.png">shadewink</option>
+        <option value="steins_owl.png">steins owl</option>
+        <option value="tiller_platypus.png">tiller platypus</option>
+        <option value="whargl.png">whargl</option>
+        <option value="windusk.png">windusk</option>
+        <option value="yoink.png">yoink</option>
+      </select>
+      <textarea form="new-beast-form" id="beast-description" placeholder="Describe the beast">
+      </textarea>
+      <button id="add_beast_button">Add Beast</button>
+    </form>
+</div>
+

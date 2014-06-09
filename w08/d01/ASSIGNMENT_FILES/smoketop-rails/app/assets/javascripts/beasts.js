@@ -11,8 +11,10 @@ function repopulateBeastList(diet) {
 
     var queryString = $.param(options);
 
-    // $("#beast-list").load("/beasts?" + options);
+    // This line is 100% functionally identical to the $.ajax() call below.
+    $("#beast-list").load("/beasts?" + queryString);
 
+    /*
     $.ajax({
         url: "/beasts",
         type: "GET",
@@ -21,6 +23,7 @@ function repopulateBeastList(diet) {
     }).done(function(response) {
         $("#beast-list").html(response);
     });
+    */
 
 }
 
@@ -39,14 +42,32 @@ $(document).ready(function() {
 
   var beastTemplate = _.template($("#beast-template").text());
 
-  console.log(
-    beastTemplate({
-      beast: {
-        id: 5,
-        name: "Crocotillion"
-      }
-    })
-  );
+  // var html = beastTemplate({
+  //   beast: {
+  //     id: 5,
+  //     name: "Crocotillion",
+  //     image_filename: "crocotillion.png",
+  //     diet: "carnivore",
+  //     light_ethology: "nocturnal",
+  //     habitat: "swamp",
+  //     size: "large",
+  //     description_paragraphs: ["lol words"]
+  //   }
+  // })
+
+  // $("#beast-list").html(html);
+
+  $.ajax({
+    url: "/beasts",
+    dataType: "json",
+    type: "GET"
+  }).done(function(beasts) {
+    $("#beast-list").empty();
+    beasts.forEach(function(beast) {
+      var beastHTML = beastTemplate({"beast": beast});
+      $("#beast-list").append(beastHTML);
+    });
+  });
 
 });
 

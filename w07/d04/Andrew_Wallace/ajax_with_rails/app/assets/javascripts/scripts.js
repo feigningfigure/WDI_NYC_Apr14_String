@@ -53,7 +53,7 @@ function appendToList(httpResponse) {
 	$task_list.append('<td>' + httpResponse["task_text"] + '</td>');
 	$task_list.append('<td>' + httpResponse["due_date"] + '</td>');
 	// Attempting to insert a link that accesses the delete function
-	$task_list.append('<td><a ' +  + '>Delete</a></td>');
+	$task_list.append('<td><button ' +   + '>Delete</a></td>');
 }
 
 
