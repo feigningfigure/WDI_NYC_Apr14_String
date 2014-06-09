@@ -5,19 +5,21 @@ function setEventHandlers() {
   $add_filter.click(function(){
     var diet_choice = $(".diet_choice:checked").val(),
         beast = new Beast,
-        $beast_list = $("#beast-list");
+        $beast_list = $("#beast-list"),
+        stringQuery = "beasts?diet=" + diet_choice + " .beast";
 
     beast.filter(diet_choice);
+    $beast_list.load(stringQuery);
 
-    if (diet_choice === "any") {
-      $beast_list.load("beasts?diet=any .beast");
-    } else if (diet_choice === "herbivore") {
-      $beast_list.load("beasts?diet=herbivore .beast");
-    } else if (diet_choice === "carnivore"){
-      $beast_list.load("beasts?diet=carnivore .beast");
-    } else if (diet_choice === "omnivore"){
-      $beast_list.load("beasts?diet=omnivore .beast");
-    }
+    // if (diet_choice === "any") {
+    //   $beast_list.load("beasts?diet=any .beast");
+    // } else if (diet_choice === "herbivore") {
+    //   $beast_list.load("beasts?diet=herbivore .beast");
+    // } else if (diet_choice === "carnivore"){
+    //   $beast_list.load("beasts?diet=carnivore .beast");
+    // } else if (diet_choice === "omnivore"){
+    //   $beast_list.load("beasts?diet=omnivore .beast");
+    // }
   });
 
 
