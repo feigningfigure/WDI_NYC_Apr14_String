@@ -5,7 +5,14 @@
       <%= image_tag(beast.image_filename || 'unavailable.png') %>
     </header>
     <section class="entry-body">
-      <%= attribute_table beast, %w(diet habitat light_ethology size) %>
+      <table>
+        <% %w(name diet id habitat light_ethology size).each do |attr| %>
+          <tr class="<%= attr %>">
+            <td class="key"><strong><%= attr.humanize %></strong></td>
+            <td class="value"><%= beast[attr] %></td>
+          </tr>
+        <% end %>
+      </table>
       <% beast.description_paragraphs.each do |p| %>
         <p><%= p %></p>
       <% end %>
