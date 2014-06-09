@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title>TestingTestTest</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="divTest1" class="paragraph"></div>
+  <div id="dumbDivId"></div>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#divTest1").text("Hello, world!");
+    $("#dumbDivId").text("I'm the text in parentheses in dumbDivId").css("color", "blue");
+    $(".paragraph").css("font-weight", "bold");
+    });
+  </script>
+</body>
+</html>
