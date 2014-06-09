@@ -1,7 +1,12 @@
-<section id="beasts">
+<script id="welcome-template" type="text/template">
+  <p id="welcome-message"><%%= message %></p>
+</script>
+
+
+<section id="beasts" style="display:none">
   <h1>Beasties below...</h1>
   <%= render "diet_form" %>
   <section id="beast-list">
-    <%= render @beasts %>
+    <%= render "beast" %>
   </section>
 </section>
