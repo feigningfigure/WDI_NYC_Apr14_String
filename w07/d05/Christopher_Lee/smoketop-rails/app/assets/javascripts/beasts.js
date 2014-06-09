@@ -24,12 +24,12 @@ function addEventListeners(){
   // });
       $(".remote-delete").click(function() {
         console.log("delete clicked");
-        var $id = $(this).attr('id');
+        var id = $(this).attr('id');
         var hideId = "beast-" + $(this).attr('id');
         console.log(hideId);
         $("#" + hideId).hide();
         $.ajax({
-        url: "/beasts/" + $id,
+        url: "/beasts/" + id,
         type: "delete",
         dataType: "json"
         }).done(function(data){
@@ -61,6 +61,14 @@ function addEventListeners(){
     $("#beasts").hide();
     $("#welcome-message").show();
     loadWelcome();
+     // $("#beasts").removeClass("hidden");
+  });
+
+  $("#about").click(function() {
+    console.log("about is clicked");
+    $("#beasts").hide();
+    loadAbout();
+    $("#welcome-message").show();
      // $("#beasts").removeClass("hidden");
   });
 
@@ -96,15 +104,30 @@ function newBeast(){
   });
 }
 
+function loadAbout(){
+  console.log("loadabout loaded");
+  $("#welcome-template").empty();
+  $("#welcome-message").text("This is a compendium of the finest beasts known to man");
+  var welcomeTemplate = _.template($("#welcome-template").text());
+  var message = { message: "This is a compendium of the finest beasts known to man" };
+    $("main").prepend(
+      welcomeTemplate(message)
+    );
 
-
+  // var aboutTemplate = _.template($("#welcome-template").text());
+  // var message = { message: "This is a compendium of the finest beasts known to man" };
+  // $("#welcome-template").empty();
+  //   $("main").prepend(
+  //     aboutTemplate(message)
+  //   );
+}
 
 
 function loadWelcome(){
-  //$("#beasts").hide();
   var welcomeTemplate = _.template($("#welcome-template").text());
   var message = { message: "Welcome" };
   $("#welcome-template").empty();
+  $("#welcome-message").text("Welcome");
     $("main").prepend(
       welcomeTemplate(message)
     );
