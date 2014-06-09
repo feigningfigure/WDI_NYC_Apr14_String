@@ -5,17 +5,74 @@ class BeastsController < ApplicationController
   end
 
   def index
-    if params[:diet]
-      @diet = params[:diet]
-    else
-      @diet = "any"
-    end
+# binding.pry
+# format.json { render json @diet = params }
+# format.html { @diet = params }
 
-    if @diet != "any"
-      @beasts = Beast.where("diet = ?", params[:diet])
-    else
-      @beasts = Beast.all
-    end
+respond_to do |format|
+
+  format.html {@beasts = Beast.all}
+  format.json {render json: Beast.where("diet = ?", params["params"]["diet"]) }
+binding.pry
+end
+  # binding.pry
+        # format.html { @beasts = Beast.where("diet = ?", params["params"]["diet"]) }
+      #   format.json { render json: Beast.where("diet = ?", params["params"]["diet"]) }
+      # else
+      #   binding.pry
+      #   format.html { @beasts = Beast.all }
+      #   format.json { render json: Beast.all }
+      # end
+
+
+
+
+      #   binding.pry
+      #   format.html { @beasts = Beast.where("diet = ?", params[:diet]) }
+      #   format.json { render json: Beast.where("diet = ?", params[:diet]) }
+      # else
+      #   binding.pry
+      #   format.html { @beasts = Beast.all }
+      #   format.json { render json: Beast.all }
+      # end
+
+# case @diet
+# when @diet == "herbivore"
+#   @beasts = Beast.where("diet = ?", "herbivore")
+# when @diet == "carnivore"
+#   @beasts = Beast.where("diet = ?", "carnivore")
+# when @diet == "omnivore"
+#   @beasts = Beast.where("diet = ?", "omnivore")
+# else
+#   @beasts = Beast.all
+# end
+
+    # if params[:diet]
+    #   @diet = params[:diet]
+    # else
+    #   @diet = "any"
+    # end
+
+    # if @diet != "any"
+    #   @beasts = Beast.where("diet = ?", params[:diet])
+    # else
+    #   @beasts = Beast.all
+    # end
+
+ # @diet = params["params"]["diet"].to_json
+
+ #    if  params["params"]["diet"]
+ #      @diet = params["params"]["diet"]
+ #    else
+ #      @diet = "any"
+ #    end
+
+ #    if @diet != "any"
+ #      @beasts = Beast.where("diet = ?", @diet = params["params"]["diet"])
+ #    else
+ #      @beasts = Beast.all
+ #    end
+
   end
 
   def create
@@ -24,7 +81,7 @@ class BeastsController < ApplicationController
 
   def destroy
 
-  end   
+  end
 
   def update
 

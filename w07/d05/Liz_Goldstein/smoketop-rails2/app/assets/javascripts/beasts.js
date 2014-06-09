@@ -12,6 +12,20 @@ $('#hello').click( function() { alert('clicked'); });
 //  var beastsHTML = beastTemplate(best);
 //     $beastList.append(beastsHTML);
 
+var getRequest = function(){
+      $.ajax({
+      url: '/beasts',
+      type: 'GET',
+      dataType: 'json',
+      data: postData
+      }).done(function(data){
+      console.log(data);
+      // data.forEach(function(beast){
+      //     $("#beastlist").html("<h1>" + beast["name"] + "</h1>"
+      //       );
+    });
+}
+
 $('#diets input').on('change', function() {
    console.log($('input[name=diet]:checked', '#diets').val());
    var dietType = ($('input[name=diet]:checked', '#diets').val());
@@ -19,24 +33,15 @@ $('#diets input').on('change', function() {
 postData = {
   "params[diet]": dietType
 }
+
 console.log(postData);
+getRequest();
 
-// $.ajax({
-//       url: '/beasts',
-//       type: 'GET',
-//       dataType: 'json',
-//     }).done(function(data){
-//       console.log(data);
-//       var $beastlist = $("#beastlist");
-//       $quiz_list.empty();
-//       data.quizzes.forEach(function(item){
-//         $quiz_list.append("<li>"+ item["title"] +"</li>")
-//       })
-
-//     })
-//   });
+///
 
 
+
+  });
 
 });
 
@@ -45,7 +50,7 @@ console.log(postData);
 // });
 
 
-});
+// });
 
  // var userTemplate = _.template($("#userTemplate").text());
  //    var $userList = $("#user_list");
