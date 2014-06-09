@@ -8,8 +8,10 @@
 
 <script id="beastsTemplate" type="text/template">
     // <%% debugger %>
-    <%%= beasts.forEach(function(beast) { %>
-    	<h1><%%= beast.name %></h1>
-    	<img src<%%= beast.image_filename) %>>
-	<%%= }); %>
+    <article class="beast" id="beast-"+ <%%= beast.id %>>
+    	<header>
+    		<h1><%%= beast.name %></h1>
+    		<%% if (beast.image_filename) { %>
+    			<img src="/assets/<%%= beast.image_filename %>">
+    		}
 </script>
