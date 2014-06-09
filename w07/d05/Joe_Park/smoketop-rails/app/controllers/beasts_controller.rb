@@ -5,16 +5,24 @@ class BeastsController < ApplicationController
   end
 
   def index
-    if params[:diet]
-      @diet = params[:diet]
-    else
-      @diet = "any"
-    end
+    respond_to do |format|
 
-    if @diet != "any"
-      @beasts = Beast.where("diet = ?", params[:diet])
-    else
-      @beasts = Beast.all
+      if params[:diet]
+        @diet = params[:diet]
+      else
+        @diet = "any"
+      end
+
+      if @diet != "any"
+        # binding.pry
+        format.html { @beasts = Beast.where("diet = ?", params[:diet]) }
+        format.json { render json: Beast.where("diet = ?", params[:diet]) }
+      else
+        # binding.pry
+        format.html { @beasts = Beast.all }
+        format.json { render json: Beast.all }
+      end
+
     end
   end
 
