@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Vacationr</title>
+	</head>
+	
+	<body>
+
+		<h1>We need to be here!</h1>
+
+		<table id="myTable" class="tablesorter">
+			<thead>
+				<tr>		
+					<th>Country</th>
+					<th>Season</th>
+					<th>Priority</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+				<% @countries.each do |item|  %>
+					<td><%= item.place %></td>
+					<td><%= item.season %></td>
+					<td><%= item.priority %></td>
+					<% end %>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</body>
+
+</html>
+
+
+
+
+
+
+
+ 	<table id="myTable" class="tablesorter"> 
+<thead> 
+<tr> 
+    <th>Last Name</th> 
+    <th>First Name</th> 
+    <th>Email</th> 
+    <th>Due</th> 
+    <th>Web Site</th> 
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+    <td>Smith</td> 
+    <td>John</td> 
+    <td>jsmith@gmail.com</td> 
+    <td>$50.00</td> 
+    <td>http://www.jsmith.com</td> 
+</tr> 

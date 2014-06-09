@@ -67,11 +67,20 @@ text-align: center;
   margin: 0 auto;
 }
 
-#profile_list{
+#profile-list{
   padding: 0px;
   list-style: none;
+  display: none;
 }
 
+.less-text{
+  display: none;
+}
+
+/*#less-text1{
+  display: none;
+}
+*/
 input{
   box-sizing: border-box;
   width: 50%;

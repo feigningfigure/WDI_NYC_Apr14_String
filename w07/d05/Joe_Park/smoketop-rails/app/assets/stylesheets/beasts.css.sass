@@ -1,0 +1,45 @@
+/* {{{ Colors */
+
+article.beast
+  background: $peach
+
+  h1
+    background: $dark_peach
+
+  table
+    tr:nth-child(odd)
+      background-color: $light_peach
+
+/* }}} */
+
+
+section#beasts
+  header h1
+    font-size: 2em
+    text-transform: uppercase
+
+  section#beast-list
+    @include center-children
+
+  article.beast
+    @include stack-horizontal(350px)
+    margin: 25px 10px
+
+    header, header h1, table
+      margin: 0 0 16px 0
+
+    header h1
+      padding: 10px
+      letter-spacing: 2px
+
+    header img
+      @include centered
+
+    section.entry-body
+      padding: 0 16px
+
+      table
+        width: 100%
+
+        td
+          padding: 5px
