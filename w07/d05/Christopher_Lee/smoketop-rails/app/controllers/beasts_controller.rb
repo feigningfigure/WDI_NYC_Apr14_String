@@ -20,11 +20,16 @@ class BeastsController < ApplicationController
     :description => params["description"],
     :image_filename => params["image_filename"]
     })
+    redirect_to '/beasts'
   end
 
   def destroy
-
+    Beast.destroy(params[:id])
+    respond_to do |format|
+      format.json { render json: @beasts }
+    end
   end
+
 
   def update
 

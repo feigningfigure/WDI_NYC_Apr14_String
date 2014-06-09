@@ -22,6 +22,21 @@ function addEventListeners(){
   //   $("#beasts").show();
   //   //setBeastClicks();
   // });
+      $(".remote-delete").click(function() {
+        console.log("delete clicked");
+        var $id = $(this).attr('id');
+        var hideId = "beast-" + $(this).attr('id');
+        console.log(hideId);
+        $("#" + hideId).hide();
+        $.ajax({
+        url: "/beasts/" + $id,
+        type: "delete",
+        dataType: "json"
+        }).done(function(data){
+        console.log("sucessfully deleted!");
+        });
+      });
+
 
 
   $("#list-beasts").click(function() {
@@ -80,6 +95,9 @@ function newBeast(){
             });
   });
 }
+
+
+
 
 
 function loadWelcome(){
