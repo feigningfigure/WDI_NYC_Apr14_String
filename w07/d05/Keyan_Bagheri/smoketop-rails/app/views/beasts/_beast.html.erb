@@ -1,14 +1,12 @@
-<% @beasts.each do |beast| %>
-  <article class="beast" id="beast-<%= beast.id %>">
+  <article class="beast">
     <header>
-      <h1><%= beast.name %></h1>
-      <%= image_tag(beast.image_filename || 'unavailable.png') %>
+      <h1><%= name %></h1>
+      <%= image_tag(image_filename || 'unavailable.png') %>
     </header>
     <section class="entry-body">
-      <%= attribute_table beast, %w(diet habitat light_ethology size) %>
-      <% beast.description_paragraphs.each do |p| %>
+      <%= attribute_table, %w(diet habitat light_ethology size) %>
+      <% description_paragraphs.each do |p| %>
         <p><%= p %></p>
       <% end %>
     </section>
   </article>
-<% end %>

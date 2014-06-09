@@ -3,5 +3,7 @@ SmoketopApp::Application.routes.draw do
 
   get "/beasts" => "beasts#index"
 
+  post "/beasts?params[:diet]" => "beasts#index"
+
   get "/about" => "beasts#about"
 end
