@@ -2,6 +2,55 @@
 // also AJAX get requests for pages
 
 function addEventListeners(){
+  setBeastClicks();
+  loadWelcome();
+
+  $.ajax({
+      url: '/tasks',
+      type: "GET",
+      dataType: "json"
+    }).done(function(httpResponse){
+      console.log("got httpresponse")
+      console.log(httpResponse);
+
+    });
+
+  // $("#list-beasts").on('click', "a", function(){
+  //   console.log("beasts is clicked");
+  //   $("#beasts").show();
+  //   //setBeastClicks();
+  // });
+
+
+  $("#list-beasts").click(function() {
+      $("#welcome-message").hide();
+      console.log("beasts is clicked");
+      $("#beasts").show();
+      setBeastClicks();
+     // $("#beasts").removeClass("hidden");
+  });
+
+  $("#home").click(function() {
+    console.log("home is clicked");
+    $("#beasts").hide();
+    $("#welcome-message").show();
+    loadWelcome();
+     // $("#beasts").removeClass("hidden");
+  });
+
+}
+
+function loadWelcome(){
+  //$("#beasts").hide();
+  var welcomeTemplate = _.template($("#welcome-template").text());
+  var message = { message: "Welcome" };
+  $("#welcome-template").empty();
+    $("main").prepend(
+      welcomeTemplate(message)
+    );
+}
+
+function setBeastClicks(){
   $('#beast-form input').on('change', function() {
    //alert($('input[name=diet]:checked', '#beast-form').val());
    var diet = ($('input[name=diet]:checked', '#beast-form').val());
@@ -28,14 +77,7 @@ function addEventListeners(){
         $("article[data-diet='herbivore']").show();
     }
   });
-
-  var welcomeTemplate = _.template($("#welcome-template").text());
-  var message = { message: "Welcome" };
-    $("main").prepend(
-      welcomeTemplate(message)
-    );
 }
-
 
 $(document).ready(function() {
   addEventListeners();

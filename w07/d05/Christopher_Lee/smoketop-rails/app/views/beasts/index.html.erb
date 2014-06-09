@@ -1,5 +1,5 @@
 <script id="welcome-template" type="text/template">
-  <p><%%= message %></p>
+  <p id="welcome-message"><%%= message %></p>
 </script>
 
 <style>
@@ -8,7 +8,7 @@
 }
 </style>
 
-<section id="beasts" class="hidden">
+<section id="beasts">
   <h1>Beasties below...</h1>
   <%= render "diet_form" %>
   <section id="beast-list">
