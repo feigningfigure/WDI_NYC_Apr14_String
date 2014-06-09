@@ -37,4 +37,28 @@ $(document).ready(function() {
 
   setEventListeners();
 
+  var beastTemplate = _.template($("#beast-template").text());
+
+  console.log(
+    beastTemplate({
+      beast: {
+        id: 5,
+        name: "Crocotillion"
+      }
+    })
+  );
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
