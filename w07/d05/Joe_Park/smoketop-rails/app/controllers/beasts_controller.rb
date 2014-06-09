@@ -14,9 +14,11 @@ class BeastsController < ApplicationController
       end
 
       if @diet != "any"
+        # binding.pry
         format.html { @beasts = Beast.where("diet = ?", params[:diet]) }
         format.json { render json: Beast.where("diet = ?", params[:diet]) }
       else
+        # binding.pry
         format.html { @beasts = Beast.all }
         format.json { render json: Beast.all }
       end
