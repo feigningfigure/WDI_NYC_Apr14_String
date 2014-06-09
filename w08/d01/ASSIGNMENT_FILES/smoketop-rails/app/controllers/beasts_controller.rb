@@ -13,11 +13,9 @@ class BeastsController < ApplicationController
       @beasts = Beast.all
     end
 
-    if params["partial"]
-      # this automagically renders a list of _beast partials
-      render @beasts
-    else
-      render :index
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render :json => @beasts }
     end
   end
 
