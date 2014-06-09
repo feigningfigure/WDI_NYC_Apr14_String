@@ -40,7 +40,7 @@ class TasksController < ApplicationController
 		task_to_destroy = Task.find_by_id(params[:id])
 		task_to_destroy.destroy
 		respond_to do |format|
-			format.json { render json: "deleted"}
+			format.json { render json: "deleted" }
 		end
 	end
 

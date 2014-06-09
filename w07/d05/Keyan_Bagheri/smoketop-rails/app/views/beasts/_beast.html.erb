@@ -1,14 +1,27 @@
-<% @beasts.each do |beast| %>
-  <article class="beast" id="beast-<%= beast.id %>">
-    <header>
-      <h1><%= beast.name %></h1>
-      <%= image_tag(beast.image_filename || 'unavailable.png') %>
-    </header>
-    <section class="entry-body">
-      <%= attribute_table beast, %w(diet habitat light_ethology size) %>
-      <% beast.description_paragraphs.each do |p| %>
-        <p><%= p %></p>
-      <% end %>
-    </section>
-  </article>
-<% end %>
+<%%var beastAttributes = { "Diet": diet, "Habitat": habitat, "Light Ethology": light_ethology, "Size": size } %>
+<%%var unavailable = "unavailable.png"%>
+<article class="beast" id="beast-<%%= id %>">
+  <header>
+    <h1><%%= name %></h1>
+    <%% if (typeof image_filename == 'string') { %>
+      <img src="/assets/<%%=image_filename%>"/>
+    <%% } else {  %>
+      <img src="/assets/<%%=unavailable%>"/>
+    <%% } %>
+  </header>
+  <section class="entry-body">
+    <table>
+      <tbody>
+      <%% $.each(beastAttributes, function(k,v) { %>
+        <tr class="<%%=v%>">
+          <td class="key"><strong><%%= k %></strong></td>
+          <td class="value"><%%= v %></td>
+        </tr>
+      <%% }) %>
+      </tbody>
+    </table>
+    <%% if (typeof description == 'string') { %>
+    <%%description = description.split('\n').join('<br>'); }%>
+    <p><%%= description%></p>
+  </section>
+</article>
