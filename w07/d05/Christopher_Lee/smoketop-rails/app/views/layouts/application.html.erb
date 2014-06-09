@@ -4,22 +4,44 @@
     <title><%= SmoketopApp::APPLICATION_TITLE %></title>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <div id="user_nav">
+      <% if current_user %>
+        Logged in as <%= current_user.email %>.
+        <%= link_to "Log out", log_out_path %>
+      <% else %>
+        <%= link_to "Sign up", sign_up_path %> or
+        <%= link_to "log in", log_in_path %>
+      <% end %>
+    </div>
 
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
     <div id="container">
 
       <header id="site-header">
         <h1><%= SmoketopApp::APPLICATION_TITLE %></h1>
         <h2>&#8226; &#8226; &#8226; A compendium of esoteric critters &#8226; &#8226; &#8226;</h2>
       </header>
+      <%#
+      <nav>
+        <ul>
+          <li><%= link_to "Home", root_path </li>
+          <li><%= link_to "List Beasts", beasts_path </li>
+          <li><%= link_to "About", about_path </li>
+        </ul>
+      </nav>
+      %>
 
       <nav>
         <ul>
-          <li><%= link_to "Home", root_path  %></li>
-          <li><%= link_to "List Beasts", beasts_path  %></li>
-          <li><%= link_to "About", about_path  %></li>
+          <li><a id="home">Home</a></li>
+          <li><a id="list-beasts">List Beasts</a></li>
+          <li><a id="about">About</a></li>
         </ul>
       </nav>
 

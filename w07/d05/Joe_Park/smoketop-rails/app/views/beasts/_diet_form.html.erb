@@ -1,12 +1,8 @@
-<form action="/beasts" method="GET">
+<div>
   <strong>Diet:</strong>
-  <%= radio_button_tag 'diet', 'any', (@diet == 'any') %>
-  <label for="diet_any">Any</label>
-  <%= radio_button_tag 'diet', 'herbivore', (@diet == 'herbivore') %>
-  <label for="diet_herbivore">Herbivore</label>
-  <%= radio_button_tag 'diet', 'carnivore', (@diet == 'carnivore') %>
-  <label for="diet_carnivore">Carnivore</label>
-  <%= radio_button_tag 'diet', 'omnivore', (@diet == 'omnivore') %>
-  <label for="diet_omnivore">Omnivore</label>
-  <%= submit_tag "Filter" %>
-</form>
+  <input type="radio" name="diet" value="any" class="diet_choice" /><label for="diet_any">Any</label>
+  <input type="radio" name="diet" value="herbivore" class="diet_choice" /><label for="diet_herbivore">Herbivore</label>
+  <input type="radio" name="diet" value="carnivore" class="diet_choice" /><label for="diet_carnivore">Carnivore</label>
+  <input type="radio" name="diet" value="omnivore" class="diet_choice" /><label for="diet_omnivore">Omnivore</label>
+  <button id="add_filter">Filter</button>
+</div>

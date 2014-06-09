@@ -2,6 +2,14 @@
   <h1>Beasties below...</h1>
   <%= render "diet_form" %>
   <section id="beast-list">
-    <%= render @beasts %>
+    <%= render "beast" %>
   </section>
 </section>
+
+<script id="beastsTemplate" type="text/template">
+    // <%% debugger %>
+    <%%= beasts.forEach(function(beast) { %>
+    	<h1><%%= beast.name %></h1>
+    	<img src<%%= beast.image_filename) %>>
+	<%%= }); %>
+</script>
