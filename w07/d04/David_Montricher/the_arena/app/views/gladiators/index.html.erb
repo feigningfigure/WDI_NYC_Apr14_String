@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>The Arena</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' %>
+</head>
+<body>
+  <h1>Welcome to The Arena!</h1>
+
+  <p>Warriors ready for a bloody battle</p>
+  <table>
+    <th>Name</th>
+    <th>Weapon</th>
+    <th>Victory Count</th>
+
+  <% @gladiators.each do |gladiator| %>
+  <tr>
+    <td> <%= gladiator.name %> </td>
+    <td> <%= gladiator.weapon %> </td>
+    <td> <%= gladiator.victory_count %> </td>
+  </tr>
+  </table>
+
+  <%= yield %>
+</body>
+</html>
