@@ -70,12 +70,13 @@ function newBeast(){
         $beastList.prepend(newBeastHTML);
 
         $.ajax({
-            url: "/",
+            url: "/beasts",
             type: "POST",
             dataType: "json",
             data: newBeast
         }).done(function(data){
             console.log(data);
+            console.log("ajax worked");
             });
   });
 }

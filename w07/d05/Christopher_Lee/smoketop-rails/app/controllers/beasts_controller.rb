@@ -11,9 +11,7 @@ class BeastsController < ApplicationController
   end
 
   def create
-    User.create({
-    :name => params["name"],
-    :favorite_color => params["favorite_color"],
+    Beast.create({
     :name => params["name"],
     :diet => params["diet"],
     :light_ethology => params["light_ethology"],
