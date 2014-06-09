@@ -1,6 +1,5 @@
 require 'ethology'
 
-
 ActiveRecord::Base.connection.tables.each do |table|
   unless table == "schema_migrations"
     ActiveRecord::Base.connection.execute("TRUNCATE #{table}")
@@ -11,8 +10,6 @@ end
 def deindent str
   str.gsub(/^ */, "").strip()
 end
-
-Beast.delete_all
 
 Beast.create!(
   name: 'Crocotillion',

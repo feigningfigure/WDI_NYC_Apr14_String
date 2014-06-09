@@ -2,19 +2,10 @@
   <h1>Beasties below...</h1>
   <%= render "diet_form" %>
   <section id="beast-list">
-<script id="beastTemplate" type="text/template">
-  <article class="beast">
-    <header>
-      <h1><%%= name %></h1>
-      <h3>Diet:<%%= diet %></h3>
-      <h3>Habitat:<%%= habitat %></h3>
-      <h3>Light Ethology:<%%= light_ethology %></h3>
-    </header>
-    <section class="entry-body">
-      <%%= description %>
-    </section>
-  </article>
-</script>
   </section>
 </section>
 
+
+<script id="beastTemplate" type="text/template">
+<%= render "beast" %>
+</script>
