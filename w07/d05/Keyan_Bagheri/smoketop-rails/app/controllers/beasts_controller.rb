@@ -5,6 +5,7 @@ class BeastsController < ApplicationController
   end
 
   def index
+
     if params[:diet]
       @diet = params[:diet]
     else
@@ -12,10 +13,17 @@ class BeastsController < ApplicationController
     end
 
     if @diet != "any"
-      @beasts = Beast.where("diet = ?", params[:diet])
+      respond_to do |format|
+        format.html { @beasts = Beast.where("diet = ?", params[:diet]) }
+        format.json { render json: Beast.where("diet = ?", params[:diet]) }
+      end
     else
-      @beasts = Beast.all
+      respond_to do |format|
+        format.html { @beasts = Beast.all }
+        format.json { render json: Beast.all }
+      end
     end
+
   end
 
   def create
@@ -24,7 +32,7 @@ class BeastsController < ApplicationController
 
   def destroy
 
-  end   
+  end
 
   def update
 
