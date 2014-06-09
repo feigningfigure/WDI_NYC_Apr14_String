@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/Users/johnrandall/code/wdi/projects_homework/homework_smoketop-rails"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w07/d04/INSTRUCTORS/ajax_with_rails"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/johnrandall/code/wdi/WDI_NYC_Apr14_String/w07/d05/INSTRUCTORS/just_for_templates"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/johnrandall/code/wdi/projects_homework/smoketop-rails_master"
+		}
+	]
+}
