@@ -5,7 +5,7 @@ $(document).ready(function() {
 		$carnivore = $("#diet_carnivore"),
 		$omnivore = $("#diet_omnivore");
 
-	var beastsTemplate = _.template($("#beastsTemplate").text());
+	var beastsTemplate = _.template($("#beastsTemplate"));
 	
 	clickListener($any);
 	clickListener($herbivore);

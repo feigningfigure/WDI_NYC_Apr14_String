@@ -7,10 +7,9 @@
 </section>
 
 <script id="beastsTemplate" type="text/template">
-    <li>
-        <%% beasts.forEach(function(beast) { %>
-        <h1><%%= beast.name %></h1>
-        <img src<%%= beast.image_filename) %>>
- 		<%% }); %>
-    </li>
+    // <%% debugger %>
+    <%%= beasts.forEach(function(beast) { %>
+    	<h1><%%= beast.name %></h1>
+    	<img src<%%= beast.image_filename) %>>
+	<%%= }); %>
 </script>
