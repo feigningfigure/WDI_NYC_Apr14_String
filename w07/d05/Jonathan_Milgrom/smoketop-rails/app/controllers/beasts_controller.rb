@@ -5,6 +5,7 @@ class BeastsController < ApplicationController
   end
 
   def index
+    binding.pry
     if params[:diet]
       @diet = params[:diet]
     else
@@ -15,6 +16,10 @@ class BeastsController < ApplicationController
       @beasts = Beast.where("diet = ?", params[:diet])
     else
       @beasts = Beast.all
+    end
+    respond_to do |format|
+      format.html {@beasts}
+      format.json { render json: @beasts}
     end
   end
 
