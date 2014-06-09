@@ -1,4 +1,19 @@
 function repopulateBeastList(diet) {
+    var options = {
+      diet: diet
+    };
+
+  $.ajax({
+    url: "/beasts",
+    type: "GET",
+    dataType: "json",
+    data: options
+  }).done(function(results) {
+    repopulateBeastListFromData(results);
+  });
+}
+
+function oldRepopulateBeastList(diet) {
 
     // There's no way to pass a data object directly to the
     // $.load() function without it assuming that we want a POST
@@ -27,20 +42,32 @@ function repopulateBeastList(diet) {
 
 }
 
+function repopulateBeastListFromData(beasts) {
+  var beastTemplate = _.template($("#beast-template").text());
+
+  $("#beast-list").empty();
+  beasts.forEach(function(beast) {
+    var beastHTML = beastTemplate({"beast": beast});
+    $("#beast-list").append(beastHTML);
+  });
+}
+
+
+
 function setEventListeners() {
 
   $("#diet-filter input:radio[name=diet]").click(function() {
+    // This was the old way of doing it where the server returned HTML
+    // oldRepopulateBeastList($(this).val());
+
     repopulateBeastList($(this).val());
   });
-
 
 }
 
 $(document).ready(function() {
 
   setEventListeners();
-
-  var beastTemplate = _.template($("#beast-template").text());
 
   // var html = beastTemplate({
   //   beast: {
@@ -57,17 +84,15 @@ $(document).ready(function() {
 
   // $("#beast-list").html(html);
 
-  $.ajax({
-    url: "/beasts",
-    dataType: "json",
-    type: "GET"
-  }).done(function(beasts) {
-    $("#beast-list").empty();
-    beasts.forEach(function(beast) {
-      var beastHTML = beastTemplate({"beast": beast});
-      $("#beast-list").append(beastHTML);
-    });
-  });
+  // $.ajax({
+  //   url: "/beasts",
+  //   dataType: "json",
+  //   type: "GET"
+  // }).done(function(beasts) {
+  //   repopulateBeastListFromData(beasts);
+  // });
+
+  repopulateBeastListFromData(beastData);
 
 });
 
