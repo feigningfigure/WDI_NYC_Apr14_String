@@ -7,7 +7,15 @@ function setEventHandlers() {
       $home_button = $("#home_button"),
       $beast_list_button = $("#beasts_list_button"),
       $about_button = $("#about_button"),
-      $diet_button_submit = $(".diet_button_submit");
+      $diet_button_submit = $(".diet_button_submit"),
+      $new_button_submit = $(".new_button_submit"),
+      $name_input = $(".name"),
+      $diet_input = $(".diet"),
+      $light_ethology_input = $(".light_ethology"),
+      $habitat_input = $(".habitat"),
+      $size_input = $(".size"),
+      $description_input = $(".description"),
+      $image_filename_input =$(".image_filename");
 
   $home_button.click(function(){
     $show_section.html("<h1>  Welcome! </h1>");
@@ -18,12 +26,23 @@ function setEventHandlers() {
     $show_section.html(
       "<h1> Beasties below... </h1> \
       <strong>Diet:</strong> \
-      <form action=''> \
+      <form action='get' class='diet_form'> \
       <input type='radio' name='diet' value='any'>Any<br> \
       <input type='radio' name='diet' value='herbivore'>Herbivore<br> \
       <input type='radio' name='diet' value='carnivore'>Carnivore<br> \
       <input type='radio' name='diet' value='omnivore'>Omnivore<br> \
       <input type='submit' value='Filter' class='diet_button_submit'> \
+      </form> \
+      <strong>New Beast:</strong> \
+      <form action='post'> \
+      Name: <input type='text' name='name' class='name' /><br /> \
+      Diet: <input type='text' name='diet' class='diet' /><br /> \
+      Light ethology: <input type='text' name='light_ethology' class='light_ethology' /><br /> \
+      Habitat: <input type='text' name='habitat' class='habitat' /><br /> \
+      Size: <input type='text' name='size' class='size' /><br /> \
+      Description: <input type='text' name='description' class='description' /><br /> \
+      Image Filename: <input type='text' name='image_filename' class='image_filename' /><br /> \
+      <input type='submit' value='Submit' class='new_button_submit'/> \
       </form>"
       );
 
@@ -46,6 +65,17 @@ function setEventHandlers() {
       <input type='radio' name='diet' value='carnivore'>Carnivore<br> \
       <input type='radio' name='diet' value='omnivore'>Omnivore<br> \
       <input type='submit' value='Filter' class='diet_button_submit'> \
+      </form> \
+     <strong>New Beast:</strong> \
+      <form action='post'> \
+      Name: <input type='text' name='name' class='name' /><br /> \
+      Diet: <input type='text' name='diet' class='diet' /><br /> \
+      Light ethology: <input type='text' name='light_ethology' class='light_ethology' /><br /> \
+      Habitat: <input type='text' name='habitat' class='habitat' /><br /> \
+      Size: <input type='text' name='size' class='size' /><br /> \
+      Description: <input type='text' name='description' class='description' /><br /> \
+      Image Filename: <input type='text' name='image_filename' class='image_filename' /><br /> \
+      <input type='submit' value='Submit' class='new_button_submit'/> \
       </form>"
       );
 
@@ -57,6 +87,44 @@ function setEventHandlers() {
         beast.list_carnivore();}
       else if ($checkedradio === "omnivore"){
         beast.list_omnivore();}
+
+    });
+
+      $show_section.on('click', '.new_button_submit', function() {
+      var beast = new Beast;
+      var params = {name: $name_input.val(),
+                    diet: $diet_input.val(),
+                    light_ethology: $light_ethology_input.val(),
+                    habitat: $habitat_input.val(),
+                    size: $size_input.val(),
+                    description: $description_input.val(),
+                    image_filename: $image_filename_input.val()
+                    };
+
+
+      $show_section.html(
+      "<h1> Beasties below... </h1> \
+      <strong>Diet:</strong> \
+      <form action=''> \
+      <input type='radio' name='diet' value='any'>Any<br> \
+      <input type='radio' name='diet' value='herbivore'>Herbivore<br> \
+      <input type='radio' name='diet' value='carnivore'>Carnivore<br> \
+      <input type='radio' name='diet' value='omnivore'>Omnivore<br> \
+      <input type='submit' value='Filter' class='diet_button_submit'> \
+      </form> \
+   <strong>New Beast:</strong> \
+      <form action='post'> \
+      Name: <input type='text' name='name' class='name' /><br /> \
+      Diet: <input type='text' name='diet' class='diet' /><br /> \
+      Light ethology: <input type='text' name='light_ethology' class='light_ethology' /><br /> \
+      Habitat: <input type='text' name='habitat' class='habitat' /><br /> \
+      Size: <input type='text' name='size' class='size' /><br /> \
+      Description: <input type='text' name='description' class='description' /><br /> \
+      Image Filename: <input type='text' name='image_filename' class='image_filename' /><br /> \
+      <input type='submit' value='Submit' class='new_button_submit'/> \
+      </form>"
+      );
+      beast.create(params);
 
     });
 
@@ -182,6 +250,21 @@ function setEventHandlers() {
         // this.list .done function closing brace
       });
       // this.list function closing brace
+    }
+        this.create = function(params){
+      $.ajax({
+        url: '/beasts',
+        type: 'POST',
+        dataType: 'json',
+        data: params
+      }).done(function(){
+        alert(params["name"]);
+         $name_input.val('');
+
+        // this.create_beast closing brace
+      });
+      // this.list function closing brace
+
     }
 
 

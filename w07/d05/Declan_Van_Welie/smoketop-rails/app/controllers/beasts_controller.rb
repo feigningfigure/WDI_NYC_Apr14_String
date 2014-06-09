@@ -10,8 +10,11 @@ class BeastsController < ApplicationController
 
     respond_to do |format|
       format.html { @beasts = Beast.all }
-      format.json { render json: Beast.all}
+      format.json { render json: Beast.all }
     end
+
+    # .where("diet = ?", params["params"]["diet"]) }
+
     # if params[:diet]
     #   @diet = params[:diet]
     # else
@@ -19,7 +22,7 @@ class BeastsController < ApplicationController
     # end
 
     # if @diet != "any"
-    #   format.json { render json: Beast.where("diet = ?", "omnivore") }
+    #   @beasts = Beast.where("diet = ?", params[:diet])
     # else
     #   @beasts = Beast.all
     # end
@@ -38,8 +41,7 @@ class BeastsController < ApplicationController
        })
 
     respond_to do |format|
-      format.json { render json: { message: "New beast created" } }
-
+      format.json { render json: new_beast }
     end
   end
 
@@ -49,6 +51,12 @@ class BeastsController < ApplicationController
 
   def update
 
+  end
+
+  private
+
+  def beast_params
+    params.require(:beast).permit(:name, :diet, :light_ethology, :habitat, :size, :description, :image_filename, :completed)
   end
 
 end
