@@ -6,16 +6,15 @@ class BeastsController < ApplicationController
 
   def index
 # binding.pry
-# format.json { render json @diet = params }
-# format.html { @diet = params }
+#
+  respond_to do |format|
 
-respond_to do |format|
 
-  format.html {@beasts = Beast.all}
-  format.json {render json: Beast.where("diet = ?", params["params"]["diet"]) }
-binding.pry
-end
-  # binding.pry
+    format.html {@beasts = Beast.all}
+    format.json {render json: @beasts = Beast.where("diet = ?", params["params"]["diet"]) }
+
+  end
+
         # format.html { @beasts = Beast.where("diet = ?", params["params"]["diet"]) }
       #   format.json { render json: Beast.where("diet = ?", params["params"]["diet"]) }
       # else

@@ -3,10 +3,9 @@ $(document).ready(function() {
 
 $('#hello').click( function() { alert('clicked'); });
 
-// var $diet_type = $(#diet_choice).val()
 
 // var $beastTemplate = _.template($("#beastTemplate").text());
-// var $beastList = $(#"beastlist")
+var $beastList = $("#beast_list")
 
 
 //  var beastsHTML = beastTemplate(best);
