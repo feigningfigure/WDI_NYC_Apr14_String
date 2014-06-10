@@ -1,3 +1,9 @@
+var person = createPerson("Bob", "18", "happy"),
+    person2 = createPerson("Jack", "20", "grumpy"),
+    person3 = createPerson("Sue", "30", "giddy"),
+    person4 = createPerson("Jake", "40", "confused")
+    person5 = createPerson("Jill", "25", "sad");
+
 function createPerson(firstName, age, mood) {
   return {
     firstName : firstName,
@@ -9,11 +15,7 @@ function createPerson(firstName, age, mood) {
   };
 }
 
-var person = createPerson("Bob", "18", "happy"),
-    person2 = createPerson("Jack", "20", "grumpy"),
-    person3 = createPerson("Sue", "30", "giddy"),
-    person4 = createPerson("Jake", "40", "confused")
-    person5 = createPerson("Jill", "25", "sad");
+
 
 console.log(person.description());
 console.log(person2.description());
