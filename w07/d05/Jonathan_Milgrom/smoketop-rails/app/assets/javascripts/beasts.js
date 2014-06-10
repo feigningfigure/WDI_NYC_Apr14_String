@@ -5,7 +5,7 @@ $(document).ready(function() {
 		$carnivore = $("#diet_carnivore"),
 		$omnivore = $("#diet_omnivore");
 
-	var beastsTemplate = _.template($("#beastsTemplate"));
+	
 	
 	clickListener($any);
 	clickListener($herbivore);
@@ -19,6 +19,9 @@ $(document).ready(function() {
 	// 		 	);
 	// 	});
 	// }
+
+	var beastsTemplate = _.template($("#beastsTemplate").text());
+
 	function clickListener(button) {
 		button.click(function() {
 			console.log($(this).val());
@@ -27,9 +30,13 @@ $(document).ready(function() {
 				type: "GET",
 				dataType: "json"
 			}).done(function(data){
-				 debugger
-				var passer = {beasts: data};
-				beastsTemplate(passer);
+				$beastlist = $("#beast-list");
+				$beastlist.empty()
+				data.forEach(function(beast) {
+					var html = beastsTemplate({"beast": beast});
+					$beastlist.append(html);	
+				})
+				
 			});
 		});
 	}
