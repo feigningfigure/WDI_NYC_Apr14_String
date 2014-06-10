@@ -25,6 +25,7 @@ function PeopleCollection(){
 PeopleCollection.prototype.add = function(personJSON){
 	var newPerson = new Person(personJSON);
 	this.models[personJSON.id] = newPerson;
+	$(this).trigger('monkey');
 }
 
 PeopleCollection.prototype.create = function(paramObject){
@@ -39,6 +40,19 @@ PeopleCollection.prototype.create = function(paramObject){
 		self.add(data); 
 	})
 }
+
+PeopleCollection.prototype.fetch = function(){
+	var self = this;
+	$.ajax({
+		url: '/people',
+		dataType: 'json',
+		method: 'get'
+	}).done(function(data){
+		for(id in data){
+		self.add(data[id]);
+		}
+	})
+};
 
 function displayEntireCollection(){
 
@@ -55,6 +69,12 @@ var peopleCollection = new PeopleCollection();
 
 
 $(function(){
+
+	peopleCollection.fetch();
+
+	$(peopleCollection).on('monkey', function(){
+		displayEntireCollection();
+	})
 
 	$('.name-form').on('submit', function(e){
 		console.log(e);
