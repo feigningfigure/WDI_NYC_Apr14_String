@@ -42,6 +42,31 @@ CustomerCollection.prototype.create = function(paramObject){
   })
 }
 
+CustomerCollection.prototype.destroy = function(id){
+  $.ajax({
+    url: '/customer/' + id,
+    method: 'DELETE',
+    dataType:'json',
+  }).done(function(){
+    console.log("success");
+    customerCollection.delete(id);
+  })
+}
+
+CustomerCollection.prototype.delete = function(id){
+  delete this.models[id];
+  $(this).trigger('monkey');
+}
+
+function deleteItem(){
+  $( ".delete" ).click(function() {
+  var deletedItemId = $(this).parent().attr( "id" )
+  customerCollection.destroy(deletedItemId);
+  //console.log($(this).parent().attr( "id" ));
+  });
+}
+
+
 
 CustomerCollection.prototype.fetch = function(){
   var self = this;
@@ -64,6 +89,9 @@ CustomerCollection.prototype.add = function(customerJSON){
   $(this).trigger('monkey');
 }
 
+
+
+
 function displayEntireCollection(){
   $('.customers').empty().html('');
   for(id in customerCollection.models){
@@ -71,6 +99,7 @@ function displayEntireCollection(){
     var customerView = new CustomerView(customer);
     $('.customers').append(customerView.render().el);
   }
+  deleteItem();
 }
 
 
@@ -96,6 +125,7 @@ $(function(){
   // Insert AJAX call below
   customerCollection.create({name: newCustomerInput[0].value, address: newCustomerInput[1].value, email: newCustomerInput[2].value, loyalty_code: newCustomerInput[3].value});
    })
+
 })
 
 

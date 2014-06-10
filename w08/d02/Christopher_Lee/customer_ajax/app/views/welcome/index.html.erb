@@ -18,11 +18,12 @@
 
 
 <script id="customerTemplate" type="text/template">
-    <li class="customer">
+    <li id=<%%= id %> class="customer">
         <h1><%%= name %></h1>
         <div>address: <%%= address %></div>
         <div>email: <%%= email %></div>
         <div>loyalty code: <%%= loyalty_code %></div>
+        <button class="delete">Delete</button>
     </li>
 </script>
 
