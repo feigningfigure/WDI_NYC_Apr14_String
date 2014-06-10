@@ -68,7 +68,7 @@ function repopulateBeastListFromData(beasts) {
   $("#beast-list").empty();
   beasts.forEach(function(beast) {
     var beastHTML = beastTemplate({"beast": beast});
-    $("#beast-list").append(beastHTML);
+    $("#beast-list").prepend(beastHTML);
   });
 }
 
