@@ -35,4 +35,25 @@
 		- Add your partners as collaborators on the project.  This will allow all of you to push and pull code from that repo.
 	- Everyone:
 		- Clone the repo into your personal or projects folder
+<<<<<<< HEAD
+=======
+
+#### Part 2
+
+- ***SCRUM TIME!***
+	- Split up responsibilities in a logical way.  Consider assigning one entire CRUD function to each person, i.e., one person creates the controller action and view for `create` while someone else creates the controller action and view for `update`, etc.
+		
+#### Part 3
+
+- Move AWAY from the rest of your team.  No one should be sitting close to each other. 
+- You will each work independently.  ***The only way you are allowed to communicate is via private message on HipChat***
+	- Do NOT use any form of group communcation 
+	
+	
+***Notes***:
+	- Use rails form helpers.       
+	- Consider using partials, they might make this a lot easier.
+
+
+>>>>>>> df408de2e9637c38c6be285302153e5a81e10b9c
 		
