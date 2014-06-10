@@ -76,6 +76,12 @@ function repopulateBeastListFromData(beasts) {
 
 function setEventListeners() {
 
+$("#new_form").hide();
+$("#add_link").click(function(){
+     $("#new_form").slideToggle();
+     $("#add_link").hide();
+  });
+
   jQuery("#diet-filter input:radio[name=diet]").click(function() {
     // This was the old way of doing it where the server returned HTML
     // oldRepopulateBeastList($(this).val());
