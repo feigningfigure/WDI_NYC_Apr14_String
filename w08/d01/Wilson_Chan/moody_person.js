@@ -1,63 +1,24 @@
-// var names = ["Bob", "Jack", "Sue", "Jake", "Jill"];
+function createPerson(firstName, age, mood) {
+  return {
+    firstName : firstName,
+    age : age,
+    mood: mood,
+    description : function() {
+      return "Hello, my name is " + this.firstName + ", I am " + this.age + ", and I'm feeling " + this.mood + " today."
+    },
+  };
+}
 
-// console.log(people);
+var person = createPerson("Bob", "18", "happy"),
+    person2 = createPerson("Jack", "20", "grumpy"),
+    person3 = createPerson("Sue", "30", "giddy"),
+    person4 = createPerson("Jake", "40", "confused")
+    person5 = createPerson("Jill", "25", "sad");
 
-var person = {
-  firstName: "Bob",
-  age: 18,
-  mood: "Happy",
-  greet: function() {
-    console.log("Howdy, my name is " +this.firstName + "I am " +this.age "years old and I'm " +this.mood " today.")
-  }
-};
-
-var person = {
-  firstName: "Jack",
-  age: 18,
-  mood: "Happy",
-  greet: function() {
-    console.log("Howdy, my name is " +this.firstName + "I am " +this.age "years old and I'm " +this.mood " today.")
-  }
-};
-
-var person = {
-  firstName: "Sue",
-  age: 18,
-  mood: "Sad",
-  greet: function() {
-    console.log("Howdy, my name is " +this.firstName + "I am " +this.age "years old and I'm " +this.mood " today.")
-  }
-};
-
-var person = {
-  firstName: "Jake",
-  age: 18,
-  mood: "Grateful",
-  greet: function() {
-    console.log("Howdy, my name is " +this.firstName + "I am " +this.age "years old and I'm " +this.mood " today.")
-  }
-};
-
-var person = {
-  firstName: "Jill",
-  age: 18,
-  mood: "Happy",
-  greet: function() {
-    console.log("Howdy, my name is " +this.firstName + "I am " +this.age "years old and I'm " +this.mood " today.")
-  }
-};
-
-// console.log(person.greet());
-
-// var person = new Object();
-
-// person.firstName = "Bob";
-// person.age = 18;
-// person.mood = "Happy";
-// person.greet = function() {
-//   return "Howdy, my name is " this.firstName + "I am " this.age "years old and I'm " + this.mood + " today.";
-// };
-
-
+console.log(person.description());
+console.log(person2.description());
+console.log(person3.description());
+console.log(person4.description());
+console.log(person5.description());
 
 
