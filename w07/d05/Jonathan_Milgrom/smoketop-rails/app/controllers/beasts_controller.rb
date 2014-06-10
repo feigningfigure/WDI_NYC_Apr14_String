@@ -5,7 +5,7 @@ class BeastsController < ApplicationController
   end
 
   def index
-    binding.pry
+    # binding.pry
     if params[:diet]
       @diet = params[:diet]
     else
