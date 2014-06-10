@@ -19,6 +19,10 @@ class BeastsController < ApplicationController
     end
   end
 
+  def show
+    render :json => Beast.find(params[:id])
+  end
+
   def create
 
   end
