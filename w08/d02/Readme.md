@@ -35,8 +35,6 @@
 		- Add your partners as collaborators on the project.  This will allow all of you to push and pull code from that repo.
 	- Everyone:
 		- Clone the repo into your personal or projects folder
-<<<<<<< HEAD
-=======
 
 #### Part 2
 
@@ -55,5 +53,17 @@
 	- Consider using partials, they might make this a lot easier.
 
 
->>>>>>> df408de2e9637c38c6be285302153e5a81e10b9c
+---
+
+## Homework
+
+- Create a single-page CRUD app in Rails, using javascript Prototypes and Ajax.
+
+- Your model is Customer.  The Customer model has the attributes:  name, address, email, loyalty_code.
+
+- Your one-page app should allow the user to see all customers, add a new customer, edit a customer, and delete a customer -- all without refreshing the page, all by using Ajax.
+
+ 
+ 
+
 		
