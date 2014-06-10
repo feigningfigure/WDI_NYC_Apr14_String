@@ -13,7 +13,7 @@ $(function(){
 
 });
 
-function Person(name, age mood){
+function Person(name, age, mood){
 	this.name = name; 
 	this.age = age;
 	this.mood = mood
@@ -21,7 +21,7 @@ function Person(name, age mood){
 
 
 if(this.mood == "happy") {
-	console.log("Hi, my name is" + this.name + "and I\''m" + this.age + "years old." + "right now I'm feeling" + this.mood ".");
+	console.log("Hi, my name is" + this.name + "and I\''m" + this.age + "years old." + "right now I'm feeling" + this.mood + ".");
 } else {
 	console.log("I hope this works");
 }
