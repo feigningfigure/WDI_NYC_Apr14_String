@@ -1,4 +1,4 @@
-class CustomersController < ApplicationController
+class CustomerController < ApplicationController
 
   respond_to :json
 
@@ -9,7 +9,7 @@ class CustomersController < ApplicationController
 
   def create
     customer = Customer.create(customer_params)
-    respond_with person
+    respond_with customer
   end
 
   def update
@@ -23,8 +23,8 @@ class CustomersController < ApplicationController
 
   private
 
-  def person_params
-    params.require(:person).permit(:name)
+  def customer_params
+    params.require(:customer).permit(:name, :address, :email, :loyalty_code)
   end
 
 end
