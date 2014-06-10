@@ -84,7 +84,52 @@ function setEventListeners() {
     repopulateBeastList(jQuery(this).val());
   });
 
+
+var newBeastTemplate = _.template($("#newBeastTemplate").text());
+
+$("#add_new_beast").click(function() {
+  var beast = {
+  name: $("#new_name").val(),
+  diet: $("#new_diet").val(),
+  habitat: $("#new_habitat").val(),
+  light_ethology: $("#new_light_ethology").val(),
+  size: $("#new_size").val(),
+  description: $("#new_description").val()
+};
+  var newBeastHTML = newBeastTemplate(beast);
+  console.log(newBeastHTML);
+
+$.ajax({
+  url: "/beasts",
+  type: "POST",
+  dataType: "json",
+  data: beast
+}).done(function(data){
+  console.log(data);
+});
+
+/// bellow closes brackets
+});
+
 }
+
+  // $("#beast-list").prepend(newBeastHTML);
+
+
+// $("#add_new_user").click(function() {
+// var user = {
+// name: $("#new_user_name").val(),
+// favorite_color: $("#new_user_favorite_color").val() };
+// var userHTML = userTemplate(user);
+//$userList.append(userHTML);
+// $.ajax({
+// url: "/users",
+// type: "POST", dataType: "json", data: user
+// }).done(function(data) {
+// if (data.message == "FAILURE") {
+// alert("OH NO, FAILURE! Removing element now.");
+// $userList.children().last().remove(); }
+// }); });
 
 $(document).ready(function() {
 
