@@ -93,6 +93,26 @@ $("#add_link").click(function(){
 
 var newBeastTemplate = _.template($("#newBeastTemplate").text());
 
+var beastPix = ["broog.png",
+"cloud_mite.png",
+"crocotillion.png",
+"dune_bonk.png",
+"finbus.png",
+"meleunic.png",
+"moggen.png",
+"nighe.png",
+"scryfledge.png",
+"shadewink.png",
+"steins_owl.png",
+"tiller_platypus.png",
+"unavailable.png",
+"whargl.png",
+"windusk.png",
+"yoink.png"]
+
+var randpic = beastPix[Math.floor(Math.random() * beastPix.length)];
+
+
 $("#add_new_beast").click(function() {
   var beast = {
   name: $("#new_name").val(),
@@ -100,10 +120,10 @@ $("#add_new_beast").click(function() {
   habitat: $("#new_habitat").val(),
   light_ethology: $("#new_light_ethology").val(),
   size: $("#new_size").val(),
+  image_filename: randpic,
   description: $("#new_description").val()
 };
   var newBeastHTML = newBeastTemplate(beast);
-  console.log(newBeastHTML);
 
 $.ajax({
   url: "/beasts",

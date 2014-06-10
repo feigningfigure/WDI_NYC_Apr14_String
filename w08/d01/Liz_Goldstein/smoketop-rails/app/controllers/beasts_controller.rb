@@ -33,6 +33,7 @@ class BeastsController < ApplicationController
       :habitat => params["habitat"],
       :light_ethology => params["light_ethology"],
       :size => params["size"],
+      :image_filename => params["image_filename"],
       :description => params["description"]})
   newbeast.save!
 
@@ -53,7 +54,7 @@ class BeastsController < ApplicationController
 private
 
   def beast_params
-    params.require(:beast).permit(:name, :diet, :habitat, :light_ethology, :size, :description)
+    params.require(:beast).permit(:name, :diet, :habitat, :light_ethology, :size, :image_filename, :description)
   end
 
 
