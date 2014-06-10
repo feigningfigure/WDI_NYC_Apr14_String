@@ -2,6 +2,7 @@
   <% attrs.each do |attr| %>
     <tr class="<%= attr %>">
       <td class="key"><strong><%= attr.humanize %></strong></td>
+     <!-- model refers to the instance of the Beast model -->
       <td class="value"><%= model[attr] %></td>
     </tr>
   <% end %>
