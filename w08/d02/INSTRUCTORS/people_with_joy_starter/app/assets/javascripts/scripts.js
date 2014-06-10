@@ -11,7 +11,11 @@ function PersonView(model){
 	this.el = undefined; 
 }
 
-
+PersonView.prototype.render = function(){
+	var newElement = $('<li>').html(this.model.name);
+	this.el = newElement;
+	return this
+}
 
 // ************ Collection *************
 function PeopleCollection(){
@@ -24,14 +28,27 @@ PeopleCollection.prototype.add = function(personJSON){
 }
 
 PeopleCollection.prototype.create = function(paramObject){
+	// the below line is setting the variable 'self' to the instance of PeopleCollection that .create is calleed on
+	var self = this
 	$.ajax({
 		url: '/people',
 		method: 'post',
 		dataType: 'json',
 		data: {person: paramObject}
 	}).done(function(data){
-		peopleCollection.add(data); 
+		self.add(data); 
 	})
+}
+
+function displayEntireCollection(){
+
+	$('.people').html('');
+
+	for(id in peopleCollection.models){
+		var person = peopleCollection.models[id];
+		var personView = new PersonView(person);
+		$('.people').append(personView.render().el);
+	}
 }
 
 var peopleCollection = new PeopleCollection();
