@@ -51,6 +51,20 @@ function hide(callingLink) {
 
 //  });
 
+// REFACTORED BY CHRIS B.:
+
+// $(document).ready( function() {
+//   $(".hide").hide();
+//   $('.bio').hide();
+
+//     $('a').click(function(){
+//       $(this).siblings(".bio").slideToggle();
+//       $(this).siblings("a").toggle();
+//       $(this).toggle();
+//     });
+
+//  });
+
 
 // Chris Lee
 // $(".hide-show").children().show();

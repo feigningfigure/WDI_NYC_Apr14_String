@@ -4,11 +4,11 @@ function setEventHandlers() {
 
   $add_filter.click(function(){
     var diet_choice = $(".diet_choice:checked").val(),
-        beast = new Beast,
+        // beast = new Beast,
         $beast_list = $("#beast-list"),
         stringQuery = "beasts?diet=" + diet_choice + " .beast";
 
-    beast.filter(diet_choice);
+    // beast.filter(diet_choice);
     $beast_list.load(stringQuery);
 
     // if (diet_choice === "any") {
@@ -24,20 +24,20 @@ function setEventHandlers() {
 
 
 
-  var Beast = function(){
-    this.filter = function(filter_choice){
-      $.ajax({
-        url: '/beasts',
-        type: 'GET',
-        dataType: 'json',
-        data: { "diet": filter_choice }
-      }).done(function() {
+  // var Beast = function(){
+  //   this.filter = function(filter_choice){
+  //     $.ajax({
+  //       url: '/beasts',
+  //       type: 'GET',
+  //       dataType: 'json',
+  //       data: { "diet": filter_choice }
+  //     }).done(function() {
         
-        console.log("hello");
-      });
+  //       console.log("hello");
+  //     });
 
-    }
-  }
+  //   }
+  // }
 }
 
 
