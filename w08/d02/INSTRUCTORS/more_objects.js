@@ -2,7 +2,7 @@
 // EVERYTHING is an Object
 // EVERYTHING (ALL OBJECTS) are enumerable!
 var Person = {
-    sayHello: function() {
+    "sayHello": function() {
         return "Yo! My name be " + this.name + ".";
     }
 };
