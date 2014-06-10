@@ -28,6 +28,7 @@ function PeopleCollection(){
 PeopleCollection.prototype.add = function(personJSON){
   var newPerson = new Person(personJSON);
   this.models[personJSON.id] = newPerson;
+  $(this).trigger('monkey');
 }
 
 PeopleCollection.prototype.create = function(paramObject){
@@ -42,7 +43,18 @@ PeopleCollection.prototype.create = function(paramObject){
   });
 }
 
-
+PeopleCollection.prototype.fetch = function(){
+  var self = this;
+  $.ajax({
+    url: "/people",
+    method: "GET",
+    dataType: "json"
+  }).done(function(data){
+    for(id in data){
+      self.add(data[id]);
+    }
+  });
+}
 
 
 
@@ -59,9 +71,19 @@ function displayEntireCollection(){
 
 }
 
+// *********************************************
 var peopleCollection = new PeopleCollection();
+// *********************************************
 
 $(function(){
+
+  peopleCollection.fetch();
+
+  // monkey is our custom event listener....we can call it dog
+  $(peopleCollection).on('monkey', function(){
+    displayEntireCollection();
+  });
+
   // e is convention for event
   $('.name-form').on('submit', function(e){
     console.log(e);
