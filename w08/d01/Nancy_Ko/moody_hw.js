@@ -9,9 +9,9 @@
 // });
 
 
-$(function(){
+// $(document).ready(function(){
 
-});
+// });
 
 function Person(name, age, mood){
 	this.name = name; 
@@ -27,4 +27,4 @@ if(this.mood == "happy") {
 }
 
 
-personArray = new Person%w(John 40 happy); 
+personArray = new Person("John", 40, "happy"); 
