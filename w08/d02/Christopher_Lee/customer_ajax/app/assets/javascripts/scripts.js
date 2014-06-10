@@ -14,7 +14,10 @@ function CustomerView(model){
 }
 
 CustomerView.prototype.render = function(){
-  var newElement = $('<li>').html(this.model.name);
+  var customerTemplate = _.template($("#customerTemplate").text());
+  var customerHTML = customerTemplate(this.model);
+  //var newElement = $('<h1>').html(this.model.name);
+  var newElement = customerHTML;
   this.el = newElement;
   return this
 }
@@ -91,11 +94,8 @@ $(function(){
   console.log({name: newCustomerInput[0].value, address: newCustomerInput[1].value, email: newCustomerInput[2].value, loyalty_code: newCustomerInput[3].value});
 
   // Insert AJAX call below
-
-  // FIX THIS!!!!!!
   customerCollection.create({name: newCustomerInput[0].value, address: newCustomerInput[1].value, email: newCustomerInput[2].value, loyalty_code: newCustomerInput[3].value});
    })
-  //newNameInput.val('');
 })
 
 
