@@ -8,6 +8,18 @@ function Customer(customerJSON){
 }
 
 // ************ View *************
+function CustomerView(model){
+  this.model = model;
+  this.el = undefined;
+}
+
+CustomerView.prototype.render = function(){
+  var newElement = $('<li>').html(this.model.name);
+  this.el = newElement;
+  return this
+}
+
+
 
 // ************ Collection *************
 function CustomerCollection(){
@@ -22,10 +34,23 @@ CustomerCollection.prototype.create = function(paramObject){
     data: {customer: paramObject}
   }).done(function(data){
     // INSERT CALLBACK CODE HERE
-    // FIX THIS!!!!!!
     console.log(data);
-    //customerCollection.add(data);
+    customerCollection.add(data);
   })
+}
+
+
+CustomerCollection.prototype.fetch = function(){
+  var self = this;
+    $.ajax({
+      url: '/customer',
+      dataType: 'json',
+      method: 'get'
+    }).done(function(data){
+      for(id in data){
+      self.add(data[id]);
+      }
+    })
 }
 
 var customerCollection = new CustomerCollection();
@@ -36,13 +61,26 @@ CustomerCollection.prototype.add = function(customerJSON){
   $(this).trigger('monkey');
 }
 
+function displayEntireCollection(){
+  $('.customers').empty().html('');
+  for(id in customerCollection.models){
+    var customer = customerCollection.models[id];
+    var customerView = new CustomerView(customer);
+    $('.customers').append(customerView.render().el);
+  }
+}
+
+
+
 
 
 $(function(){
 
-  //$(peopleCollection).on('monkey', function(){
-    //displayEntireCollection();
-  //})
+  customerCollection.fetch();
+
+  $(customerCollection).on('monkey', function(){
+    displayEntireCollection();
+  })
 
 
   $('.customer-form').on('submit', function(e){
