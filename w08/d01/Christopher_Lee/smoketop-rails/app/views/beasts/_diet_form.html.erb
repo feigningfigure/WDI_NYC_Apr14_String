@@ -1,0 +1,11 @@
+<form id="diet-filter" action="/beasts" method="GET">
+  <strong>Diet:</strong>
+  <%= radio_button_tag 'diet', 'any', (@diet == 'any') %>
+  <label for="diet_any">Any</label>
+  <%= radio_button_tag 'diet', 'herbivore', (@diet == 'herbivore') %>
+  <label for="diet_herbivore">Herbivore</label>
+  <%= radio_button_tag 'diet', 'carnivore', (@diet == 'carnivore') %>
+  <label for="diet_carnivore">Carnivore</label>
+  <%= radio_button_tag 'diet', 'omnivore', (@diet == 'omnivore') %>
+  <label for="diet_omnivore">Omnivore</label>
+</form>
