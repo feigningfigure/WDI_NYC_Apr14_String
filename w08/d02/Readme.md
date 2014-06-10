@@ -21,7 +21,7 @@
 		
 - You will have a short Scrum to decide who will be responsible for each piece. The idea is NOT to pair program, but to split up responsibilities and work independently.
 
-***Do not start coding yet***
+***To begin, 1 person drives***
 
 - Since the goal is to build the application together, how can we collaborate on our code?
 - To begin:
