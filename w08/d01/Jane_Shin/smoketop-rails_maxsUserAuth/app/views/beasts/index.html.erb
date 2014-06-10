@@ -1,0 +1,12 @@
+<section id="beasts">
+  <h1>Beasties below...</h1>
+  <%= render "diet_form" %>
+  <section id="beast-list">
+  </section>
+
+  <script type="text/javascript">
+  	var beastData = '<%=j @beasts.to_json.html_safe %>';
+  </script>
+
+  <%= render :partial => "beast" %>
+</section>
