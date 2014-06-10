@@ -17,6 +17,8 @@ function addEventListeners(){
 				
 				task.all();
 
+				$('.delete_button').load()
+
 				$task_text_input.val('');
 				$due_date_input.val('');							
 			});

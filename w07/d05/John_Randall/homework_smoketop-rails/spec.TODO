@@ -1,0 +1,20 @@
+---
+##Doctor Smoketop's Brobdingnagian Bestiary
+- ***Goal***: Take the prexisitng code and update it to use AJAX as well as adding new functionality.
+- This will give you additional experience and practice with Javascript and AJAXs 
+- This will help you to work with other people's code (hint hint: it's preparation for project
+
+☐ ***Step 1***:
+  ☐ - Go over the existing code and be sure you understand how it works.  It uses some advanced tecniques, so pay attention to how the applicaiton is structured.
+  ✔ - Don't forget that you will need to create the database, run the migrations and run the seed file. @done (14-06-07 14:37)
+  
+- ***Step 2***: 
+  ☐ - Add a javascript file and update the `index` method to respond with json.  
+  ☐ - In your javascript file, add an AJAX call and whatever other functions you need to preserve the current functionality, but without having to refresh the page.  This will also require using jQuery to manipulate the DOM.
+☐ - ***Step 3***:
+☐ - Add your own controller actions and corresponding javascript for the other CRUD methods 
+    ☐ - Use this order - create, destroy, update.
+
+- ***Notes***
+  - Don't be afraid to update the starter code as you need to.  Some things will have to be changed as you build out the application while other things will have to be thrown away completely.  
+  - This is a great wrapup of everything we have done.  Spend enough time working on it because it's great preparation for next week.  
