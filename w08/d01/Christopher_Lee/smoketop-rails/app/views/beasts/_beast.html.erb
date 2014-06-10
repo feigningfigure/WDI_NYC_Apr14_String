@@ -1,0 +1,24 @@
+<script type="text/template" type="text/template">
+  <article class="beast" id="beast-<%%= beast.id %>">
+    <header>
+      <h1><%%= beast.name %></h1>
+      <%%= image_tag(beast.image_filename || 'unavailable.png') %>
+    </header>
+    <section class="entry-body">
+        <table>
+          <%% [diet, habitat, light_ethology, size).forEach(function(attr) { %>
+            <tr class="<%%= attr %>">
+              <td class="key"><strong><%%= (attr.replace(/_/g, ' ')
+                .replace(/(\w+)/g, function(match) {
+                 return match.charAt(0).toUpperCase() + match.slice(1);
+                });) %></strong></td>
+              <td class="value"><%%= beast[attr] %></td>
+            </tr>
+          <%% } %>
+        </table>
+      <%% beast[description_paragraphs].forEach(function(paragraph) { %>
+        <p><%%= paragraph %></p>
+      <%% } %>
+    </section>
+  </article>
+</script>

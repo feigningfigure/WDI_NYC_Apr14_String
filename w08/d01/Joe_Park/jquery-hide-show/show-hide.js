@@ -1,25 +1,33 @@
 $(function(){
-  $('.hide').hide();
+  $(".hide").hide();
   $('.bio').hide();
 
-  $('.show').click(function(){
+  $('a').click(function(){
     $(this).siblings(".bio").slideToggle();
     $(this).siblings("a").toggle();
     $(this).toggle();
-    console.log($(this));
   });
+//   $('.hide').hide();
+//   
 
-  $('.hide').click(function(){
-    $(this).siblings(".bio").slideToggle();
-    $(this).siblings("a").toggle();
-    $(this).toggle();
-  });
+//   $('.show').click(function(){
+//     $(this).siblings(".bio").slideToggle();
+//     $(this).siblings("a").toggle();
+//     $(this).toggle();
+//     console.log($(this));
+//   });
+
+//   $('.hide').click(function(){
+//     $(this).siblings(".bio").slideToggle();
+//     $(this).siblings("a").toggle();
+//     $(this).toggle();
+//   });
 
 });
 
 
 
-
+// $(this) is used when you are trying to preserve context for a callback function
 
 
 
