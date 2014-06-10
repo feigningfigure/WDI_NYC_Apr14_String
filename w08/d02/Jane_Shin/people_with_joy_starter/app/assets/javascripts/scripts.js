@@ -29,6 +29,7 @@ function PeopleCollection() {
 PeopleCollection.prototype.add = function(personJSON){
 	var newPerson = new Person(personJSON);
 	this.models[personJSON.id] = newPerson;
+	$(this).trigger('dolphin');
 }
 
 PeopleCollection.prototype.create = function(paramObject){
@@ -40,6 +41,19 @@ PeopleCollection.prototype.create = function(paramObject){
 		data: {person: paramObject}
 	}).done(function(data){
 		self.add(data);
+	});
+}
+
+PeopleCollection.prototype.fetch = function(){
+	var self = this;
+	$.ajax({
+	url: "/people",
+	method: "GET",
+	dataType: 'json'
+	}).done(function(data){
+		for(id in data){
+		self.add(data[id]);
+		}
 	});
 }
 
@@ -57,6 +71,15 @@ var peopleCollection = new PeopleCollection();
 
 
 $(function(){
+	peopleCollection.fetch();
+
+	//custom event handler
+	// .fetch and .create both have a common denominator =  .add()
+	//'dolphin' can be named whatever we want, class example was 'reset', we're just using that word in "triggering"
+	$(peopleCollection).on('dolphin', function(){
+		displayEntireCollection();
+	});
+
 	// "e" is convention for "event"
 	$('.name-form').on('submit', function(e){
 		console.log(e);
