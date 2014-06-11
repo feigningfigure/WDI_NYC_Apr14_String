@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   root "welcome#index"
-  resources :people
+  resources :customers
 
-#        Prefix Verb   URI Pattern                Controller#Action
-#        root GET    /                          welcome#index
-#      people GET    /people(.:format)          people#index
-#             POST   /people(.:format)          people#create
-#  new_person GET    /people/new(.:format)      people#new
-# edit_person GET    /people/:id/edit(.:format) people#edit
-#      person GET    /people/:id(.:format)      people#show
-#             PATCH  /people/:id(.:format)      people#update
-#             PUT    /people/:id(.:format)      people#update
-#             DELETE /people/:id(.:format)      people#destroy
+#        Prefix Verb   URI Pattern                   Controller#Action
+#          root GET    /                             welcome#index
+#     customers GET    /customers(.:format)          customers#index
+#               POST   /customers(.:format)          customers#create
+#  new_customer GET    /customers/new(.:format)      customers#new
+# edit_customer GET    /customers/:id/edit(.:format) customers#edit
+#      customer GET    /customers/:id(.:format)      customers#show
+#               PATCH  /customers/:id(.:format)      customers#update
+#               PUT    /customers/:id(.:format)      customers#update
+#               DELETE /customers/:id(.:format)      customers#destroy
 end

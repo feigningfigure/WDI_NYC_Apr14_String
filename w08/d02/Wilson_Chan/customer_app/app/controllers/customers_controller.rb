@@ -1,18 +1,23 @@
 class CustomersController < ApplicationController
-
+    # this entire respond_to is responding to json
     respond_to :json
 
   def index
+    customers = Customer.all
+    respond_with customers
 
 
   end
 
   def create
-
+    customer = Customer.create(customer_params)
+    respond_with customer
 
   end
 
   def update
+    customer = Customer.find(params[:id])
+    customer.update(customer_params)
 
   end
 
