@@ -21,9 +21,10 @@ class CustomersController < ApplicationController
   # end
 
   def destroy
-    customer = Customer.find(customer_attributes[:id])
+    customer = Customer.find(params[:id])
     customer.destroy
-    respond_with "Success!"
+    customers = Customer.all
+    respond_with customers
   end
 
   private

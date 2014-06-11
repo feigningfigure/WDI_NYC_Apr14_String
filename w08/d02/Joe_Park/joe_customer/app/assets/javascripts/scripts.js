@@ -19,7 +19,7 @@ function CustomerView(model){
 }
 
 CustomerView.prototype.render = function(){
-  var newElement = $('<li>').html(this.model.name + " = " + this.model.email);
+  var newElement = $('<li>').html(this.model.name + " = " + this.model.email + " <button id='" + this.model.id + "'>DELETE</button>");
   this.el = newElement
   return this
 }
@@ -60,7 +60,16 @@ CustomersCollection.prototype.fetch = function(){
   });
 }
 
-
+CustomersCollection.prototype.delete = function(customerId){
+  $.ajax({
+    url: "/customers/" + customerId,
+    type: "DELETE",
+    dataType: "json"
+  }).done(function(){
+  });
+    delete customersCollection.models[customerId];
+    $(this).trigger('refresh');
+}
 
 
 // global
@@ -94,7 +103,7 @@ $(function(){
 
 
   $('.customer-form').on('submit', function(evt){
-    console.log(evt);
+    // console.log(evt);
     evt.preventDefault();
     var newNameInput = $('.customer-form input[name="name"]'),
         newAddressInput = $('.customer-form input[name="address"]'),
@@ -109,6 +118,14 @@ $(function(){
     });
     $('.customer-form input').val('');
   });
+
+  $('.customers').on('click', 'button', function(evt){
+    evt.preventDefault();
+    // console.log($(this).attr("name"));
+    var customerId = $(this).attr("id");
+    customersCollection.delete(customerId);
+  });
+
 
   // only executes on load and not after so we need to create fetch for this to work
   displayAllCustomers();
