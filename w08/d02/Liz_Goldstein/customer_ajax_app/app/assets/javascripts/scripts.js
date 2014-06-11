@@ -14,11 +14,20 @@ function Customer(customerJSON){
 function CustomerView(model){
   this.model = model;
   this.el = undefined;
+  this.el2 = undefined;
 }
 
 CustomerView.prototype.render = function(){
-  var newElement = $('<li>').html(this.model.name);
+  var newElement = $('<h2>').html(this.model.name);
+  var newElement2 = $('<li>').html("Address: " + this.model.address);
+  var newElement3 = $('<li>').html("Email: " + this.model.email);
+  var newElement4 = $('<li>').html('<a id="delete_link" href="/customers/' + this.model.id + '">DELETE</a>');
+
+  console.log(newElement2);
   this.el = newElement;
+  this.el2 = newElement2;
+  this.el3 = newElement3;
+  this.el4 = newElement4;
   return this;
 }
 
@@ -45,6 +54,18 @@ CustomerCollection.prototype.create = function(paramObject){
   })
 }
 
+CustomerCollection.prototype.delete = function(paramObject){
+  $.ajax({
+    url: '/customer/:id',
+    method: 'delete',
+    dataType: 'json',
+    data: {customer: paramObject}
+  }).done(function(data){
+    customerCollection.add(data);
+  })
+}
+
+
 CustomerCollection.prototype.fetch = function(){
   var self = this;
   $.ajax({
@@ -67,6 +88,9 @@ function displayEntireCollection(){
     var customer = customerCollection.models[id];
     var customerView = new CustomerView(customer);
     $('.customers_display').append(customerView.render().el);
+    $('.customers_display').append(customerView.render().el2);
+    $('.customers_display').append(customerView.render().el3);
+     $('.customers_display').append(customerView.render().el4);
   }
 }
 
