@@ -25,11 +25,21 @@ CustomerView.prototype.find = function(){
 }
 
 CustomerView.prototype.render = function(){
+
   var newElement = $('<h2>').html(this.model.name);
   var newElement2 = $('<li>').html("Address: " + this.model.address);
   var newElement3 = $('<li>').html("Email: " + this.model.email);
-  // var newElement4 = $('<li>').html('<a id="delete_link" href="/customers/' + this.model.id + '">DELETE</a>');
-   var newElement4 = $('<li class="delete_link" value = ' + this.model.id + '>').html("[DELETE]");
+  // var newElement4 = $('<li>').html('<a id="delete_link" href="/customer/' + this.model.id + '">DELETE</a>');
+  var newElement4 = $('<li>').html('<a href="javascript:void(0)" onclick="deleteClick('+ this.model.id +')">DELETE</a>');
+   // var newElement4 = $('<li id="delete_link" value = ' + this.model.id + '>').html("[DELETE]");
+
+
+// $("#delete_link").click(function(){
+//     var send_id = $("#delete_link").val();
+//      console.log(send_id);
+//       var id_data = {
+//         id: send_id
+//       };});
 
   this.el = newElement;
   this.el2 = newElement2;
@@ -42,6 +52,10 @@ CustomerView.prototype.render = function(){
 
 function CustomerCollection() {
   this.models = {};
+}
+
+function fast_reset() {
+  $(this).trigger('reset');
 }
 
 CustomerCollection.prototype.add = function(customerJSON){
@@ -61,7 +75,22 @@ CustomerCollection.prototype.create = function(paramObject){
   })
 }
 
-CustomerCollection.prototype.find = function(id){
+function deleteClick(id){
+  console.log(id);
+  var send_id = id;
+  var id_data = {
+        id: send_id
+        };
+$.ajax({
+    url: '/customer/' + send_id,
+    type: 'post',
+    dataType: 'json',
+    data: id_data,
+     data: {"_method":"delete"}
+  }).done(function(results){
+    location.reload();
+    // fast_reset();
+  })
 
 }
 
@@ -78,9 +107,8 @@ CustomerCollection.prototype.find = function(id){
 //   })
 // }
 
-
-
 CustomerCollection.prototype.fetch = function(){
+
   var self = this;
   $.ajax({
     url: '/customer',
@@ -91,8 +119,8 @@ CustomerCollection.prototype.fetch = function(){
       self.add(data[id]);
     }
   })
-};
 
+};
 //below function is interracting with the view html
 function displayEntireCollection(){
 
@@ -104,29 +132,31 @@ function displayEntireCollection(){
     $('.customers_display').append(customerView.render().el);
     $('.customers_display').append(customerView.render().el2);
     $('.customers_display').append(customerView.render().el3);
-     $('.customers_display').append(customerView.render().el4);
+    $('.customers_display').append(customerView.render().el4);
   }
-  $(".delete_link").click(function(){
-    var id = $(".delete_link").val();
 
+// x = customerCollection.length
+// $("#delete_link").click(function(){
+//     var send_id = $("#delete_link").val();
+//      console.log(send_id);
+//       var id_data = {
+//         id: send_id
+//       };});
 
-
-    });
 }
 
 var customerCollection = new CustomerCollection();
 
-function setEventListeners() {
+// function setEventListeners() {
 
-    $("#clicktest").click(function(){
-      console.log("clicked");
-    });
-}
+//     $("#clicktest").click(function(){
+//       console.log("clicked");
+//     });
+// }
 
 $(function(){
-  setEventListeners();
-  customerCollection.fetch();
 
+  customerCollection.fetch();
 //below, "reset" is arbitrary assigned by coder (us)
   $(customerCollection).on('reset', function(){
     displayEntireCollection();

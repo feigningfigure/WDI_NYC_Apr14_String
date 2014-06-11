@@ -15,8 +15,13 @@ class CustomerController < ApplicationController
   end
 
   def destroy
-     Customer.delete(params[:id])
+
+    Customer.delete(params[:id])
+    results = "success"
+     # redirect_to '/'
+     respond_with results
   end
+
 
 private
 
