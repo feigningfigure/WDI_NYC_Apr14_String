@@ -1,20 +1,23 @@
 // ============ MODEL =========================
 function Customer(customerJSON){
-  this.name = customerJSON.name;
-  this.address = customerJSON.address;
-  this.email = customerJSON.email;
-  this.loyalty_code = customerJSON.loyalty_code;
-  this.id = customerJSON.id;
+    this.name = customerJSON.name;
+    this.address = customerJSON.address;
+    this.email = customerJSON.email;
+    this.loyalty_code = customerJSON.loyalty_code;
+    this.id = customerJSON.id;
 }
 
 // ============ VIEW =========================
 function CustomerView(model){
-  this.model = model;
-  this.el = undefined;
+    this.model = model;
+    this.el = undefined;
+    this.id = model.id; //FOR DELETE FUNCTION
+    console.log(this.id);
 }
 
 CustomerView.prototype.render = function(){
-    var newElement = $('<p>').html(this.model.name +" "+ this.model.address+" "+this.model.email+" "+this.model.loyalty_code);
+    var newElement = $('<p>').html(this.model.name +" "+ this.model.address+" "+this.model.email+" "+this.model.loyalty_code+"<button class='customer_delete'>delete</button>");
+// $('.customer_delete'); delete button on click
     this.el = newElement;
     return this
 }
@@ -40,13 +43,13 @@ var customerCollection = new CustomerCollection();
 
 // ============ EVENT HANDLER =========================
 $(function(){
-   customerCollection.fetch();
+    customerCollection.fetch();
 
     $(customerCollection).on('everything', function(){
         displayEntireCollection();
     })
 
-  $('.customer-form').on('submit', function(e){
+    $('.customer-form').on('submit', function(e){
         console.log(e);
         e.preventDefault();
 
@@ -67,24 +70,31 @@ $(function(){
         newEmailInput.val('');
         newLoyaltyInput.val('');
 
-  }) // end of new customer submit form
+    }) // end of new customer submit form
 
 
+      $('.customer_delete').on('delete', function(e){
+        console.log(e);
+        e.preventDefault();
+
+        customerCollection.destroy;
+
+    }); // end of customer delete
 
 }) // end of document ready
 
 
 // ============ CRUD  ==================================
 CustomerCollection.prototype.create = function(paramObject){
-  var self = this
-  $.ajax({
-    url: '/customer',
-    method: 'post',
-    dataType: 'json',
-    data: {customer: paramObject}
-  }).done(function(data){
-    self.add(data);
-  })
+    var self = this
+    $.ajax({
+        url: '/customer',
+        method: 'post',
+        dataType: 'json',
+        data: {customer: paramObject}
+    }).done(function(data){
+        self.add(data);
+    })
 }
 
 CustomerCollection.prototype.add = function(customerJSON){
@@ -101,7 +111,24 @@ CustomerCollection.prototype.fetch = function(){
         method: 'get'
     }).done(function(data){
         for(id in data){
-        self.add(data[id]);
+            self.add(data[id]);
         }
     })
 };
+
+CustomerCollection.prototype.destroy = function(){
+    var self = this;
+    $.ajax({
+        url: '/customer/:id',
+        dataType: 'json',
+        method: 'delete'
+    }).done(function(data){
+        for(id in data){
+            self.destroy(data[id]);
+        }
+    })
+};
+
+
+
+

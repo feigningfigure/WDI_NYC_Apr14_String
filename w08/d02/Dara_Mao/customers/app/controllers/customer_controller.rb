@@ -12,6 +12,11 @@ class CustomerController < ApplicationController
     respond_with customer
   end
 
+  def destroy
+    customer = Customer.find(params[:id])
+    customer.destroy
+  end
+
   private
 
   def customer_params
