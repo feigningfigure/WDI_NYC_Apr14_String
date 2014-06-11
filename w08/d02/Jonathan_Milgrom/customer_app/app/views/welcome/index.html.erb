@@ -1,0 +1,26 @@
+Hello	
+
+<h2>Customer App Central!</h2>
+
+
+<!-- THE PART THAT MATTERS -->
+<h4>Customer Registration</h4>
+<div class='customer-manager'>
+  <ul class='customers'>
+  </ul>
+
+  <form class='name-form'>
+    <input type="text" name='name' placeholder='name'>
+    <input type="text" name='address' placeholder='address'>
+    <input type="text" name='email' placeholder='email'>
+    <input type="submit">
+  </form>
+</div>
+
+
+<script id="#customersTemplate" type="text/template">>
+	<article class="customers" id=<%%= customer.id %>>
+		<li><%%= customer.name %></li>
+		<li><button type="button">edit</button></li>
+	</article> 
+</script>

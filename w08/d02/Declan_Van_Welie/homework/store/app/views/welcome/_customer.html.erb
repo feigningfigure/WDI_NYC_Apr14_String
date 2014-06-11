@@ -1,0 +1,17 @@
+<script id="customer-template" type="text/template">
+  <article class="customer" id="customer-<%%= customer.id %>">
+    <header>
+      <h1><%%= customer.name %></h1>
+    </header>
+    <section class="entry-body">
+      <table>
+        <%% ["name", "address", "email", "loyalty_code"].forEach(function(attrName) { %>
+          <tr class="<%%= attrName %>">
+            <td class="key"><strong><%%= attrName %></strong></td>
+            <td class="value"><%%= customer[attrName] %></td>
+          </tr>
+        <%% }); %>
+      </table>
+    </section>
+  </article>
+</script>
