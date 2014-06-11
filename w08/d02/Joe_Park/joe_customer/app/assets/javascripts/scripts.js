@@ -10,8 +10,6 @@ function Customer(customerJSON){
 
 
 
-
-
 // ************ View *************
 function CustomerView(model){
   this.model = model;
@@ -91,12 +89,7 @@ function displayAllCustomers(){
 var customersCollection = new CustomersCollection();
 // *************************************
 
-
-
-$(function(){
-
-  customersCollection.fetch();
-
+function setEventListeners(){
   $(customersCollection).on('refresh', function(){
     displayAllCustomers();
   });
@@ -125,8 +118,13 @@ $(function(){
     var customerId = $(this).attr("id");
     customersCollection.delete(customerId);
   });
+}
 
 
+$(function(){
+  setEventListeners();
+
+  customersCollection.fetch();
   // only executes on load and not after so we need to create fetch for this to work
   displayAllCustomers();
 

@@ -12,13 +12,10 @@ class CustomersController < ApplicationController
     respond_with customer
   end 
 
-  # def show
 
-  # end
-
-  # def update
-
-  # end
+  def update
+    
+  end
 
   def destroy
     customer = Customer.find(params[:id])
