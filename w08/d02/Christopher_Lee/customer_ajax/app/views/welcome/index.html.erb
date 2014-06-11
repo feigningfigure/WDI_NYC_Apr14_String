@@ -1,0 +1,36 @@
+
+<h2>Welcome</h2>
+
+<!-- THE PART THAT MATTERS -->
+<h4>Customer Registration List</h4>
+<div class='customer-manager'>
+  <ul class='customers'>
+  </ul>
+
+  <form class='customer-form'>
+    <input type="text" name='name' placeholder="name">
+    <input type="text" name='address' placeholder="address">
+    <input type="text" name='email' placeholder="email">
+    <input type="text" name='loyalty_code' placeholder="loyalty code">
+    <input type="submit">
+  </form>
+</div>
+
+
+<script id="customerTemplate" type="text/template">
+  <ul id=<%%= id %> class="customer">
+  <form class="edit-form">
+    <li><h1><%%= name %></h1></li>
+    <li>address: <%%= address %></li>
+    <li>email: <%%= email %></li>
+    <li>loyalty code: <%%= loyalty_code %></li>
+    <input type="hidden" name="id" value=<%%= id %>>
+    <button class="edit">Edit</button>
+  </form>
+  <button class="delete">Delete</button>
+</ul>
+</script>
+
+
+
+
