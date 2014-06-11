@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>The Mighty Accordion</title>
+	<link href="css/custom-theme/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.js"></script>
+	<script>
+	$(function() {
+
+		$( "#accordion" ).accordion();
+
+
+		// Hover states on the static widgets
+		$( "#dialog-link, #icons li" ).hover(
+			function() {
+				$( this ).addClass( "ui-state-hover" );
+			},
+			function() {
+				$( this ).removeClass( "ui-state-hover" );
+			}
+		);
+	});
+	</script>
+	<style>
+	body{
+		font: 62.5% "Trebuchet MS", sans-serif;
+		margin: 5% 32% auto;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	.pepe {
+		border-bottom: solid black 1px;
+		height: 150px;
+		background: url("http://1.bp.blogspot.com/-0XLWDu8BH3s/Uh5eLBi1tfI/AAAAAAAACDs/C99YfCbm0dM/s1600/hands.jpg");
+		background-size: contain;
+	}
+	</style>
+</head>
+<body>
+
+
+	<div id="accordion">
+		<h3>Introduction</h3>
+		<div>This is a paragraph showing this mighty accordion.</div>
+		<h3>Dare</h3>
+		<div>Who are thou to question the might of this accordion?</div>
+		<h3>Acceptance</h3>
+		<div>Well, yes, I suppose it has no music and could be prettier.</div>
+	</div>
+
+	<div class="pepe"></div>
+
+
+</body>
+</html>
