@@ -1,7 +1,7 @@
 var people = [];
 
 function Person(name, age, mood) {
-  http://this.name = name,
+  this.name = name,
   this.age = age,
   this.mood = mood,
   this.introduction = function(){
