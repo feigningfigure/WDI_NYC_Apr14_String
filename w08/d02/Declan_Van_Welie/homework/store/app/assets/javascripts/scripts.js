@@ -79,6 +79,7 @@ CustomerCollection.prototype.fetch = function(){
     dataType: 'json',
     method: 'get'
   }).done(function(data){
+    console.log(data);
       for(id in data){
         self.add(data[id]);
       }
@@ -90,9 +91,10 @@ function displayEntireCollection(){
   $(".customers").html('');
 
   for(id in customerCollection.models) {
-    var customer = customerCollection.models["id"];
+    var customer = customerCollection.models[id];
     var customerView = new CustomerView(customer);
     $('.customers').append(customerView.render().el);
+
   }
 }
 
