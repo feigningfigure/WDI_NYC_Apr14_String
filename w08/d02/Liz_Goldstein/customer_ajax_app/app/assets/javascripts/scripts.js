@@ -15,15 +15,22 @@ function CustomerView(model){
   this.model = model;
   this.el = undefined;
   this.el2 = undefined;
+  this.el3 = undefined;
+  this.el4 = undefined;
+}
+
+CustomerView.prototype.find = function(){
+  var record = this.model.id
+  return record
 }
 
 CustomerView.prototype.render = function(){
   var newElement = $('<h2>').html(this.model.name);
   var newElement2 = $('<li>').html("Address: " + this.model.address);
   var newElement3 = $('<li>').html("Email: " + this.model.email);
-  var newElement4 = $('<li>').html('<a id="delete_link" href="/customers/' + this.model.id + '">DELETE</a>');
+  // var newElement4 = $('<li>').html('<a id="delete_link" href="/customers/' + this.model.id + '">DELETE</a>');
+   var newElement4 = $('<li class="delete_link" value = ' + this.model.id + '>').html("[DELETE]");
 
-  console.log(newElement2);
   this.el = newElement;
   this.el2 = newElement2;
   this.el3 = newElement3;
@@ -54,16 +61,23 @@ CustomerCollection.prototype.create = function(paramObject){
   })
 }
 
-CustomerCollection.prototype.delete = function(paramObject){
-  $.ajax({
-    url: '/customer/:id',
-    method: 'delete',
-    dataType: 'json',
-    data: {customer: paramObject}
-  }).done(function(data){
-    customerCollection.add(data);
-  })
+CustomerCollection.prototype.find = function(id){
+
 }
+
+// CustomerCollection.prototype.delete = function(paramObject){
+//     var id = this.model.id
+//     console.log
+//   $.ajax({
+//     url: '/customer/:id',
+//     method: 'delete',
+//     dataType: 'json',
+//     data: {customer: paramObject}
+//   }).done(function(data){
+//     customerCollection.add(data);
+//   })
+// }
+
 
 
 CustomerCollection.prototype.fetch = function(){
@@ -92,12 +106,25 @@ function displayEntireCollection(){
     $('.customers_display').append(customerView.render().el3);
      $('.customers_display').append(customerView.render().el4);
   }
+  $(".delete_link").click(function(){
+    var id = $(".delete_link").val();
+
+
+
+    });
 }
 
 var customerCollection = new CustomerCollection();
 
-$(function(){
+function setEventListeners() {
 
+    $("#clicktest").click(function(){
+      console.log("clicked");
+    });
+}
+
+$(function(){
+  setEventListeners();
   customerCollection.fetch();
 
 //below, "reset" is arbitrary assigned by coder (us)
@@ -120,6 +147,12 @@ $(function(){
                               });
 console.log(customerCollection);
   })
+
+
+// $("#add_link").click(function(){
+//      $("#new_form").slideToggle();
+//      $("#add_link").hide();
+//   });
 
 })
 
