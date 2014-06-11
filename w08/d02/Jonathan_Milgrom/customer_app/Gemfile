@@ -38,15 +38,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-
-
-group :development, :test do
-  gem 'pry'
-  gem 'pry-rails'
-  gem 'pry-nav'
-  gem 'rspec-rails', '~> 2.14.2'
-end
-
-gem 'faker'
-
+gem 'pry-rails'
+gem 'pry'
 
