@@ -43,6 +43,21 @@ CustomersCollection.prototype.create = function(paramObject){
 
 }
 
+CustomersCollection.prototype.destroy = function(paramObject){
+  var self = this
+  $.ajax({
+    url: '/customers',
+    method: 'delete',
+    dataType: 'json',
+    data: {customer:paramObject}
+  }).done(function(data){
+    console.log(data);
+    self.remove(data);
+  })
+}
+
+
+
 CustomersCollection.prototype.fetch = function(){
   var self = this;
   $.ajax({
