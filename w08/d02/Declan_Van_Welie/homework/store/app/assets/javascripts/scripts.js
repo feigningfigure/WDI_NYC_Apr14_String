@@ -17,14 +17,17 @@ function CustomerView(model){
   this.model = model;
   // We set this element as undefined here, so that we can dynamically change it in the render method below:
   this.el = undefined;
+  // this.descEl = undefined
 }
 
 // render is the verb we use to refer to adding things to the DOM, so this sort of action will generally be referred to as render
 // The benefit of setting things up the way we do below is that we will dynamically append everything in the models hash every time a change is made...rather than just appending the most recent change. That DRYs up our code.
 CustomerView.prototype.render = function(){
   // jquery magic will create an li out of the
-  var newElement = $('<li>').html(this.model.name);
+  var newElement = $('<ul>').html(this.model.name);
+  // var descElem = $('<p>').html(this.model.address);
   this.el = newElement;
+  // this.descEl = descElem;
   // The reason we return this is so that we can append this newly created element to the existing html element later on, in the displayEntireCollection function.
   return this
 }
@@ -95,9 +98,33 @@ function displayEntireCollection(){
     var customer = customerCollection.models[id];
     var customerView = new CustomerView(customer);
     $('.customers').append(customerView.render().el);
+    // $('.customer_list').html(customerView.render().descElem);
 
   }
 }
+
+// function repopulateBeastList(diet) {
+//     var options = {
+//       diet: diet
+//     };
+
+//   $.ajax({
+//     url: "/beasts",
+//     type: "GET",
+//     dataType: "json",
+//     data: options
+//   }).done(function(results) {
+//     repopulateBeastListFromData(results);
+//   });
+// }
+
+// function customerDataDump(customers) {
+//   $("#customer-list").empty();
+//   customers.forEach(function(customer) {
+//     var customerHTML = customerTemplate({"customer": customer});
+//     $("#customer-list").append(customerHTML);
+//   });
+// }
 
 
 
@@ -107,6 +134,10 @@ function displayEntireCollection(){
 $(function(){
 
   // Calling this immediately on pageload will populate the models hash with all of the people objects from the database.
+
+  // customerTemplate = _.template($("#customer-template").text());
+
+
   customerCollection.fetch();
 
 

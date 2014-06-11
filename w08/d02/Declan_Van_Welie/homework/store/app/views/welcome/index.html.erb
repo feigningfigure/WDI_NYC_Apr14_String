@@ -2,15 +2,22 @@
 
 
   <h4>Customers</h4>
-  <div class ='customer list'>
-    <ul class ='customers'>
-    </ul>
-
+  <div class ='customer_list'>
     <form class='customer-form'>
       <input type='text' name='name' placeholder='name'>
       <input type='text' name='address' placeholder='address'>
       <input type='text' name='email' placeholder='email'>
       <input type='text' name='loyalty_code' placeholder='loyalty code'>
       <input type="submit">
+    <ul class ='customers'>
+    </ul>
+
+      <script type="text/javascript">
+    // Bootstrap the initial load of beast data
+    var customerData = JSON.parse('<%=j @customers.to_json.html_safe %>');
+  </script>
+
+    <%= render :partial => "customer" %>
+
     </form>
     </div>
