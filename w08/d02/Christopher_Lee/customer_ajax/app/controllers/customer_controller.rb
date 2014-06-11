@@ -12,10 +12,12 @@ class CustomerController < ApplicationController
     respond_with customer
   end
 
-  # def update
-  #   customer = Customer.find(params[:id])
-  #   customer.update(customer_params)
-  # end
+  def update
+    #binding.pry
+    customer = Customer.find(params[:id])
+    customer.update(customer_params)
+    respond_with customer
+  end
 
   def destroy
     Customer.delete(params[:id])
@@ -25,7 +27,7 @@ class CustomerController < ApplicationController
   private
 
   def customer_params
-    params.require(:customer).permit(:name, :address, :email, :loyalty_code)
+    params.require(:customer).permit(:id, :name, :address, :email, :loyalty_code)
   end
 
 end

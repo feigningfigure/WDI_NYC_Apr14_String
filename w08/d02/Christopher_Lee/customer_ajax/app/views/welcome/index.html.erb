@@ -18,13 +18,17 @@
 
 
 <script id="customerTemplate" type="text/template">
-    <li id=<%%= id %> class="customer">
-        <h1><%%= name %></h1>
-        <div>address: <%%= address %></div>
-        <div>email: <%%= email %></div>
-        <div>loyalty code: <%%= loyalty_code %></div>
-        <button class="delete">Delete</button>
-    </li>
+  <ul id=<%%= id %> class="customer">
+  <form class="edit-form">
+    <li><h1><%%= name %></h1></li>
+    <li>address: <%%= address %></li>
+    <li>email: <%%= email %></li>
+    <li>loyalty code: <%%= loyalty_code %></li>
+    <input type="hidden" name="id" value=<%%= id %>>
+    <button class="edit">Edit</button>
+  </form>
+  <button class="delete">Delete</button>
+</ul>
 </script>
 
 
