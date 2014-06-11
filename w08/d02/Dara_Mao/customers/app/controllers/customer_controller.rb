@@ -3,7 +3,7 @@ class CustomerController < ApplicationController
   respond_to :json
 
   def index
-    people = Customer.all
+    customer = Customer.all
     respond_with customer
   end
 

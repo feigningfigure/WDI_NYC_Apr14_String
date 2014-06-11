@@ -8,9 +8,26 @@ function Customer(customerJSON){
 }
 
 // ============ VIEW =========================
-function CustomerView(){
+function CustomerView(model){
   this.model = model;
   this.el = undefined;
+}
+
+CustomerView.prototype.render = function(){
+    var newElement = $('<p>').html(this.model.name +" "+ this.model.address+" "+this.model.email+" "+this.model.loyalty_code);
+    this.el = newElement;
+    return this
+}
+
+function displayEntireCollection(){
+
+    $('.customer').html('');
+
+    for(id in customerCollection.models){
+        var customer = customerCollection.models[id];
+        var customerView = new CustomerView(customer);
+        $('.customer').append(customerView.render().el);
+    }
 }
 
 // ============ COLLECTION =========================
@@ -23,6 +40,12 @@ var customerCollection = new CustomerCollection();
 
 // ============ EVENT HANDLER =========================
 $(function(){
+   customerCollection.fetch();
+
+    $(customerCollection).on('everything', function(){
+        displayEntireCollection();
+    })
+
   $('.customer-form').on('submit', function(e){
         console.log(e);
         e.preventDefault();
@@ -44,7 +67,10 @@ $(function(){
         newEmailInput.val('');
         newLoyaltyInput.val('');
 
-  }) // end of submit form
+  }) // end of new customer submit form
+
+
+
 }) // end of document ready
 
 
@@ -64,5 +90,18 @@ CustomerCollection.prototype.create = function(paramObject){
 CustomerCollection.prototype.add = function(customerJSON){
     var newCustomer = new Customer(customerJSON);
     this.models[customerJSON.id] = newCustomer;
-    // $(this).trigger('monkey');
+    $(this).trigger('everything');
 }
+
+CustomerCollection.prototype.fetch = function(){
+    var self = this;
+    $.ajax({
+        url: '/customer',
+        dataType: 'json',
+        method: 'get'
+    }).done(function(data){
+        for(id in data){
+        self.add(data[id]);
+        }
+    })
+};
