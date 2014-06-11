@@ -24,7 +24,18 @@ function CustomerView(model){
 // The benefit of setting things up the way we do below is that we will dynamically append everything in the models hash every time a change is made...rather than just appending the most recent change. That DRYs up our code.
 CustomerView.prototype.render = function(){
   // jquery magic will create an li out of the
-  var newElement = $('<ul>').html(this.model.name);
+
+  // "<a class='show'>" + this.model.name + "</a>");
+  var newElement = $('<ul>').html("<a class='show'>" + this.model.name + "</a>");
+
+    // '<table>').html(
+    //     ["name", "address", "email", "loyalty_code"].forEach(function(attrName) {
+    //       "<tr class=" attrName ">"
+    //         "<td class='key'><strong>" attrName "</strong></td> \
+    //         <td class='value'>" customer[attrName] "</td> \
+    //       </tr>"
+    //       });
+    //   "</table>");
   // var descElem = $('<p>').html(this.model.address);
   this.el = newElement;
   // this.descEl = descElem;
@@ -103,18 +114,21 @@ function displayEntireCollection(){
   }
 }
 
-// function repopulateBeastList(diet) {
-//     var options = {
-//       diet: diet
+// function repopulateCustomerList(data) {
+//     var data = {
+//       ({name: nameInput.val(),
+                              // address: addressInput.val(),
+                              // email: emailInput.val(),
+                              // loyalty_code: loyaltyCode.val()});
 //     };
 
 //   $.ajax({
-//     url: "/beasts",
+//     url: "/customers",
 //     type: "GET",
 //     dataType: "json",
-//     data: options
-//   }).done(function(results) {
-//     repopulateBeastListFromData(results);
+//     data: data
+//   }).done(function(customers) {
+//     customerDataDump(customers);
 //   });
 // }
 
