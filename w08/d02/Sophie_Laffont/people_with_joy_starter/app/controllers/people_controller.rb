@@ -25,14 +25,16 @@ class PeopleController < ApplicationController
     respond_with person
   end
 
-  # def update
-  #   person = Person.find(params[:id])
-  #   person.update(person_params)
-  # end
+  def update
+    person = Person.find(params[:id])
+    person.update(person_params)
 
-  # def destroy
-  #   Person.delete(params[:id])
-  # end
+    respond_with person_params
+  end
+
+  def destroy
+    respond_with Person.delete(params[:id])
+  end
 
   private
 
