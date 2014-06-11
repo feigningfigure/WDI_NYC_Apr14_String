@@ -54,11 +54,12 @@ CustomerCollection.prototype.create = function(paramObject){
   // This goes to the controller's create method becuase you're posting to the customer path, and that's been setup in the routes.
   $.ajax({
     url: '/customers',
-    method: 'post',
     dataType: 'json',
+    method: 'post',
     // The input from the form gets passed to rails as the following data. Rails gives us the id from the db.
     data: {customer: paramObject}
   }).done(function(data){
+    console.log(data);
     // INSERT CALLBACK CODE HERE
     // The .add method will take the entirety of customerJSON (including name, id, email, loyalty number) returned from the server side in the form of "data" and add that to the CustomerCollection.models hash.
     // You can also swap out the customerCollection below with this.
@@ -118,10 +119,10 @@ $(function(){
     console.log(e);
     // prevents the form from submitting params to the url, and instead allows you to use them to use as part of the ajax call.
     e.preventDefault();
-    var nameInput = $('.customer-form input [name="name"]');
-    var addressInput = $('.customer-form input [name="address"]');
-    var emailInput = $('.customer-form input [name="email"]');
-    var loyaltyCode = $('.customer-form input [name="loyalty_code"]');
+    var nameInput = $('.customer-form input[name="name"]');
+    var addressInput = $('.customer-form input[name="address"]');
+    var emailInput = $('.customer-form input[name="email"]');
+    var loyaltyCode = $('.customer-form input[name="loyalty_code"]');
 
     // var nameVal = nameInput.val();
     // var addressVal = addressInput.val();
