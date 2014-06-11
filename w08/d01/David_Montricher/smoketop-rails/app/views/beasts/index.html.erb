@@ -4,6 +4,10 @@
   <section id="beast-list">
   </section>
 
+  <% @beasts.each do |b| %>
+  <%= b.name %>
+  <% end %>
+
   <script type="text/javascript">
     var beastData = <%= @beast.to_json %>;
   </script>
