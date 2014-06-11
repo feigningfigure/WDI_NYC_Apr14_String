@@ -13,7 +13,7 @@ function CustomerView(model){
 }
 
 CustomerView.prototype.render = function(){
-  var newElement = $('<li>').html(this.model.name);
+  var newElement = $('<li>').html(this.model.name + this.model.address + this.model.email + this.model.loyalty_code);
   this.el = newElement;
   return this
 }
@@ -35,8 +35,9 @@ CustomersCollection.prototype.create = function(paramObject){
     url: '/customers',
     method: 'post',
     dataType: 'json',
-    data: {person:paramObject}
+    data: {customer:paramObject}
   }).done(function(data){
+    console.log(data);
     self.add(data);
   })
 
@@ -79,9 +80,20 @@ $(function (){
   $('.name-form').on('submit', function(e){
     console.log(e);
     e.preventDefault();
-    var newInput = $('.customer-form input[name="name", address="address", email="email", loyalty_code="loyalty_code"]');
-    customersCollection.create({name: newNameInput.val()});
-    newInput.val('');
+    var newNameInput = $('.name-form input[name="name"]');
+    var newAddressInput = $('.name-form input[name="address"]');
+    var newEmailInput = $('.name-form input[name="email"]');
+    var newLoyaltyInput = $('.name-form input[name="loyalty_code"]');
+    customersCollection.create({
+      name: newNameInput.val(),
+      address: newAddressInput.val(),
+      email: newEmailInput.val(),
+      loyalty_code: newLoyaltyInput.val()
+    });
+    newNameInput.val('')
+    newAddressInput.val('')
+    newEmailInput.val('')
+    newLoyaltyInput.val('')
   })
 
 
