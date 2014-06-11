@@ -17,7 +17,7 @@ function CustomerView(model){
 }
 
 CustomerView.prototype.render = function(){
-  var newElement = $('<li>').html(this.model.name + " = " + this.model.email + " <button id='" + this.model.id + "'>DELETE</button>");
+  var newElement = $('<li>').html(this.model.name + " = " + this.model.email + " <button class='customer-delete' id='" + this.model.id + "'>DELETE</button>" + "<button class='customer-update' id='" + this.model.id + "'>UPDATE</button>");
   this.el = newElement
   return this
 }
@@ -69,6 +69,17 @@ CustomersCollection.prototype.delete = function(customerId){
     $(this).trigger('refresh');
 }
 
+// CustomersCollection.prototype.update = function(customerId){
+//   $.ajax({
+//     url: "/customers/" + customerId,
+//     type: "PATCH",
+//     dataType: "json"
+//   }).done(function(data){
+//     delete customersCollection.models[data["id"]];
+//     customersCollection.add(data);
+//   });
+// }
+
 
 // global
 function displayAllCustomers(){
@@ -112,12 +123,32 @@ function setEventListeners(){
     $('.customer-form input').val('');
   });
 
-  $('.customers').on('click', 'button', function(evt){
+  $('.customers').on('click', '.customer-delete', function(evt){
     evt.preventDefault();
     // console.log($(this).attr("name"));
     var customerId = $(this).attr("id");
     customersCollection.delete(customerId);
   });
+
+  // $('.customers').on('click', '.customer-update', function(evt){
+    // evt.preventDefault();
+    // console.log($(this).attr("name"));
+    // var customerId = $(this).attr("id");
+    
+    // var editNameInput = $('.update-form input[name="name"]'),
+    //     editAddressInput = $('.update-form input[name="address"]'),
+    //     editEmailInput = $('.update-form input[name="email"]'),
+    //     editLoyaltyCodeInput = $('.update-form input[name="loyalty_code"]');
+
+    // customersCollection.models
+    // stopped here
+    // editNameInput.val("")
+
+
+
+  //   customersCollection.update(customerId);
+  // });
+
 }
 
 

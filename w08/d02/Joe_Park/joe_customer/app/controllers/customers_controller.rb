@@ -14,7 +14,9 @@ class CustomersController < ApplicationController
 
 
   def update
-    
+    customer = Customer.find(params[:id])
+    customer.update_attributes(comment_attributes)
+    respond_with customer
   end
 
   def destroy
