@@ -9,11 +9,39 @@
 
 $(document).ready(function(){
 
+ var checkingBalance = 0;
   // SEE:  https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers.onclick
+$("#add_deposit_button").click(function(){
+
+
+var input = $("#checking_input");
+
+
+     checkingBalance = checkingBalance + parseInt($("#checking_input").val());
+
+     // console.log(checkingBalance)
+
+     $("#balance1").html("$"+ checkingBalance);
+
+
+});
+
 
   // Create a click event that is raised when the user clicks on the "checkingDeposit" element.
+$("#add_withdraw_button").click(function(){
 
 
+   var input = $("#checking_input")
+
+     checkingBalance = checkingBalance + parseInt($("#checking_input").val());
+
+     // console.log(checkingBalance)
+
+     $("#balance1").html("$" - checkingBalance);
+
+
+
+});
   // Create a click event that is raised when the user clicks on the "savingsDeposit" element.
 
 
@@ -23,7 +51,7 @@ $(document).ready(function(){
   // Create a click event that is raised when the user clicks on the "savingsWithdraw" element.
 
 
-};
+});
 
 function withdrawFunds(amount, primary, secondary)
 {

@@ -1,0 +1,10 @@
+<div id="accordion">
+  <% @tasks.each do |task|%>
+  <div class="group">
+    <h3><%=task.category%></h3>
+    <div>
+      <p><%=task.body%></p>
+    </div>
+  </div>
+  <% end %>
+</div>
