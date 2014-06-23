@@ -14,10 +14,10 @@
 
 `Using the JSON below, print a list of names to the console.  It should look like this:`
 
-Zimmerman, Robert
-Jones, Sarah
-Adler, Jim
-Smith, Becky
+* Zimmerman, Robert
+* Jones, Sarah
+* Adler, Jim
+* Smith, Becky
 
 
 **Your JSON:**
@@ -29,8 +29,8 @@ Smith, Becky
 
 `Alphabetize the names.  They should look like this:`
 
-Adler, Jim
-Jones, Sarah
-Smith, Becky
-Zimmerman, Robert
+* Adler, Jim
+* Jones, Sarah
+* Smith, Becky
+* Zimmerman, Robert
 
