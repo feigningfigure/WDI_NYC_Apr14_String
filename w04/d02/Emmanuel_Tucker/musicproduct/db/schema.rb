@@ -17,16 +17,15 @@ ActiveRecord::Schema.define(version: 20140512232822) do
   enable_extension "plpgsql"
 
   create_table "beats", force: true do |t|
-     t.integer "id"
       t.string "title"
       t.text "content"
       t.integer "producer_id"
   end
 
   create_table "producers", force: true do |t|
-     t.integer" id"
       t.string "name"
       t.text "description"
+      t.text "beats_id"
   end
 
 end
