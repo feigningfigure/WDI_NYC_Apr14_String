@@ -9,7 +9,7 @@ class Hangman
     @progress.join(" ")
   end
 
-  def guess(guessed_letter)
+  def guess?(guessed_letter)
     if @word.include?(guessed_letter)
       @word.each_with_index do |letter, index|
         if letter == guessed_letter

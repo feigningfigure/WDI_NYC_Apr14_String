@@ -18,27 +18,27 @@ RSpec.describe Hangman do
   end
 
   it "should return false for an incorrect guess" do
-    result = gandhi.guess("x")
+    result = gandhi.guess?("x")
     expect(result).to be(false)
   end
 
   it "should return true for a correct guess" do
-    result = gandhi.guess("a")
+    result = gandhi.guess?("a")
     expect(result).to be(true)
   end
 
   it "should NOT reveal letters after incorrect guesses" do
-    gandhi.guess("x")
+    gandhi.guess?("x")
     expect(gandhi.progress).to eq("_ _ _ _ _ _")
   end
 
   it "should reveal letters after correct guesses" do
-    gandhi.guess("a")
+    gandhi.guess?("a")
     expect(gandhi.progress).to eq("_ a _ _ _ _")
   end
 
   it "should reveal ALL instances of a letter when guessed correctly" do
-    detective.guess("t")
+    detective.guess?("t")
     expect(detective.progress).to eq("_ _ t _ _ t _ _ _")
   end
 
