@@ -1,5 +1,3 @@
-
-
 function sample(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
@@ -22,11 +20,6 @@ function Person() {
 
 person1 = new Person();
 person1.introduce();
-// console.log(person1.introduce());
 
-
-// function introduce(person) {
-//   if Person.mood ==
-// }
 
 
