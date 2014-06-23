@@ -39,7 +39,3 @@ $(function(){
 humansCollection.models.forEach(function(person){
   console.log(person.lastname + ", " + person.firstname)
 });
-
-humansCollection.models.forEach(function(person){
-  console.log(person.lastname + ", " + person.firstname)
-});
