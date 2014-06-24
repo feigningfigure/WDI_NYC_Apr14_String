@@ -1,0 +1,42 @@
+body, html, #container {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #eeeefa;
+
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+div#container {
+    width: 980px;
+    margin: 0 auto;
+    background: white;
+    border: solid gray;
+    border-width: 0 2px;
+    overflow: auto; /* so it contains the first <h1>'s margin */
+}
+
+header#main-header h1 {
+    background: silver;
+    color: black;
+    padding: 20px;
+    margin: 10px 0;
+    border: solid gray;
+    border-width: 2px 0;
+}
+
+pre {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+div.defined-list strong {
+    background: #ddd;
+    padding: 0 2px;
+}
+
+div.defined-list strong.def {
+    background: #8e8;
+}
