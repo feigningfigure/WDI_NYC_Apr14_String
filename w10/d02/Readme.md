@@ -16,4 +16,10 @@
 - Flip the name and print to Node, e.g., "Parker, Peter".
 
 
+#### Part 2
+
+- Create a regex pattern for a name that includes an apostrophe and/or hyphen, e.g., "Eva-Lotte O'Malley".
+- Flip the name and print to Node, e.g., "O'Malley, Eva-Lotte".
+
+
 
