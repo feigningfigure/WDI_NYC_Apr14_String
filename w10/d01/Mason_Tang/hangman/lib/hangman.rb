@@ -1,7 +1,7 @@
 class Hangman
 
   def initialize(word)
-    @word = word.split("")
+    @word = word.chars
     @progress = @word.map { "_" }
   end
 
@@ -9,7 +9,7 @@ class Hangman
     @progress.join(" ")
   end
 
-  def guess(guessed_letter)
+  def guess?(guessed_letter)
     if @word.include?(guessed_letter)
       @word.each_with_index do |letter, index|
         if letter == guessed_letter
@@ -17,7 +17,6 @@ class Hangman
         end
       end
       return true
-
     else
       return false
     end
