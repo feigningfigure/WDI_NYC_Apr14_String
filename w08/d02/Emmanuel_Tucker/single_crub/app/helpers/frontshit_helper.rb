@@ -1,0 +1,2 @@
+module FrontshitHelper
+end
