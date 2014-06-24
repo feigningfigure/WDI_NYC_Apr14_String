@@ -2,20 +2,20 @@ function Person(name, age, mood) {
   this.name = name;
   this.age = age;
   this.mood = mood;
-  this.introduce = function(){
-    if (this.mood === 1){
+  this.introduce = function () {
+    if (this.mood === 1) {
       console.log("...hey... I'm " + this.name + " , I want to kill myself...");
     }
-    else if (this.mood < 5){
+    else if (this.mood < 5) {
       console.log("...meh...I'm " + this.name);
     }
-    else if (this.mood === 5){
+    else if (this.mood === 5) {
       console.log("I am moodless , I go by " + this.name);
     }
-    else if (this.mood < 10 ){
+    else if (this.mood < 10) {
       console.log("HI! I'm " + this.name + " doing dandy, thank you very much!");
     }
-    else if (this.mood === 10){
+    else if (this.mood === 10) {
       console.log("WOOOOOOOOO! I'M " + this.name.toUpperCase() + "!!!!");
     }
   };
