@@ -106,3 +106,10 @@ $(function(){
   })
 
 })
+
+
+// When you hit submit you pass the form values to the questionCollection.create method as 'data'
+// When that is done, questionCollection.add is called which relies on .fetch to retrieve the newest question from
+// ActiveRecord as data and .fetch then calls .add and adds the newest question data to the questionsCollections model hash.
+// Then, the trigger function is called in the document.ready and, every time something is added to the questionsCollection model hash,
+// it's going to call the displayEntireCollection function which appends the template/html, etc to the element on the corresponding view page.
