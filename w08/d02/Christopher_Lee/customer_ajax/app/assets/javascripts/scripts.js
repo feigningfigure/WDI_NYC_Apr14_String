@@ -42,18 +42,19 @@ CustomerCollection.prototype.create = function(paramObject){
   })
 }
 
-CustomerCollection.prototype.update = function(paramObject){
+CustomerCollection.prototype.update = function(paramObject, passedId){
   console.log(paramObject);
   $.ajax({
-    url: '/customer/' + paramObject["id"],
+    url: '/customer/' + passedId,
     method: 'PATCH',
     dataType:'json',
     data: {customer: paramObject}
   }).done(function(data){
     // INSERT CALLBACK CODE HERE
-    console.log(data);
+    console.log("made it to the end of update");
+    console.log("This is " + data);
     //FIX THIS !!!!!!
-    customerCollection.patch(data);
+    customerCollection.patch(paramObject, passedId);
   })
 }
 
@@ -107,8 +108,9 @@ CustomerCollection.prototype.add = function(customerJSON){
 }
 
 
-CustomerCollection.prototype.patch = function(customerJSON){
-  var modelToUpdate = this.models[customerJSON.id]
+CustomerCollection.prototype.patch = function(customerJSON, passedId){
+  console.log("HEY HERES PARAMS IN PATCH: " + customerJSON.name);
+  var modelToUpdate = this.models[passedId]
   modelToUpdate.name = customerJSON.name;
   modelToUpdate.address = customerJSON.address;
   modelToUpdate.email = customerJSON.email;
@@ -162,7 +164,7 @@ function updateItem(){
     console.log("i'm clicked");
     console.log({id: updatedItems[4].value, name: updatedItems[0].value, address: updatedItems[1].value, email: updatedItems[2].value, loyalty_code: updatedItems[3].value});
     //FIX THIS!!!!!!
-    customerCollection.update({id: updatedItems[4].value, name: updatedItems[0].value, address: updatedItems[1].value, email: updatedItems[2].value, loyalty_code: updatedItems[3].value});
+    customerCollection.update({name: updatedItems[0].value, address: updatedItems[1].value, email: updatedItems[2].value, loyalty_code: updatedItems[3].value}, updatedItems[4].value);
   })
 }
 
