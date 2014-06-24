@@ -29,7 +29,7 @@ game.guess("z")  #=> false
 game.guess("y")  #=> false
 game.guess("e")  #=> true
 game.progress()  #=> "_ e _ e _ _ _ _ e"
-game.guess("v")  #=> false
+game.guess("h")  #=> false
 game.guess("k")  #=> nil
 # the game is over, so even correct guesses are ignored
 game.guess("d")  #=> nil
