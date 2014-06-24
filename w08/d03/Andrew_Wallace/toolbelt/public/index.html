@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>WDI Javascript Toolbelt</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="prism/prism.css" />
+    </head>
+    <body>
+        <div id="container">
+            <header id="main-header">
+                <h1>WDI Javascript Toolbelt</h1>
+            </header>
+            <select id="flavors" multiple="">
+                <option value="chocolate">Chocolate</option>
+                <option value="neopolitan">Neopolitan</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="coffee">Coffee</option>
+            </select>
+            <div class="defined-list">
+                <span>document.getElementById('flavors').value: <strong id="val-flavors"></strong></span>,
+                <span>jQuery('#flavors').val(): <strong id="val-flavors-jq"></strong></span>
+            <br />
+            <div class="defined-list">
+                <span>html_beautify defined: <strong id="val-beautify"></strong>,</span>
+                <span>Prism defined: <strong id="val-prism"></strong>,</span>
+                <span>jQuery defined: <strong id="val-jquery"></strong>,</span>
+                <span>$ defined: <strong id="val-dollar"></strong></span>
+            </div>
+            <button id="load-beautify">Load Beautify</button>
+            <button id="load-prism">Load Prism</button>
+            <button id="load-jquery">Load jQuery</button>
+            <pre class="language-markup"><code id="src" class="language-markup"></code></pre>
+        </div>
+        <script src="util.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
+

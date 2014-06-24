@@ -1,0 +1,22 @@
+
+
+<h1>Moons in <%= @planet.name %></h1>
+
+<table>
+  <tr>
+    <th>Moon name</th>
+  </tr>
+
+<% for moon in @moons %>
+  <tr>
+    <td><%= moon.name %></td>
+    <td><%= link_to 'Show', planet_moon_path(@planet, moon) %></td>
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New moon', new_planet_moon_path(@planet) %>
+<%= link_to 'Back to Planet', @planet %>
