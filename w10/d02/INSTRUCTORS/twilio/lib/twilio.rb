@@ -27,7 +27,9 @@ class Twilio
       return HTTParty.post(url, options)
     end
 
-  def self.get(url)
+  def self.view_account(account_sid)
+      url = "https://api.twilio.com/2010-04-01/Accounts/#{account_sid}.json"
+
       # Comment out all of the other 'options' statements to
       # see what happens when you don't try to authenticate at all.
       options = {}
