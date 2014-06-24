@@ -4,7 +4,7 @@ require 'twilio'
 
 describe Twilio do
 
-    it "should send a text message" do
+    it "should send a text message", spammy: true do
         my_phone_number = ENV["MY_PHONE_NUMBER"]
         result = Twilio.send_sms(my_phone_number, "Hello, world!")
         ap result if ENV["TWILIO_DEBUG"]
@@ -13,7 +13,7 @@ describe Twilio do
 
     it "should ask about an account" do
         result = Twilio.view_account(ENV['TWILIO_ACCOUNT_SID'])
-        ap result if ENV["TWILIO_DEBUG"]
+          ap result if ENV["TWILIO_DEBUG"]
         expect(result["type"]).to eq("Trial")
     end
 
