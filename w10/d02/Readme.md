@@ -22,4 +22,9 @@
 - Flip the name and print to Node, e.g., "O'Malley, Eva-Lotte".
 
 
+#### Part 3
+
+-  Using regex, capitalize the first letter of this sentence: "i should be capitalized."
+
+
 
