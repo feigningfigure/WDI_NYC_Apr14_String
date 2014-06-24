@@ -1,7 +1,7 @@
 class Hangman
 
   def initialize(word)
-    @word = word.split("")
+    @word = word.chars
     @progress = @word.map { "_" }
   end
 
