@@ -46,19 +46,12 @@ RSpec.describe Hangman do
 
       it "should return false after  incorrect guess" do
         result = detective.guess?("b")
-        expect(result).to be(false)
-   end
-
-
-      it "should return false after  incorrect guess" do
         result = detective.guess?("z")
-        expect(result).to be(false)
-   end
-
-      it "should return false after  incorrect guess" do
         result = detective.guess?("y")
         expect(result).to be(false)
    end
+
+
 
 
 
