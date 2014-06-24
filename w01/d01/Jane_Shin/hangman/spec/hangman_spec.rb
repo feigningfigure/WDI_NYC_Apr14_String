@@ -5,6 +5,7 @@ RSpec.describe Hangman do
 	let(:detective) {Hangman.new(["detective", "detective"])}
 	let(:gandhi) {Hangman.new(["gandhi"])}
 
+
 	# it("should should take a word") do
 	# 	expect(detective).to(be_a(Hangman))
 	# end
@@ -83,11 +84,18 @@ RSpec.describe Hangman do
 
 	it "should give the first hint as a freebie" do
 		detective.guess("d")
+		detective.guess("e")
 		detective.guess("c")
-# hardcode hint_letter = "e"
-		expect(detective.hint).to eq("e")
+		detective.guess("t")
+		detective.guess("i")
+expect(detective.progress).to eq("d e t e c t i _ e")	
+		# hardcode hint_letter = "e"
+		# detective.instance_variable_set(:@hint_letter, "e")
+# expect(detective.hint).to eq("d").or eq("e").or eq("t").or eq("c").or eq("i").or eq("v")
+expect(["d", "e", "t", "c", "i", "v"]).to include(detective.hint)
+		# expect(detective.hint).to eq("v")
 		expect(detective.incorrect).to eq(0)
-		expect(detective.progress).to eq("d e _ e c _ _ _ e")
+		expect(detective.progress).to eq("d e t e c t i v e")
 	end
 
 	it "should dock hints as incorrect guesses after the freebie" do

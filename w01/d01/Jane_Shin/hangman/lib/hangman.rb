@@ -1,3 +1,5 @@
+require 'pry'
+
 class Hangman
 
 array_words = ["detective", "gandhi"]
@@ -20,6 +22,7 @@ array_words = ["detective", "gandhi"]
 	end
 
 	def guess(guessed_letter)
+		# binding.pry
 		@all_guesses << guessed_letter
 		if @count < 5
 			if @word.include?(guessed_letter)
@@ -53,19 +56,29 @@ array_words = ["detective", "gandhi"]
 
 	def hint
 		# hint_letter = "e"
-		hint_letter = @word.sample
-		if @progress.include? hint_letter
+		# commment below line if you want to set 
+		# instance variable in rspec file
+		@hint_letter = @word.sample
+		# binding.pry
+		if @progress.include? @hint_letter			
 			hint
 		else
-			guess(hint_letter)
-			return hint_letter
+			@hint_count += 1
+		
+			if @hint_count > 1
+				@count += 1
+			end
+
+			guess(@hint_letter)
+			
+			return @hint_letter
 		end
 		
-		@hint_count += 1
+		# @hint_count += 1
 		
-		if @hint_count > 1
-			@count += 1
-		end
+		# if @hint_count > 1
+		# 	@count += 1
+		# end
 
 	end
 
