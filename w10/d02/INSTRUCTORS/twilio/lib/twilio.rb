@@ -5,7 +5,6 @@ class Twilio
   BASE_URI = 'https://api.twilio.com/2010-04-01'
 
   def self.send_sms(recipient_number, message)
-      # https://api.twilio.com/2010-04-01/Accounts
       # .json
       url = "#{Twilio::BASE_URI}/Accounts/AC0f8741036e06b515d23e48808c6c4391/Messages.json"
 
@@ -30,7 +29,6 @@ class Twilio
   end
 
   def self.view_account(account_sid)
-      # https://api.twilio.com/2010-04-01/Accounts
       # .json
       url = "#{Twilio::BASE_URI}/Accounts/#{account_sid}.json"
 
