@@ -6,7 +6,7 @@ class BeastsController < ApplicationController
 
   def index
 # binding.pry
-#
+  @user = User.new
   respond_to do |format|
 
 
