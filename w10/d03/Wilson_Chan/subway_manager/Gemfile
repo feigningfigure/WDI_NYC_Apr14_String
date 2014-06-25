@@ -28,6 +28,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'httparty'
 gem 'pry-rails'
+gem 'awesome_print'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -42,3 +43,6 @@ group :development, :test do
   gem'rspec-rails','~> 3.0.0'
 end
 
+group :test do
+  gem 'shoulda-matchers', require: false
+end
