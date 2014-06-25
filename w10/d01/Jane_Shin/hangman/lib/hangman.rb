@@ -73,12 +73,6 @@ array_words = ["detective", "gandhi"]
 			
 			return @hint_letter
 		end
-		
-		# @hint_count += 1
-		
-		# if @hint_count > 1
-		# 	@count += 1
-		# end
 
 	end
 
