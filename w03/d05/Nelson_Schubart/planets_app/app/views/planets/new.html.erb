@@ -1,0 +1,26 @@
+<div class= "newform"
+<%= form_for @planet, url: "/planets" do |f| %>
+
+  <p>
+    Name: <%= f.text_field :name %>
+  </p>
+  <p>
+  Image Url: <%= f.text_field :image_url %>
+  </p>
+
+  <p>
+    Diameter: <%= f.text_field :diameter %>
+  </p>
+  <p>
+  Mass: <%= f.text_field :mass %>
+  </p>
+  <p>
+  Life: <%= f.text_field :life %>
+  </p>
+
+
+
+  <%= f.submit "Create" %>
+
+<% end %>
+</div>
