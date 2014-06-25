@@ -13,9 +13,7 @@ var checking = $("#balance1");
 
 $("#balance1_deposit").click(function() {
   var text = $("#balance1_text_field").val();
-  $("#balance1").val(function(x, y){
-     return text;
-  });
+  $("#balance1").html(text);
 });
 
 // $(selector).val(function(index,currentvalue))
