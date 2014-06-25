@@ -10,16 +10,16 @@ function Hangman(word) {
   this.guess = function(letter){
     guesses = []
     word.split("").forEach(function(x_letter) {
-      if(x_letter === letter)
-        {
           i = 0
-          while (i < word.length){
-          guesses[i] = letter;
-          return guesses;
-          i++}
-          console.log(guesses)
+      while (i < word.length){
+          if(x_letter === letter){
+            guesses[i] = letter;
+            i++;
+            console.log(guesses);
+          }
+
+          else {return false;}
         }
-      else {return false;}
     });
 
 }

@@ -1,0 +1,46 @@
+  # LINES = {
+  #   n_line: ["Times Square", "34th", "28th N", "23rd N", "Union Square", "8th N"],
+  #   l_line: ["8th L", "6th", "Union Square", "3rd", "1st"],
+  #   six_line: ["Grand Central", "33rd", "28th Six", "23rd Six", "Union Square", "Astor Place"]
+  # }
+
+
+  # def starting(start_stop, start_line)
+  #   start_location = Subway::LINES[start_line.to_sym].index(start_stop)
+  #   transfer_location = Subway::LINES[start_line.to_sym].index("Union Square")
+  #   # @start_station = start_line_array[start_location]
+  #   num_stops = (start_location - transfer_location).abs
+
+  #   return num_stops
+  # end
+
+  # def ending(destination_station, destination_line)
+  #   end_location = Subway::LINES[destination_line.to_sym].index(destination_station)
+  #   transfer_location = Subway::LINES[destination_line.to_sym].index("Union Square")
+
+  #   num_stops = (end_location - transfer_location).abs
+  #   return num_stops
+  # end
+
+  # def distance(starting, ending)
+  #   starting+ending
+  # end
+
+
+************************
+
+
+# hey = [n_line, n_line]
+# hey.flatten.uniq ....possibly for the same stations?
+# hey.flatten.uniq[0..4].length-1
+
+
+# hello = [n_line[0..4], n_line[1..4]]
+# hello.flatten.uniq[0..1].length-1
+
+# hello = [n_line[0..4], l_line[1..2]]
+# hello.flatten.uniq[0..1].length-1
+
+# hello = n_line[0..4]+six_line[1..4]]
+# hello.index("Times Square")
+# hello.index("33rd")

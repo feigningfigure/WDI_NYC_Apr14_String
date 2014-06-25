@@ -6,4 +6,7 @@ SmoketopApp::Application.routes.draw do
   post "/beasts" => "beasts#index"
 
   get "/about" => "beasts#about"
+
+  get '/users' => "beasts#index"
+
 end

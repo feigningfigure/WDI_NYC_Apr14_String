@@ -24,7 +24,7 @@ class BeastsController < ApplicationController
 
   def destroy
 
-  end   
+  end
 
   def update
 
