@@ -35,22 +35,28 @@ var $show_button = $("#show_button");
       var $record_list = $("#record_list");
       $record_list.empty();
       data.records.forEach(function(item){
-        $record_list.append("<li> <a id='show_name' href id='show_name' href='#'>Name: "+ item["name"] +"</a> </li>" + " <div id='toggle_list'> <li> ID: " + item["id"] + "</li> <li> Location: " + item["location"] + "</li> <li> Gender: " + item["gender"] + "</li><li> Username: " + item["username"] + "</li></div>" )
+        $record_list.append("<li> <a id='show_name' href href='#'>Name: "+ item["name"] +"</a> </li>" + " <div id='toggle_list'> <li> ID: " + item["id"] + "</li> <li> Location: " + item["location"] + "</li> <li> Gender: " + item["gender"] + "</li><li> Username: " + item["username"] + "</li></div>" )
       })
 
     })
   });
 
  $( "#show_name" ).click('slow', function () {
-    $("#toggle_list").toggle( showOrHide);
+    $("#toggle_list").toggle( showOrHide );
   });
 
 
 }
 
+
+
 $(document).ready(function(){
 
   setEventHandlers();
+var list = "<% _.each(people, function(name) { %> <p>Hello</p><li><%= name %></li> <% }); %>";
+var compiled = _.template(list, {people : ['moe', 'curly', 'larry']});
 
+
+  $("#template").html(compiled)
 
 });
