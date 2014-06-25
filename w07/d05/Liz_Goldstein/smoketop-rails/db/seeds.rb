@@ -53,7 +53,7 @@ Beast.create!(
 )
 
 Beast.create!(
-  name: 'Windusk Burgæne',
+  name: 'Windusk Burgone',
   diet: Diets::HERBIVORE,
   light_ethology: LightEthologies::NOCTURNAL,
   habitat: 'plains',
