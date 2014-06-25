@@ -16,19 +16,19 @@ class Subway
   # end
 
   def distance(station1, line1, station2, line2)
-    my_array = []
+    stops_array = []
     starting_station = location(station1, line1)
     ending_station = location(station2, line2)
     if line1 == line2
       (starting_station+ending_station).abs
     else
       length1 = (starting_station - line1.index("Union Square")).abs
-      my_array << line1.slice(starting_station..length1)
+      stops_array << line1.slice(starting_station..length1)
 
       length2 = (ending_station - line2.index("Union Square")).abs
-      my_array << line2.slice(ending_station..length2)
+      stops_array << line2.slice(ending_station..length2)
 
-      return my_array.flatten.uniq.length-1
+      return stops_array.flatten.uniq.length-1
     end
   end
 
