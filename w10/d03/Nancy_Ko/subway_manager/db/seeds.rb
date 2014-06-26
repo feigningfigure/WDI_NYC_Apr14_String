@@ -36,4 +36,6 @@ SubwayLine.create(name:"R", color:"yellow")
 
 
 stations = []
+url = HTTParty.get("https://data.cityofnewyork.us/api/views/he7q-3hwy/rows.json")
+url["data"][0..1903]
 
