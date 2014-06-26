@@ -35,8 +35,11 @@ var carView;
 
 $(function(){
 
-	
+	car = new Car({ make: "Honda", type: "Civic", color: "Red" });
 
+	carView = new CarView({ model: car, el: $("#car-holder") });
+
+	carView.render();
 
 })
 
