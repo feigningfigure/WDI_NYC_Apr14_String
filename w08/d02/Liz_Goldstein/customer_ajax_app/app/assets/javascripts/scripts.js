@@ -89,6 +89,8 @@ $.ajax({
      data: {"_method":"delete"}
   }).done(function(results){
     location.reload();
+    // var customer = customerCollection.models[id_data];
+    // customerCollection.splice[customer]
     // fast_reset();
   })
 
@@ -135,15 +137,8 @@ function displayEntireCollection(){
     $('.customers_display').append(customerView.render().el4);
   }
 
-// x = customerCollection.length
-// $("#delete_link").click(function(){
-//     var send_id = $("#delete_link").val();
-//      console.log(send_id);
-//       var id_data = {
-//         id: send_id
-//       };});
-
 }
+
 
 var customerCollection = new CustomerCollection();
 
