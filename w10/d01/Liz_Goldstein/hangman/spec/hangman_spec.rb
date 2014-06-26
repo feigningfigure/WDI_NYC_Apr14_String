@@ -131,8 +131,16 @@ RSpec.describe Hangman do
     gandhi.guess?("i")
     # expect(gandhi.progress).to eq("g a n d h i")
     expect(gandhi.guess?("i")).to eq("Won!!")
+  end
+
+  it "should return the full word when a player gives up" do
+    expect(gandhi.giveUp).to eq("gandhi")
+    expect(gandhi.guess?("q")).to eq("GAME OVER")
 
   end
 
+  it "should return the number of guesses made after each guess" do
+    gandhi.guess?("x").to eq("1 guesses made")
+  end
 
 end
