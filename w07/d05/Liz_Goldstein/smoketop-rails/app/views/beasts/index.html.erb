@@ -1,7 +1,48 @@
-<section id="beasts">
+
   <h1>Beasties below...</h1>
-  <%= render "diet_form" %>
-  <section id="beast-list">
+
+<form id="diets" >
+<input type="radio" id="herbivor" name="diet" value="herbivore" />Herbivore<br>
+
+<input type="radio" id="carnivore" name="diet" value="carnivore" />Carnivore<br>
+<input type="radio" id="omnivore" name="diet" value="omnivore" />Omnivore<br>
+
+</form>
+
+<button id="hello">Hello</button>
+
+<div id="beastlist">
+
+</div>
+
+
+
+
+<% @beasts.each do |beast| %>
+  <article class="beast" id="beast-<%= beast.id %>">
+    <header>
+      <h1><%= beast.name %></h1>
+      <%= image_tag(beast.image_filename || 'unavailable.png') %>
+    </header>
+    <section class="entry-body">
+      <%= attribute_table beast, %w(diet habitat light_ethology size) %>
+      <% beast.description_paragraphs.each do |p| %>
+        <p><%= p %></p>
+      <% end %>
+    </section>
+  </article>
+<% end %>
+
+
+<script id="beastTemplate" type="text/template">
+
+
+
+</script>
+
+<!-- <section id="beast-list">
     <%= render @beasts %>
   </section>
+
 </section>
+ -->
