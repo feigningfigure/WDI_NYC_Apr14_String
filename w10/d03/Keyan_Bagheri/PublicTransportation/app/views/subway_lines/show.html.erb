@@ -1,0 +1,5 @@
+<ul>
+<% @subway_line.stations.each do |station| %>
+  <li class="station" style="background-color: <%=@subway_line.color%>;"><a href="/stations/<%=station.id%>"><%=station.address%></a></li>
+  <% end %>
+</ul>
