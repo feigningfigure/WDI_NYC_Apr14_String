@@ -1,0 +1,42 @@
+.subway_line {
+  color: cyan;
+  line-height: 48px;
+  font-size: 40px;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  margin: 30px 550px auto 550px;
+}
+
+a {
+  text-decoration: none;
+  color: cyan;
+}
+
+.station {
+  color: cyan;
+  line-height: 40px;
+  font-size: 24px;
+  list-style: none;
+  text-align: center;
+  height: 40px;
+  margin: 30px auto;
+}
+
+.nav_bar {
+  text-align: center;
+  color: black;
+  line-height: 2px;
+  font-size: 40px;
+  list-style: none;
+  border-radius: 50px;
+  background-color: cyan;
+}
+
+.nav_bar a {
+  color: blue;
+  font-size: 24px;
+  line-height: 2px;
+}
