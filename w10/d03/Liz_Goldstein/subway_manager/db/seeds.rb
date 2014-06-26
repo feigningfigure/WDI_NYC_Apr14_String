@@ -38,4 +38,14 @@ station_names.each do |name|
   Station.create({address: name})
     end
 
+stations = []
+station_stops = {}
 
+mta_hash["data"].each do |address|
+  address_array = address.to_s.split(",")
+    station = address_array[9].gsub( "\"", "")
+    stops = address_array[10].to_s.split("-")
+      stops.each do |stop, station|
+        station_stops[:station] = stop
+      end
+    end
