@@ -1,6 +1,7 @@
 class Hangman
 
   def initialize(word)
+    @orginal = word
     @word = word.chars
     @progress = @word.map { "_" }
     @counter = 0
@@ -17,18 +18,19 @@ class Hangman
         if letter == guessed_letter
           @progress[index] = letter
         end
-        if @word == @progress
-          return "Won!!"
-        end
       end
-    return true
+    if @orginal  == @progress.to_s.gsub(" ","")
+      return "Won!!"
     else
-      @counter +=1
-      return false
+     true
     end
   else
-    return "GAME OVER"
+    @counter +=1
+    return "#{@counter} guesses made"
   end
+else
+  return "GAME OVER"
+end
 end
 
   def game_counter
@@ -39,6 +41,10 @@ end
     end
   end
 
+def giveUp
+  @counter = 5
+  return @orginal
+end
 
 end
 
