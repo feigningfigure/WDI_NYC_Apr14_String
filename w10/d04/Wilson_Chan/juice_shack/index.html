@@ -6,9 +6,21 @@
 	<script src='javascripts/jquery.js'></script>
 	<script src='javascripts/underscore.js'></script>
 	<script src='javascripts/backbone.js'></script>
+
+  <script id='ingredient_template' type='text/template'>
+      Fruit: <%= ingredient.fruit %>, Flavor: <%= ingredient.flavor %>, Name: <%= ingredient.name %>
+  </script>
+
+
 	<script src='javascripts/app.js'></script>
 </head>
 <body>
+
+    <div id="ingredient-holder">
+      <ul id="ingredient-list">
+      </ul>
+    </div>
+
 </body>
 </html>
 
@@ -21,7 +33,7 @@ An ingredients collection assigned to its 'ingredients' attribute.
 JuiceCollection
 JuiceView
 renders own template with a ul
-creates new IngredientListView and passe the JuiceView's ul as the el of the IngredientListView.
+creates new IngredientListView and passes the JuiceView's ul as the el of the IngredientListView.
 calls render on the new ingredient list view.
 JuiceListView
 renders all juice views
