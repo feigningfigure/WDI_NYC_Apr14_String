@@ -1,0 +1,2 @@
+class SubwayLineController < ApplicationController
+end
