@@ -1,0 +1,9 @@
+<h1><%= @subway.name %></h1>
+
+<% if @subway.stations.length > 0 %>
+   <ul>
+      <% @subway.stations.each do |station| %>
+         <li><%= station.address %></li>
+      <% end %>
+   </ul>
+<% end %>
