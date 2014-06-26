@@ -1,4 +1,5 @@
 class Station < ActiveRecord::Base
+  has_many :transfers
   has_many :subway_lines, through: :transfers
   validates :address, presence: true
 end

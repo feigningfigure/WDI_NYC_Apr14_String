@@ -3,8 +3,12 @@ require 'spec_helper'
 require 'shoulda-matchers'
 
 RSpec.describe Transfer, :type => :model do
-#   it { should belong_to(:subway_lines)}
+  it "should belong to" do
+    should belong_to :subway_line
+  end
 
-#   it { should belong_to(:stations)}
+  it "should belong to" do
+    should belong_to :station
+  end
 
 end
