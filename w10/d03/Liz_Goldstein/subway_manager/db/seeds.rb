@@ -24,3 +24,18 @@ SubwayLine.create(name:"S", color:"gray")
 SubwayLine.create(name:"N", color:"yellow")
 SubwayLine.create(name:"Q", color:"yellow")
 SubwayLine.create(name:"R", color:"yellow")
+
+mta_hash = HTTParty.get("https://data.cityofnewyork.us/api/views/he7q-3hwy/rows.json")
+
+station_names = []
+
+mta_hash["data"].each do |address|
+  address_array = address.to_s.split(",")
+    station_names << address_array[9].gsub( "\"", "")
+    end
+
+station_names.each do |name|
+  Station.create({address: name})
+    end
+
+
