@@ -8,7 +8,7 @@
 	<script src='javascripts/backbone.js'></script>
 
   <script id='ingredient_template' type='text/template'>
-      Fruit: <%= ingredient.fruit %>, Flavor: <%= ingredient.flavor %>, Name: <%= ingredient.name %>
+    Fruit: <%= ingredient.fruit %>, Flavor: <%= ingredient.flavor %>, Name: <%= ingredient.name %>
   </script>
 
 
@@ -26,15 +26,4 @@
 
 
 
-<!-- Build out functionality for a:
 
-JuiceModel
-An ingredients collection assigned to its 'ingredients' attribute.
-JuiceCollection
-JuiceView
-renders own template with a ul
-creates new IngredientListView and passes the JuiceView's ul as the el of the IngredientListView.
-calls render on the new ingredient list view.
-JuiceListView
-renders all juice views
-You do not need to build a UI for the creation of these objects. Create some of them in a window onload callback to verify that they are working. -->

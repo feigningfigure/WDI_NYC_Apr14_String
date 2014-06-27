@@ -15,15 +15,17 @@ var Ingredient = Backbone.Model.extend({
 
 
 // ***Juice View***
-var IngredientView = Backbone.view.extend({
+var IngredientView = Backbone.View.extend({
   tagname: 'li'
   template: _.template( $('#ingredient_template').html() ),
   render: function(){
-    this.$el.html( this.template { ingredient: this.model.toJSON() } ) );
+    this.$el.html( this.template( { ingredient: this.model.toJSON() } ) );
 
     return this
   }
 });
+
+// ***LIST VIEW***
 
 var IngredientListView = Backbone.View.extend({
   initialize: function(){
