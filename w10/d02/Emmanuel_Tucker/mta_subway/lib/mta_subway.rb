@@ -9,7 +9,7 @@ class Subway
 
 
 
- def beginning
+ def display_beginning
           @station_beginning =stationbegins
           @line_beginning = linebegin
 
@@ -17,9 +17,9 @@ class Subway
 
 
 
- # def ending
+ def display_ending
 
 
- #     end
+     end
 
 end
