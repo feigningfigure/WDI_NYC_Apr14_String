@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>backbone_cars</title>
+	<title>juice shack </title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
 	<script src='javascripts/jquery.js'></script>
 	<script src='javascripts/underscore.js'></script>
 	<script src='javascripts/backbone.js'></script>
-  <script id='car_template' type='text/template'>  template: _.template('<h2> <%= make %> <%= type %> </h2> <h3><%= color %> </h3>'),</script>
+  <!-- Fix This -->
+  <script id='juice_template' type='text/template'>  Type: <%= juice.type %>, Ingredients: <%= juice.ingredients %> </script>
+  <script id='ingredient_template' type='text/template'>  Ingredient Name: <%= ingredient.name %> </script>
   <script src='javascripts/app.js'></script>
 </head>
 <body>
 
-  <div id="car-holder">
-    <ul id="car-list">
+  <div id="juice-holder">
+    <ul id="juice-list">
 
     </ul>
   </div>
