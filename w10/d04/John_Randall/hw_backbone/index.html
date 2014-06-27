@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>juices! (A backbone exercise.)</title>
+
+	<!-- include vendor libraries -->
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+		<script src='javascripts/jquery.js'></script>
+		<script src='javascripts/underscore.js'></script>
+		<script src='javascripts/backbone.js'></script>
+
+
+	<!-- templates (pre app.js) -->
+		<script id='juice_template' type='text/template'>
+			Im a juice template in the index.html
+			<div>
+				Im a div for an individual juice model
+				<h3>Juice: <%= juice.name %>, </h3>
+				<ul>
+					<li>ingredients: <%= juice.ingredients %> </li>
+					<li>color: <%= juice.color %></li>
+				</ul>
+			</div>
+		</script>
+
+
+	<!-- load backbone implamentation -->
+		<script src='javascripts/app.js'>
+			console.log("loading app.js from index.html")
+			// the above is ignored, I think
+		</script>
+
+
+	<!-- post backbone implementation (data?) -->
+		<script>
+			// ERB for initial data load here
+			// $(function(){
+			// 	console.log('DOM loaded, running setup from index.html to load data');
+
+				// juices = new JuiceCollection();
+
+			 //  juiceListView = new JuiceListView(
+			 //    {collection: juices, 
+			 //    el: $('#juice-list')}
+			 //  );
+
+
+			 //  // apple = new Juice({
+			 //  // 	name: 'apple juice',
+			 //  // 	ingredients: 'apples, cinemon',
+			 //  // 	color: 'amber'
+			 //  // });
+
+			 //  // @juices = Juice.all
+			 //  // @juices.each do |juice_data|
+			 //  // 	juice = new Juice({juice_data})
+			 //  // end
+
+			 //  juices.add(apple);
+
+			 //  // <% @juices = Juice.all %>
+			 //  // _.each(<%= @juices.to_json.html_safe %>, 
+			 //  // 	juices.add(new Juice({juice_data_json})
+		  // 	// )
+
+
+			 //  <% @juices = Juice.all %>
+			 //  juices_clean_json = <%= @juices.to_json.html_safe %>
+
+			 //  _.each(juices_clean_json, 
+			 //  	juices.add(new Juice({juice_data_json})
+		  // 	)
+		
+		</script>
+
+	<!-- custom styles -->
+		<style type="text/css">
+			div {
+				border: 1px solid black;
+			}
+			
+		</style>
+
+</head>
+
+
+
+
+
+
+<body>
+	
+	<div id="container">
+		outer container
+
+		<div>hello world.</div>
+
+		<div id="juice-list-container">
+			list container, aka #juice-list
+			<ul id="juice-list">
+				list
+				<!-- juiceIndex gets inserted here via JS -->
+			</ul>
+		</div>
+
+<!-- 		<div id="juice-show-container">
+			show container
+			<ul id="juice-show">
+				show
+				<!-- juice Show gets inserted here via JS
+			</ul>
+		</div> -->
+
+	</div>
+
+
+</body>
+
+
+</html>
