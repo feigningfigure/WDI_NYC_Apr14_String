@@ -6,12 +6,22 @@
 	<script src='javascripts/jquery.js'></script>
 	<script src='javascripts/underscore.js'></script>
 	<script src='javascripts/backbone.js'></script>
-	<script src='javascripts/app.js'></script>
+
+  <script id="car_template" type="text/template">
+    <%= car.make %> <%= car.type %></br><small>Color: <%= car.color %></small>
+  </script>
+
+  <script src='javascripts/app.js'></script>
+
 </head>
 <body>
 
   <div id="car-holder">
+    <ul id="car-list">
+    </ul>
   </div>
+
+
 
 </body>
 </html>
