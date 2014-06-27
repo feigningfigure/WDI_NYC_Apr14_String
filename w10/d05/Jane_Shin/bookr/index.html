@@ -7,6 +7,19 @@
     <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
     <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
 
+    <!-- ************ Templates ************ -->
+    <script type="text/template" id="author-template">
+      <div>
+        <h2><%= name %></h2>
+        <form>
+          <p>
+            <input type="text" placeholder="book title" name="title"
+          </p>
+        </form>
+        <ul class="books"></ul>
+      </div>
+    </script>
+
     <!-- ************ Book ************ -->
     <script type="text/javascript" src='javascripts/backbone/book.js'></script>
 
@@ -29,7 +42,7 @@
       <input type="text" placeholder='author-name' class='author-name'>
     </form>
 
-   
+    <ul id='author-list'></ul>
 
   </body>
 </html>
