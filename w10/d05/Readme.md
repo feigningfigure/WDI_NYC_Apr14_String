@@ -33,6 +33,20 @@ In your application, you should be able to:
 - delete comments 
 
 
+How do we do this without a database?  Backbone has a method that allows us to use your browswer's cookies for local storage. For an example of how to do this, see:
+
+http://backbonejs.org/docs/todos.html
+
+Look for:
+
+`localStorage: new Backbone.LocalStorage("todos-backbone")`
+
+and read the code to understand how it's being implemented. To see a working example, go to:
+
+http://localtodos.com/ 
+
+
+
 #### Bonus:
 
 - Build out your app with update capability for both posts and comments
