@@ -1,0 +1,23 @@
+/*INSERT CSS*/
+#logo {
+  position: fixed;
+  top: -170px;
+  left: -100px;
+
+  z-index: -1;
+
+}
+
+#juice-holder{
+  margin: 185px 100px;
+  font-family: helvetica;
+  clear:both;
+}
+
+.juice_pic{
+  height: 250px;
+  position: fixed;
+  z-index: -1;
+  bottom: 5px;
+  right: 40px;
+}
