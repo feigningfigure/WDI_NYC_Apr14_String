@@ -1,0 +1,11 @@
+<h1>Subways</h1>
+<table>
+   <tr>
+      <th>Name</th>
+   </tr>
+   <% @subways.sort.each do |subway| %>
+      <tr style="background-color: <%= subway.color %>;">
+         <td><a href="/subways/<%= subway.id %>"><%= subway.name %></a></td>
+      </tr>
+   <% end %>
+</table>
