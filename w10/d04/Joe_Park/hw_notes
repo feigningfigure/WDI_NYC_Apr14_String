@@ -1,0 +1,48 @@
+    Ingredient: <%= ingredient.name %>
+
+<script id="ingredient_template" type="text/template">
+  Ingredient: <%= ingredient.name %>
+</script>
+
+
+
+
+  // ******** View *********
+
+var IngredientView = Backbone.View.extend({
+  tagName: 'li',
+  template: _.template( $("#ingredient-list").html() ),
+  render: function(){
+    this.$el.html( this.template({ ingredient: this.model.toJSON() }) );
+
+    return this;
+  }
+
+});
+
+
+
+var IngredientsListView = Backbone.View.extend({
+  initialize: function(){
+    this.listenTo(this.collection, 'add', this.render);
+    this.listenTo(this.collection, 'remove', this.render);
+  },
+
+  render: function(){
+    this.$el.empty();
+    var self = this;
+    _.each(self.collection.models, function(ingredient){
+      var ingredientView = new IngredientView({ model: ingredient });
+      self.$el.append( ingredientView.render().el );
+    });
+    return this;
+  }
+
+});
+
+
+    <div>Ingredient: <% juice.ingredientsCollection.models.forEach(function(stuff){
+                          stuff.attributes.name
+
+                      });  
+                      %>    </div>

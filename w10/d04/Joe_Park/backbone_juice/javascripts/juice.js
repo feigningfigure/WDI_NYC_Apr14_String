@@ -3,17 +3,14 @@
 var Juice = Backbone.Model.extend({
   initialize: function(){
     console.log("Juice has been created");
-    // var ingredientCollection = new IgredientCollection
+    this.ingredientsCollection = new IngredientsCollection();
   },
 
   default:{
     name: "",
-    // ingredients: ingredientCollection
   }
 
-});
-
-
+}); 
 
 
 // ******** View *********
@@ -23,7 +20,7 @@ var JuiceView = Backbone.View.extend({
   template: _.template( $("#juice_template").html() ),
   render: function(){
     this.$el.html( this.template({ juice: this.model.toJSON() }) );
-
+    
     return this;
   }
 
@@ -49,9 +46,6 @@ var JuiceListView = Backbone.View.extend({
 
 
 });
-
-
-
 
 
 // ************* Collection ************

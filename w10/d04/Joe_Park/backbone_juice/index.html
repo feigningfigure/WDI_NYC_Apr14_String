@@ -8,9 +8,13 @@
 	<script src='javascripts/backbone.js'></script>
 
   <script id="juice_template" type="text/template">
-    Name: <%= juice.name %>
+    <div>Name: <%= juice.name %></div>
+
+
   </script>
-  
+
+
+
   <script src='javascripts/juice.js'></script>
   <script src='javascripts/ingredient.js'></script>
 	<script src='javascripts/app.js'></script>
@@ -19,7 +23,8 @@
 
   <div id="juice-holder">
     <ul id="juice-list">
-
+      <ol id ="ingredient-list">
+      </ol>
     </ul>
   </div>
 

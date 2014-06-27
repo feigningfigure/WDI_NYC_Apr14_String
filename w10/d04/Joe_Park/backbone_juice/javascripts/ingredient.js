@@ -13,14 +13,12 @@ var Ingredient = Backbone.Model.extend({
 // ******** View *********
 
 var IngredientView = Backbone.View.extend({
-
-
+  // template1 = _.template('<l1><%= Ingredient.name %></li>')
 });
 
 
 
 var IngredientsListView = Backbone.View.extend({
-
 
 
 });
@@ -34,3 +32,5 @@ var IngredientsListView = Backbone.View.extend({
 var IngredientsCollection = Backbone.Collection.extend({
   model: Ingredient
 });
+
+

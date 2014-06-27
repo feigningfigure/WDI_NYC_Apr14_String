@@ -1,10 +1,16 @@
-
-// var ingredientCollection = new IgredientCollection
 var juicesCollection,
     juiceListView,
-    juice1,
-    juice2,
-    juice3;
+    ingredientsListView,
+    razzmataz,
+    holyMary,
+    strawberryCrush,
+    banana,
+    strawberry,
+    cherry,
+    lime,
+    vodka,
+    tequila,
+    rum;
 
 $(function(){
 
@@ -12,22 +18,36 @@ $(function(){
 
   juiceListView = new JuiceListView({ collection: juicesCollection, el: $("#juice-list") });
 
-  juice1 = new Juice({ name: "Razzmataz" });
-  juice2 = new Juice({ name: "Holy Mary" });
-  juice3 = new Juice({ name: "Strawberry Crush" });
+  razzmataz = new Juice({ name: "Razzmataz" });
+  holyMary = new Juice({ name: "Holy Mary" });
+  strawberryCrush = new Juice({ name: "Strawberry Crush" });
 
-  juicesCollection.add(juice1);
-  juicesCollection.add(juice2);
-  juicesCollection.add(juice3);
+  juicesCollection.add(razzmataz);
+  juicesCollection.add(holyMary);
+  juicesCollection.add(strawberryCrush);
 
-  
+  // ingredientListView = new IngredientsListView({ collection: ingredientsCollection, el: $("#ingredient-list") });
+
+  banana = new Ingredient({ name: "Banana" });
+  strawberry = new Ingredient({ name: "Strawberry" });
+  vodka = new Ingredient({ name: "Vodka" });
+  tequila = new Ingredient({ name: "Tequila" });
+  rum = new Ingredient({ name: "Rum" });
+
+  // Razzmataz
+  razzmataz.ingredientsCollection.add(banana);
+  razzmataz.ingredientsCollection.add(rum);
+  razzmataz.ingredientsCollection.add(vodka);
+
+  // holyMary
+  holyMary.ingredientsCollection.add(tequila);
+  holyMary.ingredientsCollection.add(strawberry);
+  holyMary.ingredientsCollection.add(vodka);
+
+  // strawberryCrush
+  strawberryCrush.ingredientsCollection.add(banana);
+  strawberryCrush.ingredientsCollection.add(strawberry);
+  strawberryCrush.ingredientsCollection.add(rum);
+
 
 });
-
-
-// carView = new CarView({ model: car, el: $("#car-holder") });
-
-// carView.render();
-
-
-// juiceView = new JuiceView({ model: juice1, el: $("#juice_list") });
