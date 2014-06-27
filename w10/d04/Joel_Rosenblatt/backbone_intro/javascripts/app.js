@@ -73,20 +73,20 @@ $(function(){
   cars.add(captiva);
 
   // Uncomment this for seizure:
-  // setInterval(function(){
-  //   setTimeout(function(){cars.remove(nissan);}, 0);
-  //   setTimeout(function(){cars.add(nissan);}, 10);
-  //   setTimeout(function(){$("body").css("background-color", "red");}, 15);
-  //   setTimeout(function(){cars.remove(ford);}, 20);
-  //   setTimeout(function(){cars.add(ford);}, 30);
-  //   setTimeout(function(){$("body").css("background-color", "green");}, 35);
-  //   setTimeout(function(){cars.remove(chevrolet);}, 40);
-  //   setTimeout(function(){cars.add(chevrolet);}, 50);
-  //   setTimeout(function(){$("body").css("background-color", "blue");}, 55);
-  //   setTimeout(function(){cars.remove(captiva);}, 60);
-  //   setTimeout(function(){cars.add(captiva);}, 70);
-  //   setTimeout(function(){$("body").css("background-color", "yellow");}, 75);
-  // }, 75);
+  setInterval(function(){
+    setTimeout(function(){cars.remove(nissan);}, 0);
+    setTimeout(function(){cars.add(nissan);}, 10);
+    setTimeout(function(){$("body").css("background-color", "red");}, 15);
+    setTimeout(function(){cars.remove(ford);}, 20);
+    setTimeout(function(){cars.add(ford);}, 30);
+    setTimeout(function(){$("body").css("background-color", "green");}, 35);
+    setTimeout(function(){cars.remove(chevrolet);}, 40);
+    setTimeout(function(){cars.add(chevrolet);}, 50);
+    setTimeout(function(){$("body").css("background-color", "blue");}, 55);
+    setTimeout(function(){cars.remove(captiva);}, 60);
+    setTimeout(function(){cars.add(captiva);}, 70);
+    setTimeout(function(){$("body").css("background-color", "yellow");}, 75);
+  }, 75);
 
 
 })
