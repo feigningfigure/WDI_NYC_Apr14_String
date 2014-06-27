@@ -33,7 +33,7 @@ In your application, you should be able to:
 - delete comments 
 
 
-How do we do this without a database?  Backbone has a method that allows us to use your browswer's cookies for local storage. For an example of how to do this, see:
+How do we do this without a database?  Backbone has a method that allows us to use the browswer's cookies for local storage. For an example of how to do this, see:
 
 http://backbonejs.org/docs/todos.html
 
