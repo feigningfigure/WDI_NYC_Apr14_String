@@ -1,49 +1,82 @@
 // ***Model***
 
-//(purpose is to hold data)
-
 var Car = Backbone.Model.extend({
-  initialize: function(){
-    console.log("A new car has been made")
-  },
+	initialize: function(){
+		console.log("A new car has been made")
+	},
 
-  default:{
-    make: "",
-    model: "",
-    color: "",
-  }
+	defaults:{
+		make: "",
+		type: "",
+		color: "",
+	}
+
 });
-
 
 // ***View***
 
-var View = Backbone.View.extend({
+//view for individual models within the collection
+var CarView = Backbone.View.extend({
+  tagName: 'li',
+  template: _.template( $('#car_template').html() ),
+	render: function(){
+    this.$el.html( this.template( { car: this.model.toJSON() } ) );
+
+    return this
+	}
+});
+
+var CarListView = Backbone.View.extend({
   initialize: function(){
-    //listening to this model and looking for a change, then reacting with a render
-    this.listenTo(this.model, 'change', this.render)
+    this.listenTo(this.collection, 'add', this.render);
+    this.listenTo(this.collection, 'remove', this.render);
   },
 
-  template: _.template('<h2><%= make %> <%= model %> </h2> <h3> <%= color %> </h3>')
-  //we have no server so we dont need <%% above, just <%
-
-  //render is the most appropriate word (over change and/or update)
   render: function(){
+    // The plan is to create new instances of CarView inside this render function
     this.$el.empty();
-    this.$el.html( this.template(this.model.attributes) ); //we want to pass a template here
-
+    var self = this;
+    _.each(self.collection.models, function(car){
+      var carView = new CarView({ model: car });
+      self.$el.append( carView.render().el );//a lot going on here 
+    })
     return this;
   }
 })
 
-var car; //these variables are here for teaching purposes
-var carView; //neel needed two global variables and made them
+// ***Collection***
+
+var CarCollection = Backbone.Collection.extend({
+  model: Car
+});
+
+var cars,
+    listView,
+    honda,
+    toyota,
+    ford,
+    buick,
+    nissan;
 
 $(function(){
+  cars = new CarCollection();
 
-  car = new Car({make: "Honda", type: "Civic", color: "Red"});
+  listView = new CarListView({ collection: cars, el$("car-list")}); //collection is not a univ word, you could call it what you like but should keep naming nice like this
 
-  carView = new CarView({ model: car, $el: $("#car-holder")}); //pass it your div
-}
+  honda = new Car({ make: "Honda", type: "Civic", color: "Red" });
+  toyota = new Car({ make: "Toyota", type: "Corolla", color: "Green" });
+  buick = new Car({ make: "Buick", type: "La Sabre", color: "Blue" });
+  ford = new Car({ make: "Ford", type: "Fiesta", color: "Green" });
+  nissan = new Car({ make: "Nissan", type: "Sentra", color: "Tan" });
+
+  cars.add(honda);
+  cars.add(toyota);
+  cars.add(buick);
+  cars.add(ford);
+  cars.add(nissan);
+
+})
+
 
 
 
