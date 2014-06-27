@@ -6,13 +6,18 @@
 	<script src='javascripts/jquery.js'></script>
 	<script src='javascripts/underscore.js'></script>
 	<script src='javascripts/backbone.js'></script>
+  <script id="juice_template" type="text/template">
+    Ingredients: <%= juice.ingredients %>, Type:<%= juice.type %> , Weight:<%= juice.weight %>
+  </script>
 	<script src='javascripts/app.js'></script>
 </head>
 <body>
 
 <!-- Where juice view will be appended -->
   <div id="juice-mixer">
-    <</div>
+    <ul id="juice-list">
+    </ul>
+    </div>
 
 </body>
 </html>
