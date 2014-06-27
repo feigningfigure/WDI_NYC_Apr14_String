@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Juicer</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+	<script src='javascripts/jquery.js'></script>
+	<script src='javascripts/underscore.js'></script>
+	<script src='javascripts/backbone.js'></script>
+  <script type="text/javascript" src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
+
+  <script id="juice_template" type="text/template">
+    <b><%= juice.name %> Juice</b> - $<%= _.random(9, 99) %></br><small>Ingredients: <%= juice.ingredients.join(", ") %></small>
+  </script>
+
+  <script src='javascripts/app.js'></script>
+
+</head>
+<body>
+
+  <div id="logo">
+  <canvas id="myCanvas"></canvas>
+    <script type="text/javascript" src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
+    <script type="text/javascript">
+      var myName = "Juicer";
+
+      var red = [0, 100, 63];
+      var orange = [40, 100, 60];
+      var green = [75, 100, 40];
+      var blue = [196, 77, 55];
+      var purple = [280, 50, 60];
+      var letterColors = [red, orange, green, blue, purple];
+
+      drawName(myName, letterColors);
+
+      bubbleShape = 'circle';
+
+      bounceBubbles();
+    </script>
+  </div>
+
+  <div id="juice-holder">
+    <h1>Juice Menu</h1>
+    <ul id="juice-list">
+    </ul>
+  </div>
+
+  <img class="juice_pic"src="http://www.juiceladycherie.com/Juice/wp-content/uploads/2012/08/three-juices.png">
+
+
+
+</body>
+</html>
