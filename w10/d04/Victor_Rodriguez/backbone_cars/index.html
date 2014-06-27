@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>backbone_cars</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+	<script src='javascripts/jquery.js'></script>
+	<script src='javascripts/underscore.js'></script>
+	<script src='javascripts/backbone.js'></script>
+
+  <script id='car-template' type='text/template'>
+   Make: <%= car.make %>, Type: <%= car.type %>, Color: <%= car.color %>
+   </script>
+    /* Needs to come before js, so when app.js runs it needs to know where template is */
+	<script src='javascripts/app.js'></script>
+</head>
+<body>
+
+
+	<div id="car-holder">
+	</div>
+    </ul id="car-list">
+</body>
+</html>
