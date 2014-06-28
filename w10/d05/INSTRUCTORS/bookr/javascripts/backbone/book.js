@@ -21,12 +21,21 @@ var BookCollection = Backbone.Collection.extend({
 var BookView = Backbone.View.extend({
 	initialize: function(){
 		this.listenTo(this.model, 'all', this.render)
+		this.listenTo(this.model, 'destroy', this.remove)
 	},
 	tagName: 'li',
 	template: _.template( $('#book-template').html() ),
 	render: function(){
 		this.$el.empty();
 		this.$el.html( this.template( this.model.attributes ) );
+
+		return this
+	},
+	events: {
+		'click button[name="delete_book"]': 'removeBook'
+	},
+	removeBook: function(){
+		this.model.destroy();
 
 		return this
 	}
