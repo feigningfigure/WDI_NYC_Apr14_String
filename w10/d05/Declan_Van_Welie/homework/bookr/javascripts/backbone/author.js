@@ -37,6 +37,7 @@ var AuthorView = Backbone.View.extend({
 			var titleField = self.$el.find('input[name="title"]');
 			var title = titleField.val();
 			titleField.val('');
+			console.log(self.model.get("books"));
 			self.model.get("books").add({ title: title })
 		})
 
