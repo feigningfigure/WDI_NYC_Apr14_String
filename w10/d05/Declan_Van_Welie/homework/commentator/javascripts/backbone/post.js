@@ -44,7 +44,30 @@ var PostView = Backbone.View.extend({
         })
 
         return this
-      }
+      },
+      events: {
+      'click button[name="delete_post"]': 'removePost',
+      'click button[name="edit_post"]': 'editPost'
+    },
+     removePost: function(){
+      this.model.destroy();
+
+      return this
+    },
+      editPost: function(){
+      self = this
+      editTemplate= _.template( $('#edit_comment').html() ),
+      this.$el.empty();
+      this.$el.html( editTemplate( this.model.attributes ) );
+      this.$el.find('form').on('submit', function(e){
+          e.preventDefault();
+          var editField = self.$el.find('input');
+          var commentEdit = editField.val();
+          // commentEdit.val('');
+          self.model.set({ title: commentEdit })
+        })
+      return this
+    }
 });
 
 var PostListView = Backbone.View.extend({
