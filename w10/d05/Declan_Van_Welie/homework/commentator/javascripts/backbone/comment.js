@@ -11,13 +11,13 @@ var Comment = Backbone.Model.extend({
   }
 });
 
-// ****COLLECTION****
+// // ****COLLECTION****
 
   var CommentCollection = Backbone.Collection.extend({
     model: Comment
   });
 
-// ****VIEWS****
+// // ****VIEWS****
 
 var CommentView = Backbone.View.extend({
     initialize: function(){

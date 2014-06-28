@@ -39,8 +39,6 @@ var PostView = Backbone.View.extend({
         // I like that Neel spaces out the closing braces. Much easier to read
         this.$el.html( this.template( this.model.attributes ) );
 
-        var listView = new CommentListView({ collection: this.model.get('comments'), el: this.$el.find('.comments') });
-        listView.render();
 
         this.$el.find('form').on('submit', function(e){
           e.preventDefault();
