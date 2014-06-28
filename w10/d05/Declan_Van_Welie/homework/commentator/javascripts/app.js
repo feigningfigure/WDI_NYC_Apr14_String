@@ -17,4 +17,12 @@ $("#new_post").on('submit', function(e){
   postCollection.add({ title: postTitle });
 });
 
+$("#new_post").on('submit', function(e){
+  e.preventDefault();
+  var titleField = $("#post_title");
+  var postTitle = titleField.val();
+  titleField.val('');
+  postCollection.add({ title: postTitle });
+});
+
 })

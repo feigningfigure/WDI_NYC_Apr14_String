@@ -38,9 +38,7 @@ var PostView = Backbone.View.extend({
         this.$el.find('form').on('submit', function(e){
           e.preventDefault();
           var commentField = self.$el.find('input[name="comment"]');
-
           var comment = commentField.val();
-          alert(comment);
           commentField.val('');
           self.model.get("comments").add({ title: comment })
         })

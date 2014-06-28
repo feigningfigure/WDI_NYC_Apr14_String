@@ -41,10 +41,17 @@ var CommentView = Backbone.View.extend({
       return this
     },
     editComment: function(){
-      alert(this.model.attributes.title);
+      self = this
       editTemplate= _.template( $('#edit_comment').html() ),
       this.$el.empty();
       this.$el.html( editTemplate( this.model.attributes ) );
+      this.$el.find('form').on('submit', function(e){
+          e.preventDefault();
+          var editField = self.$el.find('input');
+          var commentEdit = editField.val();
+          // commentEdit.val('');
+          self.model.set({ title: commentEdit })
+        })
       return this
     }
   });
