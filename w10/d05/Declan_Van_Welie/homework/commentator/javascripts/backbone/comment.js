@@ -32,11 +32,19 @@ var CommentView = Backbone.View.extend({
       return this
     },
   events: {
-      'click button[name="delete_comment"]': 'removeComment'
+      'click button[name="delete_comment"]': 'removeComment',
+      'click button[name="edit_button"]': 'editComment'
     },
     removeComment: function(){
       this.model.destroy();
 
+      return this
+    },
+    editComment: function(){
+      alert(this.model.attributes.title);
+      editTemplate= _.template( $('#edit_comment').html() ),
+      this.$el.empty();
+      this.$el.html( editTemplate( this.model.attributes ) );
       return this
     }
   });

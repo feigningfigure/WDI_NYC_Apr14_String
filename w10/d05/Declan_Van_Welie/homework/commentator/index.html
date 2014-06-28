@@ -29,7 +29,17 @@
     <script type="text/template" id="comment_template">
       <div>
         <h3><%= title %></h3>
-        <button name="delete_comment">Delete</button>
+        <button name="delete_comment">Delete</button> <button name="edit_button">Edit</button>
+      </div>
+    </script>
+
+    <script type="text/template" id="edit_comment">
+        <div>
+        <form>
+          <p>
+           <input type="text" placeholder=<%= title %> name="edit_form">
+          </p>
+        </form>
       </div>
     </script>
 
