@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>joe_forum</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <!-- ************** Libraries ****************** -->
+  <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+  <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+  <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+  <!-- Templates -->
+  <script type="text/template" id="post-template">
+    <div class="view">
+      <h2><%= title %></h2>
+      <p><%= content %></p>
+      <form class="new_comment">
+        <p>
+          <input type="text" placeholder="comment" name="comment">
+        </p>
+      </form>
+
+      <ul class="comments">
+      </ul>
+
+      <form class="edit_post">
+        <input class="edit" type="text" value="<%= title %>">
+        <div>
+          <textarea class="edit" form="edit_post"><%= content %></textarea>
+        </div>
+        <div>
+          <button name="edit_post">Edit</button>
+        </div>
+      </form>
+
+    </div>
+  </script>
+
+  <script type="text/template" id="comment-template">
+    <div>
+      <h3><%= opinion %></h3>
+      <button name="delete_comment">Delete</button>
+    </div>
+  </script>
+
+
+
+  <!-- ************** Post *************** -->
+  <script type="text/javascript" src="javascripts/backbone/post.js"></script>
+
+  <!-- ************** Comment *************** -->
+  <script type="text/javascript" src="javascripts/backbone/comment.js"></script>
+
+  <!-- ************** App **************** -->
+  <script type="text/javascript" src="javascripts/app.js"></script>
+
+</head>
+<body>
+
+  <h1>Create Posts!</h1>
+
+  <form id="new-post">
+    <input type="text" placeholder="New Post" id="post-title">
+    <div>
+      <textarea id="post-content" form="new-post" placeholder="Enter Post here"></textarea>
+    </div>
+    <div>
+      <input type="submit" value="Create New Post">
+    </div>
+  </form>
+
+  
+
+  <ul id="post-list">
+  </ul>
+
+</body>
+</html>
