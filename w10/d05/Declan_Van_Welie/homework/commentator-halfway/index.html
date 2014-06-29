@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Commentator</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+
+  <!-- ****LIBRARIES**** -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+    <script type="text/javascript" src="javascripts/libraries/backbone.localStorage.js"></script>
+    <script type="text/javascript" src="javascripts/libraries/require.js"></script>
+
+<!-- ****Templates**** -->
+
+    <script type="text/template" id="post_template">
+      <div>
+        <h2><%= title %></h2>
+        <button name="delete_post">Delete</button> <button name="edit_post">Edit</button>
+        <form>
+          <p>
+            <input type="text" placeholder="comment" name="comment">
+          </p>
+        </form>
+        <ul class="comments">
+        </ul>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="comment_template">
+      <div>
+        <h3><%= title %></h3>
+        <button name="delete_comment">Delete</button> <button name="edit_button">Edit</button>
+      </div>
+    </script>
+
+    <script type="text/template" id="edit_comment">
+        <div>
+        <form>
+          <p>
+           <input type="text" placeholder=<%= title %> name="edit_form">
+          </p>
+        </form>
+      </div>
+    </script>
+
+
+<!-- ****COMMENTS**** -->
+
+    <script type="text/javascript" src='javascripts/backbone/comment.js'></script>
+
+
+<!-- ****POSTS**** -->
+
+    <script type="text/javascript" src='javascripts/backbone/post.js'></script>
+
+<!-- ****APP**** -->
+
+    <script type="text/javascript" src='javascripts/app.js'></script>
+
+
+<!-- ****HTML**** -->
+
+</head>
+<body>
+
+<h1>Welcome to Commentator!</h1>
+
+    <form id='new_post'>
+      <input type="text" placeholder='post-title' id='post_title'>
+    </form>
+
+   <ul id="post_list">
+   </ul>
+
+
+
+</body>
+</html>
