@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Blogs</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- ************ Libraries ************ -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- ************ Templates ************ -->
+    <script type="text/template" id="post-template">
+      <h4>test template</h4>
+      <h1><%= name %></h1>
+      <h1><%= date %></h1>
+    </script>
+
+
+
+    <!-- ************ Post ************ -->
+    <script type="text/javascript" src='javascripts/backbone/post.js'></script>
+
+    <!-- ************ Comment ************ -->
+    <script type="text/javascript" src='javascripts/backbone/comment.js'></script>
+
+    <!-- ************ app ************ -->
+    <script type="text/javascript" src='javascripts/app.js'></script>
+
+
+  </head>
+
+  <body>
+
+    <div class='container'>
+      <h1>Blog Zone</h1>
+      <hr />
+      <div id="page-list">
+
+      </div>
+    </div>
+
+  </body>
+</html>
