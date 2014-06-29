@@ -50,7 +50,7 @@ var CommentListView = Backbone.View.extend({
 		this.$el.empty();
 		_.each(this.collection.models, function(comment){
 			var commentView = new CommentView({ model: comment });
-			self.$el.append( commentView.render().el )
+			self.$el.prepend( commentView.render().el )
 		})
 		return this
 	}

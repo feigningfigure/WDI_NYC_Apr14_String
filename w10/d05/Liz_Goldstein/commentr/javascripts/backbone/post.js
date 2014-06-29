@@ -21,6 +21,7 @@ var PostCollection = Backbone.Collection.extend({
 var PostView = Backbone.View.extend({
 	initialize: function(){
 		this.listenTo( this.model, 'all', this.render )
+		this.listenTo(this.model, 'destroy', this.remove)
 	},
 	tagName: 'li',
 	template: _.template( $('#post-template').html() ),
@@ -41,7 +42,16 @@ var PostView = Backbone.View.extend({
 		})
 
 		return this
+	},
+events: {
+		'click button[name="delete_post"]': 'removePost'
+	},
+	removePost: function(){
+		this.model.destroy();
+
+		return this
 	}
+
 });
 
 var PostListView = Backbone.View.extend({
@@ -53,7 +63,7 @@ var PostListView = Backbone.View.extend({
 		this.$el.empty();
 		_.each(this.collection.models, function(post){
 			var postView = new PostView({ model: post })
-			self.$el.append( postView.render().el )
+			self.$el.prepend( postView.render().el )
 		})
 		return this;
 	}

@@ -11,6 +11,7 @@
     <script type="text/template" id="post-template">
       <div>
         <h2><%= post_body %></h2>
+         <button name="delete_post">Delete Post</button>
         <form>
           <p>
             <input type="text" placeholder="comment on the post" name="comment_text">
@@ -24,7 +25,7 @@
     <script type="text/template" id="comment-template">
       <div>
         <h3><%= comment_text %></h3>
-        <button name="delete_comment">Delete</button>
+        <button name="delete_comment">Delete Comment</button>
       </div>
     </script>
 
