@@ -1,8 +1,8 @@
 // ***Model***
-var Author = Backbone.Model.extend({
+var Post = Backbone.Model.extend({
 	initialize: function(){
-		console.log("an Author has been born");
-		this.set('books', new BookCollection());
+		console.log("an Post has been born");
+		this.set('comments', new CommentCollection());
 	},
 
 	defaults: {
@@ -12,24 +12,24 @@ var Author = Backbone.Model.extend({
 
 //***Collection***
 
-var AuthorCollection = Backbone.Collection.extend({
-  model: Author
+var PostCollection = Backbone.Collection.extend({
+  model: Post
 });
 
 //***View***
 
-var AuthorView = Backbone.View.extend({
+var PostView = Backbone.View.extend({
 	initialize: function(){
 		this.listenTo( this.model, 'all', this.render )
 	},
 	tagName: 'li',
-	template: _.template( $('#author-template').html() ),
+	template: _.template( $('#post-template').html() ),
 	render: function(){
 		var self = this;
 		this.$el.empty();
 		this.$el.html( this.template( this.model.attributes ) );
 
-		var listView = new BookListView({ collection: this.model.get('books'), el: this.$el.find('.books') });
+		var listView = new CommentListView({ collection: this.model.get('comments'), el: this.$el.find('.comments') });
 		listView.render();
 
 		this.$el.find('form').on('submit', function(e){
@@ -37,34 +37,24 @@ var AuthorView = Backbone.View.extend({
 			var titleField = self.$el.find('input[name="title"]');
 			var title = titleField.val();
 			titleField.val('');
-			self.model.get("books").add({ title: title })
+			self.model.get("comments").add({ title: title })
 		})
-		
+
 		return this
 	}
 });
 
-var AuthorListView = Backbone.View.extend({
+var PostListView = Backbone.View.extend({
 	initialize: function(){
 		this.listenTo(this.collection, 'all', this.render);
 	},
 	render: function(){
 		var self = this;
 		this.$el.empty();
-		_.each(this.collection.models, function(author){
-			var authorView = new AuthorView({ model: author })
-			self.$el.append( authorView.render().el )
+		_.each(this.collection.models, function(post){
+			var postView = new PostView({ model: post })
+			self.$el.append( postView.render().el )
 		})
 		return this;
 	}
 });
-
-
-
-
-
-
-
-
-
-
