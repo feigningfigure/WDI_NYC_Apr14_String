@@ -45,17 +45,17 @@ var PostView = Backbone.View.extend({
   toggleEdit: function(){
     this.$el.find('.edit_post').toggle();
   },
-  editPost: function(){
+  editPost: function(evt){
+    evt.preventDefault();
     var editTitleField = this.$el.find('input[class="edit"]');
     var editPostTitle = editTitleField.val();
     var editContentField = $('textarea[class="edit"]');
-    var editPostContent = editContentField.html();
+    var editPostContent = editContentField.val();
     this.model.set({ 
       title: editPostTitle,
       content: editPostContent
     });
 
-    this.toggleEdit();
     return this;
   }
 
