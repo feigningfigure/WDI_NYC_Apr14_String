@@ -55,7 +55,7 @@ var PostView = Backbone.View.extend({
       return this
     },
       editPost: function(){
-      self = this
+      var self = this
       editTemplate= _.template( $('#edit_comment').html() ),
       this.$el.empty();
       this.$el.html( editTemplate( this.model.attributes ) );
