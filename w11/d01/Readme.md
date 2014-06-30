@@ -22,7 +22,7 @@ Create a 1-model Rails/Backbone app with Create and Read (C-R of CRUD).  (Now yo
 
 In your application, you should be able to:
 
-- create a post	
+- create a post	(for example)
 - list all posts
 
 Use a model of your own choosing.
