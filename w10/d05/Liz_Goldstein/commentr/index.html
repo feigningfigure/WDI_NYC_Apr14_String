@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Comemntr</title>
+
+    <!-- ************ Libraries ************ -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- ************ Templates ************ -->
+    <script type="text/template" id="post-template">
+      <div>
+        <h2><%= post_body %></h2>
+         <button name="delete_post">Delete Post</button>
+         <button name="edit_post">Edit Post</button>
+        <form>
+          <p>
+            <input type="text" placeholder="comment on the post" name="comment_text">
+          </p>
+        </form>
+        <ul class="comments">
+        </ul>
+      </div>
+    </script>
+
+    <script type="text/template" id="comment-template">
+      <div>
+        <h3 id="comment_text"><%= comment_text %></h3>
+        <button name="delete_comment">Delete Comment</button>
+         <button name="edit_comment">Edit Comment</button>
+          <input type="text" class="edit_comment"placeholder="comment on the post" name="comment_edit">
+      </div>
+    </script>
+
+
+<!-- Stylesheet link -->
+
+<link href='stylesheets/styles.css' rel='stylesheet' type='text/css'>
+
+   <!-- ************ Post ************ -->
+    <script type="text/javascript" src='javascripts/backbone/post.js'></script>
+
+    <!-- ************ comment ************ -->
+    <script type="text/javascript" src='javascripts/backbone/comment.js'></script>
+
+    <!-- ************ app ************ -->
+    <script type="text/javascript" src='javascripts/app.js'></script>
+
+
+  </head>
+
+  <body>
+
+    <h1>
+      My awesome blog!!
+    </h1>
+
+    <form id='new-post'>
+      <input type="text" placeholder='Write a blog post' id='post-text'>
+    </form>
+
+   <ul id="post-list">
+   </ul>
+
+  </body>
+</html>
