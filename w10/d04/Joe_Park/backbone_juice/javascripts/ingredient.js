@@ -5,7 +5,7 @@ var Ingredient = Backbone.Model.extend({
     console.log("Ingredient has been created")
   },
 
-  default:{
+  defaults:{
     name: "",
   }
 });

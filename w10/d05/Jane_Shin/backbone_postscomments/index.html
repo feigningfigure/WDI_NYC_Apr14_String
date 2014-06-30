@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>P&C HW</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+	<script src='javascripts/libraries/jquery.js'></script>
+	<script src='javascripts/libraries/underscore.js'></script>
+	<script src='javascripts/libraries/backbone.js'></script>
+	<script type="text/javascript" src="javascripts/libraries/backbone.localStorage.js"></script>
+	
+
+	<script type="text/template" id='post-template'>
+		<div>
+			<h3><%= title %></h3>
+			<p><%= body %></p>
+			<button name='delete-post'>Delete</button>
+			<ul class='comments'></ul>
+			<form>
+				<p>
+					<input type='text' placeholder='comment here'	name='comment'>
+				</p>
+			</form>
+		</div>
+	</script>
+
+	<script type='text/template' id='comment-template'>
+		<div>
+			<p><%= body %></p>
+			<button name='delete-comment'>Delete</button>
+		</div>
+	</script>
+
+
+	<script src='javascripts/backbone/comment.js'></script>
+	<script src='javascripts/backbone/post.js'></script>
+
+	<script src='javascripts/app.js'></script>
+</head>
+<body>
+
+	<h1>One Boring Blog</h1>
+
+	<h4>Write a post here.</h4>
+	<form class='new-post'>
+		<input type="text" placeholder='title' id='post-title'>
+		<input type='text' placeholder='post' id='post-body'>
+		<input type='submit' value='submit'>
+	</form>
+
+	<ul id='all-posts'></ul>
+
+
+</body>
+</html>
