@@ -26,6 +26,9 @@ Penguinapp.initialize = function() {
         //AJAX call
         //why does it respond to the ajax call
 
+        collection.create({
+            name: penguinName
+        })
 
     })
 }
