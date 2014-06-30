@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Postr</title>
+
+    <!-- ************ Libraries ************ -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- ************Templates ************ -->
+    <script type="text/template" id="post-template">
+      <div>
+        <h2><%= topic %></h2>
+        <p><%= text %></p>
+        <button class="post-button" name="edit_post">Edit</button>
+        <button class="post-button" name="delete_post">Delete</button>
+        <form>
+          <p>
+            <input type="text" placeholder="comment" name="comment">
+          </p>
+        </form>
+        <ul id="comments">
+        </ul>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="comment-template">
+      <div>
+        <h3><%= text %></h3>
+        <button class= "comment-button" name="edit_comment">Edit</button>
+        <button class="comment-button" name="delete_comment">Delete</button>
+      </div>
+    </script>
+
+
+    <!-- ************ Comment ************ -->
+    <script type="text/javascript" src='javascripts/backbone/comment.js'></script>
+
+    <!-- ************ Post ************ -->
+    <script type="text/javascript" src='javascripts/backbone/post.js'></script>
+
+    <!-- ************ app ************ -->
+    <script type="text/javascript" src='javascripts/app.js'></script>
+
+
+  </head>
+
+  <body>
+
+    <h1>
+      Whacha wanna talk about?
+    </h1>
+
+    <form id="new-post">
+      <input type="text" placeholder="post-topic" id="post-topic">
+      <input type="text" placeholder="post-text" id="post-text">
+      <button name="submit">Submit</button>
+    </form>
+
+   <ul id="post-list">
+   </ul>
+
+
+  </body>
+</html>

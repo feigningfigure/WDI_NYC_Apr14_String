@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Postr</title>
+  
+    <!-- ************ Libraries ************ -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- ************ Templates ************ -->
+    <script type="text/template" id="post-template">
+      <div>
+        <h2><%= body %></h2>
+        <p>- <%= author %></p>
+        <button name="delete_post">Delete</button>
+        <form>
+          <p>
+            <input type="text" placeholder="add comment" name="body">
+            <input type="text" placeholder="author" name="author">
+            <input type="submit">
+          </p>
+        </form>
+        <ul class="comments">
+        </ul>
+      </div>
+    </script>
+
+    <script type="text/template" id="comment-template">
+      <div>
+        <h3>"<%= body %>"</h3>
+        <p>- <%= author %></p>
+        <button name="delete_comment">Delete</button>
+      </div>
+    </script>
+
+
+
+    <!-- ************ Comment ************ -->
+    <script type="text/javascript" src='javascripts/backbone/comment.js'></script>
+
+    <!-- ************ Post ************ -->
+    <script type="text/javascript" src='javascripts/backbone/post.js'></script>
+
+    <!-- ************ app ************ -->
+    <script type="text/javascript" src='javascripts/app.js'></script>
+
+
+  </head>
+
+  <body>
+
+    <h1>
+      Add A Post
+    </h1>
+
+    <form id='new-post'>
+      <input type="text" placeholder='add post' id='post-body'>
+      <input type="text" placeholder='author' id='post-author'>
+      <input type="submit">
+    </form>
+
+   <ul id="post-list">
+   </ul>
+
+  </body>
+</html>
