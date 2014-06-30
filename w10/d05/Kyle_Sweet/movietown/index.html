@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Films</title>
+  
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+
+    
+
+    <script type="text/template" id="director-template">
+      <div>
+        <h2><%= title %></h2>
+        <form>
+          <p>
+            <input type="text" placeholder="movie title" name="title">
+          </p>
+        </form>
+        <ul class="movies">
+        </ul>
+      </div>
+    </script>
+
+    <script type="text/template" id="movie-template">
+      <div>
+        <h3><%= title %></h3>
+        <button name="delete_movie">Delete</button>
+        <button name="edit_movie">Edit</button>
+       </div>
+    </script>
+
+
+
+    
+    <script type="text/javascript" src='javascripts/backbone/movie.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/director.js'></script>
+    <script type="text/javascript" src='javascripts/app.js'></script>
+
+
+  </head>
+
+  <body>
+
+    <h1>
+      Famous Directors
+    </h1>
+
+    <form id='new-director'>
+      <input type="text" placeholder='director-name' id='director-name'>
+    </form>
+
+   <ul id="director-list">
+   </ul>
+
+  </body>
+</html>
