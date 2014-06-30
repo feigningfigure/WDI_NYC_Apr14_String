@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BB2int</title>
+	<script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+
+    <script type="text/template"  id="post-template">
+    <div>
+        <h2><%= name %></h2>
+        <form>
+          <p>
+            <input type="text" placeholder="comment title" name="title">
+          </p>
+        </form>
+        <ul class="posts">
+        </ul>
+      </div>
+
+</script>
+
+<script type="text/javascript" src= 'javascripts/backbone/post.js'></script>
+
+<script type="text/javascript" src='javascripts/backbone/comment.js'></script>
+
+<script type="text/javascript" src='javascripts/backbone/app.js'></script>
+
+
+
+
+</head>
+<body>
+      <h1>
+     ToDos
+    </h1>
+
+    <form id='new-comment'>
+      <input type="text" placeholder='comment-name' id='comment-name'>
+    </form>
+
+   <ul id="comment-list">
+   </ul>
+
+</body>
+</html>
