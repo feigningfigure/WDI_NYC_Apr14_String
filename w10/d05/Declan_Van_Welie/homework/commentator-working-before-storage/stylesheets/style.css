@@ -138,7 +138,7 @@ h5 {
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 700;
-    width: 350px;
+    width: 400px;
     background-color: RGBA(0, 43, 102, 0.6);
     color: RGBA(246, 236, 206, 1);
     border: none;
@@ -149,6 +149,15 @@ h5 {
 
 .post_title {
   display: inline-block;
+  text-align: center;
+  padding: 0;
+  float: left;
+}
+.post_list {
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  float: left;
 }
 
 .title {
@@ -198,10 +207,10 @@ margin: -800px 0 0 -310px;
 display: block;
 width: 0;
 height: 0;
-border-width: 90px 1000px;
+border-width: 90px 1100px;
 margin: -180px 0 0 0;
 border-color: transparent #022140;
-/*CRAZY SHIT border-color: RGBA(0, 43, 102, 0.6);*/
+/*border-color: RGBA(0, 43, 102, 0.6); /*CRAZY SHIT */
 border-style: solid;
 }
 
