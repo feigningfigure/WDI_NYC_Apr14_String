@@ -6,7 +6,7 @@ $(function(){
 
 postCollection = new PostCollection();
 postListView = new PostListView({ collection: postCollection, el: $("#post_list") } );
-var post = new Post({ title: "Why?" });
+var post = new Post({ title: "CSS is the opiate of the masses!" });
 postCollection.add(post);
 
 $("#new_post").on('submit', function(e){
