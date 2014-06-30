@@ -47,8 +47,3 @@ http://localtodos.com/
 
 
 
-#### Bonus:
-
-- Build out your app with update capability for both posts and comments
-
-
