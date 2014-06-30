@@ -6,11 +6,16 @@
 	<script src='javascripts/jquery.js'></script>
 	<script src='javascripts/underscore.js'></script>
 	<script src='javascripts/backbone.js'></script>
-	<script src='javascripts/app.js'></script>
+  <script id='car_template' type='text/template'>  template: _.template('<h2> <%= make %> <%= type %> </h2> <h3><%= color %> </h3>'),</script>
+  <script src='javascripts/app.js'></script>
 </head>
 <body>
-  <div id="car-holder">
 
+  <div id="car-holder">
+    <ul id="car-list">
+
+    </ul>
   </div>
+
 </body>
 </html>
