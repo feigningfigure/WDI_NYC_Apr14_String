@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>My Blog!</title>
+
+    <!-- ************ Libraries ************ -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- ************ Templates ************ -->
+    <script type="text/template" id="post-template">
+      <div>
+        <h2><%= title %></h2>
+        <p><%= content %></p>
+        <form>
+          <p>
+            <input type="text" placeholder="Post Title" name="title"></br>
+            <input type="textarea" placeholder="Content" name="content">
+          </p>
+        </form>
+        <ul class="comments">
+        </ul>
+      </div>
+    </script>
+
+    <script type="text/template" id="comment-template">
+      <div>
+        <h3><%= comment %></h3>
+        <h4><%= user %></h4>>
+      </div>
+      <form>
+          <p>
+            <input type="text" placeholder="Your name" name="user">
+            <input type="text" placeholder="Content" name="comment">
+          </p>
+        </form>
+    </script>
+
+
+
+    <!-- ************ Comment ************ -->
+    <script type="text/javascript" src='javascripts/backbone/comment.js'></script>
+
+    <!-- ************ Post ************ -->
+    <script type="text/javascript" src='javascripts/backbone/post.js'></script>
+
+    <!-- ************ app ************ -->
+    <script type="text/javascript" src='javascripts/app.js'></script>
+
+
+  </head>
+
+  <body>
+
+    <h1>
+      Add Some Posts!!
+    </h1>
+
+    <form id='new-post'>
+      <input type="text" placeholder='Post Title' id='post-title'>
+    </form>
+
+   <ul id="post-list">
+   </ul>
+
+  </body>
+</html>
