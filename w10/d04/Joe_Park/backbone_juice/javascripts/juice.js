@@ -6,7 +6,7 @@ var Juice = Backbone.Model.extend({
     this.ingredientsCollection = new IngredientsCollection();
   },
 
-  default:{
+  defaults:{
     name: "",
   }
 
