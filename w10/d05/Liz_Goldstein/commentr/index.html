@@ -12,6 +12,7 @@
       <div>
         <h2><%= post_body %></h2>
          <button name="delete_post">Delete Post</button>
+         <button name="edit_post">Edit Post</button>
         <form>
           <p>
             <input type="text" placeholder="comment on the post" name="comment_text">
@@ -24,12 +25,17 @@
 
     <script type="text/template" id="comment-template">
       <div>
-        <h3><%= comment_text %></h3>
+        <h3 id="comment_text"><%= comment_text %></h3>
         <button name="delete_comment">Delete Comment</button>
+         <button name="edit_comment">Edit Comment</button>
+          <input type="text" class="edit_comment"placeholder="comment on the post" name="comment_edit">
       </div>
     </script>
 
 
+<!-- Stylesheet link -->
+
+<link href='stylesheets/styles.css' rel='stylesheet' type='text/css'>
 
    <!-- ************ Post ************ -->
     <script type="text/javascript" src='javascripts/backbone/post.js'></script>

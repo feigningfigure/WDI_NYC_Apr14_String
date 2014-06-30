@@ -1,3 +1,9 @@
+
+//creating random ID for the model??
+// function guid() {
+//    return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
+// };
+
 // ***Model***
 var Post = Backbone.Model.extend({
 	initialize: function(){
@@ -50,7 +56,23 @@ events: {
 		this.model.destroy();
 
 		return this
+	},
+
+events: {
+		'click button[name="edit_post"]': 'updatePost'
+	},
+	updatePost: function(){
+		var self = this
+		// var commentField = $(.edit_comment)
+		console.log(self)
+		// commentField.show();
+
+		// this.$el.html( this.template( this.model.attributes )
+		// this.model.render();
+
+		return this
 	}
+
 
 });
 

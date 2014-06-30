@@ -38,6 +38,16 @@ var CommentView = Backbone.View.extend({
 		this.model.destroy();
 
 		return this
+	},
+
+	events: {
+		'click button[name="edit_comment"]': 'updateComment'
+	},
+	updateComment: function(){
+		console.log(this.$("#comment_text").html())
+		var textToEdit = this.$("#comment_text").html()
+
+		return this
 	}
 });
 

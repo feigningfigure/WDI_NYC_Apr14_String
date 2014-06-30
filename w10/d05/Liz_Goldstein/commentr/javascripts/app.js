@@ -5,8 +5,7 @@ var postCollection,
 $(function(){
 
 	postCollection = new PostCollection();
-	postListView = new PostListView(
-		{ collection: postCollection, el: $("#post-list") });
+	postListView = new PostListView({ collection: postCollection, el: $("#post-list") });
 	var post = new Post({ post_body: "My first awesome blog post" });
 	postCollection.add(post);
 
