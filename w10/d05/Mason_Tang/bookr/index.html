@@ -7,6 +7,29 @@
     <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
     <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
 
+    <!-- ************ Templates ************ -->
+    <script type="text/template" id="author-template">
+      <div>
+        <h2><%= name %></h2>
+        <form>
+          <p>
+            <input type="text" placeholder="book title" name="title">
+          </p>
+        </form>
+        <ul class="books">
+        </ul>
+      </div>
+    </script>
+
+    <script type="text/template" id="book-template">
+      <div>
+        <h3><%= title %></h3>
+        <button name="delete_book">Delete</button>
+      </div>
+    </script>
+
+
+
     <!-- ************ Book ************ -->
     <script type="text/javascript" src='javascripts/backbone/book.js'></script>
 
@@ -25,11 +48,12 @@
       Add Some Authors!!
     </h1>
 
-    <form class='new-author'>
-      <input type="text" placeholder='author-name' class='author-name'>
+    <form id='new-author'>
+      <input type="text" placeholder='author-name' id='author-name'>
     </form>
 
-   
+   <ul id="author-list">
+   </ul>
 
   </body>
 </html>
