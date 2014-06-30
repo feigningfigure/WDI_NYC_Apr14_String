@@ -1,0 +1,2 @@
+class SubStatsController < ApplicationController
+end
