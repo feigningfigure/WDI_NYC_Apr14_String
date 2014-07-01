@@ -1,3 +1,9 @@
+var cr_app = Cr_App || { model: {}, collection: {}, view:{} };
+
+
+
+
+
 // creating view class var cr_app = Backbone.View.extend({});
 
 

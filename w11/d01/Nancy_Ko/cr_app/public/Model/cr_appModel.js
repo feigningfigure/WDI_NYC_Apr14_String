@@ -1,3 +1,6 @@
+var cr_app = Cr_App || { model: {}, collection: {}, view:{} };
+
+
 var cr_appItem = new cr_appItem({
 	model: cr_app,
 	description: "this is crap", status: 'incomplete'}
