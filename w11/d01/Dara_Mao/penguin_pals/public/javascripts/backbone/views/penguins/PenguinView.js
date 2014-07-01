@@ -12,7 +12,7 @@ Penguinapp.Views.PenguinView = Backbone.View.extend({
     //     // all create does is to instantiate and append to our DOM
     // },
     tagName: 'li',
-    template: _.template($('penguin-template').html()),
+    template: _.template($('#penguin-template').html()),
     render: function() {
         this.$el.empty();
         this.$el.html(this.template(this.model.attributes));
