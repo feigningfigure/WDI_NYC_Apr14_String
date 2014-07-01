@@ -1,1 +1,8 @@
-console.log('feed me javascripts')
+var comments,
+    listView
+
+    $(function() {
+        comments = new CommentCollection();
+
+
+    });

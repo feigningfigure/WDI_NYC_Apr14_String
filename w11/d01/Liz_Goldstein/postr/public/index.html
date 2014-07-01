@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Postr Awesome Blog Posting</title>
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- Templates -->
+
+<script type="text/template" id="post-template">
+    <p>The name of this post is <%= title %>.</p>
+    <button class="delete-button">DELETE</button>
+</script>
+
+    <!-- app -->
+    <script type="text/javascript" src='javascripts/backbone/app.js'></script>
+
+    <!-- Models -->
+    <script type="text/javascript" src='javascripts/backbone/models/Post.js'></script>
+
+    <!-- Collections -->
+    <script type="text/javascript" src='javascripts/backbone/collections/PostCollection.js'></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src='javascripts/backbone/views/posts/PostView.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/views/posts/PostListView.js'></script>
+
+  </head>
+
+
+  <body>
+
+<h2>The Name Of This Blog Is HELLO WORLD</h2>
+
+    <div class="main-container">
+        <div class="posts">
+            <form class="postform">
+                <input name="post-name" type="text" placeholder="Post title">
+            </form>
+             <ul class="post-list"></ul>
+        </div>
+    </div>
+
+  </body>
+
+</html>
