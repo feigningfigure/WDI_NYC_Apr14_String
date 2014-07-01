@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Shopping List</title>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="stylesheets/styles.css"> -->
+
+    <!-- Libraries -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- Templates -->
+    <script type="text/template" id='item-template'>
+        <p><%= name %>
+        <button class="delete">Delete</button></p>
+    </script>
+
+    <!-- app -->
+    <script type="text/javascript" src='javascripts/backbone/app.js'></script>
+
+    <!-- Models -->
+    <script type="text/javascript" src='javascripts/backbone/models/Item.js'></script>
+
+    <!-- Collections -->
+    <script type="text/javascript" src='javascripts/backbone/collections/ItemCollection.js'></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src='javascripts/backbone/views/items/ItemView.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/views/items/ItemListView.js'></script>
+
+  </head>
+
+
+  <body>
+    <div class="main-container">
+        <div class="items">
+            <form class="itemform">
+                <input name="item-name" type="text" placeholder="Item Name">
+            </form>
+            <ul class="item-list"></ul>
+        </div>
+    </div>
+  </body>
+
+</html>

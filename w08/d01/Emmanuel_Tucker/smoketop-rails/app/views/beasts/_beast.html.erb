@@ -2,5 +2,22 @@
   <article class="beast" id="beast-<%%= beast.id %>">
     <header>
       <h1><%%= beast.name %></h1>
-
+      <%% if (beast.image_filename) { %>
+        <img src="/assets/<%%= beast.image_filename %>" />
+      <%% } else { %>
+        <img src="/assets/unavailable.png" />
+      <%% } %>
+    </header>
+    <section class="entry-body">
+      <table>
+        <%% ["diet", "habitat", "light_ethology", "size"].forEach(function(attrName) { %>
+          <tr class="<%%= attrName %>">
+            <td class="key"><strong><%%= attrName %></strong></td>
+            <td class="value"><%%= beast[attrName] %></td>
+          </tr>
+        <%% }); %>
+      </table>
+      <p><%%= beast.description %></p>
+    </section>
+  </article>
 </script>
