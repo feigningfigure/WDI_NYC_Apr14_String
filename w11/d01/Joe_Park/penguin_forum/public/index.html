@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Penguin Forum</title>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="stylesheets/styles.css"> -->
+
+    <!-- Libraries -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- Templates -->
+    <script type="text/template" id="post-template">
+        <p><%= content %></p> 
+        <form>
+          <input class="delete-post" type="submit" value="Delete">
+          <!--<button name="delete-post">Delete</button>-->
+        </form>
+    </script>
+
+    <!-- app -->
+    <script type="text/javascript" src='javascripts/backbone/app.js'></script>
+
+    <!-- Models -->
+    <script type="text/javascript" src='javascripts/backbone/models/Post.js'></script>
+
+    <!-- Collections -->
+    <script type="text/javascript" src='javascripts/backbone/collections/PostCollection.js'></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src='javascripts/backbone/views/posts/PostView.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/views/posts/PostListView.js'></script>
+
+  </head>
+
+
+  <body>
+
+    <div class="main-container">
+      <div class="posts">
+        <form class="post-form">
+          <input name="post-content" type="text" placeholder="Post Here">
+        </form>
+        
+        <ul class="post-list">Posts</ul>
+      </div>
+    </div>
+
+
+
+  </body>
+
+</html>
