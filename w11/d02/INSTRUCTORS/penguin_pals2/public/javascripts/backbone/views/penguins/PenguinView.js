@@ -11,7 +11,9 @@ Penguinapp.Views.PenguinView = Backbone.View.extend({
 	editTemplate: _.template( $('#penguin-edit-template').html() ),
 	events: {
 		'click [data-action="destroy"]' : 'destroyPenguin',
-		'click [data-action="edit"]' : 'renderEditForm'
+		'click [data-action="edit"]' : 'renderEditForm',
+		'mouseenter' : 'hoverOn',
+		'mouseleave' : 'hoverOff'
 	},
 	render: function(){
 		this.$el.empty();
@@ -26,6 +28,8 @@ Penguinapp.Views.PenguinView = Backbone.View.extend({
 	renderEditForm: function(){
 		var self = this;
 		this.$el.html(this.editTemplate( this.model.attributes ));
+
+		//Event listeners for the form and cancel button
 		this.$el.find('form').on("submit", function(e){
 			e.preventDefault();
 			var nameField = self.$el.find('input');
@@ -36,6 +40,21 @@ Penguinapp.Views.PenguinView = Backbone.View.extend({
 			self.model.set('name', newName);
 			self.model.save();
 		})
+
+		this.$el.find('button').on('click', function(e){
+			e.preventDefault;
+			self.render();
+		})
+	},
+	hoverOn: function(){
+		this.$el.css("color", "red");
+
+		return this;
+	},
+	hoverOff: function(){
+		this.$el.css("color", "black");
+
+		return this;
 	}
 });
 
