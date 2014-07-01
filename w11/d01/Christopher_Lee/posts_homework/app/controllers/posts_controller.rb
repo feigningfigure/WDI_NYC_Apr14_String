@@ -12,7 +12,15 @@ class PostsController < ApplicationController
     end
 
     def destroy
-      post = Post.destroy(params[:id])
+      #post = Post.destroy(params[:id])
+      post = Post.find(params[:id])
+      post.destroy
+      respond_with post
+    end
+
+    def update
+      post = Post.find(params[:id])
+      post.update(post_params)
       respond_with post
     end
 

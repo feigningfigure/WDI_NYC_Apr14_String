@@ -13,8 +13,20 @@
     <script type='text/template' id='post-template'>
         <h1><%= name %></h1>
         <h4><%= date %></h4>
-            <button type="submit" class="btn btn-danger delete">Delete</button>
+            <button class="btn btn-danger delete" data-action='destroy'>Delete</button>
+            <button class="btn btn-warning" data-action='edit'>Edit</button>
     </script>
+
+    <script type='text/template' id='post-edit-template'>
+        <form class='edit-form'>
+            <input type="text" name="edit-name" value="<%= name %>"/>
+            <input type="text" name="edit-date" value="<%= date %>"/>
+            <input type="submit" class="btn-success" value="Update"></input>
+        </form>
+        <button class="btn btn-info">Cancel</button>
+
+    </script>
+
 
     <!-- app -->
     <script type="text/javascript" src='javascripts/backbone/app.js'></script>
@@ -33,8 +45,9 @@
 
 
   <body>
-    <h1>welcome</h1>
-    <div class="main-container">
+
+    <div class="container">
+        <h1>welcome</h1>
       <div class="posts">
         <form class="postsform">
             <input name="post-name" type="text" placeholder="Name of Post">

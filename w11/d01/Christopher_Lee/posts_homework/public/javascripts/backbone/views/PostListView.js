@@ -3,7 +3,7 @@ var Postapp = Postapp || {Models: {}, Collections: {}, Views: {} };
 Postapp.Views.PostListView = Backbone.View.extend({
   initialize: function(){
   this.listenTo(this.collection, 'add', this.render);
-  this.listenTo(this.collection, 'destroy', this.render);
+  //this.listenTo(this.collection, 'destroy', this.render);
   },
   render: function(){
     var self = this;

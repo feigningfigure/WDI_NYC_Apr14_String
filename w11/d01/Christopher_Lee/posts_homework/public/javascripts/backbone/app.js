@@ -1,8 +1,8 @@
 var Postapp = Postapp || {Models: {}, Collections: {}, Views: {} };
-
+var collection;
 
 Postapp.initialize = function(){
-   var collection = new Postapp.Collections.PostCollection();
+   collection = new Postapp.Collections.PostCollection();
    var listView = new Postapp.Views.PostListView({collection: collection,
    el: $('.post-list')
    });
