@@ -2,7 +2,7 @@ SmoketopApp::Application.routes.draw do
 
   root "users#index"
 
-  get "/beasts" => "beasts#index"
+  resources :beasts
 
   get "/about" => "beasts#about"
 

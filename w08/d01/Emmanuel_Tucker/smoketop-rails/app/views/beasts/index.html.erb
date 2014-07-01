@@ -4,5 +4,10 @@
   <section id="beast-list">
   </section>
 
+  <script type="text/javascript">
+    // Bootstrap the initial load of beast data
+    var beastData = JSON.parse('<%=j @beasts.to_json.html_safe %>');
+  </script>
+
   <%= render :partial => "beast" %>
 </section>
