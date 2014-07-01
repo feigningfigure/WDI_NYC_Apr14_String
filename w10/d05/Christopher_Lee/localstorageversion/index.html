@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Blogs</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- ************ Libraries ************ -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.7/backbone.localStorage.js'></script>
+
+    <!-- ************ Templates ************ -->
+     <script type="text/template" id="post-template">
+      <h1><%= name %></h1>
+      <h1><%= date %></h1>
+      <form id='create-comment'>
+        <p>
+          <input type="text" placeholder="leave comment" name="comment">
+          <button type="submit" class="btn-default">Add Comment</button>
+        </p>
+      </form>
+      <ul class="comments-list">
+      </ul>
+      <button type="button" class="btn btn-danger delete">Delete</button>
+    </script>
+
+    <script type="text/template" id="comment-template">
+      <h4><%= content %></h4>
+      <button name="delete-comment" class="btn btn-xs btn-danger">Delete Comment</button>
+    </script>
+
+
+
+    <!-- ************ Post ************ -->
+    <script type="text/javascript" src='javascripts/backbone/post.js'></script>
+
+    <!-- ************ Comment ************ -->
+    <script type="text/javascript" src='javascripts/backbone/comment.js'></script>
+
+    <!-- ************ app ************ -->
+    <script type="text/javascript" src='javascripts/app.js'></script>
+
+
+  </head>
+
+  <body>
+
+    <div class='container'>
+      <h1>Blog Testing Zone</h1>
+
+      <h2> Add a New Post </h2>
+      <form id='new-post'>
+      <input type="text" placeholder='post-name' id='post-name'>
+      <input type="text" placeholder='post-date' id='post-date'>
+      <button type="submit" class="btn btn-primary create">Create Post</button>
+      </form>
+      <hr />
+      <div class="page-list">
+
+      </div>
+    </div>
+
+  </body>
+</html>
