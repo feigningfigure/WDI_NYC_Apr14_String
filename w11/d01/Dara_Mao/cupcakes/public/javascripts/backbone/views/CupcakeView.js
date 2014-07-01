@@ -17,7 +17,7 @@ Cupcakemaker.Views.CupcakeView = Backbone.View.extend({
         return this
     },
     events: {
-        'click input[id="delete_cupcake"]': 'removeCupcake'
+        'click input[class="delete_cupcake"]': 'removeCupcake'
     },
     removeCupcake: function() {
         this.model.destroy();
