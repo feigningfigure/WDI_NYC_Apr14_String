@@ -12,6 +12,12 @@ class CupcakesController < ApplicationController
     respond_with cupcake
   end
 
+  def destroy
+    cucpake = Cupcake.find(params[:id])
+    cupcake.destroy
+    respond_with cupcake
+  end
+
   private
   def cupcake_params
     params.require(:cupcake).permit(:flavor, :size, :unit)

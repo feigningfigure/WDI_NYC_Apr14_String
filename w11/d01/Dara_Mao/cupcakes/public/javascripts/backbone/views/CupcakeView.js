@@ -6,7 +6,6 @@ var Cupcakemaker = Cupcakemaker || {
 
 Cupcakemaker.Views.CupcakeView = Backbone.View.extend({
     intialize: function() {
-        this.listenTo(this.model, 'all', this.render)
         this.listenTo(this.model, 'destroy', this.remove)
     },
 
@@ -18,7 +17,7 @@ Cupcakemaker.Views.CupcakeView = Backbone.View.extend({
         return this
     },
     events: {
-        'click button[name="delete_cupcake"]': 'removeCupcake'
+        'click input[id="delete_cupcake"]': 'removeCupcake'
     },
     removeCupcake: function() {
         this.model.destroy();
