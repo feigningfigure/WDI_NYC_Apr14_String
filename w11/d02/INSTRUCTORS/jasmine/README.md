@@ -5,6 +5,15 @@ Jasmine is RSpec for Javascript.
 
 ## Exercise 1: Getting to "Hello, World!"
 
+### Learning Objectives
+
+1. Set up Jasmine using its standalone distribution and a browser for testing.
+2. Set up Jasmine using its Ruby gem and a browser for testing.
+3. Bonus: Set up Jasmine using the command line for testing.
+4. Weigh the pros and cons of each approach.
+
+### Outline
+
 **Timeframe**: ~1 hour
 
 1. First we need to decide what it means to get to "Hello, World!" for this
@@ -19,6 +28,15 @@ Jasmine is RSpec for Javascript.
 
 ## Exercise 2: Integrating with Rails
 
+### Learning Objectives
+
+1. Test a Rails app by modifying Jasmine's standalone test runner to be
+   served by Rails.
+2. Test a Rails app by using the Jasmine Ruby gem.
+3. Weigh the pros and cons of each appraoch.
+
+### Outline
+
 **Timeframe**: ~1.5 hours
 
 1. Explore your options.
@@ -32,4 +50,4 @@ Jasmine is RSpec for Javascript.
 3. Make a new empty Rails project where you can try integrating Jasmine,
    Backbone, and Rails yourself.
 
-4. Use the penguinpals codebase for sample behavior to test.
+4. Use the `penguinpals` codebase for sample behavior to test.
