@@ -22,9 +22,16 @@ Postapp.initialize = function() {
         })
 
     })
+
+
 }
 
 
 $(function() {
     Postapp.initialize();
+
+  $('.delete-button').on("click", function(){
+    console.log("click");
+  })
+
 });

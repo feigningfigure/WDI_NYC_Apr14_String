@@ -12,6 +12,11 @@ class PostsController < ApplicationController
     respond_with post
   end
 
+  def destroy
+    post = Post.find(id).destroy
+    respond_with post
+  end
+
 private
 
   def post_params
