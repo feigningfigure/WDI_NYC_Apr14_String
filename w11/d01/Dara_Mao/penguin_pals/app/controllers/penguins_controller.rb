@@ -1,6 +1,6 @@
 class PenguinsController < ApplicationController
 
-  respond_to: json
+  respond_to :json
 
   def index
     penguins = Penguin.all
