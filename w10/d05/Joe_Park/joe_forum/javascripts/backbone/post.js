@@ -49,11 +49,12 @@ var PostView = Backbone.View.extend({
     evt.preventDefault();
     var editTitleField = this.$el.find('input[class="edit"]');
     var editPostTitle = editTitleField.val();
-    var editContentField = $('textarea[class="edit"]');
+    var editContentField = $('textarea[name="edit"]');
+    console.log(editContentField.val());
     var editPostContent = editContentField.val();
+    console.log(editPostContent);
     this.model.set({ 
-      title: editPostTitle,
-      content: editPostContent
+      title: editPostTitle, content: editPostContent
     });
 
     return this;

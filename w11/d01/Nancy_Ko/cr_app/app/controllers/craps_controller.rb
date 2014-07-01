@@ -1,0 +1,2 @@
+class CrappsController < ApplicationController
+end
