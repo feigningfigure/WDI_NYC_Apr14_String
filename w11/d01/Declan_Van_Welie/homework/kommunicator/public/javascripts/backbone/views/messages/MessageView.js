@@ -32,7 +32,7 @@ Kommunicatorapp.Views.MessageView = Backbone.View.extend({
           var editField = self.$el.find('input');
           var commentEdit = editField.val();
           // commentEdit.val('');
-          self.model.set({ title: commentEdit })
+          self.model.save({ title: commentEdit })
           // self.model.create({ title: commentEdit })
         })
       return this
