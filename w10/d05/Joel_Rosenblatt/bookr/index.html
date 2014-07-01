@@ -1,11 +1,31 @@
 <html>
   <head>
     <title>Bookr</title>
-  
+
     <!-- ************ Libraries ************ -->
     <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
     <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
     <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+    <!-- ************ Templates ************ -->
+    <script type="text/template" id="author-template">
+      <div>
+        <h2><%= name %></h2>
+        <form>
+          <p>
+            <input type="text" placeholder="Book Title" name="title"/>
+          </p>
+        </form>
+        <ul class="books">
+
+        </ul>
+      </div>
+    </script>
+
+    <script type="text/template" id="book-template">
+      <div>
+        <h4><%= title %><button style="border-radius: 100%; background: #CF8282;" name="delete_book">x</button></h4>
+      </div>
+    </script>
 
     <!-- ************ Book ************ -->
     <script type="text/javascript" src='javascripts/backbone/book.js'></script>
@@ -29,7 +49,10 @@
       <input type="text" placeholder='author-name' class='author-name'>
     </form>
 
-   
+    <ul id="author-list">
+    </ul>
+
+
 
   </body>
 </html>
