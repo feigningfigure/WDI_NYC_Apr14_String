@@ -1,0 +1,29 @@
+@import 'fonts';
+
+input {
+  marin-top: 20px;
+  font-size: 12px;
+  background: RGBA(236, 240, 241, $tint);
+  @include round-corners($cloud-color, 20px, 2px, solid);
+  &:focus {
+    outline: 0;
+  }
+
+
+input[type="text"]{
+  padding-left: 10px;
+  height:$box-height/10;
+  width:$box-width/2;
+}
+
+h2{
+  font-size: 20px;
+  font-color: red;
+  background: RGBA(236, 240, 241, $tint);
+}
+
+#cupcakeform{
+  font-size: 20px;
+  font-color: red;
+  background: RGBA(236, 240, 241, $tint);
+}
