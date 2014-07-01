@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Motorcycle Database</title>
+
+    <!-- Libraries -->
+    <script type = "text/javascript" src = "javascripts/libraries/jquery.js"></script>
+
+    <script type = "text/javascript" src = "javascripts/libraries/underscore.js"></script>
+
+    <script type = "text/javascript" src = "javascripts/libraries/backbone.js"></script>
+
+    <!-- Templates -->
+
+      <script type="text/template" id="bike-template">
+      <div>
+        <h2><%= name %></h2>
+        <h3><%= model %></h3>
+        <h4><%= year %></h4>
+        <form>
+          <p>
+            <input type="text" placeholder="Bike Name" name="title">
+          </p>
+        </form>
+        <ul class="bike-list">
+        </ul>
+      </div>
+    </script>
+
+
+    <!-- App -->
+    <script type="text/javascript" src='javascripts/backbone/app.js'></script>
+
+
+    <!-- Models -->
+     <script type="text/javascript" src='javascripts/backbone/models/Bike.js'></script>
+
+  
+    <!-- Collections -->
+    <script type="text/javascript" src='javascripts/backbone/collections/BikeCollection.js'></script>
+
+
+    <!-- Views -->
+
+    <script type="text/javascript" src='javascripts/backbone/views/bikes/BikeListView.js'></script>
+
+    <script type="text/javascript" src='javascripts/backbone/views/bikes/BikeView.js'></script>
+
+  </head>
+
+
+  <body>
+
+    <h1> Bikes </h1>
+
+    <form id="new-bikes">
+      <input id = "new-bike" type = "text" placeholder = "Add A Motorcycle">
+      <button id = "add-bike">Add Bike</button>
+      <button id = "delete-bike">Delete Bike</button>
+    </form>
+
+    <ul id="bike-list">
+    </ul>
+
+  </body>
+</html>
