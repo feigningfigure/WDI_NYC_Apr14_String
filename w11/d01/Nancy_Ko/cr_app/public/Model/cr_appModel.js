@@ -10,3 +10,6 @@ var cr_appItem = new cr_appItem({
 // creating view class var cr_app = Backbone.View.extend({});
 
 // creating view instance we just instantiate a new view instance by var cr_appView = cr_appView({ model: cr_appItem }); sending in the model that is creating here. 
+
+// need initialize function 
+
