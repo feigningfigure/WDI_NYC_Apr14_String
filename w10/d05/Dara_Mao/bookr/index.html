@@ -1,11 +1,32 @@
 <html>
   <head>
     <title>Bookr</title>
-  
+
     <!-- ************ Libraries ************ -->
     <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
     <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
     <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+    <!-- ************ Template ************ -->
+  <script type="text/template" id="author-template">
+  <div>
+   <!-- ***passing name(mode.attributes) vs author.name (have to pass the whole model in)**** -->
+    <h2><%= name %></h2>
+    <form>
+      <p>
+       <!-- ****** setting a variable like name so that jquery could grab it ************ -->
+        <input type="text" placeholder="book title" name="title">
+      </p>
+    </form>
+    <ul class="book">
+    </ul>
+  </div>
+  </script>
+
+<script type="text/template" id="book-template">
+<div>
+  <h3><%= title %></h3>
+  </div>
+</script>
 
     <!-- ************ Book ************ -->
     <script type="text/javascript" src='javascripts/backbone/book.js'></script>
@@ -29,7 +50,8 @@
       <input type="text" placeholder='author-name' class='author-name'>
     </form>
 
-   
+  <ul id="author-list">
+  </ul>
 
   </body>
 </html>
