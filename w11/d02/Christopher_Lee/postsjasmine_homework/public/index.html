@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Posts</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Libraries -->
+    <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js'></script>
+    <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js'></script>
+
+    <!-- Templates -->
+    <script type='text/template' id='post-template'>
+        <h1><%= name %></h1>
+        <h4><%= date %></h4>
+            <button class="btn btn-danger delete" data-action='destroy'>Delete</button>
+            <button class="btn btn-warning" data-action='edit'>Edit</button>
+    </script>
+
+    <script type='text/template' id='post-edit-template'>
+        <form class='edit-form'>
+            <input type="text" name="edit-name" value="<%= name %>"/>
+            <input type="text" name="edit-date" value="<%= date %>"/>
+            <input type="submit" class="btn-success" value="Update"></input>
+        </form>
+        <button class="btn btn-info">Cancel</button>
+
+    </script>
+
+
+    <!-- app -->
+    <script type="text/javascript" src='javascripts/backbone/app.js'></script>
+
+    <!-- Models -->
+    <script type="text/javascript" src='javascripts/backbone/models/Post.js'></script>
+
+    <!-- Collections -->
+    <script type="text/javascript" src='javascripts/backbone/collections/PostCollection.js'></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src='javascripts/backbone/views/PostView.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/views/PostListView.js'></script>
+
+  </head>
+
+
+  <body>
+
+    <div class="container">
+        <h1>welcome</h1>
+      <div class="posts">
+        <form class="postsform">
+            <input name="post-name" type="text" placeholder="Name of Post">
+            <input name="post-date" type="text" placeholder="Date of Post">
+            <button type="submit" class="btn btn-primary">Create Post</button>
+        </form>
+        <ul class="post-list"></ul>
+       </div>
+    </div>
+  </body>
+
+</html>
