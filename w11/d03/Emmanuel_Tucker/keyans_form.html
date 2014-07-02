@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Keyan's Form</title>
+  <link rel="stylesheet" media="screen" href="styles.css" >
+
+  <style>
+    body {
+      padding: 20px 0px 40px 40px;
+      font-family: Arial, san-serif;
+      font-size: 1.2em;
+    }
+    h1 {
+      margin: 50px 0;
+      color: #999;
+    }
+    h4 { margin-bottom: 10px; }
+    input {
+      border: 1px solid #333;
+      padding: 5px 5px;
+    }
+    button {
+      font-size: .9em;
+    }
+    /* change placeholder appearance */
+    :-moz-placeholder { color: #ccc; }
+    ::-moz-placeholder { color: #ccc; }
+    ::-webkit-input-placeholder { color: #ccc; }
+    :-ms-input-placeholder { color: #ccc; }
+  </style>
+</head>
+<body>
+
+<form class="keyanForm" action="" method="post" name="keyanForm">
+
+<h2>Create a Game</h2>
+
+  <h4>What is the name of your game?</h4>
+  <!-- type="text" is the default; not necessary -->
+  <input name="gameName" placeholder="name of game" />
+
+  <h4>What game/sport is it most like?</h4>
+
+  <input name="gameLike" placeholder="the game is like..." >
+
+
+<h1>NEXT button</h1>
+
+
+<h4>Pick a picture for your game</h4>
+
+<p> [ 16 IMAGES WITH RADIO BUTTONS ] </p>
+
+
+<h1>NEXT button</h1>
+
+
+<h4>Add a tag!</h4>
+
+<p>Choose from existing tags:</p>
+<select name="tagList">
+<option value="82">boardgame</option>
+<option value="83">racing</option>
+<option value="84">disorganized</option>
+<option value="85">soccer</option>
+<option value="86">cards</option>
+<option value="87">social</option>
+<option value="88">hide and seek</option>
+<option value="89">quick</option>
+<option value="90">chance</option>
+<option value="91">effortless</option>
+<option value="92">dodgeball</option>
+<option value="93">soup</option>
+<option value="94">on-the-fly</option>
+<option value="65">outdoor</option>
+<option value="66">indoor</option>
+<option value="67">multiplayer</option>
+<option value="68">singleplayer</option>
+<option value="69">football</option>
+<option value="70">baseball</option>
+<option value="71">basketball</option>
+<option value="72">recreational</option>
+<option value="73">card</option>
+<option value="74">billiards</option>
+<option value="75">contact</option>
+<option value="76">competative</option>
+<option value="77">non-competative</option>
+<option value="78">all-ages</option>
+<option value="79">over 21 years</option>
+<option value="80">under 21 years</option></select></p>
+</select>
+
+<p>Create a new tag:</p>
+<input name="tagName" placeholder="name of tag" />
+
+
+<h1>NEXT button</h1>
+
+
+<h4>Add an item!</h4>
+<p>Choose from existing items:</p>
+<select name="itemList">
+<option value="197">scrabble pieces</option>
+<option value="198">battleship game ships</option>
+<option value="199">graph paper</option>
+<option value="200">chalk</option>
+<option value="201">large boxes</option>
+<option value="202">finish-line string</option>
+<option value="203">anything else</option>
+<option value="204">can</option>
+<option value="205">a stream</option>
+<option value="206">bridge</option>
+<option value="207">sticks</option>
+<option value="208">candy land game board</option>
+<option value="209">buzzer (usually from taboo)</option>
+<option value="210">twister spinner</option>
+<option value="211">poker chips</option>
+<option value="212">paper pad</option>
+<option value="213">pencil</option>
+<option value="214">pictionary cards</option>
+<option value="215">slanted roof</option>
+<option value="216">monopoly board and game pieces</option>
+<option value="217">pillow</option>
+<option value="218">basketball gym</option>
+<option value="219">buckets</option>
+<option value="220">dodgeballs</option>
+<option value="221">tennis balls</option>
+<option value="222">cones</option>
+<option value="223">soup</option>
+<option value="224">imagination</option>
+<option value="157">baseball</option>
+<option value="158">baseball bat</option>
+<option value="159">basketball</option>
+<option value="160">soccer ball</option>
+<option value="161">hockey stick</option>
+<option value="162">nerf football</option>
+<option value="163">basketball net</option>
+<option value="164">baseball glove</option>
+<option value="165">roller blades</option>
+<option value="166">soccer goal</option>
+<option value="167">playing cards</option>
+<option value="168">tennis ball</option>
+<option value="169">tennis racket</option>
+<option value="170">ping-pong ball</option>
+<option value="171">ping-pong paddle</option>
+<option value="172">swimming pool</option>
+<option value="173">beach ball</option>
+<option value="174">volley ball</option>
+<option value="175">volleyball net</option>
+<option value="176">wall</option>
+<option value="177">roof</option>
+<option value="178">hockey puck</option>
+<option value="179">skateboard</option>
+<option value="180">bases</option>
+<option value="181">croquet mallet</option>
+<option value="182">tennis net</option>
+<option value="183">frisbee</option>
+<option value="184">softball</option>
+<option value="185">golf ball</option>
+<option value="186">bicycle</option>
+<option value="187">football</option>
+<option value="188">hockey puck</option>
+<option value="189">ice skates</option>
+<option value="190">large rubber ball</option>
+<option value="191">monopoly game set</option>
+<option value="192">dice</option>
+<option value="193">pool cue</option>
+<option value="194">pool balls</option>
+<option value="195">pool table</option></select></p>
+</select>
+
+<p>Create a new item:</p>
+<input name="itemName" placeholder="name of item" />
+
+
+<h1>NEXT button</h1>
+
+
+<h4>How Many Players Are Required to Play Your Game?</h4>
+<input name="minPlayers" placeholder="min players" />
+
+<h4>What is the maximum number of players? (optional)</h4>
+<input name="maxPlayers" placeholder="max players"  />
+
+<h4>How Old Must a Player Be in Order to Play Your Game?</h4>
+<input name="minAge" placeholder="min age"  />
+
+<h4>Write a Quick and Fun Tagline For Your Game</h4>
+<input name="tagline" placeholder="it's like shuffleboard on caffeine!"  />
+
+<h4>What is the Objective of Your Game?</h4>
+  <input name="gameObjective" placeholder="the objective is to win!"  />
+
+<h4>Describe the Gameplay of Your Game (Don't Miss Any Details!)</h4>
+  <textarea name="gameplay" placeholder="how do we play your game?" rows="5" cols="45"  /></textarea>
+
+<h4>List All the Rules of Your Game </h4>
+  <textarea name="rules" placeholder="Rule 1: Don't cheat!" rows="5" cols="45"  /></textarea>
+
+
+<p><button>Submit</button></p>
+
+</form>
+
+</body>
+</html>
+
