@@ -3,6 +3,17 @@
     <title>Cupcake Maker!</title>
     <meta charset="utf-8">
     <link rel="stylesheets" href="../app/assets/stylesheets/styles.css">
+<!-- JASMINE -->
+
+  <link rel="shortcut icon" type="image/png" href="../lib/jasmine-2.0.0/jasmine_favicon.png">
+  <link rel="stylesheet" type="text/css" href="../lib/jasmine-2.0.0/jasmine.css">
+    <script type="text/javascript" src="../spec/helloWorldSpec.js"></script>
+
+    <script type="text/javascript" src="../app/assets/javascripts/helloWorld.js"></script>
+
+    <script type="text/javascript" src="../lib/jasmine-2.0.0/jasmine.js"></script>
+    <script type="text/javascript" src="../lib/jasmine-2.0.0/jasmine-html.js"></script>
+    <script type="text/javascript" src="../lib/jasmine-2.0.0/boot.js"></script>
 
     <!-- Libraries -->
     <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
@@ -12,7 +23,7 @@
     <!-- Templates -->
     <script type="text/template" id="cupcake-template">
     <h2>We are making <%= unit %> <%= size %> sized <%= flavor %> cupcake(s) at your request.</h2>
-    <input class="delete_cupcake" type='submit' value='Delete'>
+    <button data-action='destroy'>Delete</button>
     </script>
 
     <!-- app -->
