@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'backbone-on-rails', '~> 1.1.1.0'
 
+gem 'underscore-rails', '~> 1.6.0'
+
 group :development, :test do
   gem 'jasmine'
 end
