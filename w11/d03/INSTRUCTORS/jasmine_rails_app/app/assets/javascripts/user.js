@@ -1,7 +1,7 @@
-var User = {
+var User = Backbone.Model.extend({
 
   fullName: function() {
-    return this.firstName + ' ' + this.lastName;
+    return this.get('firstName') + ' ' + this.get('lastName');
   }
 
-};
+});
