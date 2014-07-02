@@ -1,0 +1,119 @@
+<html>
+<head>
+  <title>Kommunicator</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="stylesheets/styles.css">
+
+    <!-- Libraries -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- Templates -->
+
+    <script type="text/template" id="message_template">
+      <div class="message_container">
+        <div class="post_title">
+          <h2 class= "message_title"><%= title %> </h2><button class="delete_message" data-action="destroy" name="delete_post">X</button>
+        </div>
+          <div class= "message_comment">
+              <form>
+              <p>
+                <input type="text" placeholder="COMMENT, COMRADE" name="comment">
+              </p>
+            </form>
+          </div>
+        <ul class="comments">
+        </ul>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="comment_template">
+      <div>
+        <h3><%= title %></h3>
+        <button class="delete_comment" name="delete_comment">Delete</button> <button name="edit_button">Edit</button>
+      </div>
+    </script>
+
+    <script type="text/template" id="edit_message">
+        <div>
+        <form>
+          <p>
+           <input type="text" placeholder=<%= title %> name="edit_form">
+           <button class="cancel_button">Cancel</button>
+          </p>
+        </form>
+      </div>
+    </script>
+
+    <!-- app -->
+    <script type="text/javascript" src='javascripts/backbone/app.js'></script>
+
+    <!-- Models -->
+    <script type="text/javascript" src='javascripts/backbone/models/Comment.js'></script>
+
+    <!-- Collections -->
+    <script type="text/javascript" src='javascripts/backbone/collections/CommentCollection.js'></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src='javascripts/backbone/views/comments/CommentView.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/views/comments/CommentListView.js'></script>
+
+        <!-- Models -->
+    <script type="text/javascript" src='javascripts/backbone/models/Message.js'></script>
+
+    <!-- Collections -->
+    <script type="text/javascript" src='javascripts/backbone/collections/MessageCollection.js'></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src='javascripts/backbone/views/messages/MessageView.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/views/messages/MessageListView.js'></script>
+
+</head>
+
+<!-- ****HTML**** -->
+
+
+<body>
+
+<div class="header_cont">
+     <div class="sunburst_container">
+      <div class="sunburst">
+          <div class="header">
+            <h1 class="star">&#9733;</h1>  <h1>&#1050;&#1060;&#1052;&#1052;&#1062;&#1048;I&#1057;&#1044;&#1058;&#1060;&#1071;</h1> <h1 class="star">&#9733;</h1>
+            <br>
+            <h5>THE MOUTHPIECE OF THE PARTY</h5>
+          </div>
+          <div class="outer">
+          <b></b>
+          <b></b>
+          <b></b>
+          <b></b>
+          <b></b>
+          <b></b>
+          <b></b>
+          <b></b>
+          <b></b>
+          <b></b>
+          </div>
+      </div>
+    </div>
+
+    <div class="new_message">
+      <form id='new_message_form'>
+        <input type="text" placeholder='POST TITLE' id='message_title'>
+      </form>
+    </div>
+  </div>
+
+  <div class="content">
+
+   <ul class="message_list">
+   </ul>
+ </div>
+
+</body>
+
+</html>
