@@ -6,7 +6,7 @@ var Cupcakemaker = Cupcakemaker || {
 
 Cupcakemaker.Views.CupcakeView = Backbone.View.extend({
     intialize: function() {
-        this.listenTo(this.model, 'destroy', this.remove)
+        this.listenTo(this.model, 'destroy', this.remove);
     },
 
     tagName: 'li',
@@ -17,10 +17,11 @@ Cupcakemaker.Views.CupcakeView = Backbone.View.extend({
         return this
     },
     events: {
-        'click input[class="delete_cupcake"]': 'removeCupcake'
+        'click [data-action="destroy"]': 'removeCupcake'
     },
-    removeCupcake: function() {
+    removeCupcake: function(e) {
+        e.preventDefault();
         this.model.destroy();
-        return this
+        // return this
     }
 });
