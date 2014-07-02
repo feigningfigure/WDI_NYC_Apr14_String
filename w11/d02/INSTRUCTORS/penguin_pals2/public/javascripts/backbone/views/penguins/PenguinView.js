@@ -47,12 +47,12 @@ Penguinapp.Views.PenguinView = Backbone.View.extend({
 		})
 	},
 	hoverOn: function(){
-		this.$el.css("color", "red");
+		this.$el.css("color", "#2ecc71");
 
 		return this;
 	},
 	hoverOff: function(){
-		this.$el.css("color", "black");
+		this.$el.css("color", "#34495e");
 
 		return this;
 	}
