@@ -1,0 +1,29 @@
+<html>
+<head>
+   <title>To Do List</title>
+</head>
+<body>
+   <h1>To Do List</h1>
+   <form class="todo" action="/todos" method="POST">
+      <label>Task <input type="text" name="task_name"></label>
+      <label>Status <input type="text" name="status"></label>
+      <label>Description <input type="text" name="description"></label>
+
+      <input type="submit">
+   </form>
+   <form action=""></form>
+
+   <div class="todo-list">
+   </div>
+
+   <script src="/javascripts/libraries/underscore.js"></script>
+   <script src="/javascripts/libraries/jquery.js"></script>
+   <script src="/javascripts/libraries/backbone.js"></script>
+
+   <script src="/javascripts/backbone/app.js"></script>
+   <script src="/javascripts/backbone/views/TodoView.js"></script>
+   <script src="/javascripts/backbone/views/TodoListView.js"></script>
+   <script src="/javascripts/backbone/models/TodoModel.js"></script>
+   <script src="/javascripts/backbone/collections/TodoCollection.js"></script>
+</body>
+</html>
