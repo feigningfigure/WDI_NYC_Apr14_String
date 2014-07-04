@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Plants</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+
+
+    <!-- Libraries -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- Templates -->
+    <script type="text/template" id="plant-template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <p> this <%= name %> is <%= color %> </p>
+
+    </script>
+
+
+    <!-- app -->
+    <script type="text/javascript" src='javascripts/backbone/app.js'></script>
+
+    <!-- Models -->
+    <script type="text/javascript" src='javascripts/backbone/models/Plant.js'></script>
+
+    <!-- Collections -->
+    <script type="text/javascript" src='javascripts/backbone/collections/PlantCollection.js'></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src='javascripts/backbone/views/plants/PlantView.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/views/plants/PlantListView.js'></script>
+
+  </head>
+
+
+  <body>
+
+    <div class="main-container">
+        <div class="plants">
+            <form class="plantform">
+                <input type="text" name="plant-name" placeholder="name" />
+                <input type="text" name="plant-color" placeholder="color" />
+                <button name="submit_plant">submit</button>
+            </form>
+            <ul class="plant-list"></ul>
+        </div>
+    </div>
+
+  </body>
+
+</html>

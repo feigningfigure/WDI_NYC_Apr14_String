@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Cupcake Maker!</title>
+    <meta charset="utf-8">
+    <link rel="stylesheets" href="../app/assets/stylesheets/styles.css">
+
+    <!-- Libraries -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- Templates -->
+    <script type="text/template" id="cupcake-template">
+    <h2>We are making <%= unit %> <%= size %> sized <%= flavor %> cupcake(s) at your request.</h2>
+    <input class="delete_cupcake" type='submit' value='Delete'>
+    </script>
+
+    <!-- app -->
+    <script type="text/javascript" src='javascripts/backbone/app.js'></script>
+
+    <!-- Models -->
+    <script type="text/javascript" src='javascripts/backbone/models/Cupcake.js'></script>
+
+    <!-- Collections -->
+    <script type="text/javascript" src='javascripts/backbone/collections/CupcakeCollection.js'></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src='javascripts/backbone/views/CupcakeView.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/views/CupcakeListView.js'></script>
+
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="cupcakes">
+        <form class="cupcakeform">
+            <input id="cupcake-flavor" type="text" placeholder="Pick your flavor">
+            <input id="cupcake-size" type="text" placeholder="Size of cupcake">
+            <input id="cupcake-unit" type="text" placeholder="How many?">
+            <button type="button">Order</button>
+        </form>
+        <ul class="cupcake-orders"></ul>
+    </div>
+    </div>
+  </body>
+
+</html>

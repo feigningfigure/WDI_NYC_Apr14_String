@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Cupcakes For Everyone</title>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="stylesheets/styles.css"> -->
+
+    <!-- Libraries -->
+    <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+
+    <!-- Templates -->
+    <script type="text/template" id='cupcake-template'>
+        <p> My name is <%= name %> the cupcake </p>
+        <button data-action='destroy'>
+            Delete
+        </button>
+        <button data-action="edit">
+            Edit
+        </button>
+    </script>
+
+    <script type="text/template" id="cupcake-edit-template">
+        <form>
+            <input type="text" placeholder="<%= name %>">
+        </form>
+        <button data-action="cancel">
+            Cancel
+        </button>
+    </script>
+
+    <!-- app -->
+    <script type="text/javascript" src='javascripts/backbone/app.js'></script>
+
+    <!-- Models -->
+    <script type="text/javascript" src='javascripts/backbone/models/Cupcake.js'></script>
+
+    <!-- Collections -->
+    <script type="text/javascript" src='javascripts/backbone/collections/CupcakeCollection.js'></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src='javascripts/backbone/views/cupcakes/CupcakeView.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/views/cupcakes/CupcakeListView.js'></script>
+
+  </head>
+
+
+  <body>
+
+    <div class="main-container">
+        <div class="cupcakes">
+            <form class="cupcakeform">
+                <input name="cupcake-name" type="text" placeholder="Name this cupcake">
+            </form>
+
+            <ul class="cupcake-list"></ul>
+        </div>
+    </div>
+
+  </body>
+</html>

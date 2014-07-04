@@ -3,11 +3,14 @@ $(function(){
 
 	postCollection = new PostCollection();
 	postListView = new PostListView({ collection: postCollection, el: $("#post-list") });
-	var post = new Post({ 
+	// var post = new Post({ 
+	// 	title: "Code School",
+	// 	body: "Learning backbone is fucking difficult"
+	// });
+	postCollection.add({ 
 		title: "Code School",
 		body: "Learning backbone is fucking difficult"
 	});
-	postCollection.add(post);
 
 	$('#new-post').on('submit', function(e){
 		e.preventDefault();
