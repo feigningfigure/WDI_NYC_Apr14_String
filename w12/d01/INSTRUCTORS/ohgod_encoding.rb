@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 space_one = " "
 space_two = " "
 
