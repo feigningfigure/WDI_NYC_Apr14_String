@@ -27,5 +27,5 @@ After the lecture, students will be able to:
 
 ### Homework
 
-To come...
+- See `Jasmine` lab in INSTRUCTORS folder.
 
