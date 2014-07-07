@@ -24,6 +24,6 @@ After the lecture, students will be able to:
 
 ### Homework
 
-- See `Portfolio` doc in the w11 folder.
+- See the `PORTFOLIO.md` doc in the w11 folder.
 
 
