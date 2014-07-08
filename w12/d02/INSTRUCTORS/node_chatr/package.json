@@ -1,0 +1,9 @@
+{
+  "name": "Chatr",
+  "version": "0.0.1",
+  "description": "A chat app for WDI",
+  "dependencies": {
+    "express": "^4.5.1",
+    "nodemon": "^1.2.1"
+  }
+}
