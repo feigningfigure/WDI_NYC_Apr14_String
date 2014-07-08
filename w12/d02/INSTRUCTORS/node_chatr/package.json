@@ -4,6 +4,7 @@
   "description": "A chat app for WDI",
   "dependencies": {
     "express": "^4.5.1",
-    "nodemon": "^1.2.1"
+    "nodemon": "^1.2.1",
+    "socket.io": "^1.0.6"
   }
 }
