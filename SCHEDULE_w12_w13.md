@@ -1,0 +1,50 @@
+# End-of-course Schedule
+
+Advanced lessons are optional, but you should attend them unless you need
+the time to hone fundamentals and focus on your project.
+
+## Week 12
+
+Advanced lessons every morning from 9AM to ~11:30AM.
+
+The rest of each day will be projects and on-request pair-programming sessions.
+
+### Thursday, July 10th
+
+- 9AM: **Advanced Lesson**: Keri - **Bootstrap**
+
+- 12PM: **Student Headshots**
+
+### Friday, July 11th
+
+- 9AM: **Advanced Lesson**: Max - **Amazon AWS**
+
+
+## Week 13
+
+Advanced lessons every morning from 9AM to ~11:30AM.
+
+The rest of each day will be projects and on-request pair-programming sessions.
+
+Final project code freeze at 9:30AM on Thursday the 17th.
+
+### Monday, July 14th
+
+- 9AM: **Advanced Lesson**: Neel - **NoSQL and MongoDB**
+
+### Tuesday, July 15th
+
+- 9AM: **Advanced Lesson**: Keri - **Sass/SCSS**
+
+### Wednesday, July 16th
+
+- 9AM: **Advanced Lesson**: Max - **Creating APIs**
+
+### Thursday, July 17th
+
+| Time | Event |
+| ---- | ---- |
+| 9:30AM | Code Freeze |
+| 9:30AM - 11AM | Heroku Party / Presentation Planning |
+| 11AM - 11:30 | Break + Presentation Prep |
+| 11:30AM - 5:30PM | Presentations + Lunch Break |
