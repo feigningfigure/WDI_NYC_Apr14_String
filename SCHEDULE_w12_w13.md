@@ -3,11 +3,18 @@
 Advanced lessons are optional, but you should attend them unless you need
 the time to hone fundamentals and focus on your project.
 
-## Week 12
-
 Advanced lessons every morning from 9AM to ~11:30AM.
 
 The rest of each day will be projects and on-request pair-programming sessions.
+
+
+## Week 12: July 9th - 11th
+
+### Wednesday, July 9th
+
+- 9AM: **Advanced Lesson**: Neel - **D3**
+
+- 1:30PM - 3:30PM: **Job Search Standup**
 
 ### Thursday, July 10th
 
@@ -20,11 +27,7 @@ The rest of each day will be projects and on-request pair-programming sessions.
 - 9AM: **Advanced Lesson**: Max - **Amazon AWS**
 
 
-## Week 13
-
-Advanced lessons every morning from 9AM to ~11:30AM.
-
-The rest of each day will be projects and on-request pair-programming sessions.
+## Week 13: July 14th - 17th
 
 Final project code freeze at 9:30AM on Thursday the 17th.
 
