@@ -40,6 +40,8 @@ Final project code freeze at 9:30AM on Thursday the 17th.
 
 - 9AM: **Advanced Lesson**: Max - **Creating APIs**
 
+- 4PM: **Chat with Outcomes**
+
 ### Thursday, July 17th
 
 | Time | Event |
@@ -48,3 +50,4 @@ Final project code freeze at 9:30AM on Thursday the 17th.
 | 9:30AM - 11AM | Heroku Party / Presentation Planning |
 | 11AM - 11:30 | Break + Presentation Prep |
 | 11:30AM - 5:30PM | Presentations + Lunch Break |
+| 5:30PM - 7:30PM | Graduation Dinner at Sidebar |
