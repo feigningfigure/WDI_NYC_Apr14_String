@@ -49,8 +49,14 @@ Final project code freeze at 9:30AM on Thursday the 17th.
 
 | Time | Event |
 | ---- | ---- |
-| 9:30AM | Code Freeze |
-| 9:30AM - 11AM | Heroku Party / Presentation Planning |
-| 11AM - 11:30 | Break + Presentation Prep |
-| 11:30AM - 5:30PM | Presentations + Lunch Break |
-| 5:30PM - 7:30PM | Graduation Dinner at Sidebar |
+| 9:30 | Code Freeze |
+| 9:30 | Heroku Party / Presentation Planning |
+| 11:00 | 30-minute Break + Presentation Prep |
+| 11:30 | **Presentations** |
+| 12:30 | 30-minute Lunch Break |
+| 1:00 | WDI April Science Fair |
+| 2:00 | 15-minute Break |
+| 2:15 | **Presentations** |
+| 3:00 | Class Photos |
+| 3:15 | **Presentations** |
+| 5:30 | Graduation Dinner at Sidebar (goes till 7:30) |
