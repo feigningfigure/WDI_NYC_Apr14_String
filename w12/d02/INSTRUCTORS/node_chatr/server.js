@@ -1,11 +1,11 @@
 var express = require("express");
 var app = express();
-var http = require('http').Server(app);
-var socketio = require("socket.io")(http);
+// var http = require('http').Server(app);
+var socketio = require("socket.io")(app);
 
 app.use(express.static(__dirname + '/static'));
 
-http.listen(3000, function(){
+app.listen(3000, function(){
 	console.log("listening on port 3000");
 })
 
