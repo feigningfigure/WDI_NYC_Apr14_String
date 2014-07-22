@@ -15,7 +15,7 @@ app.get('/users', function(req,res){
 	res.send(users);
 });
 
-app.get('/like_photo', function(req, res){
-	var likes = db.likes.find(<USER ID>);
-	res.send(likes);
-});
+// app.get('/like_photo', function(req, res){
+// 	var likes = db.likes.find(<USER ID>);
+// 	res.send(likes);
+// });
